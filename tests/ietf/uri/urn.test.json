@@ -1,0 +1,186 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/uri/urn.json",
+  "tests": [
+    {
+      "description": "Invalid type (non-string)",
+      "data": 1,
+      "valid": false
+    },
+    {
+      "description": "Missing URN scheme prefix",
+      "data": "example:foo",
+      "valid": false
+    },
+    {
+      "description": "Wrong URI scheme (not urn)",
+      "data": "mailto:123",
+      "valid": false
+    },
+    {
+      "description": "URN scheme uppercase (case-insensitive)",
+      "data": "URN:example:foo",
+      "valid": true
+    },
+    {
+      "description": "Mixed-case URN scheme and NID",
+      "data": "UrN:ExAmPlE:nSs",
+      "valid": true
+    },
+    {
+      "description": "Single-character NID and NSS",
+      "data": "urn:a:b",
+      "valid": true
+    },
+    {
+      "description": "Numeric NID (all digits)",
+      "data": "urn:12345:abcde",
+      "valid": true
+    },
+    {
+      "description": "NID with digit and hyphen",
+      "data": "urn:1-234:foo",
+      "valid": true
+    },
+    {
+      "description": "NID with uppercase letters",
+      "data": "urn:IsBn:2000",
+      "valid": true
+    },
+    {
+      "description": "NID starting with hyphen (disallowed)",
+      "data": "urn:-nid:foo",
+      "valid": false
+    },
+    {
+      "description": "NID ending with hyphen (disallowed)",
+      "data": "urn:nid-:foo",
+      "valid": false
+    },
+    {
+      "description": "NID with invalid character (underscore)",
+      "data": "urn:bad_nid:foo",
+      "valid": false
+    },
+    {
+      "description": "NID reserved 'urn' (disallowed)",
+      "data": "urn:urn:foo",
+      "valid": false
+    },
+    {
+      "description": "NID too long (33 characters)",
+      "data": "urn:123456789012345678901234567890123:abc",
+      "valid": false
+    },
+    {
+      "description": "NID at maximum length (32 characters)",
+      "data": "urn:12345678901234567890123456789012:abc",
+      "valid": true
+    },
+    {
+      "description": "Empty NSS (no characters after NID)",
+      "data": "urn:example:",
+      "valid": false
+    },
+    {
+      "description": "NSS with slash (allowed)",
+      "data": "urn:example:foo/bar",
+      "valid": true
+    },
+    {
+      "description": "NSS with underscore (allowed)",
+      "data": "urn:example:under_score",
+      "valid": true
+    },
+    {
+      "description": "NSS with various allowed punctuation characters",
+      "data": "urn:ex:!*'();:@&=+$,.-",
+      "valid": true
+    },
+    {
+      "description": "NSS with tilde (allowed)",
+      "data": "urn:example:foo~bar",
+      "valid": true
+    },
+    {
+      "description": "NSS with valid percent-encoding",
+      "data": "urn:example:hello%20world",
+      "valid": true
+    },
+    {
+      "description": "Percent-encoding with uppercase hex letters",
+      "data": "urn:example:%3A%41",
+      "valid": true
+    },
+    {
+      "description": "NSS with invalid percent-encoding",
+      "data": "urn:example:bad%2Gcase",
+      "valid": false
+    },
+    {
+      "description": "Lone percent sign in NSS (invalid)",
+      "data": "urn:example:50%off",
+      "valid": false
+    },
+    {
+      "description": "Space in NSS not percent-encoded (invalid)",
+      "data": "urn:example:hello world",
+      "valid": false
+    },
+    {
+      "description": "Raw non-ASCII in NSS (invalid)",
+      "data": "urn:example:niço",
+      "valid": false
+    },
+    {
+      "description": "Double colon (empty NID)",
+      "data": "urn::foo",
+      "valid": false
+    },
+    {
+      "description": "Multiple colons in NSS (allowed)",
+      "data": "urn:example:foo:bar:baz",
+      "valid": true
+    },
+    {
+      "description": "Trailing slash in NSS (allowed)",
+      "data": "urn:example:foo/bar/",
+      "valid": true
+    },
+    {
+      "description": "URN with r-component (resolution)",
+      "data": "urn:example:foo-bar-baz?+CCResolve:cc=uk",
+      "valid": true
+    },
+    {
+      "description": "URN with q-component (query)",
+      "data": "urn:example:foo-bar-baz?=querystring",
+      "valid": true
+    },
+    {
+      "description": "URN with fragment",
+      "data": "urn:example:foo-bar-baz#section",
+      "valid": true
+    },
+    {
+      "description": "URN with both r-component and fragment",
+      "data": "urn:isbn:0451450523?+res:format=pdf#page=10",
+      "valid": true
+    },
+    {
+      "description": "URN with multiple resolution parameters",
+      "data": "urn:example:foo?+res:format=xml&+res:lang=en",
+      "valid": true
+    },
+    {
+      "description": "URN with empty r-component",
+      "data": "urn:example:foo?",
+      "valid": true
+    },
+    {
+      "description": "URN with empty fragment",
+      "data": "urn:example:foo#",
+      "valid": true
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/uri/uri-relative.json",
+  "tests": [
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Empty string is valid relative reference",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Single slash path",
+      "data": "/",
+      "valid": true
+    },
+    {
+      "description": "Path with single segment",
+      "data": "file.txt",
+      "valid": true
+    },
+    {
+      "description": "Path with multiple segments",
+      "data": "path/to/resource",
+      "valid": true
+    },
+    {
+      "description": "Absolute path",
+      "data": "/absolute/path/to/file",
+      "valid": true
+    },
+    {
+      "description": "Current directory reference",
+      "data": ".",
+      "valid": true
+    },
+    {
+      "description": "Parent directory reference",
+      "data": "..",
+      "valid": true
+    },
+    {
+      "description": "Path with dot segments",
+      "data": "../../../relative/path",
+      "valid": true
+    },
+    {
+      "description": "Network path reference (starts with //)",
+      "data": "//example.com/path",
+      "valid": true
+    },
+    {
+      "description": "Network path with userinfo",
+      "data": "//user:pass@example.com/path",
+      "valid": true
+    },
+    {
+      "description": "Network path with port",
+      "data": "//example.com:8080/path",
+      "valid": true
+    },
+    {
+      "description": "Network path with IPv4",
+      "data": "//192.168.1.1/path",
+      "valid": true
+    },
+    {
+      "description": "Network path with IPv6",
+      "data": "//[2001:db8::1]/path",
+      "valid": true
+    },
+    {
+      "description": "Query only",
+      "data": "?query=value",
+      "valid": true
+    },
+    {
+      "description": "Fragment only",
+      "data": "#fragment",
+      "valid": true
+    },
+    {
+      "description": "Path with query",
+      "data": "path/to/file?query=value&other=123",
+      "valid": true
+    },
+    {
+      "description": "Path with fragment",
+      "data": "path/to/file#section",
+      "valid": true
+    },
+    {
+      "description": "Path with query and fragment",
+      "data": "path/to/file?query=value#section",
+      "valid": true
+    },
+    {
+      "description": "Query and fragment without path",
+      "data": "?query#fragment",
+      "valid": true
+    },
+    {
+      "description": "Path with percent-encoded characters",
+      "data": "path%20with%20spaces/file%2Ename",
+      "valid": true
+    },
+    {
+      "description": "Invalid percent-encoding (single digit)",
+      "data": "path%2/file",
+      "valid": false
+    },
+    {
+      "description": "Invalid percent-encoding (non-hex)",
+      "data": "path%ZZ/file",
+      "valid": false
+    },
+    {
+      "description": "Path with colon (valid in relative path)",
+      "data": "path:with:colons",
+      "valid": true
+    },
+    {
+      "description": "Path starting with colon",
+      "data": ":path",
+      "valid": true
+    },
+    {
+      "description": "Absolute URI with scheme (not relative)",
+      "data": "http://example.com/path",
+      "valid": false
+    },
+    {
+      "description": "HTTPS absolute URI (not relative)",
+      "data": "https://example.com/path",
+      "valid": false
+    },
+    {
+      "description": "FTP absolute URI (not relative)",
+      "data": "ftp://example.com/path",
+      "valid": false
+    },
+    {
+      "description": "Mailto URI (not relative)",
+      "data": "mailto:user@example.com",
+      "valid": false
+    },
+    {
+      "description": "URN (not relative)",
+      "data": "urn:isbn:0451450523",
+      "valid": false
+    },
+    {
+      "description": "Custom scheme (not relative)",
+      "data": "custom://example.com",
+      "valid": false
+    },
+    {
+      "description": "Path with spaces (invalid)",
+      "data": "path with spaces/file",
+      "valid": false
+    },
+    {
+      "description": "Path with control characters (invalid)",
+      "data": "path\nwith\nnewlines",
+      "valid": false
+    },
+    {
+      "description": "Path with tab character (invalid)",
+      "data": "path\twith\ttabs",
+      "valid": false
+    },
+    {
+      "description": "Network path with invalid IPv4",
+      "data": "//256.256.256.256/path",
+      "valid": false
+    },
+    {
+      "description": "Network path with IPv6 without brackets",
+      "data": "//2001:db8::1/path",
+      "valid": false
+    },
+    {
+      "description": "Network path with empty port",
+      "data": "//example.com:/path",
+      "valid": false
+    },
+    {
+      "description": "Network path without host",
+      "data": "//:8080/path",
+      "valid": false
+    },
+    {
+      "description": "Path with unreserved characters",
+      "data": "ABCabc123-._~",
+      "valid": true
+    },
+    {
+      "description": "Path with sub-delims",
+      "data": "!$&'()*+,;=",
+      "valid": true
+    },
+    {
+      "description": "Path with at sign",
+      "data": "path@file",
+      "valid": true
+    },
+    {
+      "description": "Query with various characters",
+      "data": "?query=a+b&c=d%20e",
+      "valid": true
+    },
+    {
+      "description": "Fragment with various characters",
+      "data": "#fragment%20with%20spaces",
+      "valid": true
+    },
+    {
+      "description": "Complex relative path",
+      "data": "./this:that/other.html",
+      "valid": true
+    },
+    {
+      "description": "Path segment with colon not at start",
+      "data": "g:x",
+      "valid": true
+    },
+    {
+      "description": "Path with brackets",
+      "data": "path[with]brackets",
+      "valid": true
+    },
+    {
+      "description": "Network path with reg-name containing dash",
+      "data": "//sub-domain.example.com/path",
+      "valid": true
+    },
+    {
+      "description": "Network path with reg-name containing underscore",
+      "data": "//sub_domain.example.com/path",
+      "valid": true
+    },
+    {
+      "description": "Relative path that looks like scheme but isn't",
+      "data": "http",
+      "valid": true
+    },
+    {
+      "description": "Relative path with file extension",
+      "data": "document.pdf",
+      "valid": true
+    },
+    {
+      "description": "Path with multiple consecutive slashes",
+      "data": "path//to///resource",
+      "valid": true
+    },
+    {
+      "description": "Query with question mark in value",
+      "data": "?query=value?with?marks",
+      "valid": true
+    },
+    {
+      "description": "Fragment with hash in value",
+      "data": "#fragment#with#hashes",
+      "valid": true
+    }
+  ]
+}

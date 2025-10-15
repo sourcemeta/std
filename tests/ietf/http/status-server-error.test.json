@@ -1,0 +1,91 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/http/status-server-error.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "500",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Invalid type - float",
+      "data": 500.5,
+      "valid": false
+    },
+    {
+      "description": "Below minimum (499)",
+      "data": 499,
+      "valid": false
+    },
+    {
+      "description": "Above maximum (600)",
+      "data": 600,
+      "valid": false
+    },
+    {
+      "description": "500 Internal Server Error",
+      "data": 500,
+      "valid": true
+    },
+    {
+      "description": "501 Not Implemented",
+      "data": 501,
+      "valid": true
+    },
+    {
+      "description": "502 Bad Gateway",
+      "data": 502,
+      "valid": true
+    },
+    {
+      "description": "503 Service Unavailable",
+      "data": 503,
+      "valid": true
+    },
+    {
+      "description": "504 Gateway Timeout",
+      "data": 504,
+      "valid": true
+    },
+    {
+      "description": "505 HTTP Version Not Supported",
+      "data": 505,
+      "valid": true
+    },
+    {
+      "description": "Unassigned code (506)",
+      "data": 506,
+      "valid": true
+    },
+    {
+      "description": "Unassigned code (550)",
+      "data": 550,
+      "valid": true
+    },
+    {
+      "description": "Maximum valid (599)",
+      "data": 599,
+      "valid": true
+    }
+  ]
+}

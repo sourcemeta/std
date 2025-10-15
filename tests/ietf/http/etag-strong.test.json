@@ -1,0 +1,261 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/http/etag-strong.json",
+  "tests": [
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - empty strong ETag",
+      "data": "\"\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - simple alphanumeric",
+      "data": "\"abc123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - hex string",
+      "data": "\"686897696a7c876b7e\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with hyphens",
+      "data": "\"abc-123-def\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with underscores",
+      "data": "\"abc_123_def\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with dots",
+      "data": "\"version.1.2.3\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with exclamation mark",
+      "data": "\"abc!123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with hash",
+      "data": "\"#abc123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with dollar sign",
+      "data": "\"$abc123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with percent",
+      "data": "\"abc%123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with ampersand",
+      "data": "\"abc&123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with asterisk",
+      "data": "\"abc*123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with plus",
+      "data": "\"abc+123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with forward slash",
+      "data": "\"abc/123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with colon",
+      "data": "\"abc:123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with semicolon",
+      "data": "\"abc;123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with equals",
+      "data": "\"abc=123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with question mark",
+      "data": "\"abc?123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with at sign",
+      "data": "\"abc@123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with brackets",
+      "data": "\"[abc]123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with backslash",
+      "data": "\"abc\\123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with caret",
+      "data": "\"abc^123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with backtick",
+      "data": "`abc123`",
+      "valid": false
+    },
+    {
+      "description": "Valid - with braces",
+      "data": "\"{abc}123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with pipe",
+      "data": "\"abc|123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - with tilde",
+      "data": "\"abc~123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - uppercase letters",
+      "data": "\"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - lowercase letters",
+      "data": "\"abcdefghijklmnopqrstuvwxyz\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - all digits",
+      "data": "\"0123456789\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed case and symbols",
+      "data": "\"aBc-123_DeF.456\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - long value",
+      "data": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing opening quote",
+      "data": "abc123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing closing quote",
+      "data": "\"abc123",
+      "valid": false
+    },
+    {
+      "description": "Invalid - no quotes",
+      "data": "abc123",
+      "valid": false
+    },
+    {
+      "description": "Invalid - single quotes instead of double",
+      "data": "'abc123'",
+      "valid": false
+    },
+    {
+      "description": "Invalid - weak ETag prefix (W/)",
+      "data": "W/\"abc123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - weak ETag prefix lowercase",
+      "data": "w/\"abc123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space inside",
+      "data": "\"abc 123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tab character",
+      "data": "\"abc\t123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - newline character",
+      "data": "\"abc\n123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - carriage return",
+      "data": "\"abc\r123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - null byte",
+      "data": "\"abc\u0000123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - control character",
+      "data": "\"abc\u0001123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - quote character (0x22) inside",
+      "data": "\"abc\"123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - just quotes with space",
+      "data": "\" \"",
+      "valid": false
+    }
+  ]
+}

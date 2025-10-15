@@ -1,0 +1,106 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/http/status-redirection.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "301",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Invalid type - float",
+      "data": 301.5,
+      "valid": false
+    },
+    {
+      "description": "Below minimum (299)",
+      "data": 299,
+      "valid": false
+    },
+    {
+      "description": "Above maximum (400)",
+      "data": 400,
+      "valid": false
+    },
+    {
+      "description": "300 Multiple Choices",
+      "data": 300,
+      "valid": true
+    },
+    {
+      "description": "301 Moved Permanently",
+      "data": 301,
+      "valid": true
+    },
+    {
+      "description": "302 Found",
+      "data": 302,
+      "valid": true
+    },
+    {
+      "description": "303 See Other",
+      "data": 303,
+      "valid": true
+    },
+    {
+      "description": "304 Not Modified",
+      "data": 304,
+      "valid": true
+    },
+    {
+      "description": "305 Use Proxy",
+      "data": 305,
+      "valid": true
+    },
+    {
+      "description": "306 (Unused)",
+      "data": 306,
+      "valid": true
+    },
+    {
+      "description": "307 Temporary Redirect",
+      "data": 307,
+      "valid": true
+    },
+    {
+      "description": "308 Permanent Redirect",
+      "data": 308,
+      "valid": true
+    },
+    {
+      "description": "Unassigned code (309)",
+      "data": 309,
+      "valid": true
+    },
+    {
+      "description": "Unassigned code (350)",
+      "data": 350,
+      "valid": true
+    },
+    {
+      "description": "Maximum valid (399)",
+      "data": 399,
+      "valid": true
+    }
+  ]
+}

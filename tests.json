@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [ "x-license", "tests" ],
+  "properties": {
+    "x-license": {
+      "const": "https://github.com/sourcemeta/std/blob/main/LICENSE"
+    },
+    "tests": {
+      "type": "array",
+      "minItems": 1
+    }
+  }
+}

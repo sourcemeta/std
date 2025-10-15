@@ -1,0 +1,311 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/http/status.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "200",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Invalid type - float",
+      "data": 200.5,
+      "valid": false
+    },
+    {
+      "description": "Below minimum (99)",
+      "data": 99,
+      "valid": false
+    },
+    {
+      "description": "Above maximum (600)",
+      "data": 600,
+      "valid": false
+    },
+    {
+      "description": "Informational - 100 Continue",
+      "data": 100,
+      "valid": true
+    },
+    {
+      "description": "Informational - 101 Switching Protocols",
+      "data": 101,
+      "valid": true
+    },
+    {
+      "description": "Successful - 200 OK",
+      "data": 200,
+      "valid": true
+    },
+    {
+      "description": "Successful - 201 Created",
+      "data": 201,
+      "valid": true
+    },
+    {
+      "description": "Successful - 202 Accepted",
+      "data": 202,
+      "valid": true
+    },
+    {
+      "description": "Successful - 203 Non-Authoritative Information",
+      "data": 203,
+      "valid": true
+    },
+    {
+      "description": "Successful - 204 No Content",
+      "data": 204,
+      "valid": true
+    },
+    {
+      "description": "Successful - 205 Reset Content",
+      "data": 205,
+      "valid": true
+    },
+    {
+      "description": "Successful - 206 Partial Content",
+      "data": 206,
+      "valid": true
+    },
+    {
+      "description": "Redirection - 300 Multiple Choices",
+      "data": 300,
+      "valid": true
+    },
+    {
+      "description": "Redirection - 301 Moved Permanently",
+      "data": 301,
+      "valid": true
+    },
+    {
+      "description": "Redirection - 302 Found",
+      "data": 302,
+      "valid": true
+    },
+    {
+      "description": "Redirection - 303 See Other",
+      "data": 303,
+      "valid": true
+    },
+    {
+      "description": "Redirection - 304 Not Modified",
+      "data": 304,
+      "valid": true
+    },
+    {
+      "description": "Redirection - 305 Use Proxy",
+      "data": 305,
+      "valid": true
+    },
+    {
+      "description": "Redirection - 306 (Unused)",
+      "data": 306,
+      "valid": true
+    },
+    {
+      "description": "Redirection - 307 Temporary Redirect",
+      "data": 307,
+      "valid": true
+    },
+    {
+      "description": "Redirection - 308 Permanent Redirect",
+      "data": 308,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 400 Bad Request",
+      "data": 400,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 401 Unauthorized",
+      "data": 401,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 402 Payment Required",
+      "data": 402,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 403 Forbidden",
+      "data": 403,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 404 Not Found",
+      "data": 404,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 405 Method Not Allowed",
+      "data": 405,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 406 Not Acceptable",
+      "data": 406,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 407 Proxy Authentication Required",
+      "data": 407,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 408 Request Timeout",
+      "data": 408,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 409 Conflict",
+      "data": 409,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 410 Gone",
+      "data": 410,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 411 Length Required",
+      "data": 411,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 412 Precondition Failed",
+      "data": 412,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 413 Content Too Large",
+      "data": 413,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 414 URI Too Long",
+      "data": 414,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 415 Unsupported Media Type",
+      "data": 415,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 416 Range Not Satisfiable",
+      "data": 416,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 417 Expectation Failed",
+      "data": 417,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 418 (Unused)",
+      "data": 418,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 421 Misdirected Request",
+      "data": 421,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 422 Unprocessable Content",
+      "data": 422,
+      "valid": true
+    },
+    {
+      "description": "Client Error - 426 Upgrade Required",
+      "data": 426,
+      "valid": true
+    },
+    {
+      "description": "Server Error - 500 Internal Server Error",
+      "data": 500,
+      "valid": true
+    },
+    {
+      "description": "Server Error - 501 Not Implemented",
+      "data": 501,
+      "valid": true
+    },
+    {
+      "description": "Server Error - 502 Bad Gateway",
+      "data": 502,
+      "valid": true
+    },
+    {
+      "description": "Server Error - 503 Service Unavailable",
+      "data": 503,
+      "valid": true
+    },
+    {
+      "description": "Server Error - 504 Gateway Timeout",
+      "data": 504,
+      "valid": true
+    },
+    {
+      "description": "Server Error - 505 HTTP Version Not Supported",
+      "data": 505,
+      "valid": true
+    },
+    {
+      "description": "Unassigned informational code (102-199)",
+      "data": 102,
+      "valid": true
+    },
+    {
+      "description": "Unassigned successful code (207-299)",
+      "data": 207,
+      "valid": true
+    },
+    {
+      "description": "Unassigned redirection code (309-399)",
+      "data": 309,
+      "valid": true
+    },
+    {
+      "description": "Unassigned client error code (419-420, 423-425, 427-499)",
+      "data": 419,
+      "valid": true
+    },
+    {
+      "description": "Unassigned server error code (506-599)",
+      "data": 506,
+      "valid": true
+    },
+    {
+      "description": "Boundary test - minimum valid (100)",
+      "data": 100,
+      "valid": true
+    },
+    {
+      "description": "Boundary test - maximum valid (599)",
+      "data": 599,
+      "valid": true
+    }
+  ]
+}

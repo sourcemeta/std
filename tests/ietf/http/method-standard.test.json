@@ -1,0 +1,201 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/http/method-standard.json",
+  "tests": [
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - GET",
+      "data": "GET",
+      "valid": true
+    },
+    {
+      "description": "Valid - HEAD",
+      "data": "HEAD",
+      "valid": true
+    },
+    {
+      "description": "Valid - POST",
+      "data": "POST",
+      "valid": true
+    },
+    {
+      "description": "Valid - PUT",
+      "data": "PUT",
+      "valid": true
+    },
+    {
+      "description": "Valid - DELETE",
+      "data": "DELETE",
+      "valid": true
+    },
+    {
+      "description": "Valid - CONNECT",
+      "data": "CONNECT",
+      "valid": true
+    },
+    {
+      "description": "Valid - OPTIONS",
+      "data": "OPTIONS",
+      "valid": true
+    },
+    {
+      "description": "Valid - TRACE",
+      "data": "TRACE",
+      "valid": true
+    },
+    {
+      "description": "Invalid - lowercase get",
+      "data": "get",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase head",
+      "data": "head",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase post",
+      "data": "post",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase put",
+      "data": "put",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase delete",
+      "data": "delete",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase connect",
+      "data": "connect",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase options",
+      "data": "options",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase trace",
+      "data": "trace",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed case Get",
+      "data": "Get",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed case Post",
+      "data": "Post",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed case Put",
+      "data": "Put",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed case Delete",
+      "data": "Delete",
+      "valid": false
+    },
+    {
+      "description": "Valid - PATCH (RFC 5789)",
+      "data": "PATCH",
+      "valid": true
+    },
+    {
+      "description": "Valid - PROPFIND (RFC 4918)",
+      "data": "PROPFIND",
+      "valid": true
+    },
+    {
+      "description": "Valid - PROPPATCH (RFC 4918)",
+      "data": "PROPPATCH",
+      "valid": true
+    },
+    {
+      "description": "Valid - MKCOL (RFC 4918)",
+      "data": "MKCOL",
+      "valid": true
+    },
+    {
+      "description": "Valid - COPY (RFC 4918)",
+      "data": "COPY",
+      "valid": true
+    },
+    {
+      "description": "Valid - MOVE (RFC 4918)",
+      "data": "MOVE",
+      "valid": true
+    },
+    {
+      "description": "Valid - LOCK (RFC 4918)",
+      "data": "LOCK",
+      "valid": true
+    },
+    {
+      "description": "Valid - UNLOCK (RFC 4918)",
+      "data": "UNLOCK",
+      "valid": true
+    },
+    {
+      "description": "Invalid - lowercase patch",
+      "data": "patch",
+      "valid": false
+    },
+    {
+      "description": "Invalid - custom method",
+      "data": "CUSTOM",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with space",
+      "data": "GET POST",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with leading space",
+      "data": " GET",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with trailing space",
+      "data": "GET ",
+      "valid": false
+    }
+  ]
+}

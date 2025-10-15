@@ -1,0 +1,501 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/jsonpointer/pointer.json",
+  "tests": [
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - empty string (root document)",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Valid - single slash (empty key)",
+      "data": "/",
+      "valid": true
+    },
+    {
+      "description": "Valid - simple key",
+      "data": "/foo",
+      "valid": true
+    },
+    {
+      "description": "Valid - nested keys",
+      "data": "/foo/bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - array index",
+      "data": "/0",
+      "valid": true
+    },
+    {
+      "description": "Valid - array append marker",
+      "data": "/-",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed path",
+      "data": "/foo/0/bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple array indices",
+      "data": "/0/1/2",
+      "valid": true
+    },
+    {
+      "description": "Valid - escaped tilde ~0 represents ~",
+      "data": "/~0",
+      "valid": true
+    },
+    {
+      "description": "Valid - escaped slash ~1 represents /",
+      "data": "/~1",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple escapes",
+      "data": "/~0~1",
+      "valid": true
+    },
+    {
+      "description": "Valid - escape in middle of key",
+      "data": "/foo~0bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - escaped slash in middle",
+      "data": "/foo~1bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - consecutive escaped tildes",
+      "data": "/~0~0",
+      "valid": true
+    },
+    {
+      "description": "Valid - consecutive escaped slashes",
+      "data": "/~1~1",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed escapes in key",
+      "data": "/a~1b~0c",
+      "valid": true
+    },
+    {
+      "description": "Valid - ~0 followed by literal 1",
+      "data": "/~01",
+      "valid": true
+    },
+    {
+      "description": "Valid - ~1 followed by literal 0",
+      "data": "/~10",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with space",
+      "data": "/foo bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with hyphen",
+      "data": "/foo-bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with underscore",
+      "data": "/foo_bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with dot",
+      "data": "/foo.bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with colon",
+      "data": "/foo:bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with at sign",
+      "data": "/foo@bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with exclamation",
+      "data": "/foo!bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with hash",
+      "data": "/foo#bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with dollar",
+      "data": "/foo$bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with percent",
+      "data": "/foo%bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with ampersand",
+      "data": "/foo&bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with asterisk",
+      "data": "/foo*bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with plus",
+      "data": "/foo+bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with equals",
+      "data": "/foo=bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with question mark",
+      "data": "/foo?bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with brackets",
+      "data": "/foo[bar]",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with braces",
+      "data": "/foo{bar}",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with parentheses",
+      "data": "/foo(bar)",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with angle brackets",
+      "data": "/foo<bar>",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with apostrophe",
+      "data": "/foo'bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with semicolon",
+      "data": "/foo;bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with comma",
+      "data": "/foo,bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with pipe",
+      "data": "/foo|bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with backslash",
+      "data": "/foo\\bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - two consecutive slashes (two empty keys)",
+      "data": "//",
+      "valid": true
+    },
+    {
+      "description": "Valid - three consecutive slashes",
+      "data": "///",
+      "valid": true
+    },
+    {
+      "description": "Valid - alphanumeric key",
+      "data": "/abc123",
+      "valid": true
+    },
+    {
+      "description": "Valid - key starting with number",
+      "data": "/123abc",
+      "valid": true
+    },
+    {
+      "description": "Valid - single space as key",
+      "data": "/ ",
+      "valid": true
+    },
+    {
+      "description": "Valid - tab character in key",
+      "data": "/\t",
+      "valid": true
+    },
+    {
+      "description": "Valid - newline in key",
+      "data": "/\n",
+      "valid": true
+    },
+    {
+      "description": "Valid - carriage return in key",
+      "data": "/\r",
+      "valid": true
+    },
+    {
+      "description": "Valid - null byte in key",
+      "data": "/\u0000",
+      "valid": true
+    },
+    {
+      "description": "Valid - accented character",
+      "data": "/café",
+      "valid": true
+    },
+    {
+      "description": "Valid - Japanese characters",
+      "data": "/日本語",
+      "valid": true
+    },
+    {
+      "description": "Valid - emoji",
+      "data": "/emoji😀",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode character",
+      "data": "/é",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple levels deep",
+      "data": "/a/b/c/d/e/f/g",
+      "valid": true
+    },
+    {
+      "description": "Valid - long key",
+      "data": "/verylongkeynamethatgoesonforsometime",
+      "valid": true
+    },
+    {
+      "description": "Valid - number with leading zero",
+      "data": "/01",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative number",
+      "data": "/-1",
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal number",
+      "data": "/3.14",
+      "valid": true
+    },
+    {
+      "description": "Valid - key with quote",
+      "data": "/foo\"bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - all special chars except / and ~",
+      "data": "/!#$%&'()*+,-.0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}",
+      "valid": true
+    },
+    {
+      "description": "Valid - escape at start",
+      "data": "/~0foo",
+      "valid": true
+    },
+    {
+      "description": "Valid - escape at end",
+      "data": "/foo~0",
+      "valid": true
+    },
+    {
+      "description": "Valid - only escapes",
+      "data": "/~0~1~0~1",
+      "valid": true
+    },
+    {
+      "description": "Invalid - no leading slash",
+      "data": "foo",
+      "valid": false
+    },
+    {
+      "description": "Invalid - path without leading slash",
+      "data": "foo/bar",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lone tilde",
+      "data": "/~",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by 2",
+      "data": "/~2",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by 3",
+      "data": "/~3",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by 4",
+      "data": "/~4",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by 5",
+      "data": "/~5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by 6",
+      "data": "/~6",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by 7",
+      "data": "/~7",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by 8",
+      "data": "/~8",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by 9",
+      "data": "/~9",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by letter a",
+      "data": "/~a",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by letter b",
+      "data": "/~b",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by uppercase A",
+      "data": "/~A",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde at end of key",
+      "data": "/foo~",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde with invalid escape in middle",
+      "data": "/foo~2bar",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde at end of path component",
+      "data": "/foo~/bar",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde without slash prefix",
+      "data": "~0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - escaped slash without leading slash",
+      "data": "~1",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde at end after slash",
+      "data": "/foo/~",
+      "valid": false
+    },
+    {
+      "description": "Invalid - multiple keys without leading slash",
+      "data": "foo/bar/baz",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by space",
+      "data": "/~ ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by slash",
+      "data": "/~//",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by tilde",
+      "data": "/~~",
+      "valid": false
+    },
+    {
+      "description": "Invalid - incomplete escape at end",
+      "data": "/foo/bar~",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde in middle of path",
+      "data": "/foo~bar",
+      "valid": false
+    },
+    {
+      "description": "Invalid - double tilde without digits",
+      "data": "/~~0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by hash",
+      "data": "/~#",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tilde followed by newline",
+      "data": "/~\n",
+      "valid": false
+    }
+  ]
+}

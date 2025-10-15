@@ -1,0 +1,71 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/http/status-informational.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "100",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Invalid type - float",
+      "data": 100.5,
+      "valid": false
+    },
+    {
+      "description": "Below minimum (99)",
+      "data": 99,
+      "valid": false
+    },
+    {
+      "description": "Above maximum (200)",
+      "data": 200,
+      "valid": false
+    },
+    {
+      "description": "100 Continue",
+      "data": 100,
+      "valid": true
+    },
+    {
+      "description": "101 Switching Protocols",
+      "data": 101,
+      "valid": true
+    },
+    {
+      "description": "Unassigned code (102)",
+      "data": 102,
+      "valid": true
+    },
+    {
+      "description": "Unassigned code (150)",
+      "data": 150,
+      "valid": true
+    },
+    {
+      "description": "Maximum valid (199)",
+      "data": 199,
+      "valid": true
+    }
+  ]
+}

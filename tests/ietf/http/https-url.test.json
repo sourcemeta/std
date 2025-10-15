@@ -1,0 +1,156 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/http/https-url.json",
+  "tests": [
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - simple HTTPS URL",
+      "data": "https://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS URL with path",
+      "data": "https://example.com/path/to/resource",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS URL with query",
+      "data": "https://example.com/path?query=value",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS URL with fragment",
+      "data": "https://example.com/path#section",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS URL with port",
+      "data": "https://example.com:8443/api",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS URL with userinfo",
+      "data": "https://user:pass@example.com/resource",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS URL with IPv4",
+      "data": "https://192.168.1.1/path",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS URL with IPv6",
+      "data": "https://[2001:db8::8a2e:370:7334]/path",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS scheme uppercase",
+      "data": "HTTPS://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS scheme mixed case Https",
+      "data": "Https://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS scheme mixed case HtTpS",
+      "data": "HtTpS://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS scheme mixed case hTTPS",
+      "data": "hTTPS://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS URL with all components",
+      "data": "https://user:pass@example.com:8443/path/to/resource?query=value&foo=bar#section",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS URL with empty path",
+      "data": "https://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS URL with port 443",
+      "data": "https://example.com:443/",
+      "valid": true
+    },
+    {
+      "description": "Invalid - HTTP URL",
+      "data": "http://example.com",
+      "valid": false
+    },
+    {
+      "description": "Invalid - FTP URL",
+      "data": "ftp://example.com",
+      "valid": false
+    },
+    {
+      "description": "Invalid - file URL",
+      "data": "file:///path/to/file",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mailto URL",
+      "data": "mailto:user@example.com",
+      "valid": false
+    },
+    {
+      "description": "Invalid - relative URL",
+      "data": "/path/to/resource",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing scheme",
+      "data": "example.com/path",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - scheme only",
+      "data": "https:",
+      "valid": false
+    },
+    {
+      "description": "Invalid - scheme with single slash",
+      "data": "https:/example.com",
+      "valid": false
+    },
+    {
+      "description": "Invalid - HTTPS URL with space",
+      "data": "https://example.com/path with space",
+      "valid": false
+    }
+  ]
+}

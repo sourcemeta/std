@@ -1,0 +1,561 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/uri/uri-reference.json",
+  "tests": [
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Empty string is valid URI reference",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Basic HTTP URI",
+      "data": "http://example.com",
+      "valid": true
+    },
+    {
+      "description": "HTTPS URI with path",
+      "data": "https://example.com/path/to/resource",
+      "valid": true
+    },
+    {
+      "description": "FTP URI",
+      "data": "ftp://ftp.example.com/file.txt",
+      "valid": true
+    },
+    {
+      "description": "File URI",
+      "data": "file:///path/to/file",
+      "valid": true
+    },
+    {
+      "description": "Mailto URI",
+      "data": "mailto:user@example.com",
+      "valid": true
+    },
+    {
+      "description": "Tel URI",
+      "data": "tel:+1-800-555-0123",
+      "valid": true
+    },
+    {
+      "description": "URN with ISBN",
+      "data": "urn:isbn:0451450523",
+      "valid": true
+    },
+    {
+      "description": "URN with UUID",
+      "data": "urn:uuid:12345678-1234-5678-1234-123456789abc",
+      "valid": true
+    },
+    {
+      "description": "Custom scheme",
+      "data": "custom://example.com/resource",
+      "valid": true
+    },
+    {
+      "description": "Scheme with numbers",
+      "data": "h2tp://example.com",
+      "valid": true
+    },
+    {
+      "description": "Scheme with plus",
+      "data": "git+ssh://user@host/repo.git",
+      "valid": true
+    },
+    {
+      "description": "Scheme with period",
+      "data": "x.400://example.com",
+      "valid": true
+    },
+    {
+      "description": "Scheme with hyphen",
+      "data": "my-scheme://example.com",
+      "valid": true
+    },
+    {
+      "description": "URI with userinfo",
+      "data": "https://user:password@example.com/path",
+      "valid": true
+    },
+    {
+      "description": "URI with userinfo without password",
+      "data": "https://user@example.com/path",
+      "valid": true
+    },
+    {
+      "description": "URI with empty userinfo",
+      "data": "https://@example.com/path",
+      "valid": true
+    },
+    {
+      "description": "URI with IPv4 address",
+      "data": "http://192.168.1.1/path",
+      "valid": true
+    },
+    {
+      "description": "URI with IPv6 address",
+      "data": "http://[2001:db8::1]/path",
+      "valid": true
+    },
+    {
+      "description": "URI with IPv6 and port",
+      "data": "http://[::1]:8080/path",
+      "valid": true
+    },
+    {
+      "description": "URI with port number",
+      "data": "https://example.com:443/path",
+      "valid": true
+    },
+    {
+      "description": "URI with high port number",
+      "data": "http://example.com:65535/path",
+      "valid": true
+    },
+    {
+      "description": "URI with international domain name",
+      "data": "http://xn--nxasmq6b.example.com/path",
+      "valid": true
+    },
+    {
+      "description": "URI with empty path",
+      "data": "http://example.com",
+      "valid": true
+    },
+    {
+      "description": "URI with root path",
+      "data": "http://example.com/",
+      "valid": true
+    },
+    {
+      "description": "URI with complex path",
+      "data": "http://example.com/path/to/resource.html",
+      "valid": true
+    },
+    {
+      "description": "URI with path containing dot segments",
+      "data": "http://example.com/path/../other/./file",
+      "valid": true
+    },
+    {
+      "description": "URI with percent-encoded path",
+      "data": "http://example.com/path%20with%20spaces",
+      "valid": true
+    },
+    {
+      "description": "URI with unreserved characters in path",
+      "data": "http://example.com/ABCabc123-._~",
+      "valid": true
+    },
+    {
+      "description": "URI with sub-delims in path",
+      "data": "http://example.com/!$&'()*+,;=",
+      "valid": true
+    },
+    {
+      "description": "URI with simple query",
+      "data": "http://example.com/path?query=value",
+      "valid": true
+    },
+    {
+      "description": "URI with multiple query parameters",
+      "data": "http://example.com/path?a=1&b=2&c=3",
+      "valid": true
+    },
+    {
+      "description": "URI with empty query",
+      "data": "http://example.com/path?",
+      "valid": true
+    },
+    {
+      "description": "URI with query containing special characters",
+      "data": "http://example.com/path?q=hello%20world&x=a+b",
+      "valid": true
+    },
+    {
+      "description": "URI with query containing question marks",
+      "data": "http://example.com/path?q=what?is?this",
+      "valid": true
+    },
+    {
+      "description": "URI with fragment",
+      "data": "http://example.com/path#section",
+      "valid": true
+    },
+    {
+      "description": "URI with empty fragment",
+      "data": "http://example.com/path#",
+      "valid": true
+    },
+    {
+      "description": "URI with query and fragment",
+      "data": "http://example.com/path?q=v#section",
+      "valid": true
+    },
+    {
+      "description": "URI with percent-encoded fragment",
+      "data": "http://example.com/path#section%201",
+      "valid": true
+    },
+    {
+      "description": "URI with fragment containing hash",
+      "data": "http://example.com/path#hash#in#fragment",
+      "valid": true
+    },
+    {
+      "description": "Single slash path",
+      "data": "/",
+      "valid": true
+    },
+    {
+      "description": "Path with single segment",
+      "data": "file.txt",
+      "valid": true
+    },
+    {
+      "description": "Path with multiple segments",
+      "data": "path/to/resource",
+      "valid": true
+    },
+    {
+      "description": "Absolute path",
+      "data": "/absolute/path/to/file",
+      "valid": true
+    },
+    {
+      "description": "Current directory reference",
+      "data": ".",
+      "valid": true
+    },
+    {
+      "description": "Parent directory reference",
+      "data": "..",
+      "valid": true
+    },
+    {
+      "description": "Path with dot segments",
+      "data": "../../../relative/path",
+      "valid": true
+    },
+    {
+      "description": "Network path reference",
+      "data": "//example.com/path",
+      "valid": true
+    },
+    {
+      "description": "Network path with userinfo",
+      "data": "//user:pass@example.com/path",
+      "valid": true
+    },
+    {
+      "description": "Network path with port",
+      "data": "//example.com:8080/path",
+      "valid": true
+    },
+    {
+      "description": "Query only",
+      "data": "?query=value",
+      "valid": true
+    },
+    {
+      "description": "Fragment only",
+      "data": "#fragment",
+      "valid": true
+    },
+    {
+      "description": "Path with query",
+      "data": "path/to/file?query=value",
+      "valid": true
+    },
+    {
+      "description": "Path with fragment",
+      "data": "path/to/file#section",
+      "valid": true
+    },
+    {
+      "description": "Path with query and fragment",
+      "data": "path/to/file?query=value#section",
+      "valid": true
+    },
+    {
+      "description": "Relative path that looks like scheme starting with number",
+      "data": "9scheme",
+      "valid": true
+    },
+    {
+      "description": "Relative path that looks like scheme starting with hyphen",
+      "data": "-scheme",
+      "valid": true
+    },
+    {
+      "description": "Relative path that looks like scheme starting with period",
+      "data": ".scheme",
+      "valid": true
+    },
+    {
+      "description": "Relative path with invalid scheme character",
+      "data": "sch@me",
+      "valid": true
+    },
+    {
+      "description": "Opaque URI (scheme:path)",
+      "data": "mailto:user@example.com",
+      "valid": true
+    },
+    {
+      "description": "Opaque URI with query",
+      "data": "mailto:user@example.com?subject=test",
+      "valid": true
+    },
+    {
+      "description": "Scheme with colon only",
+      "data": "scheme:",
+      "valid": true
+    },
+    {
+      "description": "URI with all components",
+      "data": "https://user:pass@example.com:8080/path/to/resource?query=value&other=123#section",
+      "valid": true
+    },
+    {
+      "description": "Data URI",
+      "data": "data:text/plain;base64,SGVsbG8gV29ybGQ=",
+      "valid": true
+    },
+    {
+      "description": "Data URI with percent encoding",
+      "data": "data:text/plain,Hello%20World",
+      "valid": true
+    },
+    {
+      "description": "Invalid IPv4 address",
+      "data": "http://256.256.256.256/path",
+      "valid": false
+    },
+    {
+      "description": "IPv6 without brackets",
+      "data": "http://2001:db8::1/path",
+      "valid": false
+    },
+    {
+      "description": "Authority with space",
+      "data": "http://exa mple.com/path",
+      "valid": false
+    },
+    {
+      "description": "Invalid percent encoding - single digit",
+      "data": "http://example.com/path%2",
+      "valid": false
+    },
+    {
+      "description": "Invalid percent encoding - non-hex",
+      "data": "http://example.com/path%ZZ",
+      "valid": false
+    },
+    {
+      "description": "Percent sign without encoding",
+      "data": "http://example.com/path%/file",
+      "valid": false
+    },
+    {
+      "description": "URI with unencoded space",
+      "data": "http://example.com/path with space",
+      "valid": false
+    },
+    {
+      "description": "URI with newline",
+      "data": "http://example.com/path\nwith\nnewline",
+      "valid": false
+    },
+    {
+      "description": "URI with tab character",
+      "data": "http://example.com/path\twith\ttab",
+      "valid": false
+    },
+    {
+      "description": "URI with carriage return",
+      "data": "http://example.com/path\rwith\rreturn",
+      "valid": false
+    },
+    {
+      "description": "URI with null character",
+      "data": "http://example.com/path\u0000with\u0000null",
+      "valid": false
+    },
+    {
+      "description": "URI with control character",
+      "data": "http://example.com/path\u0001control",
+      "valid": false
+    },
+    {
+      "description": "Single character scheme",
+      "data": "x://example.com",
+      "valid": true
+    },
+    {
+      "description": "Long scheme name",
+      "data": "verylongschemenamethatisallowed://example.com",
+      "valid": true
+    },
+    {
+      "description": "URI with only authority",
+      "data": "//example.com",
+      "valid": true
+    },
+    {
+      "description": "Relative path with colon not at start",
+      "data": "file:name",
+      "valid": true
+    },
+    {
+      "description": "Path with consecutive slashes",
+      "data": "http://example.com/path//to///resource",
+      "valid": true
+    },
+    {
+      "description": "Path with brackets (not IPv6)",
+      "data": "http://example.com/path[with]brackets",
+      "valid": true
+    },
+    {
+      "description": "Query with equals but no value",
+      "data": "http://example.com/path?key=",
+      "valid": true
+    },
+    {
+      "description": "Query with ampersand but no value",
+      "data": "http://example.com/path?key&other=value",
+      "valid": true
+    },
+    {
+      "description": "Path with percent-encoded characters",
+      "data": "path%20with%20spaces/file%2Ename",
+      "valid": true
+    },
+    {
+      "description": "Network path with IPv4",
+      "data": "//192.168.1.1/path",
+      "valid": true
+    },
+    {
+      "description": "Network path with IPv6",
+      "data": "//[2001:db8::1]/path",
+      "valid": true
+    },
+    {
+      "description": "Query and fragment without path",
+      "data": "?query#fragment",
+      "valid": true
+    },
+    {
+      "description": "Path with colon (valid in relative path)",
+      "data": "path:with:colons",
+      "valid": true
+    },
+    {
+      "description": "Path starting with colon",
+      "data": ":path",
+      "valid": true
+    },
+    {
+      "description": "Path with unreserved characters",
+      "data": "ABCabc123-._~",
+      "valid": true
+    },
+    {
+      "description": "Path with sub-delims",
+      "data": "!$&'()*+,;=",
+      "valid": true
+    },
+    {
+      "description": "Path with at sign",
+      "data": "path@file",
+      "valid": true
+    },
+    {
+      "description": "Query with various characters",
+      "data": "?query=a+b&c=d%20e",
+      "valid": true
+    },
+    {
+      "description": "Fragment with various characters",
+      "data": "#fragment%20with%20spaces",
+      "valid": true
+    },
+    {
+      "description": "Complex relative path",
+      "data": "./this:that/other.html",
+      "valid": true
+    },
+    {
+      "description": "Path segment with colon not at start",
+      "data": "g:x",
+      "valid": true
+    },
+    {
+      "description": "Path with brackets",
+      "data": "path[with]brackets",
+      "valid": true
+    },
+    {
+      "description": "Network path with reg-name containing dash",
+      "data": "//sub-domain.example.com/path",
+      "valid": true
+    },
+    {
+      "description": "Network path with reg-name containing underscore",
+      "data": "//sub_domain.example.com/path",
+      "valid": true
+    },
+    {
+      "description": "Relative path that looks like scheme but isn't",
+      "data": "http",
+      "valid": true
+    },
+    {
+      "description": "Relative path with file extension",
+      "data": "document.pdf",
+      "valid": true
+    },
+    {
+      "description": "Path with multiple consecutive slashes",
+      "data": "path//to///resource",
+      "valid": true
+    },
+    {
+      "description": "Query with question mark in value",
+      "data": "?query=value?with?marks",
+      "valid": true
+    },
+    {
+      "description": "Fragment with hash in value",
+      "data": "#fragment#with#hashes",
+      "valid": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+name: Std
+
+on:
+  schedule:
+    # Once per day, Monday to Friday
+    - cron: '0 19 * * 1-5'
+  push:
+    branches:
+      - main
+  pull_request:
+
+concurrency:
+  group: std-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sudo snap install jsonschema
+      - uses: actions/checkout@v4
+      - run: make lint
+      - run: make test

@@ -1,0 +1,336 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/http/method.json",
+  "tests": [
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - GET",
+      "data": "GET",
+      "valid": true
+    },
+    {
+      "description": "Valid - HEAD",
+      "data": "HEAD",
+      "valid": true
+    },
+    {
+      "description": "Valid - POST",
+      "data": "POST",
+      "valid": true
+    },
+    {
+      "description": "Valid - PUT",
+      "data": "PUT",
+      "valid": true
+    },
+    {
+      "description": "Valid - DELETE",
+      "data": "DELETE",
+      "valid": true
+    },
+    {
+      "description": "Valid - CONNECT",
+      "data": "CONNECT",
+      "valid": true
+    },
+    {
+      "description": "Valid - OPTIONS",
+      "data": "OPTIONS",
+      "valid": true
+    },
+    {
+      "description": "Valid - TRACE",
+      "data": "TRACE",
+      "valid": true
+    },
+    {
+      "description": "Valid - lowercase get",
+      "data": "get",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed case Post",
+      "data": "Post",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension method PATCH",
+      "data": "PATCH",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension method PROPFIND",
+      "data": "PROPFIND",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension method PROPPATCH",
+      "data": "PROPPATCH",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension method MKCOL",
+      "data": "MKCOL",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension method COPY",
+      "data": "COPY",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension method MOVE",
+      "data": "MOVE",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension method LOCK",
+      "data": "LOCK",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension method UNLOCK",
+      "data": "UNLOCK",
+      "valid": true
+    },
+    {
+      "description": "Valid - custom method with hyphen",
+      "data": "X-CUSTOM-METHOD",
+      "valid": true
+    },
+    {
+      "description": "Valid - custom method with underscore",
+      "data": "CUSTOM_METHOD",
+      "valid": true
+    },
+    {
+      "description": "Valid - custom method with dot",
+      "data": "CUSTOM.METHOD",
+      "valid": true
+    },
+    {
+      "description": "Valid - method with exclamation",
+      "data": "METHOD!",
+      "valid": true
+    },
+    {
+      "description": "Valid - method with hash",
+      "data": "METHOD#123",
+      "valid": true
+    },
+    {
+      "description": "Valid - method with dollar",
+      "data": "METHOD$",
+      "valid": true
+    },
+    {
+      "description": "Valid - method with percent",
+      "data": "METHOD%",
+      "valid": true
+    },
+    {
+      "description": "Valid - method with ampersand",
+      "data": "METHOD&",
+      "valid": true
+    },
+    {
+      "description": "Valid - method with apostrophe",
+      "data": "METHOD'",
+      "valid": true
+    },
+    {
+      "description": "Valid - method with asterisk",
+      "data": "METHOD*",
+      "valid": true
+    },
+    {
+      "description": "Valid - method with plus",
+      "data": "METHOD+",
+      "valid": true
+    },
+    {
+      "description": "Valid - method with caret",
+      "data": "METHOD^",
+      "valid": true
+    },
+    {
+      "description": "Valid - method with backtick",
+      "data": "METHOD`",
+      "valid": true
+    },
+    {
+      "description": "Valid - method with pipe",
+      "data": "METHOD|",
+      "valid": true
+    },
+    {
+      "description": "Valid - method with tilde",
+      "data": "METHOD~",
+      "valid": true
+    },
+    {
+      "description": "Valid - method with digits",
+      "data": "METHOD123",
+      "valid": true
+    },
+    {
+      "description": "Valid - all uppercase letters",
+      "data": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      "valid": true
+    },
+    {
+      "description": "Valid - all lowercase letters",
+      "data": "abcdefghijklmnopqrstuvwxyz",
+      "valid": true
+    },
+    {
+      "description": "Valid - all digits",
+      "data": "0123456789",
+      "valid": true
+    },
+    {
+      "description": "Valid - all tchar symbols",
+      "data": "!#$%&'*+-.^_`|~",
+      "valid": true
+    },
+    {
+      "description": "Valid - single character",
+      "data": "X",
+      "valid": true
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space",
+      "data": "GET POST",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading space",
+      "data": " GET",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing space",
+      "data": "GET ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tab character",
+      "data": "GET\tPOST",
+      "valid": false
+    },
+    {
+      "description": "Invalid - newline",
+      "data": "GET\n",
+      "valid": false
+    },
+    {
+      "description": "Invalid - carriage return",
+      "data": "GET\r",
+      "valid": false
+    },
+    {
+      "description": "Invalid - comma",
+      "data": "GET,POST",
+      "valid": false
+    },
+    {
+      "description": "Invalid - semicolon",
+      "data": "GET;POST",
+      "valid": false
+    },
+    {
+      "description": "Invalid - colon",
+      "data": "GET:POST",
+      "valid": false
+    },
+    {
+      "description": "Invalid - forward slash",
+      "data": "GET/POST",
+      "valid": false
+    },
+    {
+      "description": "Invalid - backslash",
+      "data": "GET\\POST",
+      "valid": false
+    },
+    {
+      "description": "Invalid - question mark",
+      "data": "GET?",
+      "valid": false
+    },
+    {
+      "description": "Invalid - at sign",
+      "data": "GET@",
+      "valid": false
+    },
+    {
+      "description": "Invalid - brackets",
+      "data": "GET[POST]",
+      "valid": false
+    },
+    {
+      "description": "Invalid - braces",
+      "data": "GET{POST}",
+      "valid": false
+    },
+    {
+      "description": "Invalid - parentheses",
+      "data": "GET(POST)",
+      "valid": false
+    },
+    {
+      "description": "Invalid - angle brackets",
+      "data": "<GET>",
+      "valid": false
+    },
+    {
+      "description": "Invalid - equals",
+      "data": "GET=POST",
+      "valid": false
+    },
+    {
+      "description": "Invalid - double quote",
+      "data": "\"GET\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - null byte",
+      "data": "GET\u0000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - control character",
+      "data": "GET\u0001",
+      "valid": false
+    }
+  ]
+}

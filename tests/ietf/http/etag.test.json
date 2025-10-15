@@ -1,0 +1,151 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/http/etag.json",
+  "tests": [
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - strong ETag empty",
+      "data": "\"\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - strong ETag simple",
+      "data": "\"abc123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - strong ETag hex",
+      "data": "\"686897696a7c876b7e\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - strong ETag with symbols",
+      "data": "\"abc-123_def.456\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - weak ETag empty",
+      "data": "W/\"\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - weak ETag simple",
+      "data": "W/\"abc123\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - weak ETag hex",
+      "data": "W/\"686897696a7c876b7e\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - weak ETag with symbols",
+      "data": "W/\"abc-123_def.456\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - strong ETag long value",
+      "data": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - weak ETag long value",
+      "data": "W/\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - strong ETag with all allowed symbols",
+      "data": "\"!#$%&*+:;=?@[]^{|}~\"",
+      "valid": true
+    },
+    {
+      "description": "Valid - weak ETag with all allowed symbols",
+      "data": "W/\"!#$%&*+:;=?@[]^{|}~\"",
+      "valid": true
+    },
+    {
+      "description": "Invalid - no quotes",
+      "data": "abc123",
+      "valid": false
+    },
+    {
+      "description": "Invalid - single quotes",
+      "data": "'abc123'",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing closing quote",
+      "data": "\"abc123",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space inside strong ETag",
+      "data": "\"abc 123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space inside weak ETag",
+      "data": "W/\"abc 123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tab character in strong ETag",
+      "data": "\"abc\t123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - newline in weak ETag",
+      "data": "W/\"abc\n123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase w in weak prefix",
+      "data": "w/\"abc123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - weak prefix without slash",
+      "data": "W\"abc123\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - just quotes with space",
+      "data": "\" \"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - W/ with space",
+      "data": "W/\" \"",
+      "valid": false
+    }
+  ]
+}

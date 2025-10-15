@@ -1,0 +1,171 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/http/status-client-error.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "404",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": false,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Invalid type - float",
+      "data": 404.5,
+      "valid": false
+    },
+    {
+      "description": "Below minimum (399)",
+      "data": 399,
+      "valid": false
+    },
+    {
+      "description": "Above maximum (500)",
+      "data": 500,
+      "valid": false
+    },
+    {
+      "description": "400 Bad Request",
+      "data": 400,
+      "valid": true
+    },
+    {
+      "description": "401 Unauthorized",
+      "data": 401,
+      "valid": true
+    },
+    {
+      "description": "402 Payment Required",
+      "data": 402,
+      "valid": true
+    },
+    {
+      "description": "403 Forbidden",
+      "data": 403,
+      "valid": true
+    },
+    {
+      "description": "404 Not Found",
+      "data": 404,
+      "valid": true
+    },
+    {
+      "description": "405 Method Not Allowed",
+      "data": 405,
+      "valid": true
+    },
+    {
+      "description": "406 Not Acceptable",
+      "data": 406,
+      "valid": true
+    },
+    {
+      "description": "407 Proxy Authentication Required",
+      "data": 407,
+      "valid": true
+    },
+    {
+      "description": "408 Request Timeout",
+      "data": 408,
+      "valid": true
+    },
+    {
+      "description": "409 Conflict",
+      "data": 409,
+      "valid": true
+    },
+    {
+      "description": "410 Gone",
+      "data": 410,
+      "valid": true
+    },
+    {
+      "description": "411 Length Required",
+      "data": 411,
+      "valid": true
+    },
+    {
+      "description": "412 Precondition Failed",
+      "data": 412,
+      "valid": true
+    },
+    {
+      "description": "413 Content Too Large",
+      "data": 413,
+      "valid": true
+    },
+    {
+      "description": "414 URI Too Long",
+      "data": 414,
+      "valid": true
+    },
+    {
+      "description": "415 Unsupported Media Type",
+      "data": 415,
+      "valid": true
+    },
+    {
+      "description": "416 Range Not Satisfiable",
+      "data": 416,
+      "valid": true
+    },
+    {
+      "description": "417 Expectation Failed",
+      "data": 417,
+      "valid": true
+    },
+    {
+      "description": "418 (Unused)",
+      "data": 418,
+      "valid": true
+    },
+    {
+      "description": "421 Misdirected Request",
+      "data": 421,
+      "valid": true
+    },
+    {
+      "description": "422 Unprocessable Content",
+      "data": 422,
+      "valid": true
+    },
+    {
+      "description": "426 Upgrade Required",
+      "data": 426,
+      "valid": true
+    },
+    {
+      "description": "Unassigned code (419)",
+      "data": 419,
+      "valid": true
+    },
+    {
+      "description": "Unassigned code (450)",
+      "data": 450,
+      "valid": true
+    },
+    {
+      "description": "Maximum valid (499)",
+      "data": 499,
+      "valid": true
+    }
+  ]
+}
