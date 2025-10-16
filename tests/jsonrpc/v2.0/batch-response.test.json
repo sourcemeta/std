@@ -1,0 +1,353 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/jsonrpc/v2.0/batch-response.json",
+  "tests": [
+    {
+      "data": [
+        {
+          "id": "1",
+          "jsonrpc": "2.0",
+          "result": 7
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": "1",
+          "jsonrpc": "2.0",
+          "result": 7
+        },
+        {
+          "id": "2",
+          "jsonrpc": "2.0",
+          "result": 19
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": "1",
+          "jsonrpc": "2.0",
+          "result": 7
+        },
+        {
+          "id": "2",
+          "jsonrpc": "2.0",
+          "result": 19
+        },
+        {
+          "id": null,
+          "error": {
+            "code": -32600,
+            "message": "Invalid Request"
+          },
+          "jsonrpc": "2.0"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "jsonrpc": "2.0",
+          "result": {
+            "status": "ok"
+          }
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": "req-1",
+          "error": {
+            "code": -32601,
+            "message": "Method not found"
+          },
+          "jsonrpc": "2.0"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": null,
+          "error": {
+            "code": -32700,
+            "message": "Parse error"
+          },
+          "jsonrpc": "2.0"
+        },
+        {
+          "id": null,
+          "error": {
+            "code": -32600,
+            "message": "Invalid Request"
+          },
+          "jsonrpc": "2.0"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "jsonrpc": "2.0",
+          "result": null
+        },
+        {
+          "id": 2,
+          "jsonrpc": "2.0",
+          "result": true
+        },
+        {
+          "id": 3,
+          "jsonrpc": "2.0",
+          "result": false
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "jsonrpc": "2.0",
+          "result": 100
+        },
+        {
+          "id": 2,
+          "jsonrpc": "2.0",
+          "result": 200
+        },
+        {
+          "id": 3,
+          "jsonrpc": "2.0",
+          "result": 300
+        },
+        {
+          "id": 4,
+          "error": {
+            "code": -32600,
+            "message": "Invalid Request"
+          },
+          "jsonrpc": "2.0"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": "arr-1",
+          "jsonrpc": "2.0",
+          "result": [ 1, 2, 3 ]
+        },
+        {
+          "id": "obj-1",
+          "jsonrpc": "2.0",
+          "result": {
+            "key": "value"
+          }
+        },
+        {
+          "id": "str-1",
+          "jsonrpc": "2.0",
+          "result": "string result"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "jsonrpc": "2.0",
+          "result": 1
+        },
+        {
+          "id": 2,
+          "jsonrpc": "2.0",
+          "result": 2
+        },
+        {
+          "id": 3,
+          "jsonrpc": "2.0",
+          "result": 3
+        },
+        {
+          "id": 4,
+          "jsonrpc": "2.0",
+          "result": 4
+        },
+        {
+          "id": 5,
+          "jsonrpc": "2.0",
+          "result": 5
+        },
+        {
+          "id": 6,
+          "jsonrpc": "2.0",
+          "result": 6
+        },
+        {
+          "id": 7,
+          "jsonrpc": "2.0",
+          "result": 7
+        },
+        {
+          "id": 8,
+          "jsonrpc": "2.0",
+          "result": 8
+        },
+        {
+          "id": 9,
+          "jsonrpc": "2.0",
+          "result": 9
+        },
+        {
+          "id": 10,
+          "jsonrpc": "2.0",
+          "result": 10
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": "err-1",
+          "error": {
+            "code": -32000,
+            "data": {
+              "details": "Internal failure"
+            },
+            "message": "Server error"
+          },
+          "jsonrpc": "2.0"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": 0,
+          "jsonrpc": "2.0",
+          "result": 0
+        },
+        {
+          "id": "empty",
+          "jsonrpc": "2.0",
+          "result": ""
+        },
+        {
+          "id": "arr",
+          "jsonrpc": "2.0",
+          "result": []
+        },
+        {
+          "id": "obj",
+          "jsonrpc": "2.0",
+          "result": {}
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [],
+      "valid": false
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "jsonrpc": "2.0"
+        }
+      ],
+      "valid": false
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "error": {
+            "code": -32600,
+            "message": "Error"
+          },
+          "jsonrpc": "2.0",
+          "result": 1
+        }
+      ],
+      "valid": false
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "result": 1
+        }
+      ],
+      "valid": false
+    },
+    {
+      "data": [
+        {
+          "jsonrpc": "2.0",
+          "result": 1
+        }
+      ],
+      "valid": false
+    },
+    {
+      "data": [ "not an object" ],
+      "valid": false
+    },
+    {
+      "data": [ 42 ],
+      "valid": false
+    },
+    {
+      "data": [ null ],
+      "valid": false
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "jsonrpc": "2.0",
+          "result": 1
+        },
+        {
+          "id": 2,
+          "jsonrpc": "2.0"
+        }
+      ],
+      "valid": false
+    },
+    {
+      "data": {},
+      "valid": false
+    },
+    {
+      "data": "batch",
+      "valid": false
+    },
+    {
+      "data": 42,
+      "valid": false
+    },
+    {
+      "data": null,
+      "valid": false
+    }
+  ]
+}

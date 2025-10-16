@@ -1,0 +1,114 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/jsonrpc/v2.0/method-internal.json",
+  "tests": [
+    {
+      "data": "rpc.",
+      "valid": true
+    },
+    {
+      "data": "rpc.discover",
+      "valid": true
+    },
+    {
+      "data": "rpc.introspect",
+      "valid": true
+    },
+    {
+      "data": "rpc.system",
+      "valid": true
+    },
+    {
+      "data": "rpc.system.info",
+      "valid": true
+    },
+    {
+      "data": "rpc.system.listMethods",
+      "valid": true
+    },
+    {
+      "data": "rpc.server.version",
+      "valid": true
+    },
+    {
+      "data": "rpc.a",
+      "valid": true
+    },
+    {
+      "data": "rpc.with-dash",
+      "valid": true
+    },
+    {
+      "data": "rpc.with_underscore",
+      "valid": true
+    },
+    {
+      "data": "rpc.123",
+      "valid": true
+    },
+    {
+      "data": "rpc.deeply.nested.method.name",
+      "valid": true
+    },
+    {
+      "data": "rpc",
+      "valid": false
+    },
+    {
+      "data": "Rpc.",
+      "valid": false
+    },
+    {
+      "data": "RPC.",
+      "valid": false
+    },
+    {
+      "data": "rPc.",
+      "valid": false
+    },
+    {
+      "data": "method",
+      "valid": false
+    },
+    {
+      "data": "subtract",
+      "valid": false
+    },
+    {
+      "data": "update",
+      "valid": false
+    },
+    {
+      "data": ".rpc",
+      "valid": false
+    },
+    {
+      "data": "prefix.rpc.",
+      "valid": false
+    },
+    {
+      "data": "",
+      "valid": false
+    },
+    {
+      "data": 42,
+      "valid": false
+    },
+    {
+      "data": null,
+      "valid": false
+    },
+    {
+      "data": true,
+      "valid": false
+    },
+    {
+      "data": [],
+      "valid": false
+    },
+    {
+      "data": {},
+      "valid": false
+    }
+  ]
+}

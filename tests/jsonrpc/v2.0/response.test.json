@@ -1,0 +1,357 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/jsonrpc/v2.0/response.json",
+  "tests": [
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": 19
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 2,
+        "jsonrpc": "2.0",
+        "result": 0
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 3,
+        "jsonrpc": "2.0",
+        "result": -1
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": "req-1",
+        "jsonrpc": "2.0",
+        "result": "success"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": ""
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": null
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 2,
+        "jsonrpc": "2.0",
+        "result": true
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 3,
+        "jsonrpc": "2.0",
+        "result": false
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": "req-002",
+        "jsonrpc": "2.0",
+        "result": [ 7, 8, 9 ]
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": []
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+          "status": "ok"
+        }
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 2,
+        "jsonrpc": "2.0",
+        "result": {}
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": "test",
+        "jsonrpc": "2.0",
+        "result": {
+          "data": {
+            "nested": "value"
+          }
+        }
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 3,
+        "error": {
+          "code": -32601,
+          "message": "Method not found"
+        },
+        "jsonrpc": "2.0"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": null,
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "jsonrpc": "2.0"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": "req-1",
+        "error": {
+          "code": -32700,
+          "message": "Parse error"
+        },
+        "jsonrpc": "2.0"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 1,
+        "error": {
+          "code": -32000,
+          "data": {
+            "details": "failed"
+          },
+          "message": "Server error"
+        },
+        "jsonrpc": "2.0"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 42,
+        "error": {
+          "code": 100,
+          "message": "Application error"
+        },
+        "jsonrpc": "2.0"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 0,
+        "jsonrpc": "2.0",
+        "result": 42
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": -1,
+        "jsonrpc": "2.0",
+        "result": [ 1, 2, 3, 4, 5 ]
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "error": {
+          "code": -32600,
+          "message": "Error"
+        },
+        "jsonrpc": "2.0",
+        "result": 19
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "result": 19
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "error": {
+          "code": -32600,
+          "message": "Error"
+        },
+        "jsonrpc": "2.0"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "result": 19
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "1.0",
+        "result": 19
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": 2.0,
+        "result": 19
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": true,
+        "jsonrpc": "2.0",
+        "result": 19
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": [],
+        "jsonrpc": "2.0",
+        "result": 19
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": {},
+        "jsonrpc": "2.0",
+        "result": 19
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1.5,
+        "jsonrpc": "2.0",
+        "result": 19
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "error": "not an object",
+        "jsonrpc": "2.0"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "error": {
+          "code": "invalid"
+        },
+        "jsonrpc": "2.0"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "error": {
+          "message": "Missing code"
+        },
+        "jsonrpc": "2.0"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "custom": "extension",
+        "jsonrpc": "2.0",
+        "result": 42
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": "req-1",
+        "jsonrpc": "2.0",
+        "result": "success",
+        "timing": {
+          "duration": 150
+        }
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 2,
+        "x-request-id": "abc123",
+        "error": {
+          "code": -32600,
+          "message": "Error"
+        },
+        "jsonrpc": "2.0"
+      },
+      "valid": true
+    },
+    {
+      "data": {},
+      "valid": false
+    },
+    {
+      "data": [],
+      "valid": false
+    },
+    {
+      "data": "response",
+      "valid": false
+    },
+    {
+      "data": null,
+      "valid": false
+    }
+  ]
+}

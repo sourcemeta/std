@@ -1,0 +1,263 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/jsonrpc/v2.0/error.json",
+  "tests": [
+    {
+      "data": {
+        "code": -32600,
+        "message": "Invalid Request"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": -32601,
+        "message": "Method not found"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": -32700,
+        "message": "Parse error"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": -32602,
+        "message": "Invalid params"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": -32603,
+        "message": "Internal error"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": -32000,
+        "message": "Server error"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": 100,
+        "message": "Application error"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": -1,
+        "message": "Custom error"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": 0,
+        "message": ""
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": -32600,
+        "data": "Additional info",
+        "message": "Invalid Request"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": -32601,
+        "data": {
+          "method": "foo"
+        },
+        "message": "Method not found"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": -32000,
+        "data": {
+          "details": "Database connection failed"
+        },
+        "message": "Server error"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": 100,
+        "data": [ 1, 2, 3 ],
+        "message": "Error"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": -32700,
+        "data": null,
+        "message": "Parse error"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": 42,
+        "data": true,
+        "message": "Error"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": -32602,
+        "data": 123,
+        "message": "Invalid params"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": 1,
+        "message": "A very long error message with many characters describing the issue in detail"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": -32600,
+        "message": "Error with unicode café"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": 100,
+        "message": "Error with\nnewline"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": -32600,
+        "data": {
+          "nested": {
+            "deep": {
+              "value": 42
+            }
+          }
+        },
+        "message": "Error"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "message": "Missing code"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "code": -32600
+      },
+      "valid": false
+    },
+    {
+      "data": {},
+      "valid": false
+    },
+    {
+      "data": {
+        "code": "not-a-number",
+        "message": "Invalid code type"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "code": -32600,
+        "message": 123
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "code": null,
+        "message": "Null code"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "code": -32600,
+        "message": null
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "code": -32600.5,
+        "message": "Fractional code"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "code": -32000,
+        "custom": "extension",
+        "message": "Server error"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "code": -32601,
+        "message": "Method not found",
+        "request_id": "req-123",
+        "timestamp": 1234567890
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "x-trace": {
+          "column": 10,
+          "line": 42
+        },
+        "code": -32700,
+        "message": "Parse error"
+      },
+      "valid": true
+    },
+    {
+      "data": [],
+      "valid": false
+    },
+    {
+      "data": "error",
+      "valid": false
+    },
+    {
+      "data": 42,
+      "valid": false
+    },
+    {
+      "data": null,
+      "valid": false
+    },
+    {
+      "data": true,
+      "valid": false
+    }
+  ]
+}
