@@ -1,0 +1,448 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/ietf/ip/v4/address.json",
+  "tests": [
+    {
+      "data": "0.0.0.0",
+      "valid": true
+    },
+    {
+      "data": "1.2.3.4",
+      "valid": true
+    },
+    {
+      "data": "9.9.9.9",
+      "valid": true
+    },
+    {
+      "data": "10.20.30.40",
+      "valid": true
+    },
+    {
+      "data": "99.99.99.99",
+      "valid": true
+    },
+    {
+      "data": "100.150.199.200",
+      "valid": true
+    },
+    {
+      "data": "127.0.0.1",
+      "valid": true
+    },
+    {
+      "data": "192.168.1.1",
+      "valid": true
+    },
+    {
+      "data": "255.255.255.255",
+      "valid": true
+    },
+    {
+      "data": "10.0.0.1",
+      "valid": true
+    },
+    {
+      "data": "172.16.0.1",
+      "valid": true
+    },
+    {
+      "data": "200.201.202.203",
+      "valid": true
+    },
+    {
+      "data": "249.249.249.249",
+      "valid": true
+    },
+    {
+      "data": "250.251.252.253",
+      "valid": true
+    },
+    {
+      "data": "254.254.254.254",
+      "valid": true
+    },
+    {
+      "data": "255.0.0.0",
+      "valid": true
+    },
+    {
+      "data": "0.255.0.0",
+      "valid": true
+    },
+    {
+      "data": "0.0.255.0",
+      "valid": true
+    },
+    {
+      "data": "0.0.0.255",
+      "valid": true
+    },
+    {
+      "data": "1.1.1.1",
+      "valid": true
+    },
+    {
+      "data": "8.8.8.8",
+      "valid": true
+    },
+    {
+      "data": "10.10.10.10",
+      "valid": true
+    },
+    {
+      "data": "11.11.11.11",
+      "valid": true
+    },
+    {
+      "data": "100.100.100.100",
+      "valid": true
+    },
+    {
+      "data": "101.102.103.104",
+      "valid": true
+    },
+    {
+      "data": "110.111.112.113",
+      "valid": true
+    },
+    {
+      "data": "190.191.192.193",
+      "valid": true
+    },
+    {
+      "data": "198.199.200.201",
+      "valid": true
+    },
+    {
+      "data": "210.220.230.240",
+      "valid": true
+    },
+    {
+      "data": "241.242.243.244",
+      "valid": true
+    },
+    {
+      "data": "245.246.247.248",
+      "valid": true
+    },
+    {
+      "data": "01.02.03.04",
+      "valid": false
+    },
+    {
+      "data": "001.002.003.004",
+      "valid": false
+    },
+    {
+      "data": "1.2.3.04",
+      "valid": false
+    },
+    {
+      "data": "1.2.03.4",
+      "valid": false
+    },
+    {
+      "data": "1.02.3.4",
+      "valid": false
+    },
+    {
+      "data": "01.2.3.4",
+      "valid": false
+    },
+    {
+      "data": "00.0.0.0",
+      "valid": false
+    },
+    {
+      "data": "0.00.0.0",
+      "valid": false
+    },
+    {
+      "data": "0.0.00.0",
+      "valid": false
+    },
+    {
+      "data": "0.0.0.00",
+      "valid": false
+    },
+    {
+      "data": "256.0.0.0",
+      "valid": false
+    },
+    {
+      "data": "0.256.0.0",
+      "valid": false
+    },
+    {
+      "data": "0.0.256.0",
+      "valid": false
+    },
+    {
+      "data": "0.0.0.256",
+      "valid": false
+    },
+    {
+      "data": "300.300.300.300",
+      "valid": false
+    },
+    {
+      "data": "999.999.999.999",
+      "valid": false
+    },
+    {
+      "data": "260.1.1.1",
+      "valid": false
+    },
+    {
+      "data": "1.260.1.1",
+      "valid": false
+    },
+    {
+      "data": "1.1.260.1",
+      "valid": false
+    },
+    {
+      "data": "1.1.1.260",
+      "valid": false
+    },
+    {
+      "data": "1.2.3",
+      "valid": false
+    },
+    {
+      "data": "1.2",
+      "valid": false
+    },
+    {
+      "data": "1",
+      "valid": false
+    },
+    {
+      "data": "1.2.3.4.5",
+      "valid": false
+    },
+    {
+      "data": "1.2.3.4.5.6",
+      "valid": false
+    },
+    {
+      "data": "a.b.c.d",
+      "valid": false
+    },
+    {
+      "data": "1a.2b.3c.4d",
+      "valid": false
+    },
+    {
+      "data": "1.2.3.4a",
+      "valid": false
+    },
+    {
+      "data": "-1.0.0.0",
+      "valid": false
+    },
+    {
+      "data": "0.-1.0.0",
+      "valid": false
+    },
+    {
+      "data": "0.0.-1.0",
+      "valid": false
+    },
+    {
+      "data": "0.0.0.-1",
+      "valid": false
+    },
+    {
+      "data": "1.2.3.4.",
+      "valid": false
+    },
+    {
+      "data": ".1.2.3.4",
+      "valid": false
+    },
+    {
+      "data": "1..2.3.4",
+      "valid": false
+    },
+    {
+      "data": "1.2..3.4",
+      "valid": false
+    },
+    {
+      "data": "1.2.3..4",
+      "valid": false
+    },
+    {
+      "data": "1. 2. 3. 4",
+      "valid": false
+    },
+    {
+      "data": "1 .2 .3 .4",
+      "valid": false
+    },
+    {
+      "data": " 1.2.3.4",
+      "valid": false
+    },
+    {
+      "data": "1.2.3.4 ",
+      "valid": false
+    },
+    {
+      "data": "",
+      "valid": false
+    },
+    {
+      "data": "...",
+      "valid": false
+    },
+    {
+      "data": "1.2.3.4.5.6.7.8",
+      "valid": false
+    },
+    {
+      "data": "192.168.1",
+      "valid": false
+    },
+    {
+      "data": "192.168.1.",
+      "valid": false
+    },
+    {
+      "data": "1.2.3.4:80",
+      "valid": false
+    },
+    {
+      "data": "1.2.3.4/24",
+      "valid": false
+    },
+    {
+      "data": "0x1.0x2.0x3.0x4",
+      "valid": false
+    },
+    {
+      "data": "1.2.3.0x04",
+      "valid": false
+    },
+    {
+      "data": "192.168.001.001",
+      "valid": false
+    },
+    {
+      "data": "0.0.0.0.0",
+      "valid": false
+    },
+    {
+      "data": "255.255.255.256",
+      "valid": false
+    },
+    {
+      "data": "255.255.256.255",
+      "valid": false
+    },
+    {
+      "data": "255.256.255.255",
+      "valid": false
+    },
+    {
+      "data": "256.255.255.255",
+      "valid": false
+    },
+    {
+      "data": "19.29.39.49",
+      "valid": true
+    },
+    {
+      "data": "59.69.79.89",
+      "valid": true
+    },
+    {
+      "data": "50.150.225.255",
+      "valid": true
+    },
+    {
+      "data": "199.200.249.250",
+      "valid": true
+    },
+    {
+      "data": "9.10.99.100",
+      "valid": true
+    },
+    {
+      "data": "5.6.7.8",
+      "valid": true
+    },
+    {
+      "data": "15.25.35.45",
+      "valid": true
+    },
+    {
+      "data": "55.65.75.85",
+      "valid": true
+    },
+    {
+      "data": "95.105.115.125",
+      "valid": true
+    },
+    {
+      "data": "135.145.155.165",
+      "valid": true
+    },
+    {
+      "data": "175.185.195.205",
+      "valid": true
+    },
+    {
+      "data": "215.225.235.245",
+      "valid": true
+    },
+    {
+      "data": "224.239.248.255",
+      "valid": true
+    },
+    {
+      "data": null,
+      "valid": false
+    },
+    {
+      "data": true,
+      "valid": false
+    },
+    {
+      "data": false,
+      "valid": false
+    },
+    {
+      "data": 192,
+      "valid": false
+    },
+    {
+      "data": 192.168,
+      "valid": false
+    },
+    {
+      "data": 3232235777,
+      "valid": false
+    },
+    {
+      "data": [],
+      "valid": false
+    },
+    {
+      "data": [ "192", "168", "1", "1" ],
+      "valid": false
+    },
+    {
+      "data": {},
+      "valid": false
+    },
+    {
+      "data": {
+        "address": "192.168.1.1"
+      },
+      "valid": false
+    }
+  ]
+}
