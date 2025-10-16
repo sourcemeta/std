@@ -1,0 +1,714 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/ietf/ip/v6/address.json",
+  "tests": [
+    {
+      "data": "2001:db8:85a3:0:0:8a2e:370:7334",
+      "valid": true
+    },
+    {
+      "data": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+      "valid": true
+    },
+    {
+      "data": "2001:db8:85a3::8a2e:370:7334",
+      "valid": true
+    },
+    {
+      "data": "::1",
+      "valid": true
+    },
+    {
+      "data": "::",
+      "valid": true
+    },
+    {
+      "data": "::ffff:192.0.2.1",
+      "valid": true
+    },
+    {
+      "data": "2001:db8::192.0.2.1",
+      "valid": true
+    },
+    {
+      "data": "::192.0.2.1",
+      "valid": true
+    },
+    {
+      "data": "fe80::1",
+      "valid": true
+    },
+    {
+      "data": "::ffff:0:0",
+      "valid": true
+    },
+    {
+      "data": "2001:db8::",
+      "valid": true
+    },
+    {
+      "data": "2001:db8::1",
+      "valid": true
+    },
+    {
+      "data": "::2001:db8",
+      "valid": true
+    },
+    {
+      "data": "ff01::101",
+      "valid": true
+    },
+    {
+      "data": "ff02::1",
+      "valid": true
+    },
+    {
+      "data": "ff02::2",
+      "valid": true
+    },
+    {
+      "data": "2001:db8:a0b:12f0::1",
+      "valid": true
+    },
+    {
+      "data": "fe80:0:0:0:204:61ff:fe9d:f156",
+      "valid": true
+    },
+    {
+      "data": "fe80::204:61ff:fe9d:f156",
+      "valid": true
+    },
+    {
+      "data": "fe80::204:61ff:254.157.241.86",
+      "valid": true
+    },
+    {
+      "data": "::ffff:192.168.1.1",
+      "valid": true
+    },
+    {
+      "data": "::ffff:c000:0280",
+      "valid": true
+    },
+    {
+      "data": "2001:0:9d38:6abd:0:0:0:42",
+      "valid": true
+    },
+    {
+      "data": "2001:0:9d38:6abd::42",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4:5:6:7:8",
+      "valid": true
+    },
+    {
+      "data": "1::8",
+      "valid": true
+    },
+    {
+      "data": "1::7:8",
+      "valid": true
+    },
+    {
+      "data": "1::6:7:8",
+      "valid": true
+    },
+    {
+      "data": "1::5:6:7:8",
+      "valid": true
+    },
+    {
+      "data": "1::4:5:6:7:8",
+      "valid": true
+    },
+    {
+      "data": "1::3:4:5:6:7:8",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4:5:6::8",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4:5::8",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4::8",
+      "valid": true
+    },
+    {
+      "data": "1:2:3::8",
+      "valid": true
+    },
+    {
+      "data": "1:2::8",
+      "valid": true
+    },
+    {
+      "data": "1::2:3:4:5:6:7",
+      "valid": true
+    },
+    {
+      "data": "::2:3:4:5:6:7:8",
+      "valid": true
+    },
+    {
+      "data": "::8",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4:5:6:7::",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4:5:6::7:8",
+      "valid": false
+    },
+    {
+      "data": "1:2:3:4:5:6:1.2.3.4",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4:5::1.2.3.4",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4::1.2.3.4",
+      "valid": true
+    },
+    {
+      "data": "1:2:3::1.2.3.4",
+      "valid": true
+    },
+    {
+      "data": "1:2::1.2.3.4",
+      "valid": true
+    },
+    {
+      "data": "1::1.2.3.4",
+      "valid": true
+    },
+    {
+      "data": "::1.2.3.4",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4:5:6:7",
+      "valid": false
+    },
+    {
+      "data": "1:2:3:4:5:6:7:8:9",
+      "valid": false
+    },
+    {
+      "data": "1:2:3:4:5:6:7:8:",
+      "valid": false
+    },
+    {
+      "data": ":1:2:3:4:5:6:7:8",
+      "valid": false
+    },
+    {
+      "data": "::1:2:3:4:5:6:7:8",
+      "valid": false
+    },
+    {
+      "data": "1:2:3:4:5:6:7:8::",
+      "valid": false
+    },
+    {
+      "data": "1::2::3",
+      "valid": false
+    },
+    {
+      "data": "::1::2",
+      "valid": false
+    },
+    {
+      "data": "1:::2",
+      "valid": false
+    },
+    {
+      "data": ":::1",
+      "valid": false
+    },
+    {
+      "data": "1:::",
+      "valid": false
+    },
+    {
+      "data": ":::",
+      "valid": false
+    },
+    {
+      "data": "g001:db8::1",
+      "valid": false
+    },
+    {
+      "data": "2001:db8::xyz",
+      "valid": false
+    },
+    {
+      "data": "2001:db8:85a3::8a2e:370k:7334",
+      "valid": false
+    },
+    {
+      "data": "02001:db8::1",
+      "valid": false
+    },
+    {
+      "data": "2001:0db8:85a3::8a2e:037g:7334",
+      "valid": false
+    },
+    {
+      "data": "2001:db8::8a2e::7334",
+      "valid": false
+    },
+    {
+      "data": "::ffff:999.0.0.1",
+      "valid": false
+    },
+    {
+      "data": "::ffff:1.2.3.256",
+      "valid": false
+    },
+    {
+      "data": "::ffff:1.2.3",
+      "valid": false
+    },
+    {
+      "data": "::ffff:1.2.3.4.5",
+      "valid": false
+    },
+    {
+      "data": "2001:db8::192.168.1.1.1",
+      "valid": false
+    },
+    {
+      "data": "2001:db8::192.168.1",
+      "valid": false
+    },
+    {
+      "data": "",
+      "valid": false
+    },
+    {
+      "data": ":",
+      "valid": false
+    },
+    {
+      "data": "::",
+      "valid": true
+    },
+    {
+      "data": ":::",
+      "valid": false
+    },
+    {
+      "data": "2001:db8",
+      "valid": false
+    },
+    {
+      "data": "2001:db8:85a3",
+      "valid": false
+    },
+    {
+      "data": "2001:db8:85a3:0:0:8a2e:370",
+      "valid": false
+    },
+    {
+      "data": " 2001:db8::1",
+      "valid": false
+    },
+    {
+      "data": "2001:db8::1 ",
+      "valid": false
+    },
+    {
+      "data": "2001: db8::1",
+      "valid": false
+    },
+    {
+      "data": "2001 :db8::1",
+      "valid": false
+    },
+    {
+      "data": null,
+      "valid": false
+    },
+    {
+      "data": true,
+      "valid": false
+    },
+    {
+      "data": false,
+      "valid": false
+    },
+    {
+      "data": 2001,
+      "valid": false
+    },
+    {
+      "data": [],
+      "valid": false
+    },
+    {
+      "data": {},
+      "valid": false
+    },
+    {
+      "data": "ABCD:EF01:2345:6789:ABCD:EF01:2345:6789",
+      "valid": true
+    },
+    {
+      "data": "abcd:ef01:2345:6789:abcd:ef01:2345:6789",
+      "valid": true
+    },
+    {
+      "data": "AbCd:eF01:2345:6789:aBcD:Ef01:2345:6789",
+      "valid": true
+    },
+    {
+      "data": "2001:DB8:0:0:8:800:200C:417A",
+      "valid": true
+    },
+    {
+      "data": "2001:db8:0:0:8:800:200c:417a",
+      "valid": true
+    },
+    {
+      "data": "FF01:0:0:0:0:0:0:101",
+      "valid": true
+    },
+    {
+      "data": "ff01::101",
+      "valid": true
+    },
+    {
+      "data": "0:0:0:0:0:0:0:1",
+      "valid": true
+    },
+    {
+      "data": "0:0:0:0:0:0:0:0",
+      "valid": true
+    },
+    {
+      "data": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4:5:6:255.255.255.255",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4:5:6:0.0.0.0",
+      "valid": true
+    },
+    {
+      "data": "::255.255.255.255",
+      "valid": true
+    },
+    {
+      "data": "::0.0.0.0",
+      "valid": true
+    },
+    {
+      "data": "1::2:3:4:5:6:7",
+      "valid": true
+    },
+    {
+      "data": "1:2::3:4:5:6:7",
+      "valid": true
+    },
+    {
+      "data": "1:2:3::4:5:6:7",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4::5:6:7",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4:5::6:7",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4:5:6::7",
+      "valid": true
+    },
+    {
+      "data": "a:b:c:d:e:f:1.2.3.4",
+      "valid": true
+    },
+    {
+      "data": "12AB:0:0:CD30::1",
+      "valid": true
+    },
+    {
+      "data": "12ab:0:0:cd30::1",
+      "valid": true
+    },
+    {
+      "data": "12345::1",
+      "valid": false
+    },
+    {
+      "data": "1:2:3:4:5:6:7:12345",
+      "valid": false
+    },
+    {
+      "data": "::12345",
+      "valid": false
+    },
+    {
+      "data": "1:2:3:4:5:6::7:8",
+      "valid": false
+    },
+    {
+      "data": "::1:2:3:4:5:6:7:8",
+      "valid": false
+    },
+    {
+      "data": "1:2:3:4:5:6:7:8::",
+      "valid": false
+    },
+    {
+      "data": "1:2:3:4:5:6:7",
+      "valid": false
+    },
+    {
+      "data": ":1:2:3:4:5:6:7",
+      "valid": false
+    },
+    {
+      "data": "1:2:3:4:5:6:7:",
+      "valid": false
+    },
+    {
+      "data": "1:2:3::4:5:6:7:8",
+      "valid": false
+    },
+    {
+      "data": "::1:2:3:4:5:6:7",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4:5:6:7::",
+      "valid": true
+    },
+    {
+      "data": "1::2:3:4:5:6:7",
+      "valid": true
+    },
+    {
+      "data": "::ffff:999.999.999.999",
+      "valid": false
+    },
+    {
+      "data": "::ffff:1.2.3.4.5",
+      "valid": false
+    },
+    {
+      "data": "::ffff:01.02.03.04",
+      "valid": false
+    },
+    {
+      "data": "2001:db8::8a2e::7334",
+      "valid": false
+    },
+    {
+      "data": "1:2:3:4:5:6:1.2.3",
+      "valid": false
+    },
+    {
+      "data": "1:2:3:4:5:1.2.3.4",
+      "valid": false
+    },
+    {
+      "data": "::1:2:3:4:5:1.2.3.4",
+      "valid": true
+    },
+    {
+      "data": "1:2:3:4::1.2.3.4",
+      "valid": true
+    },
+    {
+      "data": "0:0:0:0:0:0:0:1",
+      "valid": true
+    },
+    {
+      "data": "0000:0000:0000:0000:0000:0000:0000:0001",
+      "valid": true
+    },
+    {
+      "data": "00001:2:3:4:5:6:7:8",
+      "valid": false
+    },
+    {
+      "data": "::g",
+      "valid": false
+    },
+    {
+      "data": "::ffff:g.0.0.0",
+      "valid": false
+    },
+    {
+      "data": "2001:db8:::1",
+      "valid": false
+    },
+    {
+      "data": "2001:db8::::1",
+      "valid": false
+    },
+    {
+      "data": "::::",
+      "valid": false
+    },
+    {
+      "data": "2001:0:0:0:0:0:0:1",
+      "valid": true
+    },
+    {
+      "data": "2001:0:0:0:0:0:0:0",
+      "valid": true
+    },
+    {
+      "data": "ffff:ffff:ffff:ffff:ffff:ffff:255.255.255.255",
+      "valid": true
+    },
+    {
+      "data": "::ffff:0:192.0.2.1",
+      "valid": true
+    },
+    {
+      "data": "64:ff9b::192.0.2.33",
+      "valid": true
+    },
+    {
+      "data": "::1234:5678:1.2.3.4",
+      "valid": true
+    },
+    {
+      "data": "2001:db8::1234:5678:1.2.3.4",
+      "valid": true
+    },
+    {
+      "data": "::1234:5678:91.123.4.56",
+      "valid": true
+    },
+    {
+      "data": "::1234:5678:9.12.3.4",
+      "valid": true
+    },
+    {
+      "data": "2001:db8:85a3::8a2e:370:7334:extra",
+      "valid": false
+    },
+    {
+      "data": "2001.db8::1",
+      "valid": false
+    },
+    {
+      "data": "2001;db8::1",
+      "valid": false
+    },
+    {
+      "data": "[2001:db8::1]",
+      "valid": false
+    },
+    {
+      "data": "2001:db8::1/64",
+      "valid": false
+    },
+    {
+      "data": "2001:db8::1%eth0",
+      "valid": false
+    },
+    {
+      "data": "::ffff:192.0.2.01",
+      "valid": false
+    },
+    {
+      "data": "::ffff:192.0.002.1",
+      "valid": false
+    },
+    {
+      "data": "1:2:3:4:5:6:7:8:9:10",
+      "valid": false
+    },
+    {
+      "data": "1:2:3:4:5::6:7:8:9",
+      "valid": false
+    },
+    {
+      "data": ":::",
+      "valid": false
+    },
+    {
+      "data": " ::1",
+      "valid": false
+    },
+    {
+      "data": "::1 ",
+      "valid": false
+    },
+    {
+      "data": "2001 :db8::1",
+      "valid": false
+    },
+    {
+      "data": "2001: db8::1",
+      "valid": false
+    },
+    {
+      "data": "2001:db8: :1",
+      "valid": false
+    },
+    {
+      "data": "2001:db8:: 1",
+      "valid": false
+    },
+    {
+      "data": "a:b:c:d:e:f:0.0.0.0",
+      "valid": true
+    },
+    {
+      "data": "a:b:c:d:e:f:10.0.0.1",
+      "valid": true
+    },
+    {
+      "data": "a:b:c:d:e:f:255.255.255.255",
+      "valid": true
+    },
+    {
+      "data": "::a:b:c:d:e:f:0",
+      "valid": true
+    },
+    {
+      "data": "0::a:b:c:d:e:f",
+      "valid": true
+    },
+    {
+      "data": "::a:b:c:d:e:f",
+      "valid": true
+    },
+    {
+      "data": "a:b:c:d:e:f::",
+      "valid": true
+    },
+    {
+      "data": "::a:b:c:d:e:0",
+      "valid": true
+    },
+    {
+      "data": "a:0:0:0:0:0:0::",
+      "valid": true
+    },
+    {
+      "data": "::0:0:0:0:0:0:a",
+      "valid": true
+    }
+  ]
+}
