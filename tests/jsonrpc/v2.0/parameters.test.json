@@ -1,0 +1,145 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/jsonrpc/v2.0/parameters.json",
+  "tests": [
+    {
+      "data": [],
+      "valid": true
+    },
+    {
+      "data": [ 1 ],
+      "valid": true
+    },
+    {
+      "data": [ 1, 2, 3 ],
+      "valid": true
+    },
+    {
+      "data": [ "foo" ],
+      "valid": true
+    },
+    {
+      "data": [ "foo", "bar" ],
+      "valid": true
+    },
+    {
+      "data": [ null ],
+      "valid": true
+    },
+    {
+      "data": [ true, false ],
+      "valid": true
+    },
+    {
+      "data": [ 42, "test", null, true ],
+      "valid": true
+    },
+    {
+      "data": [
+        [ 1, 2 ],
+        [ 3, 4 ]
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "nested": "object"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": {},
+      "valid": true
+    },
+    {
+      "data": {
+        "name": "John"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "age": 30,
+        "name": "John"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "a": 1,
+        "b": 2,
+        "c": 3
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "value": null
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "flag": true
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "nested": {
+          "deep": {
+            "value": 42
+          }
+        }
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "array": [ 1, 2, 3 ]
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "minuend": 42,
+        "subtrahend": 23
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "x": 10,
+        "label": "point",
+        "y": 20
+      },
+      "valid": true
+    },
+    {
+      "data": "string",
+      "valid": false
+    },
+    {
+      "data": 42,
+      "valid": false
+    },
+    {
+      "data": 0,
+      "valid": false
+    },
+    {
+      "data": true,
+      "valid": false
+    },
+    {
+      "data": false,
+      "valid": false
+    },
+    {
+      "data": null,
+      "valid": false
+    }
+  ]
+}

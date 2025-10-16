@@ -1,0 +1,330 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/jsonrpc/v2.0/request.json",
+  "tests": [
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "subtract"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "subtract",
+        "params": [ 42, 23 ]
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 3,
+        "jsonrpc": "2.0",
+        "method": "subtract",
+        "params": {
+          "minuend": 42,
+          "subtrahend": 23
+        }
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": "req-001",
+        "jsonrpc": "2.0",
+        "method": "update",
+        "params": [ 1, 2, 3, 4, 5 ]
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": "1",
+        "jsonrpc": "2.0",
+        "method": "sum",
+        "params": [ 1, 2, 4 ]
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 0,
+        "jsonrpc": "2.0",
+        "method": "get_data"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": -1,
+        "jsonrpc": "2.0",
+        "method": "fetch"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 999999,
+        "jsonrpc": "2.0",
+        "method": "query"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": "",
+        "jsonrpc": "2.0",
+        "method": "test"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": "uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479",
+        "jsonrpc": "2.0",
+        "method": "execute"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": null,
+        "jsonrpc": "2.0",
+        "method": "process"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 42,
+        "jsonrpc": "2.0",
+        "method": "run",
+        "params": []
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": "test",
+        "jsonrpc": "2.0",
+        "method": "execute",
+        "params": {}
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "rpc.discover"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": "sys-1",
+        "jsonrpc": "2.0",
+        "method": "rpc.system.info",
+        "params": {
+          "verbose": true
+        }
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 100,
+        "jsonrpc": "2.0",
+        "method": "calculate",
+        "params": {
+          "x": 10,
+          "op": "add",
+          "y": 20
+        }
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": "batch-1",
+        "jsonrpc": "2.0",
+        "method": "batch_process",
+        "params": [
+          [ 1, 2 ],
+          [ 3, 4 ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "subtract"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "method": "subtract"
+      },
+      "valid": false
+    },
+    {
+      "data": {},
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "1.0",
+        "method": "subtract"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "3.0",
+        "method": "subtract"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": 2.0,
+        "method": "subtract"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": 123
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": null
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": true,
+        "jsonrpc": "2.0",
+        "method": "test"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": [],
+        "jsonrpc": "2.0",
+        "method": "test"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": {},
+        "jsonrpc": "2.0",
+        "method": "test"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1.5,
+        "jsonrpc": "2.0",
+        "method": "test"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "test",
+        "params": "invalid"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "test",
+        "params": 42
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "test",
+        "params": null
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1,
+        "custom": "extension",
+        "jsonrpc": "2.0",
+        "method": "test"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": "req-1",
+        "jsonrpc": "2.0",
+        "method": "process",
+        "params": [ 1, 2, 3 ],
+        "priority": "high",
+        "timeout": 5000
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 42,
+        "x-custom-header": {
+          "trace-id": "abc123"
+        },
+        "jsonrpc": "2.0",
+        "method": "query"
+      },
+      "valid": true
+    },
+    {
+      "data": [],
+      "valid": false
+    },
+    {
+      "data": "request",
+      "valid": false
+    },
+    {
+      "data": null,
+      "valid": false
+    }
+  ]
+}

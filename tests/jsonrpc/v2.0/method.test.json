@@ -1,0 +1,132 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/jsonrpc/v2.0/method.json",
+  "tests": [
+    {
+      "data": "subtract",
+      "valid": true
+    },
+    {
+      "data": "update",
+      "valid": true
+    },
+    {
+      "data": "notify_hello",
+      "valid": true
+    },
+    {
+      "data": "sum",
+      "valid": true
+    },
+    {
+      "data": "get_data",
+      "valid": true
+    },
+    {
+      "data": "foobar",
+      "valid": true
+    },
+    {
+      "data": "method-with-dashes",
+      "valid": true
+    },
+    {
+      "data": "method.with.dots",
+      "valid": true
+    },
+    {
+      "data": "MethodWithCamelCase",
+      "valid": true
+    },
+    {
+      "data": "method123",
+      "valid": true
+    },
+    {
+      "data": "123method",
+      "valid": true
+    },
+    {
+      "data": "a",
+      "valid": true
+    },
+    {
+      "data": "",
+      "valid": true
+    },
+    {
+      "data": "rpc.discover",
+      "valid": true
+    },
+    {
+      "data": "rpc.introspect",
+      "valid": true
+    },
+    {
+      "data": "rpc.system.info",
+      "valid": true
+    },
+    {
+      "data": "rpc.",
+      "valid": true
+    },
+    {
+      "data": "unicode-café",
+      "valid": true
+    },
+    {
+      "data": "emoji-🎉",
+      "valid": true
+    },
+    {
+      "data": "with spaces",
+      "valid": true
+    },
+    {
+      "data": "with\ttab",
+      "valid": true
+    },
+    {
+      "data": "with\nnewline",
+      "valid": true
+    },
+    {
+      "data": 42,
+      "valid": false
+    },
+    {
+      "data": 0,
+      "valid": false
+    },
+    {
+      "data": null,
+      "valid": false
+    },
+    {
+      "data": true,
+      "valid": false
+    },
+    {
+      "data": false,
+      "valid": false
+    },
+    {
+      "data": [],
+      "valid": false
+    },
+    {
+      "data": [ "method" ],
+      "valid": false
+    },
+    {
+      "data": {},
+      "valid": false
+    },
+    {
+      "data": {
+        "method": "test"
+      },
+      "valid": false
+    }
+  ]
+}

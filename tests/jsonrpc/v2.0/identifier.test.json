@@ -1,0 +1,136 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/jsonrpc/v2.0/identifier.json",
+  "tests": [
+    {
+      "data": "abc123",
+      "valid": true
+    },
+    {
+      "data": "request-1",
+      "valid": true
+    },
+    {
+      "data": "req_001",
+      "valid": true
+    },
+    {
+      "data": "",
+      "valid": true
+    },
+    {
+      "data": "a",
+      "valid": true
+    },
+    {
+      "data": "very-long-identifier-with-many-characters-0123456789",
+      "valid": true
+    },
+    {
+      "data": "UUID-like-f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "valid": true
+    },
+    {
+      "data": "with spaces",
+      "valid": true
+    },
+    {
+      "data": "with\nnewline",
+      "valid": true
+    },
+    {
+      "data": "with\ttab",
+      "valid": true
+    },
+    {
+      "data": "unicode-café",
+      "valid": true
+    },
+    {
+      "data": "emoji-🎉",
+      "valid": true
+    },
+    {
+      "data": 0,
+      "valid": true
+    },
+    {
+      "data": 1,
+      "valid": true
+    },
+    {
+      "data": -1,
+      "valid": true
+    },
+    {
+      "data": 42,
+      "valid": true
+    },
+    {
+      "data": -42,
+      "valid": true
+    },
+    {
+      "data": 999999,
+      "valid": true
+    },
+    {
+      "data": -999999,
+      "valid": true
+    },
+    {
+      "data": 2147483647,
+      "valid": true
+    },
+    {
+      "data": -2147483648,
+      "valid": true
+    },
+    {
+      "data": null,
+      "valid": true
+    },
+    {
+      "data": 1.5,
+      "valid": false
+    },
+    {
+      "data": 3.14,
+      "valid": false
+    },
+    {
+      "data": 0.1,
+      "valid": false
+    },
+    {
+      "data": -0.5,
+      "valid": false
+    },
+    {
+      "data": true,
+      "valid": false
+    },
+    {
+      "data": false,
+      "valid": false
+    },
+    {
+      "data": [],
+      "valid": false
+    },
+    {
+      "data": [ 1 ],
+      "valid": false
+    },
+    {
+      "data": {},
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 1
+      },
+      "valid": false
+    }
+  ]
+}

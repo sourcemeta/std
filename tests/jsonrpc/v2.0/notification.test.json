@@ -1,0 +1,264 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/jsonrpc/v2.0/notification.json",
+  "tests": [
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "update"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "notify_hello"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "notify"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "log"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "notify_hello",
+        "params": [ 7 ]
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "notify_sum",
+        "params": {
+          "a": 1,
+          "b": 2
+        }
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "update",
+        "params": []
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "notify",
+        "params": {}
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "event",
+        "params": [ 1, 2, 3, 4, 5 ]
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "notify",
+        "params": {
+          "x": 10,
+          "y": 20
+        }
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "rpc.notify"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "rpc.system.event",
+        "params": {
+          "type": "shutdown"
+        }
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "notify_with_complex_params",
+        "params": {
+          "nested": {
+            "data": [ 1, 2, 3 ]
+          }
+        }
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "update"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": "req-1",
+        "jsonrpc": "2.0",
+        "method": "notify"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": null,
+        "jsonrpc": "2.0",
+        "method": "event"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "id": 0,
+        "jsonrpc": "2.0",
+        "method": "notify"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "method": "update"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0"
+      },
+      "valid": false
+    },
+    {
+      "data": {},
+      "valid": false
+    },
+    {
+      "data": {
+        "jsonrpc": "1.0",
+        "method": "update"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "jsonrpc": "3.0",
+        "method": "update"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "jsonrpc": 2.0,
+        "method": "update"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": 123
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": null
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "notify",
+        "params": "invalid"
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "notify",
+        "params": 42
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "notify",
+        "params": null
+      },
+      "valid": false
+    },
+    {
+      "data": {
+        "custom": "extension",
+        "jsonrpc": "2.0",
+        "method": "update"
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "jsonrpc": "2.0",
+        "method": "log",
+        "params": [ "message" ],
+        "priority": "low",
+        "timestamp": 1234567890
+      },
+      "valid": true
+    },
+    {
+      "data": {
+        "x-metadata": {
+          "source": "system"
+        },
+        "jsonrpc": "2.0",
+        "method": "notify_event"
+      },
+      "valid": true
+    },
+    {
+      "data": [],
+      "valid": false
+    },
+    {
+      "data": "notification",
+      "valid": false
+    },
+    {
+      "data": null,
+      "valid": false
+    }
+  ]
+}

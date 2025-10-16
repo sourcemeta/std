@@ -1,0 +1,290 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/jsonrpc/v2.0/batch-request.json",
+  "tests": [
+    {
+      "data": [
+        {
+          "id": "1",
+          "jsonrpc": "2.0",
+          "method": "sum",
+          "params": [ 1, 2, 4 ]
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": "1",
+          "jsonrpc": "2.0",
+          "method": "sum",
+          "params": [ 1, 2, 4 ]
+        },
+        {
+          "jsonrpc": "2.0",
+          "method": "notify_hello",
+          "params": [ 7 ]
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": "1",
+          "jsonrpc": "2.0",
+          "method": "sum",
+          "params": [ 1, 2, 4 ]
+        },
+        {
+          "jsonrpc": "2.0",
+          "method": "notify_hello",
+          "params": [ 7 ]
+        },
+        {
+          "id": "2",
+          "jsonrpc": "2.0",
+          "method": "subtract",
+          "params": [ 42, 23 ]
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "jsonrpc": "2.0",
+          "method": "get_data"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "jsonrpc": "2.0",
+          "method": "notify_update"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "jsonrpc": "2.0",
+          "method": "notify_update"
+        },
+        {
+          "id": "req-1",
+          "jsonrpc": "2.0",
+          "method": "fetch",
+          "params": {
+            "key": "value"
+          }
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "jsonrpc": "2.0",
+          "method": "notify1"
+        },
+        {
+          "jsonrpc": "2.0",
+          "method": "notify2"
+        },
+        {
+          "jsonrpc": "2.0",
+          "method": "notify3"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "jsonrpc": "2.0",
+          "method": "request1"
+        },
+        {
+          "id": 2,
+          "jsonrpc": "2.0",
+          "method": "request2"
+        },
+        {
+          "id": 3,
+          "jsonrpc": "2.0",
+          "method": "request3"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": "calc-1",
+          "jsonrpc": "2.0",
+          "method": "calculate",
+          "params": {
+            "x": 10,
+            "y": 20
+          }
+        },
+        {
+          "jsonrpc": "2.0",
+          "method": "log",
+          "params": [ "info", "test" ]
+        },
+        {
+          "id": 100,
+          "jsonrpc": "2.0",
+          "method": "process",
+          "params": []
+        },
+        {
+          "jsonrpc": "2.0",
+          "method": "notify"
+        },
+        {
+          "id": "q-1",
+          "jsonrpc": "2.0",
+          "method": "query"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "jsonrpc": "2.0",
+          "method": "test1"
+        },
+        {
+          "id": 2,
+          "jsonrpc": "2.0",
+          "method": "test2"
+        },
+        {
+          "id": 3,
+          "jsonrpc": "2.0",
+          "method": "test3"
+        },
+        {
+          "id": 4,
+          "jsonrpc": "2.0",
+          "method": "test4"
+        },
+        {
+          "id": 5,
+          "jsonrpc": "2.0",
+          "method": "test5"
+        },
+        {
+          "id": 6,
+          "jsonrpc": "2.0",
+          "method": "test6"
+        },
+        {
+          "id": 7,
+          "jsonrpc": "2.0",
+          "method": "test7"
+        },
+        {
+          "id": 8,
+          "jsonrpc": "2.0",
+          "method": "test8"
+        },
+        {
+          "id": 9,
+          "jsonrpc": "2.0",
+          "method": "test9"
+        },
+        {
+          "id": 10,
+          "jsonrpc": "2.0",
+          "method": "test10"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [],
+      "valid": false
+    },
+    {
+      "data": [
+        {
+          "jsonrpc": "2.0",
+          "method": "test"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "jsonrpc": "2.0"
+        }
+      ],
+      "valid": false
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "method": "test"
+        }
+      ],
+      "valid": false
+    },
+    {
+      "data": [ "not an object" ],
+      "valid": false
+    },
+    {
+      "data": [ 42 ],
+      "valid": false
+    },
+    {
+      "data": [ null ],
+      "valid": false
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "jsonrpc": "2.0",
+          "method": "valid"
+        },
+        {
+          "jsonrpc": "2.0",
+          "method": "notify"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "data": {},
+      "valid": false
+    },
+    {
+      "data": "batch",
+      "valid": false
+    },
+    {
+      "data": 42,
+      "valid": false
+    },
+    {
+      "data": null,
+      "valid": false
+    }
+  ]
+}

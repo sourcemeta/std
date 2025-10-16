@@ -1,0 +1,126 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/jsonrpc/v2.0/code-predefined.json",
+  "tests": [
+    {
+      "data": -32700,
+      "valid": true
+    },
+    {
+      "data": -32600,
+      "valid": true
+    },
+    {
+      "data": -32601,
+      "valid": true
+    },
+    {
+      "data": -32602,
+      "valid": true
+    },
+    {
+      "data": -32603,
+      "valid": true
+    },
+    {
+      "data": -32000,
+      "valid": true
+    },
+    {
+      "data": -32001,
+      "valid": true
+    },
+    {
+      "data": -32050,
+      "valid": true
+    },
+    {
+      "data": -32098,
+      "valid": true
+    },
+    {
+      "data": -32099,
+      "valid": true
+    },
+    {
+      "data": -32701,
+      "valid": false
+    },
+    {
+      "data": -32699,
+      "valid": false
+    },
+    {
+      "data": -32604,
+      "valid": false
+    },
+    {
+      "data": -32599,
+      "valid": false
+    },
+    {
+      "data": -31999,
+      "valid": false
+    },
+    {
+      "data": -32100,
+      "valid": false
+    },
+    {
+      "data": 0,
+      "valid": false
+    },
+    {
+      "data": 1,
+      "valid": false
+    },
+    {
+      "data": 100,
+      "valid": false
+    },
+    {
+      "data": -1,
+      "valid": false
+    },
+    {
+      "data": -100,
+      "valid": false
+    },
+    {
+      "data": 32000,
+      "valid": false
+    },
+    {
+      "data": 32700,
+      "valid": false
+    },
+    {
+      "data": -32700.5,
+      "valid": false
+    },
+    {
+      "data": "error",
+      "valid": false
+    },
+    {
+      "data": "-32600",
+      "valid": false
+    },
+    {
+      "data": null,
+      "valid": false
+    },
+    {
+      "data": true,
+      "valid": false
+    },
+    {
+      "data": [],
+      "valid": false
+    },
+    {
+      "data": {},
+      "valid": false
+    }
+  ]
+}
