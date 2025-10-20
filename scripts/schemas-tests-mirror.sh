@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 
 SCHEMAS_DIR="$(pwd)/schemas"
-TESTS_DIR="$(pwd)/tests"
+TESTS_DIR="$(pwd)/test"
 EXIT_CODE=0
 
 find "$SCHEMAS_DIR" -type f -name "*.json" | while IFS= read -r schema_file
