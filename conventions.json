@@ -1,6 +1,26 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
+  "anyOf": [
+    {
+      "properties": {
+        "examples": {
+          "type": "array",
+          "minItems": 1
+        },
+        "const": true
+      }
+    },
+    {
+      "properties": {
+        "examples": {
+          "type": "array",
+          "minItems": 3
+        },
+        "const": false
+      }
+    }
+  ],
   "required": [
     "x-license",
     "title",
@@ -16,10 +36,6 @@
     "$id": false,
     "$comment": {
       "$ref": "./schemas/ietf/http/https-url.json"
-    },
-    "examples": {
-      "type": "array",
-      "minItems": 3
     },
     "x-license": {
       "const": "https://github.com/sourcemeta/std/blob/main/LICENSE"

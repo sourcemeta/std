@@ -1,0 +1,51 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/iso/currency/alpha-fund.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 840,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - Mvdol (Bolivia)",
+      "data": "BOV",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unidad de Fomento (Chile)",
+      "data": "CLF",
+      "valid": true
+    },
+    {
+      "description": "Valid - WIR Euro (Switzerland)",
+      "data": "CHE",
+      "valid": true
+    },
+    {
+      "description": "Invalid - regular currency (US Dollar)",
+      "data": "USD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - unknown code (XXX)",
+      "data": "XXX",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase",
+      "data": "bov",
+      "valid": false
+    }
+  ]
+}

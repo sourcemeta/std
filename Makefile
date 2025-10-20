@@ -1,5 +1,6 @@
 JSONSCHEMA = jsonschema
 SHELLCHECK = shellcheck
+PYTHON = python3
 
 # TODO: Extend `validate` to take a directory as argument
 SCHEMAS = $(shell find schemas/ -type f -name '*.json')
@@ -21,5 +22,17 @@ lint: common
 
 test: .always
 	$(JSONSCHEMA) test ./tests
+
+generate: .always
+	$(PYTHON) scripts/generate-iso-currency.py
+
+fetch: .always
+	$(PYTHON) scripts/fetch-xml.py \
+		"https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml" \
+		> data/six-group-iso-currency.json
+	$(PYTHON) scripts/fetch-xml.py \
+		"https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-three.xml" \
+		> data/six-group-iso-currency-historical.json
+
 
 .always:
