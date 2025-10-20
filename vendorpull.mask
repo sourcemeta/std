@@ -1,0 +1,13 @@
+tests.json
+Makefile
+jsonschema.json
+test
+.editorconfig
+README.markdown
+.gitignore
+scripts
+.github
+.git
+data
+conventions.json
+vendorpull.mask
