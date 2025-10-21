@@ -28,4 +28,5 @@ test:
 
 .PHONY: external
 include generate/iso/currency/include.mk
+include generate/xbrl/instance/2003/include.mk
 external: $(EXTERNAL)
