@@ -2,10 +2,10 @@ Sourcemeta JSON Schema Standard Library
 =======================================
 
 Building professional OpenAPI specifications demands precision, but mastering
-JSON Schema is complex and error-prone. This library eliminates that burden by
-providing production-ready schemas that encode industry standards and best
-practices. Reference them directly in your API specifications and focus on what
-matters: designing great APIs.
+JSON Schema is hard. This library eliminates that burden by providing
+production-ready schemas that encode industry standards and best practices.
+*Reference them directly in your API specifications and focus on what matters:
+designing great APIs.*
 
 > Led and maintained by a member of the JSON Schema Technical Steering Committee
 
@@ -71,6 +71,13 @@ We welcome contributions! By sending a pull request, you agree to our
 guidelines](https://github.com/sourcemeta/.github/blob/main/CONTRIBUTING.md).
 Meaningful contributions to this repository can be taken into consideration
 towards a discounted (or even free) commercial license.
+
+> [!TIP]
+> Do you want to level up your JSON Schema skills? Check out
+> [learnjsonschema.com](https://www.learnjsonschema.com), our growing JSON
+> Schema documentation website, and our O'Reilly book [Unifying Business, Data,
+> and Code: Designing Data Products with JSON
+> Schema](https://www.oreilly.com/library/view/unifying-business-data/9781098144999/).
 
 ## :email: Contact
 
