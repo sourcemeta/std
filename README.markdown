@@ -36,9 +36,15 @@ expressed as JSON Schema definitions.
 While the project is publicly available on GitHub, it operates under a
 [source-available
 license](https://github.com/sourcemeta/registry/blob/main/LICENSE) rather than
-a traditional open-source model. In summary, you can freely make use of these
-schemas for non-commercial purposes. However, commercial usage requires a
-commercial license. Read the
-[license](https://github.com/sourcemeta/std/blob/main/LICENSE) for more
-details. We also provide OEM and white-label distribution for incorporating the
-schemas as part of another commercial product.
+a traditional open-source model. You may freely use these schemas for
+non-commercial purposes, but commercial use requires a [paid commercial
+license](https://www.sourcemeta.com/#pricing).
+
+> We are happy to discuss OEM and white-label distribution options for
+> incorporating these schemas into commercial products.
+
+## Contact
+
+If you have any questions or comments, don't hesitate in opening a ticket on
+[GitHub Discussions](https://github.com/sourcemeta/registry/discussions) or
+writing to us at [hello@sourcemeta.com](mailto:hello@sourcemeta.com).
