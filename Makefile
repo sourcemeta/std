@@ -7,18 +7,18 @@ SCHEMAS = $(shell find schemas/ -type f -name '*.json')
 TESTS = $(shell find test/ -type f -name '*.json')
 
 all: common test
-	$(JSONSCHEMA) fmt schemas test conventions.json tests.json --verbose
+	$(JSONSCHEMA) fmt schemas test meta --verbose
 
 common: .always
-	$(JSONSCHEMA) metaschema schemas conventions.json tests.json --verbose
-	$(JSONSCHEMA) lint schemas conventions.json tests.json --verbose
-	$(JSONSCHEMA) validate conventions.json --verbose $(SCHEMAS)
-	$(JSONSCHEMA) validate tests.json --verbose $(TESTS)
+	$(JSONSCHEMA) metaschema schemas meta --verbose
+	$(JSONSCHEMA) lint schemas meta --verbose
+	$(JSONSCHEMA) validate meta/schemas.json --verbose $(SCHEMAS)
+	$(JSONSCHEMA) validate meta/test.json --verbose $(TESTS)
 	$(SHELLCHECK) scripts/*.sh
 	./scripts/schemas-tests-mirror.sh
 
 lint: common
-	$(JSONSCHEMA) fmt schemas test conventions.json tests.json --verbose --check
+	$(JSONSCHEMA) fmt schemas test meta --verbose --check
 
 test: .always
 	$(JSONSCHEMA) test ./test
