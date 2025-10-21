@@ -1,6 +1,6 @@
-JSONSCHEMA = jsonschema
-SHELLCHECK = shellcheck
-PYTHON = python3
+JSONSCHEMA ?= jsonschema
+SHELLCHECK ?= shellcheck
+PYTHON ?= python3
 
 # TODO: Extend `validate` to take a directory as argument
 SCHEMAS = $(shell find schemas/ -type f -name '*.json')
@@ -9,7 +9,8 @@ TESTS = $(shell find test/ -type f -name '*.json')
 all: common test
 	$(JSONSCHEMA) fmt schemas test meta --verbose
 
-common: .always
+.PHONY: common
+common:
 	$(JSONSCHEMA) metaschema schemas meta --verbose
 	$(JSONSCHEMA) lint schemas meta --verbose
 	$(JSONSCHEMA) validate meta/schemas.json --verbose $(SCHEMAS)
@@ -17,22 +18,14 @@ common: .always
 	$(SHELLCHECK) scripts/*.sh
 	./scripts/schemas-tests-mirror.sh
 
+.PHONY: lint
 lint: common
 	$(JSONSCHEMA) fmt schemas test meta --verbose --check
 
-test: .always
+.PHONY: test
+test:
 	$(JSONSCHEMA) test ./test
 
-generate: .always
-	$(PYTHON) scripts/generate-iso-currency.py
-
-fetch: .always
-	$(PYTHON) scripts/fetch-xml.py \
-		"https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml" \
-		> data/six-group-iso-currency.json
-	$(PYTHON) scripts/fetch-xml.py \
-		"https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-three.xml" \
-		> data/six-group-iso-currency-historical.json
-
-
-.always:
+.PHONY: external
+include generate/iso/currency/include.mk
+external: $(EXTERNAL)

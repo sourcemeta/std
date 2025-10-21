@@ -1,9 +1,6 @@
-#!/usr/bin/env python3
-
 import json
 import os
 import sys
-
 
 def is_fund(entry):
     if "CcyNm" not in entry:
@@ -346,9 +343,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(script_dir)
-    current_data_file = os.path.join(project_root, "data", "six-group-iso-currency.json")
-    historical_data_file = os.path.join(project_root, "data", "six-group-iso-currency-historical.json")
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(script_dir)))
+    current_data_file = os.path.join(project_root, "build", "iso", "currency", "list-one.json")
+    historical_data_file = os.path.join(project_root, "build", "iso", "currency", "list-three.json")
     output_dir = os.path.join(project_root, "schemas", "iso", "currency")
 
     # Generate current schemas
