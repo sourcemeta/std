@@ -1,6 +1,8 @@
 # Sourcemeta JSON Schema Standard Library
 
+***
 **Browse the schemas at [https://schemas.sourcemeta.com/sourcemeta/std](https://schemas.sourcemeta.com/sourcemeta/std)**
+***
 
 Building professional OpenAPI specifications demands precision, but mastering
 JSON Schema is hard. This library eliminates that burden by providing
