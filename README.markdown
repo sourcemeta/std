@@ -1,13 +1,32 @@
 Sourcemeta JSON Schema Standard Library
 =======================================
 
-A growing collection of hand-crafted high-quality schemas by Sourcemeta.
+Building professional OpenAPI specifications demands precision, but mastering
+JSON Schema is complex and error-prone. This library eliminates that burden by
+providing production-ready schemas that encode industry standards and best
+practices. Reference them directly in your API specifications and focus on what
+matters: designing great APIs.
 
-> [!CAUTION]
-> This repository is a work-in-progress and not ready for general use yet.
+> Led and maintained by a member of the JSON Schema Technical Steering Committee
 
-Standards
----------
+> [!NOTE]
+> All schemas target JSON Schema 2020-12, the dialect used by OpenAPI v3.1 and
+> later. Earlier JSON Schema dialects will be supported in the future.
+
+**Use this library to:**
+
+- Build production-grade OpenAPI specifications without writing schemas from scratch
+- Skip the JSON Schema learning curve while maintaining expert-level quality
+- Meet compliance and regulatory requirements with standards-based validation
+- Establish a solid foundation for your organisation's API governance program
+
+> [!WARNING]
+> This project is in its early stages with much more to come. We need your
+> feedback to shape its future. Please [share your thoughts and
+> suggestions](https://github.com/sourcemeta/std/issues) on what you would like
+> to see.
+
+## :blue_book: Standards
 
 This library provides schemas that encode aspects of the following standards.
 Note that these standards often contain concepts and specifications that cannot
@@ -31,20 +50,30 @@ expressed as JSON Schema definitions.
 | JSON-RPC | [JSON-RPC 2.0](https://www.jsonrpc.org/specification) | JSON-RPC 2.0 Specification |
 | JSON Schema | [Draft 2020-12](https://json-schema.org/draft/2020-12/json-schema-core) | JSON Schema: A Media Type for Describing JSON Documents |
 
+To request coverage of another standard, please [open an issue on
+GitHub](https://github.com/sourcemeta/std/issues).
+
 ## :page_facing_up: License
 
 While the project is publicly available on GitHub, it operates under a
-[source-available
-license](https://github.com/sourcemeta/registry/blob/main/LICENSE) rather than
-a traditional open-source model. You may freely use these schemas for
-non-commercial purposes, but commercial use requires a [paid commercial
+[source-available license](https://github.com/sourcemeta/std/blob/main/LICENSE)
+rather than a traditional open-source model. You may freely use these schemas
+for non-commercial purposes, but commercial use requires a [paid commercial
 license](https://www.sourcemeta.com/#pricing).
 
 > We are happy to discuss OEM and white-label distribution options for
 > incorporating these schemas into commercial products.
 
-## Contact
+## :handshake: Contributing
+
+We welcome contributions! By sending a pull request, you agree to our
+[contributing
+guidelines](https://github.com/sourcemeta/.github/blob/main/CONTRIBUTING.md).
+Meaningful contributions to this repository can be taken into consideration
+towards a discounted (or even free) commercial license.
+
+## :email: Contact
 
 If you have any questions or comments, don't hesitate in opening a ticket on
-[GitHub Discussions](https://github.com/sourcemeta/registry/discussions) or
-writing to us at [hello@sourcemeta.com](mailto:hello@sourcemeta.com).
+[GitHub Discussions](https://github.com/sourcemeta/std/discussions) or writing
+to us at [hello@sourcemeta.com](mailto:hello@sourcemeta.com).
