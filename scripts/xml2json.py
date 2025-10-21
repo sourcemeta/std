@@ -1,7 +1,7 @@
 import sys
-import urllib.request
 import xml.etree.ElementTree as ET
 import json
+import pathlib
 
 
 def xml_to_dict(element):
@@ -33,15 +33,16 @@ def xml_to_dict(element):
 
 
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: fetch-xml <URL>", file=sys.stderr)
+    if len(sys.argv) != 3:
+        print("Usage: xml2json.py <input-xml> <output-json>", file=sys.stderr)
         sys.exit(1)
 
-    url = sys.argv[1]
+    input_file = sys.argv[1]
+    output_file = sys.argv[2]
 
     try:
-        with urllib.request.urlopen(url) as response:
-            xml_data = response.read()
+        with open(input_file, 'r') as file:
+            xml_data = file.read()
 
         root = ET.fromstring(xml_data)
 
@@ -49,7 +50,12 @@ def main():
             root.tag: xml_to_dict(root)
         }
 
-        print(json.dumps(result, indent=2))
+        output_path = pathlib.Path(output_file)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
+        with open(output_path, 'w') as file:
+            json.dump(result, file, indent=2)
+            file.write('\n')
 
     except Exception as error:
         print(f"Error: {error}", file=sys.stderr)
