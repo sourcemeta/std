@@ -65,7 +65,7 @@ for non-commercial purposes, but commercial use requires a [paid commercial
 license](https://www.sourcemeta.com/#pricing).
 
 *We are happy to discuss OEM and white-label distribution options for
-incorporating these schemas into commercial products*
+incorporating these schemas into commercial products*.
 
 ## :handshake: Contributing
 
