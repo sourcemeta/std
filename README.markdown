@@ -9,10 +9,6 @@ matters: designing great APIs.
 
 > Led and maintained by a member of the JSON Schema Technical Steering Committee
 
-> [!NOTE]
-> All schemas target JSON Schema 2020-12, the dialect used by OpenAPI v3.1 and
-> later. Earlier JSON Schema dialects will be supported in the future.
-
 **Use this library to:**
 
 - Build production-grade OpenAPI specifications without writing schemas from scratch
@@ -25,6 +21,10 @@ matters: designing great APIs.
 > feedback to shape its future. Please [share your thoughts and
 > suggestions](https://github.com/sourcemeta/std/issues) on what you would like
 > to see.
+
+> [!NOTE]
+> All schemas target JSON Schema 2020-12, the dialect used by OpenAPI v3.1 and
+> later. Earlier JSON Schema dialects will be supported in the future.
 
 ## :blue_book: Standards
 
@@ -61,8 +61,8 @@ rather than a traditional open-source model. You may freely use these schemas
 for non-commercial purposes, but commercial use requires a [paid commercial
 license](https://www.sourcemeta.com/#pricing).
 
-> We are happy to discuss OEM and white-label distribution options for
-> incorporating these schemas into commercial products.
+**We are happy to discuss OEM and white-label distribution options for
+incorporating these schemas into commercial products**
 
 ## :handshake: Contributing
 
