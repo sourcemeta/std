@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 8601-1:2019 Duration (Alternative Calendar Extended Format)",
   "description": "A duration in alternative extended format P[YYYY-MM-DD]T[HH:MM:SS] (§5.5.2.4)",
+  "$comment": "This schema provides syntactic validation only. Semantic validation (e.g., leap years for February 29) must be performed by the consumer",
   "examples": [
     "P0002-01-10T22:33:55",
     "P0001-01-01T00:00:00",
