@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 8601-1:2019 Calendar Date Expanded (Extended Format)",
   "description": "An expanded representation of a calendar date in extended format [±][YYYYYY][\"-\"][MM][\"-\"][DD] with six digits for the year (§5.2.2.3 a)",
+  "$comment": "This schema provides syntactic validation only. Semantic validation (e.g., leap years for February 29) must be performed by the consumer",
   "examples": [
     "+001985-04-12",
     "-000001-01-01",

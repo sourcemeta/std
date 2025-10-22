@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 8601-1:2019 Calendar Date (Basic Format)",
   "description": "A complete representation of a calendar date in basic format [YYYY][MM][DD] (§5.2.2.1 a)",
+  "$comment": "This schema provides syntactic validation only. Semantic validation (e.g., leap years for February 29) must be performed by the consumer",
   "examples": [ "19850412", "20000101", "20231231", "00000101", "99991231" ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/standard/70907.html" ],
