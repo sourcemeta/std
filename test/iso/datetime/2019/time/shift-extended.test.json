@@ -38,9 +38,9 @@
       "valid": true
     },
     {
-      "description": "Valid - zero shift",
+      "description": "Invalid - negative zero shift",
       "data": "-00:00",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Valid - positive zero",

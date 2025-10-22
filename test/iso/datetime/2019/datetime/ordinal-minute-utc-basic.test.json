@@ -1,0 +1,236 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/datetime/ordinal-minute-utc-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 20180011200,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - 1985-102 (Apr 12) 10:15 UTC",
+      "data": "1985102T1015Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - 2000-001 (Jan 1) 00:00 UTC",
+      "data": "2000001T0000Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - end of day 2023-365 23:59 UTC",
+      "data": "2023365T2359Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - leap day 2020-060 (Feb 29) 12:00 UTC",
+      "data": "2020060T1200Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - start of year 2024-001 00:00 UTC",
+      "data": "2024001T0000Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - historical date 1900-074 (Mar 15) 06:30 UTC",
+      "data": "1900074T0630Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - future date 2100-232 (Aug 20) 18:45 UTC",
+      "data": "2100232T1845Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - leap year day 366 (2020-366) UTC",
+      "data": "2020366T1200Z",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing T designator",
+      "data": "19851021015Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "1985102t1015Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase z",
+      "data": "1985102T1015z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing Z designator",
+      "data": "1985102T1015",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extended format",
+      "data": "1985-102T10:15Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 000",
+      "data": "2023000T1200Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 367",
+      "data": "2023367T1200Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 999",
+      "data": "2023999T1200Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24",
+      "data": "2023100T2400Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 25",
+      "data": "2023100T2500Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 99",
+      "data": "2023100T9900Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60",
+      "data": "2023100T1260Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 99",
+      "data": "2023100T1299Z",
+      "valid": false
+    },
+    {
+      "description": "Valid - hour 00 (minimum)",
+      "data": "2023100T0000Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum)",
+      "data": "2023100T2300Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 00 (minimum)",
+      "data": "2023100T1200Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 59 (maximum)",
+      "data": "2023100T1259Z",
+      "valid": true
+    },
+    {
+      "description": "Invalid - with seconds",
+      "data": "2023100T120000Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with time shift instead of Z",
+      "data": "2023100T1200+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with hourly time shift",
+      "data": "2023100T1200+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with decimal minutes",
+      "data": "2023100T1200.5Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - partial time (hour only)",
+      "data": "2023100T12Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - date only",
+      "data": "2023100Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - time only",
+      "data": "T1200Z",
+      "valid": false
+    },
+    {
+      "description": "Valid - day 001 (Jan 1)",
+      "data": "2023001T1200Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 365 (non-leap year last day)",
+      "data": "2023365T1200Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 366 (leap year last day)",
+      "data": "2020366T1200Z",
+      "valid": true
+    },
+    {
+      "description": "Invalid - spaces in datetime",
+      "data": "2023 100T12 00Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing year digits",
+      "data": "23100T1200Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra characters at end",
+      "data": "2023100T1200ZX",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra characters at beginning",
+      "data": "X2023100T1200Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - double Z",
+      "data": "2023100T1200ZZ",
+      "valid": false
+    }
+  ]
+}

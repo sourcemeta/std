@@ -1,0 +1,456 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/datetime/calendar-shift-extended.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 20180101120000,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - 1985-04-12 23:20:50 +04:00",
+      "data": "1985-04-12T23:20:50+04:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - midnight 2000-01-01 00:00:00 -05:00",
+      "data": "2000-01-01T00:00:00-05:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - leap second 2023-12-31 23:59:60 +00:00",
+      "data": "2023-12-31T23:59:60+00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - leap day 2020-02-29 12:00:00 +05:30",
+      "data": "2020-02-29T12:00:00+05:30",
+      "valid": true
+    },
+    {
+      "description": "Valid - positive shift +01:00",
+      "data": "2023-01-15T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative shift -08:00",
+      "data": "2023-01-15T12:00:00-08:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - maximum positive shift +23:59",
+      "data": "2023-01-15T12:00:00+23:59",
+      "valid": true
+    },
+    {
+      "description": "Valid - maximum negative shift -23:59",
+      "data": "2023-01-15T12:00:00-23:59",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero shift +00:00",
+      "data": "2023-01-15T12:00:00+00:00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - negative zero shift -00:00",
+      "data": "2023-01-15T12:00:00-00:00",
+      "valid": false
+    },
+    {
+      "description": "Valid - historical date 1900-03-15 06:30:45 +02:00",
+      "data": "1900-03-15T06:30:45+02:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - future date 2100-08-20 18:45:30 -12:00",
+      "data": "2100-08-20T18:45:30-12:00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing T designator",
+      "data": "1985-04-1223:20:50+04:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "1985-04-12t23:20:50+04:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format",
+      "data": "19850412T232050+0400",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing time shift",
+      "data": "1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with Z instead of shift",
+      "data": "1985-04-12T23:20:50Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - shift hour 24",
+      "data": "2023-01-15T12:00:00+24:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - shift hour 25",
+      "data": "2023-01-15T12:00:00+25:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - shift minute 60",
+      "data": "2023-01-15T12:00:00+01:60",
+      "valid": false
+    },
+    {
+      "description": "Invalid - shift minute 99",
+      "data": "2023-01-15T12:00:00+01:99",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing shift sign",
+      "data": "2023-01-15T12:00:0004:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing colon in shift (basic format shift)",
+      "data": "1985-04-12T23:20:50+0400",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hourly shift only",
+      "data": "1985-04-12T23:20:50+04",
+      "valid": false
+    },
+    {
+      "description": "Invalid - month 00",
+      "data": "2023-00-12T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - month 13",
+      "data": "2023-13-12T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 00",
+      "data": "2023-01-00T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 32",
+      "data": "2023-01-32T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24",
+      "data": "2023-01-15T24:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 25",
+      "data": "2023-01-15T25:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60",
+      "data": "2023-01-15T12:60:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 99",
+      "data": "2023-01-15T12:99:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 61",
+      "data": "2023-01-15T12:00:61+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 99",
+      "data": "2023-01-15T12:00:99+01:00",
+      "valid": false
+    },
+    {
+      "description": "Valid - hour 00 (minimum)",
+      "data": "2023-01-15T00:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum)",
+      "data": "2023-01-15T23:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 00 (minimum)",
+      "data": "2023-01-15T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 59 (maximum)",
+      "data": "2023-01-15T12:59:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 00 (minimum)",
+      "data": "2023-01-15T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 59",
+      "data": "2023-01-15T12:00:59+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 60 (leap second)",
+      "data": "2023-06-30T23:59:60+01:00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing hyphens in date",
+      "data": "20230115T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing colons in time",
+      "data": "2023-01-15T120000+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with decimal seconds",
+      "data": "2023-01-15T12:00:00.5+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - partial time (hour and minute only)",
+      "data": "2023-01-15T12:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - date only",
+      "data": "2023-01-15+01:00",
+      "valid": false
+    },
+    {
+      "description": "Valid - January (month 01)",
+      "data": "2023-01-15T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - December (month 12)",
+      "data": "2023-12-31T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - spaces in datetime",
+      "data": "2023-01-15 T 12:00:00 + 01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra characters at end",
+      "data": "2023-01-15T12:00:00+01:00X",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra characters at beginning",
+      "data": "X2023-01-15T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Valid - year 0000",
+      "data": "0000-01-01T12:00:00+00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - year 9999",
+      "data": "9999-12-31T23:59:59+00:00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - 30 February",
+      "data": "2023-02-30T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 31 February",
+      "data": "2023-02-31T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Valid - 29 February (leap year validation is consumer responsibility)",
+      "data": "2023-02-29T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - 31 April",
+      "data": "2023-04-31T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 31 June",
+      "data": "2023-06-31T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 31 September",
+      "data": "2023-09-31T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 31 November",
+      "data": "2023-11-31T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 32 January",
+      "data": "2023-01-32T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 32 March",
+      "data": "2023-03-32T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 32 May",
+      "data": "2023-05-32T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 32 July",
+      "data": "2023-07-32T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 32 August",
+      "data": "2023-08-32T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 32 October",
+      "data": "2023-10-32T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 32 December",
+      "data": "2023-12-32T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in year",
+      "data": "2O23-01-15T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in month",
+      "data": "2023-O1-15T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in day",
+      "data": "2023-01-O5T12:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in hour",
+      "data": "2023-01-15T1O:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in minute",
+      "data": "2023-01-15T12:O0:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in second",
+      "data": "2023-01-15T12:00:O0+01:00",
+      "valid": false
+    },
+    {
+      "description": "Valid - 30 April (30-day month)",
+      "data": "2023-04-30T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 30 June (30-day month)",
+      "data": "2023-06-30T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 30 September (30-day month)",
+      "data": "2023-09-30T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 30 November (30-day month)",
+      "data": "2023-11-30T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 January (31-day month)",
+      "data": "2023-01-31T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 March (31-day month)",
+      "data": "2023-03-31T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 May (31-day month)",
+      "data": "2023-05-31T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 July (31-day month)",
+      "data": "2023-07-31T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 August (31-day month)",
+      "data": "2023-08-31T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 October (31-day month)",
+      "data": "2023-10-31T12:00:00+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 December (31-day month)",
+      "data": "2023-12-31T12:00:00+01:00",
+      "valid": true
+    }
+  ]
+}
