@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 8601-1:2019 Duration (Alternative Calendar Basic Format)",
   "description": "A duration in alternative basic format P[YYYYMMDD]T[HHMMSS] (§5.5.2.4)",
-  "$comment": "This schema provides syntactic validation only. Semantic validation (e.g., leap years for February 29) must be performed by the consumer",
+  "$comment": "This schema validates day/month combinations (i.e rejects April 31) but does not validate leap years. February 29 is accepted for any year, and leap year validation must be performed by the consumer",
   "examples": [ "P00020110T223355", "P00010101T000000", "P00001231T235959" ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/standard/70907.html" ],

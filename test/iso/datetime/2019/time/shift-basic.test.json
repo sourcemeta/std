@@ -48,13 +48,23 @@
       "valid": true
     },
     {
-      "description": "Valid - zero shift",
+      "description": "Invalid - negative zero shift -0000",
       "data": "-0000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative zero shift -00",
+      "data": "-00",
+      "valid": false
+    },
+    {
+      "description": "Valid - positive zero +0000",
+      "data": "+0000",
       "valid": true
     },
     {
-      "description": "Valid - positive zero",
-      "data": "+0000",
+      "description": "Valid - positive zero +00",
+      "data": "+00",
       "valid": true
     },
     {

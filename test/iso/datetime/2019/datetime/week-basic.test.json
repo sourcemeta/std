@@ -1,0 +1,271 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/datetime/week-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 2018011120000,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - 1985-W15-5 (Apr 12) 23:20:50",
+      "data": "1985W155T232050",
+      "valid": true
+    },
+    {
+      "description": "Valid - 2000-W01-1 (Jan 3) 00:00:00",
+      "data": "2000W011T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - leap second 2023-W50-7 23:59:60",
+      "data": "2023W507T235960",
+      "valid": true
+    },
+    {
+      "description": "Valid - 2020-W09-7 (Mar 1) 12:00:00",
+      "data": "2020W097T120000",
+      "valid": true
+    },
+    {
+      "description": "Valid - end of year 2023-W52-7 23:59:59",
+      "data": "2023W527T235959",
+      "valid": true
+    },
+    {
+      "description": "Valid - start of year 2024-W01-1 00:00:00",
+      "data": "2024W011T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - historical date 1900-W09-7 06:30:45",
+      "data": "1900W097T063045",
+      "valid": true
+    },
+    {
+      "description": "Valid - future date 2100-W33-7 18:45:30",
+      "data": "2100W337T184530",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing T designator",
+      "data": "1985W155232050",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase w",
+      "data": "1985w155T232050",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "1985W155t232050",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extended format (has hyphens and colons)",
+      "data": "1985-W15-5T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - week 00",
+      "data": "2023W007T120000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - week 54",
+      "data": "2023W547T120000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - week 99",
+      "data": "2023W997T120000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 0",
+      "data": "2023W100T120000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 8",
+      "data": "2023W108T120000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 9",
+      "data": "2023W109T120000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24",
+      "data": "2023W101T240000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 25",
+      "data": "2023W101T250000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 99",
+      "data": "2023W101T990000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60",
+      "data": "2023W101T126000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 99",
+      "data": "2023W101T129900",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 61",
+      "data": "2023W101T120061",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 99",
+      "data": "2023W101T120099",
+      "valid": false
+    },
+    {
+      "description": "Valid - hour 00 (minimum)",
+      "data": "2023W101T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum)",
+      "data": "2023W101T230000",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 00 (minimum)",
+      "data": "2023W101T120000",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 59 (maximum)",
+      "data": "2023W101T125900",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 00 (minimum)",
+      "data": "2023W101T120000",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 59",
+      "data": "2023W101T120059",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 60 (leap second)",
+      "data": "2023W267T235960",
+      "valid": true
+    },
+    {
+      "description": "Invalid - with Z designator",
+      "data": "2023W101T120000Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with time shift",
+      "data": "2023W101T120000+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with decimal seconds",
+      "data": "2023W101T120000.5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - partial time (hour and minute only)",
+      "data": "2023W101T1200",
+      "valid": false
+    },
+    {
+      "description": "Invalid - partial time (hour only)",
+      "data": "2023W101T12",
+      "valid": false
+    },
+    {
+      "description": "Invalid - date only",
+      "data": "2023W101",
+      "valid": false
+    },
+    {
+      "description": "Invalid - time only",
+      "data": "T120000",
+      "valid": false
+    },
+    {
+      "description": "Valid - week 01 day 1 (Monday)",
+      "data": "2023W011T120000",
+      "valid": true
+    },
+    {
+      "description": "Valid - week 53 day 7 (Sunday of week 53)",
+      "data": "2020W537T120000",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 7 (Sunday)",
+      "data": "2023W107T120000",
+      "valid": true
+    },
+    {
+      "description": "Invalid - spaces in datetime",
+      "data": "2023 W10 1T12 00 00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing W designator",
+      "data": "2023101T120000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing year digits",
+      "data": "23W101T120000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra characters at end",
+      "data": "2023W101T120000X",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra characters at beginning",
+      "data": "X2023W101T120000",
+      "valid": false
+    }
+  ]
+}

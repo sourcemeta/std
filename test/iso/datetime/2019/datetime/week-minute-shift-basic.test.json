@@ -1,0 +1,236 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/datetime/week-minute-shift-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 2018011200,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - 1985-W15-5 10:15 +04:00",
+      "data": "1985W155T1015+0400",
+      "valid": true
+    },
+    {
+      "description": "Valid - 2000-W01-1 00:00 -05:00",
+      "data": "2000W011T0000-0500",
+      "valid": true
+    },
+    {
+      "description": "Valid - end of day 2023-W50-7 23:59 +00:00",
+      "data": "2023W507T2359+0000",
+      "valid": true
+    },
+    {
+      "description": "Valid - positive shift +01:00",
+      "data": "2023W101T1200+0100",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative shift -08:00",
+      "data": "2023W101T1200-0800",
+      "valid": true
+    },
+    {
+      "description": "Valid - maximum positive shift +23:59",
+      "data": "2023W101T1200+2359",
+      "valid": true
+    },
+    {
+      "description": "Valid - maximum negative shift -23:59",
+      "data": "2023W101T1200-2359",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero shift +00:00",
+      "data": "2023W101T1200+0000",
+      "valid": true
+    },
+    {
+      "description": "Invalid - negative zero shift -00:00",
+      "data": "2023W101T1200-0000",
+      "valid": false
+    },
+    {
+      "description": "Valid - historical date 1900-W09-7 +02:00",
+      "data": "1900W097T0630+0200",
+      "valid": true
+    },
+    {
+      "description": "Valid - future date 2100-W33-7 -12:00",
+      "data": "2100W337T1845-1200",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing T designator",
+      "data": "1985W1551015+0400",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase w",
+      "data": "1985w155T1015+0400",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "1985W155t1015+0400",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extended format",
+      "data": "1985-W15-5T10:15+04:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing time shift",
+      "data": "1985W155T1015",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with Z instead of shift",
+      "data": "1985W155T1015Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - shift hour 24",
+      "data": "2023W101T1200+2400",
+      "valid": false
+    },
+    {
+      "description": "Invalid - shift minute 60",
+      "data": "2023W101T1200+0160",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing shift sign",
+      "data": "2023W101T12000400",
+      "valid": false
+    },
+    {
+      "description": "Invalid - colon in shift (extended format shift)",
+      "data": "1985W155T1015+04:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hourly shift only",
+      "data": "1985W155T1015+04",
+      "valid": false
+    },
+    {
+      "description": "Invalid - week 00",
+      "data": "2023W007T1200+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - week 54",
+      "data": "2023W547T1200+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 0",
+      "data": "2023W100T1200+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 8",
+      "data": "2023W108T1200+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24",
+      "data": "2023W101T2400+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60",
+      "data": "2023W101T1260+0100",
+      "valid": false
+    },
+    {
+      "description": "Valid - hour 00 (minimum)",
+      "data": "2023W101T0000+0100",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum)",
+      "data": "2023W101T2300+0100",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 59 (maximum)",
+      "data": "2023W101T1259+0100",
+      "valid": true
+    },
+    {
+      "description": "Invalid - with seconds",
+      "data": "2023W101T120000+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with decimal minutes",
+      "data": "2023W101T1200.5+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - partial time (hour only)",
+      "data": "2023W101T12+0100",
+      "valid": false
+    },
+    {
+      "description": "Valid - week 01 day 1",
+      "data": "2023W011T1200+0100",
+      "valid": true
+    },
+    {
+      "description": "Valid - week 53 day 7",
+      "data": "2020W537T1200+0100",
+      "valid": true
+    },
+    {
+      "description": "Invalid - spaces in datetime",
+      "data": "2023 W10 1T12 00+01 00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing W designator",
+      "data": "2023101T1200+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra characters at end",
+      "data": "2023W101T1200+0100X",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra characters at beginning",
+      "data": "X2023W101T1200+0100",
+      "valid": false
+    }
+  ]
+}

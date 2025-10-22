@@ -1,0 +1,451 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/datetime/calendar-shifthour-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 20180101120000,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - 1985-04-12 23:20:50 +04",
+      "data": "19850412T232050+04",
+      "valid": true
+    },
+    {
+      "description": "Valid - midnight 2000-01-01 00:00:00 -05",
+      "data": "20000101T000000-05",
+      "valid": true
+    },
+    {
+      "description": "Valid - leap second 2023-12-31 23:59:60 +00",
+      "data": "20231231T235960+00",
+      "valid": true
+    },
+    {
+      "description": "Valid - leap day 2020-02-29 12:00:00 +05",
+      "data": "20200229T120000+05",
+      "valid": true
+    },
+    {
+      "description": "Valid - positive shift +01",
+      "data": "20230115T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative shift -08",
+      "data": "20230115T120000-08",
+      "valid": true
+    },
+    {
+      "description": "Valid - maximum positive shift +23",
+      "data": "20230115T120000+23",
+      "valid": true
+    },
+    {
+      "description": "Valid - maximum negative shift -23",
+      "data": "20230115T120000-23",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero shift +00",
+      "data": "20230115T120000+00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - negative zero shift -00",
+      "data": "20230115T120000-00",
+      "valid": false
+    },
+    {
+      "description": "Valid - historical date 1900-03-15 06:30:45 +02",
+      "data": "19000315T063045+02",
+      "valid": true
+    },
+    {
+      "description": "Valid - future date 2100-08-20 18:45:30 -12",
+      "data": "21000820T184530-12",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing T designator",
+      "data": "19850412232050+04",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "19850412t232050+04",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extended format",
+      "data": "1985-04-12T23:20:50+04",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing time shift",
+      "data": "19850412T232050",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with Z instead of shift",
+      "data": "19850412T232050Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - shift hour 24",
+      "data": "20230115T120000+24",
+      "valid": false
+    },
+    {
+      "description": "Invalid - shift hour 25",
+      "data": "20230115T120000+25",
+      "valid": false
+    },
+    {
+      "description": "Invalid - shift hour 99",
+      "data": "20230115T120000+99",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing shift sign",
+      "data": "20230115T12000004",
+      "valid": false
+    },
+    {
+      "description": "Invalid - shift with minutes (full shift)",
+      "data": "19850412T232050+0400",
+      "valid": false
+    },
+    {
+      "description": "Invalid - shift with colon",
+      "data": "19850412T232050+04:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - single digit shift",
+      "data": "19850412T232050+4",
+      "valid": false
+    },
+    {
+      "description": "Invalid - three digit shift",
+      "data": "19850412T232050+004",
+      "valid": false
+    },
+    {
+      "description": "Invalid - month 00",
+      "data": "20230012T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - month 13",
+      "data": "20231312T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 00",
+      "data": "20230100T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 32",
+      "data": "20230132T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24",
+      "data": "20230115T240000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 25",
+      "data": "20230115T250000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60",
+      "data": "20230115T126000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 99",
+      "data": "20230115T129900+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 61",
+      "data": "20230115T120061+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 99",
+      "data": "20230115T120099+01",
+      "valid": false
+    },
+    {
+      "description": "Valid - hour 00 (minimum)",
+      "data": "20230115T000000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum)",
+      "data": "20230115T230000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 00 (minimum)",
+      "data": "20230115T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 59 (maximum)",
+      "data": "20230115T125900+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 00 (minimum)",
+      "data": "20230115T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 59",
+      "data": "20230115T120059+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 60 (leap second)",
+      "data": "20230630T235960+01",
+      "valid": true
+    },
+    {
+      "description": "Invalid - with decimal seconds",
+      "data": "20230115T120000.5+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - partial time (hour and minute only)",
+      "data": "20230115T1200+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - date only",
+      "data": "20230115+01",
+      "valid": false
+    },
+    {
+      "description": "Valid - January (month 01)",
+      "data": "20230115T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - December (month 12)",
+      "data": "20231231T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Invalid - spaces in datetime",
+      "data": "2023 01 15T12 00 00+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra characters at end",
+      "data": "20230115T120000+01X",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra characters at beginning",
+      "data": "X20230115T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Valid - year 0000",
+      "data": "00000101T120000+00",
+      "valid": true
+    },
+    {
+      "description": "Valid - year 9999",
+      "data": "99991231T235959+00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - 30 February",
+      "data": "20230230T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 31 February",
+      "data": "20230231T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Valid - 29 February (leap year validation is consumer responsibility)",
+      "data": "20230229T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Invalid - 31 April",
+      "data": "20230431T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 31 June",
+      "data": "20230631T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 31 September",
+      "data": "20230931T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 31 November",
+      "data": "20231131T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 32 January",
+      "data": "20230132T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 32 March",
+      "data": "20230332T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 32 May",
+      "data": "20230532T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 32 July",
+      "data": "20230732T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 32 August",
+      "data": "20230832T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 32 October",
+      "data": "20231032T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 32 December",
+      "data": "20231232T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in year",
+      "data": "2O230115T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in month",
+      "data": "2023O115T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in day",
+      "data": "202301O5T120000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in hour",
+      "data": "20230115T1O0000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in minute",
+      "data": "20230115T12O000+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in second",
+      "data": "20230115T1200O0+01",
+      "valid": false
+    },
+    {
+      "description": "Valid - 30 April (30-day month)",
+      "data": "20230430T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - 30 June (30-day month)",
+      "data": "20230630T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - 30 September (30-day month)",
+      "data": "20230930T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - 30 November (30-day month)",
+      "data": "20231130T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 January (31-day month)",
+      "data": "20230131T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 March (31-day month)",
+      "data": "20230331T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 May (31-day month)",
+      "data": "20230531T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 July (31-day month)",
+      "data": "20230731T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 August (31-day month)",
+      "data": "20230831T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 October (31-day month)",
+      "data": "20231031T120000+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 December (31-day month)",
+      "data": "20231231T120000+01",
+      "valid": true
+    }
+  ]
+}
