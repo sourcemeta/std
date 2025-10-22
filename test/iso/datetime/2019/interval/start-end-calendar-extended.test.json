@@ -346,6 +346,151 @@
       "description": "Valid - reversed order (end before start is syntactically valid per ISO 8601)",
       "data": "1985-06-25T10:30:00/1985-04-12T23:20:50",
       "valid": true
+    },
+    {
+      "description": "Invalid - start hour 99",
+      "data": "1985-04-12T99:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end hour 99",
+      "data": "1985-04-12T23:20:50/1985-06-25T99:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start minute 99",
+      "data": "1985-04-12T23:99:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end minute 99",
+      "data": "1985-04-12T23:20:50/1985-06-25T10:99:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start second 99",
+      "data": "1985-04-12T23:20:99/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end second 99",
+      "data": "1985-04-12T23:20:50/1985-06-25T10:30:99",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start year",
+      "data": "I985-04-12T23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end year",
+      "data": "1985-04-12T23:20:50/I985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start month",
+      "data": "1985-0I-12T23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end month",
+      "data": "1985-04-12T23:20:50/1985-0I-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start day",
+      "data": "1985-04-I2T23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end day",
+      "data": "1985-04-12T23:20:50/1985-06-I5T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start hour",
+      "data": "1985-04-12TI3:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end hour",
+      "data": "1985-04-12T23:20:50/1985-06-25TI0:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start minute",
+      "data": "1985-04-12T23:I0:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end minute",
+      "data": "1985-04-12T23:20:50/1985-06-25T10:I0:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start second",
+      "data": "1985-04-12T23:20:I0/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end second",
+      "data": "1985-04-12T23:20:50/1985-06-25T10:30:I0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too short start datetime",
+      "data": "1985-04-12T23:20:5/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too short end datetime",
+      "data": "1985-04-12T23:20:50/1985-06-25T10:30:0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too long start datetime",
+      "data": "1985-04-12T23:20:500/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too long end datetime",
+      "data": "1985-04-12T23:20:50/1985-06-25T10:30:000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra character at start",
+      "data": "X1985-04-12T23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra character at end",
+      "data": "1985-04-12T23:20:50/1985-06-25T10:30:00X",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra character in middle",
+      "data": "1985-04-12T23:20:50X/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space in start date",
+      "data": "1985-04- 12T23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space in end date",
+      "data": "1985-04-12T23:20:50/1985-06- 25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space in start time",
+      "data": "1985-04-12T23: 20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space in end time",
+      "data": "1985-04-12T23:20:50/1985-06-25T10: 30:00",
+      "valid": false
     }
   ]
 }
