@@ -1,0 +1,71 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/date/calendar-month.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 198504,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - April 1985",
+      "data": "1985-04",
+      "valid": true
+    },
+    {
+      "description": "Valid - January 2000",
+      "data": "2000-01",
+      "valid": true
+    },
+    {
+      "description": "Valid - December 2023",
+      "data": "2023-12",
+      "valid": true
+    },
+    {
+      "description": "Valid - January year 0000",
+      "data": "0000-01",
+      "valid": true
+    },
+    {
+      "description": "Valid - December year 9999",
+      "data": "9999-12",
+      "valid": true
+    },
+    {
+      "description": "Invalid - month 00",
+      "data": "1985-00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - month 13",
+      "data": "1985-13",
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format (no hyphen)",
+      "data": "198504",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with day component",
+      "data": "1985-04-12",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}

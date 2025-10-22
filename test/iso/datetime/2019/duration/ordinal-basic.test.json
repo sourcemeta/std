@@ -1,0 +1,306 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/duration/ordinal-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 2178223355,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - 2 years day 178, 22 hours 33 minutes 55 seconds",
+      "data": "P0002178T223355",
+      "valid": true
+    },
+    {
+      "description": "Valid - 1 year day 1, 0 hours 0 minutes 0 seconds",
+      "data": "P0001001T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - 1 year day 365, 23 hours 59 minutes 59 seconds",
+      "data": "P0001365T235959",
+      "valid": true
+    },
+    {
+      "description": "Valid - 10 years day 100, 12 hours 30 minutes 45 seconds",
+      "data": "P0010100T123045",
+      "valid": true
+    },
+    {
+      "description": "Valid - 5 years day 366 (leap year), 6 hours 15 minutes 30 seconds",
+      "data": "P0005366T061530",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing P prefix",
+      "data": "0002178T223355",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing T separator",
+      "data": "P0002178223355",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase p",
+      "data": "p0002178T223355",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "P0002178t223355",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too few ordinal date digits",
+      "data": "P000278T223355",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too many ordinal date digits",
+      "data": "P00002178T223355",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too few time digits",
+      "data": "P0002178T22335",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too many time digits",
+      "data": "P0002178T2233555",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - spaces in duration",
+      "data": "P0002 178 T22 33 55",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hyphen (extended format)",
+      "data": "P0002-178T223355",
+      "valid": false
+    },
+    {
+      "description": "Invalid - colons in time (extended format)",
+      "data": "P0002178T22:33:55",
+      "valid": false
+    },
+    {
+      "description": "Invalid - ordinal day 000 (ordinal days should be 001-366)",
+      "data": "P0001000T000000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - ordinal day 367 (ordinal days should be 001-366)",
+      "data": "P0001367T000000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - ordinal day 999 (ordinal days should be 001-366)",
+      "data": "P0001999T000000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24 (hours should be 00-23)",
+      "data": "P0001001T240000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 99 (hours should be 00-23)",
+      "data": "P0001001T990000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60 (minutes should be 00-59)",
+      "data": "P0001001T006000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 99 (minutes should be 00-59)",
+      "data": "P0001001T009900",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 60 (seconds should be 00-59)",
+      "data": "P0001001T000060",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 99 (seconds should be 00-59)",
+      "data": "P0001001T000099",
+      "valid": false
+    },
+    {
+      "description": "Valid - ordinal day 001 (minimum valid ordinal day)",
+      "data": "P0000001T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - ordinal day 366 (maximum valid ordinal day)",
+      "data": "P0000366T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - ordinal day 365",
+      "data": "P0000365T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 00 (minimum valid hour)",
+      "data": "P0000001T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum valid hour)",
+      "data": "P0000001T230000",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 00 (minimum valid minute)",
+      "data": "P0000001T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 59 (maximum valid minute)",
+      "data": "P0000001T005900",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 00 (minimum valid second)",
+      "data": "P0000001T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 59 (maximum valid second)",
+      "data": "P0000001T000059",
+      "valid": true
+    },
+    {
+      "description": "Valid - expanded year with plus sign (5 digits)",
+      "data": "P+10000001T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - expanded year with minus sign (5 digits)",
+      "data": "P-10000001T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - expanded year with plus sign (6 digits)",
+      "data": "P+100000001T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - expanded year with minus sign (10 digits)",
+      "data": "P-1000000000001T000000",
+      "valid": true
+    },
+    {
+      "description": "Invalid - expanded year without sign (5 digits)",
+      "data": "P10000001T000000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 4 digit year with plus sign",
+      "data": "P+0001001T000000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 4 digit year with minus sign",
+      "data": "P-0001001T000000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - ordinal day without leading zeros (single digit)",
+      "data": "P00001T00000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - ordinal day without leading zeros (two digits)",
+      "data": "P000001T00000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour without leading zero (single digit)",
+      "data": "P0000001T10000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute without leading zero (single digit)",
+      "data": "P0000001T00100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second without leading zero (single digit)",
+      "data": "P0000001T00001",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 000",
+      "data": "P0001000T000000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 367",
+      "data": "P0001367T000000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 400",
+      "data": "P0001400T000000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 500",
+      "data": "P0001500T000000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 999",
+      "data": "P0001999T000000",
+      "valid": false
+    },
+    {
+      "description": "Valid - day 366 (leap year validation is consumer responsibility)",
+      "data": "P0001366T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 001",
+      "data": "P0001001T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 365",
+      "data": "P0001365T000000",
+      "valid": true
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/date/week-reduced-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 1985155,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - week 15 of 1985",
+      "data": "1985W15",
+      "valid": true
+    },
+    {
+      "description": "Valid - week 1 of 2000",
+      "data": "2000W01",
+      "valid": true
+    },
+    {
+      "description": "Valid - week 52 of 2023",
+      "data": "2023W52",
+      "valid": true
+    },
+    {
+      "description": "Valid - week 1 of year 0000",
+      "data": "0000W01",
+      "valid": true
+    },
+    {
+      "description": "Valid - week 53 of year 9999",
+      "data": "9999W53",
+      "valid": true
+    },
+    {
+      "description": "Invalid - week 00",
+      "data": "1985W00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - week 54",
+      "data": "1985W54",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing W designator",
+      "data": "198515",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase w",
+      "data": "1985w15",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extended format (with hyphen)",
+      "data": "1985-W15",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with day component",
+      "data": "1985W155",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Valid - Week 53 (years with 53 weeks exist)",
+      "data": "2020W53",
+      "valid": true
+    },
+    {
+      "description": "Invalid - Week 54",
+      "data": "2023W54",
+      "valid": false
+    },
+    {
+      "description": "Invalid - Week 55",
+      "data": "2023W55",
+      "valid": false
+    },
+    {
+      "description": "Invalid - Week 99",
+      "data": "2023W99",
+      "valid": false
+    }
+  ]
+}
