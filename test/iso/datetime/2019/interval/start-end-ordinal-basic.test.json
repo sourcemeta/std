@@ -1,0 +1,281 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/interval/start-end-ordinal-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 1985102232050,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - day 102 to day 176 of 1985",
+      "data": "1985102T232050/1985176T103000",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 1 to day 366 of 2000 (leap year)",
+      "data": "2000001T000000/2000366T235959",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 1 to day 365 of 2023",
+      "data": "2023001T120000/2023365T180000",
+      "valid": true
+    },
+    {
+      "description": "Valid - same day interval",
+      "data": "2023100T120000/2023100T180000",
+      "valid": true
+    },
+    {
+      "description": "Valid - cross year boundary",
+      "data": "2022365T230000/2023001T010000",
+      "valid": true
+    },
+    {
+      "description": "Valid - first to last day of year",
+      "data": "2020001T000000/2020366T235959",
+      "valid": true
+    },
+    {
+      "description": "Valid - with leap second (60 seconds)",
+      "data": "1985102T235960/1985103T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - midnight to midnight",
+      "data": "2023001T000000/2023002T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 59 to day 60 (February 28-29 in leap year)",
+      "data": "2020059T120000/2020060T120000",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing separator slash",
+      "data": "1985102T2320501985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extended format (contains hyphens)",
+      "data": "1985-102T23:20:50/1985-176T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed formats (basic start, extended end)",
+      "data": "1985102T232050/1985-176T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed formats (extended start, basic end)",
+      "data": "1985-102T23:20:50/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing end datetime",
+      "data": "1985102T232050/",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing start datetime",
+      "data": "/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - only separator",
+      "data": "/",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - spaces around separator",
+      "data": "1985102T232050 / 1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start day 000",
+      "data": "1985000T232050/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start day 367",
+      "data": "1985367T232050/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end day 000",
+      "data": "1985102T232050/1985000T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end day 367",
+      "data": "1985102T232050/1985367T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start hour 24",
+      "data": "1985102T242050/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start hour 25",
+      "data": "1985102T252050/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end hour 24",
+      "data": "1985102T232050/1985176T243000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start minute 60",
+      "data": "1985102T236050/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end minute 60",
+      "data": "1985102T232050/1985176T106000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start second 61",
+      "data": "1985102T232061/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end second 61",
+      "data": "1985102T232050/1985176T103061",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing T separator in start",
+      "data": "1985102232050/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing T separator in end",
+      "data": "1985102T232050/1985176103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t in start",
+      "data": "1985102t232050/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t in end",
+      "data": "1985102T232050/1985176t103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - duration instead of end datetime",
+      "data": "1985102T232050/P1Y2M15DT12H30M0S",
+      "valid": false
+    },
+    {
+      "description": "Invalid - duration instead of start datetime",
+      "data": "P1Y2M15DT12H30M0S/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - calendar date instead of ordinal in start",
+      "data": "19850412T232050/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - calendar date instead of ordinal in end",
+      "data": "1985102T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too few digits in start day",
+      "data": "198502T232050/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too many digits in start day",
+      "data": "19851022T232050/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letters in start date",
+      "data": "ABCD102T232050/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letters in end date",
+      "data": "1985102T232050/ABCD176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letters in start time",
+      "data": "1985102TABC050/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letters in end time",
+      "data": "1985102T232050/1985176TABC000",
+      "valid": false
+    },
+    {
+      "description": "Valid - day 366 in leap year",
+      "data": "2020366T000000/2021001T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 366 in non-leap year (validation is consumer responsibility)",
+      "data": "2023366T120000/2024001T120000",
+      "valid": true
+    },
+    {
+      "description": "Invalid - double slash separator",
+      "data": "1985102T232050//1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - backslash separator",
+      "data": "1985102T232050\\1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Valid - reversed order (end before start is syntactically valid per ISO 8601)",
+      "data": "1985176T103000/1985102T232050",
+      "valid": true
+    },
+    {
+      "description": "Invalid - week date format instead of ordinal in start",
+      "data": "1985W155T232050/1985176T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - week date format instead of ordinal in end",
+      "data": "1985102T232050/1985W261T103000",
+      "valid": false
+    }
+  ]
+}

@@ -1,0 +1,381 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/interval/duration-end-calendar-extended.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 19850412232050,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - full duration",
+      "data": "P1Y2M15DT12H30M0S/1985-04-12T23:20:50",
+      "valid": true
+    },
+    {
+      "description": "Valid - only years duration",
+      "data": "P1Y/2000-12-31T23:59:59",
+      "valid": true
+    },
+    {
+      "description": "Valid - time duration",
+      "data": "PT5H30M/2023-06-15T18:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - weeks duration",
+      "data": "P2W/1985-01-01T00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - basic format datetime",
+      "data": "P1Y/19850412T232050",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing slash",
+      "data": "P1Y1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start datetime instead of duration",
+      "data": "1985-04-12T23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty duration",
+      "data": "P/1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - ordinal date end",
+      "data": "P1Y/1985-102T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - week date end",
+      "data": "P1Y/1985-W15-5T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end month 13",
+      "data": "P1Y/1985-13-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end day 32",
+      "data": "P1Y/1985-04-32T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 31 April",
+      "data": "P1Y/1985-04-31T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Valid - leap second in end",
+      "data": "P1D/1985-04-12T23:59:60",
+      "valid": true
+    },
+    {
+      "description": "Valid - 29 February end",
+      "data": "P1Y/2023-02-29T12:00:00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - end month 00",
+      "data": "P1Y/1985-00-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end day 00",
+      "data": "P1Y/1985-04-00T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 30 February",
+      "data": "P1Y/2023-02-30T12:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 31 June",
+      "data": "P1Y/1985-06-31T12:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 31 September",
+      "data": "P1Y/1985-09-31T12:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 31 November",
+      "data": "P1Y/1985-11-31T12:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end hour 24",
+      "data": "P1Y/1985-04-12T24:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end hour 25",
+      "data": "P1Y/1985-04-12T25:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end hour 99",
+      "data": "P1Y/1985-04-12T99:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end minute 60",
+      "data": "P1Y/1985-04-12T23:60:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end minute 99",
+      "data": "P1Y/1985-04-12T23:99:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end second 61",
+      "data": "P1Y/1985-04-12T23:20:61",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end second 99",
+      "data": "P1Y/1985-04-12T23:20:99",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing T separator in end",
+      "data": "P1Y/1985-04-12 23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t in end",
+      "data": "P1Y/1985-04-12t23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - duration without P prefix",
+      "data": "1Y2M15DT12H30M0S/1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase p in duration",
+      "data": "p1Y/1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t in duration",
+      "data": "P1Dt1H/1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty time duration (only PT)",
+      "data": "PT/1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - double slash separator",
+      "data": "P1Y//1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - backslash separator",
+      "data": "P1Y\\1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Valid - zero duration components",
+      "data": "P0Y0M0DT0H0M0S/2023-01-01T00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - duration with decimal fraction in years",
+      "data": "P1.5Y/2023-01-01T12:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - duration with decimal fraction in months",
+      "data": "P3M15DT2.5H/2023-01-01T12:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - duration with decimal fraction in days",
+      "data": "P10.5D/2023-01-01T12:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - time duration with decimal fraction in hours",
+      "data": "PT2.5H/2023-01-01T12:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - time duration with decimal fraction in minutes",
+      "data": "PT45.5M/2023-01-01T12:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - time duration with decimal fraction in seconds",
+      "data": "PT10.123S/2023-01-01T12:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal weeks",
+      "data": "P1.5W/2023-01-01T12:00:00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - duration wrong component order (M before Y)",
+      "data": "P6M3Y/1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - duration wrong component order (D before M)",
+      "data": "P15D6M/1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - duration time without T designator",
+      "data": "P1D1H/1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - duration weeks mixed with other units",
+      "data": "P1W2D/1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - duration weeks mixed with years",
+      "data": "P1Y2W/1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - duration weeks with time",
+      "data": "P1WT1H/1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Valid - large year value",
+      "data": "P500Y/2023-01-01T00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - large day value",
+      "data": "P500D/2023-01-01T00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - large hour value",
+      "data": "PT100H/2023-01-01T00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 13 months",
+      "data": "P13M/2023-01-01T00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - letter in year",
+      "data": "P1Y/I985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in month",
+      "data": "P1Y/1985-O4-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in day",
+      "data": "P1Y/1985-04-I2T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in hour",
+      "data": "P1Y/1985-04-12TI3:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in minute",
+      "data": "P1Y/1985-04-12T23:I0:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in second",
+      "data": "P1Y/1985-04-12T23:20:I0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - duration with spaces",
+      "data": "P1Y 2M/1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - duration with extra slash",
+      "data": "P1Y/2M/1985-04-12T23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Valid - PT60M (durations can exceed calendar limits)",
+      "data": "PT60M/1985-04-12T23:20:50",
+      "valid": true
+    },
+    {
+      "description": "Valid - PT60S (durations can exceed calendar limits)",
+      "data": "PT60S/1985-04-12T23:20:50",
+      "valid": true
+    },
+    {
+      "description": "Valid - PT25H (durations can exceed calendar limits)",
+      "data": "PT25H/1985-04-12T23:20:50",
+      "valid": true
+    },
+    {
+      "description": "Valid - P32D (durations can exceed calendar limits)",
+      "data": "P32D/1985-04-12T23:20:50",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing end datetime",
+      "data": "P1Y2M15DT12H30M0S/",
+      "valid": false
+    },
+    {
+      "description": "Invalid - only separator",
+      "data": "/",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - spaces around separator",
+      "data": "P1Y / 1985-04-12T23:20:50",
+      "valid": false
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/interval/start-end-calendar-extended.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 19850412232050,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - 12 April 1985 to 25 June 1985",
+      "data": "1985-04-12T23:20:50/1985-06-25T10:30:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 1 January 2000 to 31 December 2000",
+      "data": "2000-01-01T00:00:00/2000-12-31T23:59:59",
+      "valid": true
+    },
+    {
+      "description": "Valid - same day interval",
+      "data": "2023-01-01T12:00:00/2023-01-01T18:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - cross year boundary",
+      "data": "2022-12-31T23:00:00/2023-01-01T01:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 January to 28 February",
+      "data": "2023-01-31T00:00:00/2023-02-28T23:59:59",
+      "valid": true
+    },
+    {
+      "description": "Valid - leap year February 29",
+      "data": "2020-02-28T12:00:00/2020-02-29T12:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - with leap second (60 seconds)",
+      "data": "1985-04-12T23:59:60/1985-04-13T00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - midnight to midnight",
+      "data": "2023-01-01T00:00:00/2023-01-02T00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 May to 30 June",
+      "data": "2023-05-31T12:00:00/2023-06-30T12:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 August to 30 September",
+      "data": "2023-08-31T12:00:00/2023-09-30T12:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 October to 30 November",
+      "data": "2023-10-31T12:00:00/2023-11-30T12:00:00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing separator slash",
+      "data": "1985-04-12T23:20:501985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format (no hyphens or colons)",
+      "data": "19850412T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed formats (basic start, extended end)",
+      "data": "19850412T232050/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed formats (extended start, basic end)",
+      "data": "1985-04-12T23:20:50/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing end datetime",
+      "data": "1985-04-12T23:20:50/",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing start datetime",
+      "data": "/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - only separator",
+      "data": "/",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - spaces around separator",
+      "data": "1985-04-12T23:20:50 / 1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start month 00",
+      "data": "1985-00-12T23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start month 13",
+      "data": "1985-13-12T23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end month 00",
+      "data": "1985-04-12T23:20:50/1985-00-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end month 13",
+      "data": "1985-04-12T23:20:50/1985-13-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start day 00",
+      "data": "1985-04-00T23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start day 32",
+      "data": "1985-04-32T23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end day 00",
+      "data": "1985-04-12T23:20:50/1985-06-00T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end day 32",
+      "data": "1985-04-12T23:20:50/1985-06-32T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start 31 April",
+      "data": "1985-04-31T23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start 31 June",
+      "data": "1985-06-31T23:20:50/1985-07-31T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start 31 September",
+      "data": "1985-09-31T23:20:50/1985-10-31T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start 31 November",
+      "data": "1985-11-31T23:20:50/1985-12-31T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 31 April",
+      "data": "1985-04-01T23:20:50/1985-04-31T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 31 June",
+      "data": "1985-06-01T23:20:50/1985-06-31T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 31 September",
+      "data": "1985-09-01T23:20:50/1985-09-31T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 31 November",
+      "data": "1985-11-01T23:20:50/1985-11-31T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start 30 February",
+      "data": "2023-02-30T12:00:00/2023-03-31T12:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 30 February",
+      "data": "2023-01-31T12:00:00/2023-02-30T12:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start hour 24",
+      "data": "1985-04-12T24:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start hour 25",
+      "data": "1985-04-12T25:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end hour 24",
+      "data": "1985-04-12T23:20:50/1985-06-25T24:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start minute 60",
+      "data": "1985-04-12T23:60:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end minute 60",
+      "data": "1985-04-12T23:20:50/1985-06-25T10:60:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start second 61",
+      "data": "1985-04-12T23:20:61/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end second 61",
+      "data": "1985-04-12T23:20:50/1985-06-25T10:30:61",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing T separator in start",
+      "data": "1985-04-1223:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing T separator in end",
+      "data": "1985-04-12T23:20:50/1985-06-2510:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t in start",
+      "data": "1985-04-12t23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t in end",
+      "data": "1985-04-12T23:20:50/1985-06-25t10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - duration instead of end datetime",
+      "data": "1985-04-12T23:20:50/P1Y2M15DT12H30M0S",
+      "valid": false
+    },
+    {
+      "description": "Invalid - duration instead of start datetime",
+      "data": "P1Y2M15DT12H30M0S/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing hyphen in start date",
+      "data": "19850412T23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing hyphen in end date",
+      "data": "1985-04-12T23:20:50/19850625T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing colon in start time",
+      "data": "1985-04-12T232050/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing colon in end time",
+      "data": "1985-04-12T23:20:50/1985-06-25T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letters in start date",
+      "data": "ABCD-04-12T23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letters in end date",
+      "data": "1985-04-12T23:20:50/ABCD-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letters in start time",
+      "data": "1985-04-12TAB:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letters in end time",
+      "data": "1985-04-12T23:20:50/1985-06-25TAB:30:00",
+      "valid": false
+    },
+    {
+      "description": "Valid - 29 February (leap year validation is consumer responsibility)",
+      "data": "2023-02-29T12:00:00/2023-03-31T12:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - both start and end with 29 February",
+      "data": "2023-02-29T00:00:00/2024-02-29T23:59:59",
+      "valid": true
+    },
+    {
+      "description": "Invalid - double slash separator",
+      "data": "1985-04-12T23:20:50//1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - backslash separator",
+      "data": "1985-04-12T23:20:50\\1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Valid - reversed order (end before start is syntactically valid per ISO 8601)",
+      "data": "1985-06-25T10:30:00/1985-04-12T23:20:50",
+      "valid": true
+    }
+  ]
+}
