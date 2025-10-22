@@ -1,0 +1,151 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/date/calendar-expanded-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 19850412,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - April 12, 1985 with positive sign",
+      "data": "+0019850412",
+      "valid": true
+    },
+    {
+      "description": "Valid - January 1, year 1 BCE with negative sign",
+      "data": "-0000010101",
+      "valid": true
+    },
+    {
+      "description": "Valid - December 31, year 999999 with positive sign",
+      "data": "+9999991231",
+      "valid": true
+    },
+    {
+      "description": "Valid - January 1, year 0 with positive sign",
+      "data": "+0000000101",
+      "valid": true
+    },
+    {
+      "description": "Valid - January 1, year 10000 BCE with negative sign",
+      "data": "-0100000101",
+      "valid": true
+    },
+    {
+      "description": "Valid - February 29, leap year 2000",
+      "data": "+0020000229",
+      "valid": true
+    },
+    {
+      "description": "Invalid - month 00",
+      "data": "+0019850012",
+      "valid": false
+    },
+    {
+      "description": "Invalid - month 13",
+      "data": "+0019851312",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 00",
+      "data": "+0019850400",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 32",
+      "data": "+0019850432",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing sign",
+      "data": "0019850412",
+      "valid": false
+    },
+    {
+      "description": "Invalid - five digit year",
+      "data": "+001985041",
+      "valid": false
+    },
+    {
+      "description": "Invalid - seven digit year",
+      "data": "+00198504122",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extended format (with hyphens)",
+      "data": "+001985-04-12",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 30 February (any year)",
+      "data": "+0020230230",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 31 February (any year)",
+      "data": "+0020230231",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 31 April",
+      "data": "+0020230431",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 31 June",
+      "data": "+0020230631",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 31 September",
+      "data": "+0020230931",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 31 November",
+      "data": "+0020231131",
+      "valid": false
+    },
+    {
+      "description": "Valid - 30 April 2023",
+      "data": "+0020230430",
+      "valid": true
+    },
+    {
+      "description": "Valid - 29 February (leap year validation is consumer responsibility)",
+      "data": "+0024000229",
+      "valid": true
+    },
+    {
+      "description": "Valid - 28 February",
+      "data": "+0021000228",
+      "valid": true
+    },
+    {
+      "description": "Invalid - 30 February with negative year",
+      "data": "-0020230230",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 31 April with negative year",
+      "data": "-0020230431",
+      "valid": false
+    }
+  ]
+}

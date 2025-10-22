@@ -1,0 +1,76 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/date/calendar-expanded-month.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 198504,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - April 1985 with positive sign",
+      "data": "+001985-04",
+      "valid": true
+    },
+    {
+      "description": "Valid - January year 1 BCE with negative sign",
+      "data": "-000001-01",
+      "valid": true
+    },
+    {
+      "description": "Valid - December year 999999 with positive sign",
+      "data": "+999999-12",
+      "valid": true
+    },
+    {
+      "description": "Valid - January year 0 with positive sign",
+      "data": "+000000-01",
+      "valid": true
+    },
+    {
+      "description": "Valid - December year 10000 BCE with negative sign",
+      "data": "-010000-12",
+      "valid": true
+    },
+    {
+      "description": "Invalid - month 00",
+      "data": "+001985-00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - month 13",
+      "data": "+001985-13",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing sign",
+      "data": "001985-04",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with day component",
+      "data": "+001985-04-12",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing hyphen",
+      "data": "+00198504",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}
