@@ -276,6 +276,151 @@
       "description": "Valid - reversed order (end before start is syntactically valid per ISO 8601)",
       "data": "1985W261T103000/1985W155T232050",
       "valid": true
+    },
+    {
+      "description": "Invalid - start hour 99",
+      "data": "1985W155T992050/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end hour 99",
+      "data": "1985W155T232050/1985W261T993000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start minute 99",
+      "data": "1985W155T239950/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end minute 99",
+      "data": "1985W155T232050/1985W261T109900",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start second 99",
+      "data": "1985W155T232099/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end second 99",
+      "data": "1985W155T232050/1985W261T103099",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start year",
+      "data": "I985W155T232050/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end year",
+      "data": "1985W155T232050/I985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start week",
+      "data": "1985WI55T232050/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end week",
+      "data": "1985W155T232050/1985WI61T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start day",
+      "data": "1985W15IT232050/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end day",
+      "data": "1985W155T232050/1985W26IT103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start hour",
+      "data": "1985W155TI32050/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end hour",
+      "data": "1985W155T232050/1985W261TI03000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start minute",
+      "data": "1985W155T23I050/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end minute",
+      "data": "1985W155T232050/1985W261T10I000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start second",
+      "data": "1985W155T2320I0/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end second",
+      "data": "1985W155T232050/1985W261T1030I0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too short start datetime",
+      "data": "1985W155T23205/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too short end datetime",
+      "data": "1985W155T232050/1985W261T10300",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too long start datetime",
+      "data": "1985W155T2320500/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too long end datetime",
+      "data": "1985W155T232050/1985W261T1030000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra character at start",
+      "data": "X1985W155T232050/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra character at end",
+      "data": "1985W155T232050/1985W261T103000X",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra character in middle",
+      "data": "1985W155T232050X/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space in start date",
+      "data": "1985W15 5T232050/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space in end date",
+      "data": "1985W155T232050/1985W26 1T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space in start time",
+      "data": "1985W155T23 2050/1985W261T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space in end time",
+      "data": "1985W155T232050/1985W261T10 3000",
+      "valid": false
     }
   ]
 }
