@@ -1,0 +1,216 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/time/local-day-extended.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 232050,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - 23:20:50 without T",
+      "data": "23:20:50",
+      "valid": true
+    },
+    {
+      "description": "Valid - T23:20:50 with T",
+      "data": "T23:20:50",
+      "valid": true
+    },
+    {
+      "description": "Valid - midnight 00:00:00",
+      "data": "00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - leap second T23:59:60",
+      "data": "T23:59:60",
+      "valid": true
+    },
+    {
+      "description": "Valid - noon 12:00:00",
+      "data": "12:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - T01:01:01",
+      "data": "T01:01:01",
+      "valid": true
+    },
+    {
+      "description": "Valid - end of day 23:59:59",
+      "data": "23:59:59",
+      "valid": true
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "t23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format (no colons)",
+      "data": "T232050",
+      "valid": false
+    },
+    {
+      "description": "Invalid - spaces in time",
+      "data": "23 20 50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too few digits",
+      "data": "23:20:5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too many digits",
+      "data": "23:20:500",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24",
+      "data": "24:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 25",
+      "data": "25:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 99",
+      "data": "99:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60",
+      "data": "00:60:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 99",
+      "data": "00:99:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 61",
+      "data": "00:00:61",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 99",
+      "data": "00:00:99",
+      "valid": false
+    },
+    {
+      "description": "Valid - hour 00 (minimum)",
+      "data": "00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum)",
+      "data": "23:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 00 (minimum)",
+      "data": "00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 59 (maximum)",
+      "data": "00:59:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 00 (minimum)",
+      "data": "00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 59",
+      "data": "00:00:59",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 60 (leap second)",
+      "data": "00:00:60",
+      "valid": true
+    },
+    {
+      "description": "Invalid - hour without leading zero",
+      "data": "1:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute without leading zero",
+      "data": "00:1:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second without leading zero",
+      "data": "00:00:1",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with Z designator",
+      "data": "23:20:50Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with time shift",
+      "data": "23:20:50+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal seconds",
+      "data": "23:20:50.5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - partial time (hour and minute only)",
+      "data": "23:20",
+      "valid": false
+    },
+    {
+      "description": "Invalid - partial time (hour only)",
+      "data": "T23",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing colons",
+      "data": "232050",
+      "valid": false
+    },
+    {
+      "description": "Invalid - only one colon",
+      "data": "23:2050",
+      "valid": false
+    }
+  ]
+}

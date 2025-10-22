@@ -1,0 +1,131 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/time/decimal-minute-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 2320,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - decimal minute with comma",
+      "data": "T2320,8",
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal minute with period",
+      "data": "T2320.8",
+      "valid": true
+    },
+    {
+      "description": "Valid - midnight with decimal",
+      "data": "T0000,0",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple decimal digits",
+      "data": "T2359,999",
+      "valid": true
+    },
+    {
+      "description": "Valid - T1200.5",
+      "data": "T1200.5",
+      "valid": true
+    },
+    {
+      "description": "Invalid - no decimal part",
+      "data": "T2320",
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal sign without digits",
+      "data": "T2320,",
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal sign without digits (period)",
+      "data": "T2320.",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing T designator",
+      "data": "2320,8",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "t2320,8",
+      "valid": false
+    },
+    {
+      "description": "Invalid - colons (extended format)",
+      "data": "T23:20,8",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24",
+      "data": "T2400,0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 99",
+      "data": "T9900,0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60",
+      "data": "T0060,0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 99",
+      "data": "T0099,0",
+      "valid": false
+    },
+    {
+      "description": "Valid - hour 00 (minimum)",
+      "data": "T0000,0",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum)",
+      "data": "T2300,0",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 00 (minimum)",
+      "data": "T0000,0",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 59 (maximum)",
+      "data": "T0059,0",
+      "valid": true
+    },
+    {
+      "description": "Invalid - includes seconds",
+      "data": "T232030,5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with Z designator",
+      "data": "T2320,8Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with time shift",
+      "data": "T2320,8+0100",
+      "valid": false
+    }
+  ]
+}

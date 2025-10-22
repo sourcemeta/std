@@ -1,0 +1,146 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/time/shift-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 100,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - positive shift hour and minute",
+      "data": "+0100",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative shift hour and minute",
+      "data": "-0530",
+      "valid": true
+    },
+    {
+      "description": "Valid - positive shift hour only",
+      "data": "+00",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative shift hour only",
+      "data": "-12",
+      "valid": true
+    },
+    {
+      "description": "Valid - Z (UTC)",
+      "data": "Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - maximum positive shift",
+      "data": "+1400",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero shift",
+      "data": "-0000",
+      "valid": true
+    },
+    {
+      "description": "Valid - positive zero",
+      "data": "+0000",
+      "valid": true
+    },
+    {
+      "description": "Invalid - lowercase z",
+      "data": "z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing sign",
+      "data": "0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - colons (extended format)",
+      "data": "+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24",
+      "data": "+2400",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 99",
+      "data": "+9900",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60",
+      "data": "+0060",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 99",
+      "data": "+0099",
+      "valid": false
+    },
+    {
+      "description": "Valid - hour 00 (minimum)",
+      "data": "+0000",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum)",
+      "data": "+2300",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 00 (minimum)",
+      "data": "+0000",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 59 (maximum)",
+      "data": "+0059",
+      "valid": true
+    },
+    {
+      "description": "Invalid - three digits",
+      "data": "+010",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too many digits",
+      "data": "+01000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - sign only",
+      "data": "+",
+      "valid": false
+    },
+    {
+      "description": "Valid - negative hour only",
+      "data": "-05",
+      "valid": true
+    },
+    {
+      "description": "Valid - positive hour only",
+      "data": "+01",
+      "valid": true
+    }
+  ]
+}

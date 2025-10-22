@@ -1,0 +1,181 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/time/local-day-shift-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 152746,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - time with hour-minute shift and T",
+      "data": "T152746+0100",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with hour-minute shift, no T",
+      "data": "152746-0530",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with Z and T",
+      "data": "T152746Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with hour-only shift, no T",
+      "data": "152746+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - midnight with zero shift",
+      "data": "T000000+0000",
+      "valid": true
+    },
+    {
+      "description": "Valid - leap second with negative shift",
+      "data": "235960-1200",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with Z, no T",
+      "data": "152746Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with hour-only shift and T",
+      "data": "T120000+05",
+      "valid": true
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "t152746+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase z",
+      "data": "T152746z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing shift",
+      "data": "T152746",
+      "valid": false
+    },
+    {
+      "description": "Invalid - colons in time (extended format)",
+      "data": "T15:27:46+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - colons in shift (extended format)",
+      "data": "T152746+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24",
+      "data": "T240000+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 99",
+      "data": "T990000+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60",
+      "data": "T006000+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 99",
+      "data": "T009900+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 61",
+      "data": "T000061+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 99",
+      "data": "T000099+0100",
+      "valid": false
+    },
+    {
+      "description": "Valid - hour 00 (minimum)",
+      "data": "T000000Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum)",
+      "data": "T230000Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 00 (minimum)",
+      "data": "T000000Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 59 (maximum)",
+      "data": "T005900Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 00 (minimum)",
+      "data": "T000000Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 59",
+      "data": "T000059Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 60 (leap second)",
+      "data": "T000060Z",
+      "valid": true
+    },
+    {
+      "description": "Invalid - shift hour 24",
+      "data": "T120000+2400",
+      "valid": false
+    },
+    {
+      "description": "Invalid - shift minute 60",
+      "data": "T120000+0060",
+      "valid": false
+    },
+    {
+      "description": "Valid - maximum positive shift",
+      "data": "T120000+1400",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative shift",
+      "data": "T120000-0500",
+      "valid": true
+    },
+    {
+      "description": "Invalid - partial time (hour-minute only)",
+      "data": "T1527+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal seconds",
+      "data": "T152746.5+0100",
+      "valid": false
+    }
+  ]
+}

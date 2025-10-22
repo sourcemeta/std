@@ -1,0 +1,166 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/time/utc-day-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 232030,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - complete time with Z and T",
+      "data": "T232030Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour and minute with Z and T",
+      "data": "T2320Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour only with Z and T",
+      "data": "T23Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - complete time with Z, no T",
+      "data": "232030Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - midnight",
+      "data": "T000000Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - noon",
+      "data": "T120000Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour-minute no T",
+      "data": "1200Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour only no T",
+      "data": "12Z",
+      "valid": true
+    },
+    {
+      "description": "Invalid - lowercase z",
+      "data": "T232030z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "t232030Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing Z",
+      "data": "T232030",
+      "valid": false
+    },
+    {
+      "description": "Invalid - colons (extended format)",
+      "data": "T23:20:30Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24",
+      "data": "T240000Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 99",
+      "data": "T990000Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60",
+      "data": "T006000Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 99",
+      "data": "T009900Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 61",
+      "data": "T000061Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 99",
+      "data": "T000099Z",
+      "valid": false
+    },
+    {
+      "description": "Valid - leap second",
+      "data": "T235960Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 00 (minimum)",
+      "data": "T000000Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum)",
+      "data": "T230000Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 00 (minimum)",
+      "data": "T000000Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 59 (maximum)",
+      "data": "T005900Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 00 (minimum)",
+      "data": "T000000Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 59",
+      "data": "T000059Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 60 (leap second)",
+      "data": "T000060Z",
+      "valid": true
+    },
+    {
+      "description": "Invalid - with time shift instead of Z",
+      "data": "T232030+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal seconds",
+      "data": "T232030.5Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}

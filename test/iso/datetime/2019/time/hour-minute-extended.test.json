@@ -1,0 +1,131 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/time/hour-minute-extended.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 2320,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - 23:20 without T",
+      "data": "23:20",
+      "valid": true
+    },
+    {
+      "description": "Valid - T23:20 with T",
+      "data": "T23:20",
+      "valid": true
+    },
+    {
+      "description": "Valid - midnight 00:00",
+      "data": "00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - T23:59",
+      "data": "T23:59",
+      "valid": true
+    },
+    {
+      "description": "Valid - noon 12:00",
+      "data": "12:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - T01:01",
+      "data": "T01:01",
+      "valid": true
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "t23:20",
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format (no colons)",
+      "data": "T2320",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too few digits",
+      "data": "23:2",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too many digits (includes seconds)",
+      "data": "23:20:50",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24",
+      "data": "24:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 99",
+      "data": "99:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60",
+      "data": "00:60",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 99",
+      "data": "00:99",
+      "valid": false
+    },
+    {
+      "description": "Valid - hour 00 (minimum)",
+      "data": "00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum)",
+      "data": "23:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 00 (minimum)",
+      "data": "00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 59 (maximum)",
+      "data": "00:59",
+      "valid": true
+    },
+    {
+      "description": "Invalid - with Z designator",
+      "data": "23:20Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with time shift",
+      "data": "23:20+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal minutes",
+      "data": "23:20.5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing colon",
+      "data": "2320",
+      "valid": false
+    }
+  ]
+}
