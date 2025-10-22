@@ -2,7 +2,6 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 8601-1:2019 Duration (Designator Format)",
   "description": "A duration in designator format P[n]Y[n]M[n]DT[n]H[n]M[n]S (§5.5.2.2, §5.5.2.3)",
-  "$comment": "https://www.iso.org/standard/70907.html",
   "examples": [
     "P3Y6M4DT12H30M5S",
     "P1Y",
@@ -13,6 +12,7 @@
     "PT0.5H"
   ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [ "https://www.iso.org/standard/70907.html" ],
   "type": "string",
   "allOf": [
     {
