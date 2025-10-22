@@ -1,0 +1,471 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/interval/start-end-calendar-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 19850412232050,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - 12 April 1985 to 25 June 1985",
+      "data": "19850412T232050/19850625T103000",
+      "valid": true
+    },
+    {
+      "description": "Valid - 1 January 2000 to 31 December 2000",
+      "data": "20000101T000000/20001231T235959",
+      "valid": true
+    },
+    {
+      "description": "Valid - same day interval",
+      "data": "20230101T120000/20230101T180000",
+      "valid": true
+    },
+    {
+      "description": "Valid - cross year boundary",
+      "data": "20221231T230000/20230101T010000",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 January to 28 February",
+      "data": "20230131T000000/20230228T235959",
+      "valid": true
+    },
+    {
+      "description": "Valid - leap year February 29",
+      "data": "20200228T120000/20200229T120000",
+      "valid": true
+    },
+    {
+      "description": "Valid - with leap second (60 seconds)",
+      "data": "19850412T235960/19850413T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - midnight to midnight",
+      "data": "20230101T000000/20230102T000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 May to 30 June",
+      "data": "20230531T120000/20230630T120000",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 August to 30 September",
+      "data": "20230831T120000/20230930T120000",
+      "valid": true
+    },
+    {
+      "description": "Valid - 31 October to 30 November",
+      "data": "20231031T120000/20231130T120000",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing separator slash",
+      "data": "19850412T23205019850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extended format (contains hyphens)",
+      "data": "1985-04-12T23:20:50/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed formats (basic start, extended end)",
+      "data": "19850412T232050/1985-06-25T10:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed formats (extended start, basic end)",
+      "data": "1985-04-12T23:20:50/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing end datetime",
+      "data": "19850412T232050/",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing start datetime",
+      "data": "/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - only separator",
+      "data": "/",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - spaces around separator",
+      "data": "19850412T232050 / 19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start month 00",
+      "data": "19850012T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start month 13",
+      "data": "19851312T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end month 00",
+      "data": "19850412T232050/19850025T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end month 13",
+      "data": "19850412T232050/19851325T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start day 00",
+      "data": "19850400T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start day 32",
+      "data": "19850432T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end day 00",
+      "data": "19850412T232050/19850600T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end day 32",
+      "data": "19850412T232050/19850632T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start 31 April",
+      "data": "19850431T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start 31 June",
+      "data": "19850631T232050/19850731T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start 31 September",
+      "data": "19850931T232050/19851031T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start 31 November",
+      "data": "19851131T232050/19851231T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 31 April",
+      "data": "19850401T232050/19850431T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 31 June",
+      "data": "19850601T232050/19850631T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 31 September",
+      "data": "19850901T232050/19850931T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 31 November",
+      "data": "19851101T232050/19851131T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start 30 February",
+      "data": "20230230T120000/20230331T120000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end 30 February",
+      "data": "20230131T120000/20230230T120000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start hour 24",
+      "data": "19850412T242050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start hour 25",
+      "data": "19850412T252050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end hour 24",
+      "data": "19850412T232050/19850625T243000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start minute 60",
+      "data": "19850412T236050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end minute 60",
+      "data": "19850412T232050/19850625T106000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start second 61",
+      "data": "19850412T232061/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end second 61",
+      "data": "19850412T232050/19850625T103061",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing T separator in start",
+      "data": "19850412232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing T separator in end",
+      "data": "19850412T232050/19850625103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t in start",
+      "data": "19850412t232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t in end",
+      "data": "19850412T232050/19850625t103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - duration instead of end datetime",
+      "data": "19850412T232050/P1Y2M15DT12H30M0S",
+      "valid": false
+    },
+    {
+      "description": "Invalid - duration instead of start datetime",
+      "data": "P1Y2M15DT12H30M0S/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too few digits in start year",
+      "data": "985412T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too many digits in start year",
+      "data": "198504412T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letters in start date",
+      "data": "ABCD0412T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letters in end date",
+      "data": "19850412T232050/ABCD0625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letters in start time",
+      "data": "19850412TABC050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letters in end time",
+      "data": "19850412T232050/19850625TABC000",
+      "valid": false
+    },
+    {
+      "description": "Valid - 29 February (leap year validation is consumer responsibility)",
+      "data": "20230229T120000/20230331T120000",
+      "valid": true
+    },
+    {
+      "description": "Valid - both start and end with 29 February",
+      "data": "20230229T000000/20240229T235959",
+      "valid": true
+    },
+    {
+      "description": "Invalid - double slash separator",
+      "data": "19850412T232050//19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - backslash separator",
+      "data": "19850412T232050\\19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Valid - reversed order (end before start is syntactically valid per ISO 8601)",
+      "data": "19850625T103000/19850412T232050",
+      "valid": true
+    },
+    {
+      "description": "Invalid - start hour 99",
+      "data": "19850412T992050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end hour 99",
+      "data": "19850412T232050/19850625T993000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start minute 99",
+      "data": "19850412T239950/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end minute 99",
+      "data": "19850412T232050/19850625T109900",
+      "valid": false
+    },
+    {
+      "description": "Invalid - start second 99",
+      "data": "19850412T232099/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - end second 99",
+      "data": "19850412T232050/19850625T103099",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start year",
+      "data": "I9850412T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end year",
+      "data": "19850412T232050/I9850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start month",
+      "data": "1985O412T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end month",
+      "data": "19850412T232050/1985O625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start day",
+      "data": "198504I2T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end day",
+      "data": "19850412T232050/198506I5T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start hour",
+      "data": "19850412TI32050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end hour",
+      "data": "19850412T232050/19850625TI03000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start minute",
+      "data": "19850412T23I050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end minute",
+      "data": "19850412T232050/19850625T10I000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in start second",
+      "data": "19850412T2320I0/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in end second",
+      "data": "19850412T232050/19850625T1030I0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too short start",
+      "data": "19850412T23205/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too long start",
+      "data": "19850412T2320500/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too short end",
+      "data": "19850412T232050/19850625T10300",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too long end",
+      "data": "19850412T232050/19850625T1030000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra characters at beginning",
+      "data": "X19850412T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extra characters at end",
+      "data": "19850412T232050/19850625T103000X",
+      "valid": false
+    },
+    {
+      "description": "Invalid - spaces in start datetime",
+      "data": "1985 04 12T23 20 50/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - spaces in end datetime",
+      "data": "19850412T232050/1985 06 25T10 30 00",
+      "valid": false
+    }
+  ]
+}
