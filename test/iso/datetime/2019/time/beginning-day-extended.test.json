@@ -1,0 +1,76 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/time/beginning-day-extended.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 0,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - 00:00:00 without T",
+      "data": "00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - T00:00:00 with T",
+      "data": "T00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "t00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - any non-zero hour",
+      "data": "01:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - any non-zero minute",
+      "data": "00:01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - any non-zero second",
+      "data": "00:00:01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format (no colons)",
+      "data": "T000000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 000000 without colons",
+      "data": "000000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too few digits",
+      "data": "00:00:0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too many digits",
+      "data": "00:00:000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/time/decimal-second-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 232030,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - decimal second with comma",
+      "data": "T232030,5",
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal second with period",
+      "data": "T232030.5",
+      "valid": true
+    },
+    {
+      "description": "Valid - midnight with decimal",
+      "data": "T000000,0",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple decimal digits with comma",
+      "data": "T235959,999",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple decimal digits with period",
+      "data": "T120000.123456",
+      "valid": true
+    },
+    {
+      "description": "Valid - single decimal digit",
+      "data": "T120000,1",
+      "valid": true
+    },
+    {
+      "description": "Valid - many decimal digits",
+      "data": "T120000.123456789",
+      "valid": true
+    },
+    {
+      "description": "Invalid - no decimal part",
+      "data": "T232030",
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal sign without digits",
+      "data": "T232030,",
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal sign without digits (period)",
+      "data": "T232030.",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing T designator",
+      "data": "232030,5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "t232030,5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - colons (extended format)",
+      "data": "T23:20:30,5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24",
+      "data": "T240000,0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 99",
+      "data": "T990000,0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60",
+      "data": "T006000,0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 99",
+      "data": "T009900,0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 61",
+      "data": "T000061,0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 99",
+      "data": "T000099,0",
+      "valid": false
+    },
+    {
+      "description": "Valid - leap second with decimal",
+      "data": "T235960,5",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 00 (minimum)",
+      "data": "T000000,0",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum)",
+      "data": "T230000,0",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 00 (minimum)",
+      "data": "T000000,0",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 59 (maximum)",
+      "data": "T005900,0",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 00 (minimum)",
+      "data": "T000000,0",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 59",
+      "data": "T000059,0",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 60 (leap second)",
+      "data": "T000060,0",
+      "valid": true
+    },
+    {
+      "description": "Invalid - both comma and period",
+      "data": "T232030,5.5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with Z designator",
+      "data": "T232030,5Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with time shift",
+      "data": "T232030,5+0100",
+      "valid": false
+    }
+  ]
+}

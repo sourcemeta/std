@@ -1,0 +1,181 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/time/local-day-shift-extended.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 152746,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - time with hour-minute shift, no T",
+      "data": "15:27:46+01:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with hour-minute shift and T",
+      "data": "T15:27:46-05:30",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with Z, no T",
+      "data": "15:27:46Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with hour-only shift and T",
+      "data": "T15:27:46+01",
+      "valid": true
+    },
+    {
+      "description": "Valid - midnight with zero shift",
+      "data": "00:00:00+00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - leap second with negative shift",
+      "data": "T23:59:60-12:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with Z and T",
+      "data": "T15:27:46Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with hour-only shift, no T",
+      "data": "12:00:00+05",
+      "valid": true
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "t15:27:46+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase z",
+      "data": "15:27:46z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing shift",
+      "data": "15:27:46",
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format time (no colons in time)",
+      "data": "T152746+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format shift (no colons in shift)",
+      "data": "15:27:46+0100",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24",
+      "data": "24:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 99",
+      "data": "99:00:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60",
+      "data": "00:60:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 99",
+      "data": "00:99:00+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 61",
+      "data": "00:00:61+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 99",
+      "data": "00:00:99+01:00",
+      "valid": false
+    },
+    {
+      "description": "Valid - hour 00 (minimum)",
+      "data": "00:00:00Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum)",
+      "data": "23:00:00Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 00 (minimum)",
+      "data": "00:00:00Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - minute 59 (maximum)",
+      "data": "00:59:00Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 00 (minimum)",
+      "data": "00:00:00Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 59",
+      "data": "00:00:59Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - second 60 (leap second)",
+      "data": "00:00:60Z",
+      "valid": true
+    },
+    {
+      "description": "Invalid - shift hour 24",
+      "data": "12:00:00+24:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - shift minute 60",
+      "data": "12:00:00+00:60",
+      "valid": false
+    },
+    {
+      "description": "Valid - maximum positive shift",
+      "data": "12:00:00+14:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative shift",
+      "data": "12:00:00-05:00",
+      "valid": true
+    },
+    {
+      "description": "Invalid - partial time (hour-minute only)",
+      "data": "15:27+01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal seconds",
+      "data": "15:27:46.5+01:00",
+      "valid": false
+    }
+  ]
+}

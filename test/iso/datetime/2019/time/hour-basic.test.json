@@ -1,0 +1,106 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/time/hour-basic.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 23,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - T23",
+      "data": "T23",
+      "valid": true
+    },
+    {
+      "description": "Valid - midnight T00",
+      "data": "T00",
+      "valid": true
+    },
+    {
+      "description": "Valid - noon T12",
+      "data": "T12",
+      "valid": true
+    },
+    {
+      "description": "Valid - T01",
+      "data": "T01",
+      "valid": true
+    },
+    {
+      "description": "Valid - T15",
+      "data": "T15",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing T designator",
+      "data": "23",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "t23",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too few digits",
+      "data": "T2",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too many digits (includes minutes)",
+      "data": "T2320",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 24",
+      "data": "T24",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hour 99",
+      "data": "T99",
+      "valid": false
+    },
+    {
+      "description": "Valid - hour 00 (minimum)",
+      "data": "T00",
+      "valid": true
+    },
+    {
+      "description": "Valid - hour 23 (maximum)",
+      "data": "T23",
+      "valid": true
+    },
+    {
+      "description": "Invalid - with Z designator",
+      "data": "T23Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with time shift",
+      "data": "T23+01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal hour",
+      "data": "T23.5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with colon",
+      "data": "T2:3",
+      "valid": false
+    }
+  ]
+}
