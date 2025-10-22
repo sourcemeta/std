@@ -1,0 +1,101 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/datetime/2019/date-week-expanded-extended.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 1985155,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - Friday (day 5) of week 15, 1985 with positive sign",
+      "data": "+001985-W15-5",
+      "valid": true
+    },
+    {
+      "description": "Valid - Monday (day 1) of week 1, year 1 BCE with negative sign",
+      "data": "-000001-W01-1",
+      "valid": true
+    },
+    {
+      "description": "Valid - Sunday (day 7) of week 53, year 999999 with positive sign",
+      "data": "+999999-W53-7",
+      "valid": true
+    },
+    {
+      "description": "Valid - Monday (day 1) of week 1, year 0 with positive sign",
+      "data": "+000000-W01-1",
+      "valid": true
+    },
+    {
+      "description": "Valid - Sunday (day 7) of week 52, year 10000 BCE with negative sign",
+      "data": "-010000-W52-7",
+      "valid": true
+    },
+    {
+      "description": "Invalid - week 00",
+      "data": "+001985-W00-5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - week 54",
+      "data": "+001985-W54-5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 0",
+      "data": "+001985-W15-0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 8",
+      "data": "+001985-W15-8",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing sign",
+      "data": "001985-W15-5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing W designator",
+      "data": "+001985-15-5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase w",
+      "data": "+001985-w15-5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format (no hyphens)",
+      "data": "+001985W155",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing first hyphen",
+      "data": "+001985W15-5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing second hyphen",
+      "data": "+001985-W155",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}

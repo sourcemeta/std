@@ -1,0 +1,76 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/datetime/2019/date-calendar-year.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 1985,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - year 1985",
+      "data": "1985",
+      "valid": true
+    },
+    {
+      "description": "Valid - year 2000",
+      "data": "2000",
+      "valid": true
+    },
+    {
+      "description": "Valid - year 2023",
+      "data": "2023",
+      "valid": true
+    },
+    {
+      "description": "Valid - year 0000",
+      "data": "0000",
+      "valid": true
+    },
+    {
+      "description": "Valid - year 9999",
+      "data": "9999",
+      "valid": true
+    },
+    {
+      "description": "Invalid - three digits",
+      "data": "198",
+      "valid": false
+    },
+    {
+      "description": "Invalid - five digits",
+      "data": "19850",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with month component",
+      "data": "1985-04",
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative sign (requires expanded format)",
+      "data": "-1985",
+      "valid": false
+    },
+    {
+      "description": "Invalid - plus sign (requires expanded format)",
+      "data": "+1985",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}

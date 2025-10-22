@@ -1,0 +1,76 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/datetime/2019/date-calendar-decade.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 198,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - decade 198 (1980s)",
+      "data": "198",
+      "valid": true
+    },
+    {
+      "description": "Valid - decade 200 (2000s)",
+      "data": "200",
+      "valid": true
+    },
+    {
+      "description": "Valid - decade 202 (2020s)",
+      "data": "202",
+      "valid": true
+    },
+    {
+      "description": "Valid - decade 000",
+      "data": "000",
+      "valid": true
+    },
+    {
+      "description": "Valid - decade 999",
+      "data": "999",
+      "valid": true
+    },
+    {
+      "description": "Invalid - two digits",
+      "data": "19",
+      "valid": false
+    },
+    {
+      "description": "Invalid - four digits",
+      "data": "1985",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with hyphen",
+      "data": "198-",
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative sign (requires expanded format)",
+      "data": "-198",
+      "valid": false
+    },
+    {
+      "description": "Invalid - plus sign (requires expanded format)",
+      "data": "+198",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}

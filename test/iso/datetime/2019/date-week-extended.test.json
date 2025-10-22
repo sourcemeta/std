@@ -1,0 +1,126 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/datetime/2019/date-week-extended.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 1985155,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - Friday of week 15, 1985 (day 5)",
+      "data": "1985-W15-5",
+      "valid": true
+    },
+    {
+      "description": "Valid - Monday of week 1, 2000 (day 1)",
+      "data": "2000-W01-1",
+      "valid": true
+    },
+    {
+      "description": "Valid - Sunday of week 52, 2023 (day 7)",
+      "data": "2023-W52-7",
+      "valid": true
+    },
+    {
+      "description": "Valid - Monday of week 1, year 0000 (day 1)",
+      "data": "0000-W01-1",
+      "valid": true
+    },
+    {
+      "description": "Valid - Sunday of week 53, year 9999 (day 7)",
+      "data": "9999-W53-7",
+      "valid": true
+    },
+    {
+      "description": "Invalid - week 00",
+      "data": "1985-W00-5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - week 54",
+      "data": "1985-W54-5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 0",
+      "data": "1985-W15-0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 8",
+      "data": "1985-W15-8",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing W designator",
+      "data": "1985-15-5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase w",
+      "data": "1985-w15-5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format (no hyphens)",
+      "data": "1985W155",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing first hyphen",
+      "data": "1985W15-5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing second hyphen",
+      "data": "1985-W155",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Valid - Week 53 day 1 (years with 53 weeks exist)",
+      "data": "2020-W53-1",
+      "valid": true
+    },
+    {
+      "description": "Valid - Week 53 day 7",
+      "data": "2015-W53-7",
+      "valid": true
+    },
+    {
+      "description": "Invalid - Week 54 day 1",
+      "data": "2023-W54-1",
+      "valid": false
+    },
+    {
+      "description": "Invalid - Week 55 day 1",
+      "data": "2023-W55-1",
+      "valid": false
+    },
+    {
+      "description": "Invalid - Week 99 day 1",
+      "data": "2023-W99-1",
+      "valid": false
+    },
+    {
+      "description": "Invalid - Week 01 day 9",
+      "data": "2023-W01-9",
+      "valid": false
+    }
+  ]
+}
