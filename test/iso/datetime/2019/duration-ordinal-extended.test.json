@@ -261,6 +261,46 @@
       "description": "Invalid - second without leading zero (single digit)",
       "data": "P0000-001T00:00:1",
       "valid": false
+    },
+    {
+      "description": "Invalid - day 000",
+      "data": "P0001-000T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 367",
+      "data": "P0001-367T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 400",
+      "data": "P0001-400T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 500",
+      "data": "P0001-500T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 999",
+      "data": "P0001-999T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Valid - day 366 (leap year validation is consumer responsibility)",
+      "data": "P0001-366T00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 001",
+      "data": "P0001-001T00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 365",
+      "data": "P0001-365T00:00:00",
+      "valid": true
     }
   ]
 }

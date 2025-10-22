@@ -281,6 +281,71 @@
       "description": "Invalid - second without leading zero (single digit)",
       "data": "P0000-01-01T00:00:1",
       "valid": false
+    },
+    {
+      "description": "Invalid - month 00",
+      "data": "P0001-00-01T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - month 13",
+      "data": "P0001-13-01T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 00",
+      "data": "P0001-01-00T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 32",
+      "data": "P0001-01-32T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - February 30",
+      "data": "P0001-02-30T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - February 31",
+      "data": "P0001-02-31T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - April 31",
+      "data": "P0001-04-31T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - June 31",
+      "data": "P0001-06-31T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - September 31",
+      "data": "P0001-09-31T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - November 31",
+      "data": "P0001-11-31T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Valid - February 29 (leap year validation is consumer responsibility)",
+      "data": "P0001-02-29T00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - April 30",
+      "data": "P0001-04-30T00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - January 31",
+      "data": "P0001-01-31T00:00:00",
+      "valid": true
     }
   ]
 }
