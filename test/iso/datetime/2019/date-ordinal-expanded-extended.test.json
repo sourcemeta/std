@@ -1,0 +1,116 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/datetime/2019/date-ordinal-expanded-extended.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 1985102,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - day 102 of 1985 with positive sign",
+      "data": "+001985-102",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 1 of year 1 BCE with negative sign",
+      "data": "-000001-001",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 366 of year 999999 with positive sign",
+      "data": "+999999-366",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 1 of year 0 with positive sign",
+      "data": "+000000-001",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 365 of year 10000 BCE with negative sign",
+      "data": "-010000-365",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 001 (first day)",
+      "data": "+001985-001",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 200",
+      "data": "+001985-200",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 299",
+      "data": "+001985-299",
+      "valid": true
+    },
+    {
+      "description": "Invalid - day 000",
+      "data": "+001985-000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 367",
+      "data": "+001985-367",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing sign",
+      "data": "001985-102",
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format (no hyphen)",
+      "data": "+001985102",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Valid - 366th day of leap year 2004",
+      "data": "+002004-366",
+      "valid": true
+    },
+    {
+      "description": "Valid - 365th day of non-leap year 2100",
+      "data": "+002100-365",
+      "valid": true
+    },
+    {
+      "description": "Invalid - Day 368",
+      "data": "+002023-368",
+      "valid": false
+    },
+    {
+      "description": "Invalid - Day 400",
+      "data": "+002023-400",
+      "valid": false
+    },
+    {
+      "description": "Invalid - Day 500 with negative year",
+      "data": "-002023-500",
+      "valid": false
+    },
+    {
+      "description": "Invalid - Day 999",
+      "data": "+002023-999",
+      "valid": false
+    }
+  ]
+}

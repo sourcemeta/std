@@ -1,0 +1,71 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/datetime/2019/date-calendar-expanded-year.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 1985,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - year 1985 with positive sign",
+      "data": "+001985",
+      "valid": true
+    },
+    {
+      "description": "Valid - year 1 BCE with negative sign",
+      "data": "-000001",
+      "valid": true
+    },
+    {
+      "description": "Valid - year 999999 with positive sign",
+      "data": "+999999",
+      "valid": true
+    },
+    {
+      "description": "Valid - year 0 with positive sign",
+      "data": "+000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - year 10000 BCE with negative sign",
+      "data": "-010000",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing sign",
+      "data": "001985",
+      "valid": false
+    },
+    {
+      "description": "Invalid - five digits",
+      "data": "+00198",
+      "valid": false
+    },
+    {
+      "description": "Invalid - seven digits",
+      "data": "+0019850",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with month component",
+      "data": "+001985-04",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}
