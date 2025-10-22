@@ -1,0 +1,116 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/datetime/2019/duration-weeks.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 10,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - 10 weeks",
+      "data": "P10W",
+      "valid": true
+    },
+    {
+      "description": "Valid - 1 week",
+      "data": "P1W",
+      "valid": true
+    },
+    {
+      "description": "Valid - 52 weeks",
+      "data": "P52W",
+      "valid": true
+    },
+    {
+      "description": "Valid - 0 weeks",
+      "data": "P0W",
+      "valid": true
+    },
+    {
+      "description": "Valid - 100 weeks",
+      "data": "P100W",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing P prefix",
+      "data": "10W",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase p",
+      "data": "p10W",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase w",
+      "data": "P10w",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - only P",
+      "data": "P",
+      "valid": false
+    },
+    {
+      "description": "Invalid - only PW",
+      "data": "PW",
+      "valid": false
+    },
+    {
+      "description": "Valid - decimal weeks",
+      "data": "P1.5W",
+      "valid": true
+    },
+    {
+      "description": "Invalid - spaces in duration",
+      "data": "P 10 W",
+      "valid": false
+    },
+    {
+      "description": "Invalid - additional characters",
+      "data": "P10WD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - weeks mixed with days (ISO 8601 discourages mixing)",
+      "data": "P1W2D",
+      "valid": false
+    },
+    {
+      "description": "Invalid - weeks mixed with years",
+      "data": "P1Y2W",
+      "valid": false
+    },
+    {
+      "description": "Invalid - weeks mixed with time",
+      "data": "P1WT1H",
+      "valid": false
+    }
+  ]
+}

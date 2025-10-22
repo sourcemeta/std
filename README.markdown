@@ -48,6 +48,7 @@ expressed as JSON Schema definitions.
 | IETF | [RFC 8141](https://www.rfc-editor.org/rfc/rfc8141) | Uniform Resource Names (URNs) |
 | IETF | [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110) | HTTP Semantics |
 | ISO | [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) | Codes for the representation of currencies and funds |
+| ISO | [ISO 8601-1:2019](https://www.iso.org/standard/70907.html) | Date and time — Representations for information interchange — Part 1: Basic rules |
 | ISO | [ISO 80000-1:2022](https://www.iso.org/standard/76921.html) | Quantities and units — Part 1: General |
 | ISO/IEC | [ISO/IEC 2382:2015](https://www.iso.org/standard/63598.html) | Information technology — Vocabulary |
 | JSON-RPC | [JSON-RPC 2.0](https://www.jsonrpc.org/specification) | JSON-RPC 2.0 Specification |
