@@ -1,0 +1,131 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/language/2023/set-5.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - Afro-Asiatic languages",
+      "data": "afa",
+      "valid": true
+    },
+    {
+      "description": "Valid - Algonquian languages",
+      "data": "alg",
+      "valid": true
+    },
+    {
+      "description": "Valid - Apache languages",
+      "data": "apa",
+      "valid": true
+    },
+    {
+      "description": "Valid - Artificial languages",
+      "data": "art",
+      "valid": true
+    },
+    {
+      "description": "Valid - Athapascan languages",
+      "data": "ath",
+      "valid": true
+    },
+    {
+      "description": "Valid - Baltic languages",
+      "data": "bat",
+      "valid": true
+    },
+    {
+      "description": "Valid - Berber languages",
+      "data": "ber",
+      "valid": true
+    },
+    {
+      "description": "Valid - Celtic languages",
+      "data": "cel",
+      "valid": true
+    },
+    {
+      "description": "Valid - Germanic languages",
+      "data": "gem",
+      "valid": true
+    },
+    {
+      "description": "Valid - Slavic languages",
+      "data": "sla",
+      "valid": true
+    },
+    {
+      "description": "Invalid - uppercase",
+      "data": "AFA",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed case",
+      "data": "Afa",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too short (2 letters)",
+      "data": "af",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too long",
+      "data": "afaa",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-existent code",
+      "data": "xyz",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains numbers",
+      "data": "af1",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains special characters",
+      "data": "af-",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - spaces",
+      "data": "a f",
+      "valid": false
+    },
+    {
+      "description": "Invalid - individual language code (not language family)",
+      "data": "eng",
+      "valid": false
+    }
+  ]
+}

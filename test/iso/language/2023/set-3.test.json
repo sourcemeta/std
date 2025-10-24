@@ -1,0 +1,126 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/language/2023/set-3.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - English",
+      "data": "eng",
+      "valid": true
+    },
+    {
+      "description": "Valid - Spanish",
+      "data": "spa",
+      "valid": true
+    },
+    {
+      "description": "Valid - Afar",
+      "data": "aar",
+      "valid": true
+    },
+    {
+      "description": "Valid - Ghotuo (no Set 1 or Set 2 code)",
+      "data": "aaa",
+      "valid": true
+    },
+    {
+      "description": "Valid - Alumu-Tesu (no Set 1 or Set 2 code)",
+      "data": "aab",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic (macrolanguage)",
+      "data": "ara",
+      "valid": true
+    },
+    {
+      "description": "Valid - Zulu",
+      "data": "zul",
+      "valid": true
+    },
+    {
+      "description": "Valid - Multiple languages (special code)",
+      "data": "mul",
+      "valid": true
+    },
+    {
+      "description": "Valid - Undetermined (special code)",
+      "data": "und",
+      "valid": true
+    },
+    {
+      "description": "Valid - No linguistic content (special code)",
+      "data": "zxx",
+      "valid": true
+    },
+    {
+      "description": "Invalid - uppercase",
+      "data": "ENG",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed case",
+      "data": "Eng",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too short (2 letters)",
+      "data": "en",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too long",
+      "data": "engl",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-existent code",
+      "data": "zzz",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains numbers",
+      "data": "en1",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains special characters",
+      "data": "en-",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - spaces",
+      "data": "e n",
+      "valid": false
+    }
+  ]
+}
