@@ -28,4 +28,5 @@ test:
 
 .PHONY: external
 include generate/iso/currency/include.mk
+include generate/fasb/us-gaap/include.mk
 external: $(EXTERNAL)
