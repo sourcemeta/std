@@ -1,0 +1,411 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/ieee/posix/2017/path-relative.json",
+  "tests": [
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Single filename",
+      "data": "file.txt",
+      "valid": true
+    },
+    {
+      "description": "Simple relative path",
+      "data": "home/user",
+      "valid": true
+    },
+    {
+      "description": "Deep relative path",
+      "data": "documents/projects/readme.md",
+      "valid": true
+    },
+    {
+      "description": "Path with file extension",
+      "data": "config/settings.conf",
+      "valid": true
+    },
+    {
+      "description": "Current directory reference",
+      "data": ".",
+      "valid": true
+    },
+    {
+      "description": "Parent directory reference",
+      "data": "..",
+      "valid": true
+    },
+    {
+      "description": "Path starting with dot",
+      "data": "./file.txt",
+      "valid": true
+    },
+    {
+      "description": "Path starting with dot-dot",
+      "data": "../file.txt",
+      "valid": true
+    },
+    {
+      "description": "Path with dot component",
+      "data": "home/./user",
+      "valid": true
+    },
+    {
+      "description": "Path with dot-dot component",
+      "data": "home/../etc",
+      "valid": true
+    },
+    {
+      "description": "Multiple dot components",
+      "data": "home/./user/./documents",
+      "valid": true
+    },
+    {
+      "description": "Multiple dot-dot components",
+      "data": "home/user/../../etc",
+      "valid": true
+    },
+    {
+      "description": "Path ending with dot",
+      "data": "home/user/.",
+      "valid": true
+    },
+    {
+      "description": "Path ending with dot-dot",
+      "data": "home/user/..",
+      "valid": true
+    },
+    {
+      "description": "Complex dot navigation",
+      "data": "../../../home/./user/../documents",
+      "valid": true
+    },
+    {
+      "description": "Multiple consecutive slashes",
+      "data": "home//user",
+      "valid": true
+    },
+    {
+      "description": "Many consecutive slashes",
+      "data": "home////user//documents",
+      "valid": true
+    },
+    {
+      "description": "Mixed single and multiple slashes",
+      "data": "usr//local/bin//program",
+      "valid": true
+    },
+    {
+      "description": "Trailing slash",
+      "data": "home/user/",
+      "valid": true
+    },
+    {
+      "description": "Multiple trailing slashes",
+      "data": "home/user///",
+      "valid": true
+    },
+    {
+      "description": "Dot with trailing slash",
+      "data": "./",
+      "valid": true
+    },
+    {
+      "description": "Dot-dot with trailing slash",
+      "data": "../",
+      "valid": true
+    },
+    {
+      "description": "All uppercase letters",
+      "data": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      "valid": true
+    },
+    {
+      "description": "All lowercase letters",
+      "data": "abcdefghijklmnopqrstuvwxyz",
+      "valid": true
+    },
+    {
+      "description": "All digits",
+      "data": "0123456789",
+      "valid": true
+    },
+    {
+      "description": "Period characters",
+      "data": "file.name.ext",
+      "valid": true
+    },
+    {
+      "description": "Underscore characters",
+      "data": "file_name_with_underscores",
+      "valid": true
+    },
+    {
+      "description": "Hyphen characters",
+      "data": "file-name-with-hyphens",
+      "valid": true
+    },
+    {
+      "description": "Mixed portable characters",
+      "data": "home/User_123/file-name.txt",
+      "valid": true
+    },
+    {
+      "description": "Single character filename",
+      "data": "a",
+      "valid": true
+    },
+    {
+      "description": "Single digit filename",
+      "data": "1",
+      "valid": true
+    },
+    {
+      "description": "Hidden file (starts with dot)",
+      "data": ".bashrc",
+      "valid": true
+    },
+    {
+      "description": "Hidden file in directory",
+      "data": "home/user/.bashrc",
+      "valid": true
+    },
+    {
+      "description": "Filename starting with hyphen",
+      "data": "-file",
+      "valid": true
+    },
+    {
+      "description": "Filename with only dots",
+      "data": "....",
+      "valid": true
+    },
+    {
+      "description": "Filename with only hyphens",
+      "data": "----",
+      "valid": true
+    },
+    {
+      "description": "Filename with only underscores",
+      "data": "____",
+      "valid": true
+    },
+    {
+      "description": "Space in filename",
+      "data": "my file",
+      "valid": true
+    },
+    {
+      "description": "Space in path",
+      "data": "home/my file/document",
+      "valid": true
+    },
+    {
+      "description": "Special characters",
+      "data": "file@#$%^&*()",
+      "valid": true
+    },
+    {
+      "description": "Unicode characters",
+      "data": "файл.txt",
+      "valid": true
+    },
+    {
+      "description": "High-bit characters",
+      "data": "filé.txt",
+      "valid": true
+    },
+    {
+      "description": "Backslash character",
+      "data": "file\\name",
+      "valid": true
+    },
+    {
+      "description": "Colon character",
+      "data": "file:name",
+      "valid": true
+    },
+    {
+      "description": "Semicolon character",
+      "data": "file;name",
+      "valid": true
+    },
+    {
+      "description": "Question mark character",
+      "data": "file?name",
+      "valid": true
+    },
+    {
+      "description": "Asterisk character",
+      "data": "file*name",
+      "valid": true
+    },
+    {
+      "description": "Brackets",
+      "data": "file[123]name",
+      "valid": true
+    },
+    {
+      "description": "Braces",
+      "data": "file{abc}name",
+      "valid": true
+    },
+    {
+      "description": "Pipe character",
+      "data": "file|name",
+      "valid": true
+    },
+    {
+      "description": "Tab character",
+      "data": "file\tname",
+      "valid": true
+    },
+    {
+      "description": "Newline character",
+      "data": "file\nname",
+      "valid": true
+    },
+    {
+      "description": "Deep nesting",
+      "data": "a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z",
+      "valid": true
+    },
+    {
+      "description": "Complex combination with dots",
+      "data": "home/./user/../user/./documents/../documents/file",
+      "valid": true
+    },
+    {
+      "description": "Common document path",
+      "data": "Documents/Projects/readme.md",
+      "valid": true
+    },
+    {
+      "description": "Configuration file path",
+      "data": ".config/app/settings.conf",
+      "valid": true
+    },
+    {
+      "description": "Source code path",
+      "data": "src/main/java/com/example/App.java",
+      "valid": true
+    },
+    {
+      "description": "Build output path",
+      "data": "build/dist/app-1.0.0.jar",
+      "valid": true
+    },
+    {
+      "description": "Temporary file",
+      "data": "tmp/temp_file_123.tmp",
+      "valid": true
+    },
+    {
+      "description": "Multiple extensions",
+      "data": "archive.tar.gz",
+      "valid": true
+    },
+    {
+      "description": "No extension",
+      "data": "README",
+      "valid": true
+    },
+    {
+      "description": "Numeric filename",
+      "data": "1234/5678",
+      "valid": true
+    },
+    {
+      "description": "Only slashes (empty components)",
+      "data": "///",
+      "valid": false
+    },
+    {
+      "description": "Empty components between names",
+      "data": "home///user",
+      "valid": true
+    },
+    {
+      "description": "Absolute path (starts with slash)",
+      "data": "/home/user",
+      "valid": false
+    },
+    {
+      "description": "Root directory",
+      "data": "/",
+      "valid": false
+    },
+    {
+      "description": "Absolute path with single file",
+      "data": "/file.txt",
+      "valid": false
+    },
+    {
+      "description": "Deep absolute path",
+      "data": "/usr/local/bin/program",
+      "valid": false
+    },
+    {
+      "description": "Two leading slashes",
+      "data": "//server/share",
+      "valid": false
+    },
+    {
+      "description": "Three leading slashes",
+      "data": "///home/user",
+      "valid": false
+    },
+    {
+      "description": "Many leading slashes",
+      "data": "/////////usr/bin",
+      "valid": false
+    },
+    {
+      "description": "Null byte in path",
+      "data": "home/user\u0000file",
+      "valid": false
+    },
+    {
+      "description": "Null byte at beginning",
+      "data": "\u0000home",
+      "valid": false
+    },
+    {
+      "description": "Null byte at end",
+      "data": "home/user\u0000",
+      "valid": false
+    },
+    {
+      "description": "Null byte in filename",
+      "data": "file\u0000.txt",
+      "valid": false
+    }
+  ]
+}

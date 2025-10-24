@@ -1,0 +1,66 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/currency/2025/alpha-precious-metal.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 959,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - Gold",
+      "data": "XAU",
+      "valid": true
+    },
+    {
+      "description": "Valid - Silver",
+      "data": "XAG",
+      "valid": true
+    },
+    {
+      "description": "Valid - Platinum",
+      "data": "XPT",
+      "valid": true
+    },
+    {
+      "description": "Valid - Palladium",
+      "data": "XPD",
+      "valid": true
+    },
+    {
+      "description": "Invalid - Regular currency USD",
+      "data": "USD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - Unknown code XXX",
+      "data": "XXX",
+      "valid": false
+    },
+    {
+      "description": "Invalid - Test code XTS",
+      "data": "XTS",
+      "valid": false
+    }
+  ]
+}

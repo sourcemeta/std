@@ -1,0 +1,141 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/currency/2025/alpha-currency.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 840,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - US Dollar",
+      "data": "USD",
+      "valid": true
+    },
+    {
+      "description": "Valid - Euro",
+      "data": "EUR",
+      "valid": true
+    },
+    {
+      "description": "Valid - Japanese Yen",
+      "data": "JPY",
+      "valid": true
+    },
+    {
+      "description": "Valid - British Pound",
+      "data": "GBP",
+      "valid": true
+    },
+    {
+      "description": "Valid - Swiss Franc",
+      "data": "CHF",
+      "valid": true
+    },
+    {
+      "description": "Valid - Canadian Dollar",
+      "data": "CAD",
+      "valid": true
+    },
+    {
+      "description": "Valid - Australian Dollar",
+      "data": "AUD",
+      "valid": true
+    },
+    {
+      "description": "Valid - Chinese Yuan",
+      "data": "CNY",
+      "valid": true
+    },
+    {
+      "description": "Valid - Indian Rupee",
+      "data": "INR",
+      "valid": true
+    },
+    {
+      "description": "Invalid - lowercase",
+      "data": "usd",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed case",
+      "data": "UsD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too short",
+      "data": "US",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too long",
+      "data": "USDD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-existent code",
+      "data": "XXY",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains numbers",
+      "data": "US1",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains special characters",
+      "data": "US$",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - spaces",
+      "data": "U S",
+      "valid": false
+    },
+    {
+      "description": "Invalid - fund code (Mvdol)",
+      "data": "BOV",
+      "valid": false
+    },
+    {
+      "description": "Invalid - fund code (Unidad de Fomento)",
+      "data": "CLF",
+      "valid": false
+    },
+    {
+      "description": "Invalid - fund code (Mexican UDI)",
+      "data": "MXV",
+      "valid": false
+    },
+    {
+      "description": "Invalid - fund code (WIR Euro)",
+      "data": "CHE",
+      "valid": false
+    }
+  ]
+}

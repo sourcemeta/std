@@ -112,7 +112,7 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 
     alpha_code_schema = build_base_schema()
     alpha_code_schema.update({
-        "title": f"ISO 4217 Alphabetic Currency, Fund, and Precious Metal Code{' (Historical)' if is_historical else ''}",
+        "title": f"ISO 4217:2015 Alphabetic Currency, Fund, and Precious Metal Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-letter alphabetic code including {'withdrawn ' if is_historical else ''}currencies, funds, and precious metals ({published_date})",
         "examples": alpha_code_examples,
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -122,7 +122,7 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 
     alpha_currency_schema = build_base_schema()
     alpha_currency_schema.update({
-        "title": f"ISO 4217 Alphabetic Currency Code{' (Historical)' if is_historical else ''}",
+        "title": f"ISO 4217:2015 Alphabetic Currency Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-letter alphabetic {'withdrawn ' if is_historical else ''}currency code, excluding funds and precious metals ({published_date})",
         "examples": sorted(currency_alpha_codes.keys())[:4],
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -141,7 +141,7 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 
     alpha_fund_schema = build_base_schema()
     alpha_fund_schema.update({
-        "title": f"ISO 4217 Alphabetic Fund Code{' (Historical)' if is_historical else ''}",
+        "title": f"ISO 4217:2015 Alphabetic Fund Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-letter alphabetic {'withdrawn ' if is_historical else ''}fund code ({published_date})",
         "examples": sorted(fund_alpha_codes.keys())[:4],
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -160,7 +160,7 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 
     alpha_precious_metal_schema = build_base_schema()
     alpha_precious_metal_schema.update({
-        "title": f"ISO 4217 Alphabetic Precious Metal Code{' (Historical)' if is_historical else ''}",
+        "title": f"ISO 4217:2015 Alphabetic Precious Metal Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-letter alphabetic code for {'withdrawn ' if is_historical else ''}precious metals ({published_date})",
         "examples": ["XAU", "XAG", "XPT", "XPD"],
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -192,7 +192,7 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 
     numeric_code_schema = build_base_schema()
     numeric_code_schema.update({
-        "title": f"ISO 4217 Numeric Currency, Fund, and Precious Metal Code{' (Historical)' if is_historical else ''}",
+        "title": f"ISO 4217:2015 Numeric Currency, Fund, and Precious Metal Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-digit numeric code including {'withdrawn ' if is_historical else ''}currencies, funds, and precious metals ({published_date})",
         "examples": numeric_code_examples,
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -202,7 +202,7 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 
     numeric_currency_schema = build_base_schema()
     numeric_currency_schema.update({
-        "title": f"ISO 4217 Numeric Currency Code{' (Historical)' if is_historical else ''}",
+        "title": f"ISO 4217:2015 Numeric Currency Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-digit numeric {'withdrawn ' if is_historical else ''}currency code, excluding funds and precious metals ({published_date})",
         "examples": sorted(currency_numeric_codes.keys())[:4],
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -221,7 +221,7 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 
     numeric_fund_schema = build_base_schema()
     numeric_fund_schema.update({
-        "title": f"ISO 4217 Numeric Fund Code{' (Historical)' if is_historical else ''}",
+        "title": f"ISO 4217:2015 Numeric Fund Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-digit numeric {'withdrawn ' if is_historical else ''}fund code ({published_date})",
         "examples": sorted(fund_numeric_codes.keys())[:4],
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -240,7 +240,7 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 
     numeric_precious_metal_schema = build_base_schema()
     numeric_precious_metal_schema.update({
-        "title": f"ISO 4217 Numeric Precious Metal Code{' (Historical)' if is_historical else ''}",
+        "title": f"ISO 4217:2015 Numeric Precious Metal Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-digit numeric code for {'withdrawn ' if is_historical else ''}precious metals ({published_date})",
         "examples": [959, 961, 962, 964],
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -272,7 +272,7 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
     if not is_historical:
         numeric_code_additional_schema = {
             "$schema": "https://json-schema.org/draft/2020-12/schema",
-            "title": "ISO 4217 Numeric Additional Currency Code",
+            "title": "ISO 4217:2015 Numeric Additional Currency Code",
             "description": "User-assigned numeric codes in the range 900-998",
             "examples": [900, 950, 998],
             "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -284,7 +284,7 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 
         alpha_unknown_schema = {
             "$schema": "https://json-schema.org/draft/2020-12/schema",
-            "title": "ISO 4217 Alphabetic Unknown Currency Code",
+            "title": "ISO 4217:2015 Alphabetic Unknown Currency Code",
             "description": "The alphabetic code for transactions where no currency is involved",
             "examples": ["XXX"],
             "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -294,7 +294,7 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 
         numeric_unknown_schema = {
             "$schema": "https://json-schema.org/draft/2020-12/schema",
-            "title": "ISO 4217 Numeric Unknown Currency Code",
+            "title": "ISO 4217:2015 Numeric Unknown Currency Code",
             "description": "The numeric code for transactions where no currency is involved",
             "examples": [999],
             "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -304,7 +304,7 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 
         alpha_test_schema = {
             "$schema": "https://json-schema.org/draft/2020-12/schema",
-            "title": "ISO 4217 Alphabetic Test Currency Code",
+            "title": "ISO 4217:2015 Alphabetic Test Currency Code",
             "description": "The alphabetic code specifically reserved for testing purposes",
             "examples": ["XTS"],
             "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -314,7 +314,7 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 
         numeric_test_schema = {
             "$schema": "https://json-schema.org/draft/2020-12/schema",
-            "title": "ISO 4217 Numeric Test Currency Code",
+            "title": "ISO 4217:2015 Numeric Test Currency Code",
             "description": "The numeric code specifically reserved for testing purposes",
             "examples": [963],
             "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -344,9 +344,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(os.path.dirname(os.path.dirname(script_dir)))
-    current_data_file = os.path.join(project_root, "build", "iso", "currency", "list-one.json")
-    historical_data_file = os.path.join(project_root, "build", "iso", "currency", "list-three.json")
-    output_dir = os.path.join(project_root, "schemas", "iso", "currency")
+    current_data_file = os.path.join(project_root, "external", "iso", "currency", "list-one.json")
+    historical_data_file = os.path.join(project_root, "external", "iso", "currency", "list-three.json")
+    output_dir = os.path.join(project_root, "schemas", "iso", "currency", "2025")
 
     # Generate current schemas
     if not os.path.exists(current_data_file):
