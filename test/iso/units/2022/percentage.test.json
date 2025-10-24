@@ -1,0 +1,171 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/units/2022/percentage.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "50",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - zero percent",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - one percent",
+      "data": 1,
+      "valid": true
+    },
+    {
+      "description": "Valid - fifty percent",
+      "data": 50,
+      "valid": true
+    },
+    {
+      "description": "Valid - ninety-nine percent",
+      "data": 99,
+      "valid": true
+    },
+    {
+      "description": "Valid - one hundred percent",
+      "data": 100,
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal 0.5 percent",
+      "data": 0.5,
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal 1.5 percent",
+      "data": 1.5,
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal 25.5 percent",
+      "data": 25.5,
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal 50.5 percent",
+      "data": 50.5,
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal 75.75 percent",
+      "data": 75.75,
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal 99.9 percent",
+      "data": 99.9,
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal 99.99 percent",
+      "data": 99.99,
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal 99.999 percent",
+      "data": 99.999,
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal 0.01 percent",
+      "data": 0.01,
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal 0.001 percent",
+      "data": 0.001,
+      "valid": true
+    },
+    {
+      "description": "Valid - integer zero (boundary)",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - integer one hundred (boundary)",
+      "data": 100,
+      "valid": true
+    },
+    {
+      "description": "Valid - float zero (boundary)",
+      "data": 0.0,
+      "valid": true
+    },
+    {
+      "description": "Valid - float one hundred (boundary)",
+      "data": 100.0,
+      "valid": true
+    },
+    {
+      "description": "Invalid - negative one",
+      "data": -1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative small number",
+      "data": -0.1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative large number",
+      "data": -50,
+      "valid": false
+    },
+    {
+      "description": "Invalid - one hundred and one",
+      "data": 101,
+      "valid": false
+    },
+    {
+      "description": "Invalid - over one hundred small",
+      "data": 100.1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - over one hundred large",
+      "data": 150,
+      "valid": false
+    },
+    {
+      "description": "Invalid - two hundred",
+      "data": 200,
+      "valid": false
+    },
+    {
+      "description": "Invalid - very large number",
+      "data": 1000,
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative decimal",
+      "data": -0.01,
+      "valid": false
+    }
+  ]
+}
