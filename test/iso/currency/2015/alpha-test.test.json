@@ -1,10 +1,10 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/iso/currency/2025/alpha-unknown.json",
+  "target": "../../../../schemas/iso/currency/2015/alpha-test.json",
   "tests": [
     {
       "description": "Invalid type - integer",
-      "data": 999,
+      "data": 963,
       "valid": false
     },
     {
@@ -28,8 +28,8 @@
       "valid": false
     },
     {
-      "description": "Valid - XXX (no currency)",
-      "data": "XXX",
+      "description": "Valid - XTS (test code)",
+      "data": "XTS",
       "valid": true
     },
     {
@@ -48,8 +48,13 @@
       "valid": false
     },
     {
-      "description": "Invalid - lowercase xxx",
-      "data": "xxx",
+      "description": "Invalid - unknown code (XXX)",
+      "data": "XXX",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase xts",
+      "data": "xts",
       "valid": false
     },
     {
@@ -59,7 +64,7 @@
     },
     {
       "description": "Invalid - non-existent code",
-      "data": "XXY",
+      "data": "XTT",
       "valid": false
     }
   ]

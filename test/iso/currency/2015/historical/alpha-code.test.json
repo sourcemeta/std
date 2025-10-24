@@ -1,10 +1,10 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/iso/currency/2025/alpha-precious-metal.json",
+  "target": "../../../../../schemas/iso/currency/2015/historical/alpha-code.json",
   "tests": [
     {
       "description": "Invalid type - integer",
-      "data": 959,
+      "data": 840,
       "valid": false
     },
     {
@@ -28,38 +28,38 @@
       "valid": false
     },
     {
-      "description": "Valid - Gold",
-      "data": "XAU",
+      "description": "Valid - Andorran Peseta",
+      "data": "ADP",
       "valid": true
     },
     {
-      "description": "Valid - Silver",
-      "data": "XAG",
+      "description": "Valid - Afghani",
+      "data": "AFA",
       "valid": true
     },
     {
-      "description": "Valid - Platinum",
-      "data": "XPT",
-      "valid": true
-    },
-    {
-      "description": "Valid - Palladium",
-      "data": "XPD",
-      "valid": true
-    },
-    {
-      "description": "Invalid - Regular currency USD",
+      "description": "Invalid - current currency (USD)",
       "data": "USD",
       "valid": false
     },
     {
-      "description": "Invalid - Unknown code XXX",
-      "data": "XXX",
+      "description": "Invalid - current currency (JPY)",
+      "data": "JPY",
       "valid": false
     },
     {
-      "description": "Invalid - Test code XTS",
-      "data": "XTS",
+      "description": "Invalid - lowercase",
+      "data": "adp",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-existent code",
+      "data": "XXY",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
       "valid": false
     }
   ]

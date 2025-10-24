@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../../schemas/iso/currency/2025/historical/numeric-currency.json",
+  "target": "../../../../../schemas/iso/currency/2015/historical/numeric-code.json",
   "tests": [
     {
       "description": "Invalid type - string",
@@ -38,11 +38,6 @@
       "valid": true
     },
     {
-      "description": "Valid - Andorran Peseta (20)",
-      "data": 20,
-      "valid": true
-    },
-    {
       "description": "Invalid - current currency (840 - USD)",
       "data": 840,
       "valid": false
@@ -60,11 +55,6 @@
     {
       "description": "Invalid - negative",
       "data": -1,
-      "valid": false
-    },
-    {
-      "description": "Invalid - decimal",
-      "data": 4.5,
       "valid": false
     }
   ]

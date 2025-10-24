@@ -1,10 +1,10 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/iso/currency/2025/alpha-test.json",
+  "target": "../../../../../schemas/iso/currency/2015/historical/numeric-currency.json",
   "tests": [
     {
-      "description": "Invalid type - integer",
-      "data": 963,
+      "description": "Invalid type - string",
+      "data": "840",
       "valid": false
     },
     {
@@ -28,43 +28,43 @@
       "valid": false
     },
     {
-      "description": "Valid - XTS (test code)",
-      "data": "XTS",
+      "description": "Valid - Afghani (4)",
+      "data": 4,
       "valid": true
     },
     {
-      "description": "Invalid - US Dollar",
-      "data": "USD",
+      "description": "Valid - Lek (8)",
+      "data": 8,
+      "valid": true
+    },
+    {
+      "description": "Valid - Andorran Peseta (20)",
+      "data": 20,
+      "valid": true
+    },
+    {
+      "description": "Invalid - current currency (840 - USD)",
+      "data": 840,
       "valid": false
     },
     {
-      "description": "Invalid - Euro",
-      "data": "EUR",
-      "valid": false
-    },
-    {
-      "description": "Invalid - fund code (Mvdol)",
-      "data": "BOV",
-      "valid": false
-    },
-    {
-      "description": "Invalid - unknown code (XXX)",
-      "data": "XXX",
-      "valid": false
-    },
-    {
-      "description": "Invalid - lowercase xts",
-      "data": "xts",
-      "valid": false
-    },
-    {
-      "description": "Invalid - empty string",
-      "data": "",
+      "description": "Invalid - current currency (392 - JPY)",
+      "data": 392,
       "valid": false
     },
     {
       "description": "Invalid - non-existent code",
-      "data": "XTT",
+      "data": 1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative",
+      "data": -1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal",
+      "data": 4.5,
       "valid": false
     }
   ]

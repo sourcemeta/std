@@ -1,10 +1,10 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/iso/currency/2025/numeric-test.json",
+  "target": "../../../../schemas/iso/currency/2015/alpha-precious-metal.json",
   "tests": [
     {
-      "description": "Invalid type - string",
-      "data": "963",
+      "description": "Invalid type - integer",
+      "data": 959,
       "valid": false
     },
     {
@@ -28,33 +28,38 @@
       "valid": false
     },
     {
-      "description": "Valid - 963 (test code)",
-      "data": 963,
+      "description": "Valid - Gold",
+      "data": "XAU",
       "valid": true
     },
     {
-      "description": "Invalid - US Dollar (840)",
-      "data": 840,
+      "description": "Valid - Silver",
+      "data": "XAG",
+      "valid": true
+    },
+    {
+      "description": "Valid - Platinum",
+      "data": "XPT",
+      "valid": true
+    },
+    {
+      "description": "Valid - Palladium",
+      "data": "XPD",
+      "valid": true
+    },
+    {
+      "description": "Invalid - Regular currency USD",
+      "data": "USD",
       "valid": false
     },
     {
-      "description": "Invalid - Euro (978)",
-      "data": 978,
+      "description": "Invalid - Unknown code XXX",
+      "data": "XXX",
       "valid": false
     },
     {
-      "description": "Invalid - fund code (984 - Mvdol)",
-      "data": 984,
-      "valid": false
-    },
-    {
-      "description": "Invalid - unknown code (999)",
-      "data": 999,
-      "valid": false
-    },
-    {
-      "description": "Invalid - non-existent code",
-      "data": 123,
+      "description": "Invalid - Test code XTS",
+      "data": "XTS",
       "valid": false
     }
   ]
