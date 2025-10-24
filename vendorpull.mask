@@ -4,6 +4,7 @@ generate
 meta
 scripts
 test
+vendor
 .editorconfig
 jsonschema.json
 Makefile

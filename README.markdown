@@ -47,7 +47,8 @@ expressed as JSON Schema definitions.
 | IETF | [RFC 7807](https://www.rfc-editor.org/rfc/rfc7807) | Problem Details for HTTP APIs |
 | IETF | [RFC 8141](https://www.rfc-editor.org/rfc/rfc8141) | Uniform Resource Names (URNs) |
 | IETF | [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110) | HTTP Semantics |
-| ISO | [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) | Codes for the representation of currencies and funds |
+| ISO | [ISO 3166-1:2020](https://www.iso.org/iso-3166-country-codes.html) | Codes for the representation of names of countries and their subdivisions — Part 1: Country codes |
+| ISO | [ISO 4217:2015](https://www.iso.org/iso-4217-currency-codes.html) | Codes for the representation of currencies and funds |
 | ISO | [ISO 639:2023](https://www.iso.org/iso-639-language-code) | Codes for the representation of names of languages |
 | ISO | [ISO 8601-1:2019](https://www.iso.org/standard/70907.html) | Date and time — Representations for information interchange — Part 1: Basic rules |
 | ISO | [ISO 80000-1:2022](https://www.iso.org/standard/76921.html) | Quantities and units — Part 1: General |

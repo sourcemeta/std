@@ -1,0 +1,136 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/country/2020/alpha-all.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 840,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - United States (alpha-2)",
+      "data": "US",
+      "valid": true
+    },
+    {
+      "description": "Valid - United States (alpha-3)",
+      "data": "USA",
+      "valid": true
+    },
+    {
+      "description": "Valid - United Kingdom (alpha-2)",
+      "data": "GB",
+      "valid": true
+    },
+    {
+      "description": "Valid - United Kingdom (alpha-3)",
+      "data": "GBR",
+      "valid": true
+    },
+    {
+      "description": "Valid - France (alpha-2)",
+      "data": "FR",
+      "valid": true
+    },
+    {
+      "description": "Valid - France (alpha-3)",
+      "data": "FRA",
+      "valid": true
+    },
+    {
+      "description": "Valid - Germany (alpha-2)",
+      "data": "DE",
+      "valid": true
+    },
+    {
+      "description": "Valid - Germany (alpha-3)",
+      "data": "DEU",
+      "valid": true
+    },
+    {
+      "description": "Valid - Japan (alpha-2)",
+      "data": "JP",
+      "valid": true
+    },
+    {
+      "description": "Valid - Japan (alpha-3)",
+      "data": "JPN",
+      "valid": true
+    },
+    {
+      "description": "Invalid - lowercase alpha-2",
+      "data": "us",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase alpha-3",
+      "data": "usa",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed case alpha-2",
+      "data": "Us",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed case alpha-3",
+      "data": "UsA",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too short",
+      "data": "U",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too long",
+      "data": "USAA",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-existent alpha-2",
+      "data": "XX",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-existent alpha-3",
+      "data": "XXX",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains numbers",
+      "data": "US1",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains special characters",
+      "data": "US$",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Gemfile
+Gemfile.lock
+LAST_UPDATED.txt
+README.md
+scrubber.rb
+slim-3/slim-3.csv
+slim-3/slim-3.xml
+slim-2/slim-2.csv
+slim-2/slim-2.xml
+all/all.csv
+all/all.xml

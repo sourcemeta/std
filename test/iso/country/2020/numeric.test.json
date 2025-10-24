@@ -1,0 +1,101 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/country/2020/numeric.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "840",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - United States (840)",
+      "data": 840,
+      "valid": true
+    },
+    {
+      "description": "Valid - United Kingdom (826)",
+      "data": 826,
+      "valid": true
+    },
+    {
+      "description": "Valid - France (250)",
+      "data": 250,
+      "valid": true
+    },
+    {
+      "description": "Valid - Germany (276)",
+      "data": 276,
+      "valid": true
+    },
+    {
+      "description": "Valid - Japan (392)",
+      "data": 392,
+      "valid": true
+    },
+    {
+      "description": "Valid - Canada (124)",
+      "data": 124,
+      "valid": true
+    },
+    {
+      "description": "Valid - Australia (036)",
+      "data": 36,
+      "valid": true
+    },
+    {
+      "description": "Valid - China (156)",
+      "data": 156,
+      "valid": true
+    },
+    {
+      "description": "Valid - India (356)",
+      "data": 356,
+      "valid": true
+    },
+    {
+      "description": "Valid - Afghanistan (004)",
+      "data": 4,
+      "valid": true
+    },
+    {
+      "description": "Invalid - non-existent code",
+      "data": 999,
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative number",
+      "data": -1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal",
+      "data": 840.5,
+      "valid": false
+    },
+    {
+      "description": "Invalid - zero",
+      "data": 0,
+      "valid": false
+    }
+  ]
+}
