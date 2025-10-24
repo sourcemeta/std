@@ -1,0 +1,421 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/language/tag-syntax.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - 2-letter language",
+      "data": "en",
+      "valid": true
+    },
+    {
+      "description": "Valid - 3-letter language",
+      "data": "eng",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-letter language (reserved)",
+      "data": "abcd",
+      "valid": true
+    },
+    {
+      "description": "Valid - 5-letter language",
+      "data": "abcde",
+      "valid": true
+    },
+    {
+      "description": "Valid - 8-letter language",
+      "data": "abcdefgh",
+      "valid": true
+    },
+    {
+      "description": "Invalid - 1-letter language",
+      "data": "e",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 9-letter language",
+      "data": "abcdefghi",
+      "valid": false
+    },
+    {
+      "description": "Valid - language + region (alpha-2)",
+      "data": "en-US",
+      "valid": true
+    },
+    {
+      "description": "Valid - language + region (alpha-2)",
+      "data": "fr-FR",
+      "valid": true
+    },
+    {
+      "description": "Valid - language + region (numeric)",
+      "data": "es-419",
+      "valid": true
+    },
+    {
+      "description": "Valid - language + region (numeric 001)",
+      "data": "en-001",
+      "valid": true
+    },
+    {
+      "description": "Invalid - region too short (1 digit)",
+      "data": "en-1",
+      "valid": false
+    },
+    {
+      "description": "Valid - 3 letters after language (extlang, not region)",
+      "data": "en-USA",
+      "valid": true
+    },
+    {
+      "description": "Valid - variant (digit + 3 alphanum, looks like 4-digit region)",
+      "data": "en-1234",
+      "valid": true
+    },
+    {
+      "description": "Valid - language + script",
+      "data": "sr-Latn",
+      "valid": true
+    },
+    {
+      "description": "Valid - language + script (Hans)",
+      "data": "zh-Hans",
+      "valid": true
+    },
+    {
+      "description": "Valid - language + script (Hant)",
+      "data": "zh-Hant",
+      "valid": true
+    },
+    {
+      "description": "Valid - script lowercase",
+      "data": "sr-latn",
+      "valid": true
+    },
+    {
+      "description": "Valid - script uppercase",
+      "data": "sr-LATN",
+      "valid": true
+    },
+    {
+      "description": "Valid - script mixed case",
+      "data": "sr-lATN",
+      "valid": true
+    },
+    {
+      "description": "Valid - 3 letters after language (extlang, not script)",
+      "data": "sr-Lat",
+      "valid": true
+    },
+    {
+      "description": "Valid - variant (5 chars, looks like script but too long for script pattern)",
+      "data": "sr-Latin",
+      "valid": true
+    },
+    {
+      "description": "Valid - language + script + region",
+      "data": "sr-Latn-RS",
+      "valid": true
+    },
+    {
+      "description": "Valid - language + script + region",
+      "data": "zh-Hans-CN",
+      "valid": true
+    },
+    {
+      "description": "Valid - language + script + region (numeric)",
+      "data": "zh-Hans-419",
+      "valid": true
+    },
+    {
+      "description": "Valid - extlang (1)",
+      "data": "zh-yue",
+      "valid": true
+    },
+    {
+      "description": "Valid - extlang (2)",
+      "data": "zh-yue-cmn",
+      "valid": true
+    },
+    {
+      "description": "Valid - extlang (3)",
+      "data": "zh-yue-cmn-hak",
+      "valid": true
+    },
+    {
+      "description": "Invalid - extlang (4)",
+      "data": "zh-yue-cmn-hak-abc",
+      "valid": false
+    },
+    {
+      "description": "Valid - extlang + script + region",
+      "data": "zh-cmn-Hans-CN",
+      "valid": true
+    },
+    {
+      "description": "Valid - variant (digit + 3 alphanum)",
+      "data": "de-CH-1996",
+      "valid": true
+    },
+    {
+      "description": "Valid - variant (5 alphanum)",
+      "data": "sl-nedis",
+      "valid": true
+    },
+    {
+      "description": "Valid - variant (8 alphanum)",
+      "data": "de-CH-abcdefgh",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4 letters after language (script)",
+      "data": "de-abcd",
+      "valid": true
+    },
+    {
+      "description": "Valid - extlang (3 chars, looks like short variant but matches extlang)",
+      "data": "de-abc",
+      "valid": true
+    },
+    {
+      "description": "Invalid - variant (9 alphanum)",
+      "data": "de-abcdefghi",
+      "valid": false
+    },
+    {
+      "description": "Valid - multiple variants",
+      "data": "de-Latn-DE-1996-x-foo",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension (u-)",
+      "data": "en-US-u-ca-gregory",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension (t-)",
+      "data": "en-US-t-en-latn",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension with multiple subtags",
+      "data": "en-US-u-ca-gregory-nu-latn",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple extensions",
+      "data": "en-US-u-ca-gregory-t-en-latn",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension singleton (digit)",
+      "data": "en-0-foo",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension singleton (letter a-w)",
+      "data": "en-a-foo",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension singleton (letter y-z)",
+      "data": "en-y-foo",
+      "valid": true
+    },
+    {
+      "description": "Invalid - extension singleton x (reserved for private use)",
+      "data": "en-x-extension",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extension subtag too short (1 char)",
+      "data": "en-u-a",
+      "valid": false
+    },
+    {
+      "description": "Invalid - extension subtag too long (9 chars)",
+      "data": "en-u-abcdefghi",
+      "valid": false
+    },
+    {
+      "description": "Valid - private use at end",
+      "data": "en-US-x-twain",
+      "valid": true
+    },
+    {
+      "description": "Valid - private use with multiple subtags",
+      "data": "en-x-foo-bar-baz",
+      "valid": true
+    },
+    {
+      "description": "Valid - private use standalone",
+      "data": "x-private",
+      "valid": true
+    },
+    {
+      "description": "Valid - private use standalone (multiple subtags)",
+      "data": "x-foo-bar-baz",
+      "valid": true
+    },
+    {
+      "description": "Invalid - private use subtag too long",
+      "data": "x-abcdefghi",
+      "valid": false
+    },
+    {
+      "description": "Invalid - private use subtag empty",
+      "data": "x-",
+      "valid": false
+    },
+    {
+      "description": "Valid - complex tag with all components",
+      "data": "zh-cmn-Hans-CN-1996-u-ca-buddhist-x-private",
+      "valid": true
+    },
+    {
+      "description": "Valid - grandfathered tag (irregular)",
+      "data": "en-GB-oed",
+      "valid": true
+    },
+    {
+      "description": "Valid - grandfathered tag (i-)",
+      "data": "i-klingon",
+      "valid": true
+    },
+    {
+      "description": "Valid - grandfathered tag (sgn-)",
+      "data": "sgn-BE-FR",
+      "valid": true
+    },
+    {
+      "description": "Valid - uppercase language",
+      "data": "EN",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed case language",
+      "data": "En",
+      "valid": true
+    },
+    {
+      "description": "Valid - lowercase region",
+      "data": "en-us",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed case region",
+      "data": "en-Us",
+      "valid": true
+    },
+    {
+      "description": "Invalid - underscore separator",
+      "data": "en_US",
+      "valid": false
+    },
+    {
+      "description": "Invalid - dot separator",
+      "data": "en.US",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space separator",
+      "data": "en US",
+      "valid": false
+    },
+    {
+      "description": "Invalid - double hyphen",
+      "data": "en--US",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading hyphen",
+      "data": "-en",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing hyphen",
+      "data": "en-",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Valid - 3-letter language + region",
+      "data": "eng-US",
+      "valid": true
+    },
+    {
+      "description": "Valid - 3-letter language + script + region",
+      "data": "eng-Latn-US",
+      "valid": true
+    },
+    {
+      "description": "Valid - script without region",
+      "data": "zh-Hant",
+      "valid": true
+    },
+    {
+      "description": "Valid - 2 letters (language code)",
+      "data": "US",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4 letters (language code)",
+      "data": "Latn",
+      "valid": true
+    },
+    {
+      "description": "Valid - variant digit-starting (0xxx)",
+      "data": "en-0abc",
+      "valid": true
+    },
+    {
+      "description": "Valid - variant digit-starting (9xxx)",
+      "data": "en-9xyz",
+      "valid": true
+    },
+    {
+      "description": "Invalid - variant starting with digit but only 3 chars total",
+      "data": "en-1ab",
+      "valid": false
+    },
+    {
+      "description": "Valid - extension with 2-char subtag",
+      "data": "en-u-ab",
+      "valid": true
+    },
+    {
+      "description": "Valid - extension with 8-char subtag",
+      "data": "en-u-abcdefgh",
+      "valid": true
+    }
+  ]
+}

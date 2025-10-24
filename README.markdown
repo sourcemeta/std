@@ -42,6 +42,7 @@ expressed as JSON Schema definitions.
 | IETF | [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986) | Uniform Resource Identifier (URI): Generic Syntax |
 | IETF | [RFC 4918](https://www.rfc-editor.org/rfc/rfc4918) | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) |
 | IETF | [RFC 5322](https://www.rfc-editor.org/rfc/rfc5322) | Internet Message Format |
+| IETF | [RFC 5646](https://www.rfc-editor.org/rfc/rfc5646) | Tags for Identifying Languages (BCP 47) |
 | IETF | [RFC 5789](https://www.rfc-editor.org/rfc/rfc5789) | PATCH Method for HTTP |
 | IETF | [RFC 6901](https://www.rfc-editor.org/rfc/rfc6901) | JavaScript Object Notation (JSON) Pointer |
 | IETF | [RFC 7807](https://www.rfc-editor.org/rfc/rfc7807) | Problem Details for HTTP APIs |
