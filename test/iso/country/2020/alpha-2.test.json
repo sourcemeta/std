@@ -1,0 +1,121 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/country/2020/alpha-2.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 840,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - United States",
+      "data": "US",
+      "valid": true
+    },
+    {
+      "description": "Valid - United Kingdom",
+      "data": "GB",
+      "valid": true
+    },
+    {
+      "description": "Valid - France",
+      "data": "FR",
+      "valid": true
+    },
+    {
+      "description": "Valid - Germany",
+      "data": "DE",
+      "valid": true
+    },
+    {
+      "description": "Valid - Japan",
+      "data": "JP",
+      "valid": true
+    },
+    {
+      "description": "Valid - Canada",
+      "data": "CA",
+      "valid": true
+    },
+    {
+      "description": "Valid - Australia",
+      "data": "AU",
+      "valid": true
+    },
+    {
+      "description": "Valid - China",
+      "data": "CN",
+      "valid": true
+    },
+    {
+      "description": "Valid - India",
+      "data": "IN",
+      "valid": true
+    },
+    {
+      "description": "Invalid - lowercase",
+      "data": "us",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed case",
+      "data": "Us",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too short",
+      "data": "U",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too long",
+      "data": "USA",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-existent code",
+      "data": "XX",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains numbers",
+      "data": "U1",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains special characters",
+      "data": "U$",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - spaces",
+      "data": "U S",
+      "valid": false
+    }
+  ]
+}
