@@ -19,5 +19,6 @@ jobs:
     steps:
       - run: sudo snap install jsonschema
       - uses: actions/checkout@v4
+      - run: make generate
       - run: make lint
       - run: make test

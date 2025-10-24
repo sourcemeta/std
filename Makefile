@@ -10,7 +10,7 @@ RMRF ?= rm -rf
 SCHEMAS = $(shell find schemas/ -type f -name '*.json')
 TESTS = $(shell find test/ -type f -name '*.json')
 
-all: common test
+all: generate common test
 	$(JSONSCHEMA) fmt schemas meta --verbose
 	$(JSONSCHEMA) fmt test --verbose --default-dialect "https://json-schema.org/draft/2020-12/schema"
 
