@@ -1,10 +1,10 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../../schemas/iso/currency/2025/historical/numeric-code.json",
+  "target": "../../../../schemas/iso/currency/2015/numeric-unknown.json",
   "tests": [
     {
       "description": "Invalid type - string",
-      "data": "840",
+      "data": "999",
       "valid": false
     },
     {
@@ -28,33 +28,28 @@
       "valid": false
     },
     {
-      "description": "Valid - Afghani (4)",
-      "data": 4,
+      "description": "Valid - 999 (no currency)",
+      "data": 999,
       "valid": true
     },
     {
-      "description": "Valid - Lek (8)",
-      "data": 8,
-      "valid": true
-    },
-    {
-      "description": "Invalid - current currency (840 - USD)",
+      "description": "Invalid - US Dollar (840)",
       "data": 840,
       "valid": false
     },
     {
-      "description": "Invalid - current currency (392 - JPY)",
-      "data": 392,
+      "description": "Invalid - Euro (978)",
+      "data": 978,
+      "valid": false
+    },
+    {
+      "description": "Invalid - fund code (984 - Mvdol)",
+      "data": 984,
       "valid": false
     },
     {
       "description": "Invalid - non-existent code",
-      "data": 1,
-      "valid": false
-    },
-    {
-      "description": "Invalid - negative",
-      "data": -1,
+      "data": 123,
       "valid": false
     }
   ]

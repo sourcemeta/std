@@ -346,7 +346,7 @@ def main():
     project_root = os.path.dirname(os.path.dirname(os.path.dirname(script_dir)))
     current_data_file = os.path.join(project_root, "external", "iso", "currency", "list-one.json")
     historical_data_file = os.path.join(project_root, "external", "iso", "currency", "list-three.json")
-    output_dir = os.path.join(project_root, "schemas", "iso", "currency", "2025")
+    output_dir = os.path.join(project_root, "schemas", "iso", "currency", "2015")
 
     # Generate current schemas
     if not os.path.exists(current_data_file):

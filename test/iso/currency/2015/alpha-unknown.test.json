@@ -1,10 +1,10 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/iso/currency/2025/numeric-precious-metal.json",
+  "target": "../../../../schemas/iso/currency/2015/alpha-unknown.json",
   "tests": [
     {
-      "description": "Invalid type - string",
-      "data": "XAU",
+      "description": "Invalid type - integer",
+      "data": 999,
       "valid": false
     },
     {
@@ -28,38 +28,38 @@
       "valid": false
     },
     {
-      "description": "Valid - Gold (959)",
-      "data": 959,
+      "description": "Valid - XXX (no currency)",
+      "data": "XXX",
       "valid": true
     },
     {
-      "description": "Valid - Silver (961)",
-      "data": 961,
-      "valid": true
-    },
-    {
-      "description": "Valid - Platinum (962)",
-      "data": 962,
-      "valid": true
-    },
-    {
-      "description": "Valid - Palladium (964)",
-      "data": 964,
-      "valid": true
-    },
-    {
-      "description": "Invalid - Regular currency USD (840)",
-      "data": 840,
+      "description": "Invalid - US Dollar",
+      "data": "USD",
       "valid": false
     },
     {
-      "description": "Invalid - Unknown code (999)",
-      "data": 999,
+      "description": "Invalid - Euro",
+      "data": "EUR",
       "valid": false
     },
     {
-      "description": "Invalid - Test code (963)",
-      "data": 963,
+      "description": "Invalid - fund code (Mvdol)",
+      "data": "BOV",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase xxx",
+      "data": "xxx",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-existent code",
+      "data": "XXY",
       "valid": false
     }
   ]

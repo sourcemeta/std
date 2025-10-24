@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/iso/currency/2025/alpha-code.json",
+  "target": "../../../../schemas/iso/currency/2015/alpha-code.json",
   "tests": [
     {
       "description": "Invalid type - integer",

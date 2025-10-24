@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../../schemas/iso/currency/2025/historical/alpha-code.json",
+  "target": "../../../../../schemas/iso/currency/2015/historical/alpha-currency.json",
   "tests": [
     {
       "description": "Invalid type - integer",
@@ -38,6 +38,16 @@
       "valid": true
     },
     {
+      "description": "Valid - German Mark",
+      "data": "DEM",
+      "valid": true
+    },
+    {
+      "description": "Valid - French Franc",
+      "data": "FRF",
+      "valid": true
+    },
+    {
       "description": "Invalid - current currency (USD)",
       "data": "USD",
       "valid": false
@@ -50,6 +60,16 @@
     {
       "description": "Invalid - lowercase",
       "data": "adp",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too short",
+      "data": "AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too long",
+      "data": "ADPD",
       "valid": false
     },
     {

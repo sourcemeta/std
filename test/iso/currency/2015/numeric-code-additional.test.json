@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/iso/currency/2025/numeric-code-additional.json",
+  "target": "../../../../schemas/iso/currency/2015/numeric-code-additional.json",
   "tests": [
     {
       "description": "Invalid type - string",
