@@ -114,9 +114,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
     alpha_code_schema.update({
         "title": f"ISO 4217 Alphabetic Currency, Fund, and Precious Metal Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-letter alphabetic code including {'withdrawn ' if is_historical else ''}currencies, funds, and precious metals ({published_date})",
-        "$comment": "https://www.iso.org/iso-4217-currency-codes.html",
         "examples": alpha_code_examples,
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+        "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
         "anyOf": alpha_code_refs
     })
 
@@ -124,9 +124,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
     alpha_currency_schema.update({
         "title": f"ISO 4217 Alphabetic Currency Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-letter alphabetic {'withdrawn ' if is_historical else ''}currency code, excluding funds and precious metals ({published_date})",
-        "$comment": "https://www.iso.org/iso-4217-currency-codes.html",
         "examples": sorted(currency_alpha_codes.keys())[:4],
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+        "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
         "anyOf": [
             {
                 "const": code,
@@ -143,9 +143,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
     alpha_fund_schema.update({
         "title": f"ISO 4217 Alphabetic Fund Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-letter alphabetic {'withdrawn ' if is_historical else ''}fund code ({published_date})",
-        "$comment": "https://www.iso.org/iso-4217-currency-codes.html",
         "examples": sorted(fund_alpha_codes.keys())[:4],
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+        "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
         "anyOf": [
             {
                 "const": code,
@@ -162,9 +162,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
     alpha_precious_metal_schema.update({
         "title": f"ISO 4217 Alphabetic Precious Metal Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-letter alphabetic code for {'withdrawn ' if is_historical else ''}precious metals ({published_date})",
-        "$comment": "https://www.iso.org/iso-4217-currency-codes.html",
         "examples": ["XAU", "XAG", "XPT", "XPD"],
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+        "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
         "anyOf": [
             {
                 "const": code,
@@ -194,9 +194,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
     numeric_code_schema.update({
         "title": f"ISO 4217 Numeric Currency, Fund, and Precious Metal Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-digit numeric code including {'withdrawn ' if is_historical else ''}currencies, funds, and precious metals ({published_date})",
-        "$comment": "https://www.iso.org/iso-4217-currency-codes.html",
         "examples": numeric_code_examples,
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+        "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
         "anyOf": numeric_code_refs
     })
 
@@ -204,9 +204,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
     numeric_currency_schema.update({
         "title": f"ISO 4217 Numeric Currency Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-digit numeric {'withdrawn ' if is_historical else ''}currency code, excluding funds and precious metals ({published_date})",
-        "$comment": "https://www.iso.org/iso-4217-currency-codes.html",
         "examples": sorted(currency_numeric_codes.keys())[:4],
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+        "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
         "anyOf": [
             {
                 "const": code,
@@ -223,9 +223,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
     numeric_fund_schema.update({
         "title": f"ISO 4217 Numeric Fund Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-digit numeric {'withdrawn ' if is_historical else ''}fund code ({published_date})",
-        "$comment": "https://www.iso.org/iso-4217-currency-codes.html",
         "examples": sorted(fund_numeric_codes.keys())[:4],
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+        "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
         "anyOf": [
             {
                 "const": code,
@@ -242,9 +242,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
     numeric_precious_metal_schema.update({
         "title": f"ISO 4217 Numeric Precious Metal Code{' (Historical)' if is_historical else ''}",
         "description": f"A three-digit numeric code for {'withdrawn ' if is_historical else ''}precious metals ({published_date})",
-        "$comment": "https://www.iso.org/iso-4217-currency-codes.html",
         "examples": [959, 961, 962, 964],
         "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+        "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
         "anyOf": [
             {
                 "const": code,
@@ -274,9 +274,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
             "$schema": "https://json-schema.org/draft/2020-12/schema",
             "title": "ISO 4217 Numeric Additional Currency Code",
             "description": "User-assigned numeric codes in the range 900-998",
-            "$comment": "https://www.iso.org/iso-4217-currency-codes.html",
             "examples": [900, 950, 998],
             "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+            "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
             "type": "integer",
             "minimum": 900,
             "maximum": 998
@@ -286,9 +286,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
             "$schema": "https://json-schema.org/draft/2020-12/schema",
             "title": "ISO 4217 Alphabetic Unknown Currency Code",
             "description": "The alphabetic code for transactions where no currency is involved",
-            "$comment": "https://www.iso.org/iso-4217-currency-codes.html",
             "examples": ["XXX"],
             "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+            "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
             "const": "XXX"
         }
 
@@ -296,9 +296,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
             "$schema": "https://json-schema.org/draft/2020-12/schema",
             "title": "ISO 4217 Numeric Unknown Currency Code",
             "description": "The numeric code for transactions where no currency is involved",
-            "$comment": "https://www.iso.org/iso-4217-currency-codes.html",
             "examples": [999],
             "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+            "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
             "const": 999
         }
 
@@ -306,9 +306,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
             "$schema": "https://json-schema.org/draft/2020-12/schema",
             "title": "ISO 4217 Alphabetic Test Currency Code",
             "description": "The alphabetic code specifically reserved for testing purposes",
-            "$comment": "https://www.iso.org/iso-4217-currency-codes.html",
             "examples": ["XTS"],
             "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+            "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
             "const": "XTS"
         }
 
@@ -316,9 +316,9 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
             "$schema": "https://json-schema.org/draft/2020-12/schema",
             "title": "ISO 4217 Numeric Test Currency Code",
             "description": "The numeric code specifically reserved for testing purposes",
-            "$comment": "https://www.iso.org/iso-4217-currency-codes.html",
             "examples": [963],
             "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+            "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
             "const": 963
         }
 

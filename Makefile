@@ -1,13 +1,18 @@
 JSONSCHEMA ?= jsonschema
 SHELLCHECK ?= shellcheck
 PYTHON ?= python3
+CURL ?= curl
+BSDTAR ?= bsdtar
+MKDIRP ?= mkdir -p
+RMRF ?= rm -rf
 
 # TODO: Extend `validate` to take a directory as argument
 SCHEMAS = $(shell find schemas/ -type f -name '*.json')
 TESTS = $(shell find test/ -type f -name '*.json')
 
 all: common test
-	$(JSONSCHEMA) fmt schemas test meta --verbose
+	$(JSONSCHEMA) fmt schemas meta --verbose
+	$(JSONSCHEMA) fmt test --verbose --default-dialect "https://json-schema.org/draft/2020-12/schema"
 
 .PHONY: common
 common:
@@ -20,7 +25,8 @@ common:
 
 .PHONY: lint
 lint: common
-	$(JSONSCHEMA) fmt schemas test meta --verbose --check
+	$(JSONSCHEMA) fmt schemas meta --verbose --check
+	$(JSONSCHEMA) fmt test --verbose --default-dialect "https://json-schema.org/draft/2020-12/schema"
 
 .PHONY: test
 test:
@@ -28,4 +34,6 @@ test:
 
 .PHONY: external
 include generate/iso/currency/include.mk
+include generate/iso/language/include.mk
 external: $(EXTERNAL)
+generate: $(GENERATE)
