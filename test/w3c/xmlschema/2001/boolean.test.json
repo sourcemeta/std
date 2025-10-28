@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/w3c/xmlschema/2004/boolean.json",
+  "target": "../../../../schemas/w3c/xmlschema/2001/boolean.json",
   "tests": [
     {
       "description": "Valid - true",
