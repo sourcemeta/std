@@ -3,6 +3,10 @@ SHELLCHECK ?= shellcheck
 PYTHON ?= python3
 CURL ?= curl
 BSDTAR ?= bsdtar
+TAR ?= tar
+ZIP ?= zip
+UNZIP ?= unzip
+GZIP ?= gzip
 MKDIRP ?= mkdir -p
 RMRF ?= rm -rf
 
@@ -12,6 +16,7 @@ TESTS = $(shell find test/ -type f -name '*.json')
 
 VERSION = $(shell tr -d '\n\r' < VERSION)
 
+# TODO: Make `jsonschema fmt` automatically detect test files
 all: common test
 	$(JSONSCHEMA) fmt schemas meta --verbose
 	$(JSONSCHEMA) fmt test --verbose --default-dialect "https://json-schema.org/draft/2020-12/schema"
@@ -25,6 +30,7 @@ common:
 	$(SHELLCHECK) scripts/*.sh
 	./scripts/schemas-tests-mirror.sh
 
+# TODO: Make `jsonschema fmt` automatically detect test files
 .PHONY: lint
 lint: common
 	$(JSONSCHEMA) fmt schemas meta --verbose --check
@@ -41,9 +47,15 @@ include generate/iso/country/include.mk
 external: $(EXTERNAL)
 generate: $(GENERATE)
 
+# TODO: Add a `jsonschema pkg` command instead
 .PHONY: dist
 dist:
 	$(RMRF) $@
 	$(MKDIRP) $@
-	$(BSDTAR) -caf $@/sourcemeta-std-v$(VERSION).zip -s '|^schemas/||' --exclude '.DS_Store' schemas/* LICENSE
-	$(BSDTAR) -czf $@/sourcemeta-std-v$(VERSION).tar.gz -s '|^schemas/||' --exclude '.DS_Store' schemas/* LICENSE
+	cd schemas && $(ZIP) -r ../$@/sourcemeta-std-v$(VERSION).zip * -x '*.DS_Store'
+	$(ZIP) $@/sourcemeta-std-v$(VERSION).zip LICENSE
+	$(UNZIP) -l $@/sourcemeta-std-v$(VERSION).zip
+	cd schemas && $(TAR) -cf ../$@/sourcemeta-std-v$(VERSION).tar --exclude '.DS_Store' *
+	$(TAR) -rf $@/sourcemeta-std-v$(VERSION).tar LICENSE
+	$(GZIP) $@/sourcemeta-std-v$(VERSION).tar
+	$(TAR) -tzf $@/sourcemeta-std-v$(VERSION).tar.gz
