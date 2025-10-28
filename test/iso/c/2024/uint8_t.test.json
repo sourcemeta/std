@@ -1,0 +1,81 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/c/2024/uint8_t.json",
+  "tests": [
+    {
+      "description": "Valid - zero",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - minimum value",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - maximum value",
+      "data": 255,
+      "valid": true
+    },
+    {
+      "description": "Valid - mid-range value",
+      "data": 128,
+      "valid": true
+    },
+    {
+      "description": "Valid - positive value",
+      "data": 42,
+      "valid": true
+    },
+    {
+      "description": "Invalid - negative value",
+      "data": -1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - above maximum",
+      "data": 256,
+      "valid": false
+    },
+    {
+      "description": "Invalid - large positive value",
+      "data": 1000,
+      "valid": false
+    },
+    {
+      "description": "Invalid - large negative value",
+      "data": -100,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - string",
+      "data": "42",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Invalid type - float",
+      "data": 1.5,
+      "valid": false
+    }
+  ]
+}
