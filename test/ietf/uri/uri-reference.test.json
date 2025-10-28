@@ -556,6 +556,161 @@
       "description": "Fragment with hash in value",
       "data": "#fragment#with#hashes",
       "valid": true
+    },
+    {
+      "description": "URL with fragment without path",
+      "data": "http://example.com#fragment",
+      "valid": true
+    },
+    {
+      "description": "URL with query without path",
+      "data": "http://example.com?query=value",
+      "valid": true
+    },
+    {
+      "description": "URL with query and fragment without path",
+      "data": "http://example.com?query=value#fragment",
+      "valid": true
+    },
+    {
+      "description": "URL with empty fragment without path",
+      "data": "http://example.com#",
+      "valid": true
+    },
+    {
+      "description": "URL with empty query without path",
+      "data": "http://example.com?",
+      "valid": true
+    },
+    {
+      "description": "HTTPS with fragment without path",
+      "data": "https://secure.example.com#section",
+      "valid": true
+    },
+    {
+      "description": "HTTPS with query without path",
+      "data": "https://secure.example.com?token=abc123",
+      "valid": true
+    },
+    {
+      "description": "FTP with fragment without path",
+      "data": "ftp://ftp.example.com#readme",
+      "valid": true
+    },
+    {
+      "description": "FTP with query without path",
+      "data": "ftp://ftp.example.com?mode=binary",
+      "valid": true
+    },
+    {
+      "description": "Network path with query without path",
+      "data": "//example.com?search=test",
+      "valid": true
+    },
+    {
+      "description": "Network path with fragment without path",
+      "data": "//example.com#top",
+      "valid": true
+    },
+    {
+      "description": "Network path with query and fragment without path",
+      "data": "//example.com?q=1#section",
+      "valid": true
+    },
+    {
+      "description": "IPv4 URL with fragment without path",
+      "data": "http://192.168.1.1#section",
+      "valid": true
+    },
+    {
+      "description": "IPv4 URL with query without path",
+      "data": "http://192.168.1.1?param=value",
+      "valid": true
+    },
+    {
+      "description": "IPv6 URL with fragment without path",
+      "data": "http://[::1]#anchor",
+      "valid": true
+    },
+    {
+      "description": "IPv6 URL with query without path",
+      "data": "http://[::1]?key=val",
+      "valid": true
+    },
+    {
+      "description": "URL with port and fragment without path",
+      "data": "http://example.com:8080#section",
+      "valid": true
+    },
+    {
+      "description": "URL with port and query without path",
+      "data": "http://example.com:8080?search=term",
+      "valid": true
+    },
+    {
+      "description": "URL with userinfo and fragment without path",
+      "data": "http://user@example.com#top",
+      "valid": true
+    },
+    {
+      "description": "URL with userinfo and query without path",
+      "data": "http://user@example.com?q=test",
+      "valid": true
+    },
+    {
+      "description": "URL with full userinfo and query without path",
+      "data": "http://user:pass@example.com?param=value",
+      "valid": true
+    },
+    {
+      "description": "URL with full userinfo and fragment without path",
+      "data": "http://user:pass@example.com#anchor",
+      "valid": true
+    },
+    {
+      "description": "Complex URL with all authority components and query without path",
+      "data": "http://user:pass@example.com:8080?key=value",
+      "valid": true
+    },
+    {
+      "description": "Complex URL with all authority components and fragment without path",
+      "data": "http://user:pass@example.com:8080#section",
+      "valid": true
+    },
+    {
+      "description": "URL with multiple query parameters without path",
+      "data": "http://example.com?a=1&b=2&c=3",
+      "valid": true
+    },
+    {
+      "description": "URL with percent-encoded query without path",
+      "data": "http://example.com?key=value%20here",
+      "valid": true
+    },
+    {
+      "description": "URL with complex query encoding without path",
+      "data": "http://example.com?a=b&c=%2Fd%2Fe",
+      "valid": true
+    },
+    {
+      "description": "URL with fragment containing special characters without path",
+      "data": "http://example.com#section-1.2",
+      "valid": true
+    },
+    {
+      "description": "URL with empty query and non-empty fragment without path",
+      "data": "http://example.com?#fragment",
+      "valid": true
+    },
+    {
+      "description": "Custom scheme with fragment without path",
+      "data": "custom://example.com#section",
+      "valid": true
+    },
+    {
+      "description": "Custom scheme with query without path",
+      "data": "custom://example.com?param=value",
+      "valid": true
     }
   ]
 }
