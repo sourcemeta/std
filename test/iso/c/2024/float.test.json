@@ -1,0 +1,121 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/iso/c/2024/float.json",
+  "tests": [
+    {
+      "description": "Valid - zero",
+      "data": 0.0,
+      "valid": true
+    },
+    {
+      "description": "Valid - positive value",
+      "data": 1.5,
+      "valid": true
+    },
+    {
+      "description": "Valid - negative value",
+      "data": -3.14,
+      "valid": true
+    },
+    {
+      "description": "Valid - maximum value",
+      "data": 340282346600000016151267322115014000640.0,
+      "valid": true
+    },
+    {
+      "description": "Valid - minimum value",
+      "data": -340282346600000016151267322115014000640.0,
+      "valid": true
+    },
+    {
+      "description": "Valid - special value NAN",
+      "data": "NAN",
+      "valid": true
+    },
+    {
+      "description": "Valid - special value INFINITY",
+      "data": "INFINITY",
+      "valid": true
+    },
+    {
+      "description": "Valid - special value -INFINITY",
+      "data": "-INFINITY",
+      "valid": true
+    },
+    {
+      "description": "Invalid - above maximum",
+      "data": 350000000000000001565567347835409530880.0,
+      "valid": false
+    },
+    {
+      "description": "Invalid - below minimum",
+      "data": -350000000000000001565567347835409530880.0,
+      "valid": false
+    },
+    {
+      "description": "Invalid - far above maximum",
+      "data": 10000000000000000159028911097599180468360808563945281389781327557747838772170381060813469985856815104.0,
+      "valid": false
+    },
+    {
+      "description": "Invalid - far below minimum",
+      "data": -10000000000000000159028911097599180468360808563945281389781327557747838772170381060813469985856815104.0,
+      "valid": false
+    },
+    {
+      "description": "Invalid - string with wrong case",
+      "data": "nan",
+      "valid": false
+    },
+    {
+      "description": "Invalid - string with wrong case",
+      "data": "infinity",
+      "valid": false
+    },
+    {
+      "description": "Invalid - JavaScript style",
+      "data": "Infinity",
+      "valid": false
+    },
+    {
+      "description": "Invalid - wrong special value string",
+      "data": "inf",
+      "valid": false
+    },
+    {
+      "description": "Invalid - numeric string",
+      "data": "1.5",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - integer value",
+      "data": 42,
+      "valid": true
+    },
+    {
+      "description": "Valid - negative integer value",
+      "data": -100,
+      "valid": true
+    }
+  ]
+}

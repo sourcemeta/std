@@ -66,6 +66,7 @@ expressed as JSON Schema definitions.
 | ISO | [ISO 8601-1:2019](https://www.iso.org/standard/70907.html) | Date and time — Representations for information interchange — Part 1: Basic rules |
 | ISO | [ISO 80000-1:2022](https://www.iso.org/standard/76921.html) | Quantities and units — Part 1: General |
 | ISO/IEC | [ISO/IEC 2382:2015](https://www.iso.org/standard/63598.html) | Information technology — Vocabulary |
+| ISO/IEC | [ISO/IEC 9899:2024](https://www.iso.org/standard/82075.html) | Programming languages — C |
 | JSON-RPC | [JSON-RPC 2.0](https://www.jsonrpc.org/specification) | JSON-RPC 2.0 Specification |
 | JSON Schema | [Draft 2020-12](https://json-schema.org/draft/2020-12/json-schema-core) | JSON Schema: A Media Type for Describing JSON Documents |
 
