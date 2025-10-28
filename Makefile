@@ -10,6 +10,8 @@ RMRF ?= rm -rf
 SCHEMAS = $(shell find schemas/ -type f -name '*.json')
 TESTS = $(shell find test/ -type f -name '*.json')
 
+VERSION = $(shell tr -d '\n\r' < VERSION)
+
 all: common test
 	$(JSONSCHEMA) fmt schemas meta --verbose
 	$(JSONSCHEMA) fmt test --verbose --default-dialect "https://json-schema.org/draft/2020-12/schema"
@@ -38,3 +40,10 @@ include generate/iso/language/include.mk
 include generate/iso/country/include.mk
 external: $(EXTERNAL)
 generate: $(GENERATE)
+
+.PHONY: dist
+dist:
+	$(RMRF) $@
+	$(MKDIRP) $@
+	$(BSDTAR) -caf $@/sourcemeta-std-v$(VERSION).zip -s '|^schemas/||' --exclude '.DS_Store' schemas/* LICENSE
+	$(BSDTAR) -czf $@/sourcemeta-std-v$(VERSION).tar.gz -s '|^schemas/||' --exclude '.DS_Store' schemas/* LICENSE
