@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/w3c/xmlschema/2004/g-month-day.json",
+  "target": "../../../../schemas/w3c/xmlschema/2001/g-month-day.json",
   "tests": [
     {
       "description": "Valid - basic month-day",
