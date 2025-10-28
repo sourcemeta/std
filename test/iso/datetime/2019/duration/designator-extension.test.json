@@ -1,0 +1,341 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/iso/datetime/2019/duration/designator-extension.json",
+  "tests": [
+    {
+      "description": "Invalid type - integer",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid - full duration with all components",
+      "data": "P3Y6M4DT12H30M5S",
+      "valid": true
+    },
+    {
+      "description": "Valid - only years",
+      "data": "P1Y",
+      "valid": true
+    },
+    {
+      "description": "Valid - only time component (hours)",
+      "data": "PT1H",
+      "valid": true
+    },
+    {
+      "description": "Valid - days and seconds",
+      "data": "P1DT1S",
+      "valid": true
+    },
+    {
+      "description": "Valid - all zeros",
+      "data": "P0Y0M0DT0H0M0S",
+      "valid": true
+    },
+    {
+      "description": "Valid - only months",
+      "data": "P5M",
+      "valid": true
+    },
+    {
+      "description": "Valid - only days",
+      "data": "P100D",
+      "valid": true
+    },
+    {
+      "description": "Valid - only minutes",
+      "data": "PT30M",
+      "valid": true
+    },
+    {
+      "description": "Valid - only seconds",
+      "data": "PT45S",
+      "valid": true
+    },
+    {
+      "description": "Valid - seconds with decimal fraction",
+      "data": "PT1.5S",
+      "valid": true
+    },
+    {
+      "description": "Valid - years and months",
+      "data": "P2Y3M",
+      "valid": true
+    },
+    {
+      "description": "Valid - hours and minutes",
+      "data": "PT12H30M",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing P prefix",
+      "data": "3Y6M4DT12H30M5S",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase p",
+      "data": "p1Y",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase t",
+      "data": "P1Dt1H",
+      "valid": false
+    },
+    {
+      "description": "Invalid - time component without T",
+      "data": "P1D1H",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - only P",
+      "data": "P",
+      "valid": false
+    },
+    {
+      "description": "Invalid - only PT",
+      "data": "PT",
+      "valid": false
+    },
+    {
+      "description": "Invalid - spaces in duration",
+      "data": "P1Y 2M",
+      "valid": false
+    },
+    {
+      "description": "Invalid - wrong order (months before years)",
+      "data": "P6M3Y",
+      "valid": false
+    },
+    {
+      "description": "Valid - 13 months (durations can exceed calendar limits)",
+      "data": "P13M",
+      "valid": true
+    },
+    {
+      "description": "Valid - 32 days (durations can exceed calendar limits)",
+      "data": "P32D",
+      "valid": true
+    },
+    {
+      "description": "Valid - 25 hours (durations can exceed calendar limits)",
+      "data": "PT25H",
+      "valid": true
+    },
+    {
+      "description": "Valid - 60 minutes (durations can exceed calendar limits)",
+      "data": "PT60M",
+      "valid": true
+    },
+    {
+      "description": "Valid - 60 seconds (durations can exceed calendar limits)",
+      "data": "PT60S",
+      "valid": true
+    },
+    {
+      "description": "Valid - 100 hours (durations can exceed calendar limits)",
+      "data": "PT100H",
+      "valid": true
+    },
+    {
+      "description": "Valid - 500 days (durations can exceed calendar limits)",
+      "data": "P500D",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero years",
+      "data": "P0Y",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero months",
+      "data": "P0M",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero days",
+      "data": "P0D",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero hours",
+      "data": "PT0H",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero minutes",
+      "data": "PT0M",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero seconds",
+      "data": "PT0S",
+      "valid": true
+    },
+    {
+      "description": "Valid negative - days only",
+      "data": "-P100D",
+      "valid": true
+    },
+    {
+      "description": "Valid negative - year month and days",
+      "data": "-P1Y2M3D",
+      "valid": true
+    },
+    {
+      "description": "Valid negative - full representation",
+      "data": "-P3Y6M4DT12H30M5S",
+      "valid": true
+    },
+    {
+      "description": "Valid negative - time only hours and minutes",
+      "data": "-PT5H30M",
+      "valid": true
+    },
+    {
+      "description": "Valid negative - year only",
+      "data": "-P1Y",
+      "valid": true
+    },
+    {
+      "description": "Valid negative - hours only",
+      "data": "-PT1H",
+      "valid": true
+    },
+    {
+      "description": "Valid negative - decimal year",
+      "data": "-P1.5Y",
+      "valid": true
+    },
+    {
+      "description": "Valid negative - months only",
+      "data": "-P6M",
+      "valid": true
+    },
+    {
+      "description": "Valid negative - seconds only",
+      "data": "-PT30S",
+      "valid": true
+    },
+    {
+      "description": "Valid negative - year month day",
+      "data": "-P1Y2M3D",
+      "valid": true
+    },
+    {
+      "description": "Valid negative - hours minutes seconds",
+      "data": "-PT10H20M30S",
+      "valid": true
+    },
+    {
+      "description": "Valid negative - decimal seconds",
+      "data": "-PT1.5S",
+      "valid": true
+    },
+    {
+      "description": "Valid negative - zero duration",
+      "data": "-P0Y0M0DT0H0M0S",
+      "valid": true
+    },
+    {
+      "description": "Invalid - empty P",
+      "data": "P",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty PT",
+      "data": "PT",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty -P",
+      "data": "-P",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty -PT",
+      "data": "-PT",
+      "valid": false
+    },
+    {
+      "description": "Invalid - double minus",
+      "data": "--P1Y",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minus in wrong position",
+      "data": "P-1Y",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing P",
+      "data": "-1Y",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing T separator",
+      "data": "-P1Y1H",
+      "valid": false
+    },
+    {
+      "description": "Invalid - wrong designator order",
+      "data": "-P1D2M3Y",
+      "valid": false
+    },
+    {
+      "description": "Invalid - time before date",
+      "data": "-PT1H1D",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - number",
+      "data": 100,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}
