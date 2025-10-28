@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/iso/c/2024/int64_t.json",
+  "target": "../../../../schemas/iso/c/2024/uint16.json",
   "tests": [
     {
       "description": "Valid - zero",
@@ -9,27 +9,47 @@
     },
     {
       "description": "Valid - minimum value",
-      "data": -9223372036854775808,
+      "data": 0,
       "valid": true
     },
     {
       "description": "Valid - maximum value",
-      "data": 9223372036854775807,
+      "data": 65535,
+      "valid": true
+    },
+    {
+      "description": "Valid - mid-range value",
+      "data": 32768,
       "valid": true
     },
     {
       "description": "Valid - positive value",
-      "data": 1000000000,
+      "data": 1000,
       "valid": true
     },
     {
-      "description": "Valid - negative value",
-      "data": -1000000000,
-      "valid": true
+      "description": "Invalid - negative value",
+      "data": -1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - above maximum",
+      "data": 65536,
+      "valid": false
+    },
+    {
+      "description": "Invalid - large positive value",
+      "data": 100000,
+      "valid": false
+    },
+    {
+      "description": "Invalid - large negative value",
+      "data": -1000,
+      "valid": false
     },
     {
       "description": "Invalid type - string",
-      "data": "1000000000",
+      "data": "1000",
       "valid": false
     },
     {
@@ -54,7 +74,7 @@
     },
     {
       "description": "Invalid type - float",
-      "data": 1000.5,
+      "data": 100.5,
       "valid": false
     }
   ]
