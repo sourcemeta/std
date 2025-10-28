@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/iso/c/2024/int8_t.json",
+  "target": "../../../../schemas/iso/c/2024/uint8.json",
   "tests": [
     {
       "description": "Valid - zero",
@@ -9,12 +9,17 @@
     },
     {
       "description": "Valid - minimum value",
-      "data": -128,
+      "data": 0,
       "valid": true
     },
     {
       "description": "Valid - maximum value",
-      "data": 127,
+      "data": 255,
+      "valid": true
+    },
+    {
+      "description": "Valid - mid-range value",
+      "data": 128,
       "valid": true
     },
     {
@@ -23,18 +28,13 @@
       "valid": true
     },
     {
-      "description": "Valid - negative value",
-      "data": -99,
-      "valid": true
-    },
-    {
-      "description": "Invalid - below minimum",
-      "data": -129,
+      "description": "Invalid - negative value",
+      "data": -1,
       "valid": false
     },
     {
       "description": "Invalid - above maximum",
-      "data": 128,
+      "data": 256,
       "valid": false
     },
     {
@@ -44,7 +44,7 @@
     },
     {
       "description": "Invalid - large negative value",
-      "data": -1000,
+      "data": -100,
       "valid": false
     },
     {
