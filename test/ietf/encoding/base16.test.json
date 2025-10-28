@@ -1,0 +1,501 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/encoding/base16.json",
+  "tests": [
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Valid - single byte uppercase",
+      "data": "0F",
+      "valid": true
+    },
+    {
+      "description": "Valid - single byte lowercase",
+      "data": "0f",
+      "valid": true
+    },
+    {
+      "description": "Valid - single byte mixed case",
+      "data": "0F",
+      "valid": true
+    },
+    {
+      "description": "Valid - 'Hello World!' in hex",
+      "data": "48656C6C6F20576F726C6421",
+      "valid": true
+    },
+    {
+      "description": "Valid - 'foo' in hex",
+      "data": "666F6F",
+      "valid": true
+    },
+    {
+      "description": "Valid - all uppercase",
+      "data": "DEADBEEF",
+      "valid": true
+    },
+    {
+      "description": "Valid - all lowercase",
+      "data": "deadbeef",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed case",
+      "data": "DeAdBeEf",
+      "valid": true
+    },
+    {
+      "description": "Valid - all zeros",
+      "data": "0000",
+      "valid": true
+    },
+    {
+      "description": "Valid - all F's uppercase",
+      "data": "FFFF",
+      "valid": true
+    },
+    {
+      "description": "Valid - all f's lowercase",
+      "data": "ffff",
+      "valid": true
+    },
+    {
+      "description": "Valid - only digits 0-9",
+      "data": "0123456789",
+      "valid": true
+    },
+    {
+      "description": "Valid - only letters A-F uppercase",
+      "data": "ABCDEF",
+      "valid": true
+    },
+    {
+      "description": "Valid - only letters a-f lowercase",
+      "data": "abcdef",
+      "valid": true
+    },
+    {
+      "description": "Valid - two bytes",
+      "data": "0FB7",
+      "valid": true
+    },
+    {
+      "description": "Valid - four bytes",
+      "data": "DEADBEEF",
+      "valid": true
+    },
+    {
+      "description": "Valid - eight bytes",
+      "data": "0123456789ABCDEF",
+      "valid": true
+    },
+    {
+      "description": "Valid - sixteen bytes",
+      "data": "0123456789ABCDEF0123456789ABCDEF",
+      "valid": true
+    },
+    {
+      "description": "Valid - long hex string",
+      "data": "48656C6C6F20576F726C64212048657265206973206120766572792076657279206C6F6E672068657820737472696E67",
+      "valid": true
+    },
+    {
+      "description": "Invalid - single character (odd length)",
+      "data": "0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - three characters (odd length)",
+      "data": "ABC",
+      "valid": false
+    },
+    {
+      "description": "Invalid - five characters (odd length)",
+      "data": "ABCDE",
+      "valid": false
+    },
+    {
+      "description": "Invalid - seven characters (odd length)",
+      "data": "ABCDEFG",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains G",
+      "data": "0G",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains H",
+      "data": "0H",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains Z",
+      "data": "0Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains g",
+      "data": "0g",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains h",
+      "data": "0h",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains z",
+      "data": "0z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains space",
+      "data": "DE AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains hyphen",
+      "data": "DE-AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains underscore",
+      "data": "DE_AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains plus",
+      "data": "DE+AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains slash",
+      "data": "DE/AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains period",
+      "data": "DE.AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains comma",
+      "data": "DE,AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains colon",
+      "data": "DE:AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains semicolon",
+      "data": "DE;AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains (",
+      "data": "DE(AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains )",
+      "data": "DE)AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains [",
+      "data": "DE[AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ]",
+      "data": "DE]AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains {",
+      "data": "DE{AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains }",
+      "data": "DE}AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains !",
+      "data": "DE!AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ?",
+      "data": "DE?AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains @",
+      "data": "DE@AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains #",
+      "data": "DE#AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains $",
+      "data": "DE$AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains %",
+      "data": "DE%AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ^",
+      "data": "DE^AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains &",
+      "data": "DE&AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains *",
+      "data": "DE*AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ~",
+      "data": "DE~AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains `",
+      "data": "DE`AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains |",
+      "data": "DE|AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains \\",
+      "data": "DE\\AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains '",
+      "data": "DE'AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains \"",
+      "data": "DE\"AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains <",
+      "data": "DE<AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains >",
+      "data": "DE>AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading space",
+      "data": " DEAD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing space",
+      "data": "DEAD ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading tab",
+      "data": "\tDEAD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing tab",
+      "data": "DEAD\t",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tab in middle",
+      "data": "DE\tAD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains newline",
+      "data": "DE\nAD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains carriage return",
+      "data": "DE\rAD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-ASCII character",
+      "data": "DEéAD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - emoji",
+      "data": "DE😀AD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - boolean type",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null type",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - digit 0",
+      "data": "00",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 1",
+      "data": "11",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 2",
+      "data": "22",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 3",
+      "data": "33",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 4",
+      "data": "44",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 5",
+      "data": "55",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 6",
+      "data": "66",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 7",
+      "data": "77",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 8",
+      "data": "88",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 9",
+      "data": "99",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter A uppercase",
+      "data": "AA",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter B uppercase",
+      "data": "BB",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter C uppercase",
+      "data": "CC",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter D uppercase",
+      "data": "DD",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter E uppercase",
+      "data": "EE",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter F uppercase",
+      "data": "FF",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter a lowercase",
+      "data": "aa",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter b lowercase",
+      "data": "bb",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter c lowercase",
+      "data": "cc",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter d lowercase",
+      "data": "dd",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter e lowercase",
+      "data": "ee",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter f lowercase",
+      "data": "ff",
+      "valid": true
+    },
+    {
+      "description": "Valid - repeating pattern",
+      "data": "0F0F0F0F",
+      "valid": true
+    },
+    {
+      "description": "Valid - alternating case",
+      "data": "AaBbCcDd",
+      "valid": true
+    },
+    {
+      "description": "Valid - all digits and letters mixed",
+      "data": "0123456789ABCDEFabcdef",
+      "valid": true
+    }
+  ]
+}

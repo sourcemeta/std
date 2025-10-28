@@ -1,0 +1,511 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/encoding/base32hex.json",
+  "tests": [
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Valid - single byte (2 chars + 6 padding)",
+      "data": "C4======",
+      "valid": true
+    },
+    {
+      "description": "Valid - two bytes (4 chars + 4 padding)",
+      "data": "CPNG====",
+      "valid": true
+    },
+    {
+      "description": "Valid - three bytes (5 chars + 3 padding)",
+      "data": "CPNMU===",
+      "valid": true
+    },
+    {
+      "description": "Valid - four bytes (7 chars + 1 padding)",
+      "data": "CPNMUO8=",
+      "valid": true
+    },
+    {
+      "description": "Valid - five bytes (8 chars, no padding)",
+      "data": "CPNMUOJ1",
+      "valid": true
+    },
+    {
+      "description": "Valid - 'Hello World!'",
+      "data": "91IMOR3F41BMUSJCCG======",
+      "valid": true
+    },
+    {
+      "description": "Valid - 'foo'",
+      "data": "CPNMU===",
+      "valid": true
+    },
+    {
+      "description": "Valid - 'foobar'",
+      "data": "CPNMUOJ1E8======",
+      "valid": true
+    },
+    {
+      "description": "Valid - all 0's",
+      "data": "00000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - all V's",
+      "data": "VVVVVVVV",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed alphabet",
+      "data": "0123456789ABCDEFGHIJKLMNOPQRSTUV",
+      "valid": true
+    },
+    {
+      "description": "Valid - only digits 0-9",
+      "data": "01234567",
+      "valid": true
+    },
+    {
+      "description": "Valid - only letters A-V",
+      "data": "ABCDEFGHIJKLMNOP",
+      "valid": true
+    },
+    {
+      "description": "Valid - 16 chars no padding",
+      "data": "0123456789ABCDEF",
+      "valid": true
+    },
+    {
+      "description": "Valid - 24 chars no padding",
+      "data": "0123456789ABCDEFGHIJKLMN",
+      "valid": true
+    },
+    {
+      "description": "Valid - long string with padding",
+      "data": "91IMOR3F41BMUSJCCGGG====",
+      "valid": true
+    },
+    {
+      "description": "Invalid - single char without padding",
+      "data": "C",
+      "valid": false
+    },
+    {
+      "description": "Invalid - two chars without padding",
+      "data": "C4",
+      "valid": false
+    },
+    {
+      "description": "Invalid - three chars without padding",
+      "data": "C4P",
+      "valid": false
+    },
+    {
+      "description": "Invalid - four chars without padding",
+      "data": "CPNG",
+      "valid": false
+    },
+    {
+      "description": "Invalid - five chars without padding",
+      "data": "CPNMU",
+      "valid": false
+    },
+    {
+      "description": "Invalid - six chars without padding",
+      "data": "CPNMUO",
+      "valid": false
+    },
+    {
+      "description": "Invalid - seven chars without padding",
+      "data": "CPNMUO8",
+      "valid": false
+    },
+    {
+      "description": "Invalid - nine chars without padding",
+      "data": "CPNMUOJ1E",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains W (not in base32hex alphabet)",
+      "data": "CPNMUW==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains X (not in base32hex alphabet)",
+      "data": "CPNMUX==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains Y (not in base32hex alphabet)",
+      "data": "CPNMUY==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains Z (not in base32hex alphabet)",
+      "data": "CPNMUZ==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase letters",
+      "data": "cpnmu===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed case",
+      "data": "CpNmU===",
+      "valid": false
+    },
+    {
+      "description": "Valid - 7 chars + 1 padding (non-canonical but syntactically valid)",
+      "data": "CPNMUOJ=",
+      "valid": true
+    },
+    {
+      "description": "Invalid - wrong padding count (2 equals)",
+      "data": "CPNMUO==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - wrong padding count (5 equals)",
+      "data": "CPN=====",
+      "valid": false
+    },
+    {
+      "description": "Invalid - wrong padding count (7 equals)",
+      "data": "C=======",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too much padding (8 equals)",
+      "data": "========",
+      "valid": false
+    },
+    {
+      "description": "Invalid - padding in middle",
+      "data": "C4======CPNMU===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - padding not at end",
+      "data": "C=PNG000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains space",
+      "data": "CPNMU ===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains hyphen",
+      "data": "CPNMU-===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains underscore",
+      "data": "CPNMU_===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains plus",
+      "data": "CPNMU+===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains slash",
+      "data": "CPNMU/===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains period",
+      "data": "CPNMU.===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains comma",
+      "data": "CPNMU,===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains (",
+      "data": "CPNMU(==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains )",
+      "data": "CPNMU)==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains [",
+      "data": "CPNMU[==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ]",
+      "data": "CPNMU]==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains {",
+      "data": "CPNMU{==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains }",
+      "data": "CPNMU}==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains !",
+      "data": "CPNMU!==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ?",
+      "data": "CPNMU?==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains @",
+      "data": "CPNMU@==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains #",
+      "data": "CPNMU#==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains $",
+      "data": "CPNMU$==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains %",
+      "data": "CPNMU%==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ^",
+      "data": "CPNMU^==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains &",
+      "data": "CPNMU&==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains *",
+      "data": "CPNMU*==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ~",
+      "data": "CPNMU~==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains `",
+      "data": "CPNMU`==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains |",
+      "data": "CPNMU|==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains \\",
+      "data": "CPNMU\\==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains :",
+      "data": "CPNMU:==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ;",
+      "data": "CPNMU;==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains '",
+      "data": "CPNMU'==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains \"",
+      "data": "CPNMU\"==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains <",
+      "data": "CPNMU<==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains >",
+      "data": "CPNMU>==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading space",
+      "data": " CPNMU===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing space",
+      "data": "CPNMU=== ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading tab",
+      "data": "\tCPNMU===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing tab",
+      "data": "CPNMU===\t",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tab in middle",
+      "data": "CPN\tMU===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains newline",
+      "data": "CPN\nMU===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains carriage return",
+      "data": "CPN\rMU===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-ASCII character",
+      "data": "CPNMUé==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - emoji",
+      "data": "CPNMU😀==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - boolean type",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null type",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid - padding at beginning",
+      "data": "======C4",
+      "valid": false
+    },
+    {
+      "description": "Invalid - only padding",
+      "data": "========",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed padding",
+      "data": "C=P=MU==",
+      "valid": false
+    },
+    {
+      "description": "Valid - digit 0",
+      "data": "00000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 1",
+      "data": "11111111",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 2",
+      "data": "22222222",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 3",
+      "data": "33333333",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 4",
+      "data": "44444444",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 5",
+      "data": "55555555",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 6",
+      "data": "66666666",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 7",
+      "data": "77777777",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 8",
+      "data": "88888888",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 9",
+      "data": "99999999",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter A",
+      "data": "AAAAAAAA",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter V",
+      "data": "VVVVVVVV",
+      "valid": true
+    },
+    {
+      "description": "Valid - repeating pattern",
+      "data": "0A0A0A0A",
+      "valid": true
+    },
+    {
+      "description": "Valid - very long valid base32hex",
+      "data": "91IMOR3F5GG5E33IDHIA====",
+      "valid": true
+    },
+    {
+      "description": "Invalid - 3 chars with 4 padding (should be 6 padding for 2 chars)",
+      "data": "C4P====",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 6 chars with 3 padding (no valid padding for 6 chars)",
+      "data": "CPNMUO===",
+      "valid": false
+    }
+  ]
+}
