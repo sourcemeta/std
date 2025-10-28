@@ -1,0 +1,76 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2004/g-day.json",
+  "tests": [
+    {
+      "description": "Valid - basic day",
+      "data": "---15",
+      "valid": true
+    },
+    {
+      "description": "Valid - day with Z timezone",
+      "data": "---15Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - day with positive offset",
+      "data": "---15+05:30",
+      "valid": true
+    },
+    {
+      "description": "Valid - day with negative offset",
+      "data": "---15-08:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 01",
+      "data": "---01",
+      "valid": true
+    },
+    {
+      "description": "Valid - day 31",
+      "data": "---31",
+      "valid": true
+    },
+    {
+      "description": "Invalid - day 00",
+      "data": "---00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 32",
+      "data": "---32",
+      "valid": false
+    },
+    {
+      "description": "Invalid - single digit day",
+      "data": "---5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - two dashes",
+      "data": "--15",
+      "valid": false
+    },
+    {
+      "description": "Invalid - four dashes",
+      "data": "----15",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with month",
+      "data": "---05-15",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 15,
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}

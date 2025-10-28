@@ -1,0 +1,101 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2004/duration.json",
+  "tests": [
+    {
+      "description": "Valid - years only",
+      "data": "P1Y",
+      "valid": true
+    },
+    {
+      "description": "Valid - months only",
+      "data": "P6M",
+      "valid": true
+    },
+    {
+      "description": "Valid - days only",
+      "data": "P100D",
+      "valid": true
+    },
+    {
+      "description": "Valid - hours only",
+      "data": "PT5H",
+      "valid": true
+    },
+    {
+      "description": "Valid - minutes only",
+      "data": "PT30M",
+      "valid": true
+    },
+    {
+      "description": "Valid - seconds only",
+      "data": "PT45S",
+      "valid": true
+    },
+    {
+      "description": "Valid - full date and time",
+      "data": "P1Y2M3DT4H5M6S",
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal seconds",
+      "data": "PT1.5S",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative duration years",
+      "data": "-P1Y",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative duration full",
+      "data": "-P1Y2M3DT4H5M6S",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative duration with decimal",
+      "data": "-PT30.5M",
+      "valid": true
+    },
+    {
+      "description": "Invalid - empty P",
+      "data": "P",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty PT",
+      "data": "PT",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty -P",
+      "data": "-P",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty -PT",
+      "data": "-PT",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing P",
+      "data": "1Y2M3D",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing T for time",
+      "data": "P1Y2M3D4H5M6S",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 100,
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2004/g-year.json",
+  "tests": [
+    {
+      "description": "Valid - basic year",
+      "data": "2023",
+      "valid": true
+    },
+    {
+      "description": "Valid - year with Z timezone",
+      "data": "2023Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - year with positive offset",
+      "data": "2023+05:30",
+      "valid": true
+    },
+    {
+      "description": "Valid - year with negative offset",
+      "data": "2023-08:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - year 9999",
+      "data": "9999",
+      "valid": true
+    },
+    {
+      "description": "Invalid - year 0000 (not allowed in XML Schema 1.0)",
+      "data": "0000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - year 0000 with timezone",
+      "data": "0000Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative year 0000",
+      "data": "-0000",
+      "valid": false
+    },
+    {
+      "description": "Valid - negative year",
+      "data": "-0001",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative year with timezone",
+      "data": "-2023Z",
+      "valid": true
+    },
+    {
+      "description": "Invalid - three digit year",
+      "data": "999",
+      "valid": false
+    },
+    {
+      "description": "Invalid - five digit year",
+      "data": "10000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with month component",
+      "data": "2023-05",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with full date",
+      "data": "2023-05-15",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 2023,
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}

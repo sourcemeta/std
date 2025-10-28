@@ -1,0 +1,121 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2004/date.json",
+  "tests": [
+    {
+      "description": "Valid - basic date",
+      "data": "2023-05-15",
+      "valid": true
+    },
+    {
+      "description": "Valid - date with Z timezone",
+      "data": "2023-05-15Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - date with positive offset",
+      "data": "2023-05-15+05:30",
+      "valid": true
+    },
+    {
+      "description": "Valid - date with negative offset",
+      "data": "2023-05-15-08:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - January 1",
+      "data": "2023-01-01",
+      "valid": true
+    },
+    {
+      "description": "Valid - December 31",
+      "data": "2023-12-31",
+      "valid": true
+    },
+    {
+      "description": "Valid - February 29 in leap year 2020",
+      "data": "2020-02-29",
+      "valid": true
+    },
+    {
+      "description": "Valid - February 29 (leap year validation is consumer responsibility)",
+      "data": "2023-02-29",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative year",
+      "data": "-0001-12-31",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative year with timezone",
+      "data": "-2023-05-15Z",
+      "valid": true
+    },
+    {
+      "description": "Invalid - year 0000 (not allowed in XML Schema 1.0)",
+      "data": "0000-01-01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - year 0000 with timezone",
+      "data": "0000-06-15Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative year 0000",
+      "data": "-0000-12-31",
+      "valid": false
+    },
+    {
+      "description": "Invalid - February 30",
+      "data": "2023-02-30",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 31 in 30-day month",
+      "data": "2023-04-31",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 32",
+      "data": "2023-05-32",
+      "valid": false
+    },
+    {
+      "description": "Invalid - month 13",
+      "data": "2023-13-01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - month 00",
+      "data": "2023-00-01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 00",
+      "data": "2023-05-00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - three digit year",
+      "data": "999-05-15",
+      "valid": false
+    },
+    {
+      "description": "Invalid - five digit year",
+      "data": "10000-05-15",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with time component",
+      "data": "2023-05-15T14:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 20230515,
+      "valid": false
+    }
+  ]
+}

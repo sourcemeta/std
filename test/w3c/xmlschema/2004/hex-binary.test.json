@@ -1,0 +1,501 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2004/hex-binary.json",
+  "tests": [
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Valid - single byte lowercase",
+      "data": "0f",
+      "valid": true
+    },
+    {
+      "description": "Valid - single byte uppercase",
+      "data": "0F",
+      "valid": true
+    },
+    {
+      "description": "Valid - single byte mixed case",
+      "data": "0F",
+      "valid": true
+    },
+    {
+      "description": "Valid - two bytes",
+      "data": "0FB7",
+      "valid": true
+    },
+    {
+      "description": "Valid - all lowercase",
+      "data": "deadbeef",
+      "valid": true
+    },
+    {
+      "description": "Valid - all uppercase",
+      "data": "DEADBEEF",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed case",
+      "data": "DeAdBeEf",
+      "valid": true
+    },
+    {
+      "description": "Valid - all hex digits lowercase",
+      "data": "0123456789abcdef",
+      "valid": true
+    },
+    {
+      "description": "Valid - all hex digits uppercase",
+      "data": "0123456789ABCDEF",
+      "valid": true
+    },
+    {
+      "description": "Valid - many bytes",
+      "data": "0123456789ABCDEF0123456789ABCDEF",
+      "valid": true
+    },
+    {
+      "description": "Valid - zeros",
+      "data": "0000",
+      "valid": true
+    },
+    {
+      "description": "Valid - FFs",
+      "data": "FFFF",
+      "valid": true
+    },
+    {
+      "description": "Invalid - odd number of digits",
+      "data": "0FB",
+      "valid": false
+    },
+    {
+      "description": "Invalid - single digit",
+      "data": "F",
+      "valid": false
+    },
+    {
+      "description": "Invalid - three digits",
+      "data": "ABC",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains G",
+      "data": "0G",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains Z",
+      "data": "0Z",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains space",
+      "data": "0F B7",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains dash",
+      "data": "0F-B7",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains colon",
+      "data": "0F:B7",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading space",
+      "data": " 0FB7",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing space",
+      "data": "0FB7 ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains lowercase g",
+      "data": "0g",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains non-hex letter",
+      "data": "HELLO",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - boolean type",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null type",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains special chars",
+      "data": "0F@B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains plus",
+      "data": "0F+B7",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains slash",
+      "data": "0F/B7",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains equals",
+      "data": "0F=B7",
+      "valid": false
+    },
+    {
+      "description": "Valid - 4 bytes",
+      "data": "ABCD1234",
+      "valid": true
+    },
+    {
+      "description": "Valid - 8 bytes",
+      "data": "0123456789ABCDEF",
+      "valid": true
+    },
+    {
+      "description": "Valid - 16 bytes",
+      "data": "0123456789ABCDEF0123456789ABCDEF",
+      "valid": true
+    },
+    {
+      "description": "Valid - 32 bytes",
+      "data": "0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF",
+      "valid": true
+    },
+    {
+      "description": "Valid - all F uppercase",
+      "data": "FFFFFFFF",
+      "valid": true
+    },
+    {
+      "description": "Valid - all f lowercase",
+      "data": "ffffffff",
+      "valid": true
+    },
+    {
+      "description": "Valid - all zeros",
+      "data": "00000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - alternating hex digits",
+      "data": "0A0B0C0D",
+      "valid": true
+    },
+    {
+      "description": "Valid - sequential hex",
+      "data": "0123456789ABCDEF",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed case sequential",
+      "data": "0123456789AbCdEf",
+      "valid": true
+    },
+    {
+      "description": "Valid - lowercase sequential",
+      "data": "0123456789abcdef",
+      "valid": true
+    },
+    {
+      "description": "Valid - only digits",
+      "data": "01234567",
+      "valid": true
+    },
+    {
+      "description": "Valid - only uppercase letters",
+      "data": "ABCDEF",
+      "valid": true
+    },
+    {
+      "description": "Valid - only lowercase letters",
+      "data": "abcdef",
+      "valid": true
+    },
+    {
+      "description": "Valid - start with 0",
+      "data": "00AB",
+      "valid": true
+    },
+    {
+      "description": "Valid - start with F",
+      "data": "FFAB",
+      "valid": true
+    },
+    {
+      "description": "Valid - end with 0",
+      "data": "AB00",
+      "valid": true
+    },
+    {
+      "description": "Valid - end with F",
+      "data": "ABFF",
+      "valid": true
+    },
+    {
+      "description": "Valid - repeated pattern",
+      "data": "ABABABAB",
+      "valid": true
+    },
+    {
+      "description": "Valid - all same byte",
+      "data": "AAAAAAAA",
+      "valid": true
+    },
+    {
+      "description": "Invalid - single 0",
+      "data": "0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - single A",
+      "data": "A",
+      "valid": false
+    },
+    {
+      "description": "Invalid - three chars",
+      "data": "0AB",
+      "valid": false
+    },
+    {
+      "description": "Invalid - five chars",
+      "data": "0ABCD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - seven chars",
+      "data": "0ABCDEF",
+      "valid": false
+    },
+    {
+      "description": "Invalid - nine chars",
+      "data": "0ABCDEF12",
+      "valid": false
+    },
+    {
+      "description": "Invalid - eleven chars",
+      "data": "0ABCDEF1234",
+      "valid": false
+    },
+    {
+      "description": "Invalid - G at start",
+      "data": "G0AB",
+      "valid": false
+    },
+    {
+      "description": "Invalid - G at end",
+      "data": "AB0G",
+      "valid": false
+    },
+    {
+      "description": "Invalid - G in middle",
+      "data": "0GBC",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase g at start",
+      "data": "g0ab",
+      "valid": false
+    },
+    {
+      "description": "Invalid - H",
+      "data": "0HAB",
+      "valid": false
+    },
+    {
+      "description": "Invalid - I",
+      "data": "0IAB",
+      "valid": false
+    },
+    {
+      "description": "Invalid - J",
+      "data": "0JAB",
+      "valid": false
+    },
+    {
+      "description": "Invalid - Z",
+      "data": "0ZAB",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase h",
+      "data": "0hab",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase z",
+      "data": "0zab",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains .",
+      "data": "0A.B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ,",
+      "data": "0A,BC",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ;",
+      "data": "0A;B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains !",
+      "data": "0A!B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ?",
+      "data": "0A?B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains @",
+      "data": "0A@B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains #",
+      "data": "0A#B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains $",
+      "data": "0A$B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains %",
+      "data": "0A%B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains &",
+      "data": "0A&B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains *",
+      "data": "0A*B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains (",
+      "data": "0A(B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains )",
+      "data": "0A)B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains [",
+      "data": "0A[B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ]",
+      "data": "0A]B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains {",
+      "data": "0A{B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains }",
+      "data": "0A}B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains |",
+      "data": "0A|B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains \\",
+      "data": "0A\\B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ~",
+      "data": "0A~B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains `",
+      "data": "0A`B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ^",
+      "data": "0A^B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains <",
+      "data": "0A<B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains >",
+      "data": "0A>B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains tab",
+      "data": "0A\tBC",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains carriage return",
+      "data": "0A\rBC",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-ASCII",
+      "data": "0Aé",
+      "valid": false
+    },
+    {
+      "description": "Invalid - emoji",
+      "data": "0A😀",
+      "valid": false
+    },
+    {
+      "description": "Invalid - underscore",
+      "data": "0A_B",
+      "valid": false
+    },
+    {
+      "description": "Invalid - equals mixed in",
+      "data": "0A=B",
+      "valid": false
+    }
+  ]
+}
