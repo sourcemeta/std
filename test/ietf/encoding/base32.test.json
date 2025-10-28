@@ -1,0 +1,491 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/encoding/base32.json",
+  "tests": [
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Valid - single byte (2 chars + 6 padding)",
+      "data": "ME======",
+      "valid": true
+    },
+    {
+      "description": "Valid - two bytes (4 chars + 4 padding)",
+      "data": "MZXQ====",
+      "valid": true
+    },
+    {
+      "description": "Valid - three bytes (5 chars + 3 padding)",
+      "data": "MZXW6===",
+      "valid": true
+    },
+    {
+      "description": "Valid - four bytes (7 chars + 1 padding)",
+      "data": "MZXW6YQ=",
+      "valid": true
+    },
+    {
+      "description": "Valid - five bytes (8 chars, no padding)",
+      "data": "MZXW6YTB",
+      "valid": true
+    },
+    {
+      "description": "Valid - 'Hello World!'",
+      "data": "JBSWY3DPEBLW64TMMQ======",
+      "valid": true
+    },
+    {
+      "description": "Valid - 'foo'",
+      "data": "MZXW6===",
+      "valid": true
+    },
+    {
+      "description": "Valid - 'foobar'",
+      "data": "MZXW6YTBOI======",
+      "valid": true
+    },
+    {
+      "description": "Valid - all A's",
+      "data": "AAAAAAAA",
+      "valid": true
+    },
+    {
+      "description": "Valid - all 7's",
+      "data": "77777777",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed alphabet",
+      "data": "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567",
+      "valid": true
+    },
+    {
+      "description": "Valid - only letters A-Z",
+      "data": "ABCDEFGHIJKLMNOP",
+      "valid": true
+    },
+    {
+      "description": "Valid - only digits 2-7",
+      "data": "23456723",
+      "valid": true
+    },
+    {
+      "description": "Valid - 16 chars no padding",
+      "data": "ABCDEFGHIJKLMNOP",
+      "valid": true
+    },
+    {
+      "description": "Valid - 24 chars no padding",
+      "data": "ABCDEFGHIJKLMNOPQRSTUVWX",
+      "valid": true
+    },
+    {
+      "description": "Valid - long string with padding",
+      "data": "JBSWY3DPEBLW64TMMQQQ====",
+      "valid": true
+    },
+    {
+      "description": "Invalid - single char without padding",
+      "data": "M",
+      "valid": false
+    },
+    {
+      "description": "Invalid - two chars without padding",
+      "data": "ME",
+      "valid": false
+    },
+    {
+      "description": "Invalid - three chars without padding",
+      "data": "MEZ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - four chars without padding",
+      "data": "MZXQ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - five chars without padding",
+      "data": "MZXW6",
+      "valid": false
+    },
+    {
+      "description": "Invalid - six chars without padding",
+      "data": "MZXW6Y",
+      "valid": false
+    },
+    {
+      "description": "Invalid - seven chars without padding",
+      "data": "MZXW6YQ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - nine chars without padding",
+      "data": "MZXW6YTBO",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains 0 (not in base32 alphabet)",
+      "data": "M0======",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains 1 (not in base32 alphabet)",
+      "data": "M1======",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains 8 (not in base32 alphabet)",
+      "data": "M8======",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains 9 (not in base32 alphabet)",
+      "data": "M9======",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase letters",
+      "data": "mzxw6===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed case",
+      "data": "MzXw6===",
+      "valid": false
+    },
+    {
+      "description": "Valid - 7 chars + 1 padding (non-canonical but syntactically valid)",
+      "data": "MZXW6YT=",
+      "valid": true
+    },
+    {
+      "description": "Invalid - wrong padding count (2 equals)",
+      "data": "MZXW6Y==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - wrong padding count (5 equals)",
+      "data": "MZX=====",
+      "valid": false
+    },
+    {
+      "description": "Invalid - wrong padding count (7 equals)",
+      "data": "M=======",
+      "valid": false
+    },
+    {
+      "description": "Invalid - too much padding (8 equals)",
+      "data": "========",
+      "valid": false
+    },
+    {
+      "description": "Invalid - padding in middle",
+      "data": "ME======MZXW6===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - padding not at end",
+      "data": "M=ZXQAAA",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains space",
+      "data": "MZXW 6===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains hyphen",
+      "data": "MZXW-6===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains underscore",
+      "data": "MZXW_6===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains plus",
+      "data": "MZXW+6===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains slash",
+      "data": "MZXW/6===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains period",
+      "data": "MZXW.6===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains comma",
+      "data": "MZXW,6===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains (",
+      "data": "MZXW(===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains )",
+      "data": "MZXW)===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains [",
+      "data": "MZXW[===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ]",
+      "data": "MZXW]===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains {",
+      "data": "MZXW{===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains }",
+      "data": "MZXW}===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains !",
+      "data": "MZXW!===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ?",
+      "data": "MZXW?===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains @",
+      "data": "MZXW@===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains #",
+      "data": "MZXW#===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains $",
+      "data": "MZXW$===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains %",
+      "data": "MZXW%===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ^",
+      "data": "MZXW^===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains &",
+      "data": "MZXW&===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains *",
+      "data": "MZXW*===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ~",
+      "data": "MZXW~===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains `",
+      "data": "MZXW`===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains |",
+      "data": "MZXW|===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains \\",
+      "data": "MZXW\\===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains :",
+      "data": "MZXW:===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ;",
+      "data": "MZXW;===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains '",
+      "data": "MZXW'===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains \"",
+      "data": "MZXW\"===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains <",
+      "data": "MZXW<===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains >",
+      "data": "MZXW>===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading space",
+      "data": " MZXW6===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing space",
+      "data": "MZXW6=== ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading tab",
+      "data": "\tMZXW6===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing tab",
+      "data": "MZXW6===\t",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tab in middle",
+      "data": "MZXW\t6===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains newline",
+      "data": "MZXW\n6===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains carriage return",
+      "data": "MZXW\r6===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-ASCII character",
+      "data": "MZXWé===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - emoji",
+      "data": "MZXW😀===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - boolean type",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null type",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid - padding at beginning",
+      "data": "======ME",
+      "valid": false
+    },
+    {
+      "description": "Invalid - only padding",
+      "data": "========",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed padding",
+      "data": "M=Z=W===",
+      "valid": false
+    },
+    {
+      "description": "Valid - all alphabet chars at start",
+      "data": "ABCDEFGH",
+      "valid": true
+    },
+    {
+      "description": "Valid - all alphabet chars at end",
+      "data": "STUVWXYZ",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 2",
+      "data": "2AAAAAAA",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 3",
+      "data": "3AAAAAAA",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 4",
+      "data": "4AAAAAAA",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 5",
+      "data": "5AAAAAAA",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 6",
+      "data": "6AAAAAAA",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit 7",
+      "data": "7AAAAAAA",
+      "valid": true
+    },
+    {
+      "description": "Valid - repeating pattern",
+      "data": "ABABABABABABABAB",
+      "valid": true
+    },
+    {
+      "description": "Valid - very long valid base32",
+      "data": "JBSWY3DPFQQFO33SNRSCC===",
+      "valid": true
+    },
+    {
+      "description": "Invalid - 3 chars with 4 padding (should be 6 padding for 2 chars)",
+      "data": "MEZ====",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 6 chars with 3 padding (no valid padding for 6 chars)",
+      "data": "MZXW6Y===",
+      "valid": false
+    }
+  ]
+}

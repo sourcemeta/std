@@ -1,0 +1,541 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/ietf/encoding/base64url.json",
+  "tests": [
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Valid - single char with padding",
+      "data": "YQ==",
+      "valid": true
+    },
+    {
+      "description": "Valid - two chars with padding",
+      "data": "YWI=",
+      "valid": true
+    },
+    {
+      "description": "Valid - three chars no padding",
+      "data": "YWJj",
+      "valid": true
+    },
+    {
+      "description": "Valid - four chars",
+      "data": "YWJjZA==",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hello World",
+      "data": "SGVsbG8gV29ybGQh",
+      "valid": true
+    },
+    {
+      "description": "Invalid - insufficient chars in final group",
+      "data": "a-b_c==",
+      "valid": false
+    },
+    {
+      "description": "Valid - with hyphen",
+      "data": "a-b_cg==",
+      "valid": true
+    },
+    {
+      "description": "Valid - with underscore",
+      "data": "abc_def=",
+      "valid": true
+    },
+    {
+      "description": "Valid - all uppercase",
+      "data": "QUJDRA==",
+      "valid": true
+    },
+    {
+      "description": "Valid - all lowercase",
+      "data": "cXdlcg==",
+      "valid": true
+    },
+    {
+      "description": "Valid - all digits",
+      "data": "MTIzNDU2Nzg5MA==",
+      "valid": true
+    },
+    {
+      "description": "Valid - GIF header",
+      "data": "R0lGODlhAQABAAAAACw=",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple of 4 chars",
+      "data": "YWJjZGVmZ2hpamtsbW5vcA==",
+      "valid": true
+    },
+    {
+      "description": "Valid - long string",
+      "data": "VGhpcyBpcyBhIGxvbmcgYmFzZTY0IHVybCBlbmNvZGVkIHN0cmluZyB0aGF0IHNob3VsZCBiZSB2YWxpZA==",
+      "valid": true
+    },
+    {
+      "description": "Invalid - one equals padding only",
+      "data": "YWI==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - three equals",
+      "data": "YQ===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - padding in middle",
+      "data": "YQ==YWI=",
+      "valid": false
+    },
+    {
+      "description": "Invalid - padding not at end",
+      "data": "Y=WI",
+      "valid": false
+    },
+    {
+      "description": "Invalid - single character without padding (insufficient data)",
+      "data": "Y",
+      "valid": false
+    },
+    {
+      "description": "Invalid - two characters without required padding",
+      "data": "YW",
+      "valid": false
+    },
+    {
+      "description": "Invalid - three characters without required padding",
+      "data": "YWJ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains space",
+      "data": "YWJj ZA==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains period",
+      "data": "YWJj.ZA==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains comma",
+      "data": "YWJj,ZA==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains special char",
+      "data": "YWJj@ZA==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - boolean type",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null type",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Valid - only uppercase letters",
+      "data": "ABCDEFGH",
+      "valid": true
+    },
+    {
+      "description": "Valid - only lowercase letters",
+      "data": "abcdefgh",
+      "valid": true
+    },
+    {
+      "description": "Valid - only digits",
+      "data": "01234567",
+      "valid": true
+    },
+    {
+      "description": "Valid - hyphen at start",
+      "data": "-ABC",
+      "valid": true
+    },
+    {
+      "description": "Valid - underscore at start",
+      "data": "_ABC",
+      "valid": true
+    },
+    {
+      "description": "Valid - hyphen at end",
+      "data": "ABC-",
+      "valid": true
+    },
+    {
+      "description": "Valid - underscore at end",
+      "data": "ABC_",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple hyphens",
+      "data": "A-B-C-D-",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple underscores",
+      "data": "A_B_C_D_",
+      "valid": true
+    },
+    {
+      "description": "Valid - hyphen and underscore mixed",
+      "data": "A-B_C-D_",
+      "valid": true
+    },
+    {
+      "description": "Valid - 8 chars no padding",
+      "data": "ABCDEFGH",
+      "valid": true
+    },
+    {
+      "description": "Valid - 12 chars no padding",
+      "data": "ABCDEFGHIJKL",
+      "valid": true
+    },
+    {
+      "description": "Valid - 16 chars no padding",
+      "data": "ABCDEFGHIJKLMNOP",
+      "valid": true
+    },
+    {
+      "description": "Invalid - 5 chars without required padding",
+      "data": "ABCDE",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 6 chars without required padding",
+      "data": "ABCDEF",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 7 chars without required padding",
+      "data": "ABCDEFG",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 10 chars without required padding",
+      "data": "ABCDEFGHIJ",
+      "valid": false
+    },
+    {
+      "description": "Valid - padding with two equals at end of 4-char group",
+      "data": "AB==",
+      "valid": true
+    },
+    {
+      "description": "Valid - padding with one equal at end of 4-char group",
+      "data": "ABC=",
+      "valid": true
+    },
+    {
+      "description": "Valid - 8 chars then padding",
+      "data": "ABCDEFGH_w==",
+      "valid": true
+    },
+    {
+      "description": "Valid - all char types",
+      "data": "AZ09-_AB",
+      "valid": true
+    },
+    {
+      "description": "Valid - repeated patterns",
+      "data": "AAAABBBBCCCCDDDD",
+      "valid": true
+    },
+    {
+      "description": "Valid - zeros encoded",
+      "data": "AAAA",
+      "valid": true
+    },
+    {
+      "description": "Valid - alternating chars",
+      "data": "AaAaAaAa",
+      "valid": true
+    },
+    {
+      "description": "Invalid - padding at beginning",
+      "data": "==ABCD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - padding in first position",
+      "data": "=ABC",
+      "valid": false
+    },
+    {
+      "description": "Invalid - only equals",
+      "data": "====",
+      "valid": false
+    },
+    {
+      "description": "Invalid - single equals",
+      "data": "=",
+      "valid": false
+    },
+    {
+      "description": "Invalid - double equals alone",
+      "data": "==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - four equals",
+      "data": "ABCD====",
+      "valid": false
+    },
+    {
+      "description": "Invalid - padding then more chars",
+      "data": "AB==CD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - padding then padding",
+      "data": "AB===",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed padding positions",
+      "data": "A=B=",
+      "valid": false
+    },
+    {
+      "description": "Invalid - three chars with two equals",
+      "data": "ABC==",
+      "valid": false
+    },
+    {
+      "description": "Invalid - two chars with one equal",
+      "data": "AB=",
+      "valid": false
+    },
+    {
+      "description": "Invalid - five chars with padding",
+      "data": "ABCDE=",
+      "valid": false
+    },
+    {
+      "description": "Valid - uppercase G",
+      "data": "ABCG",
+      "valid": true
+    },
+    {
+      "description": "Valid - lowercase g",
+      "data": "ABCg",
+      "valid": true
+    },
+    {
+      "description": "Invalid - contains plus (base64 char, not base64url)",
+      "data": "ABC+",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains slash (base64 char, not base64url)",
+      "data": "ABC/",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains (",
+      "data": "ABC(",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains )",
+      "data": "ABC)",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains [",
+      "data": "ABC[",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ]",
+      "data": "ABC]",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains {",
+      "data": "ABC{",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains }",
+      "data": "ABC}",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains !",
+      "data": "ABC!",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ?",
+      "data": "ABC?",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains *",
+      "data": "ABC*",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains &",
+      "data": "ABC&",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains $",
+      "data": "ABC$",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains %",
+      "data": "ABC%",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains #",
+      "data": "ABC#",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ^",
+      "data": "ABC^",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ~",
+      "data": "ABC~",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains `",
+      "data": "ABC`",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains |",
+      "data": "ABC|",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains \\",
+      "data": "ABC\\",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ;",
+      "data": "ABC;",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains :",
+      "data": "ABC:",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains '",
+      "data": "ABC'",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains \"",
+      "data": "ABC\"",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains <",
+      "data": "ABC<",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains >",
+      "data": "ABC>",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading tab",
+      "data": "\tABCD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing tab",
+      "data": "ABCD\t",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tab in middle",
+      "data": "AB\tCD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading space",
+      "data": " ABCD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing space",
+      "data": "ABCD ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - multiple spaces",
+      "data": "AB  CD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains newline",
+      "data": "AB\nCD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains carriage return",
+      "data": "AB\rCD",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-ASCII character",
+      "data": "ABCé",
+      "valid": false
+    },
+    {
+      "description": "Invalid - emoji",
+      "data": "ABC😀",
+      "valid": false
+    },
+    {
+      "description": "Valid - very long valid base64url",
+      "data": "VGhpcyBpcyBhIHZlcnkgbG9uZyBiYXNlNjQgdXJsIGVuY29kZWQgc3RyaW5nIHRoYXQgd2UgYXJlIHVzaW5nIHRvIHRlc3QgdGhlIHZhbGlkYXRpb24gb2YgbG9uZ2VyIGlucHV0cyB0byBtYWtlIHN1cmUgb3VyIHBhdHRlcm4gd29ya3MgY29ycmVjdGx5",
+      "valid": true
+    },
+    {
+      "description": "Valid - URL-safe chars only",
+      "data": "A-Z_09ab",
+      "valid": true
+    },
+    {
+      "description": "Invalid - base64 plus in base64url context",
+      "data": "SGVs+G8h",
+      "valid": false
+    },
+    {
+      "description": "Invalid - base64 slash in base64url context",
+      "data": "SGVs/G8h",
+      "valid": false
+    }
+  ]
+}
