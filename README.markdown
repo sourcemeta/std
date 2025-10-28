@@ -96,7 +96,7 @@ schema:
   type: object
   properties:
     email:
-      $ref: 'https://schemas.sourcemeta.com/sourcemeta/std/v0.0.1/ietf/email/address'
+      $ref: 'https://schemas.sourcemeta.com/sourcemeta/std/<version>/ietf/email/address'
 ```
 
 To de-reference and embed these external URLs when distributing your OpenAPI
