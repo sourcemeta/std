@@ -216,6 +216,106 @@
       "description": "URI with empty authority and path",
       "data": "scheme:///path",
       "valid": true
+    },
+    {
+      "description": "Fragment without path",
+      "data": "http://example.com#fragment",
+      "valid": true
+    },
+    {
+      "description": "Query without path",
+      "data": "http://example.com?query=value",
+      "valid": true
+    },
+    {
+      "description": "Query and fragment without path",
+      "data": "http://example.com?query=value#fragment",
+      "valid": true
+    },
+    {
+      "description": "Empty fragment without path",
+      "data": "http://example.com#",
+      "valid": true
+    },
+    {
+      "description": "Empty query without path",
+      "data": "http://example.com?",
+      "valid": true
+    },
+    {
+      "description": "Multiple query parameters without path",
+      "data": "http://example.com?a=1&b=2&c=3",
+      "valid": true
+    },
+    {
+      "description": "Query with percent-encoding without path",
+      "data": "http://example.com?key=value%20here",
+      "valid": true
+    },
+    {
+      "description": "Complex query without path",
+      "data": "http://example.com?a=b&c=%2Fd%2Fe",
+      "valid": true
+    },
+    {
+      "description": "Fragment with special characters without path",
+      "data": "http://example.com#section-1.2",
+      "valid": true
+    },
+    {
+      "description": "IPv4 with fragment without path",
+      "data": "http://192.168.1.1#anchor",
+      "valid": true
+    },
+    {
+      "description": "IPv4 with query without path",
+      "data": "http://192.168.1.1?param=value",
+      "valid": true
+    },
+    {
+      "description": "IPv6 with fragment without path",
+      "data": "http://[2001:db8::1]#section",
+      "valid": true
+    },
+    {
+      "description": "IPv6 with query without path",
+      "data": "http://[2001:db8::1]?key=val",
+      "valid": true
+    },
+    {
+      "description": "Port with fragment without path",
+      "data": "http://example.com:8080#top",
+      "valid": true
+    },
+    {
+      "description": "Port with query without path",
+      "data": "http://example.com:8080?search=term",
+      "valid": true
+    },
+    {
+      "description": "Userinfo with fragment without path",
+      "data": "http://user@example.com#section",
+      "valid": true
+    },
+    {
+      "description": "Userinfo with query without path",
+      "data": "http://user@example.com?q=test",
+      "valid": true
+    },
+    {
+      "description": "Complex authority with query without path",
+      "data": "http://user:pass@example.com:8080?param=value",
+      "valid": true
+    },
+    {
+      "description": "Complex authority with fragment without path",
+      "data": "http://user:pass@example.com:8080#anchor",
+      "valid": true
+    },
+    {
+      "description": "Complex authority with query and fragment without path",
+      "data": "http://user:pass@example.com:8080?q=1#top",
+      "valid": true
     }
   ]
 }
