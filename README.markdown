@@ -50,6 +50,7 @@ expressed as JSON Schema definitions.
 
 | Organisation | Standard | Title |
 |--------------|----------|-------|
+| IEEE | [IEEE Std 754-2019](https://ieeexplore.ieee.org/document/8766229) | IEEE Standard for Floating-Point Arithmetic |
 | IEEE | [IEEE Std 1003.1-2017](https://pubs.opengroup.org/onlinepubs/9699919799/) | IEEE Standard for Information Technology—Portable Operating System Interface (POSIX) Base Specifications, Issue 7 |
 | IETF | [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986) | Uniform Resource Identifier (URI): Generic Syntax |
 | IETF | [RFC 4918](https://www.rfc-editor.org/rfc/rfc4918) | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) |

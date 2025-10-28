@@ -1,0 +1,101 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/ieee/floating-point/2019/special.json",
+  "tests": [
+    {
+      "description": "Valid - NaN",
+      "data": "NaN",
+      "valid": true
+    },
+    {
+      "description": "Valid - qNaN",
+      "data": "qNaN",
+      "valid": true
+    },
+    {
+      "description": "Valid - sNaN",
+      "data": "sNaN",
+      "valid": true
+    },
+    {
+      "description": "Valid - +Inf",
+      "data": "+Inf",
+      "valid": true
+    },
+    {
+      "description": "Valid - -Inf",
+      "data": "-Inf",
+      "valid": true
+    },
+    {
+      "description": "Invalid - lowercase nan",
+      "data": "nan",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase inf",
+      "data": "inf",
+      "valid": false
+    },
+    {
+      "description": "Invalid - +inf lowercase",
+      "data": "+inf",
+      "valid": false
+    },
+    {
+      "description": "Invalid - C23 style NAN",
+      "data": "NAN",
+      "valid": false
+    },
+    {
+      "description": "Invalid - C23 style INFINITY",
+      "data": "INFINITY",
+      "valid": false
+    },
+    {
+      "description": "Invalid - C23 style -INFINITY",
+      "data": "-INFINITY",
+      "valid": false
+    },
+    {
+      "description": "Invalid - JavaScript style Infinity",
+      "data": "Infinity",
+      "valid": false
+    },
+    {
+      "description": "Invalid - INF uppercase",
+      "data": "INF",
+      "valid": false
+    },
+    {
+      "description": "Invalid - arbitrary string",
+      "data": "not-a-number",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - number",
+      "data": 0,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}
