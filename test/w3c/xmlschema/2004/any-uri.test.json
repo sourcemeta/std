@@ -1,0 +1,391 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2004/any-uri.json",
+  "tests": [
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP URL",
+      "data": "http://www.example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTPS URL",
+      "data": "https://www.example.com/path/to/resource",
+      "valid": true
+    },
+    {
+      "description": "Valid - FTP URL",
+      "data": "ftp://ftp.example.com/file.txt",
+      "valid": true
+    },
+    {
+      "description": "Valid - mailto URL",
+      "data": "mailto:user@example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - file URL",
+      "data": "file:///path/to/file.txt",
+      "valid": true
+    },
+    {
+      "description": "Valid - relative path",
+      "data": "../relative/path.html",
+      "valid": true
+    },
+    {
+      "description": "Valid - absolute path",
+      "data": "/absolute/path/to/resource",
+      "valid": true
+    },
+    {
+      "description": "Valid - with fragment",
+      "data": "http://www.example.com#fragment",
+      "valid": true
+    },
+    {
+      "description": "Valid - with query string",
+      "data": "http://www.example.com?key=value&foo=bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - with port",
+      "data": "http://www.example.com:8080/path",
+      "valid": true
+    },
+    {
+      "description": "Valid - URN",
+      "data": "urn:isbn:0-395-36341-1",
+      "valid": true
+    },
+    {
+      "description": "Valid - data URI",
+      "data": "data:text/plain;charset=UTF-8;page=21,the%20data:1234,5678",
+      "valid": true
+    },
+    {
+      "description": "Valid - with encoded characters",
+      "data": "http://www.example.com/%C3%A9dition.html",
+      "valid": true
+    },
+    {
+      "description": "Valid - with non-ASCII characters",
+      "data": "http://www.example.com/édition.html",
+      "valid": true
+    },
+    {
+      "description": "Valid - relative with dot segments",
+      "data": "./file.txt",
+      "valid": true
+    },
+    {
+      "description": "Valid - relative with parent",
+      "data": "../../file.txt",
+      "valid": true
+    },
+    {
+      "description": "Valid - just filename",
+      "data": "file.txt",
+      "valid": true
+    },
+    {
+      "description": "Invalid - with unencoded space",
+      "data": "http://www.example.com/file with spaces.txt",
+      "valid": false
+    },
+    {
+      "description": "Valid - IPv6 host",
+      "data": "http://[2001:db8::1]:8080/path",
+      "valid": true
+    },
+    {
+      "description": "Valid - fragment only",
+      "data": "#section",
+      "valid": true
+    },
+    {
+      "description": "Valid - query only",
+      "data": "?query=value",
+      "valid": true
+    },
+    {
+      "description": "Valid - tel URI",
+      "data": "tel:+1-816-555-1212",
+      "valid": true
+    },
+    {
+      "description": "Valid - javascript protocol",
+      "data": "javascript:alert('test')",
+      "valid": true
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - boolean type",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null type",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid - object type",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Invalid - array type",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Valid - HTTPS with path and query",
+      "data": "https://example.com/path?key=value",
+      "valid": true
+    },
+    {
+      "description": "Valid - FTP with username",
+      "data": "ftp://user@ftp.example.com/file",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP with port and path",
+      "data": "http://example.com:3000/api",
+      "valid": true
+    },
+    {
+      "description": "Valid - file protocol Unix path",
+      "data": "file:///usr/local/bin/app",
+      "valid": true
+    },
+    {
+      "description": "Valid - file protocol Windows path",
+      "data": "file:///C:/Users/test/file.txt",
+      "valid": true
+    },
+    {
+      "description": "Valid - mailto with subject",
+      "data": "mailto:test@example.com?subject=Hello",
+      "valid": true
+    },
+    {
+      "description": "Valid - tel with extension",
+      "data": "tel:+1-816-555-1212;ext=123",
+      "valid": true
+    },
+    {
+      "description": "Valid - data URI base64",
+      "data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA",
+      "valid": true
+    },
+    {
+      "description": "Valid - news protocol",
+      "data": "news:comp.infosystems.www.servers.unix",
+      "valid": true
+    },
+    {
+      "description": "Valid - nntp protocol",
+      "data": "nntp://news.example.com/example.group.this",
+      "valid": true
+    },
+    {
+      "description": "Valid - telnet protocol",
+      "data": "telnet://192.0.2.16:80/",
+      "valid": true
+    },
+    {
+      "description": "Valid - wais protocol",
+      "data": "wais://example.com/database",
+      "valid": true
+    },
+    {
+      "description": "Valid - prospero protocol",
+      "data": "prospero://host.dom/link",
+      "valid": true
+    },
+    {
+      "description": "Valid - relative path with query",
+      "data": "path/to/file?query=string",
+      "valid": true
+    },
+    {
+      "description": "Valid - relative path with fragment",
+      "data": "page.html#section",
+      "valid": true
+    },
+    {
+      "description": "Valid - absolute path with query and fragment",
+      "data": "/path/page?q=1#top",
+      "valid": true
+    },
+    {
+      "description": "Valid - current directory reference",
+      "data": "./file.txt",
+      "valid": true
+    },
+    {
+      "description": "Valid - parent directory multiple levels",
+      "data": "../../../file.txt",
+      "valid": true
+    },
+    {
+      "description": "Valid - complex relative path",
+      "data": "../dir1/./dir2/../file.txt",
+      "valid": true
+    },
+    {
+      "description": "Valid - URN ISBN",
+      "data": "urn:isbn:0451450523",
+      "valid": true
+    },
+    {
+      "description": "Valid - URN ISSN",
+      "data": "urn:issn:0167-6423",
+      "valid": true
+    },
+    {
+      "description": "Valid - URN UUID",
+      "data": "urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66",
+      "valid": true
+    },
+    {
+      "description": "Valid - URN OID",
+      "data": "urn:oid:2.16.840",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP with authentication",
+      "data": "http://user:pass@example.com/",
+      "valid": true
+    },
+    {
+      "description": "Valid - IPv4 address",
+      "data": "http://192.168.1.1/",
+      "valid": true
+    },
+    {
+      "description": "Valid - IPv4 with port",
+      "data": "http://192.168.1.1:8080/path",
+      "valid": true
+    },
+    {
+      "description": "Valid - IPv6 localhost",
+      "data": "http://[::1]/",
+      "valid": true
+    },
+    {
+      "description": "Valid - IPv6 full address",
+      "data": "http://[2001:0db8:85a3:0000:0000:8a2e:0370:7334]/",
+      "valid": true
+    },
+    {
+      "description": "Valid - IPv6 compressed",
+      "data": "http://[2001:db8::1]/",
+      "valid": true
+    },
+    {
+      "description": "Valid - query string only",
+      "data": "?query=value",
+      "valid": true
+    },
+    {
+      "description": "Valid - fragment only",
+      "data": "#anchor",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple query parameters",
+      "data": "http://example.com?a=1&b=2&c=3",
+      "valid": true
+    },
+    {
+      "description": "Valid - encoded characters in path",
+      "data": "http://example.com/path%20with%20spaces",
+      "valid": true
+    },
+    {
+      "description": "Valid - encoded characters in query",
+      "data": "http://example.com?key=value%20here",
+      "valid": true
+    },
+    {
+      "description": "Valid - complex query with encoded chars",
+      "data": "http://example.com?a=b&c=%2Fd%2Fe",
+      "valid": true
+    },
+    {
+      "description": "Valid - long subdomain chain",
+      "data": "http://sub1.sub2.sub3.example.com/",
+      "valid": true
+    },
+    {
+      "description": "Valid - hyphenated domain",
+      "data": "http://my-domain.example.com/",
+      "valid": true
+    },
+    {
+      "description": "Valid - numbered subdomain",
+      "data": "http://server1.example.com/",
+      "valid": true
+    },
+    {
+      "description": "Valid - TLD only",
+      "data": "http://localhost/",
+      "valid": true
+    },
+    {
+      "description": "Valid - custom scheme",
+      "data": "myapp://open/document",
+      "valid": true
+    },
+    {
+      "description": "Valid - scheme with plus",
+      "data": "git+https://github.com/user/repo.git",
+      "valid": true
+    },
+    {
+      "description": "Valid - scheme with dot",
+      "data": "my.scheme://example",
+      "valid": true
+    },
+    {
+      "description": "Valid - scheme with hyphen",
+      "data": "my-scheme://example",
+      "valid": true
+    },
+    {
+      "description": "Valid - path with tilde",
+      "data": "http://example.com/~user/",
+      "valid": true
+    },
+    {
+      "description": "Valid - path with dot files",
+      "data": "http://example.com/.well-known/",
+      "valid": true
+    },
+    {
+      "description": "Valid - empty path after domain",
+      "data": "http://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - trailing slash",
+      "data": "http://example.com/",
+      "valid": true
+    },
+    {
+      "description": "Valid - no trailing slash on path",
+      "data": "http://example.com/path",
+      "valid": true
+    }
+  ]
+}

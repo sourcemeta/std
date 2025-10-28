@@ -1,0 +1,96 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2004/double.json",
+  "tests": [
+    {
+      "description": "Valid - positive double",
+      "data": 3.14159,
+      "valid": true
+    },
+    {
+      "description": "Valid - negative double",
+      "data": -2.71828,
+      "valid": true
+    },
+    {
+      "description": "Valid - zero",
+      "data": 0.0,
+      "valid": true
+    },
+    {
+      "description": "Valid - negative zero",
+      "data": 0.0,
+      "valid": true
+    },
+    {
+      "description": "Valid - integer",
+      "data": 42,
+      "valid": true
+    },
+    {
+      "description": "Valid - very large number",
+      "data": 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.0,
+      "valid": true
+    },
+    {
+      "description": "Valid - very small number",
+      "data": 2.23e-308,
+      "valid": true
+    },
+    {
+      "description": "Valid - positive infinity",
+      "data": "INF",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative infinity",
+      "data": "-INF",
+      "valid": true
+    },
+    {
+      "description": "Valid - not a number",
+      "data": "NaN",
+      "valid": true
+    },
+    {
+      "description": "Invalid - IEEE 754-2019 positive infinity",
+      "data": "+Inf",
+      "valid": false
+    },
+    {
+      "description": "Invalid - IEEE 754-2019 negative infinity",
+      "data": "-Inf",
+      "valid": false
+    },
+    {
+      "description": "Invalid - C23 INFINITY",
+      "data": "INFINITY",
+      "valid": false
+    },
+    {
+      "description": "Invalid - C23 -INFINITY",
+      "data": "-INFINITY",
+      "valid": false
+    },
+    {
+      "description": "Invalid - C23 NAN",
+      "data": "NAN",
+      "valid": false
+    },
+    {
+      "description": "Invalid - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid - string number",
+      "data": "123.45",
+      "valid": false
+    }
+  ]
+}

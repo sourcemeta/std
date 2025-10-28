@@ -1,0 +1,56 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2004/string.json",
+  "tests": [
+    {
+      "description": "Valid - simple string",
+      "data": "hello world",
+      "valid": true
+    },
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Valid - string with special characters",
+      "data": "Hello, 世界! @#$%^&*()",
+      "valid": true
+    },
+    {
+      "description": "Valid - string with whitespace",
+      "data": "  spaces  and\ttabs\nand newlines  ",
+      "valid": true
+    },
+    {
+      "description": "Valid - numeric string",
+      "data": "12345",
+      "valid": true
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - boolean type",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null type",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid - object type",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Invalid - array type",
+      "data": [],
+      "valid": false
+    }
+  ]
+}

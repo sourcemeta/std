@@ -1,0 +1,101 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2004/time.json",
+  "tests": [
+    {
+      "description": "Valid - basic time",
+      "data": "14:30:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with Z timezone",
+      "data": "14:30:00Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with positive offset",
+      "data": "14:30:00+05:30",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with negative offset",
+      "data": "14:30:00-08:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with fractional seconds",
+      "data": "14:30:00.123",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with fractional seconds and timezone",
+      "data": "14:30:00.123456Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - midnight",
+      "data": "00:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - end of day",
+      "data": "23:59:59",
+      "valid": true
+    },
+    {
+      "description": "Valid - 24:00:00",
+      "data": "24:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - leap second",
+      "data": "23:59:60",
+      "valid": true
+    },
+    {
+      "description": "Invalid - hour 25",
+      "data": "25:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minute 60",
+      "data": "14:60:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - second 61",
+      "data": "14:30:61",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 24:00:01",
+      "data": "24:00:01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - 24:01:00",
+      "data": "24:01:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing seconds",
+      "data": "14:30",
+      "valid": false
+    },
+    {
+      "description": "Invalid - single digit hour",
+      "data": "9:30:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 143000,
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}

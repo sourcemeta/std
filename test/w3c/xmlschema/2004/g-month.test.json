@@ -1,0 +1,81 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2004/g-month.json",
+  "tests": [
+    {
+      "description": "Valid - basic month",
+      "data": "--05",
+      "valid": true
+    },
+    {
+      "description": "Valid - month with Z timezone",
+      "data": "--05Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - month with positive offset",
+      "data": "--05+05:30",
+      "valid": true
+    },
+    {
+      "description": "Valid - month with negative offset",
+      "data": "--05-08:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - January",
+      "data": "--01",
+      "valid": true
+    },
+    {
+      "description": "Valid - December",
+      "data": "--12",
+      "valid": true
+    },
+    {
+      "description": "Invalid - month 00",
+      "data": "--00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - month 13",
+      "data": "--13",
+      "valid": false
+    },
+    {
+      "description": "Invalid - single digit month",
+      "data": "--5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - single dash",
+      "data": "-05",
+      "valid": false
+    },
+    {
+      "description": "Invalid - triple dash",
+      "data": "---05",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with day",
+      "data": "--05-15",
+      "valid": false
+    },
+    {
+      "description": "Invalid - with year",
+      "data": "2023--05",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 5,
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}

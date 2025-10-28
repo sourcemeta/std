@@ -1,0 +1,361 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2004/decimal.json",
+  "tests": [
+    {
+      "description": "Valid - positive integer",
+      "data": "123",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative integer",
+      "data": "-456",
+      "valid": true
+    },
+    {
+      "description": "Valid - positive decimal",
+      "data": "123.45",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative decimal",
+      "data": "-123.45",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero",
+      "data": "0",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero with decimal",
+      "data": "0.0",
+      "valid": true
+    },
+    {
+      "description": "Valid - explicit positive sign",
+      "data": "+123.45",
+      "valid": true
+    },
+    {
+      "description": "Valid - many digits",
+      "data": "123456789012345678.901234567890",
+      "valid": true
+    },
+    {
+      "description": "Invalid - no digits before decimal",
+      "data": ".123",
+      "valid": false
+    },
+    {
+      "description": "Invalid - no digits after decimal",
+      "data": "123.",
+      "valid": false
+    },
+    {
+      "description": "Invalid - scientific notation",
+      "data": "1.23E+10",
+      "valid": false
+    },
+    {
+      "description": "Invalid - multiple decimal points",
+      "data": "123.45.67",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 123.45,
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - text",
+      "data": "abc",
+      "valid": false
+    },
+    {
+      "description": "Valid - leading zeros integer",
+      "data": "007",
+      "valid": true
+    },
+    {
+      "description": "Valid - leading zeros decimal",
+      "data": "000.123",
+      "valid": true
+    },
+    {
+      "description": "Valid - all zeros",
+      "data": "0000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - single digit",
+      "data": "5",
+      "valid": true
+    },
+    {
+      "description": "Valid - trailing zeros after decimal",
+      "data": "123.000",
+      "valid": true
+    },
+    {
+      "description": "Valid - many decimal places",
+      "data": "1.1234567890123456789",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative zero",
+      "data": "-0",
+      "valid": true
+    },
+    {
+      "description": "Valid - positive zero with sign",
+      "data": "+0",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative zero with decimal",
+      "data": "-0.0",
+      "valid": true
+    },
+    {
+      "description": "Valid - only zero before decimal",
+      "data": "0.1",
+      "valid": true
+    },
+    {
+      "description": "Valid - single zero after decimal",
+      "data": "1.0",
+      "valid": true
+    },
+    {
+      "description": "Valid - leading zeros with sign",
+      "data": "+0007.89",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative leading zeros",
+      "data": "-000123",
+      "valid": true
+    },
+    {
+      "description": "Invalid - just plus sign",
+      "data": "+",
+      "valid": false
+    },
+    {
+      "description": "Invalid - just minus sign",
+      "data": "-",
+      "valid": false
+    },
+    {
+      "description": "Invalid - double plus",
+      "data": "++5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - double minus",
+      "data": "--5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - plus then minus",
+      "data": "+-5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - minus then plus",
+      "data": "-+5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - sign in middle",
+      "data": "12-34",
+      "valid": false
+    },
+    {
+      "description": "Invalid - plus in middle",
+      "data": "12+34",
+      "valid": false
+    },
+    {
+      "description": "Invalid - sign at end",
+      "data": "123-",
+      "valid": false
+    },
+    {
+      "description": "Invalid - plus at end",
+      "data": "123+",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading space",
+      "data": " 123",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing space",
+      "data": "123 ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space in middle",
+      "data": "12 3",
+      "valid": false
+    },
+    {
+      "description": "Invalid - space around decimal",
+      "data": "12 . 34",
+      "valid": false
+    },
+    {
+      "description": "Invalid - only decimal point",
+      "data": ".",
+      "valid": false
+    },
+    {
+      "description": "Invalid - double decimal consecutive",
+      "data": "12..34",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading decimal with plus",
+      "data": "+.5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading decimal with minus",
+      "data": "-.5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing decimal with plus",
+      "data": "+5.",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing decimal with minus",
+      "data": "-5.",
+      "valid": false
+    },
+    {
+      "description": "Invalid - letter in number",
+      "data": "12a34",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase e notation",
+      "data": "1.2e3",
+      "valid": false
+    },
+    {
+      "description": "Invalid - uppercase E notation",
+      "data": "1.2E3",
+      "valid": false
+    },
+    {
+      "description": "Invalid - comma separator",
+      "data": "1,234.56",
+      "valid": false
+    },
+    {
+      "description": "Invalid - underscore separator",
+      "data": "1_234.56",
+      "valid": false
+    },
+    {
+      "description": "Invalid - dollar sign",
+      "data": "$123",
+      "valid": false
+    },
+    {
+      "description": "Invalid - tab character",
+      "data": "\t123",
+      "valid": false
+    },
+    {
+      "description": "Invalid - multiple numbers with space",
+      "data": "123 456",
+      "valid": false
+    },
+    {
+      "description": "Invalid - parentheses",
+      "data": "(123)",
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative with parentheses",
+      "data": "-(123)",
+      "valid": false
+    },
+    {
+      "description": "Invalid - slash",
+      "data": "123/456",
+      "valid": false
+    },
+    {
+      "description": "Invalid - colon",
+      "data": "123:456",
+      "valid": false
+    },
+    {
+      "description": "Invalid - semicolon",
+      "data": "123;456",
+      "valid": false
+    },
+    {
+      "description": "Invalid - hash",
+      "data": "#123",
+      "valid": false
+    },
+    {
+      "description": "Invalid - percent",
+      "data": "123%",
+      "valid": false
+    },
+    {
+      "description": "Invalid - ampersand",
+      "data": "123&456",
+      "valid": false
+    },
+    {
+      "description": "Invalid - asterisk",
+      "data": "123*456",
+      "valid": false
+    },
+    {
+      "description": "Invalid - caret",
+      "data": "123^456",
+      "valid": false
+    },
+    {
+      "description": "Invalid - three consecutive decimals",
+      "data": "1...2",
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal before sign",
+      "data": ".+5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - mixed valid and invalid",
+      "data": "123.45abc",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing letters",
+      "data": "123xyz",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading letters",
+      "data": "xyz123",
+      "valid": false
+    }
+  ]
+}
