@@ -1,0 +1,934 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/qname.json",
+  "tests": [
+    {
+      "description": "Valid - simple unprefixed ASCII",
+      "data": "myElement",
+      "valid": true
+    },
+    {
+      "description": "Valid - unprefixed starts with underscore",
+      "data": "_myElement",
+      "valid": true
+    },
+    {
+      "description": "Valid - unprefixed with period",
+      "data": "my.Element",
+      "valid": true
+    },
+    {
+      "description": "Valid - unprefixed with hyphen",
+      "data": "my-element",
+      "valid": true
+    },
+    {
+      "description": "Valid - unprefixed with underscore in middle",
+      "data": "my_element",
+      "valid": true
+    },
+    {
+      "description": "Valid - unprefixed with ASCII digits",
+      "data": "element123",
+      "valid": true
+    },
+    {
+      "description": "Valid - unprefixed ASCII complex mix",
+      "data": "my.complex-name_45",
+      "valid": true
+    },
+    {
+      "description": "Valid - unprefixed single ASCII letter",
+      "data": "a",
+      "valid": true
+    },
+    {
+      "description": "Valid - unprefixed single underscore",
+      "data": "_",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed simple ASCII",
+      "data": "ns:element",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed with uppercase",
+      "data": "html:HTML",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed with numbers in local part",
+      "data": "ns:element123",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed with hyphen",
+      "data": "my-ns:my-element",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed with dot",
+      "data": "ns.v1:element.name",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed with underscore in prefix",
+      "data": "_ns:element",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed with underscore in local part",
+      "data": "ns:_element",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed single characters",
+      "data": "x:y",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed underscore prefix",
+      "data": "_:element",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed underscore local part",
+      "data": "ns:_",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - À (U+00C0) unprefixed",
+      "data": "Àlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - Ö (U+00D6) unprefixed",
+      "data": "Ölement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - Ø (U+00D8) unprefixed",
+      "data": "Ølement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - ö (U+00F6) unprefixed",
+      "data": "ölement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - ÿ (U+00FF) unprefixed",
+      "data": "ÿlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - Ā (U+0100) unprefixed",
+      "data": "Ālement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - ı (U+0131 dotless i) unprefixed",
+      "data": "ılement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - Über prefixed",
+      "data": "Über:element",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - both parts",
+      "data": "Àlement:Öther",
+      "valid": true
+    },
+    {
+      "description": "Valid - Greek - Α (U+0391 Alpha) unprefixed",
+      "data": "Αlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Greek - Ω (U+03A9 Omega) unprefixed",
+      "data": "Ωlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Greek - α (U+03B1 alpha) unprefixed",
+      "data": "αlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Greek - ω (U+03C9 omega) unprefixed",
+      "data": "ωlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Greek - full word unprefixed",
+      "data": "ελληνικά",
+      "valid": true
+    },
+    {
+      "description": "Valid - Greek - prefixed",
+      "data": "ελληνικά:στοιχείο",
+      "valid": true
+    },
+    {
+      "description": "Valid - Cyrillic - А (U+0410) unprefixed",
+      "data": "Аlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Cyrillic - Я (U+042F) unprefixed",
+      "data": "Яlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Cyrillic - а (U+0430) unprefixed",
+      "data": "аlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Cyrillic - я (U+044F) unprefixed",
+      "data": "яlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Cyrillic - Ё (U+0401) unprefixed",
+      "data": "Ёlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Cyrillic - prefixed",
+      "data": "элемент:имя",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hebrew - א (U+05D0 Alef) unprefixed",
+      "data": "אlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hebrew - ת (U+05EA Tav) unprefixed",
+      "data": "תlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hebrew - ש (U+05E9 Shin) unprefixed",
+      "data": "שlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hebrew - full word unprefixed",
+      "data": "עברית",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hebrew - prefixed",
+      "data": "עברית:רכיב",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic - ا (U+0627 Alif) unprefixed",
+      "data": "اlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic - ي (U+064A Ya) unprefixed",
+      "data": "يlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic - ع (U+0639 Ain) unprefixed",
+      "data": "عlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic - ص (U+0635 Sad) unprefixed",
+      "data": "صlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic - ق (U+0642 Qaf) unprefixed",
+      "data": "قlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic - م (U+0645 Meem) unprefixed",
+      "data": "مlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic - ن (U+0646 Noon) unprefixed",
+      "data": "نlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic - ه (U+0647 Ha) unprefixed",
+      "data": "هlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic - full word unprefixed",
+      "data": "عنصر",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic - prefixed",
+      "data": "عربي:عنصر",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari - अ (U+0905) unprefixed",
+      "data": "अlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari - क (U+0915 Ka) unprefixed",
+      "data": "कlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari - त (U+0924 Ta) unprefixed",
+      "data": "तlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari - द (U+0926 Da) unprefixed",
+      "data": "दlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari - न (U+0928 Na) unprefixed",
+      "data": "नlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari - प (U+092A Pa) unprefixed",
+      "data": "पlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari - म (U+092E Ma) unprefixed",
+      "data": "मlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari - र (U+0930 Ra) unprefixed",
+      "data": "रlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari - full word unprefixed",
+      "data": "तत्व",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari - prefixed",
+      "data": "नाम:तत्व",
+      "valid": true
+    },
+    {
+      "description": "Valid - Bengali - অ (U+0985) unprefixed",
+      "data": "অlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Bengali - ক (U+0995 Ka) unprefixed",
+      "data": "কlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Bengali - prefixed",
+      "data": "বাংলা:উপাদান",
+      "valid": true
+    },
+    {
+      "description": "Valid - Tamil - அ (U+0B85) unprefixed",
+      "data": "அlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Tamil - க (U+0B95 Ka) unprefixed",
+      "data": "கlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Tamil - prefixed",
+      "data": "தமிழ்:உறுப்பு",
+      "valid": true
+    },
+    {
+      "description": "Valid - Thai - ก (U+0E01) unprefixed",
+      "data": "กlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Thai - ข (U+0E02) unprefixed",
+      "data": "ขlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Thai - ค (U+0E04) unprefixed",
+      "data": "คlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Thai - ด (U+0E14) unprefixed",
+      "data": "ดlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Thai - full word unprefixed",
+      "data": "องค์ประกอบ",
+      "valid": true
+    },
+    {
+      "description": "Valid - Thai - prefixed",
+      "data": "ไทย:องค์ประกอบ",
+      "valid": true
+    },
+    {
+      "description": "Valid - Tibetan - ཀ (U+0F40 Ka) unprefixed",
+      "data": "ཀlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Tibetan - ག (U+0F42 Ga) unprefixed",
+      "data": "གlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Tibetan - ད (U+0F51 Da) unprefixed",
+      "data": "དlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Tibetan - prefixed",
+      "data": "ཀlement:དlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Georgian - ა (U+10D0) unprefixed",
+      "data": "აlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Georgian - prefixed",
+      "data": "ქართული:ელემენტი",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hangul - ᄀ (U+1100) unprefixed",
+      "data": "ᄀlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hangul - 가 (U+AC00) unprefixed",
+      "data": "가element",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hangul - full word unprefixed",
+      "data": "한글요소",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hangul - prefixed",
+      "data": "이름공간:요소",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Ideographic - 一 (U+4E00) unprefixed",
+      "data": "一element",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Ideographic - 中 (U+4E2D) unprefixed",
+      "data": "中element",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Ideographic - 文 (U+6587) unprefixed",
+      "data": "文element",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Ideographic - 日 (U+65E5) unprefixed",
+      "data": "日element",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Ideographic - full word unprefixed",
+      "data": "中文元素",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Ideographic - prefixed",
+      "data": "命名空间:元素",
+      "valid": true
+    },
+    {
+      "description": "Valid - Mixed scripts unprefixed",
+      "data": "ns中文element한글",
+      "valid": true
+    },
+    {
+      "description": "Valid - Mixed scripts prefixed",
+      "data": "ns中文:element한글",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode digit ० (U+0966) in continuation",
+      "data": "element०",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode digit १ (U+0967) in continuation",
+      "data": "element१",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode digit sequence in continuation",
+      "data": "element०१२३",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode digits in prefixed QName",
+      "data": "ns१२३:elem४५६",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic-Indic digit ٠ (U+0660) in continuation",
+      "data": "element٠",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic-Indic digits in continuation",
+      "data": "element٠١٢",
+      "valid": true
+    },
+    {
+      "description": "Valid - Bengali digit ০ (U+09E6) in continuation",
+      "data": "element০",
+      "valid": true
+    },
+    {
+      "description": "Valid - Thai digit ๐ (U+0E50) in continuation",
+      "data": "element๐",
+      "valid": true
+    },
+    {
+      "description": "Valid - Tibetan digit ༠ (U+0F20) in continuation",
+      "data": "element༠",
+      "valid": true
+    },
+    {
+      "description": "Valid - Combining acute accent (U+0301) unprefixed",
+      "data": "café",
+      "valid": true
+    },
+    {
+      "description": "Valid - Combining grave accent (U+0300) unprefixed",
+      "data": "cafè",
+      "valid": true
+    },
+    {
+      "description": "Valid - Combining tilde (U+0303) unprefixed",
+      "data": "año",
+      "valid": true
+    },
+    {
+      "description": "Valid - Multiple combining characters unprefixed",
+      "data": "é̂lement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Combining characters prefixed",
+      "data": "café:naïve",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari combining (U+093C) in continuation",
+      "data": "element़",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic combining (U+064B) in continuation",
+      "data": "elementً",
+      "valid": true
+    },
+    {
+      "description": "Valid - Thai combining (U+0E31) in continuation",
+      "data": "elementั",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender middle dot · (U+00B7) in continuation",
+      "data": "ele·ment",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender ː (U+02D0) in continuation",
+      "data": "eleːment",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender ˑ (U+02D1) in continuation",
+      "data": "eleˑment",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender · (U+0387 Greek middle dot) in continuation",
+      "data": "ele·ment",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender ـ (U+0640 Arabic tatweel) in continuation",
+      "data": "eleـment",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender ๆ (U+0E46 Thai) in continuation",
+      "data": "eleๆment",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender ໆ (U+0EC6 Lao) in continuation",
+      "data": "eleໆment",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender 々 (U+3005 Ideographic iteration mark) in continuation",
+      "data": "ele々ment",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender ゝ (U+309D Hiragana) in continuation",
+      "data": "eleゝment",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender ゞ (U+309E Hiragana voiced) in continuation",
+      "data": "eleゞment",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender ー (U+30FC Katakana) in continuation",
+      "data": "eleーment",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender ヽ (U+30FD Katakana) in continuation",
+      "data": "eleヽment",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender ヾ (U+30FE Katakana voiced) in continuation",
+      "data": "eleヾment",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extenders in prefixed QName",
+      "data": "ele·ment:na·me",
+      "valid": true
+    },
+    {
+      "description": "Valid - Long complex unprefixed QName",
+      "data": "very.long-element_name.with-many.parts_123",
+      "valid": true
+    },
+    {
+      "description": "Valid - Long complex prefixed QName",
+      "data": "very.long-namespace_123:very.long-element_name.with-many.parts",
+      "valid": true
+    },
+    {
+      "description": "Invalid: empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed starts with digit",
+      "data": "123element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed starts with hyphen",
+      "data": "-element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed starts with dot",
+      "data": ".element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains space",
+      "data": "my element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains tab",
+      "data": "my\telement",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains newline",
+      "data": "my\nelement",
+      "valid": false
+    },
+    {
+      "description": "Invalid: multiple colons",
+      "data": "ns:sub:element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: colon at start",
+      "data": ":element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: colon at end",
+      "data": "element:",
+      "valid": false
+    },
+    {
+      "description": "Invalid: only colon",
+      "data": ":",
+      "valid": false
+    },
+    {
+      "description": "Invalid: prefix starts with digit",
+      "data": "123ns:element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: prefix starts with hyphen",
+      "data": "-ns:element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: prefix starts with dot",
+      "data": ".ns:element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: local part starts with digit",
+      "data": "ns:123element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: local part starts with hyphen",
+      "data": "ns:-element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: local part starts with dot",
+      "data": "ns:.element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains @",
+      "data": "my@element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains #",
+      "data": "my#element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains $",
+      "data": "my$element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains %",
+      "data": "my%element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains <",
+      "data": "my<element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains >",
+      "data": "my>element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: prefix contains <",
+      "data": "ns<:element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: local part contains >",
+      "data": "ns:elem>ent",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains /",
+      "data": "my/element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains \\",
+      "data": "my\\element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains ?",
+      "data": "my?element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains !",
+      "data": "my!element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains ,",
+      "data": "my,element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains ;",
+      "data": "my;element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains \"",
+      "data": "my\"element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains '",
+      "data": "my'element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains (",
+      "data": "my(element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains )",
+      "data": "my)element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains [",
+      "data": "my[element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains ]",
+      "data": "my]element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains {",
+      "data": "my{element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains }",
+      "data": "my}element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: prefix contains special character",
+      "data": "ns@:element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: local part contains special character",
+      "data": "ns:elem#ent",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains control character U+0001",
+      "data": "my\u0001element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains null character U+0000",
+      "data": "my\u0000element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: unprefixed contains control character U+001F",
+      "data": "my\u001Felement",
+      "valid": false
+    },
+    {
+      "description": "Invalid: prefix with space",
+      "data": "my ns:element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: local part with space",
+      "data": "ns:my element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: space before colon",
+      "data": "ns :element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: space after colon",
+      "data": "ns: element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: prefix with tab",
+      "data": "ns\t:element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: local part with tab",
+      "data": "ns:\telement",
+      "valid": false
+    },
+    {
+      "description": "Invalid: prefix with newline",
+      "data": "ns\n:element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: local part with newline",
+      "data": "ns:\nelement",
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (number)",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (boolean)",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (null)",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (array)",
+      "data": [ "ns", "element" ],
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (object)",
+      "data": {
+        "namespace": "ns",
+        "localPart": "element"
+      },
+      "valid": false
+    }
+  ]
+}
