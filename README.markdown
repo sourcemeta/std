@@ -73,7 +73,7 @@ expressed as JSON Schema definitions.
 | ISO/IEC | [ISO/IEC 9899:2024](https://www.iso.org/standard/82075.html) | Programming languages — C |
 | JSON-RPC | [JSON-RPC 2.0](https://www.jsonrpc.org/specification) | JSON-RPC 2.0 Specification |
 | JSON Schema | [Draft 2020-12](https://json-schema.org/draft/2020-12/json-schema-core) | JSON Schema: A Media Type for Describing JSON Documents |
-| W3C | [XML Schema Part 2: Datatypes Second Edition](https://www.w3.org/TR/xmlschema-2/) | W3C Recommendation 28 October 2004 |
+| W3C | [XML Schema Part 2](https://www.w3.org/TR/xmlschema-2/) | XML Schema Datatypes Second Edition |
 
 To request coverage of another standard, please [open an issue on
 GitHub](https://github.com/sourcemeta/std/issues).
