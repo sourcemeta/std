@@ -1,0 +1,806 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/ncname.json",
+  "tests": [
+    {
+      "description": "Valid - simple ASCII element name",
+      "data": "myElement",
+      "valid": true
+    },
+    {
+      "description": "Valid - starts with underscore",
+      "data": "_myElement",
+      "valid": true
+    },
+    {
+      "description": "Valid - with period",
+      "data": "my.Element",
+      "valid": true
+    },
+    {
+      "description": "Valid - with hyphen",
+      "data": "my-element",
+      "valid": true
+    },
+    {
+      "description": "Valid - with underscore in middle",
+      "data": "my_element",
+      "valid": true
+    },
+    {
+      "description": "Valid - with ASCII digits",
+      "data": "element123",
+      "valid": true
+    },
+    {
+      "description": "Valid - ASCII complex mix",
+      "data": "my.complex-name_45",
+      "valid": true
+    },
+    {
+      "description": "Valid - single ASCII letter",
+      "data": "a",
+      "valid": true
+    },
+    {
+      "description": "Valid - single underscore",
+      "data": "_",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - À (U+00C0)",
+      "data": "Àlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - Ö (U+00D6)",
+      "data": "Ölement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - Ø (U+00D8)",
+      "data": "Ølement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - ö (U+00F6)",
+      "data": "ölement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - ÿ (U+00FF)",
+      "data": "ÿlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - Ā (U+0100)",
+      "data": "Ālement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Latin - ı (U+0131 dotless i)",
+      "data": "ılement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Greek - Α (U+0391 Alpha)",
+      "data": "Αlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Greek - Ω (U+03A9 Omega)",
+      "data": "Ωlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Greek - α (U+03B1 alpha)",
+      "data": "αlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Greek - ω (U+03C9 omega)",
+      "data": "ωlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Cyrillic - А (U+0410 A)",
+      "data": "Аlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Cyrillic - Я (U+042F Ya)",
+      "data": "Яlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Cyrillic - а (U+0430 a)",
+      "data": "аlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Cyrillic - я (U+044F ya)",
+      "data": "яlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hebrew - א (U+05D0 Alef)",
+      "data": "אlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hebrew - ת (U+05EA Tav)",
+      "data": "תlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic - ا (U+0627 Alef)",
+      "data": "اlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic - ي (U+064A Ya)",
+      "data": "يlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari - अ (U+0905 A)",
+      "data": "अlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari - ह (U+0939 Ha)",
+      "data": "हlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Bengali - অ (U+0985 A)",
+      "data": "অlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Tamil - அ (U+0B85 A)",
+      "data": "அlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Thai - ก (U+0E01 Ko Kai)",
+      "data": "กlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Tibetan - ཀ (U+0F40 Ka)",
+      "data": "ཀlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Georgian - ა (U+10D0 An)",
+      "data": "აlement",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hangul - 가 (U+AC00)",
+      "data": "가element",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hangul - 힣 (U+D7A3)",
+      "data": "힣element",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Ideographic - 一 (U+4E00)",
+      "data": "一element",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Ideographic - 龥 (U+9FA5)",
+      "data": "龥element",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Ideographic - 〇 (U+3007)",
+      "data": "〇element",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Ideographic - 〡 (U+3021)",
+      "data": "〡element",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Ideographic - 〩 (U+3029)",
+      "data": "〩element",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic-Indic digit ٠ (U+0660) in middle",
+      "data": "element٠",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic-Indic digit ٩ (U+0669) in middle",
+      "data": "element٩",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Arabic-Indic digit ۰ (U+06F0)",
+      "data": "element۰",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extended Arabic-Indic digit ۹ (U+06F9)",
+      "data": "element۹",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari digit ० (U+0966)",
+      "data": "element०",
+      "valid": true
+    },
+    {
+      "description": "Valid - Devanagari digit ९ (U+096F)",
+      "data": "element९",
+      "valid": true
+    },
+    {
+      "description": "Valid - Bengali digit ০ (U+09E6)",
+      "data": "element০",
+      "valid": true
+    },
+    {
+      "description": "Valid - Bengali digit ৯ (U+09EF)",
+      "data": "element৯",
+      "valid": true
+    },
+    {
+      "description": "Valid - Thai digit ๐ (U+0E50)",
+      "data": "element๐",
+      "valid": true
+    },
+    {
+      "description": "Valid - Thai digit ๙ (U+0E59)",
+      "data": "element๙",
+      "valid": true
+    },
+    {
+      "description": "Valid - Tibetan digit ༠ (U+0F20)",
+      "data": "element༠",
+      "valid": true
+    },
+    {
+      "description": "Valid - Tibetan digit ༩ (U+0F29)",
+      "data": "element༩",
+      "valid": true
+    },
+    {
+      "description": "Invalid - Digit at start - ASCII 0",
+      "data": "0element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - Digit at start - Arabic-Indic ٠ (U+0660)",
+      "data": "٠element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - Digit at start - Devanagari ० (U+0966)",
+      "data": "०element",
+      "valid": false
+    },
+    {
+      "description": "Valid - CombiningChar after letter - ̀ (U+0300 grave)",
+      "data": "element̀",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar after letter - ́ (U+0301 acute)",
+      "data": "element́",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar after letter - ̃ (U+0303 tilde)",
+      "data": "element̃",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar after letter - ̈ (U+0308 diaeresis)",
+      "data": "elemenẗ",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar range end - ͅ (U+0345 ypogegrammeni)",
+      "data": "elementͅ",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar - ͠ (U+0360 double tilde)",
+      "data": "element͠",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar - ͡ (U+0361 double inverted breve)",
+      "data": "element͡",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar Cyrillic - ҃ (U+0483 titlo)",
+      "data": "element҃",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar Hebrew - ְ (U+05B0 sheva)",
+      "data": "elementְ",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar Hebrew - ֿ (U+05BF rafe)",
+      "data": "elementֿ",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar Arabic - ً (U+064B fathatan)",
+      "data": "elementً",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar Arabic - ْ (U+0652 sukun)",
+      "data": "elementْ",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar Devanagari - ँ (U+0901 candrabindu)",
+      "data": "elementँ",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar Devanagari - ः (U+0903 visarga)",
+      "data": "elementः",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar Devanagari - ़ (U+093C nukta)",
+      "data": "element़",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar Thai - ฺ (U+0E3A phinthu)",
+      "data": "elementฺ",
+      "valid": true
+    },
+    {
+      "description": "Valid - CombiningChar Tibetan - ༘ (U+0F18)",
+      "data": "element༘",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender - · (U+00B7 middle dot)",
+      "data": "element·more",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender - ː (U+02D0 modifier letter triangular colon)",
+      "data": "elementːmore",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender - ˑ (U+02D1 modifier letter half triangular colon)",
+      "data": "elementˑmore",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender - · (U+0387 Greek ano teleia)",
+      "data": "element·more",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender - ـ (U+0640 Arabic tatweel)",
+      "data": "elementـmore",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender - ๆ (U+0E46 Thai maiyamok)",
+      "data": "elementๆmore",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender - ໆ (U+0EC6 Lao ko la)",
+      "data": "elementໆmore",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender - 々 (U+3005 ideographic iteration mark)",
+      "data": "element々more",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender - 〱 (U+3031)",
+      "data": "element〱more",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender - 〵 (U+3035)",
+      "data": "element〵more",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender - ゝ (U+309D hiragana iteration mark)",
+      "data": "elementゝmore",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender - ゞ (U+309E hiragana voiced iteration mark)",
+      "data": "elementゞmore",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender - ー (U+30FC katakana-hiragana prolonged sound)",
+      "data": "elementーmore",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender - ヾ (U+30FE katakana voiced iteration mark)",
+      "data": "elementヾmore",
+      "valid": true
+    },
+    {
+      "description": "Invalid - Extender at start - · (U+00B7)",
+      "data": "·element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - Extender at start - ー (U+30FC)",
+      "data": "ーelement",
+      "valid": false
+    },
+    {
+      "description": "Invalid - CombiningChar at start - ̀ (U+0300)",
+      "data": "̀element",
+      "valid": false
+    },
+    {
+      "description": "Valid - Complex Unicode name with CJK",
+      "data": "element漢字",
+      "valid": true
+    },
+    {
+      "description": "Valid - Complex Unicode name with Arabic",
+      "data": "element_العربية",
+      "valid": true
+    },
+    {
+      "description": "Valid - Complex Unicode name with Hebrew",
+      "data": "element_עברית",
+      "valid": true
+    },
+    {
+      "description": "Valid - Complex Unicode name with Cyrillic",
+      "data": "element_русский",
+      "valid": true
+    },
+    {
+      "description": "Valid - Complex Unicode name with Greek",
+      "data": "element_Ελληνικά",
+      "valid": true
+    },
+    {
+      "description": "Valid - Complex Unicode name with Thai",
+      "data": "element_ไทย",
+      "valid": true
+    },
+    {
+      "description": "Valid - Complex Unicode name with Devanagari",
+      "data": "element_हिन्दी",
+      "valid": true
+    },
+    {
+      "description": "Valid - Mixed scripts and combining chars",
+      "data": "café_Москва",
+      "valid": true
+    },
+    {
+      "description": "Valid - Letter with combining + digit",
+      "data": "element̃123",
+      "valid": true
+    },
+    {
+      "description": "Valid - Extender in middle",
+      "data": "my·element",
+      "valid": true
+    },
+    {
+      "description": "Valid - Multiple extenders",
+      "data": "my·element·name",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode digits after ASCII letter",
+      "data": "element०१२३",
+      "valid": true
+    },
+    {
+      "description": "Valid - All valid ASCII special chars",
+      "data": "a._-",
+      "valid": true
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - starts with ASCII digit",
+      "data": "9element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - starts with hyphen",
+      "data": "-element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - starts with period",
+      "data": ".element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains colon (key NCName restriction)",
+      "data": "pre:myElement",
+      "valid": false
+    },
+    {
+      "description": "Invalid - colon at start",
+      "data": ":element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - colon at end",
+      "data": "element:",
+      "valid": false
+    },
+    {
+      "description": "Invalid - colon in middle",
+      "data": "my:element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - multiple colons",
+      "data": "ns:my:element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains space",
+      "data": "my element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading space",
+      "data": " myElement",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing space",
+      "data": "myElement ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains tab",
+      "data": "my\telement",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains newline",
+      "data": "my\nelement",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains carriage return",
+      "data": "my\relement",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains @",
+      "data": "my@element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains $",
+      "data": "my$element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains %",
+      "data": "my%element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains &",
+      "data": "my&element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains *",
+      "data": "my*element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains +",
+      "data": "my+element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains =",
+      "data": "my=element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains /",
+      "data": "my/element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains \\",
+      "data": "my\\element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ?",
+      "data": "my?element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains !",
+      "data": "my!element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains #",
+      "data": "my#element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ^",
+      "data": "my^element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ~",
+      "data": "my~element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains `",
+      "data": "my`element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains |",
+      "data": "my|element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains (",
+      "data": "my(element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains )",
+      "data": "my)element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains [",
+      "data": "my[element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ]",
+      "data": "my]element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains {",
+      "data": "my{element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains }",
+      "data": "my}element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains <",
+      "data": "my<element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains >",
+      "data": "my>element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ,",
+      "data": "my,element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains ;",
+      "data": "my;element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains '",
+      "data": "my'element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains \"",
+      "data": "my\"element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - boolean type",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null type",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid - object type",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Invalid - array type",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Valid - typical XML element name",
+      "data": "book",
+      "valid": true
+    },
+    {
+      "description": "Valid - typical XML attribute name",
+      "data": "id",
+      "valid": true
+    },
+    {
+      "description": "Valid - namespace prefix would be NCName",
+      "data": "xsd",
+      "valid": true
+    },
+    {
+      "description": "Invalid - QName with namespace (has colon)",
+      "data": "xsd:element",
+      "valid": false
+    },
+    {
+      "description": "Valid - Japanese hiragana name",
+      "data": "こんにちは",
+      "valid": true
+    },
+    {
+      "description": "Valid - Japanese katakana name",
+      "data": "カタカナ",
+      "valid": true
+    },
+    {
+      "description": "Valid - Korean Hangul name",
+      "data": "한글",
+      "valid": true
+    },
+    {
+      "description": "Valid - Chinese name",
+      "data": "中文",
+      "valid": true
+    }
+  ]
+}
