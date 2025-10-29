@@ -1,0 +1,474 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/ietf/language/3066/tag-syntax.json",
+  "tests": [
+    {
+      "description": "Valid - two letter primary tag",
+      "data": "en",
+      "valid": true
+    },
+    {
+      "description": "Valid - three letter primary tag",
+      "data": "eng",
+      "valid": true
+    },
+    {
+      "description": "Valid - single letter primary tag",
+      "data": "x",
+      "valid": true
+    },
+    {
+      "description": "Valid - four letter primary tag",
+      "data": "abcd",
+      "valid": true
+    },
+    {
+      "description": "Valid - five letter primary tag",
+      "data": "abcde",
+      "valid": true
+    },
+    {
+      "description": "Valid - six letter primary tag",
+      "data": "abcdef",
+      "valid": true
+    },
+    {
+      "description": "Valid - seven letter primary tag",
+      "data": "abcdefg",
+      "valid": true
+    },
+    {
+      "description": "Valid - eight letter primary tag (maximum)",
+      "data": "abcdefgh",
+      "valid": true
+    },
+    {
+      "description": "Valid - primary tag with region subtag",
+      "data": "en-US",
+      "valid": true
+    },
+    {
+      "description": "Valid - primary tag with two letter subtag",
+      "data": "de-DE",
+      "valid": true
+    },
+    {
+      "description": "Valid - primary tag with three letter subtag",
+      "data": "zh-CHN",
+      "valid": true
+    },
+    {
+      "description": "Valid - primary tag with numeric subtag",
+      "data": "de-1996",
+      "valid": true
+    },
+    {
+      "description": "Valid - primary tag with alphanumeric subtag",
+      "data": "en-GB-oed",
+      "valid": true
+    },
+    {
+      "description": "Valid - primary tag with single letter subtag",
+      "data": "en-a",
+      "valid": true
+    },
+    {
+      "description": "Valid - primary tag with single digit subtag",
+      "data": "en-1",
+      "valid": true
+    },
+    {
+      "description": "Valid - primary tag with eight character subtag",
+      "data": "en-12345678",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple subtags",
+      "data": "en-US-x-twain",
+      "valid": true
+    },
+    {
+      "description": "Valid - three subtags",
+      "data": "zh-Hans-CN",
+      "valid": true
+    },
+    {
+      "description": "Valid - four subtags",
+      "data": "en-Latn-US-variant",
+      "valid": true
+    },
+    {
+      "description": "Valid - many subtags",
+      "data": "x-a-b-c-d-e-f",
+      "valid": true
+    },
+    {
+      "description": "Valid - i-navajo (grandfathered)",
+      "data": "i-navajo",
+      "valid": true
+    },
+    {
+      "description": "Valid - i-prefix",
+      "data": "i-klingon",
+      "valid": true
+    },
+    {
+      "description": "Valid - x-private",
+      "data": "x-private",
+      "valid": true
+    },
+    {
+      "description": "Valid - x-prefix with extension",
+      "data": "x-test-123",
+      "valid": true
+    },
+    {
+      "description": "Valid - uppercase primary",
+      "data": "EN",
+      "valid": true
+    },
+    {
+      "description": "Valid - uppercase subtag",
+      "data": "en-US",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed case primary",
+      "data": "eN",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed case subtag",
+      "data": "en-Us",
+      "valid": true
+    },
+    {
+      "description": "Valid - all uppercase",
+      "data": "EN-US-X-TEST",
+      "valid": true
+    },
+    {
+      "description": "Valid - lowercase",
+      "data": "en-us-x-test",
+      "valid": true
+    },
+    {
+      "description": "Valid - common language codes",
+      "data": "fr",
+      "valid": true
+    },
+    {
+      "description": "Valid - common language with region",
+      "data": "fr-FR",
+      "valid": true
+    },
+    {
+      "description": "Valid - Spanish Mexico",
+      "data": "es-MX",
+      "valid": true
+    },
+    {
+      "description": "Valid - Portuguese Brazil",
+      "data": "pt-BR",
+      "valid": true
+    },
+    {
+      "description": "Valid - Chinese simplified",
+      "data": "zh-CN",
+      "valid": true
+    },
+    {
+      "description": "Valid - Chinese traditional",
+      "data": "zh-TW",
+      "valid": true
+    },
+    {
+      "description": "Valid - Japanese",
+      "data": "ja",
+      "valid": true
+    },
+    {
+      "description": "Valid - Korean",
+      "data": "ko",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic",
+      "data": "ar",
+      "valid": true
+    },
+    {
+      "description": "Valid - Russian",
+      "data": "ru",
+      "valid": true
+    },
+    {
+      "description": "Valid - German Germany",
+      "data": "de-DE",
+      "valid": true
+    },
+    {
+      "description": "Valid - German Austria",
+      "data": "de-AT",
+      "valid": true
+    },
+    {
+      "description": "Valid - German Switzerland",
+      "data": "de-CH",
+      "valid": true
+    },
+    {
+      "description": "Valid - English UK",
+      "data": "en-GB",
+      "valid": true
+    },
+    {
+      "description": "Valid - English Australia",
+      "data": "en-AU",
+      "valid": true
+    },
+    {
+      "description": "Valid - English Canada",
+      "data": "en-CA",
+      "valid": true
+    },
+    {
+      "description": "Valid - French Canada",
+      "data": "fr-CA",
+      "valid": true
+    },
+    {
+      "description": "Valid - Spanish Spain",
+      "data": "es-ES",
+      "valid": true
+    },
+    {
+      "description": "Valid - Italian",
+      "data": "it",
+      "valid": true
+    },
+    {
+      "description": "Valid - Dutch",
+      "data": "nl",
+      "valid": true
+    },
+    {
+      "description": "Invalid: empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid: nine letter primary tag (too long)",
+      "data": "abcdefghi",
+      "valid": false
+    },
+    {
+      "description": "Invalid: ten letter primary tag",
+      "data": "abcdefghij",
+      "valid": false
+    },
+    {
+      "description": "Invalid: subtag too long (9 characters)",
+      "data": "en-123456789",
+      "valid": false
+    },
+    {
+      "description": "Invalid: subtag too long (10 characters)",
+      "data": "en-1234567890",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with hyphen",
+      "data": "-en",
+      "valid": false
+    },
+    {
+      "description": "Invalid: ends with hyphen",
+      "data": "en-",
+      "valid": false
+    },
+    {
+      "description": "Invalid: double hyphen",
+      "data": "en--US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: triple hyphen",
+      "data": "en---US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: only hyphen",
+      "data": "-",
+      "valid": false
+    },
+    {
+      "description": "Invalid: multiple hyphens",
+      "data": "---",
+      "valid": false
+    },
+    {
+      "description": "Invalid: primary tag with digit",
+      "data": "e1",
+      "valid": false
+    },
+    {
+      "description": "Invalid: primary tag starts with digit",
+      "data": "1en",
+      "valid": false
+    },
+    {
+      "description": "Invalid: primary tag only digits",
+      "data": "123",
+      "valid": false
+    },
+    {
+      "description": "Invalid: primary tag with special character",
+      "data": "e@n",
+      "valid": false
+    },
+    {
+      "description": "Invalid: subtag with special character",
+      "data": "en-U$",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains space",
+      "data": "en US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains space in subtag",
+      "data": "en-U S",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains underscore",
+      "data": "en_US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains period",
+      "data": "en.US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains slash",
+      "data": "en/US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains backslash",
+      "data": "en\\US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains comma",
+      "data": "en,US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains semicolon",
+      "data": "en;US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains colon",
+      "data": "en:US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains parenthesis",
+      "data": "en(US)",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains bracket",
+      "data": "en[US]",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains brace",
+      "data": "en{US}",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains quote",
+      "data": "en\"US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains apostrophe",
+      "data": "en'US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains newline",
+      "data": "en\nUS",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains tab",
+      "data": "en\tUS",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains carriage return",
+      "data": "en\rUS",
+      "valid": false
+    },
+    {
+      "description": "Invalid: leading space",
+      "data": " en",
+      "valid": false
+    },
+    {
+      "description": "Invalid: trailing space",
+      "data": "en ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: leading space before subtag",
+      "data": "en- US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: trailing space after primary",
+      "data": "en -US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: empty subtag",
+      "data": "en--US",
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (number)",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (boolean)",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (null)",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (array)",
+      "data": [ "en", "US" ],
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (object)",
+      "data": {
+        "language": "en",
+        "region": "US"
+      },
+      "valid": false
+    }
+  ]
+}

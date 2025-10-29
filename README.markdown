@@ -52,6 +52,7 @@ expressed as JSON Schema definitions.
 |--------------|----------|-------|
 | IEEE | [IEEE Std 754-2019](https://ieeexplore.ieee.org/document/8766229) | IEEE Standard for Floating-Point Arithmetic |
 | IEEE | [IEEE Std 1003.1-2017](https://pubs.opengroup.org/onlinepubs/9699919799/) | IEEE Standard for Information Technology—Portable Operating System Interface (POSIX) Base Specifications, Issue 7 |
+| IETF | [RFC 3066](https://www.rfc-editor.org/rfc/rfc3066) | Tags for the Identification of Languages |
 | IETF | [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986) | Uniform Resource Identifier (URI): Generic Syntax |
 | IETF | [RFC 4648](https://www.rfc-editor.org/rfc/rfc4648) | The Base16, Base32, and Base64 Data Encodings |
 | IETF | [RFC 4918](https://www.rfc-editor.org/rfc/rfc4918) | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) |
