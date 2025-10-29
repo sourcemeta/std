@@ -1,0 +1,187 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/entities.json",
+  "tests": [
+    {
+      "description": "Valid - two entities",
+      "data": [ "entity1", "entity2" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - single entity",
+      "data": [ "singleEntity" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple entities",
+      "data": [ "_img1", "_img2", "_img3" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - entities with special chars",
+      "data": [ "logo-main", "banner.v2", "icon_small" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - many entities",
+      "data": [ "e1", "e2", "e3", "e4", "e5" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode entities",
+      "data": [ "логотип", "изображение", "アイコン" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed script entities",
+      "data": [ "image", "画像", "зображення" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - long list",
+      "data": [
+        "entity0",
+        "entity1",
+        "entity2",
+        "entity3",
+        "entity4",
+        "entity5",
+        "entity6",
+        "entity7",
+        "entity8",
+        "entity9",
+        "entity10",
+        "entity11",
+        "entity12",
+        "entity13",
+        "entity14",
+        "entity15",
+        "entity16",
+        "entity17",
+        "entity18",
+        "entity19",
+        "entity20",
+        "entity21",
+        "entity22",
+        "entity23",
+        "entity24",
+        "entity25",
+        "entity26",
+        "entity27",
+        "entity28",
+        "entity29",
+        "entity30",
+        "entity31",
+        "entity32",
+        "entity33",
+        "entity34",
+        "entity35",
+        "entity36",
+        "entity37",
+        "entity38",
+        "entity39",
+        "entity40",
+        "entity41",
+        "entity42",
+        "entity43",
+        "entity44",
+        "entity45",
+        "entity46",
+        "entity47",
+        "entity48",
+        "entity49"
+      ],
+      "valid": true
+    },
+    {
+      "description": "Invalid: empty array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid: entity contains colon",
+      "data": [ "valid", "ns:entity" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: entity starts with digit",
+      "data": [ "valid", "5entity" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: entity contains space",
+      "data": [ "valid", "my entity" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: entity is empty",
+      "data": [ "valid", "" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: entity contains special char",
+      "data": [ "valid", "entity$ref" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: not an array (string)",
+      "data": "entity1 entity2",
+      "valid": false
+    },
+    {
+      "description": "Invalid: not an array (number)",
+      "data": 999,
+      "valid": false
+    },
+    {
+      "description": "Invalid: not an array (boolean)",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid: not an array (null)",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid: not an array (object)",
+      "data": {
+        "entities": [ "a", "b" ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid: array contains number",
+      "data": [ "valid", 111 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: array contains boolean",
+      "data": [ "valid", true ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: array contains null",
+      "data": [ "valid", null ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: array contains object",
+      "data": [
+        "valid",
+        {
+          "entity": "x"
+        }
+      ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: array contains array",
+      "data": [
+        "valid",
+        [ "nested" ]
+      ],
+      "valid": false
+    }
+  ]
+}

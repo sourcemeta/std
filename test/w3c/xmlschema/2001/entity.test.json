@@ -1,0 +1,108 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/entity.json",
+  "tests": [
+    {
+      "description": "Valid - simple entity",
+      "data": "logo",
+      "valid": true
+    },
+    {
+      "description": "Valid - with underscore",
+      "data": "_image1",
+      "valid": true
+    },
+    {
+      "description": "Valid - CamelCase",
+      "data": "MyEntity",
+      "valid": true
+    },
+    {
+      "description": "Valid - with hyphen",
+      "data": "banner-img",
+      "valid": true
+    },
+    {
+      "description": "Valid - with period",
+      "data": "icon.v2",
+      "valid": true
+    },
+    {
+      "description": "Valid - with digits",
+      "data": "entity99",
+      "valid": true
+    },
+    {
+      "description": "Valid - single letter",
+      "data": "e",
+      "valid": true
+    },
+    {
+      "description": "Valid - complex entity",
+      "data": "unparsed_entity-ref.1",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode",
+      "data": "сутність",
+      "valid": true
+    },
+    {
+      "description": "Invalid: contains colon",
+      "data": "ns:entity",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with digit",
+      "data": "7entity",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with hyphen",
+      "data": "-entity",
+      "valid": false
+    },
+    {
+      "description": "Invalid: empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains space",
+      "data": "my entity",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains special char $",
+      "data": "entity$ref",
+      "valid": false
+    },
+    {
+      "description": "Invalid: number type",
+      "data": 789,
+      "valid": false
+    },
+    {
+      "description": "Invalid: boolean type",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid: null type",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid: array type",
+      "data": [ "entity" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: object type",
+      "data": {
+        "entity": "value"
+      },
+      "valid": false
+    }
+  ]
+}

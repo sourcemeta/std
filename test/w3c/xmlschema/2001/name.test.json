@@ -548,6 +548,96 @@
       "description": "Valid - period after first char",
       "data": "a.",
       "valid": true
+    },
+    {
+      "description": "Valid - Deseret Capital Letter Long I (U+10400)",
+      "data": "𐐀test",
+      "valid": true
+    },
+    {
+      "description": "Valid - Linear B Syllable (U+10000)",
+      "data": "𐀀element",
+      "valid": true
+    },
+    {
+      "description": "Valid - Gothic Letter (U+10330)",
+      "data": "𐌰name",
+      "valid": true
+    },
+    {
+      "description": "Valid - Old Italic Letter (U+10300)",
+      "data": "𐌀id",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Unified Ideographs Extension B (U+20000)",
+      "data": "𠀀字",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Extension B character (U+20BB7)",
+      "data": "𠮷野",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Extension C (U+2A700)",
+      "data": "𪜀文",
+      "valid": true
+    },
+    {
+      "description": "Valid - Mathematical Bold Capital A (U+1D400)",
+      "data": "𝐀var",
+      "valid": true
+    },
+    {
+      "description": "Valid - Mathematical Italic Small X (U+1D465)",
+      "data": "𝑥coord",
+      "valid": true
+    },
+    {
+      "description": "Valid - Phoenician Letter (U+10900)",
+      "data": "𐤀text",
+      "valid": true
+    },
+    {
+      "description": "Valid - Lydian Letter (U+10920)",
+      "data": "𐤠name",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte character in middle",
+      "data": "test𐐀middle",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte character at end",
+      "data": "end𐐀",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple 4-byte characters",
+      "data": "𐐀test𠀀name𐌰",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte with hyphen",
+      "data": "𐐀-test",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte with period",
+      "data": "𐐀.name",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte with digits",
+      "data": "𐐀123",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte with underscore",
+      "data": "𐐀_id",
+      "valid": true
     }
   ]
 }
