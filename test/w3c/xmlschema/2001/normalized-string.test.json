@@ -1,0 +1,338 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/normalized-string.json",
+  "tests": [
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Valid - simple text",
+      "data": "Hello World",
+      "valid": true
+    },
+    {
+      "description": "Valid - single word",
+      "data": "Hello",
+      "valid": true
+    },
+    {
+      "description": "Valid - text with single spaces",
+      "data": "This is a test",
+      "valid": true
+    },
+    {
+      "description": "Valid - text with multiple consecutive spaces",
+      "data": "Multiple  spaces  are  allowed",
+      "valid": true
+    },
+    {
+      "description": "Valid - text with many consecutive spaces",
+      "data": "Many     spaces     here",
+      "valid": true
+    },
+    {
+      "description": "Valid - leading space",
+      "data": " Leading space",
+      "valid": true
+    },
+    {
+      "description": "Valid - trailing space",
+      "data": "Trailing space ",
+      "valid": true
+    },
+    {
+      "description": "Valid - leading and trailing spaces",
+      "data": " Both sides ",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple leading spaces",
+      "data": "   Multiple leading",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple trailing spaces",
+      "data": "Multiple trailing   ",
+      "valid": true
+    },
+    {
+      "description": "Valid - only spaces",
+      "data": "     ",
+      "valid": true
+    },
+    {
+      "description": "Valid - single space",
+      "data": " ",
+      "valid": true
+    },
+    {
+      "description": "Valid - text with numbers",
+      "data": "Order 123 confirmed",
+      "valid": true
+    },
+    {
+      "description": "Valid - numbers only",
+      "data": "123456",
+      "valid": true
+    },
+    {
+      "description": "Valid - special characters",
+      "data": "Special: @#$%^&*()",
+      "valid": true
+    },
+    {
+      "description": "Valid - punctuation",
+      "data": "Hello, World! How are you?",
+      "valid": true
+    },
+    {
+      "description": "Valid - hyphens and underscores",
+      "data": "hello-world_test",
+      "valid": true
+    },
+    {
+      "description": "Valid - dots and commas",
+      "data": "first.name, last.name",
+      "valid": true
+    },
+    {
+      "description": "Valid - parentheses and brackets",
+      "data": "Text (with) [brackets] {braces}",
+      "valid": true
+    },
+    {
+      "description": "Valid - quotes",
+      "data": "He said \"hello\" and 'goodbye'",
+      "valid": true
+    },
+    {
+      "description": "Valid - slashes",
+      "data": "path/to/file or back\\slash",
+      "valid": true
+    },
+    {
+      "description": "Valid - equals and plus",
+      "data": "a=b+c",
+      "valid": true
+    },
+    {
+      "description": "Valid - angle brackets",
+      "data": "<tag>content</tag>",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Latin Extended",
+      "data": "Café résumé naïve",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Greek",
+      "data": "Γεια σου κόσμε",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Cyrillic",
+      "data": "Привет мир",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Chinese",
+      "data": "你好世界",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Japanese",
+      "data": "こんにちは世界",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Korean",
+      "data": "안녕하세요 세계",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Arabic",
+      "data": "مرحبا بالعالم",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Hebrew",
+      "data": "שלום עולם",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Emoji",
+      "data": "Hello 👋 World 🌍",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed Unicode scripts",
+      "data": "Hello 世界 мир κόσμος",
+      "valid": true
+    },
+    {
+      "description": "Valid - very long string with spaces",
+      "data": "This is a very long normalized string with many words separated by single spaces and it should still be valid",
+      "valid": true
+    },
+    {
+      "description": "Invalid: contains line feed at start",
+      "data": "\nHello",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains line feed at end",
+      "data": "Hello\n",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains line feed in middle",
+      "data": "Hello\nWorld",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains multiple line feeds",
+      "data": "Line1\nLine2\nLine3",
+      "valid": false
+    },
+    {
+      "description": "Invalid: only line feed",
+      "data": "\n",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains carriage return at start",
+      "data": "\rHello",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains carriage return at end",
+      "data": "Hello\r",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains carriage return in middle",
+      "data": "Hello\rWorld",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains multiple carriage returns",
+      "data": "Line1\rLine2\rLine3",
+      "valid": false
+    },
+    {
+      "description": "Invalid: only carriage return",
+      "data": "\r",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains CRLF",
+      "data": "Hello\r\nWorld",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains tab at start",
+      "data": "\tHello",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains tab at end",
+      "data": "Hello\t",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains tab in middle",
+      "data": "Hello\tWorld",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains multiple tabs",
+      "data": "Col1\tCol2\tCol3",
+      "valid": false
+    },
+    {
+      "description": "Invalid: only tab",
+      "data": "\t",
+      "valid": false
+    },
+    {
+      "description": "Invalid: tab used for indentation",
+      "data": "\tIndented text",
+      "valid": false
+    },
+    {
+      "description": "Invalid: multiple tabs for indentation",
+      "data": "\t\tDouble indented",
+      "valid": false
+    },
+    {
+      "description": "Invalid: mixed whitespace with tab",
+      "data": "Hello \tWorld",
+      "valid": false
+    },
+    {
+      "description": "Invalid: mixed whitespace with newline",
+      "data": "Hello \nWorld",
+      "valid": false
+    },
+    {
+      "description": "Invalid: all three prohibited characters",
+      "data": "Line1\r\nLine2\tTabbed",
+      "valid": false
+    },
+    {
+      "description": "Invalid: tab between words",
+      "data": "Word1\tWord2",
+      "valid": false
+    },
+    {
+      "description": "Invalid: newline in Unicode text",
+      "data": "你好\n世界",
+      "valid": false
+    },
+    {
+      "description": "Invalid: tab in Unicode text",
+      "data": "你好\t世界",
+      "valid": false
+    },
+    {
+      "description": "Invalid: multiline paragraph",
+      "data": "First line\nSecond line\nThird line",
+      "valid": false
+    },
+    {
+      "description": "Invalid: text with line breaks for formatting",
+      "data": "Name:\nJohn Doe\nAge: 30",
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (number)",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (boolean)",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (null)",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (array)",
+      "data": [ "Hello", "World" ],
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (object)",
+      "data": {
+        "text": "Hello World"
+      },
+      "valid": false
+    }
+  ]
+}

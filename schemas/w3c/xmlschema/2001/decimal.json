@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "W3C XML Schema decimal",
   "description": "The decimal datatype represents arbitrary precision decimal numbers (§3.2.3)",
+  "$comment": "XML Schema requires minimally conforming processors to support decimal numbers with a minimum of 18 decimal digits (totalDigits). JSON's number type (IEEE 754 double-precision) provides only 15-17 significant decimal digits, which does not meet this minimum requirement. This schema uses string representation to maintain XML Schema conformance",
   "examples": [
     "-1.23",
     "12678967.543233",
