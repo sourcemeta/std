@@ -1,0 +1,108 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/idref.json",
+  "tests": [
+    {
+      "description": "Valid - simple reference",
+      "data": "ref123",
+      "valid": true
+    },
+    {
+      "description": "Valid - with underscore",
+      "data": "_refToId",
+      "valid": true
+    },
+    {
+      "description": "Valid - CamelCase",
+      "data": "MyReference",
+      "valid": true
+    },
+    {
+      "description": "Valid - with hyphen",
+      "data": "user-ref",
+      "valid": true
+    },
+    {
+      "description": "Valid - with period",
+      "data": "ref.v1",
+      "valid": true
+    },
+    {
+      "description": "Valid - with digits",
+      "data": "target42",
+      "valid": true
+    },
+    {
+      "description": "Valid - single letter",
+      "data": "a",
+      "valid": true
+    },
+    {
+      "description": "Valid - complex ref",
+      "data": "link_to-item.1",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode",
+      "data": "посилання",
+      "valid": true
+    },
+    {
+      "description": "Invalid: contains colon",
+      "data": "ns:ref",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with digit",
+      "data": "1ref",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with hyphen",
+      "data": "-ref",
+      "valid": false
+    },
+    {
+      "description": "Invalid: empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains space",
+      "data": "my ref",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains special char #",
+      "data": "ref#123",
+      "valid": false
+    },
+    {
+      "description": "Invalid: number type",
+      "data": 456,
+      "valid": false
+    },
+    {
+      "description": "Invalid: boolean type",
+      "data": false,
+      "valid": false
+    },
+    {
+      "description": "Invalid: null type",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid: array type",
+      "data": [ "ref" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: object type",
+      "data": {
+        "ref": "value"
+      },
+      "valid": false
+    }
+  ]
+}

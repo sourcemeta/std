@@ -1,0 +1,187 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/idrefs.json",
+  "tests": [
+    {
+      "description": "Valid - two references",
+      "data": [ "ref1", "ref2" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - single reference",
+      "data": [ "singleRef" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple references",
+      "data": [ "_id1", "_id2", "_id3" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - references with special chars",
+      "data": [ "link-a", "link.b", "link_c" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - many references",
+      "data": [ "r1", "r2", "r3", "r4", "r5" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode references",
+      "data": [ "реф1", "réf2", "参照3" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed script references",
+      "data": [ "ref", "参照", "リンク" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - long list",
+      "data": [
+        "ref0",
+        "ref1",
+        "ref2",
+        "ref3",
+        "ref4",
+        "ref5",
+        "ref6",
+        "ref7",
+        "ref8",
+        "ref9",
+        "ref10",
+        "ref11",
+        "ref12",
+        "ref13",
+        "ref14",
+        "ref15",
+        "ref16",
+        "ref17",
+        "ref18",
+        "ref19",
+        "ref20",
+        "ref21",
+        "ref22",
+        "ref23",
+        "ref24",
+        "ref25",
+        "ref26",
+        "ref27",
+        "ref28",
+        "ref29",
+        "ref30",
+        "ref31",
+        "ref32",
+        "ref33",
+        "ref34",
+        "ref35",
+        "ref36",
+        "ref37",
+        "ref38",
+        "ref39",
+        "ref40",
+        "ref41",
+        "ref42",
+        "ref43",
+        "ref44",
+        "ref45",
+        "ref46",
+        "ref47",
+        "ref48",
+        "ref49"
+      ],
+      "valid": true
+    },
+    {
+      "description": "Invalid: empty array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid: reference contains colon",
+      "data": [ "valid", "ns:ref" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: reference starts with digit",
+      "data": [ "valid", "9ref" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: reference contains space",
+      "data": [ "valid", "has space" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: reference is empty",
+      "data": [ "valid", "" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: reference contains special char",
+      "data": [ "valid", "ref@123" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: not an array (string)",
+      "data": "ref1 ref2",
+      "valid": false
+    },
+    {
+      "description": "Invalid: not an array (number)",
+      "data": 456,
+      "valid": false
+    },
+    {
+      "description": "Invalid: not an array (boolean)",
+      "data": false,
+      "valid": false
+    },
+    {
+      "description": "Invalid: not an array (null)",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid: not an array (object)",
+      "data": {
+        "refs": [ "a", "b" ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid: array contains number",
+      "data": [ "valid", 789 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: array contains boolean",
+      "data": [ "valid", false ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: array contains null",
+      "data": [ "valid", null ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: array contains object",
+      "data": [
+        "valid",
+        {
+          "ref": "x"
+        }
+      ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: array contains array",
+      "data": [
+        "valid",
+        [ "nested" ]
+      ],
+      "valid": false
+    }
+  ]
+}

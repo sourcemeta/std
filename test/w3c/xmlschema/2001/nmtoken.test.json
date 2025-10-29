@@ -488,6 +488,91 @@
       "description": "Invalid: contains DEL character",
       "data": "datavalue",
       "valid": false
+    },
+    {
+      "description": "Valid - Deseret Capital Letter (U+10400)",
+      "data": "𐐀test",
+      "valid": true
+    },
+    {
+      "description": "Valid - Linear B Syllable (U+10000)",
+      "data": "𐀀token",
+      "valid": true
+    },
+    {
+      "description": "Valid - Gothic Letter (U+10330)",
+      "data": "𐌰data",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Extension B (U+20000)",
+      "data": "𠀀字",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Extension B (U+20BB7)",
+      "data": "𠮷野",
+      "valid": true
+    },
+    {
+      "description": "Valid - Mathematical Bold A (U+1D400)",
+      "data": "𝐀𝐁𝐂",
+      "valid": true
+    },
+    {
+      "description": "Valid - Mathematical Italic (U+1D465)",
+      "data": "𝑥𝑦𝑧",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte at start",
+      "data": "𐐀start",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte in middle",
+      "data": "mid𐐀dle",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte at end",
+      "data": "end𐐀",
+      "valid": true
+    },
+    {
+      "description": "Valid - only 4-byte characters",
+      "data": "𐐀𠀀𐌰",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte with leading digit",
+      "data": "9𐐀test",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte with leading hyphen",
+      "data": "-𐐀test",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte with leading period",
+      "data": ".𐐀test",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte with special chars",
+      "data": "𐐀-test.value_123",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte with middle dot",
+      "data": "𐐀·𠀀",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte with colon",
+      "data": "𐐀:token",
+      "valid": true
     }
   ]
 }

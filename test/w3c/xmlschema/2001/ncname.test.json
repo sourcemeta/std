@@ -801,6 +801,76 @@
       "description": "Valid - Chinese name",
       "data": "中文",
       "valid": true
+    },
+    {
+      "description": "Valid - Deseret Capital Letter (U+10400)",
+      "data": "𐐀element",
+      "valid": true
+    },
+    {
+      "description": "Valid - Linear B Syllable (U+10000)",
+      "data": "𐀀name",
+      "valid": true
+    },
+    {
+      "description": "Valid - Gothic Letter (U+10330)",
+      "data": "𐌰test",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Extension B (U+20000)",
+      "data": "𠀀字符",
+      "valid": true
+    },
+    {
+      "description": "Valid - CJK Extension B (U+20BB7)",
+      "data": "𠮷田",
+      "valid": true
+    },
+    {
+      "description": "Valid - Mathematical Bold (U+1D400)",
+      "data": "𝐀identifier",
+      "valid": true
+    },
+    {
+      "description": "Valid - Phoenician Letter (U+10900)",
+      "data": "𐤀name",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte in middle",
+      "data": "test𐐀middle",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte at end",
+      "data": "end𐐀",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple 4-byte",
+      "data": "𐐀test𠀀",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte with hyphen",
+      "data": "𐐀-name",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte with period",
+      "data": "𐐀.element",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte with underscore",
+      "data": "𐐀_id",
+      "valid": true
+    },
+    {
+      "description": "Valid - 4-byte with digits",
+      "data": "𐐀123",
+      "valid": true
     }
   ]
 }

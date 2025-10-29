@@ -1,0 +1,113 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/id.json",
+  "tests": [
+    {
+      "description": "Valid - simple identifier",
+      "data": "id123",
+      "valid": true
+    },
+    {
+      "description": "Valid - with underscore",
+      "data": "_privateId",
+      "valid": true
+    },
+    {
+      "description": "Valid - CamelCase",
+      "data": "MyUniqueId",
+      "valid": true
+    },
+    {
+      "description": "Valid - with hyphen",
+      "data": "user-id",
+      "valid": true
+    },
+    {
+      "description": "Valid - with period",
+      "data": "id.v2",
+      "valid": true
+    },
+    {
+      "description": "Valid - with digits",
+      "data": "element123",
+      "valid": true
+    },
+    {
+      "description": "Valid - single letter",
+      "data": "x",
+      "valid": true
+    },
+    {
+      "description": "Valid - complex id",
+      "data": "user_profile-v2.1",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode",
+      "data": "ідентифікатор",
+      "valid": true
+    },
+    {
+      "description": "Invalid: contains colon",
+      "data": "ns:id",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with digit",
+      "data": "9id",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with hyphen",
+      "data": "-id",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with period",
+      "data": ".id",
+      "valid": false
+    },
+    {
+      "description": "Invalid: empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains space",
+      "data": "my id",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains special char @",
+      "data": "id@123",
+      "valid": false
+    },
+    {
+      "description": "Invalid: number type",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid: boolean type",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid: null type",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid: array type",
+      "data": [ "id" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: object type",
+      "data": {
+        "id": "value"
+      },
+      "valid": false
+    }
+  ]
+}
