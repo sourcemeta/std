@@ -1,0 +1,149 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/notation.json",
+  "tests": [
+    {
+      "description": "Valid - simple unprefixed notation name",
+      "data": "jpeg",
+      "valid": true
+    },
+    {
+      "description": "Valid - unprefixed notation name",
+      "data": "png",
+      "valid": true
+    },
+    {
+      "description": "Valid - unprefixed with hyphen",
+      "data": "image-jpeg",
+      "valid": true
+    },
+    {
+      "description": "Valid - unprefixed with dot",
+      "data": "text.plain",
+      "valid": true
+    },
+    {
+      "description": "Valid - unprefixed with underscore",
+      "data": "video_mpeg",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed notation name",
+      "data": "mime:image-jpeg",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed with namespace",
+      "data": "format:pdf",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed with uppercase",
+      "data": "MIME:JPEG",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed complex name",
+      "data": "media.type:application-xml",
+      "valid": true
+    },
+    {
+      "description": "Valid - single character",
+      "data": "x",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode notation name",
+      "data": "图像",
+      "valid": true
+    },
+    {
+      "description": "Valid - prefixed Unicode",
+      "data": "类型:图像",
+      "valid": true
+    },
+    {
+      "description": "Invalid: empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with digit",
+      "data": "123format",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with hyphen",
+      "data": "-format",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains space",
+      "data": "image jpeg",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains tab",
+      "data": "image\tjpeg",
+      "valid": false
+    },
+    {
+      "description": "Invalid: multiple colons",
+      "data": "mime:type:jpeg",
+      "valid": false
+    },
+    {
+      "description": "Invalid: colon at start",
+      "data": ":jpeg",
+      "valid": false
+    },
+    {
+      "description": "Invalid: colon at end",
+      "data": "jpeg:",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains special character",
+      "data": "image@jpeg",
+      "valid": false
+    },
+    {
+      "description": "Invalid: prefix starts with digit",
+      "data": "123mime:jpeg",
+      "valid": false
+    },
+    {
+      "description": "Invalid: local part starts with digit",
+      "data": "mime:123jpeg",
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (number)",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (boolean)",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (null)",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (array)",
+      "data": [ "mime", "jpeg" ],
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (object)",
+      "data": {
+        "prefix": "mime",
+        "localPart": "jpeg"
+      },
+      "valid": false
+    }
+  ]
+}
