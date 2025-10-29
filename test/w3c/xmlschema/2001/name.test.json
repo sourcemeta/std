@@ -1,0 +1,553 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/name.json",
+  "tests": [
+    {
+      "description": "Valid - simple ASCII letters",
+      "data": "element",
+      "valid": true
+    },
+    {
+      "description": "Valid - with underscore prefix",
+      "data": "_private",
+      "valid": true
+    },
+    {
+      "description": "Valid - with colon (namespace)",
+      "data": "my:name",
+      "valid": true
+    },
+    {
+      "description": "Valid - CamelCase",
+      "data": "CamelCase",
+      "valid": true
+    },
+    {
+      "description": "Valid - with hyphen",
+      "data": "element-name",
+      "valid": true
+    },
+    {
+      "description": "Valid - with period",
+      "data": "element.name",
+      "valid": true
+    },
+    {
+      "description": "Valid - with digits",
+      "data": "element123",
+      "valid": true
+    },
+    {
+      "description": "Valid - single letter",
+      "data": "a",
+      "valid": true
+    },
+    {
+      "description": "Valid - single underscore",
+      "data": "_",
+      "valid": true
+    },
+    {
+      "description": "Valid - single colon",
+      "data": ":",
+      "valid": true
+    },
+    {
+      "description": "Valid - uppercase letters",
+      "data": "ELEMENT",
+      "valid": true
+    },
+    {
+      "description": "Valid - lowercase letters",
+      "data": "element",
+      "valid": true
+    },
+    {
+      "description": "Valid - Greek letters",
+      "data": "στοιχείο",
+      "valid": true
+    },
+    {
+      "description": "Valid - Cyrillic letters",
+      "data": "элемент",
+      "valid": true
+    },
+    {
+      "description": "Valid - Chinese characters",
+      "data": "数据",
+      "valid": true
+    },
+    {
+      "description": "Valid - Japanese katakana",
+      "data": "データ",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic characters",
+      "data": "عنصر",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hebrew characters",
+      "data": "רכיב",
+      "valid": true
+    },
+    {
+      "description": "Valid - French with accents",
+      "data": "données",
+      "valid": true
+    },
+    {
+      "description": "Valid - German with umlauts",
+      "data": "Größe",
+      "valid": true
+    },
+    {
+      "description": "Valid - complex name",
+      "data": "my:element-name_v2.0",
+      "valid": true
+    },
+    {
+      "description": "Invalid: starts with digit",
+      "data": "9element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with hyphen",
+      "data": "-element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with period",
+      "data": ".element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid: whitespace only",
+      "data": "   ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains space",
+      "data": "my element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains tab",
+      "data": "my\telement",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains newline",
+      "data": "my\nelement",
+      "valid": false
+    },
+    {
+      "description": "Invalid: leading space",
+      "data": " element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: trailing space",
+      "data": "element ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains @",
+      "data": "my@element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains #",
+      "data": "my#element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains $",
+      "data": "my$element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains %",
+      "data": "my%element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains &",
+      "data": "my&element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains *",
+      "data": "my*element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains +",
+      "data": "my+element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains =",
+      "data": "my=element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains !",
+      "data": "my!element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains ?",
+      "data": "my?element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains brackets",
+      "data": "my[element]",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains parentheses",
+      "data": "my(element)",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains braces",
+      "data": "my{element}",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains angle brackets",
+      "data": "<element>",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains slash",
+      "data": "my/element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains backslash",
+      "data": "my\\element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains pipe",
+      "data": "my|element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains semicolon",
+      "data": "my;element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains comma",
+      "data": "my,element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains quote",
+      "data": "my\"element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains apostrophe",
+      "data": "my'element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: number type",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid: boolean type",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid: null type",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid: array type",
+      "data": [ "element" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: object type",
+      "data": {
+        "name": "element"
+      },
+      "valid": false
+    },
+    {
+      "description": "Valid - with combining grave accent",
+      "data": "àb",
+      "valid": true
+    },
+    {
+      "description": "Valid - with combining acute accent",
+      "data": "élement",
+      "valid": true
+    },
+    {
+      "description": "Valid - with combining diacritical mark",
+      "data": "tesẗing",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter with combining at end",
+      "data": "dataͯ",
+      "valid": true
+    },
+    {
+      "description": "Invalid: starts with combining character",
+      "data": "̀element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with combining acute",
+      "data": "́test",
+      "valid": false
+    },
+    {
+      "description": "Valid - with undertie ‿",
+      "data": "a‿b",
+      "valid": true
+    },
+    {
+      "description": "Valid - with character tie ⁀",
+      "data": "x⁀y",
+      "valid": true
+    },
+    {
+      "description": "Invalid: starts with undertie",
+      "data": "‿element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with character tie",
+      "data": "⁀element",
+      "valid": false
+    },
+    {
+      "description": "Valid - with ZWNJ",
+      "data": "ele‌ment",
+      "valid": true
+    },
+    {
+      "description": "Valid - with ZWJ",
+      "data": "ele‍ment",
+      "valid": true
+    },
+    {
+      "description": "Valid - starting with ZWNJ",
+      "data": "‌start",
+      "valid": true
+    },
+    {
+      "description": "Valid - starting with ZWJ",
+      "data": "‍start",
+      "valid": true
+    },
+    {
+      "description": "Invalid: contains carriage return",
+      "data": "data\rvalue",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains null character",
+      "data": "data\u0000value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains vertical tab",
+      "data": "data\u000Bvalue",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains form feed",
+      "data": "data\fvalue",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains bell character",
+      "data": "data\u0007value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains escape character",
+      "data": "data\u001Bvalue",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with null",
+      "data": "\u0000data",
+      "valid": false
+    },
+    {
+      "description": "Valid - U+00C0 (À) start of Latin-1 Supplement",
+      "data": "À",
+      "valid": true
+    },
+    {
+      "description": "Valid - U+D7FF last before surrogate block",
+      "data": "퟿",
+      "valid": true
+    },
+    {
+      "description": "Valid - U+F900 start of CJK Compatibility",
+      "data": "豈",
+      "valid": true
+    },
+    {
+      "description": "Valid - U+FDCF end of Arabic Presentation",
+      "data": "﷏",
+      "valid": true
+    },
+    {
+      "description": "Valid - U+FDF0 start of Arabic Presentation-B",
+      "data": "ﷰ",
+      "valid": true
+    },
+    {
+      "description": "Valid - U+FFFD replacement character",
+      "data": "�",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple colons",
+      "data": "a:b:c:d",
+      "valid": true
+    },
+    {
+      "description": "Valid - consecutive colons",
+      "data": "a::b",
+      "valid": true
+    },
+    {
+      "description": "Valid - alternating special chars",
+      "data": "a-b.c_d:e",
+      "valid": true
+    },
+    {
+      "description": "Valid - middle dot in middle",
+      "data": "a·b",
+      "valid": true
+    },
+    {
+      "description": "Valid - middle dot at end",
+      "data": "test·",
+      "valid": true
+    },
+    {
+      "description": "Invalid: starts with middle dot",
+      "data": "·test",
+      "valid": false
+    },
+    {
+      "description": "Valid - very long ASCII",
+      "data": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "valid": true
+    },
+    {
+      "description": "Valid - very long Unicode",
+      "data": "中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中",
+      "valid": true
+    },
+    {
+      "description": "Valid - very long with allowed chars",
+      "data": "aZ09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·Z09-._:·",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed Latin and Greek",
+      "data": "testδοκιμή123",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed Arabic and digits",
+      "data": "test123بيانات456",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed scripts with special chars",
+      "data": "test_中文_データ_тест",
+      "valid": true
+    },
+    {
+      "description": "Valid - colon at start",
+      "data": ":name",
+      "valid": true
+    },
+    {
+      "description": "Valid - colon at end",
+      "data": "name:",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple colons at start",
+      "data": "::name",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple underscores",
+      "data": "___test___",
+      "valid": true
+    },
+    {
+      "description": "Valid - underscore at end",
+      "data": "test_",
+      "valid": true
+    },
+    {
+      "description": "Invalid: contains DEL character",
+      "data": "datavalue",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with 0",
+      "data": "0element",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with multiple digits",
+      "data": "123element",
+      "valid": false
+    },
+    {
+      "description": "Valid - only underscores",
+      "data": "___",
+      "valid": true
+    },
+    {
+      "description": "Valid - only colons",
+      "data": ":::",
+      "valid": true
+    },
+    {
+      "description": "Valid - digit after first char",
+      "data": "a0",
+      "valid": true
+    },
+    {
+      "description": "Valid - hyphen after first char",
+      "data": "a-",
+      "valid": true
+    },
+    {
+      "description": "Valid - period after first char",
+      "data": "a.",
+      "valid": true
+    }
+  ]
+}

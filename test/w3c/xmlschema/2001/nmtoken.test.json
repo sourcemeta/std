@@ -1,0 +1,493 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/nmtoken.json",
+  "tests": [
+    {
+      "description": "Valid - simple ASCII letters",
+      "data": "abc",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed case ASCII",
+      "data": "AbCdEf",
+      "valid": true
+    },
+    {
+      "description": "Valid - digits only",
+      "data": "123",
+      "valid": true
+    },
+    {
+      "description": "Valid - letters and digits",
+      "data": "abc123",
+      "valid": true
+    },
+    {
+      "description": "Valid - with hyphen",
+      "data": "data-value",
+      "valid": true
+    },
+    {
+      "description": "Valid - with period",
+      "data": "element.name",
+      "valid": true
+    },
+    {
+      "description": "Valid - with colon",
+      "data": "with:colon",
+      "valid": true
+    },
+    {
+      "description": "Valid - with underscore",
+      "data": "_underscore",
+      "valid": true
+    },
+    {
+      "description": "Valid - CamelCase",
+      "data": "CamelCase",
+      "valid": true
+    },
+    {
+      "description": "Valid - starting with digit",
+      "data": "9abc",
+      "valid": true
+    },
+    {
+      "description": "Valid - starting with hyphen",
+      "data": "-value",
+      "valid": true
+    },
+    {
+      "description": "Valid - starting with period",
+      "data": ".value",
+      "valid": true
+    },
+    {
+      "description": "Valid - single character",
+      "data": "a",
+      "valid": true
+    },
+    {
+      "description": "Valid - single digit",
+      "data": "9",
+      "valid": true
+    },
+    {
+      "description": "Valid - Greek letters",
+      "data": "με",
+      "valid": true
+    },
+    {
+      "description": "Valid - Cyrillic letters",
+      "data": "данные",
+      "valid": true
+    },
+    {
+      "description": "Valid - Chinese characters",
+      "data": "中文",
+      "valid": true
+    },
+    {
+      "description": "Valid - Japanese hiragana",
+      "data": "データ",
+      "valid": true
+    },
+    {
+      "description": "Valid - Arabic characters",
+      "data": "بيانات",
+      "valid": true
+    },
+    {
+      "description": "Valid - Hebrew characters",
+      "data": "נתונים",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed Latin Extended",
+      "data": "café",
+      "valid": true
+    },
+    {
+      "description": "Valid - with middle dot (·)",
+      "data": "l·l",
+      "valid": true
+    },
+    {
+      "description": "Valid - complex mixed",
+      "data": "element-name_123.value:type",
+      "valid": true
+    },
+    {
+      "description": "Invalid: empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid: whitespace only",
+      "data": "   ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains space",
+      "data": "data value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains tab",
+      "data": "data\tvalue",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains newline",
+      "data": "data\nvalue",
+      "valid": false
+    },
+    {
+      "description": "Invalid: leading space",
+      "data": " data",
+      "valid": false
+    },
+    {
+      "description": "Invalid: trailing space",
+      "data": "data ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains special char @",
+      "data": "data@value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains special char #",
+      "data": "data#value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains special char $",
+      "data": "data$value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains special char %",
+      "data": "data%value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains special char &",
+      "data": "data&value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains special char *",
+      "data": "data*value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains special char +",
+      "data": "data+value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains special char =",
+      "data": "data=value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains special char !",
+      "data": "data!value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains special char ?",
+      "data": "data?value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains brackets",
+      "data": "data[value]",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains parentheses",
+      "data": "data(value)",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains braces",
+      "data": "data{value}",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains angle brackets",
+      "data": "data<value>",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains slash",
+      "data": "data/value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains backslash",
+      "data": "data\\value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains pipe",
+      "data": "data|value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains semicolon",
+      "data": "data;value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains comma",
+      "data": "data,value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains quote",
+      "data": "data\"value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains apostrophe",
+      "data": "data'value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: number type",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid: boolean type",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid: null type",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid: array type",
+      "data": [ "value" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: object type",
+      "data": {
+        "name": "value"
+      },
+      "valid": false
+    },
+    {
+      "description": "Valid - with combining grave accent",
+      "data": "àb",
+      "valid": true
+    },
+    {
+      "description": "Valid - with combining acute accent",
+      "data": "élement",
+      "valid": true
+    },
+    {
+      "description": "Valid - with combining diacritical mark",
+      "data": "tesẗing",
+      "valid": true
+    },
+    {
+      "description": "Valid - letter with combining at end",
+      "data": "dataͯ",
+      "valid": true
+    },
+    {
+      "description": "Valid - with undertie ‿",
+      "data": "a‿b",
+      "valid": true
+    },
+    {
+      "description": "Valid - with character tie ⁀",
+      "data": "x⁀y",
+      "valid": true
+    },
+    {
+      "description": "Valid - with ZWNJ",
+      "data": "ele‌ment",
+      "valid": true
+    },
+    {
+      "description": "Valid - with ZWJ",
+      "data": "ele‍ment",
+      "valid": true
+    },
+    {
+      "description": "Valid - starting with ZWNJ",
+      "data": "‌start",
+      "valid": true
+    },
+    {
+      "description": "Valid - starting with ZWJ",
+      "data": "‍start",
+      "valid": true
+    },
+    {
+      "description": "Invalid: contains carriage return",
+      "data": "data\rvalue",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains null character",
+      "data": "data\u0000value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains vertical tab",
+      "data": "data\u000Bvalue",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains form feed",
+      "data": "data\fvalue",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains bell character",
+      "data": "data\u0007value",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains escape character",
+      "data": "data\u001Bvalue",
+      "valid": false
+    },
+    {
+      "description": "Invalid: starts with null",
+      "data": "\u0000data",
+      "valid": false
+    },
+    {
+      "description": "Valid - U+00C0 (À) start of Latin-1 Supplement",
+      "data": "À",
+      "valid": true
+    },
+    {
+      "description": "Valid - U+D7FF last before surrogate block",
+      "data": "퟿",
+      "valid": true
+    },
+    {
+      "description": "Valid - U+F900 start of CJK Compatibility",
+      "data": "豈",
+      "valid": true
+    },
+    {
+      "description": "Valid - U+FDCF end of Arabic Presentation",
+      "data": "﷏",
+      "valid": true
+    },
+    {
+      "description": "Valid - U+FDF0 start of Arabic Presentation-B",
+      "data": "ﷰ",
+      "valid": true
+    },
+    {
+      "description": "Valid - U+FFFD replacement character",
+      "data": "�",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple colons",
+      "data": "a:b:c:d",
+      "valid": true
+    },
+    {
+      "description": "Valid - consecutive colons",
+      "data": "a::b",
+      "valid": true
+    },
+    {
+      "description": "Valid - colon only",
+      "data": ":",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple underscores",
+      "data": "___test___",
+      "valid": true
+    },
+    {
+      "description": "Valid - alternating special chars",
+      "data": "a-b.c_d:e",
+      "valid": true
+    },
+    {
+      "description": "Valid - starting with middle dot",
+      "data": "·test",
+      "valid": true
+    },
+    {
+      "description": "Valid - ending with middle dot",
+      "data": "test·",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple middle dots",
+      "data": "a·b·c",
+      "valid": true
+    },
+    {
+      "description": "Valid - very long ASCII",
+      "data": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "valid": true
+    },
+    {
+      "description": "Valid - very long Unicode",
+      "data": "中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中",
+      "valid": true
+    },
+    {
+      "description": "Valid - very long with all allowed chars",
+      "data": "aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·aZ09-._:·",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed Latin and Greek",
+      "data": "testδοκιμή123",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed Arabic and digits",
+      "data": "test123بيانات456",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed scripts with special chars",
+      "data": "test_中文_データ_тест",
+      "valid": true
+    },
+    {
+      "description": "Valid - hyphen only",
+      "data": "-",
+      "valid": true
+    },
+    {
+      "description": "Valid - period only",
+      "data": ".",
+      "valid": true
+    },
+    {
+      "description": "Valid - middle dot only",
+      "data": "·",
+      "valid": true
+    },
+    {
+      "description": "Invalid: contains DEL character",
+      "data": "datavalue",
+      "valid": false
+    }
+  ]
+}
