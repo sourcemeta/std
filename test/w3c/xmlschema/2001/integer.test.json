@@ -1,0 +1,118 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/integer.json",
+  "tests": [
+    {
+      "description": "Valid - zero",
+      "data": "0",
+      "valid": true
+    },
+    {
+      "description": "Valid - positive small",
+      "data": "1",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative small",
+      "data": "-1",
+      "valid": true
+    },
+    {
+      "description": "Valid - positive large",
+      "data": "9223372036854775807",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative large",
+      "data": "-9223372036854775808",
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary positive",
+      "data": "42",
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary negative",
+      "data": "-273",
+      "valid": true
+    },
+    {
+      "description": "Valid - medium positive",
+      "data": "1000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - medium negative",
+      "data": "-1000000",
+      "valid": true
+    },
+    {
+      "description": "Valid - very large (beyond 64-bit)",
+      "data": "999999999999999999999999999999",
+      "valid": true
+    },
+    {
+      "description": "Valid - very small (beyond 64-bit)",
+      "data": "-999999999999999999999999999999",
+      "valid": true
+    },
+    {
+      "description": "Valid - with plus sign",
+      "data": "+42",
+      "valid": true
+    },
+    {
+      "description": "Invalid: decimal number",
+      "data": "1.5",
+      "valid": false
+    },
+    {
+      "description": "Invalid: leading zeros",
+      "data": "01",
+      "valid": false
+    },
+    {
+      "description": "Invalid: negative zero with leading zeros",
+      "data": "-00",
+      "valid": false
+    },
+    {
+      "description": "Invalid: whitespace",
+      "data": " 42 ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: number type",
+      "data": 42,
+      "valid": false
+    },
+    {
+      "description": "Invalid: boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid: null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid: array",
+      "data": [ "42" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid: object",
+      "data": {
+        "value": "42"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid: empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}

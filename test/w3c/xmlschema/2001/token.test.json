@@ -1,0 +1,428 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/token.json",
+  "tests": [
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Valid - single word",
+      "data": "Hello",
+      "valid": true
+    },
+    {
+      "description": "Valid - two words with single space",
+      "data": "Hello World",
+      "valid": true
+    },
+    {
+      "description": "Valid - three words with single spaces",
+      "data": "This is text",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple words with single spaces",
+      "data": "Multiple words separated by single spaces",
+      "valid": true
+    },
+    {
+      "description": "Valid - sentence with punctuation",
+      "data": "Hello, World! How are you?",
+      "valid": true
+    },
+    {
+      "description": "Valid - single space between punctuation",
+      "data": "First, second, third, fourth",
+      "valid": true
+    },
+    {
+      "description": "Valid - text with numbers",
+      "data": "Order 123 confirmed",
+      "valid": true
+    },
+    {
+      "description": "Valid - numbers only",
+      "data": "123456",
+      "valid": true
+    },
+    {
+      "description": "Valid - hyphenated words",
+      "data": "well-known up-to-date",
+      "valid": true
+    },
+    {
+      "description": "Valid - no spaces just hyphens",
+      "data": "no-spaces-just-hyphens",
+      "valid": true
+    },
+    {
+      "description": "Valid - underscores",
+      "data": "snake_case_identifier",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed case",
+      "data": "MixedCase123",
+      "valid": true
+    },
+    {
+      "description": "Valid - dots",
+      "data": "file.name.extension",
+      "valid": true
+    },
+    {
+      "description": "Valid - special characters without spaces",
+      "data": "@#$%^&*()",
+      "valid": true
+    },
+    {
+      "description": "Valid - special characters with single spaces",
+      "data": "special @ characters # here",
+      "valid": true
+    },
+    {
+      "description": "Valid - path-like without spaces",
+      "data": "path/to/file",
+      "valid": true
+    },
+    {
+      "description": "Valid - URL-like",
+      "data": "https://example.com/path",
+      "valid": true
+    },
+    {
+      "description": "Valid - email-like",
+      "data": "user@example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - quoted text with single spaces",
+      "data": "He said \"hello\" and left",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode single word",
+      "data": "你好",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode with single spaces",
+      "data": "你好 世界",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Greek with spaces",
+      "data": "Γεια σου κόσμε",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Cyrillic with spaces",
+      "data": "Привет мир",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Japanese with spaces",
+      "data": "こんにちは 世界",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Korean with spaces",
+      "data": "안녕하세요 세계",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Arabic with spaces",
+      "data": "مرحبا بالعالم",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Hebrew with spaces",
+      "data": "שלום עולם",
+      "valid": true
+    },
+    {
+      "description": "Valid - Unicode Emoji with single spaces",
+      "data": "Hello 👋 World 🌍",
+      "valid": true
+    },
+    {
+      "description": "Valid - mixed scripts with single spaces",
+      "data": "Hello 世界 мир κόσμος",
+      "valid": true
+    },
+    {
+      "description": "Valid - Latin Extended with single spaces",
+      "data": "Café résumé naïve",
+      "valid": true
+    },
+    {
+      "description": "Valid - long sentence with single spaces",
+      "data": "This is a very long tokenized string with many words separated by single spaces only",
+      "valid": true
+    },
+    {
+      "description": "Valid - single character",
+      "data": "a",
+      "valid": true
+    },
+    {
+      "description": "Valid - single digit",
+      "data": "5",
+      "valid": true
+    },
+    {
+      "description": "Invalid: leading space",
+      "data": " Hello",
+      "valid": false
+    },
+    {
+      "description": "Invalid: trailing space",
+      "data": "Hello ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: leading and trailing spaces",
+      "data": " Hello ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: multiple leading spaces",
+      "data": "   Hello",
+      "valid": false
+    },
+    {
+      "description": "Invalid: multiple trailing spaces",
+      "data": "Hello   ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: single space only",
+      "data": " ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: multiple spaces only",
+      "data": "     ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: two consecutive spaces in middle",
+      "data": "Hello  World",
+      "valid": false
+    },
+    {
+      "description": "Invalid: three consecutive spaces in middle",
+      "data": "Hello   World",
+      "valid": false
+    },
+    {
+      "description": "Invalid: many consecutive spaces in middle",
+      "data": "Hello          World",
+      "valid": false
+    },
+    {
+      "description": "Invalid: double spaces between multiple words",
+      "data": "First  second  third",
+      "valid": false
+    },
+    {
+      "description": "Invalid: mixed single and double spaces",
+      "data": "One two  three four",
+      "valid": false
+    },
+    {
+      "description": "Invalid: leading space with valid spacing after",
+      "data": " Hello World",
+      "valid": false
+    },
+    {
+      "description": "Invalid: trailing space with valid spacing before",
+      "data": "Hello World ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: both leading and double space",
+      "data": " Hello  World",
+      "valid": false
+    },
+    {
+      "description": "Invalid: both trailing and double space",
+      "data": "Hello  World ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: all spacing violations",
+      "data": " Hello  World ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: double space in Unicode text",
+      "data": "你好  世界",
+      "valid": false
+    },
+    {
+      "description": "Invalid: leading space in Unicode text",
+      "data": " 你好",
+      "valid": false
+    },
+    {
+      "description": "Invalid: trailing space in Unicode text",
+      "data": "你好 ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains line feed at start",
+      "data": "\nHello",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains line feed at end",
+      "data": "Hello\n",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains line feed in middle",
+      "data": "Hello\nWorld",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains multiple line feeds",
+      "data": "Line1\nLine2\nLine3",
+      "valid": false
+    },
+    {
+      "description": "Invalid: only line feed",
+      "data": "\n",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains carriage return at start",
+      "data": "\rHello",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains carriage return at end",
+      "data": "Hello\r",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains carriage return in middle",
+      "data": "Hello\rWorld",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains multiple carriage returns",
+      "data": "Line1\rLine2\rLine3",
+      "valid": false
+    },
+    {
+      "description": "Invalid: only carriage return",
+      "data": "\r",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains CRLF",
+      "data": "Hello\r\nWorld",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains tab at start",
+      "data": "\tHello",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains tab at end",
+      "data": "Hello\t",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains tab in middle",
+      "data": "Hello\tWorld",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains multiple tabs",
+      "data": "Col1\tCol2\tCol3",
+      "valid": false
+    },
+    {
+      "description": "Invalid: only tab",
+      "data": "\t",
+      "valid": false
+    },
+    {
+      "description": "Invalid: tab used for spacing",
+      "data": "Hello\tWorld",
+      "valid": false
+    },
+    {
+      "description": "Invalid: mixed whitespace with tab",
+      "data": "Hello \tWorld",
+      "valid": false
+    },
+    {
+      "description": "Invalid: mixed whitespace with newline",
+      "data": "Hello \nWorld",
+      "valid": false
+    },
+    {
+      "description": "Invalid: all prohibited characters",
+      "data": "Line1\r\nLine2\tTabbed",
+      "valid": false
+    },
+    {
+      "description": "Invalid: newline in Unicode text",
+      "data": "你好\n世界",
+      "valid": false
+    },
+    {
+      "description": "Invalid: tab in Unicode text",
+      "data": "你好\t世界",
+      "valid": false
+    },
+    {
+      "description": "Invalid: multiline paragraph",
+      "data": "First line\nSecond line\nThird line",
+      "valid": false
+    },
+    {
+      "description": "Invalid: leading space and newline",
+      "data": " Hello\nWorld",
+      "valid": false
+    },
+    {
+      "description": "Invalid: trailing space and tab",
+      "data": "Hello\tWorld ",
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (number)",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (boolean)",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (null)",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (array)",
+      "data": [ "Hello", "World" ],
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string (object)",
+      "data": {
+        "text": "Hello World"
+      },
+      "valid": false
+    }
+  ]
+}

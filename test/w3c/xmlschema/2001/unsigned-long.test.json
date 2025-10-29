@@ -1,0 +1,176 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/unsigned-long.json",
+  "tests": [
+    {
+      "description": "Valid - zero (minimum)",
+      "data": "0",
+      "valid": true
+    },
+    {
+      "description": "Valid - one",
+      "data": "1",
+      "valid": true
+    },
+    {
+      "description": "Valid - maximum (18446744073709551615)",
+      "data": "18446744073709551615",
+      "valid": true
+    },
+    {
+      "description": "Valid - above int64 max (9223372036854775808)",
+      "data": "9223372036854775808",
+      "valid": true
+    },
+    {
+      "description": "Valid - int64 max (9223372036854775807)",
+      "data": "9223372036854775807",
+      "valid": true
+    },
+    {
+      "description": "Valid - uint32 max (4294967296)",
+      "data": "4294967296",
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary",
+      "data": "42",
+      "valid": true
+    },
+    {
+      "description": "Valid - maximum value (18446744073709551615)",
+      "data": "18446744073709551615",
+      "valid": true
+    },
+    {
+      "description": "Valid - one below maximum (18446744073709551614)",
+      "data": "18446744073709551614",
+      "valid": true
+    },
+    {
+      "description": "Valid - 19 digits maximum (9999999999999999999)",
+      "data": "9999999999999999999",
+      "valid": true
+    },
+    {
+      "description": "Valid - 20 digits starting with 1, second digit < 8",
+      "data": "17999999999999999999",
+      "valid": true
+    },
+    {
+      "description": "Valid - 20 digits: 18399999999999999999",
+      "data": "18399999999999999999",
+      "valid": true
+    },
+    {
+      "description": "Valid - 20 digits: 18446744073709551600",
+      "data": "18446744073709551600",
+      "valid": true
+    },
+    {
+      "description": "Valid - no leading zeros for non-zero",
+      "data": "123",
+      "valid": true
+    },
+    {
+      "description": "Invalid: exceeds maximum by 1 (18446744073709551616)",
+      "data": "18446744073709551616",
+      "valid": false
+    },
+    {
+      "description": "Invalid: exceeds maximum (18446744073709551617)",
+      "data": "18446744073709551617",
+      "valid": false
+    },
+    {
+      "description": "Invalid: exceeds maximum (18446744073709551620)",
+      "data": "18446744073709551620",
+      "valid": false
+    },
+    {
+      "description": "Invalid: 20 digits starting with 2",
+      "data": "20000000000000000000",
+      "valid": false
+    },
+    {
+      "description": "Invalid: 20 digits: 19999999999999999999",
+      "data": "19999999999999999999",
+      "valid": false
+    },
+    {
+      "description": "Invalid: 20 digits: 18499999999999999999",
+      "data": "18499999999999999999",
+      "valid": false
+    },
+    {
+      "description": "Invalid: 20 digits: 18446744073709551619",
+      "data": "18446744073709551619",
+      "valid": false
+    },
+    {
+      "description": "Invalid: 21 digits",
+      "data": "100000000000000000000",
+      "valid": false
+    },
+    {
+      "description": "Invalid: negative sign",
+      "data": "-1",
+      "valid": false
+    },
+    {
+      "description": "Invalid: negative value",
+      "data": "-1000",
+      "valid": false
+    },
+    {
+      "description": "Invalid: decimal point",
+      "data": "1.5",
+      "valid": false
+    },
+    {
+      "description": "Invalid: positive sign",
+      "data": "+1",
+      "valid": false
+    },
+    {
+      "description": "Invalid: leading zeros",
+      "data": "01",
+      "valid": false
+    },
+    {
+      "description": "Invalid: leading zeros multiple",
+      "data": "0042",
+      "valid": false
+    },
+    {
+      "description": "Invalid: number type",
+      "data": 42,
+      "valid": false
+    },
+    {
+      "description": "Invalid: boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid: null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid: empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid: whitespace",
+      "data": " 42 ",
+      "valid": false
+    },
+    {
+      "description": "Invalid: non-digit characters",
+      "data": "12abc",
+      "valid": false
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/short.json",
+  "tests": [
+    {
+      "description": "Valid - zero",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - positive one",
+      "data": 1,
+      "valid": true
+    },
+    {
+      "description": "Valid - negative one",
+      "data": -1,
+      "valid": true
+    },
+    {
+      "description": "Valid - maximum (32767)",
+      "data": 32767,
+      "valid": true
+    },
+    {
+      "description": "Valid - minimum (-32768)",
+      "data": -32768,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary positive",
+      "data": 1000,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary negative",
+      "data": -1000,
+      "valid": true
+    },
+    {
+      "description": "Invalid: too large (32768)",
+      "data": 32768,
+      "valid": false
+    },
+    {
+      "description": "Invalid: too small (-32769)",
+      "data": -32769,
+      "valid": false
+    },
+    {
+      "description": "Invalid: much too large",
+      "data": 100000,
+      "valid": false
+    },
+    {
+      "description": "Invalid: decimal number",
+      "data": 1.5,
+      "valid": false
+    },
+    {
+      "description": "Invalid: string",
+      "data": "1000",
+      "valid": false
+    },
+    {
+      "description": "Invalid: boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid: null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

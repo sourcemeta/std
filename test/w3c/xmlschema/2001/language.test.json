@@ -1,0 +1,71 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/w3c/xmlschema/2001/language.json",
+  "tests": [
+    {
+      "description": "Valid - English",
+      "data": "en",
+      "valid": true
+    },
+    {
+      "description": "Valid - English US",
+      "data": "en-US",
+      "valid": true
+    },
+    {
+      "description": "Valid - French",
+      "data": "fr",
+      "valid": true
+    },
+    {
+      "description": "Valid - German Germany",
+      "data": "de-DE",
+      "valid": true
+    },
+    {
+      "description": "Valid - Chinese",
+      "data": "zh-CN",
+      "valid": true
+    },
+    {
+      "description": "Valid - Japanese",
+      "data": "ja",
+      "valid": true
+    },
+    {
+      "description": "Valid - private use",
+      "data": "x-private",
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple subtags",
+      "data": "en-US-x-twain",
+      "valid": true
+    },
+    {
+      "description": "Invalid: empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid: too long primary",
+      "data": "abcdefghi",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains space",
+      "data": "en US",
+      "valid": false
+    },
+    {
+      "description": "Invalid: contains underscore",
+      "data": "en_US",
+      "valid": false
+    },
+    {
+      "description": "Type validation: not a string",
+      "data": 123,
+      "valid": false
+    }
+  ]
+}
