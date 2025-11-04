@@ -1,5 +1,7 @@
 # Sourcemeta JSON Schema Standard Library
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17526561.svg)](https://doi.org/10.5281/zenodo.17526561)
+
 ***
 **Browse the schemas at [https://schemas.sourcemeta.com/sourcemeta/std](https://schemas.sourcemeta.com/sourcemeta/std)**
 ***
@@ -37,6 +39,7 @@ designing great APIs.*
     - [From GitHub Releases](#from-github-releases)
     - [Using Git Submodules](#using-git-submodules)
     - [Using Vendorpull](#using-vendorpull)
+- [:mortar_board: Citing](#mortar_board-citing)
 - [:page_facing_up: License](#page_facing_up-license)
 - [:handshake: Contributing](#handshake-contributing)
 - [:email: Contact](#email-contact)
@@ -174,6 +177,13 @@ schema:
     email:
       $ref: './vendor/std/schemas/ietf/email/address.json'
 ```
+
+## :mortar_board: Citing
+
+If you use this library in your research or project, please cite it using the
+DOI provided above. You can find citation information in various formats
+(BibTeX, APA, etc.) by clicking the "Cite as" button on the [Zenodo
+record](https://doi.org/10.5281/zenodo.17526561).
 
 ## :page_facing_up: License
 
