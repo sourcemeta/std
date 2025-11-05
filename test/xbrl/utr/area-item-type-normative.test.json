@@ -1,0 +1,41 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/area-item-type-normative.json",
+  "tests": [
+    {
+      "description": "Valid - acre (REC)",
+      "data": "acre",
+      "valid": true
+    },
+    {
+      "description": "Valid - square foot (REC)",
+      "data": "sqft",
+      "valid": true
+    },
+    {
+      "description": "Valid - square mile (REC)",
+      "data": "sqmi",
+      "valid": true
+    },
+    {
+      "description": "Valid - hectare (REC)",
+      "data": "ha",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-area-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

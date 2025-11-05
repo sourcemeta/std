@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/voltage-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - V",
+      "data": "V",
+      "valid": true
+    },
+    {
+      "description": "Valid - kV",
+      "data": "kV",
+      "valid": true
+    },
+    {
+      "description": "Valid - MV",
+      "data": "MV",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

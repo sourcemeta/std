@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/ghg-emissions-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - tCO2e",
+      "data": "tCO2e",
+      "valid": true
+    },
+    {
+      "description": "Valid - ktCO2e",
+      "data": "ktCO2e",
+      "valid": true
+    },
+    {
+      "description": "Valid - MtCO2e",
+      "data": "MtCO2e",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/pure-item-type-normative.json",
+  "tests": [
+    {
+      "description": "Valid - Monetary_per_Monetary (REC)",
+      "data": "Monetary_per_Monetary",
+      "valid": true
+    },
+    {
+      "description": "Valid - pure (REC)",
+      "data": "pure",
+      "valid": true
+    },
+    {
+      "description": "Valid - Rate (REC)",
+      "data": "Rate",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

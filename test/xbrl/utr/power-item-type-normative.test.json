@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/power-item-type-normative.json",
+  "tests": [
+    {
+      "description": "Valid - hp (REC)",
+      "data": "hp",
+      "valid": true
+    },
+    {
+      "description": "Valid - GW (REC)",
+      "data": "GW",
+      "valid": true
+    },
+    {
+      "description": "Valid - kW (REC)",
+      "data": "kW",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

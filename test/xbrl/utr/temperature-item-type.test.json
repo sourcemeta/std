@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/temperature-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - Celsius",
+      "data": "Celsius",
+      "valid": true
+    },
+    {
+      "description": "Valid - K",
+      "data": "K",
+      "valid": true
+    },
+    {
+      "description": "Valid - F",
+      "data": "F",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

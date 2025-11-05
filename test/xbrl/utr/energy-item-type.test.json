@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/energy-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - Boe",
+      "data": "Boe",
+      "valid": true
+    },
+    {
+      "description": "Valid - Btu",
+      "data": "Btu",
+      "valid": true
+    },
+    {
+      "description": "Valid - ft_lb",
+      "data": "ft_lb",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

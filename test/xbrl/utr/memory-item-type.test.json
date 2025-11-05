@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/memory-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - B",
+      "data": "B",
+      "valid": true
+    },
+    {
+      "description": "Valid - GB",
+      "data": "GB",
+      "valid": true
+    },
+    {
+      "description": "Valid - kB",
+      "data": "kB",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

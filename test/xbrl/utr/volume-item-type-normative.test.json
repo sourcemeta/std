@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/volume-item-type-normative.json",
+  "tests": [
+    {
+      "description": "Valid - bbl (REC)",
+      "data": "bbl",
+      "valid": true
+    },
+    {
+      "description": "Valid - ft3 (REC)",
+      "data": "ft3",
+      "valid": true
+    },
+    {
+      "description": "Valid - gal (REC)",
+      "data": "gal",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

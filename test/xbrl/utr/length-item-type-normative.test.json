@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/length-item-type-normative.json",
+  "tests": [
+    {
+      "description": "Valid - ft (REC)",
+      "data": "ft",
+      "valid": true
+    },
+    {
+      "description": "Valid - in (REC)",
+      "data": "in",
+      "valid": true
+    },
+    {
+      "description": "Valid - mi (REC)",
+      "data": "mi",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

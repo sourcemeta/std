@@ -1,0 +1,73 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/area-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - acre",
+      "data": "acre",
+      "valid": true
+    },
+    {
+      "description": "Valid - square foot",
+      "data": "sqft",
+      "valid": true
+    },
+    {
+      "description": "Valid - square mile",
+      "data": "sqmi",
+      "valid": true
+    },
+    {
+      "description": "Valid - square yard",
+      "data": "sqyd",
+      "valid": true
+    },
+    {
+      "description": "Valid - hectare",
+      "data": "ha",
+      "valid": true
+    },
+    {
+      "description": "Valid - square kilometer",
+      "data": "sqkm",
+      "valid": true
+    },
+    {
+      "description": "Valid - square metre",
+      "data": "sqm",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-area-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - object",
+      "data": {
+        "unit": "sqft"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - array",
+      "data": [ "sqft" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid - boolean",
+      "data": true,
+      "valid": false
+    }
+  ]
+}
