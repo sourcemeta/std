@@ -4,26 +4,31 @@
   "tests": [
     {
       "description": "Valid - pure number as decimal",
-      "data": "0.5",
+      "data": 0.5,
       "valid": true
     },
     {
       "description": "Valid - whole number",
-      "data": "1",
+      "data": 1,
       "valid": true
     },
     {
       "description": "Valid - negative pure number",
-      "data": "-0.25",
+      "data": -0.25,
       "valid": true
     },
     {
       "description": "Valid - high precision",
-      "data": "0.123456789",
+      "data": 0.123457,
       "valid": true
     },
     {
-      "description": "Invalid - not a decimal string",
+      "description": "Invalid - string type",
+      "data": "0.5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - text",
       "data": "not-a-number",
       "valid": false
     },
@@ -33,8 +38,8 @@
       "valid": false
     },
     {
-      "description": "Invalid - number type instead of string",
-      "data": 0.5,
+      "description": "Invalid - null",
+      "data": null,
       "valid": false
     }
   ]

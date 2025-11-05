@@ -3,10 +3,10 @@
   "title": "XBRL fractionItemType",
   "description": "XBRL item type for fractional values with explicit numerator and denominator. Represented as a two-element array of W3C XML Schema decimal values",
   "examples": [
-    [ "1.5", "2" ],
-    [ "-100", "3.5" ],
-    [ "5", "-2.5" ],
-    [ "0", "1" ]
+    [ 1.5, 2 ],
+    [ -100, 3.5 ],
+    [ 5, -2.5 ],
+    [ 0, 1 ]
   ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [
@@ -23,7 +23,7 @@
     {
       "$ref": "../../../w3c/xmlschema/2001/decimal.json",
       "not": {
-        "pattern": "^-?0+(\\.0+)?$"
+        "const": 0
       }
     }
   ]

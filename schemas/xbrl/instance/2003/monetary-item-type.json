@@ -4,15 +4,15 @@
   "description": "The monetary type serves as the datatype for those financial concepts in a taxonomy which denote units in a currency",
   "examples": [
     {
-      "value": "100.50",
+      "value": 100.5,
       "currency": "USD"
     },
     {
-      "value": "-25.00",
+      "value": -25.0,
       "currency": "EUR"
     },
     {
-      "value": "0",
+      "value": 0,
       "currency": "GBP"
     }
   ],

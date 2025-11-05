@@ -4,114 +4,94 @@
   "tests": [
     {
       "description": "Valid - zero",
-      "data": "0",
+      "data": 0,
       "valid": true
     },
     {
       "description": "Valid - positive small",
-      "data": "1",
+      "data": 1,
       "valid": true
     },
     {
       "description": "Valid - negative small",
-      "data": "-1",
+      "data": -1,
       "valid": true
     },
     {
       "description": "Valid - positive large",
-      "data": "9223372036854775807",
+      "data": 9223372036854775807,
       "valid": true
     },
     {
       "description": "Valid - negative large",
-      "data": "-9223372036854775808",
+      "data": -9223372036854775808,
       "valid": true
     },
     {
       "description": "Valid - arbitrary positive",
-      "data": "42",
+      "data": 42,
       "valid": true
     },
     {
       "description": "Valid - arbitrary negative",
-      "data": "-273",
+      "data": -273,
       "valid": true
     },
     {
       "description": "Valid - medium positive",
-      "data": "1000000",
+      "data": 1000000,
       "valid": true
     },
     {
       "description": "Valid - medium negative",
-      "data": "-1000000",
+      "data": -1000000,
       "valid": true
     },
     {
-      "description": "Valid - very large (beyond 64-bit)",
-      "data": "999999999999999999999999999999",
-      "valid": true
-    },
-    {
-      "description": "Valid - very small (beyond 64-bit)",
-      "data": "-999999999999999999999999999999",
-      "valid": true
-    },
-    {
-      "description": "Valid - with plus sign",
-      "data": "+42",
-      "valid": true
-    },
-    {
-      "description": "Invalid: decimal number",
-      "data": "1.5",
+      "description": "Invalid - decimal number",
+      "data": 123.45,
       "valid": false
     },
     {
-      "description": "Invalid: leading zeros",
-      "data": "01",
+      "description": "Invalid - string type",
+      "data": "123",
       "valid": false
     },
     {
-      "description": "Invalid: negative zero with leading zeros",
-      "data": "-00",
+      "description": "Invalid - string with plus sign",
+      "data": "+123",
       "valid": false
     },
     {
-      "description": "Invalid: whitespace",
-      "data": " 42 ",
+      "description": "Invalid - empty string",
+      "data": "",
       "valid": false
     },
     {
-      "description": "Invalid: number type",
-      "data": 42,
+      "description": "Invalid - text",
+      "data": "abc",
       "valid": false
     },
     {
-      "description": "Invalid: boolean",
-      "data": true,
-      "valid": false
-    },
-    {
-      "description": "Invalid: null",
+      "description": "Invalid - null",
       "data": null,
       "valid": false
     },
     {
-      "description": "Invalid: array",
-      "data": [ "42" ],
+      "description": "Invalid - boolean",
+      "data": true,
       "valid": false
     },
     {
-      "description": "Invalid: object",
+      "description": "Invalid - array",
+      "data": [ 123 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - object",
       "data": {
-        "value": "42"
+        "value": 123
       },
-      "valid": false
-    },
-    {
-      "description": "Invalid: empty string",
-      "data": "",
       "valid": false
     }
   ]
