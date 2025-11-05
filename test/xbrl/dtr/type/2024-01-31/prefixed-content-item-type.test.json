@@ -1,0 +1,26 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/xbrl/dtr/type/2024-01-31/prefixed-content-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - simple token",
+      "data": "token123",
+      "valid": true
+    },
+    {
+      "description": "Valid - another token",
+      "data": "IDENTIFIER",
+      "valid": true
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

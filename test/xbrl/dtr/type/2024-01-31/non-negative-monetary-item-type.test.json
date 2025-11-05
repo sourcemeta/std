@@ -1,0 +1,89 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/xbrl/dtr/type/2024-01-31/non-negative-monetary-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - positive monetary value",
+      "data": {
+        "value": 100.5,
+        "currency": "USD"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - zero",
+      "data": {
+        "value": 0,
+        "currency": "EUR"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal value",
+      "data": {
+        "value": 25.75,
+        "currency": "GBP"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - large positive value",
+      "data": {
+        "value": 1000000.0,
+        "currency": "JPY"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - very small positive value",
+      "data": {
+        "value": 0.01,
+        "currency": "USD"
+      },
+      "valid": true
+    },
+    {
+      "description": "Invalid - negative value",
+      "data": {
+        "value": -10.5,
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative integer",
+      "data": {
+        "value": -1,
+        "currency": "EUR"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - large negative value",
+      "data": {
+        "value": -1000000.0,
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing currency",
+      "data": {
+        "value": 100
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing value",
+      "data": {
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

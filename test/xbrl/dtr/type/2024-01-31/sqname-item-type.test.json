@@ -1,0 +1,81 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/xbrl/dtr/type/2024-01-31/sqname-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - simple QName",
+      "data": "xbrli:monetary",
+      "valid": true
+    },
+    {
+      "description": "Valid - currency code QName",
+      "data": "iso4217:USD",
+      "valid": true
+    },
+    {
+      "description": "Valid - custom prefix",
+      "data": "custom:MyElement",
+      "valid": true
+    },
+    {
+      "description": "Valid - underscore in prefix",
+      "data": "my_prefix:element",
+      "valid": true
+    },
+    {
+      "description": "Valid - hyphen in local part",
+      "data": "ns:my-element",
+      "valid": true
+    },
+    {
+      "description": "Valid - single character prefix",
+      "data": "a:element",
+      "valid": true
+    },
+    {
+      "description": "Invalid - no colon separator",
+      "data": "xbrlimonetary",
+      "valid": false
+    },
+    {
+      "description": "Invalid - starts with number",
+      "data": "123:element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - starts with colon",
+      "data": ":element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains space in prefix",
+      "data": "my prefix:element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains space after colon",
+      "data": "xbrli: monetary",
+      "valid": false
+    },
+    {
+      "description": "Valid - multiple colons in local part allowed",
+      "data": "ns:my:element",
+      "valid": true
+    },
+    {
+      "description": "Invalid - empty local part",
+      "data": "ns:",
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 123,
+      "valid": false
+    }
+  ]
+}

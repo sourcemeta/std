@@ -1,0 +1,61 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/xbrl/dtr/type/2024-01-31/sqnames-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - single QName",
+      "data": [ "xbrli:monetary" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple QNames",
+      "data": [ "iso4217:USD", "custom:MyElement" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - three QNames",
+      "data": [ "ns1:foo", "ns2:bar", "ns3:baz" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - empty array",
+      "data": [],
+      "valid": true
+    },
+    {
+      "description": "Valid - QNames with colons in local part",
+      "data": [ "ns:my:element", "prefix:a:b:c" ],
+      "valid": true
+    },
+    {
+      "description": "Invalid - array with non-QName string",
+      "data": [ "xbrlimonetary", "custom:Element" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - array with item starting with number",
+      "data": [ "123:element", "ns:foo" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - not an array",
+      "data": "xbrli:monetary",
+      "valid": false
+    },
+    {
+      "description": "Invalid - array with null item",
+      "data": [ "xbrli:monetary", null ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - array with number item",
+      "data": [ "xbrli:monetary", 123 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}
