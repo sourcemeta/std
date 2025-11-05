@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/unsigned-byte-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - positive unsigned byte",
+      "data": 42,
+      "valid": true
+    },
+    {
+      "description": "Valid - zero",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - maximum unsigned byte",
+      "data": 255,
+      "valid": true
+    },
+    {
+      "description": "Invalid - negative value",
+      "data": -1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal value",
+      "data": 42.5,
+      "valid": false
+    },
+    {
+      "description": "Invalid - string instead of number",
+      "data": "42",
+      "valid": false
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/qname-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - prefixed QName",
+      "data": "xs:string",
+      "valid": true
+    },
+    {
+      "description": "Valid - unprefixed QName",
+      "data": "localName",
+      "valid": true
+    },
+    {
+      "description": "Valid - QName with underscore",
+      "data": "my_element",
+      "valid": true
+    },
+    {
+      "description": "Invalid - QName starting with number",
+      "data": "1element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - QName with space",
+      "data": "my element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number instead of string",
+      "data": 123,
+      "valid": false
+    }
+  ]
+}

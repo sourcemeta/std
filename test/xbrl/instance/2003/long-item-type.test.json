@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/long-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - positive long",
+      "data": 123456789,
+      "valid": true
+    },
+    {
+      "description": "Valid - negative long",
+      "data": -987654321,
+      "valid": true
+    },
+    {
+      "description": "Valid - zero",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Invalid - string instead of number",
+      "data": "123456789",
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal value",
+      "data": 123.45,
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-numeric string",
+      "data": "abc",
+      "valid": false
+    }
+  ]
+}

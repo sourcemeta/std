@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/any-uri-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - http URL",
+      "data": "http://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - https URL",
+      "data": "https://example.com/path?query=value",
+      "valid": true
+    },
+    {
+      "description": "Valid - relative URI",
+      "data": "../path/to/resource",
+      "valid": true
+    },
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Invalid - URI with spaces",
+      "data": "http://example.com/path with spaces",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number instead of string",
+      "data": 123,
+      "valid": false
+    }
+  ]
+}

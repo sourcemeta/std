@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/byte-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - positive byte",
+      "data": 42,
+      "valid": true
+    },
+    {
+      "description": "Valid - negative byte",
+      "data": -10,
+      "valid": true
+    },
+    {
+      "description": "Valid - zero",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Invalid - string instead of number",
+      "data": "42",
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal value",
+      "data": 4.2,
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-numeric string",
+      "data": "abc",
+      "valid": false
+    }
+  ]
+}

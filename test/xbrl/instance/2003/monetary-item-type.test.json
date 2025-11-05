@@ -1,0 +1,123 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/monetary-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - positive monetary value in USD",
+      "data": {
+        "value": "1234.56",
+        "currency": "USD"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - negative monetary value in EUR",
+      "data": {
+        "value": "-789.12",
+        "currency": "EUR"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - zero in GBP",
+      "data": {
+        "value": "0",
+        "currency": "GBP"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - high precision in JPY",
+      "data": {
+        "value": "12345.123456789",
+        "currency": "JPY"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - large value in CHF",
+      "data": {
+        "value": "999999999.99",
+        "currency": "CHF"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - small fractional value in CAD",
+      "data": {
+        "value": "0.01",
+        "currency": "CAD"
+      },
+      "valid": true
+    },
+    {
+      "description": "Invalid - not a decimal string in value",
+      "data": {
+        "value": "abc",
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string value",
+      "data": {
+        "value": "",
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type for value instead of string",
+      "data": {
+        "value": 123.45,
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing value field",
+      "data": {
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing currency field",
+      "data": {
+        "value": "100.50"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - invalid currency code",
+      "data": {
+        "value": "100.50",
+        "currency": "INVALID"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase currency code",
+      "data": {
+        "value": "100.50",
+        "currency": "usd"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - not an object",
+      "data": "1234.56",
+      "valid": false
+    },
+    {
+      "description": "Invalid - null value",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid - array instead of object",
+      "data": [ "100.50", "USD" ],
+      "valid": false
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/date-time-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - date format",
+      "data": "2002-10-10",
+      "valid": true
+    },
+    {
+      "description": "Valid - dateTime with timezone offset",
+      "data": "2002-10-10T12:00:00-05:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - date with Z timezone",
+      "data": "2002-10-10Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - dateTime without timezone",
+      "data": "2002-05-30T09:00:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - dateTime with Z timezone",
+      "data": "2023-01-15T14:30:00Z",
+      "valid": true
+    },
+    {
+      "description": "Invalid - invalid month",
+      "data": "2002-13-10",
+      "valid": false
+    },
+    {
+      "description": "Invalid - random string",
+      "data": "not-a-date-or-time",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number instead of string",
+      "data": 20021010,
+      "valid": false
+    }
+  ]
+}

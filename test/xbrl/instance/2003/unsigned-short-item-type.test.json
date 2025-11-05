@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/unsigned-short-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - positive unsigned short",
+      "data": 100,
+      "valid": true
+    },
+    {
+      "description": "Valid - zero",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - large unsigned short",
+      "data": 65535,
+      "valid": true
+    },
+    {
+      "description": "Invalid - negative value",
+      "data": -1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal value",
+      "data": 123.45,
+      "valid": false
+    },
+    {
+      "description": "Invalid - string instead of number",
+      "data": "100",
+      "valid": false
+    }
+  ]
+}

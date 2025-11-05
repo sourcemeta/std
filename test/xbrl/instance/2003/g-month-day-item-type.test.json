@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/g-month-day-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - basic month-day",
+      "data": "--10-15",
+      "valid": true
+    },
+    {
+      "description": "Valid - month-day with timezone",
+      "data": "--10-15Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - month-day with offset",
+      "data": "--10-15-05:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - February 29th",
+      "data": "--02-29",
+      "valid": true
+    },
+    {
+      "description": "Invalid - invalid month",
+      "data": "--13-01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - random string",
+      "data": "not-a-month-day",
+      "valid": false
+    }
+  ]
+}

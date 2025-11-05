@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/hex-binary-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - hex binary",
+      "data": "48656C6C6F",
+      "valid": true
+    },
+    {
+      "description": "Valid - lowercase hex",
+      "data": "deadbeef",
+      "valid": true
+    },
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Invalid - odd number of characters",
+      "data": "123",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-hex characters",
+      "data": "GHIJ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number instead of string",
+      "data": 123,
+      "valid": false
+    }
+  ]
+}
