@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/pressure-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - Pa",
+      "data": "Pa",
+      "valid": true
+    },
+    {
+      "description": "Valid - Bar",
+      "data": "Bar",
+      "valid": true
+    },
+    {
+      "description": "Valid - psi",
+      "data": "psi",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

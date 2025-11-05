@@ -1,0 +1,68 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/monetary-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - USD",
+      "data": "USD",
+      "valid": true
+    },
+    {
+      "description": "Valid - EUR",
+      "data": "EUR",
+      "valid": true
+    },
+    {
+      "description": "Valid - GBP",
+      "data": "GBP",
+      "valid": true
+    },
+    {
+      "description": "Valid - JPY",
+      "data": "JPY",
+      "valid": true
+    },
+    {
+      "description": "Valid - CNY",
+      "data": "CNY",
+      "valid": true
+    },
+    {
+      "description": "Valid - AED",
+      "data": "AED",
+      "valid": true
+    },
+    {
+      "description": "Valid - ZWL (Zimbabwe dollar)",
+      "data": "ZWL",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown currency",
+      "data": "XXX",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase",
+      "data": "usd",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 840,
+      "valid": false
+    },
+    {
+      "description": "Invalid - object",
+      "data": {
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/length-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - ft",
+      "data": "ft",
+      "valid": true
+    },
+    {
+      "description": "Valid - in",
+      "data": "in",
+      "valid": true
+    },
+    {
+      "description": "Valid - mi",
+      "data": "mi",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

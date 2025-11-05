@@ -1,0 +1,31 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/flow-item-type-normative.json",
+  "tests": [
+    {
+      "description": "Valid - Volume_per_Duration (REC)",
+      "data": "Volume_per_Duration",
+      "valid": true
+    },
+    {
+      "description": "Invalid - Energy_per_Duration (CR, not normative)",
+      "data": "Energy_per_Duration",
+      "valid": false
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "Mass_per_Duration",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 42,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

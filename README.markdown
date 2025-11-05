@@ -79,6 +79,7 @@ expressed as JSON Schema definitions.
 | W3C | [XML Schema Part 2](https://www.w3.org/TR/xmlschema-2/) | XML Schema Datatypes Second Edition |
 | XBRL International | [XBRL 2.1](https://www.xbrl.org/Specification/XBRL-2.1/REC-2003-12-31/XBRL-2.1-REC-2003-12-31+corrected-errata-2013-02-20.html) | Extensible Business Reporting Language (XBRL) 2.1 |
 | XBRL International | [XBRL DTR](https://www.xbrl.org/dtr/dtr.html) | XBRL Data Types Registry |
+| XBRL International | [XBRL UTR](https://www.xbrl.org/specification/utr/rec-2013-11-18/utr-rec-2013-11-18-clean.html) | XBRL Units Type Registry |
 
 To request coverage of another standard, please [open an issue on
 GitHub](https://github.com/sourcemeta/std/issues).

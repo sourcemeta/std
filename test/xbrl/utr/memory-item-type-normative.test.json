@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/memory-item-type-normative.json",
+  "tests": [
+    {
+      "description": "Valid - B (REC)",
+      "data": "B",
+      "valid": true
+    },
+    {
+      "description": "Valid - GB (REC)",
+      "data": "GB",
+      "valid": true
+    },
+    {
+      "description": "Valid - kB (REC)",
+      "data": "kB",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

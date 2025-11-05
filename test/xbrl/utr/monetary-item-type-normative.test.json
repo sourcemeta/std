@@ -1,0 +1,41 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/monetary-item-type-normative.json",
+  "tests": [
+    {
+      "description": "Valid - USD (REC)",
+      "data": "USD",
+      "valid": true
+    },
+    {
+      "description": "Valid - EUR (REC)",
+      "data": "EUR",
+      "valid": true
+    },
+    {
+      "description": "Valid - GBP (REC)",
+      "data": "GBP",
+      "valid": true
+    },
+    {
+      "description": "Valid - JPY (REC)",
+      "data": "JPY",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown currency",
+      "data": "XXX",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 840,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

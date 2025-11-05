@@ -44,6 +44,7 @@ test:
 include generate/iso/currency/include.mk
 include generate/iso/language/include.mk
 include generate/iso/country/include.mk
+include generate/xbrl/utr/include.mk
 external: $(EXTERNAL)
 generate: $(GENERATE)
 

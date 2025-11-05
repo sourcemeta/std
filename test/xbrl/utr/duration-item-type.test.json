@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/duration-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - Y",
+      "data": "Y",
+      "valid": true
+    },
+    {
+      "description": "Valid - M",
+      "data": "M",
+      "valid": true
+    },
+    {
+      "description": "Valid - D",
+      "data": "D",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

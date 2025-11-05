@@ -28,6 +28,7 @@
       "$ref": "../../../w3c/xmlschema/2001/decimal.json"
     },
     "currency": {
+      "$comment": "References ISO currencies as defined in the XBRL 2.1 specification. The XBRL Units Type Registry (UTR) also defines monetary units with additional XBRL-specific metadata and status (REC/CR). For general XBRL usage, this ISO reference is appropriate. For strict regulatory compliance or XBRL-specific unit validation, use the UTR unit schema as an additional validation layer",
       "$ref": "../../../iso/currency/2015/alpha-currency.json"
     }
   }

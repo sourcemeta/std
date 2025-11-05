@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/xbrl/utr/mass-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - lb",
+      "data": "lb",
+      "valid": true
+    },
+    {
+      "description": "Valid - oz",
+      "data": "oz",
+      "valid": true
+    },
+    {
+      "description": "Valid - ozt",
+      "data": "ozt",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}
