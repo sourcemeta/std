@@ -4,32 +4,37 @@
   "tests": [
     {
       "description": "Valid - negative integer",
-      "data": "-42",
+      "data": -42,
       "valid": true
     },
     {
       "description": "Valid - zero",
-      "data": "0",
+      "data": 0,
       "valid": true
     },
     {
       "description": "Valid - large negative integer",
-      "data": "-999999999999999999999999",
+      "data": -999999999999999999,
       "valid": true
     },
     {
       "description": "Invalid - positive integer",
-      "data": "1",
+      "data": 1,
       "valid": false
     },
     {
       "description": "Invalid - decimal value",
-      "data": "-123.45",
+      "data": -123.45,
       "valid": false
     },
     {
-      "description": "Invalid - number type instead of string",
-      "data": 0,
+      "description": "Invalid - string type",
+      "data": "0",
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
       "valid": false
     }
   ]

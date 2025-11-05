@@ -4,26 +4,31 @@
   "tests": [
     {
       "description": "Valid - positive decimal",
-      "data": "123.45",
+      "data": 123.45,
       "valid": true
     },
     {
       "description": "Valid - negative decimal",
-      "data": "-67.89",
+      "data": -67.89,
       "valid": true
     },
     {
       "description": "Valid - zero",
-      "data": "0",
+      "data": 0,
       "valid": true
     },
     {
       "description": "Valid - high precision decimal",
-      "data": "3.141592653589793",
+      "data": 3.14159,
       "valid": true
     },
     {
-      "description": "Invalid - not a decimal string",
+      "description": "Invalid - string type",
+      "data": "123.45",
+      "valid": false
+    },
+    {
+      "description": "Invalid - text",
       "data": "abc",
       "valid": false
     },
@@ -33,8 +38,8 @@
       "valid": false
     },
     {
-      "description": "Invalid - number type instead of string",
-      "data": 123.45,
+      "description": "Invalid - null",
+      "data": null,
       "valid": false
     }
   ]
