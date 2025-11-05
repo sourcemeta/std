@@ -78,6 +78,7 @@ expressed as JSON Schema definitions.
 | JSON Schema | [Draft 2020-12](https://json-schema.org/draft/2020-12/json-schema-core) | JSON Schema: A Media Type for Describing JSON Documents |
 | W3C | [XML Schema Part 2](https://www.w3.org/TR/xmlschema-2/) | XML Schema Datatypes Second Edition |
 | XBRL International | [XBRL 2.1](https://www.xbrl.org/Specification/XBRL-2.1/REC-2003-12-31/XBRL-2.1-REC-2003-12-31+corrected-errata-2013-02-20.html) | Extensible Business Reporting Language (XBRL) 2.1 |
+| XBRL International | [XBRL DTR](https://www.xbrl.org/dtr/dtr.html) | XBRL Data Types Registry |
 
 To request coverage of another standard, please [open an issue on
 GitHub](https://github.com/sourcemeta/std/issues).

@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/xbrl/dtr/type/2024-01-31/power-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - positive decimal",
+      "data": 100.5,
+      "valid": true
+    },
+    {
+      "description": "Valid - negative decimal",
+      "data": -25.75,
+      "valid": true
+    },
+    {
+      "description": "Valid - zero",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - large number",
+      "data": 1000000.0,
+      "valid": true
+    },
+    {
+      "description": "Invalid - string type",
+      "data": "100.5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

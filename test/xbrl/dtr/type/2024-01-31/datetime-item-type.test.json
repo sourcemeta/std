@@ -1,0 +1,46 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/xbrl/dtr/type/2024-01-31/datetime-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - datetime with timezone",
+      "data": "2023-12-31T23:59:59Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - datetime with offset",
+      "data": "2024-01-01T00:00:00-05:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - datetime without timezone",
+      "data": "2024-06-15T12:30:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - datetime with fractional seconds",
+      "data": "2024-01-01T12:00:00.123Z",
+      "valid": true
+    },
+    {
+      "description": "Invalid - date only (no time)",
+      "data": "2023-12-31",
+      "valid": false
+    },
+    {
+      "description": "Invalid - year 0000",
+      "data": "0000-01-01T00:00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 20231231,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

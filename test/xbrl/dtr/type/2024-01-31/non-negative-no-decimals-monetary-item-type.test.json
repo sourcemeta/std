@@ -1,0 +1,97 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/xbrl/dtr/type/2024-01-31/non-negative-no-decimals-monetary-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - positive integer monetary value",
+      "data": {
+        "value": 100,
+        "currency": "USD"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - zero",
+      "data": {
+        "value": 0,
+        "currency": "EUR"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - large positive integer",
+      "data": {
+        "value": 999999999,
+        "currency": "JPY"
+      },
+      "valid": true
+    },
+    {
+      "description": "Invalid - negative integer value",
+      "data": {
+        "value": -10,
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative large integer",
+      "data": {
+        "value": -999999,
+        "currency": "EUR"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - positive decimal value (has cents)",
+      "data": {
+        "value": 100.5,
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - small positive decimal",
+      "data": {
+        "value": 0.01,
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative decimal",
+      "data": {
+        "value": -10.99,
+        "currency": "EUR"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing currency",
+      "data": {
+        "value": 100
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing value",
+      "data": {
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid - string value",
+      "data": {
+        "value": "100",
+        "currency": "USD"
+      },
+      "valid": false
+    }
+  ]
+}
