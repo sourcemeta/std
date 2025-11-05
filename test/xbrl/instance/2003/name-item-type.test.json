@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/name-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - simple name",
+      "data": "elementName",
+      "valid": true
+    },
+    {
+      "description": "Valid - name with colon",
+      "data": "xs:string",
+      "valid": true
+    },
+    {
+      "description": "Valid - name with underscore",
+      "data": "my_element",
+      "valid": true
+    },
+    {
+      "description": "Valid - name with dash",
+      "data": "my-element",
+      "valid": true
+    },
+    {
+      "description": "Invalid - name starting with number",
+      "data": "1element",
+      "valid": false
+    },
+    {
+      "description": "Invalid - name with space",
+      "data": "my element",
+      "valid": false
+    }
+  ]
+}

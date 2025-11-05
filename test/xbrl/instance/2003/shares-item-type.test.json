@@ -1,0 +1,41 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/shares-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - whole shares",
+      "data": "1000",
+      "valid": true
+    },
+    {
+      "description": "Valid - fractional shares",
+      "data": "123.456",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero shares",
+      "data": "0",
+      "valid": true
+    },
+    {
+      "description": "Valid - high precision fractional shares",
+      "data": "9876.123456",
+      "valid": true
+    },
+    {
+      "description": "Invalid - not a decimal string",
+      "data": "xyz",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type instead of string",
+      "data": 1000,
+      "valid": false
+    }
+  ]
+}

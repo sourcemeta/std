@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/non-positive-integer-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - negative integer",
+      "data": "-42",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero",
+      "data": "0",
+      "valid": true
+    },
+    {
+      "description": "Valid - large negative integer",
+      "data": "-999999999999999999999999",
+      "valid": true
+    },
+    {
+      "description": "Invalid - positive integer",
+      "data": "1",
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal value",
+      "data": "-123.45",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type instead of string",
+      "data": 0,
+      "valid": false
+    }
+  ]
+}

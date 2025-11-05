@@ -1,0 +1,41 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/pure-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - pure number as decimal",
+      "data": "0.5",
+      "valid": true
+    },
+    {
+      "description": "Valid - whole number",
+      "data": "1",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative pure number",
+      "data": "-0.25",
+      "valid": true
+    },
+    {
+      "description": "Valid - high precision",
+      "data": "0.123456789",
+      "valid": true
+    },
+    {
+      "description": "Invalid - not a decimal string",
+      "data": "not-a-number",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type instead of string",
+      "data": 0.5,
+      "valid": false
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/language-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - simple language code",
+      "data": "en",
+      "valid": true
+    },
+    {
+      "description": "Valid - language with region",
+      "data": "en-US",
+      "valid": true
+    },
+    {
+      "description": "Valid - complex language tag",
+      "data": "zh-Hant-HK",
+      "valid": true
+    },
+    {
+      "description": "Valid - lowercase language code",
+      "data": "fr",
+      "valid": true
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - invalid characters",
+      "data": "en_US",
+      "valid": false
+    }
+  ]
+}

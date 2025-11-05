@@ -1,0 +1,41 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/decimal-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - positive decimal",
+      "data": "123.45",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative decimal",
+      "data": "-67.89",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero",
+      "data": "0",
+      "valid": true
+    },
+    {
+      "description": "Valid - high precision decimal",
+      "data": "3.141592653589793",
+      "valid": true
+    },
+    {
+      "description": "Invalid - not a decimal string",
+      "data": "abc",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type instead of string",
+      "data": 123.45,
+      "valid": false
+    }
+  ]
+}

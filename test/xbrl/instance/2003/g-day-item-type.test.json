@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/g-day-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - basic day",
+      "data": "---15",
+      "valid": true
+    },
+    {
+      "description": "Valid - day with timezone",
+      "data": "---15Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - day with offset",
+      "data": "---15-05:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - first day of month",
+      "data": "---01",
+      "valid": true
+    },
+    {
+      "description": "Invalid - day 00",
+      "data": "---00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - day 32",
+      "data": "---32",
+      "valid": false
+    }
+  ]
+}

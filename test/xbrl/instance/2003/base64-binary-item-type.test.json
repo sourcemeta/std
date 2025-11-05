@@ -1,0 +1,41 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/base64-binary-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - base64 encoded string",
+      "data": "SGVsbG8gV29ybGQ=",
+      "valid": true
+    },
+    {
+      "description": "Valid - base64 with double padding",
+      "data": "YQ==",
+      "valid": true
+    },
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Valid - longer base64 string",
+      "data": "VGhpcyBpcyBhIHRlc3Q=",
+      "valid": true
+    },
+    {
+      "description": "Invalid - invalid base64 characters",
+      "data": "Hello@World",
+      "valid": false
+    },
+    {
+      "description": "Invalid - improper padding",
+      "data": "SGVsbG8",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number instead of string",
+      "data": 123,
+      "valid": false
+    }
+  ]
+}

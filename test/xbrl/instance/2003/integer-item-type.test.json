@@ -1,0 +1,41 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/integer-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - positive integer",
+      "data": "42",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative integer",
+      "data": "-100",
+      "valid": true
+    },
+    {
+      "description": "Valid - zero",
+      "data": "0",
+      "valid": true
+    },
+    {
+      "description": "Valid - large integer",
+      "data": "999999999999999999999999999999",
+      "valid": true
+    },
+    {
+      "description": "Invalid - decimal value",
+      "data": "123.45",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-numeric string",
+      "data": "abc",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number type instead of string",
+      "data": 42,
+      "valid": false
+    }
+  ]
+}

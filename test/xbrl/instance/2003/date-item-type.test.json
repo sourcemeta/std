@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/date-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - basic date",
+      "data": "2023-10-15",
+      "valid": true
+    },
+    {
+      "description": "Valid - date with timezone",
+      "data": "2023-10-15Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - date with offset",
+      "data": "2023-10-15-05:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative year",
+      "data": "-0001-01-01",
+      "valid": true
+    },
+    {
+      "description": "Invalid - invalid month",
+      "data": "2023-13-01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - random string",
+      "data": "not-a-date",
+      "valid": false
+    }
+  ]
+}

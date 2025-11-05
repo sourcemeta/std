@@ -1,0 +1,41 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/float-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - positive float",
+      "data": 123.45,
+      "valid": true
+    },
+    {
+      "description": "Valid - negative float",
+      "data": -67.89,
+      "valid": true
+    },
+    {
+      "description": "Valid - zero",
+      "data": 0.0,
+      "valid": true
+    },
+    {
+      "description": "Valid - integer as float",
+      "data": 42,
+      "valid": true
+    },
+    {
+      "description": "Invalid - string instead of number",
+      "data": "123.45",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-numeric string",
+      "data": "abc",
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/fraction-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - positive numerator and positive denominator",
+      "data": [ "1.5", "2" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - negative numerator and positive denominator",
+      "data": [ "-100", "3.5" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - positive numerator and negative denominator",
+      "data": [ "5", "-2.5" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - negative numerator and negative denominator",
+      "data": [ "-7", "-3" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - zero numerator with positive denominator",
+      "data": [ "0", "1" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - zero numerator with negative denominator",
+      "data": [ "0", "-5" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - zero numerator as decimal with positive denominator",
+      "data": [ "0.0", "2" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - whole number numerator and denominator",
+      "data": [ "3", "4" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - large positive values",
+      "data": [ "999999.999", "123456.789" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - large negative denominator",
+      "data": [ "1", "-999999.999" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - very small fractional denominator",
+      "data": [ "100", "0.001" ],
+      "valid": true
+    },
+    {
+      "description": "Valid - very small negative fractional denominator",
+      "data": [ "100", "-0.001" ],
+      "valid": true
+    },
+    {
+      "description": "Invalid - zero denominator",
+      "data": [ "1", "0" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - zero denominator as 0.0",
+      "data": [ "1", "0.0" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - zero denominator as 0.00",
+      "data": [ "5", "0.00" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - zero denominator as -0",
+      "data": [ "3", "-0" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - zero denominator as -0.0",
+      "data": [ "2", "-0.0" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - zero denominator as 00",
+      "data": [ "1", "00" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - zero denominator as 0.000",
+      "data": [ "1", "0.000" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - only one element",
+      "data": [ "1" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - three elements",
+      "data": [ "1", "2", "3" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-decimal numerator",
+      "data": [ "abc", "2" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-decimal denominator",
+      "data": [ "1", "xyz" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - number types instead of strings",
+      "data": [ 1.5, 2 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - null numerator",
+      "data": [ null, "1" ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - null denominator",
+      "data": [ "1", null ],
+      "valid": false
+    }
+  ]
+}

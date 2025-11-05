@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/ncname-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - simple NCName",
+      "data": "elementName",
+      "valid": true
+    },
+    {
+      "description": "Valid - NCName with underscore",
+      "data": "my_element",
+      "valid": true
+    },
+    {
+      "description": "Valid - NCName with dash",
+      "data": "my-element",
+      "valid": true
+    },
+    {
+      "description": "Valid - NCName starting with underscore",
+      "data": "_element",
+      "valid": true
+    },
+    {
+      "description": "Invalid - NCName with colon",
+      "data": "xs:string",
+      "valid": false
+    },
+    {
+      "description": "Invalid - NCName starting with number",
+      "data": "1element",
+      "valid": false
+    }
+  ]
+}

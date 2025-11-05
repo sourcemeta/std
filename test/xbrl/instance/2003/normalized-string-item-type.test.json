@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/normalized-string-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - simple string",
+      "data": "hello world",
+      "valid": true
+    },
+    {
+      "description": "Valid - string with spaces",
+      "data": "this is a normalized string",
+      "valid": true
+    },
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Invalid - string with line feed",
+      "data": "hello\nworld",
+      "valid": false
+    },
+    {
+      "description": "Invalid - string with carriage return",
+      "data": "hello\rworld",
+      "valid": false
+    },
+    {
+      "description": "Invalid - string with tab",
+      "data": "hello\tworld",
+      "valid": false
+    }
+  ]
+}

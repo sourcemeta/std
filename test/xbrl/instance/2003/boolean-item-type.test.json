@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/boolean-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - true",
+      "data": true,
+      "valid": true
+    },
+    {
+      "description": "Valid - false",
+      "data": false,
+      "valid": true
+    },
+    {
+      "description": "Invalid - string 'true'",
+      "data": "true",
+      "valid": false
+    },
+    {
+      "description": "Invalid - string 'false'",
+      "data": "false",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number 1",
+      "data": 1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - number 0",
+      "data": 0,
+      "valid": false
+    }
+  ]
+}

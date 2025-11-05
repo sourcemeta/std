@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/duration-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - duration in days",
+      "data": "P1D",
+      "valid": true
+    },
+    {
+      "description": "Valid - duration in years and months",
+      "data": "P1Y2M",
+      "valid": true
+    },
+    {
+      "description": "Valid - duration with time component",
+      "data": "PT5H30M",
+      "valid": true
+    },
+    {
+      "description": "Valid - negative duration",
+      "data": "-P1D",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing P prefix",
+      "data": "1D",
+      "valid": false
+    },
+    {
+      "description": "Invalid - random string",
+      "data": "not-a-duration",
+      "valid": false
+    }
+  ]
+}

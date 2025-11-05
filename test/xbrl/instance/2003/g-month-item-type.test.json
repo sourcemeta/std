@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/g-month-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - basic month",
+      "data": "--05",
+      "valid": true
+    },
+    {
+      "description": "Valid - month with timezone",
+      "data": "--05Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - month with offset",
+      "data": "--05-05:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - December",
+      "data": "--12",
+      "valid": true
+    },
+    {
+      "description": "Invalid - month 00",
+      "data": "--00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - month 13",
+      "data": "--13",
+      "valid": false
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/time-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - time with seconds",
+      "data": "12:30:45",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with timezone",
+      "data": "12:30:45Z",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with offset",
+      "data": "12:30:45-05:00",
+      "valid": true
+    },
+    {
+      "description": "Valid - time with fractional seconds",
+      "data": "12:30:45.123",
+      "valid": true
+    },
+    {
+      "description": "Invalid - missing seconds",
+      "data": "12:30",
+      "valid": false
+    },
+    {
+      "description": "Invalid - random string",
+      "data": "not-a-time",
+      "valid": false
+    }
+  ]
+}

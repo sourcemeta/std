@@ -1,0 +1,36 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/xbrl/instance/2003/string-item-type.json",
+  "tests": [
+    {
+      "description": "Valid - simple string",
+      "data": "hello",
+      "valid": true
+    },
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Valid - string with whitespace",
+      "data": "hello\nworld\t!",
+      "valid": true
+    },
+    {
+      "description": "Valid - unicode string",
+      "data": "Hello 世界",
+      "valid": true
+    },
+    {
+      "description": "Invalid - number instead of string",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - boolean instead of string",
+      "data": true,
+      "valid": false
+    }
+  ]
+}
