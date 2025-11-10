@@ -1,4 +1,4 @@
-# Sourcemeta JSON Schema Standard Library
+![](./banner.png)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17526561.svg)](https://doi.org/10.5281/zenodo.17526561)
 
