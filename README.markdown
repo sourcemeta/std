@@ -33,7 +33,6 @@ designing great APIs.*
 
 ## :bookmark_tabs: Table of Contents
 
-- [:blue_book: Standards](#blue_book-standards)
 - [:rocket: Getting Started](#rocket-getting-started)
     - [From Sourcemeta Schemas](#from-sourcemeta-schemas)
     - [From GitHub Releases](#from-github-releases)
@@ -43,46 +42,6 @@ designing great APIs.*
 - [:page_facing_up: License](#page_facing_up-license)
 - [:handshake: Contributing](#handshake-contributing)
 - [:email: Contact](#email-contact)
-
-## :blue_book: Standards
-
-This library provides schemas that encode aspects of the following standards.
-Note that these standards often contain concepts and specifications that cannot
-be represented as schemas. We extract and formalize the portions that can be
-expressed as JSON Schema definitions.
-
-| Organisation | Standard | Title |
-|--------------|----------|-------|
-| IEEE | [IEEE Std 754-2019](https://ieeexplore.ieee.org/document/8766229) | IEEE Standard for Floating-Point Arithmetic |
-| IEEE | [IEEE Std 1003.1-2017](https://pubs.opengroup.org/onlinepubs/9699919799/) | IEEE Standard for Information Technology—Portable Operating System Interface (POSIX) Base Specifications, Issue 7 |
-| IETF | [RFC 3066](https://www.rfc-editor.org/rfc/rfc3066) | Tags for the Identification of Languages |
-| IETF | [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986) | Uniform Resource Identifier (URI): Generic Syntax |
-| IETF | [RFC 4648](https://www.rfc-editor.org/rfc/rfc4648) | The Base16, Base32, and Base64 Data Encodings |
-| IETF | [RFC 4918](https://www.rfc-editor.org/rfc/rfc4918) | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) |
-| IETF | [RFC 5322](https://www.rfc-editor.org/rfc/rfc5322) | Internet Message Format |
-| IETF | [RFC 5646](https://www.rfc-editor.org/rfc/rfc5646) | Tags for Identifying Languages (BCP 47) |
-| IETF | [RFC 5789](https://www.rfc-editor.org/rfc/rfc5789) | PATCH Method for HTTP |
-| IETF | [RFC 6901](https://www.rfc-editor.org/rfc/rfc6901) | JavaScript Object Notation (JSON) Pointer |
-| IETF | [RFC 7807](https://www.rfc-editor.org/rfc/rfc7807) | Problem Details for HTTP APIs |
-| IETF | [RFC 8141](https://www.rfc-editor.org/rfc/rfc8141) | Uniform Resource Names (URNs) |
-| IETF | [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110) | HTTP Semantics |
-| ISO | [ISO 3166-1:2020](https://www.iso.org/iso-3166-country-codes.html) | Codes for the representation of names of countries and their subdivisions — Part 1: Country codes |
-| ISO | [ISO 4217:2015](https://www.iso.org/iso-4217-currency-codes.html) | Codes for the representation of currencies and funds |
-| ISO | [ISO 639:2023](https://www.iso.org/iso-639-language-code) | Codes for the representation of names of languages |
-| ISO | [ISO 8601-1:2019](https://www.iso.org/standard/70907.html) | Date and time — Representations for information interchange — Part 1: Basic rules |
-| ISO | [ISO 8601-2:2019](https://www.iso.org/standard/70908.html) | Date and time — Representations for information interchange — Part 2: Extensions |
-| ISO | [ISO 80000-1:2022](https://www.iso.org/standard/76921.html) | Quantities and units — Part 1: General |
-| ISO/IEC | [ISO/IEC 2382:2015](https://www.iso.org/standard/63598.html) | Information technology — Vocabulary |
-| ISO/IEC | [ISO/IEC 9899:2024](https://www.iso.org/standard/82075.html) | Programming languages — C |
-| JSON-RPC | [JSON-RPC 2.0](https://www.jsonrpc.org/specification) | JSON-RPC 2.0 Specification |
-| JSON Schema | [Draft 2020-12](https://json-schema.org/draft/2020-12/json-schema-core) | JSON Schema: A Media Type for Describing JSON Documents |
-| W3C | [XML Schema Part 2](https://www.w3.org/TR/xmlschema-2/) | XML Schema Datatypes Second Edition |
-| XBRL International | [XBRL 2.1](https://www.xbrl.org/Specification/XBRL-2.1/REC-2003-12-31/XBRL-2.1-REC-2003-12-31+corrected-errata-2013-02-20.html) | Extensible Business Reporting Language (XBRL) 2.1 |
-| XBRL International | [XBRL DTR](https://www.xbrl.org/dtr/dtr.html) | XBRL Data Types Registry |
-| XBRL International | [XBRL UTR](https://www.xbrl.org/specification/utr/rec-2013-11-18/utr-rec-2013-11-18-clean.html) | XBRL Units Type Registry |
-
-To request coverage of another standard, please [open an issue on
-GitHub](https://github.com/sourcemeta/std/issues).
 
 ## :rocket: Getting Started
 
