@@ -194,7 +194,7 @@ While the project is publicly available on GitHub, it operates under a
 [source-available license](https://github.com/sourcemeta/std/blob/main/LICENSE)
 rather than a traditional open-source model. You may freely use these schemas
 for non-commercial purposes, but commercial use requires a [paid commercial
-license](https://www.sourcemeta.com/#pricing).
+license](https://www.sourcemeta.com/products/std#pricing).
 
 *We are happy to discuss OEM and white-label distribution options for
 incorporating these schemas into commercial products*.
