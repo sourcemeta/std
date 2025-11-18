@@ -6,6 +6,5 @@
   "examples": [ 0, 1, 9007199254740991, 4294967296 ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.w3.org/TR/xmlschema-2/#unsignedLong" ],
-  "type": "integer",
-  "minimum": 0
+  "$ref": "../../../iso/c/2024/uint64.json"
 }
