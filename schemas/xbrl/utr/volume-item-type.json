@@ -102,35 +102,35 @@
     },
     {
       "title": "Hectolitre",
-      "description": "A metric unit of volume equal to one hundred litres, used especially for wine, beer, grain and other agricultural produce.",
+      "description": "A metric unit of volume equal to one hundred litres, used especially for wine, beer, grain and other agricultural produce",
       "x-status": "CR",
       "x-symbol": "hl",
       "const": "hl"
     },
     {
       "title": "Millions of hectolitres",
-      "description": "A million hectolitres (a metric unit of volume equal to one hundred litres, used especially for wine, beer, grain and other agricultural produce).",
+      "description": "A million hectolitres (a metric unit of volume equal to one hundred litres, used especially for wine, beer, grain and other agricultural produce)",
       "x-status": "CR",
       "x-symbol": "Mhl",
       "const": "Mhl"
     },
     {
       "title": "Megalitre",
-      "description": "A million litres.",
+      "description": "A million litres",
       "x-status": "CR",
       "x-symbol": "Ml",
       "const": "Ml"
     },
     {
       "title": "Thousand cubic metres",
-      "description": "A thousand cubic metres.",
+      "description": "A thousand cubic metres",
       "x-status": "CR",
       "x-symbol": "Mm³",
       "const": "Mm3"
     },
     {
       "title": "Twenty-foot equivalent unit",
-      "description": "A general (inexact) unit of cargo capacity, often used for container ships and container ports. The 'volume' of a 20-foot-long intermodal container, which vary in height, giving a range of possible volumes.",
+      "description": "A general (inexact) unit of cargo capacity, often used for container ships and container ports. The 'volume' of a 20-foot-long intermodal container, which vary in height, giving a range of possible volumes",
       "x-status": "CR",
       "x-symbol": "TEU",
       "const": "TEU"

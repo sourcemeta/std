@@ -25,6 +25,7 @@ all: common test
 common:
 	$(JSONSCHEMA) metaschema schemas meta --verbose
 	$(JSONSCHEMA) lint schemas meta --verbose
+	$(JSONSCHEMA) validate meta/schemas-root.json --verbose $(SCHEMAS)
 	$(JSONSCHEMA) validate meta/schemas.json --verbose $(SCHEMAS)
 	$(JSONSCHEMA) validate meta/test.json --verbose $(TESTS)
 	$(SHELLCHECK) scripts/*.sh

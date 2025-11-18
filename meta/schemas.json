@@ -1,54 +1,39 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
-  "anyOf": [
-    {
-      "properties": {
-        "examples": {
-          "type": "array",
-          "minItems": 1
-        },
-        "const": true
-      }
-    },
-    {
-      "properties": {
-        "examples": {
-          "type": "array",
-          "minItems": 3
-        },
-        "const": false
-      }
-    }
-  ],
-  "required": [
-    "x-license",
-    "title",
-    "description",
-    "examples",
-    "x-links",
-    "$schema"
-  ],
+  "$dynamicAnchor": "meta",
+  "$ref": "https://json-schema.org/draft/2020-12/schema",
   "properties": {
-    "$schema": {
-      "const": "https://json-schema.org/draft/2020-12/schema"
-    },
     "$id": false,
     "$comment": {
+      "$ref": "#/$defs/clean-prose"
+    },
+    "title": {
+      "$ref": "#/$defs/clean-prose"
+    },
+    "description": {
+      "$ref": "#/$defs/clean-prose"
+    }
+  },
+  "$defs": {
+    "clean-prose": {
+      "type": "string",
       "not": {
-        "$ref": "../schemas/ietf/uri/uri-reference.json"
-      }
-    },
-    "x-license": {
-      "const": "https://github.com/sourcemeta/std/blob/main/LICENSE"
-    },
-    "x-links": {
-      "type": "array",
-      "minItems": 1,
-      "uniqueItems": true,
-      "items": {
-        "$ref": "../schemas/ietf/http/https-url.json"
-      }
+        "anyOf": [
+          {
+            "pattern": "\\.$"
+          },
+          {
+            "pattern": "  \\s"
+          },
+          {
+            "pattern": "[\\n\\r\\t]"
+          },
+          {
+            "pattern": "[\\x00-\\x1F\\x7F]"
+          }
+        ]
+      },
+      "pattern": "^[^\\s].*[^\\s]$|^[^\\s]$"
     }
   }
 }

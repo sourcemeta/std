@@ -49,6 +49,11 @@ def create_unit_schema_entry(unit):
     symbol = unit.get(f"{UTR_NS}symbol", "")
     status = unit.get(f"{UTR_NS}status", "")
 
+    if definition.endswith('.'):
+        definition = definition[:-1]
+
+    definition = re.sub(r'\s{2,}', ' ', definition)
+
     entry = {
         "const": unit_id,
         "title": unit_name,
