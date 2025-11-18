@@ -1,0 +1,51 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/bipm/si/2019/constant/luminous-efficacy.json",
+  "tests": [
+    {
+      "description": "Valid - exact value",
+      "data": 683,
+      "valid": true
+    },
+    {
+      "description": "Invalid - different value",
+      "data": 684,
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal",
+      "data": 683.5,
+      "valid": false
+    },
+    {
+      "description": "Invalid - zero",
+      "data": 0,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - string",
+      "data": "683",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}

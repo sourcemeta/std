@@ -34,12 +34,12 @@
     },
     {
       "description": "Valid - small positive value",
-      "data": 6.10352e-05,
+      "data": 6.10352e-5,
       "valid": true
     },
     {
       "description": "Valid - small negative value",
-      "data": -6.10352e-05,
+      "data": -6.10352e-5,
       "valid": true
     },
     {

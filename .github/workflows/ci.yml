@@ -17,7 +17,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: sourcemeta/jsonschema@v12.4.0
+      - uses: sourcemeta/jsonschema@v12.5.1
       - uses: actions/checkout@v4
       - run: make lint
       - run: make test

@@ -53,7 +53,7 @@
     {
       "description": "Valid - arbitrary precision 20 digits in USD",
       "data": {
-        "value": 12345678901234567890,
+        "value": 1.2345678901234567890e+19,
         "currency": "USD"
       },
       "valid": true
@@ -61,7 +61,7 @@
     {
       "description": "Valid - arbitrary precision 25 digits in EUR",
       "data": {
-        "value": 1234567890123456789012345,
+        "value": 1.234567890123456789012345e+24,
         "currency": "EUR"
       },
       "valid": true
@@ -77,7 +77,7 @@
     {
       "description": "Valid - arbitrary precision negative in JPY",
       "data": {
-        "value": -12345678901234567890,
+        "value": -1.2345678901234567890e+19,
         "currency": "JPY"
       },
       "valid": true

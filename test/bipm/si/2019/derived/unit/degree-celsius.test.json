@@ -1,0 +1,61 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../../schemas/bipm/si/2019/derived/unit/degree-celsius.json",
+  "tests": [
+    {
+      "description": "Valid - absolute zero in Celsius",
+      "data": -273.15,
+      "valid": true
+    },
+    {
+      "description": "Valid - water freezing point",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - room temperature",
+      "data": 20,
+      "valid": true
+    },
+    {
+      "description": "Valid - water boiling point",
+      "data": 100,
+      "valid": true
+    },
+    {
+      "description": "Valid - high temperature",
+      "data": 500,
+      "valid": true
+    },
+    {
+      "description": "Invalid - below absolute zero",
+      "data": -274,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - string",
+      "data": "20",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}

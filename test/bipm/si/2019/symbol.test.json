@@ -1,0 +1,71 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/bipm/si/2019/symbol.json",
+  "tests": [
+    {
+      "description": "Valid - base unit second",
+      "data": "s",
+      "valid": true
+    },
+    {
+      "description": "Valid - base unit metre",
+      "data": "m",
+      "valid": true
+    },
+    {
+      "description": "Valid - base unit kilogram",
+      "data": "kg",
+      "valid": true
+    },
+    {
+      "description": "Valid - derived unit hertz",
+      "data": "Hz",
+      "valid": true
+    },
+    {
+      "description": "Valid - derived unit newton",
+      "data": "N",
+      "valid": true
+    },
+    {
+      "description": "Valid - derived unit ohm",
+      "data": "Ω",
+      "valid": true
+    },
+    {
+      "description": "Valid - derived unit degree Celsius",
+      "data": "°C",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown symbol",
+      "data": "foo",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - number",
+      "data": 100,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}

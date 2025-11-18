@@ -1,0 +1,61 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../../schemas/bipm/si/2019/derived/prefixed/femtowatt.json",
+  "tests": [
+    {
+      "description": "Valid - zero",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - positive",
+      "data": 1,
+      "valid": true
+    },
+    {
+      "description": "Valid - hundred",
+      "data": 100,
+      "valid": true
+    },
+    {
+      "description": "Valid - large value",
+      "data": 10000,
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal",
+      "data": 0.5,
+      "valid": true
+    },
+    {
+      "description": "Invalid - negative",
+      "data": -50,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - string",
+      "data": "100",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": false,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}

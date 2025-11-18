@@ -1,0 +1,166 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/bipm/si/2019/derived/symbol.json",
+  "tests": [
+    {
+      "description": "Valid - hertz",
+      "data": "Hz",
+      "valid": true
+    },
+    {
+      "description": "Valid - newton",
+      "data": "N",
+      "valid": true
+    },
+    {
+      "description": "Valid - pascal",
+      "data": "Pa",
+      "valid": true
+    },
+    {
+      "description": "Valid - joule",
+      "data": "J",
+      "valid": true
+    },
+    {
+      "description": "Valid - watt",
+      "data": "W",
+      "valid": true
+    },
+    {
+      "description": "Valid - ohm",
+      "data": "Ω",
+      "valid": true
+    },
+    {
+      "description": "Valid - degree Celsius",
+      "data": "°C",
+      "valid": true
+    },
+    {
+      "description": "Valid - katal",
+      "data": "kat",
+      "valid": true
+    },
+    {
+      "description": "Valid - millihertz",
+      "data": "mHz",
+      "valid": true
+    },
+    {
+      "description": "Valid - kilonewton",
+      "data": "kN",
+      "valid": true
+    },
+    {
+      "description": "Valid - megapascal",
+      "data": "MPa",
+      "valid": true
+    },
+    {
+      "description": "Valid - kilojoule",
+      "data": "kJ",
+      "valid": true
+    },
+    {
+      "description": "Valid - milliwatt",
+      "data": "mW",
+      "valid": true
+    },
+    {
+      "description": "Valid - microvolt",
+      "data": "µV",
+      "valid": true
+    },
+    {
+      "description": "Valid - picofarad",
+      "data": "pF",
+      "valid": true
+    },
+    {
+      "description": "Valid - microohm",
+      "data": "µΩ",
+      "valid": true
+    },
+    {
+      "description": "Valid - nanotesla",
+      "data": "nT",
+      "valid": true
+    },
+    {
+      "description": "Valid - microhenry",
+      "data": "µH",
+      "valid": true
+    },
+    {
+      "description": "Valid - microdegree celsius",
+      "data": "µ°C",
+      "valid": true
+    },
+    {
+      "description": "Valid - gigabecquerel",
+      "data": "GBq",
+      "valid": true
+    },
+    {
+      "description": "Valid - milligray",
+      "data": "mGy",
+      "valid": true
+    },
+    {
+      "description": "Valid - millisievert",
+      "data": "mSv",
+      "valid": true
+    },
+    {
+      "description": "Valid - nanokatal",
+      "data": "nkat",
+      "valid": true
+    },
+    {
+      "description": "Valid - quettahertz",
+      "data": "QHz",
+      "valid": true
+    },
+    {
+      "description": "Valid - quectojoule",
+      "data": "qJ",
+      "valid": true
+    },
+    {
+      "description": "Invalid - base unit symbol",
+      "data": "m",
+      "valid": false
+    },
+    {
+      "description": "Invalid - unknown symbol",
+      "data": "XYZ",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - number",
+      "data": 1,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": false,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}

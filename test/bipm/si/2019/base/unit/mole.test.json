@@ -1,0 +1,66 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../../schemas/bipm/si/2019/base/unit/mole.json",
+  "tests": [
+    {
+      "description": "Valid - small positive",
+      "data": 0.001,
+      "valid": true
+    },
+    {
+      "description": "Valid - one mole",
+      "data": 1,
+      "valid": true
+    },
+    {
+      "description": "Valid - multiple moles",
+      "data": 10,
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal",
+      "data": 2.5,
+      "valid": true
+    },
+    {
+      "description": "Valid - large value",
+      "data": 1000,
+      "valid": true
+    },
+    {
+      "description": "Invalid - zero",
+      "data": 0,
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative",
+      "data": -1,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - string",
+      "data": "1",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}
