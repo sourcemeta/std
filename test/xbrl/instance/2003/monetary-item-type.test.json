@@ -51,6 +51,38 @@
       "valid": true
     },
     {
+      "description": "Valid - arbitrary precision 20 digits in USD",
+      "data": {
+        "value": 12345678901234567890,
+        "currency": "USD"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision 25 digits in EUR",
+      "data": {
+        "value": 1234567890123456789012345,
+        "currency": "EUR"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision with decimals in GBP",
+      "data": {
+        "value": 123456789012345680.0,
+        "currency": "GBP"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision negative in JPY",
+      "data": {
+        "value": -12345678901234567890,
+        "currency": "JPY"
+      },
+      "valid": true
+    },
+    {
       "description": "Invalid - string type for value instead of number",
       "data": {
         "value": "123.45",

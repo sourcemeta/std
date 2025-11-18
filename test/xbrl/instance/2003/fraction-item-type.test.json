@@ -63,6 +63,36 @@
       "valid": true
     },
     {
+      "description": "Valid - arbitrary precision numerator 20 digits",
+      "data": [ 12345678901234567890, 1 ],
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision denominator 20 digits",
+      "data": [ 1, 12345678901234567890 ],
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision both values 25 digits",
+      "data": [ 1234567890123456789012345, 9876543210987654321098765 ],
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision numerator with decimals",
+      "data": [ 123456789012345680.0, 1 ],
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision denominator with decimals",
+      "data": [ 1, 123456789012345680.0 ],
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision negative numerator",
+      "data": [ -12345678901234567890, 1 ],
+      "valid": true
+    },
+    {
       "description": "Invalid - zero denominator",
       "data": [ 1, 0 ],
       "valid": false

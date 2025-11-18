@@ -78,6 +78,41 @@
       "valid": true
     },
     {
+      "description": "Valid - arbitrary precision 18 digits integer",
+      "data": 123456789012345678,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision 19 digits integer",
+      "data": 1234567890123456789,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision 20 digits integer",
+      "data": 12345678901234567890,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision large negative",
+      "data": -12345678901234567890,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision 25 digits",
+      "data": 1234567890123456789012345,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision with decimals",
+      "data": 123456789012345680.0,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision negative with decimals",
+      "data": -123456789012345680.0,
+      "valid": true
+    },
+    {
       "description": "Invalid - string type",
       "data": "123.45",
       "valid": false

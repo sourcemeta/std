@@ -28,6 +28,26 @@
       "valid": true
     },
     {
+      "description": "Valid - arbitrary precision beyond int64",
+      "data": -12345678901234567890,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision large negative",
+      "data": -99999999999999999999,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision 25 digits negative",
+      "data": -1234567890123456789012345,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision 30 digits negative",
+      "data": -123456789012345678901234567890,
+      "valid": true
+    },
+    {
       "description": "Invalid - positive one",
       "data": 1,
       "valid": false
