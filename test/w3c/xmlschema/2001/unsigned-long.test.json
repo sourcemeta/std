@@ -33,6 +33,36 @@
       "valid": true
     },
     {
+      "description": "Valid - uint64 maximum",
+      "data": 18446744073709551615,
+      "valid": true
+    },
+    {
+      "description": "Valid - just above int64 max",
+      "data": 9223372036854775808,
+      "valid": true
+    },
+    {
+      "description": "Valid - near uint64 maximum",
+      "data": 18446744073709551614,
+      "valid": true
+    },
+    {
+      "description": "Valid - large mid-range value",
+      "data": 10000000000000000000,
+      "valid": true
+    },
+    {
+      "description": "Invalid - above uint64 maximum",
+      "data": 18446744073709551616,
+      "valid": false
+    },
+    {
+      "description": "Invalid - large above maximum",
+      "data": 20000000000000000000,
+      "valid": false
+    },
+    {
       "description": "Invalid - negative one",
       "data": -1,
       "valid": false

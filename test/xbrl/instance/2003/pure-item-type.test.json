@@ -23,6 +23,21 @@
       "valid": true
     },
     {
+      "description": "Valid - arbitrary precision 20 digit integer",
+      "data": 12345678901234567890,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision with decimals",
+      "data": 123456789012345680.0,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision negative",
+      "data": -12345678901234567890,
+      "valid": true
+    },
+    {
       "description": "Invalid - string type",
       "data": "0.5",
       "valid": false
