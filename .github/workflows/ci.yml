@@ -17,7 +17,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo snap install jsonschema
+      - uses: sourcemeta/jsonschema@v12.4.0
       - uses: actions/checkout@v4
       - run: make lint
       - run: make test
