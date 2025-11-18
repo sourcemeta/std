@@ -53,28 +53,28 @@
     },
     {
       "title": "Volt-ampere reactive",
-      "description": "In electric power transmission and distribution, volt-ampere reactive (var) is a unit by which reactive power is expressed in an AC electric power system. Reactive power is the power that is wasted and not used to do work on the load.",
+      "description": "In electric power transmission and distribution, volt-ampere reactive (var) is a unit by which reactive power is expressed in an AC electric power system. Reactive power is the power that is wasted and not used to do work on the load",
       "x-status": "REC",
       "x-symbol": "var",
       "const": "var"
     },
     {
       "title": "Volt-ampere",
-      "description": "A volt-ampere (VA) is the unit used for the apparent power in an electrical circuit, equal to the product of root-mean-square (RMS) voltage and RMS current. In direct current (DC) circuits, this product is equal to the real power (active power) in watts. Volt-amperes are useful only in the context of alternating current (AC) circuits.",
+      "description": "A volt-ampere (VA) is the unit used for the apparent power in an electrical circuit, equal to the product of root-mean-square (RMS) voltage and RMS current. In direct current (DC) circuits, this product is equal to the real power (active power) in watts. Volt-amperes are useful only in the context of alternating current (AC) circuits",
       "x-status": "REC",
       "x-symbol": "VA",
       "const": "VA"
     },
     {
       "title": "Million Volt-ampere reactive",
-      "description": "In electric power transmission and distribution, Million volt-ampere reactive (Mvar) is a unit by which reactive power is expressed in an AC electric power system. Reactive power is the power that is wasted and not used to do work on the load.",
+      "description": "In electric power transmission and distribution, Million volt-ampere reactive (Mvar) is a unit by which reactive power is expressed in an AC electric power system. Reactive power is the power that is wasted and not used to do work on the load",
       "x-status": "REC",
       "x-symbol": "Mvar",
       "const": "Mvar"
     },
     {
       "title": "MegaVolt-ampere",
-      "description": "A megavolt-ampere (MVA) is the unit used for the apparent power in an electrical circuit, equal to the product of root-mean-square (RMS) voltage and RMS current. In direct current (DC) circuits, this product is equal to the real power (active power) in watts. Volt-amperes are useful only in the context of alternating current (AC) circuits.",
+      "description": "A megavolt-ampere (MVA) is the unit used for the apparent power in an electrical circuit, equal to the product of root-mean-square (RMS) voltage and RMS current. In direct current (DC) circuits, this product is equal to the real power (active power) in watts. Volt-amperes are useful only in the context of alternating current (AC) circuits",
       "x-status": "REC",
       "x-symbol": "MVA",
       "const": "MVA"

@@ -11,7 +11,7 @@
   "anyOf": [
     {
       "title": "Pound",
-      "description": "Pound of Mass, as Used in Commerce        (http://en.wikipedia.org/wiki/Pound_(mass)#Use_in_Commerce))",
+      "description": "Pound of Mass, as Used in Commerce (http://en.wikipedia.org/wiki/Pound_(mass)#Use_in_Commerce))",
       "x-status": "REC",
       "x-symbol": "lb",
       "const": "lb"

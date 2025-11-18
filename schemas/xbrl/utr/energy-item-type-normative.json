@@ -158,21 +158,21 @@
     },
     {
       "title": "Volt-ampere-hours",
-      "description": "Volt-ampere (VA) hours of energy.",
+      "description": "Volt-ampere (VA) hours of energy",
       "x-status": "REC",
       "x-symbol": "VAh",
       "const": "VAh"
     },
     {
       "title": "Dekatherm",
-      "description": "The dekatherm is a unit of energy used to measure natural gas. One dekatherm is equal to 10 therms or one million British thermal units (Btu).",
+      "description": "The dekatherm is a unit of energy used to measure natural gas. One dekatherm is equal to 10 therms or one million British thermal units (Btu)",
       "x-status": "REC",
       "x-symbol": "dth",
       "const": "dth"
     },
     {
       "title": "Megawatt-Day",
-      "description": "Megawatt-Day is used to measure energy generated in one day by a power-plant. Is commonly used to define fuel-burnup. A commonly used measure of fuel burnup is the fission energy release per unit mass of fuel.",
+      "description": "Megawatt-Day is used to measure energy generated in one day by a power-plant. Is commonly used to define fuel-burnup. A commonly used measure of fuel burnup is the fission energy release per unit mass of fuel",
       "x-status": "REC",
       "x-symbol": "MWd",
       "const": "MWd"

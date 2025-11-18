@@ -11,28 +11,28 @@
   "anyOf": [
     {
       "title": "Metric tonnes of CO2 equivalent",
-      "description": "Carbon dioxide equivalent is calculated for emissions other than carbon dioxide according to their global warming potential (GWP). As estimates of GWP may change over time, the UTR defines no fixed conversion rates.",
+      "description": "Carbon dioxide equivalent is calculated for emissions other than carbon dioxide according to their global warming potential (GWP). As estimates of GWP may change over time, the UTR defines no fixed conversion rates",
       "x-status": "REC",
       "x-symbol": "tCO2e",
       "const": "tCO2e"
     },
     {
       "title": "Thousand metric tonnes of CO2 equivalent",
-      "description": "Carbon dioxide equivalent is calculated for emissions other than carbon dioxide according to their global warming potential (GWP). As estimates of GWP may change over time, the UTR defines no fixed conversion rates.",
+      "description": "Carbon dioxide equivalent is calculated for emissions other than carbon dioxide according to their global warming potential (GWP). As estimates of GWP may change over time, the UTR defines no fixed conversion rates",
       "x-status": "REC",
       "x-symbol": "ktCO2e",
       "const": "ktCO2e"
     },
     {
       "title": "Million metric tonnes of CO2 equivalent",
-      "description": "Carbon dioxide equivalent is calculated for emissions other than carbon dioxide according to their global warming potential (GWP). As estimates of GWP may change over time, the UTR defines no fixed conversion rates.",
+      "description": "Carbon dioxide equivalent is calculated for emissions other than carbon dioxide according to their global warming potential (GWP). As estimates of GWP may change over time, the UTR defines no fixed conversion rates",
       "x-status": "REC",
       "x-symbol": "MtCO2e",
       "const": "MtCO2e"
     },
     {
       "title": "Thousand million metric tonnes of CO2 equivalent",
-      "description": "Carbon dioxide equivalent is calculated for emissions other than carbon dioxide according to their global warming potential (GWP). As estimates of GWP may change over time, the UTR defines no fixed conversion rates.",
+      "description": "Carbon dioxide equivalent is calculated for emissions other than carbon dioxide according to their global warming potential (GWP). As estimates of GWP may change over time, the UTR defines no fixed conversion rates",
       "x-status": "REC",
       "x-symbol": "GtCO2e",
       "const": "GtCO2e"
