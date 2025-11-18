@@ -5,35 +5,13 @@
   "properties": {
     "$id": false,
     "$comment": {
-      "$ref": "#/$defs/clean-prose"
+      "$ref": "../schemas/misc/single-line-text.json"
     },
     "title": {
-      "$ref": "#/$defs/clean-prose"
+      "$ref": "../schemas/misc/single-line-text.json"
     },
     "description": {
-      "$ref": "#/$defs/clean-prose"
-    }
-  },
-  "$defs": {
-    "clean-prose": {
-      "type": "string",
-      "not": {
-        "anyOf": [
-          {
-            "pattern": "\\.$"
-          },
-          {
-            "pattern": "  \\s"
-          },
-          {
-            "pattern": "[\\n\\r\\t]"
-          },
-          {
-            "pattern": "[\\x00-\\x1F\\x7F]"
-          }
-        ]
-      },
-      "pattern": "^[^\\s].*[^\\s]$|^[^\\s]$"
+      "$ref": "../schemas/misc/single-line-text.json"
     }
   }
 }
