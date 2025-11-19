@@ -88,7 +88,12 @@ GENERATED = \
 	schemas/xbrl/utr/volume-per-monetary-item-type.json \
 	schemas/iso/country/2020/alpha-2.json \
 	schemas/iso/country/2020/alpha-3.json \
-	schemas/iso/country/2020/numeric.json
+	schemas/iso/country/2020/numeric.json \
+	schemas/iso/language/2023/set-1.json \
+	schemas/iso/language/2023/set-2-bibliographic.json \
+	schemas/iso/language/2023/set-2-terminologic.json \
+	schemas/iso/language/2023/set-3.json \
+	schemas/iso/language/2023/set-5.json
 
 # TODO: Make `jsonschema fmt` automatically detect test files
 all: common test
@@ -152,7 +157,6 @@ schemas/iso/currency/2015/%.json: \
 	$(JSONSCHEMA) fmt $@
 
 build/xbrl/utr/%.json: scripts/xml2json.py vendor/data/xbrl/utr/%.xml
-	$(MKDIRP) $(dir $@)
 	$(PYTHON) $< $(word 2,$^) $@
 schemas/xbrl/utr/%.json: build/xbrl/utr/utr.json templates/xbrl/utr/%.jq
 	$(MKDIRP) $(dir $@)
@@ -166,6 +170,26 @@ schemas/iso/country/2020/%.json: \
 	$(JQ) --from-file $(word 2,$^) $< > $@
 	$(JSONSCHEMA) fmt $@
 
+build/iso/language/iso-639-2.json: \
+	vendor/data/iso/language/ISO-639-2_utf-8.txt \
+	scripts/csv2json.py
+	$(PYTHON) $(word 2,$^) --delimiter '|' --encoding utf-8-sig --no-header \
+		--field-names "part2b,part2t,part1,name,name_french" $< $@
+build/iso/language/iso-639-3.json: \
+	vendor/data/iso/language/iso-639-3_Code_Tables/iso-639-3_Code_Tables_20251015/iso-639-3.tab \
+	scripts/csv2json.py
+	$(PYTHON) $(word 2,$^) --tab $< $@
+build/iso/language/enriched.json: \
+	build/iso/language/iso-639-2.json \
+	build/iso/language/iso-639-3.json \
+	scripts/iso-language-enrich.jq
+	$(JQ) --slurpfile iso2 $< --slurpfile iso3 $(word 2,$^) -n -f $(word 3,$^) > $@
+schemas/iso/language/2023/%.json: \
+	build/iso/language/enriched.json \
+	templates/iso/language/2023/%.jq
+	$(MKDIRP) $(dir $@)
+	$(JQ) --from-file $(word 2,$^) $< > $@
+	$(JSONSCHEMA) fmt $@
 
 # TODO: Add a `jsonschema pkg` command instead
 .PHONY: dist
