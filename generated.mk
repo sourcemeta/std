@@ -1,5 +1,4 @@
 PYTHON ?= python3
-JQ ?= jq
 
 define MAKE_SCHEMA
 schemas/$1.json: templates/schemas/$1.jq $2.json

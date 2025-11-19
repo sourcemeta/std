@@ -1,6 +1,7 @@
 .DEFAULT_GOAL := all
 
 JSONSCHEMA ?= jsonschema
+JQ ?= jq
 SHELLCHECK ?= shellcheck
 TAR ?= tar
 ZIP ?= zip
@@ -12,9 +13,6 @@ RMRF ?= rm -rf
 # TODO: Extend `validate` to take a directory as argument
 SCHEMAS = $(shell find schemas/ -type f -name '*.json')
 TESTS = $(shell find test/ -type f -name '*.json')
-
-# TODO: Add a version property to `jsonschema.json`
-VERSION = $(shell tr -d '\n\r' < VERSION)
 
 include generated.mk
 
@@ -46,6 +44,7 @@ test:
 
 # TODO: Add a `jsonschema pkg` command instead
 .PHONY: dist
+VERSION = $(shell $(JQ) --raw-output '.["x-version"]' jsonschema.json)
 dist:
 	$(RMRF) $@
 	$(MKDIRP) $@
