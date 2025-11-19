@@ -38,7 +38,7 @@ common: $(GENERATED)
 .PHONY: lint
 lint: common
 	$(JSONSCHEMA) fmt schemas meta --check
-	$(JSONSCHEMA) fmt test --default-dialect "https://json-schema.org/draft/2020-12/schema"
+	$(JSONSCHEMA) fmt test --check --default-dialect "https://json-schema.org/draft/2020-12/schema"
 
 .PHONY: test
 test:
