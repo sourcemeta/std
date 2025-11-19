@@ -8,49 +8,49 @@
   "anyOf": [
     {
       "title": "Uruguay Peso en Unidades Indexadas (UI)",
-      "x-country-name": "URUGUAY",
+      "x-country-names": [ "URUGUAY" ],
       "x-minor-unit": 0,
       "const": 940
     },
     {
       "title": "WIR Euro",
-      "x-country-name": "SWITZERLAND",
+      "x-country-names": [ "SWITZERLAND" ],
       "x-minor-unit": 2,
       "const": 947
     },
     {
       "title": "WIR Franc",
-      "x-country-name": "SWITZERLAND",
+      "x-country-names": [ "SWITZERLAND" ],
       "x-minor-unit": 2,
       "const": 948
     },
     {
       "title": "Unidad de Valor Real",
-      "x-country-name": "COLOMBIA",
+      "x-country-names": [ "COLOMBIA" ],
       "x-minor-unit": 2,
       "const": 970
     },
     {
       "title": "Mexican Unidad de Inversion (UDI)",
-      "x-country-name": "MEXICO",
+      "x-country-names": [ "MEXICO" ],
       "x-minor-unit": 2,
       "const": 979
     },
     {
       "title": "Mvdol",
-      "x-country-name": "BOLIVIA (PLURINATIONAL STATE OF)",
+      "x-country-names": [ "BOLIVIA (PLURINATIONAL STATE OF)" ],
       "x-minor-unit": 2,
       "const": 984
     },
     {
       "title": "Unidad de Fomento",
-      "x-country-name": "CHILE",
+      "x-country-names": [ "CHILE" ],
       "x-minor-unit": 4,
       "const": 990
     },
     {
       "title": "US Dollar (Next day)",
-      "x-country-name": "UNITED STATES OF AMERICA (THE)",
+      "x-country-names": [ "UNITED STATES OF AMERICA (THE)" ],
       "x-minor-unit": 2,
       "const": 997
     }
