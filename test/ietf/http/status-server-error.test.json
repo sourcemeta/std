@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../schemas/ietf/http/status-server-error.json",
+  "target": "../../../schemas/2020-12/ietf/http/status-server-error.json",
   "tests": [
     {
       "description": "Invalid type - string",

@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../schemas/misc/single-line-text.json",
+  "target": "../../schemas/2020-12/misc/single-line-text.json",
   "tests": [
     {
       "description": "Valid - simple text",

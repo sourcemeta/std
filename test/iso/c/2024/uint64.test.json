@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/iso/c/2024/uint64.json",
+  "target": "../../../../schemas/2020-12/iso/c/2024/uint64.json",
   "tests": [
     {
       "description": "Valid - zero",

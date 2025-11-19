@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../schemas/xbrl/utr/power-item-type.json",
+  "target": "../../../schemas/2020-12/xbrl/utr/power-item-type.json",
   "tests": [
     {
       "description": "Valid - hp",

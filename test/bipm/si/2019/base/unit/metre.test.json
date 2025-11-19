@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../../../schemas/bipm/si/2019/base/unit/metre.json",
+  "target": "../../../../../../schemas/2020-12/bipm/si/2019/base/unit/metre.json",
   "tests": [
     {
       "description": "Valid - zero",

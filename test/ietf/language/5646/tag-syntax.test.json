@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/ietf/language/5646/tag-syntax.json",
+  "target": "../../../../schemas/2020-12/ietf/language/5646/tag-syntax.json",
   "tests": [
     {
       "description": "Invalid type - integer",

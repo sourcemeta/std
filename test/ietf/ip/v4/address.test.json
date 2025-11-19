@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/ietf/ip/v4/address.json",
+  "target": "../../../../schemas/2020-12/ietf/ip/v4/address.json",
   "tests": [
     {
       "data": "0.0.0.0",

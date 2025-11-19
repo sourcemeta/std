@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/w3c/xmlschema/2001/string.json",
+  "target": "../../../../schemas/2020-12/w3c/xmlschema/2001/string.json",
   "tests": [
     {
       "description": "Valid - simple string",

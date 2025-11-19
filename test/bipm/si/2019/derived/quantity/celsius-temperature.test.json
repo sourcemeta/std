@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../../../schemas/bipm/si/2019/derived/quantity/celsius-temperature.json",
+  "target": "../../../../../../schemas/2020-12/bipm/si/2019/derived/quantity/celsius-temperature.json",
   "tests": [
     {
       "description": "Valid - positive number",

@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../../schemas/xbrl/dtr/type/2024-01-31/speed-item-type.json",
+  "target": "../../../../../schemas/2020-12/xbrl/dtr/type/2024-01-31/speed-item-type.json",
   "tests": [
     {
       "description": "Valid - positive decimal",

@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../schemas/jsonrpc/v2.0/code.json",
+  "target": "../../../schemas/2020-12/jsonrpc/v2.0/code.json",
   "tests": [
     {
       "data": -32700,

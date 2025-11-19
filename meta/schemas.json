@@ -5,13 +5,13 @@
   "properties": {
     "$id": false,
     "$comment": {
-      "$ref": "../schemas/misc/single-line-text.json"
+      "$ref": "../schemas/2020-12/misc/single-line-text.json"
     },
     "title": {
-      "$ref": "../schemas/misc/single-line-text.json"
+      "$ref": "../schemas/2020-12/misc/single-line-text.json"
     },
     "description": {
-      "$ref": "../schemas/misc/single-line-text.json"
+      "$ref": "../schemas/2020-12/misc/single-line-text.json"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/iso/it/2015/byte.json",
+  "target": "../../../../schemas/2020-12/iso/it/2015/byte.json",
   "tests": [
     {
       "description": "Invalid type - string",

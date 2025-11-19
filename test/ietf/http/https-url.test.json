@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../schemas/ietf/http/https-url.json",
+  "target": "../../../schemas/2020-12/ietf/http/https-url.json",
   "tests": [
     {
       "description": "Invalid type - number",
