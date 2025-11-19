@@ -33,7 +33,59 @@ GENERATED = \
 	schemas/iso/currency/2015/historical/alpha-code.json \
 	schemas/iso/currency/2015/historical/alpha-currency.json \
 	schemas/iso/currency/2015/historical/numeric-code.json \
-	schemas/iso/currency/2015/historical/numeric-currency.json
+	schemas/iso/currency/2015/historical/numeric-currency.json \
+	schemas/xbrl/utr/area-item-type-normative.json \
+	schemas/xbrl/utr/area-item-type.json \
+	schemas/xbrl/utr/duration-item-type-normative.json \
+	schemas/xbrl/utr/duration-item-type.json \
+	schemas/xbrl/utr/electric-charge-item-type-normative.json \
+	schemas/xbrl/utr/electric-charge-item-type.json \
+	schemas/xbrl/utr/electric-current-item-type-normative.json \
+	schemas/xbrl/utr/electric-current-item-type.json \
+	schemas/xbrl/utr/energy-item-type-normative.json \
+	schemas/xbrl/utr/energy-item-type.json \
+	schemas/xbrl/utr/energy-per-monetary-item-type-normative.json \
+	schemas/xbrl/utr/energy-per-monetary-item-type.json \
+	schemas/xbrl/utr/flow-item-type-normative.json \
+	schemas/xbrl/utr/flow-item-type.json \
+	schemas/xbrl/utr/force-item-type-normative.json \
+	schemas/xbrl/utr/force-item-type.json \
+	schemas/xbrl/utr/frequency-item-type-normative.json \
+	schemas/xbrl/utr/frequency-item-type.json \
+	schemas/xbrl/utr/ghg-emissions-item-type-normative.json \
+	schemas/xbrl/utr/ghg-emissions-item-type.json \
+	schemas/xbrl/utr/ghg-emissions-per-monetary-item-type-normative.json \
+	schemas/xbrl/utr/ghg-emissions-per-monetary-item-type.json \
+	schemas/xbrl/utr/length-item-type-normative.json \
+	schemas/xbrl/utr/length-item-type.json \
+	schemas/xbrl/utr/mass-item-type-normative.json \
+	schemas/xbrl/utr/mass-item-type.json \
+	schemas/xbrl/utr/memory-item-type-normative.json \
+	schemas/xbrl/utr/memory-item-type.json \
+	schemas/xbrl/utr/monetary-item-type-normative.json \
+	schemas/xbrl/utr/monetary-item-type.json \
+	schemas/xbrl/utr/per-share-item-type-normative.json \
+	schemas/xbrl/utr/per-share-item-type.json \
+	schemas/xbrl/utr/per-unit-item-type-normative.json \
+	schemas/xbrl/utr/per-unit-item-type.json \
+	schemas/xbrl/utr/plane-angle-item-type-normative.json \
+	schemas/xbrl/utr/plane-angle-item-type.json \
+	schemas/xbrl/utr/power-item-type-normative.json \
+	schemas/xbrl/utr/power-item-type.json \
+	schemas/xbrl/utr/pressure-item-type-normative.json \
+	schemas/xbrl/utr/pressure-item-type.json \
+	schemas/xbrl/utr/pure-item-type-normative.json \
+	schemas/xbrl/utr/pure-item-type.json \
+	schemas/xbrl/utr/shares-item-type-normative.json \
+	schemas/xbrl/utr/shares-item-type.json \
+	schemas/xbrl/utr/temperature-item-type-normative.json \
+	schemas/xbrl/utr/temperature-item-type.json \
+	schemas/xbrl/utr/voltage-item-type-normative.json \
+	schemas/xbrl/utr/voltage-item-type.json \
+	schemas/xbrl/utr/volume-item-type-normative.json \
+	schemas/xbrl/utr/volume-item-type.json \
+	schemas/xbrl/utr/volume-per-monetary-item-type-normative.json \
+	schemas/xbrl/utr/volume-per-monetary-item-type.json
 
 # TODO: Make `jsonschema fmt` automatically detect test files
 all: common test
@@ -42,19 +94,20 @@ all: common test
 
 .PHONY: common
 common: $(GENERATED)
-	$(JSONSCHEMA) metaschema schemas meta --verbose
-	$(JSONSCHEMA) lint schemas meta --verbose
-	$(JSONSCHEMA) validate meta/schemas-root.json --verbose $(SCHEMAS)
-	$(JSONSCHEMA) validate meta/schemas.json --verbose $(SCHEMAS)
-	$(JSONSCHEMA) validate meta/test.json --verbose $(TESTS)
+	$(JSONSCHEMA) metaschema schemas meta
+	$(JSONSCHEMA) lint schemas meta
+	$(JSONSCHEMA) validate meta/schemas-root.json $(SCHEMAS)
+	$(JSONSCHEMA) validate meta/schemas.json $(SCHEMAS)
+	$(JSONSCHEMA) validate meta/test.json $(TESTS)
 	$(SHELLCHECK) scripts/*.sh
-	./scripts/schemas-tests-mirror.sh
+	./scripts/quality-schemas-tests-mirror.sh
+	./scripts/quality-templates-xbrl-utr-mirror.sh
 
 # TODO: Make `jsonschema fmt` automatically detect test files
 .PHONY: lint
 lint: common
-	$(JSONSCHEMA) fmt schemas meta --verbose --check
-	$(JSONSCHEMA) fmt test --verbose --default-dialect "https://json-schema.org/draft/2020-12/schema"
+	$(JSONSCHEMA) fmt schemas meta --check
+	$(JSONSCHEMA) fmt test --default-dialect "https://json-schema.org/draft/2020-12/schema"
 
 .PHONY: test
 test:
@@ -83,14 +136,19 @@ schemas/iso/currency/2015/%.json: build/iso/currency/list-one.json templates/iso
 	$(JQ) --from-file $(word 2,$^) $< > $@
 	$(JSONSCHEMA) fmt $@
 
+build/xbrl/utr/%.json: scripts/xml2json.py vendor/data/xbrl/utr/%.xml
+	$(MKDIRP) $(dir $@)
+	$(PYTHON) $< $(word 2,$^) $@
+schemas/xbrl/utr/%.json: build/xbrl/utr/utr.json templates/xbrl/utr/%.jq
+	$(MKDIRP) $(dir $@)
+	$(JQ) --from-file $(word 2,$^) $< > $@
+	$(JSONSCHEMA) fmt $@
+
 generate-iso-language: generate/iso/language/main.py
 	$(PYTHON) $<
 generate-iso-country: generate/iso/country/main.py
 	$(PYTHON) $<
-build/xbrl/utr/%.json: scripts/xml2json.py vendor/data/xbrl/utr/%.xml
-	$(PYTHON) $< $(word 2,$^) $@
-generate-xbrl-utr: generate/xbrl/utr/main.py build/xbrl/utr/utr.json
-	$(PYTHON) $<
+
 
 # TODO: Add a `jsonschema pkg` command instead
 .PHONY: dist
