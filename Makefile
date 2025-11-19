@@ -85,7 +85,10 @@ GENERATED = \
 	schemas/xbrl/utr/volume-item-type-normative.json \
 	schemas/xbrl/utr/volume-item-type.json \
 	schemas/xbrl/utr/volume-per-monetary-item-type-normative.json \
-	schemas/xbrl/utr/volume-per-monetary-item-type.json
+	schemas/xbrl/utr/volume-per-monetary-item-type.json \
+	schemas/iso/country/2020/alpha-2.json \
+	schemas/iso/country/2020/alpha-3.json \
+	schemas/iso/country/2020/numeric.json
 
 # TODO: Make `jsonschema fmt` automatically detect test files
 all: common test
@@ -113,25 +116,37 @@ lint: common
 test:
 	$(JSONSCHEMA) test ./test
 
-build/iso/currency/list-%.json: scripts/xml2json.py vendor/data/iso/currency/list-%.xml
+build/iso/currency/list-%.json: \
+	scripts/xml2json.py \
+	vendor/data/iso/currency/list-%.xml
 	$(PYTHON) $< $(word 2,$^) $@
-schemas/iso/currency/2015/historical/alpha-code.json: build/iso/currency/list-three.json templates/iso/currency/2015/historical/alpha-code.jq
+schemas/iso/currency/2015/historical/alpha-code.json: \
+	build/iso/currency/list-three.json \
+	templates/iso/currency/2015/historical/alpha-code.jq
 	$(MKDIRP) $(dir $@)
 	$(JQ) --from-file $(word 2,$^) $< > $@
 	$(JSONSCHEMA) fmt $@
-schemas/iso/currency/2015/historical/alpha-currency.json: build/iso/currency/list-three.json templates/iso/currency/2015/historical/alpha-currency.jq
+schemas/iso/currency/2015/historical/alpha-currency.json: \
+	build/iso/currency/list-three.json \
+	templates/iso/currency/2015/historical/alpha-currency.jq
 	$(MKDIRP) $(dir $@)
 	$(JQ) --from-file $(word 2,$^) $< > $@
 	$(JSONSCHEMA) fmt $@
-schemas/iso/currency/2015/historical/numeric-code.json: build/iso/currency/list-three.json templates/iso/currency/2015/historical/numeric-code.jq
+schemas/iso/currency/2015/historical/numeric-code.json: \
+	build/iso/currency/list-three.json \
+	templates/iso/currency/2015/historical/numeric-code.jq
 	$(MKDIRP) $(dir $@)
 	$(JQ) --from-file $(word 2,$^) $< > $@
 	$(JSONSCHEMA) fmt $@
-schemas/iso/currency/2015/historical/numeric-currency.json: build/iso/currency/list-three.json templates/iso/currency/2015/historical/numeric-currency.jq
+schemas/iso/currency/2015/historical/numeric-currency.json: \
+	build/iso/currency/list-three.json \
+	templates/iso/currency/2015/historical/numeric-currency.jq
 	$(MKDIRP) $(dir $@)
 	$(JQ) --from-file $(word 2,$^) $< > $@
 	$(JSONSCHEMA) fmt $@
-schemas/iso/currency/2015/%.json: build/iso/currency/list-one.json templates/iso/currency/2015/%.jq
+schemas/iso/currency/2015/%.json: \
+	build/iso/currency/list-one.json \
+	templates/iso/currency/2015/%.jq
 	$(MKDIRP) $(dir $@)
 	$(JQ) --from-file $(word 2,$^) $< > $@
 	$(JSONSCHEMA) fmt $@
@@ -144,10 +159,12 @@ schemas/xbrl/utr/%.json: build/xbrl/utr/utr.json templates/xbrl/utr/%.jq
 	$(JQ) --from-file $(word 2,$^) $< > $@
 	$(JSONSCHEMA) fmt $@
 
-generate-iso-language: generate/iso/language/main.py
-	$(PYTHON) $<
-generate-iso-country: generate/iso/country/main.py
-	$(PYTHON) $<
+schemas/iso/country/2020/%.json: \
+	vendor/iso3166/all/all.json \
+	templates/iso/country/2020/%.jq
+	$(MKDIRP) $(dir $@)
+	$(JQ) --from-file $(word 2,$^) $< > $@
+	$(JSONSCHEMA) fmt $@
 
 
 # TODO: Add a `jsonschema pkg` command instead
