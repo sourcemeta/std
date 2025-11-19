@@ -344,8 +344,8 @@ def generate_schemas(currency_entries, published_date, output_dir, is_historical
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(os.path.dirname(os.path.dirname(script_dir)))
-    current_data_file = os.path.join(project_root, "external", "iso", "currency", "list-one.json")
-    historical_data_file = os.path.join(project_root, "external", "iso", "currency", "list-three.json")
+    current_data_file = os.path.join(project_root, "build", "iso", "currency", "list-one.json")
+    historical_data_file = os.path.join(project_root, "build", "iso", "currency", "list-three.json")
     output_dir = os.path.join(project_root, "schemas", "iso", "currency", "2015")
 
     # Generate current schemas

@@ -5,7 +5,7 @@ from collections import defaultdict
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..", "..", ".."))
-UTR_JSON_PATH = os.path.join(PROJECT_ROOT, "external", "xbrl", "utr", "utr.json")
+UTR_JSON_PATH = os.path.join(PROJECT_ROOT, "build", "xbrl", "utr", "utr.json")
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, "schemas", "xbrl", "utr")
 
 UTR_NS = "{http://www.xbrl.org/2009/utr}"
