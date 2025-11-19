@@ -41,6 +41,9 @@
     "x-license": {
       "const": "https://github.com/sourcemeta/std/blob/main/LICENSE"
     },
+    "x-symbol": {
+      "type": "string"
+    },
     "x-links": {
       "type": "array",
       "minItems": 1,

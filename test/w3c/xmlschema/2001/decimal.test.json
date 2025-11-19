@@ -74,7 +74,7 @@
     },
     {
       "description": "Valid - small decimal",
-      "data": 1e-06,
+      "data": 1e-6,
       "valid": true
     },
     {
@@ -89,17 +89,17 @@
     },
     {
       "description": "Valid - arbitrary precision 20 digits integer",
-      "data": 12345678901234567890,
+      "data": 1.2345678901234567890e+19,
       "valid": true
     },
     {
       "description": "Valid - arbitrary precision large negative",
-      "data": -12345678901234567890,
+      "data": -1.2345678901234567890e+19,
       "valid": true
     },
     {
       "description": "Valid - arbitrary precision 25 digits",
-      "data": 1234567890123456789012345,
+      "data": 1.234567890123456789012345e+24,
       "valid": true
     },
     {

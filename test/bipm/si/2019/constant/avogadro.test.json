@@ -1,0 +1,46 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/bipm/si/2019/constant/avogadro.json",
+  "tests": [
+    {
+      "description": "Valid - exact value",
+      "data": 6.02214076000000000000000e+23,
+      "valid": true
+    },
+    {
+      "description": "Invalid - different value",
+      "data": 6.02214077000000000000000e+23,
+      "valid": false
+    },
+    {
+      "description": "Invalid - zero",
+      "data": 0,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - string",
+      "data": "6.02214076e23",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}

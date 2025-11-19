@@ -1,0 +1,61 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../../schemas/bipm/si/2019/derived/unit/hertz.json",
+  "tests": [
+    {
+      "description": "Valid - small positive",
+      "data": 0.001,
+      "valid": true
+    },
+    {
+      "description": "Valid - power line frequency",
+      "data": 50,
+      "valid": true
+    },
+    {
+      "description": "Valid - typical frequency",
+      "data": 1000,
+      "valid": true
+    },
+    {
+      "description": "Valid - radio frequency",
+      "data": 2400000000,
+      "valid": true
+    },
+    {
+      "description": "Invalid - zero",
+      "data": 0,
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative",
+      "data": -50,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - string",
+      "data": "50",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}

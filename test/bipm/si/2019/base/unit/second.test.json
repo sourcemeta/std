@@ -1,0 +1,61 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../../schemas/bipm/si/2019/base/unit/second.json",
+  "tests": [
+    {
+      "description": "Valid - zero",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - positive integer",
+      "data": 60,
+      "valid": true
+    },
+    {
+      "description": "Valid - positive decimal",
+      "data": 1.5,
+      "valid": true
+    },
+    {
+      "description": "Valid - small positive",
+      "data": 0.001,
+      "valid": true
+    },
+    {
+      "description": "Valid - large value",
+      "data": 86400,
+      "valid": true
+    },
+    {
+      "description": "Invalid - negative",
+      "data": -1,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - string",
+      "data": "1",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}

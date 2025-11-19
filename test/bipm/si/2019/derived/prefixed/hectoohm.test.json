@@ -1,0 +1,61 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../../schemas/bipm/si/2019/derived/prefixed/hectoohm.json",
+  "tests": [
+    {
+      "description": "Valid - small positive",
+      "data": 0.001,
+      "valid": true
+    },
+    {
+      "description": "Valid - unit value",
+      "data": 1,
+      "valid": true
+    },
+    {
+      "description": "Valid - hundred",
+      "data": 100,
+      "valid": true
+    },
+    {
+      "description": "Valid - thousand",
+      "data": 1000,
+      "valid": true
+    },
+    {
+      "description": "Invalid - zero",
+      "data": 0,
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative",
+      "data": -50,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - string",
+      "data": "100",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}

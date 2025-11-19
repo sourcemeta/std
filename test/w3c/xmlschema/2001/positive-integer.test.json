@@ -29,22 +29,22 @@
     },
     {
       "description": "Valid - arbitrary precision beyond uint64",
-      "data": 18446744073709551616,
+      "data": 1.8446744073709551616e+19,
       "valid": true
     },
     {
       "description": "Valid - arbitrary precision large positive",
-      "data": 99999999999999999999,
+      "data": 9.9999999999999999999e+19,
       "valid": true
     },
     {
       "description": "Valid - arbitrary precision 25 digits",
-      "data": 1234567890123456789012345,
+      "data": 1.234567890123456789012345e+24,
       "valid": true
     },
     {
       "description": "Valid - arbitrary precision 30 digits",
-      "data": 123456789012345678901234567890,
+      "data": 1.23456789012345678901234567890e+29,
       "valid": true
     },
     {

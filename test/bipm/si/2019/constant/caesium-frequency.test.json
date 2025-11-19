@@ -1,0 +1,46 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/bipm/si/2019/constant/caesium-frequency.json",
+  "tests": [
+    {
+      "description": "Valid - exact value",
+      "data": 9192631770,
+      "valid": true
+    },
+    {
+      "description": "Invalid - different value",
+      "data": 9192631771,
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal",
+      "data": 9192630000.0,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - string",
+      "data": "9192631770",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}

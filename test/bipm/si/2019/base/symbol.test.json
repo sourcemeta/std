@@ -1,0 +1,146 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/bipm/si/2019/base/symbol.json",
+  "tests": [
+    {
+      "description": "Valid - second",
+      "data": "s",
+      "valid": true
+    },
+    {
+      "description": "Valid - metre",
+      "data": "m",
+      "valid": true
+    },
+    {
+      "description": "Valid - kilogram",
+      "data": "kg",
+      "valid": true
+    },
+    {
+      "description": "Valid - ampere",
+      "data": "A",
+      "valid": true
+    },
+    {
+      "description": "Valid - kelvin",
+      "data": "K",
+      "valid": true
+    },
+    {
+      "description": "Valid - mole",
+      "data": "mol",
+      "valid": true
+    },
+    {
+      "description": "Valid - candela",
+      "data": "cd",
+      "valid": true
+    },
+    {
+      "description": "Valid - millisecond",
+      "data": "ms",
+      "valid": true
+    },
+    {
+      "description": "Valid - kilometre",
+      "data": "km",
+      "valid": true
+    },
+    {
+      "description": "Valid - gram",
+      "data": "g",
+      "valid": true
+    },
+    {
+      "description": "Valid - milligram",
+      "data": "mg",
+      "valid": true
+    },
+    {
+      "description": "Valid - microampere",
+      "data": "µA",
+      "valid": true
+    },
+    {
+      "description": "Valid - milliampere",
+      "data": "mA",
+      "valid": true
+    },
+    {
+      "description": "Valid - millikelvin",
+      "data": "mK",
+      "valid": true
+    },
+    {
+      "description": "Valid - micromole",
+      "data": "µmol",
+      "valid": true
+    },
+    {
+      "description": "Valid - millicandela",
+      "data": "mcd",
+      "valid": true
+    },
+    {
+      "description": "Valid - nanosecond",
+      "data": "ns",
+      "valid": true
+    },
+    {
+      "description": "Valid - centimetre",
+      "data": "cm",
+      "valid": true
+    },
+    {
+      "description": "Valid - megagram",
+      "data": "Mg",
+      "valid": true
+    },
+    {
+      "description": "Valid - quettametre",
+      "data": "Qm",
+      "valid": true
+    },
+    {
+      "description": "Valid - quectosecond",
+      "data": "qs",
+      "valid": true
+    },
+    {
+      "description": "Invalid - derived unit symbol",
+      "data": "Hz",
+      "valid": false
+    },
+    {
+      "description": "Invalid - unknown symbol",
+      "data": "xyz",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - number",
+      "data": 1,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}

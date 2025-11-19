@@ -24,7 +24,7 @@
     },
     {
       "description": "Valid - arbitrary precision 20 digit integer",
-      "data": 12345678901234567890,
+      "data": 1.2345678901234567890e+19,
       "valid": true
     },
     {
@@ -34,7 +34,7 @@
     },
     {
       "description": "Valid - arbitrary precision negative",
-      "data": -12345678901234567890,
+      "data": -1.2345678901234567890e+19,
       "valid": true
     },
     {
