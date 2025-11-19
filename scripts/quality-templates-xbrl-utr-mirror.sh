@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 
 UTR_DATA="$(pwd)/build/xbrl/utr/utr.json"
-TEMPLATES_DIR="$(pwd)/templates/xbrl/utr"
+TEMPLATES_DIR="$(pwd)/templates/schemas/xbrl/utr"
 EXIT_CODE=0
 
 # Create temporary directory
