@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../schemas/misc/schema-like.json",
+  "target": "../../schemas/2020-12/misc/schema-like.json",
   "tests": [
     {
       "description": "Invalid type - string",

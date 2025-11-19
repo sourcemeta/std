@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/iso/country/2020/alpha-3.json",
+  "target": "../../../../schemas/2020-12/iso/country/2020/alpha-3.json",
   "tests": [
     {
       "description": "Invalid type - integer",

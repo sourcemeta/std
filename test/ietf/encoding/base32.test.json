@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../schemas/ietf/encoding/base32.json",
+  "target": "../../../schemas/2020-12/ietf/encoding/base32.json",
   "tests": [
     {
       "description": "Valid - empty string",

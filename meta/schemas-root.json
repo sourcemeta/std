@@ -35,7 +35,7 @@
     },
     "$comment": {
       "not": {
-        "$ref": "../schemas/ietf/uri/uri-reference.json"
+        "$ref": "../schemas/2020-12/ietf/uri/uri-reference.json"
       }
     },
     "x-license": {
@@ -49,7 +49,7 @@
       "minItems": 1,
       "uniqueItems": true,
       "items": {
-        "$ref": "../schemas/ietf/http/https-url.json"
+        "$ref": "../schemas/2020-12/ietf/http/https-url.json"
       }
     }
   }

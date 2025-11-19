@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/xbrl/instance/2003/non-positive-integer-item-type.json",
+  "target": "../../../../schemas/2020-12/xbrl/instance/2003/non-positive-integer-item-type.json",
   "tests": [
     {
       "description": "Valid - negative integer",

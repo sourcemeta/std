@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../../schemas/ieee/floating-point/2019/binary64.json",
+  "target": "../../../../schemas/2020-12/ieee/floating-point/2019/binary64.json",
   "tests": [
     {
       "description": "Valid - zero",

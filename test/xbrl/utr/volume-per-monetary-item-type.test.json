@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../schemas/xbrl/utr/volume-per-monetary-item-type.json",
+  "target": "../../../schemas/2020-12/xbrl/utr/volume-per-monetary-item-type.json",
   "tests": [
     {
       "description": "Valid - Volume_per_Monetary",

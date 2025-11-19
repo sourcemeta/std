@@ -1,6 +1,6 @@
 {
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "target": "../../../schemas/xbrl/utr/voltage-item-type-normative.json",
+  "target": "../../../schemas/2020-12/xbrl/utr/voltage-item-type-normative.json",
   "tests": [
     {
       "description": "Valid - V (REC)",
