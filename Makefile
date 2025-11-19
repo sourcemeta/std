@@ -10,10 +10,6 @@ GZIP ?= gzip
 MKDIRP ?= mkdir -p
 RMRF ?= rm -rf
 
-# TODO: Extend `validate` to take a directory as argument
-SCHEMAS = $(shell find schemas/ -type f -name '*.json')
-TESTS = $(shell find test/ -type f -name '*.json')
-
 include generated.mk
 
 # TODO: Make `jsonschema fmt` automatically detect test files
@@ -25,9 +21,9 @@ all: common test
 common: $(GENERATED)
 	$(JSONSCHEMA) metaschema schemas meta
 	$(JSONSCHEMA) lint schemas meta
-	$(JSONSCHEMA) validate meta/schemas-root.json $(SCHEMAS)
-	$(JSONSCHEMA) validate meta/schemas.json $(SCHEMAS)
-	$(JSONSCHEMA) validate meta/test.json $(TESTS)
+	$(JSONSCHEMA) validate meta/schemas-root.json schemas
+	$(JSONSCHEMA) validate meta/schemas.json schemas
+	$(JSONSCHEMA) validate meta/test.json test
 	$(SHELLCHECK) scripts/*.sh
 	./scripts/quality-schemas-tests-mirror.sh
 	./scripts/quality-templates-xbrl-utr-mirror.sh
