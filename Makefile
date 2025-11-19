@@ -2,7 +2,6 @@ JSONSCHEMA ?= jsonschema
 SHELLCHECK ?= shellcheck
 PYTHON ?= python3
 CURL ?= curl
-BSDTAR ?= bsdtar
 TAR ?= tar
 ZIP ?= zip
 UNZIP ?= unzip
@@ -41,13 +40,20 @@ lint: common
 test:
 	$(JSONSCHEMA) test ./test
 
-.PHONY: external
-include generate/iso/currency/include.mk
-include generate/iso/language/include.mk
-include generate/iso/country/include.mk
-include generate/xbrl/utr/include.mk
-external: $(EXTERNAL)
-generate: $(GENERATE)
+build/iso/currency/list-%.json: scripts/xml2json.py vendor/data/iso/currency/list-%.xml
+	$(PYTHON) $< $(word 2,$^) $@
+generate-iso-currency: generate/iso/currency/main.py \
+	build/iso/currency/list-one.json \
+	build/iso/currency/list-three.json
+	$(PYTHON) $<
+generate-iso-language: generate/iso/language/main.py
+	$(PYTHON) $<
+generate-iso-country: generate/iso/country/main.py
+	$(PYTHON) $<
+build/xbrl/utr/%.json: scripts/xml2json.py vendor/data/xbrl/utr/%.xml
+	$(PYTHON) $< $(word 2,$^) $@
+generate-xbrl-utr: generate/xbrl/utr/main.py build/xbrl/utr/utr.json
+	$(PYTHON) $<
 
 # TODO: Add a `jsonschema pkg` command instead
 .PHONY: dist

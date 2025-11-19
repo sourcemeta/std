@@ -317,18 +317,16 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(os.path.dirname(os.path.dirname(script_dir)))
 
-    iso_639_2_file = os.path.join(project_root, "external", "iso", "language", "ISO-639-2_utf-8.txt")
-    iso_639_3_file = os.path.join(project_root, "external", "iso", "language", "iso-639-3_Code_Tables", "iso-639-3.tab")
+    iso_639_2_file = os.path.join(project_root, "vendor", "data", "iso", "language", "ISO-639-2_utf-8.txt")
+    iso_639_3_file = os.path.join(project_root, "vendor", "data", "iso", "language", "iso-639-3_Code_Tables", "iso-639-3_Code_Tables_20251015", "iso-639-3.tab")
     output_dir = os.path.join(project_root, "schemas", "iso", "language", "2023")
 
     if not os.path.exists(iso_639_2_file):
         print(f"Error: Data file not found: {iso_639_2_file}", file=sys.stderr)
-        print("Run 'make external-iso-language' first to download the ISO 639 data", file=sys.stderr)
         sys.exit(1)
 
     if not os.path.exists(iso_639_3_file):
         print(f"Error: Data file not found: {iso_639_3_file}", file=sys.stderr)
-        print("Run 'make external-iso-language' first to download the ISO 639 data", file=sys.stderr)
         sys.exit(1)
 
     # Parse Set 3 first to build lookup tables
