@@ -10,3 +10,8 @@ jsonschema.json
 Makefile
 README.markdown
 banner.png
+templates
+.ackrc
+DATA
+DEPENDENCIES
+generated.mk
