@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := all
 
-JSONSCHEMA ?= jsonschema
+JSONSCHEMA ?= ./node_modules/@sourcemeta/jsonschema/cli.js
 JQ ?= jq
 SHELLCHECK ?= shellcheck
 TAR ?= tar
@@ -15,30 +15,30 @@ NPM ?= npm
 include generated.mk
 
 # TODO: Make `jsonschema fmt` automatically detect test files
-all: common test
-	$(JSONSCHEMA) fmt schemas meta
-	$(JSONSCHEMA) fmt test --default-dialect "https://json-schema.org/draft/2020-12/schema"
+all: common test node_modules
+	$(NODE) $(JSONSCHEMA) fmt schemas meta
+	$(NODE) $(JSONSCHEMA) fmt test --default-dialect "https://json-schema.org/draft/2020-12/schema"
 
 .PHONY: common
-common: $(GENERATED)
-	$(JSONSCHEMA) metaschema schemas meta
-	$(JSONSCHEMA) lint schemas meta
-	$(JSONSCHEMA) validate meta/schemas-root.json schemas
-	$(JSONSCHEMA) validate meta/schemas.json schemas
-	$(JSONSCHEMA) validate meta/test.json test
+common: $(GENERATED) node_modules
+	$(NODE) $(JSONSCHEMA) metaschema schemas meta
+	$(NODE) $(JSONSCHEMA) lint schemas meta
+	$(NODE) $(JSONSCHEMA) validate meta/schemas-root.json schemas
+	$(NODE) $(JSONSCHEMA) validate meta/schemas.json schemas
+	$(NODE) $(JSONSCHEMA) validate meta/test.json test
 	$(SHELLCHECK) scripts/*.sh
 	./scripts/quality-schemas-tests-mirror.sh
 	./scripts/quality-templates-xbrl-utr-mirror.sh
 
 # TODO: Make `jsonschema fmt` automatically detect test files
 .PHONY: lint
-lint: common
-	$(JSONSCHEMA) fmt schemas meta --check
-	$(JSONSCHEMA) fmt test --check --default-dialect "https://json-schema.org/draft/2020-12/schema"
+lint: common node_modules
+	$(NODE) $(JSONSCHEMA) fmt schemas meta --check
+	$(NODE) $(JSONSCHEMA) fmt test --check --default-dialect "https://json-schema.org/draft/2020-12/schema"
 
 .PHONY: test
-test:
-	$(JSONSCHEMA) test ./test
+test: node_modules
+	$(NODE) $(JSONSCHEMA) test ./test
 	$(NODE) npm/cjs.test.js
 	$(NODE) npm/esm.test.mjs
 
@@ -58,3 +58,6 @@ dist:
 	$(MKDIRP) $@/npm
 	$(NPM) version --no-git-tag-version --allow-same-version "$(VERSION)"
 	$(NPM) pack --pack-destination $@/npm
+
+node_modules: package.json package-lock.json
+	$(NPM) ci

@@ -49,5 +49,8 @@
   "publishConfig": {
     "provenance": true,
     "access": "public"
+  },
+  "devDependencies": {
+    "@sourcemeta/jsonschema": "^12.7.1"
   }
 }
