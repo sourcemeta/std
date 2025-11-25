@@ -1,6 +1,8 @@
 ![Sourcemeta JSON Schema Standard Library](./banner.png)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17526561.svg)](https://doi.org/10.5281/zenodo.17526561)
+[![GitHub Release](https://img.shields.io/github/v/release/sourcemeta/std)](https://github.com/sourcemeta/std/releases)
+[![NPM Version](https://img.shields.io/npm/v/@sourcemeta/std)](https://www.npmjs.com/package/@sourcemeta/std)
 
 ***
 **Browse the schemas at [https://schemas.sourcemeta.com/sourcemeta/std](https://schemas.sourcemeta.com/sourcemeta/std)**
