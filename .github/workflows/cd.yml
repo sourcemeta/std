@@ -38,4 +38,4 @@ jobs:
           GH_TOKEN: ${{ github.token }}
 
       - name: Publish to NPM
-        run: npm --version && npm publish ./dist/npm
+        run: sudo npm install --global npm@latest && npm publish
