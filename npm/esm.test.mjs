@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert';
-import getSchema from '@sourcemeta/std';
+import getSchema, { schemas } from '@sourcemeta/std';
 
 test('loads a valid schema', () => {
   const schema = getSchema('2020-12/misc/schema-like');
@@ -35,4 +35,32 @@ test('loads schema from nested path', () => {
   const schema = getSchema('2020-12/w3c/xmlschema/2001/hex-binary');
   assert.strictEqual(typeof schema, 'object');
   assert.strictEqual(schema.$schema, 'https://json-schema.org/draft/2020-12/schema');
+});
+
+test('lazy loads schema via schemas object', () => {
+  const schema = schemas['2020-12'].misc['schema-like'];
+  assert.strictEqual(typeof schema, 'object');
+  assert.strictEqual(schema.title, 'JSON Schema Document');
+});
+
+test('caches loaded schemas', () => {
+  const schema1 = schemas['2020-12'].misc['schema-like'];
+  const schema2 = schemas['2020-12'].misc['schema-like'];
+  assert.strictEqual(schema1, schema2);
+});
+
+test('handles deeply nested paths', () => {
+  const schema = schemas['2020-12'].w3c.xmlschema['2001']['hex-binary'];
+  assert.strictEqual(typeof schema, 'object');
+  assert.strictEqual(schema.$schema, 'https://json-schema.org/draft/2020-12/schema');
+});
+
+test('returns undefined for non-existent directories', () => {
+  const result = schemas['2020-12'].nonexistent;
+  assert.strictEqual(result, undefined);
+});
+
+test('returns undefined for non-existent files', () => {
+  const result = schemas['2020-12'].misc['nonexistent-file'];
+  assert.strictEqual(result, undefined);
 });
