@@ -12,6 +12,7 @@ concurrency:
 permissions:
   contents: write
   packages: write
+  id-token: write
 
 jobs:
   package:
@@ -35,3 +36,6 @@ jobs:
         if: github.ref_type == 'tag'
         env:
           GH_TOKEN: ${{ github.token }}
+
+      - name: Publish to NPM
+        run: npm install --global npm@latest && npm publish ./dist/npm
