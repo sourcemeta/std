@@ -1,10 +1,10 @@
 PYTHON ?= python3
 
 define MAKE_SCHEMA
-schemas/$1.json: templates/schemas/$1.jq $2.json
+schemas/$1.json: templates/schemas/$1.jq $2.json node_modules
 	$(MKDIRP) $$(dir $$@)
 	$(JQ) --from-file $$< $$(word 2,$$^) > $$@
-	$(JSONSCHEMA) fmt $$@
+	$(NODE) $(JSONSCHEMA) fmt $$@
 GENERATED += schemas/$1.json
 endef
 
