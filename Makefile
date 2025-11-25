@@ -9,6 +9,8 @@ UNZIP ?= unzip
 GZIP ?= gzip
 MKDIRP ?= mkdir -p
 RMRF ?= rm -rf
+NODE ?= node
+NPM ?= npm
 
 include generated.mk
 
@@ -37,6 +39,8 @@ lint: common
 .PHONY: test
 test:
 	$(JSONSCHEMA) test ./test
+	$(NODE) npm/cjs.test.js
+	$(NODE) npm/esm.test.mjs
 
 # TODO: Add a `jsonschema pkg` command instead
 .PHONY: dist
@@ -51,3 +55,6 @@ dist:
 	$(TAR) -rf $@/sourcemeta-std-v$(VERSION).tar LICENSE
 	$(GZIP) $@/sourcemeta-std-v$(VERSION).tar
 	$(TAR) -tzf $@/sourcemeta-std-v$(VERSION).tar.gz
+	$(MKDIRP) $@/npm
+	$(NPM) version --no-git-tag-version --allow-same-version "$(VERSION)"
+	$(NPM) pack --pack-destination $@/npm
