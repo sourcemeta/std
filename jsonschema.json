@@ -4,5 +4,5 @@
   "email": "hello@sourcemeta.com",
   "github": "sourcemeta/std",
   "path": "./schemas",
-  "x-version": "0.3.0"
+  "x-version": "0.3.1"
 }

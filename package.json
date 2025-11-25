@@ -1,6 +1,6 @@
 {
   "name": "@sourcemeta/std",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A growing collection of hand-crafted high-quality schemas, From RFC-compliant Email Address schemas to ISO-compliant Currency Codes",
   "main": "npm/main.js",
   "module": "npm/main.mjs",
