@@ -79,12 +79,12 @@
     },
     {
       "description": "Valid - arbitrary precision numerator with decimals",
-      "data": [ 123456789012345680.0, 1 ],
+      "data": [ 1.234567890123456800e+17, 1 ],
       "valid": true
     },
     {
       "description": "Valid - arbitrary precision denominator with decimals",
-      "data": [ 1, 123456789012345680.0 ],
+      "data": [ 1, 1.234567890123456800e+17 ],
       "valid": true
     },
     {

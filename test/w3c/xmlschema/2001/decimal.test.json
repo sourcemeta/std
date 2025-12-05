@@ -104,12 +104,12 @@
     },
     {
       "description": "Valid - arbitrary precision with decimals",
-      "data": 123456789012345680.0,
+      "data": 1.234567890123456800e+17,
       "valid": true
     },
     {
       "description": "Valid - arbitrary precision negative with decimals",
-      "data": -123456789012345680.0,
+      "data": -1.234567890123456800e+17,
       "valid": true
     },
     {
