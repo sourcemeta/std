@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := all
 
-JSONSCHEMA ?= ./node_modules/@sourcemeta/jsonschema/cli.js
+JSONSCHEMA ?= ./node_modules/@sourcemeta/jsonschema/npm/cli.js
 JQ ?= jq
 SHELLCHECK ?= shellcheck
 TAR ?= tar
@@ -11,6 +11,7 @@ MKDIRP ?= mkdir -p
 RMRF ?= rm -rf
 NODE ?= node
 NPM ?= npm
+TIME ?= time
 
 include generated.mk
 
@@ -21,11 +22,11 @@ all: common test node_modules
 
 .PHONY: common
 common: $(GENERATED) node_modules
-	$(NODE) $(JSONSCHEMA) metaschema schemas meta
-	$(NODE) $(JSONSCHEMA) lint schemas meta
-	$(NODE) $(JSONSCHEMA) validate meta/schemas-root.json schemas
-	$(NODE) $(JSONSCHEMA) validate meta/schemas.json schemas
-	$(NODE) $(JSONSCHEMA) validate meta/test.json test
+	$(TIME) $(NODE) $(JSONSCHEMA) metaschema schemas meta
+	$(TIME) $(NODE) $(JSONSCHEMA) lint schemas meta
+	$(TIME) $(NODE) $(JSONSCHEMA) validate meta/schemas-root.json schemas
+	$(TIME) $(NODE) $(JSONSCHEMA) validate meta/schemas.json schemas
+	$(TIME) $(NODE) $(JSONSCHEMA) validate meta/test.json test
 	$(SHELLCHECK) scripts/*.sh
 	./scripts/quality-schemas-tests-mirror.sh
 	./scripts/quality-templates-xbrl-utr-mirror.sh
@@ -33,12 +34,12 @@ common: $(GENERATED) node_modules
 # TODO: Make `jsonschema fmt` automatically detect test files
 .PHONY: lint
 lint: common node_modules
-	$(NODE) $(JSONSCHEMA) fmt schemas meta --check
-	$(NODE) $(JSONSCHEMA) fmt test --check --default-dialect "https://json-schema.org/draft/2020-12/schema"
+	$(TIME) $(NODE) $(JSONSCHEMA) fmt schemas meta --check
+	$(TIME) $(NODE) $(JSONSCHEMA) fmt test --check --default-dialect "https://json-schema.org/draft/2020-12/schema"
 
 .PHONY: test
 test: node_modules
-	$(NODE) $(JSONSCHEMA) test ./test
+	$(TIME) $(NODE) $(JSONSCHEMA) test ./test
 	$(NODE) npm/cjs.test.js
 	$(NODE) npm/esm.test.mjs
 
