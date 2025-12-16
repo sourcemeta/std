@@ -15,3 +15,7 @@ templates
 DATA
 DEPENDENCIES
 generated.mk
+npm
+package.json
+package-lock.json
+.npmignore
