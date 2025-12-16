@@ -19,11 +19,12 @@
     | map(select(.["{http://www.xbrl.org/2009/utr}itemType"] == "perShareItemType"))
     
     | map(
+        (.["{http://www.xbrl.org/2009/utr}definition"] | gsub("\\s{2,}"; " ") | if endswith(".") then .[:-1] else . end) as $desc |
         {
           "const": .["{http://www.xbrl.org/2009/utr}unitId"],
-          "title": .["{http://www.xbrl.org/2009/utr}unitName"],
-          "description": (.["{http://www.xbrl.org/2009/utr}definition"] | gsub("\\s{2,}"; " ") | if endswith(".") then .[:-1] else . end)
+          "description": $desc
         } +
+        (if .["{http://www.xbrl.org/2009/utr}unitName"] != $desc then {"title": .["{http://www.xbrl.org/2009/utr}unitName"]} else {} end) +
         (if .["{http://www.xbrl.org/2009/utr}symbol"] then {"x-symbol": .["{http://www.xbrl.org/2009/utr}symbol"]} else {} end) +
         (if .["{http://www.xbrl.org/2009/utr}status"] then {"x-status": .["{http://www.xbrl.org/2009/utr}status"]} else {} end)
       )
