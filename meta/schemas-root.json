@@ -1,5 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Root schema meta-schema",
+  "description": "Meta-schema for validating root-level schemas",
   "type": "object",
   "anyOf": [
     {
@@ -21,14 +23,7 @@
       }
     }
   ],
-  "required": [
-    "x-license",
-    "title",
-    "description",
-    "examples",
-    "x-links",
-    "$schema"
-  ],
+  "required": [ "x-license", "examples", "x-links", "$schema" ],
   "properties": {
     "$schema": {
       "const": "https://json-schema.org/draft/2020-12/schema"
@@ -51,6 +46,9 @@
       "items": {
         "$ref": "../schemas/2020-12/ietf/http/https-url.json"
       }
+    },
+    "examples": {
+      "type": "array"
     }
   }
 }

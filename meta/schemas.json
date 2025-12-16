@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$dynamicAnchor": "meta",
+  "title": "Schema meta-schema",
+  "description": "Meta-schema for validating all schemas",
   "$ref": "https://json-schema.org/draft/2020-12/schema",
   "properties": {
     "$id": false,

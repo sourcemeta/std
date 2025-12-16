@@ -51,6 +51,6 @@
     "access": "public"
   },
   "devDependencies": {
-    "@sourcemeta/jsonschema": "^12.10.1"
+    "@sourcemeta/jsonschema": "^13.1.0"
   }
 }
