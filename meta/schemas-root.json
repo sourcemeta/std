@@ -20,8 +20,10 @@
     }
   },
   "else": {
+    "required": [ "examples" ],
     "properties": {
       "examples": {
+        "type": "array",
         "minItems": 3
       }
     }
