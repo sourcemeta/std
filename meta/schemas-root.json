@@ -33,24 +33,9 @@
     "$schema": {
       "const": "https://json-schema.org/draft/2020-12/schema"
     },
-    "$comment": {
-      "not": {
-        "$ref": "../schemas/2020-12/ietf/uri/uri-reference.json"
-      }
-    },
     "x-license": {
       "const": "https://github.com/sourcemeta/std/blob/main/LICENSE"
     },
-    "x-symbol": {
-      "type": "string"
-    },
-    "x-links": {
-      "type": "array",
-      "minItems": 1,
-      "uniqueItems": true,
-      "items": {
-        "$ref": "../schemas/2020-12/ietf/http/https-url.json"
-      }
-    }
+    "x-links": true
   }
 }

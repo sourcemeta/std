@@ -15,7 +15,21 @@
   "properties": {
     "$id": false,
     "$comment": {
-      "$ref": "../schemas/2020-12/misc/single-line-text.json"
+      "$ref": "../schemas/2020-12/misc/single-line-text.json",
+      "not": {
+        "$ref": "../schemas/2020-12/ietf/uri/uri-reference.json"
+      }
+    },
+    "x-symbol": {
+      "type": "string"
+    },
+    "x-links": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "../schemas/2020-12/ietf/http/https-url.json"
+      }
     },
     "title": {
       "$ref": "../schemas/2020-12/misc/single-line-text.json"
