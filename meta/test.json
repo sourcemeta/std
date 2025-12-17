@@ -2,6 +2,24 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Test meta-schema",
   "description": "Meta-schema for validating test files",
+  "examples": [
+    {
+      "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+      "target": "../schemas/example.json",
+      "tests": [
+        {
+          "description": "Valid input",
+          "data": "test",
+          "valid": true
+        },
+        {
+          "description": "Invalid input",
+          "data": 123,
+          "valid": false
+        }
+      ]
+    }
+  ],
   "type": "object",
   "required": [ "x-license", "tests" ],
   "properties": {
