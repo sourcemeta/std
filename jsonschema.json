@@ -3,6 +3,5 @@
   "description": "A growing collection of hand-crafted high-quality schemas by Sourcemeta",
   "email": "hello@sourcemeta.com",
   "github": "sourcemeta/std",
-  "path": "./schemas",
-  "x-version": "0.3.1"
+  "path": "./schemas"
 }
