@@ -1,0 +1,76 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/2020-12/iso/coordinate/2022/latitude.json",
+  "tests": [
+    {
+      "description": "Valid - equator",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - north pole",
+      "data": 90,
+      "valid": true
+    },
+    {
+      "description": "Valid - south pole",
+      "data": -90,
+      "valid": true
+    },
+    {
+      "description": "Valid - positive decimal",
+      "data": 37.7749,
+      "valid": true
+    },
+    {
+      "description": "Valid - negative decimal",
+      "data": -33.8688,
+      "valid": true
+    },
+    {
+      "description": "Invalid - above north pole",
+      "data": 90.1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - below south pole",
+      "data": -90.1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - way above range",
+      "data": 180,
+      "valid": false
+    },
+    {
+      "description": "Invalid - way below range",
+      "data": -180,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - string",
+      "data": "37.7749",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}

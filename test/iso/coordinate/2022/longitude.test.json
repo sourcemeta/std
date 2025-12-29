@@ -1,0 +1,76 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../schemas/2020-12/iso/coordinate/2022/longitude.json",
+  "tests": [
+    {
+      "description": "Valid - prime meridian",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - antimeridian east",
+      "data": 180,
+      "valid": true
+    },
+    {
+      "description": "Valid - antimeridian west",
+      "data": -180,
+      "valid": true
+    },
+    {
+      "description": "Valid - positive decimal",
+      "data": 151.209,
+      "valid": true
+    },
+    {
+      "description": "Valid - negative decimal",
+      "data": -122.419,
+      "valid": true
+    },
+    {
+      "description": "Invalid - above east limit",
+      "data": 180.1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - below west limit",
+      "data": -180.1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - way above range",
+      "data": 360,
+      "valid": false
+    },
+    {
+      "description": "Invalid - way below range",
+      "data": -360,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - string",
+      "data": "-122.419",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}
