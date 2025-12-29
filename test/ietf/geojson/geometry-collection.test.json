@@ -1,0 +1,240 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/2020-12/ietf/geojson/geometry-collection.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "not an object",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Empty object - missing required properties",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Missing geometries property",
+      "data": {
+        "type": "GeometryCollection"
+      },
+      "valid": false
+    },
+    {
+      "description": "Missing type property",
+      "data": {
+        "geometries": []
+      },
+      "valid": false
+    },
+    {
+      "description": "Wrong type value",
+      "data": {
+        "type": "Point",
+        "geometries": []
+      },
+      "valid": false
+    },
+    {
+      "description": "Valid empty GeometryCollection",
+      "data": {
+        "type": "GeometryCollection",
+        "geometries": []
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid GeometryCollection with Point",
+      "data": {
+        "type": "GeometryCollection",
+        "geometries": [
+          {
+            "type": "Point",
+            "coordinates": [ 0, 0 ]
+          }
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid GeometryCollection with multiple geometries",
+      "data": {
+        "type": "GeometryCollection",
+        "geometries": [
+          {
+            "type": "Point",
+            "coordinates": [ 0, 0 ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [ 0, 0 ],
+              [ 1, 1 ]
+            ]
+          }
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "RFC 7946 Appendix A.7 - GeometryCollection",
+      "data": {
+        "type": "GeometryCollection",
+        "geometries": [
+          {
+            "type": "Point",
+            "coordinates": [ 100.0, 0.0 ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [ 101.0, 0.0 ],
+              [ 102.0, 1.0 ]
+            ]
+          }
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid GeometryCollection with all geometry types",
+      "data": {
+        "type": "GeometryCollection",
+        "geometries": [
+          {
+            "type": "Point",
+            "coordinates": [ 0, 0 ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [ 0, 0 ],
+              [ 1, 1 ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [ 0, 0 ],
+                [ 1, 0 ],
+                [ 1, 1 ],
+                [ 0, 0 ]
+              ]
+            ]
+          },
+          {
+            "type": "MultiPoint",
+            "coordinates": [
+              [ 0, 0 ]
+            ]
+          },
+          {
+            "type": "MultiLineString",
+            "coordinates": [
+              [
+                [ 0, 0 ],
+                [ 1, 1 ]
+              ]
+            ]
+          },
+          {
+            "type": "MultiPolygon",
+            "coordinates": [
+              [
+                [
+                  [ 0, 0 ],
+                  [ 1, 0 ],
+                  [ 1, 1 ],
+                  [ 0, 0 ]
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid GeometryCollection with bbox",
+      "data": {
+        "type": "GeometryCollection",
+        "geometries": [
+          {
+            "type": "Point",
+            "coordinates": [ 0, 0 ]
+          }
+        ],
+        "bbox": [ -1, -1, 1, 1 ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Invalid - geometry with invalid type",
+      "data": {
+        "type": "GeometryCollection",
+        "geometries": [
+          {
+            "type": "Unknown",
+            "coordinates": [ 0, 0 ]
+          }
+        ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - geometries is not an array",
+      "data": {
+        "type": "GeometryCollection",
+        "geometries": {}
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member geometry",
+      "data": {
+        "type": "GeometryCollection",
+        "geometries": [],
+        "geometry": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member properties",
+      "data": {
+        "type": "GeometryCollection",
+        "geometries": [],
+        "properties": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member features",
+      "data": {
+        "type": "GeometryCollection",
+        "geometries": [],
+        "features": []
+      },
+      "valid": false
+    }
+  ]
+}

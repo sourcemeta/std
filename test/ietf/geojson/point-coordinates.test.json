@@ -1,0 +1,127 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/2020-12/ietf/geojson/point-coordinates.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "not an array",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Empty array - too few items",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "One item - too few items",
+      "data": [ 0 ],
+      "valid": false
+    },
+    {
+      "description": "Valid 2D position (longitude, latitude)",
+      "data": [ -122.419, 37.7749 ],
+      "valid": true
+    },
+    {
+      "description": "Valid 3D position with altitude",
+      "data": [ -122.419, 37.7749, 10.5 ],
+      "valid": true
+    },
+    {
+      "description": "Valid position with integer coordinates",
+      "data": [ 0, 0 ],
+      "valid": true
+    },
+    {
+      "description": "Valid position with negative coordinates",
+      "data": [ -180, -90 ],
+      "valid": true
+    },
+    {
+      "description": "Valid position at antimeridian",
+      "data": [ 180, 0 ],
+      "valid": true
+    },
+    {
+      "description": "Invalid - contains string",
+      "data": [ "0", 0 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains null",
+      "data": [ null, 0 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains boolean",
+      "data": [ true, 0 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains object",
+      "data": [
+        {},
+        0
+      ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains array",
+      "data": [
+        [],
+        0
+      ],
+      "valid": false
+    },
+    {
+      "description": "Valid position at south pole",
+      "data": [ 0, -90 ],
+      "valid": true
+    },
+    {
+      "description": "Valid position at north pole",
+      "data": [ 0, 90 ],
+      "valid": true
+    },
+    {
+      "description": "Invalid - latitude below -90",
+      "data": [ 0, -90.1 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - latitude above 90",
+      "data": [ 0, 90.1 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - latitude way out of range (positive)",
+      "data": [ 0, 100 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - latitude way out of range (negative)",
+      "data": [ 0, -100 ],
+      "valid": false
+    }
+  ]
+}

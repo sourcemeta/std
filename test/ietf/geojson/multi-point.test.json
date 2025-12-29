@@ -1,0 +1,180 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/2020-12/ietf/geojson/multi-point.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "not an object",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Empty object - missing required properties",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Missing coordinates property",
+      "data": {
+        "type": "MultiPoint"
+      },
+      "valid": false
+    },
+    {
+      "description": "Missing type property",
+      "data": {
+        "coordinates": [
+          [ 0, 0 ],
+          [ 1, 1 ]
+        ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Wrong type value",
+      "data": {
+        "type": "Point",
+        "coordinates": [
+          [ 0, 0 ],
+          [ 1, 1 ]
+        ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Valid MultiPoint with empty coordinates",
+      "data": {
+        "type": "MultiPoint",
+        "coordinates": []
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid MultiPoint with one point",
+      "data": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [ 0, 0 ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid MultiPoint with multiple points",
+      "data": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [ 0, 0 ],
+          [ 1, 1 ],
+          [ 2, 2 ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "RFC 7946 Appendix A.4 - MultiPoint",
+      "data": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [ 100.0, 0.0 ],
+          [ 101.0, 1.0 ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid MultiPoint with 3D coordinates",
+      "data": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [ 0, 0, 0 ],
+          [ 1, 1, 10 ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid MultiPoint with bbox",
+      "data": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [ 0, 0 ],
+          [ 1, 1 ]
+        ],
+        "bbox": [ 0, 0, 1, 1 ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Invalid - position has only one coordinate",
+      "data": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [ 0 ],
+          [ 1, 1 ]
+        ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - coordinates is not an array",
+      "data": {
+        "type": "MultiPoint",
+        "coordinates": {}
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member geometry",
+      "data": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [ 0, 0 ]
+        ],
+        "geometry": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member properties",
+      "data": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [ 0, 0 ]
+        ],
+        "properties": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member features",
+      "data": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [ 0, 0 ]
+        ],
+        "features": []
+      },
+      "valid": false
+    }
+  ]
+}

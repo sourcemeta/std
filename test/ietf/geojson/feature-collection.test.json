@@ -1,0 +1,305 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/2020-12/ietf/geojson/feature-collection.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "not an object",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Empty object - missing required properties",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Missing features property",
+      "data": {
+        "type": "FeatureCollection"
+      },
+      "valid": false
+    },
+    {
+      "description": "Missing type property",
+      "data": {
+        "features": []
+      },
+      "valid": false
+    },
+    {
+      "description": "Wrong type value",
+      "data": {
+        "type": "Feature",
+        "features": []
+      },
+      "valid": false
+    },
+    {
+      "description": "Valid empty FeatureCollection",
+      "data": {
+        "type": "FeatureCollection",
+        "features": []
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid FeatureCollection with one feature",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "geometry": null,
+            "properties": null
+          }
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid FeatureCollection with multiple features",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [ 0, 0 ]
+            },
+            "properties": {
+              "name": "Point A"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [ 1, 1 ]
+            },
+            "properties": {
+              "name": "Point B"
+            }
+          }
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid FeatureCollection with bbox",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [],
+        "bbox": [ -180, -90, 180, 90 ]
+      },
+      "valid": true
+    },
+    {
+      "description": "RFC 7946 Section 5 - 2D bbox",
+      "data": {
+        "type": "FeatureCollection",
+        "bbox": [ 100.0, 0.0, 105.0, 1.0 ],
+        "features": []
+      },
+      "valid": true
+    },
+    {
+      "description": "RFC 7946 Section 5 - 3D bbox",
+      "data": {
+        "type": "FeatureCollection",
+        "bbox": [ 100.0, 0.0, -100.0, 105.0, 1.0, 0.0 ],
+        "features": []
+      },
+      "valid": true
+    },
+    {
+      "description": "RFC 7946 Section 1.5 - FeatureCollection example",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [ 102.0, 0.5 ]
+            },
+            "properties": {
+              "prop0": "value0"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [ 102.0, 0.0 ],
+                [ 103.0, 1.0 ],
+                [ 104.0, 0.0 ],
+                [ 105.0, 1.0 ]
+              ]
+            },
+            "properties": {
+              "prop0": "value0",
+              "prop1": 0.0
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [ 100.0, 0.0 ],
+                  [ 101.0, 0.0 ],
+                  [ 101.0, 1.0 ],
+                  [ 100.0, 1.0 ],
+                  [ 100.0, 0.0 ]
+                ]
+              ]
+            },
+            "properties": {
+              "prop0": "value0",
+              "prop1": {
+                "this": "that"
+              }
+            }
+          }
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid FeatureCollection with various geometries",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [ 0, 0 ]
+            },
+            "properties": null
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [ 0, 0 ],
+                [ 1, 1 ]
+              ]
+            },
+            "properties": null
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [ 0, 0 ],
+                  [ 1, 0 ],
+                  [ 1, 1 ],
+                  [ 0, 0 ]
+                ]
+              ]
+            },
+            "properties": null
+          }
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Invalid - features is not an array",
+      "data": {
+        "type": "FeatureCollection",
+        "features": {}
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - feature missing required properties",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature"
+          }
+        ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - feature has wrong type",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Point",
+            "geometry": null,
+            "properties": null
+          }
+        ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member coordinates",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [],
+        "coordinates": [ 0, 0 ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member geometries",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [],
+        "geometries": []
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member geometry",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [],
+        "geometry": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member properties",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [],
+        "properties": null
+      },
+      "valid": false
+    }
+  ]
+}

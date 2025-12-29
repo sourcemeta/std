@@ -1,0 +1,141 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/2020-12/ietf/geojson/bounding-box.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "not an array",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Empty array - too few items",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "One item - too few items",
+      "data": [ 0 ],
+      "valid": false
+    },
+    {
+      "description": "Two items - too few items",
+      "data": [ 0, 0 ],
+      "valid": false
+    },
+    {
+      "description": "Three items - too few items",
+      "data": [ 0, 0, 1 ],
+      "valid": false
+    },
+    {
+      "description": "Valid 2D bounding box",
+      "data": [ -180, -90, 180, 90 ],
+      "valid": true
+    },
+    {
+      "description": "Valid 3D bounding box",
+      "data": [ -180, -90, 0, 180, 90, 1000 ],
+      "valid": true
+    },
+    {
+      "description": "Valid bounding box with decimal numbers",
+      "data": [ -122.5, 37.5, -122.0, 38.0 ],
+      "valid": true
+    },
+    {
+      "description": "Valid bounding box with negative values",
+      "data": [ -10.5, -20.5, -5.0, -10.0 ],
+      "valid": true
+    },
+    {
+      "description": "Invalid - contains string",
+      "data": [ 0, 0, "1", 1 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains null",
+      "data": [ 0, 0, null, 1 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains boolean",
+      "data": [ 0, 0, true, 1 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains object",
+      "data": [
+        0,
+        0,
+        {},
+        1
+      ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - contains array",
+      "data": [
+        0,
+        0,
+        [],
+        1
+      ],
+      "valid": false
+    },
+    {
+      "description": "Invalid 2D bbox - south latitude below -90",
+      "data": [ 0, -91, 1, 0 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid 2D bbox - south latitude above 90",
+      "data": [ 0, 91, 1, 0 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid 2D bbox - north latitude below -90",
+      "data": [ 0, 0, 1, -91 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid 2D bbox - north latitude above 90",
+      "data": [ 0, 0, 1, 91 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid 3D bbox - south latitude out of range",
+      "data": [ 0, -91, 0, 1, 0, 100 ],
+      "valid": false
+    },
+    {
+      "description": "Invalid 3D bbox - north latitude out of range",
+      "data": [ 0, 0, 0, 1, 91, 100 ],
+      "valid": false
+    },
+    {
+      "description": "Valid higher dimension bounding box (loose validation)",
+      "data": [ 0, 0, 0, 0, 1, 1, 1, 1 ],
+      "valid": true
+    }
+  ]
+}
