@@ -1,0 +1,136 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/2020-12/ietf/geojson/geometry.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "not an object",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Empty object - missing required properties",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Valid Point geometry",
+      "data": {
+        "type": "Point",
+        "coordinates": [ 0, 0 ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid LineString geometry",
+      "data": {
+        "type": "LineString",
+        "coordinates": [
+          [ 0, 0 ],
+          [ 1, 1 ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid Polygon geometry",
+      "data": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [ 0, 0 ],
+            [ 1, 0 ],
+            [ 1, 1 ],
+            [ 0, 0 ]
+          ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid MultiPoint geometry",
+      "data": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [ 0, 0 ],
+          [ 1, 1 ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid MultiLineString geometry",
+      "data": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [ 0, 0 ],
+            [ 1, 1 ]
+          ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid MultiPolygon geometry",
+      "data": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [ 0, 0 ],
+              [ 1, 0 ],
+              [ 1, 1 ],
+              [ 0, 0 ]
+            ]
+          ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown geometry type",
+      "data": {
+        "type": "Unknown",
+        "coordinates": [ 0, 0 ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - Feature is not a geometry",
+      "data": {
+        "type": "Feature",
+        "properties": null,
+        "geometry": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - GeometryCollection is not included",
+      "data": {
+        "type": "GeometryCollection",
+        "geometries": []
+      },
+      "valid": false
+    }
+  ]
+}

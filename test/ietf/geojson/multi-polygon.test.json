@@ -1,0 +1,300 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/2020-12/ietf/geojson/multi-polygon.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "not an object",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Empty object - missing required properties",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Missing coordinates property",
+      "data": {
+        "type": "MultiPolygon"
+      },
+      "valid": false
+    },
+    {
+      "description": "Missing type property",
+      "data": {
+        "coordinates": [
+          [
+            [
+              [ 0, 0 ],
+              [ 1, 0 ],
+              [ 1, 1 ],
+              [ 0, 0 ]
+            ]
+          ]
+        ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Wrong type value",
+      "data": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              [ 0, 0 ],
+              [ 1, 0 ],
+              [ 1, 1 ],
+              [ 0, 0 ]
+            ]
+          ]
+        ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Valid MultiPolygon with empty coordinates",
+      "data": {
+        "type": "MultiPolygon",
+        "coordinates": []
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid MultiPolygon with one polygon",
+      "data": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [ 0, 0 ],
+              [ 1, 0 ],
+              [ 1, 1 ],
+              [ 0, 0 ]
+            ]
+          ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid MultiPolygon with multiple polygons",
+      "data": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [ 0, 0 ],
+              [ 1, 0 ],
+              [ 1, 1 ],
+              [ 0, 0 ]
+            ]
+          ],
+          [
+            [
+              [ 2, 2 ],
+              [ 3, 2 ],
+              [ 3, 3 ],
+              [ 2, 2 ]
+            ]
+          ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "RFC 7946 Appendix A.6 - MultiPolygon",
+      "data": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [ 102.0, 2.0 ],
+              [ 103.0, 2.0 ],
+              [ 103.0, 3.0 ],
+              [ 102.0, 3.0 ],
+              [ 102.0, 2.0 ]
+            ]
+          ],
+          [
+            [
+              [ 100.0, 0.0 ],
+              [ 101.0, 0.0 ],
+              [ 101.0, 1.0 ],
+              [ 100.0, 1.0 ],
+              [ 100.0, 0.0 ]
+            ],
+            [
+              [ 100.2, 0.2 ],
+              [ 100.2, 0.8 ],
+              [ 100.8, 0.8 ],
+              [ 100.8, 0.2 ],
+              [ 100.2, 0.2 ]
+            ]
+          ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "RFC 7946 Section 3.1.9 - Antimeridian crossing",
+      "data": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [ 180.0, 40.0 ],
+              [ 180.0, 50.0 ],
+              [ 170.0, 50.0 ],
+              [ 170.0, 40.0 ],
+              [ 180.0, 40.0 ]
+            ]
+          ],
+          [
+            [
+              [ -170.0, 40.0 ],
+              [ -170.0, 50.0 ],
+              [ -180.0, 50.0 ],
+              [ -180.0, 40.0 ],
+              [ -170.0, 40.0 ]
+            ]
+          ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid MultiPolygon with 3D coordinates",
+      "data": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [ 0, 0, 0 ],
+              [ 1, 0, 0 ],
+              [ 1, 1, 0 ],
+              [ 0, 0, 0 ]
+            ]
+          ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid MultiPolygon with bbox",
+      "data": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [ 0, 0 ],
+              [ 1, 0 ],
+              [ 1, 1 ],
+              [ 0, 0 ]
+            ]
+          ]
+        ],
+        "bbox": [ 0, 0, 1, 1 ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Invalid - linear ring with too few positions",
+      "data": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [ 0, 0 ],
+              [ 1, 0 ],
+              [ 0, 0 ]
+            ]
+          ]
+        ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - coordinates is not an array",
+      "data": {
+        "type": "MultiPolygon",
+        "coordinates": {}
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member geometry",
+      "data": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [ 0, 0 ],
+              [ 1, 0 ],
+              [ 1, 1 ],
+              [ 0, 0 ]
+            ]
+          ]
+        ],
+        "geometry": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member properties",
+      "data": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [ 0, 0 ],
+              [ 1, 0 ],
+              [ 1, 1 ],
+              [ 0, 0 ]
+            ]
+          ]
+        ],
+        "properties": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member features",
+      "data": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [ 0, 0 ],
+              [ 1, 0 ],
+              [ 1, 1 ],
+              [ 0, 0 ]
+            ]
+          ]
+        ],
+        "features": []
+      },
+      "valid": false
+    }
+  ]
+}

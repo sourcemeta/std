@@ -1,0 +1,101 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/2020-12/ietf/geojson/line-string-coordinates.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "not an array",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Empty array - too few positions",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "One position - too few positions",
+      "data": [
+        [ 0, 0 ]
+      ],
+      "valid": false
+    },
+    {
+      "description": "Valid LineString with two positions",
+      "data": [
+        [ 0, 0 ],
+        [ 1, 1 ]
+      ],
+      "valid": true
+    },
+    {
+      "description": "Valid LineString with three positions",
+      "data": [
+        [ 0, 0 ],
+        [ 1, 1 ],
+        [ 2, 0 ]
+      ],
+      "valid": true
+    },
+    {
+      "description": "Valid LineString with 3D positions",
+      "data": [
+        [ 0, 0, 0 ],
+        [ 1, 1, 10 ],
+        [ 2, 0, 20 ]
+      ],
+      "valid": true
+    },
+    {
+      "description": "Invalid - position has only one coordinate",
+      "data": [
+        [ 0 ],
+        [ 1, 1 ]
+      ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - position contains string",
+      "data": [
+        [ "0", 0 ],
+        [ 1, 1 ]
+      ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - position is not an array",
+      "data": [
+        0,
+        [ 1, 1 ]
+      ],
+      "valid": false
+    },
+    {
+      "description": "Invalid - position is null",
+      "data": [
+        null,
+        [ 1, 1 ]
+      ],
+      "valid": false
+    }
+  ]
+}

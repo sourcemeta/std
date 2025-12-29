@@ -1,0 +1,258 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/2020-12/ietf/geojson/feature.json",
+  "tests": [
+    {
+      "description": "Invalid type - string",
+      "data": "not an object",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Empty object - missing required properties",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Missing geometry and properties",
+      "data": {
+        "type": "Feature"
+      },
+      "valid": false
+    },
+    {
+      "description": "Missing properties",
+      "data": {
+        "type": "Feature",
+        "geometry": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Missing geometry",
+      "data": {
+        "type": "Feature",
+        "properties": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Missing type",
+      "data": {
+        "geometry": null,
+        "properties": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Wrong type value",
+      "data": {
+        "type": "Point",
+        "geometry": null,
+        "properties": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Valid Feature with null geometry",
+      "data": {
+        "type": "Feature",
+        "geometry": null,
+        "properties": null
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid Feature with Point geometry",
+      "data": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [ 0, 0 ]
+        },
+        "properties": null
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid Feature with properties object",
+      "data": {
+        "type": "Feature",
+        "geometry": null,
+        "properties": {
+          "name": "Test",
+          "value": 123
+        }
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid Feature with numeric id",
+      "data": {
+        "type": "Feature",
+        "id": 123,
+        "geometry": null,
+        "properties": null
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid Feature with string id",
+      "data": {
+        "type": "Feature",
+        "id": "feature-1",
+        "geometry": null,
+        "properties": null
+      },
+      "valid": true
+    },
+    {
+      "description": "RFC 7946 Section 5 - Feature with bbox",
+      "data": {
+        "type": "Feature",
+        "bbox": [ -10.0, -10.0, 10.0, 10.0 ],
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [ -10.0, -10.0 ],
+              [ 10.0, -10.0 ],
+              [ 10.0, 10.0 ],
+              [ -10.0, -10.0 ]
+            ]
+          ]
+        },
+        "properties": null
+      },
+      "valid": true
+    },
+    {
+      "description": "RFC 7946 Section 6.1 - Feature with foreign members",
+      "data": {
+        "type": "Feature",
+        "id": "f1",
+        "geometry": null,
+        "properties": null,
+        "title": "Example Feature"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid Feature with bbox",
+      "data": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [ 0, 0 ]
+        },
+        "properties": null,
+        "bbox": [ -1, -1, 1, 1 ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid Feature with all geometry types",
+      "data": {
+        "type": "Feature",
+        "geometry": {
+          "type": "GeometryCollection",
+          "geometries": [
+            {
+              "type": "Point",
+              "coordinates": [ 0, 0 ]
+            }
+          ]
+        },
+        "properties": null
+      },
+      "valid": true
+    },
+    {
+      "description": "Invalid - properties is not null or object",
+      "data": {
+        "type": "Feature",
+        "geometry": null,
+        "properties": "invalid"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - properties is array",
+      "data": {
+        "type": "Feature",
+        "geometry": null,
+        "properties": []
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - id is boolean",
+      "data": {
+        "type": "Feature",
+        "id": true,
+        "geometry": null,
+        "properties": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - id is object",
+      "data": {
+        "type": "Feature",
+        "id": {},
+        "geometry": null,
+        "properties": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member coordinates",
+      "data": {
+        "type": "Feature",
+        "geometry": null,
+        "properties": null,
+        "coordinates": [ 0, 0 ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member geometries",
+      "data": {
+        "type": "Feature",
+        "geometry": null,
+        "properties": null,
+        "geometries": []
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - forbidden member features",
+      "data": {
+        "type": "Feature",
+        "geometry": null,
+        "properties": null,
+        "features": []
+      },
+      "valid": false
+    }
+  ]
+}
