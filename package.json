@@ -1,55 +1,7 @@
 {
   "name": "@sourcemeta/std",
-  "version": "0.3.1",
-  "description": "A growing collection of hand-crafted high-quality schemas, From RFC-compliant Email Address schemas to ISO-compliant Currency Codes",
-  "main": "npm/main.js",
-  "module": "npm/main.mjs",
-  "exports": {
-    ".": {
-      "import": "./npm/main.mjs",
-      "require": "./npm/main.js"
-    }
-  },
-  "license": "UNLICENSED",
-  "homepage": "https://github.com/sourcemeta/std",
-  "author": {
-    "email": "hello@sourcemeta.com",
-    "name": "Sourcemeta",
-    "url": "https://www.sourcemeta.com"
-  },
-  "funding": "https://github.com/sponsors/sourcemeta",
-  "keywords": [
-    "jsonschema",
-    "json",
-    "schema",
-    "json-schema",
-    "cli",
-    "$ref",
-    "dereference",
-    "reference",
-    "resolve",
-    "json-pointer",
-    "validator",
-    "validation",
-    "bundle",
-    "json-schema-validator",
-    "json-schema-validation",
-    "lint",
-    "format",
-    "draft",
-    "library"
-  ],
-  "bugs": {
-    "url": "https://github.com/sourcemeta/std/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sourcemeta/std.git"
-  },
-  "publishConfig": {
-    "provenance": true,
-    "access": "public"
-  },
+  "version": "0.0.0",
+  "private": true,
   "devDependencies": {
     "@sourcemeta/jsonschema": "^13.2.0"
   }

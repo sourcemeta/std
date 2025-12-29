@@ -40,25 +40,6 @@ lint: common node_modules
 .PHONY: test
 test: node_modules
 	$(TIME) $(NODE) $(JSONSCHEMA) test ./test
-	$(NODE) npm/cjs.test.js
-	$(NODE) npm/esm.test.mjs
-
-# TODO: Add a `jsonschema pkg` command instead
-.PHONY: dist
-VERSION = $(shell $(JQ) --raw-output '.["x-version"]' jsonschema.json)
-dist:
-	$(RMRF) $@
-	$(MKDIRP) $@
-	cd schemas && $(ZIP) -r ../$@/sourcemeta-std-v$(VERSION).zip * -x '*.DS_Store'
-	$(ZIP) $@/sourcemeta-std-v$(VERSION).zip LICENSE
-	$(UNZIP) -l $@/sourcemeta-std-v$(VERSION).zip
-	cd schemas && $(TAR) -cf ../$@/sourcemeta-std-v$(VERSION).tar --exclude '.DS_Store' *
-	$(TAR) -rf $@/sourcemeta-std-v$(VERSION).tar LICENSE
-	$(GZIP) $@/sourcemeta-std-v$(VERSION).tar
-	$(TAR) -tzf $@/sourcemeta-std-v$(VERSION).tar.gz
-	$(MKDIRP) $@/npm
-	$(NPM) version --no-git-tag-version --allow-same-version "$(VERSION)"
-	$(NPM) pack --pack-destination $@/npm
 
 node_modules: package.json package-lock.json
 	$(NPM) ci

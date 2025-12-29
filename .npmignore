@@ -1,9 +1,0 @@
-*
-!LICENSE
-!README.markdown
-!schemas
-!schemas/**
-!npm
-!npm/**
-npm/**/*.test.js
-npm/**/*.test.mjs
