@@ -21,7 +21,6 @@ jobs:
       - uses: actions/checkout@v4
       - run: make lint
       - run: make test
-      - run: make dist
       - run: ./scripts/ci-quality-no-uncommitted-files.sh
 
       - run: gh config set prompt disabled
@@ -31,10 +30,6 @@ jobs:
       - name: Perform Tag Release
         run: |
           gh release create ${{ github.ref_name }} --draft=false --title ${{ github.ref_name }} --target "$GITHUB_SHA" --generate-notes
-          gh release upload --clobber ${{ github.ref_name }} dist/*.zip dist/*.tar.gz
         if: github.ref_type == 'tag'
         env:
           GH_TOKEN: ${{ github.token }}
-
-      - name: Publish to NPM
-        run: sudo npm install --global npm@latest && npm publish
