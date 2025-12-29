@@ -1,7 +1,9 @@
 .DEFAULT_GOAL := all
 
 JSONSCHEMA ?= ./node_modules/@sourcemeta/jsonschema/npm/cli.js
+JQ ?= jq
 SHELLCHECK ?= shellcheck
+MKDIRP ?= mkdir -p
 NODE ?= node
 NPM ?= npm
 TIME ?= time
