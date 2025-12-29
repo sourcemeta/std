@@ -15,13 +15,19 @@
   "properties": {
     "$id": false,
     "$comment": {
-      "$ref": "../schemas/2020-12/misc/single-line-text.json"
+      "$ref": "#/$defs/single-line-text"
     },
     "title": {
-      "$ref": "../schemas/2020-12/misc/single-line-text.json"
+      "$ref": "#/$defs/single-line-text"
     },
     "description": {
-      "$ref": "../schemas/2020-12/misc/single-line-text.json"
+      "$ref": "#/$defs/single-line-text"
+    }
+  },
+  "$defs": {
+    "single-line-text": {
+      "type": "string",
+      "pattern": "^(?!.*\\.$)(?!.*(?<!\\.)\\.\\.(?!\\.))(?!.* [.,;:!?])(?![?!])(?!.*[?!])(?!.*  )(?!.*\\(\\))(?!.*\\[\\])(?!.*--)(?!.*[\\n\\r\\t])(?!.*[\\x00-\\x1F\\x7F])[^\\s](?:.*[^\\s])?$"
     }
   }
 }
