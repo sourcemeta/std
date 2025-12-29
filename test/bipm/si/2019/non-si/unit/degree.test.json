@@ -1,0 +1,61 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../../schemas/2020-12/bipm/si/2019/non-si/unit/degree.json",
+  "tests": [
+    {
+      "description": "Valid - zero",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - right angle",
+      "data": 90,
+      "valid": true
+    },
+    {
+      "description": "Valid - straight angle",
+      "data": 180,
+      "valid": true
+    },
+    {
+      "description": "Valid - full rotation",
+      "data": 360,
+      "valid": true
+    },
+    {
+      "description": "Valid - negative angle",
+      "data": -90,
+      "valid": true
+    },
+    {
+      "description": "Valid - decimal degrees",
+      "data": 37.7749,
+      "valid": true
+    },
+    {
+      "description": "Invalid type - string",
+      "data": "90",
+      "valid": false
+    },
+    {
+      "description": "Invalid type - boolean",
+      "data": false,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid type - array",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid type - object",
+      "data": {},
+      "valid": false
+    }
+  ]
+}
