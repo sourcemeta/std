@@ -1,14 +1,7 @@
 .DEFAULT_GOAL := all
 
 JSONSCHEMA ?= ./node_modules/@sourcemeta/jsonschema/npm/cli.js
-JQ ?= jq
 SHELLCHECK ?= shellcheck
-TAR ?= tar
-ZIP ?= zip
-UNZIP ?= unzip
-GZIP ?= gzip
-MKDIRP ?= mkdir -p
-RMRF ?= rm -rf
 NODE ?= node
 NPM ?= npm
 TIME ?= time
