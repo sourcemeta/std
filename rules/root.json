@@ -1,13 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "std/root",
-  "description": "Root schemas must declare a dialect, at least one example, the license, and links to the corresponding standards",
+  "description": "Root schemas must declare a dialect, the license, and links to the corresponding standards",
   "type": "object",
-  "required": [ "$schema", "examples", "x-license", "x-links" ],
-  "properties": {
-    "examples": {
-      "type": "array",
-      "minItems": 1
-    }
-  }
+  "required": [ "$schema", "x-license", "x-links" ]
 }
