@@ -1,5 +1,4 @@
 {
-  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "target": "../../../../schemas/2020-12/iso/country/2020/alpha-2.json",
   "tests": [
     {
