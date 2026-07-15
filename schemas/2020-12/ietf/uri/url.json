@@ -11,16 +11,10 @@
   ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc3986#section-3" ],
-  "type": "string",
+  "$ref": "./uri.json",
   "anyOf": [
     {
       "$comment": "With authority (//...)",
-      "allOf": [
-        {
-          "$comment": "Valid authority structure - host can be empty",
-          "pattern": "^[^:]+://(?:[^@/]*@)?(?:\\[[^\\]]+\\]|[^:/]*)(?::[0-9]*)?(?:/.*|[?#].*)?$"
-        }
-      ],
       "anyOf": [
         {
           "$comment": "Empty host",
@@ -54,19 +48,5 @@
       },
       "pattern": "^[A-Za-z][A-Za-z0-9+\\-.]*:(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
     }
-  ],
-  "not": {
-    "anyOf": [
-      {
-        "$comment": "Disallow spaces and control characters anywhere",
-        "pattern": "[\\x00-\\x20]"
-      },
-      {
-        "$comment": "Valid percent-encoding throughout",
-        "pattern": "%(?![0-9A-Fa-f]{2})"
-      }
-    ]
-  },
-  "pattern": "^[A-Za-z][A-Za-z0-9+\\-.]*:.*$",
-  "format": "uri"
+  ]
 }

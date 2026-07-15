@@ -328,9 +328,9 @@
       "valid": false
     },
     {
-      "description": "Invalid IPv4 in URL",
+      "description": "Out-of-range IPv4-like host (a legal reg-name for a generic URI)",
       "data": "http://256.256.256.256/",
-      "valid": false
+      "valid": true
     },
     {
       "description": "IPv6 without brackets in URL",
@@ -343,9 +343,9 @@
       "valid": true
     },
     {
-      "description": "Missing host in URL with authority",
+      "description": "Empty host with port (grammatically legal for a generic URI)",
       "data": "http://:8080/",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Relative path (not absolute)",
@@ -406,6 +406,16 @@
       "description": "Scheme with 63 characters (valid)",
       "data": "abcdefghijklmnopqrstuvwxyz0123456789.plus-minus.dots.hyphens01:data",
       "valid": true
+    },
+    {
+      "description": "Space in a non-URL absolute URI",
+      "data": "mailto:hello world",
+      "valid": false
+    },
+    {
+      "description": "Malformed percent-encoding in a non-URL absolute URI",
+      "data": "tel:%ZZ",
+      "valid": false
     }
   ]
 }

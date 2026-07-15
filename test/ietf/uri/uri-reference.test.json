@@ -223,9 +223,9 @@
       "valid": true
     },
     {
-      "description": "URI with fragment containing hash",
+      "description": "URI with fragment containing hash (hash not allowed within a fragment)",
       "data": "http://example.com/path#hash#in#fragment",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Single slash path",
@@ -353,9 +353,9 @@
       "valid": true
     },
     {
-      "description": "Invalid IPv4 address",
+      "description": "Out-of-range IPv4-like host (a legal reg-name for a generic URI)",
       "data": "http://256.256.256.256/path",
-      "valid": false
+      "valid": true
     },
     {
       "description": "IPv6 without brackets",
@@ -438,9 +438,9 @@
       "valid": true
     },
     {
-      "description": "Path with brackets (not IPv6)",
+      "description": "Path with brackets (gen-delims must be percent-encoded outside of IP literals)",
       "data": "http://example.com/path[with]brackets",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Query with equals but no value",
@@ -478,9 +478,9 @@
       "valid": true
     },
     {
-      "description": "Path starting with colon",
+      "description": "Path starting with colon (first segment must not contain a colon)",
       "data": ":path",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Path with unreserved characters",
@@ -518,9 +518,9 @@
       "valid": true
     },
     {
-      "description": "Path with brackets",
+      "description": "Path with brackets (gen-delims must be percent-encoded)",
       "data": "path[with]brackets",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Network path with reg-name containing dash",
@@ -553,9 +553,9 @@
       "valid": true
     },
     {
-      "description": "Fragment with hash in value",
+      "description": "Fragment with hash in value (hash not allowed within a fragment)",
       "data": "#fragment#with#hashes",
-      "valid": true
+      "valid": false
     },
     {
       "description": "URL with fragment without path",

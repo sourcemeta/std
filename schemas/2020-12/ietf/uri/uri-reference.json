@@ -9,15 +9,9 @@
     "//cdn.example.com/assets/style.css",
     "/absolute/path/to/resource?query=value#section"
   ],
+  "x-format-assertion": true,
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc3986#section-4.1" ],
-  "anyOf": [
-    {
-      "$ref": "./uri.json"
-    },
-    {
-      "$ref": "./uri-relative.json"
-    }
-  ],
+  "type": "string",
   "format": "uri-reference"
 }
