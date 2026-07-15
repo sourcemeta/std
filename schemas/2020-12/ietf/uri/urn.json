@@ -16,14 +16,12 @@
     "urn:example:foo:bar:baz",
     "urn:example:foo/bar/"
   ],
-  "x-format-assertion": true,
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc8141#section-2" ],
-  "type": "string",
+  "$ref": "./uri.json",
   "not": {
     "$comment": "Disallow reserved NID value 'urn'",
     "pattern": "^[Uu][Rr][Nn]:[Uu][Rr][Nn]:"
   },
-  "pattern": "^[Uu][Rr][Nn]:([A-Za-z0-9]([A-Za-z0-9\\-]{0,30}[A-Za-z0-9])?):((%[0-9A-Fa-f]{2}|[A-Za-z0-9\\-._~!$&'()*+,;=:@/])+)(?:\\?(?:\\+[^?#]*)?)?(?:\\?=[^#]*)?(?:#.*)?$",
-  "format": "uri"
+  "pattern": "^[Uu][Rr][Nn]:([A-Za-z0-9]([A-Za-z0-9\\-]{0,30}[A-Za-z0-9])?):((%[0-9A-Fa-f]{2}|[A-Za-z0-9\\-._~!$&'()*+,;=:@/])+)(?:\\?(?:\\+[^?#]*)?)?(?:\\?=[^#]*)?(?:#.*)?$"
 }

@@ -353,9 +353,9 @@
       "valid": true
     },
     {
-      "description": "Invalid IPv4 address",
+      "description": "Out-of-range IPv4-like host (a legal reg-name for a generic URI)",
       "data": "http://256.256.256.256/path",
-      "valid": false
+      "valid": true
     },
     {
       "description": "IPv6 without brackets",

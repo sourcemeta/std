@@ -9,10 +9,9 @@
     "http://[2001:db8::8a2e:370:7334]/ipv6/test",
     "custom+scheme://host.example.com/resource"
   ],
-  "x-format-assertion": true,
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc3986#section-3" ],
-  "type": "string",
+  "$ref": "./uri.json",
   "anyOf": [
     {
       "$comment": "With authority (//...)",
@@ -49,6 +48,5 @@
       },
       "pattern": "^[A-Za-z][A-Za-z0-9+\\-.]*:(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
     }
-  ],
-  "format": "uri"
+  ]
 }
