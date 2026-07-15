@@ -78,6 +78,11 @@
       "valid": true
     },
     {
+      "description": "Valid - with non-ASCII host and path",
+      "data": "https://例え.jp/パス",
+      "valid": true
+    },
+    {
       "description": "Valid - relative with dot segments",
       "data": "./file.txt",
       "valid": true
