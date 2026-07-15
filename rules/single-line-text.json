@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "std/single_line_text",
+  "description": "Titles, descriptions, and comments must be single-line prose without trailing punctuation",
+  "properties": {
+    "title": {
+      "$ref": "#/$defs/single-line-text"
+    },
+    "description": {
+      "$ref": "#/$defs/single-line-text"
+    },
+    "$comment": {
+      "$ref": "#/$defs/single-line-text"
+    }
+  },
+  "$defs": {
+    "single-line-text": {
+      "type": "string",
+      "pattern": "^(?!.*\\.$)(?!.*(?<!\\.)\\.\\.(?!\\.))(?!.* [.,;:!?])(?![?!])(?!.*[?!])(?!.*  )(?!.*\\(\\))(?!.*\\[\\])(?!.*--)(?!.*[\\n\\r\\t])(?!.*[\\x00-\\x1F\\x7F])[^\\s](?:.*[^\\s])?$"
+    }
+  }
+}

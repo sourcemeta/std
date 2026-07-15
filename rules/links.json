@@ -1,0 +1,17 @@
+{
+  "$schema": "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion",
+  "title": "std/links",
+  "description": "Links must be a non-empty array of unique HTTPS URLs",
+  "properties": {
+    "x-links": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^https://",
+        "format": "uri"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion",
+  "title": "std/comment",
+  "description": "Comments must be prose and not URI references",
+  "properties": {
+    "$comment": {
+      "not": {
+        "format": "uri-reference"
+      }
+    }
+  }
+}
