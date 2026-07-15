@@ -3,5 +3,8 @@
   "description": "A growing collection of hand-crafted high-quality schemas by Sourcemeta",
   "email": "hello@sourcemeta.com",
   "github": "sourcemeta/std",
-  "path": "./schemas"
+  "path": "./schemas",
+  "resolve": {
+    "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion": "./schemas/2020-12/ietf/jsonschema/2020-12/dialect/format-assertion.json"
+  }
 }

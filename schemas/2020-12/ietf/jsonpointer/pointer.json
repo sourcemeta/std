@@ -1,9 +1,8 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion",
   "title": "RFC 6901 JSON Pointer",
   "description": "A string syntax for identifying a specific value within a JSON document",
   "examples": [ "", "/foo", "/foo/0" ],
-  "x-format-assertion": true,
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc6901" ],
   "type": "string",

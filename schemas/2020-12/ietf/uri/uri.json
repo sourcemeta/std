@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion",
   "title": "RFC 3986 Uniform Resource Identifier (URI)",
   "description": "A unique sequence of characters that identifies an abstract or physical resource",
   "examples": [
@@ -8,7 +8,6 @@
     "mailto:user@example.com",
     "tel:+1-555-555-5555"
   ],
-  "x-format-assertion": true,
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc3986#section-3" ],
   "type": "string",

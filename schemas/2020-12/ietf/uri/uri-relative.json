@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion",
   "title": "RFC 3986 Uniform Resource Identifier (URI) relative reference",
   "description": "A relative Uniform Resource Identifier (URI) reference to be resolved with a base URI",
   "examples": [
@@ -9,7 +9,6 @@
     "relative/path/document.pdf",
     "?search=term#results"
   ],
-  "x-format-assertion": true,
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc3986#section-4.2" ],
   "type": "string",
