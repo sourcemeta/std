@@ -23,6 +23,9 @@
     },
     "description": {
       "$ref": "#/$defs/single-line-text"
+    },
+    "x-format-assertion": {
+      "const": true
     }
   },
   "$defs": {

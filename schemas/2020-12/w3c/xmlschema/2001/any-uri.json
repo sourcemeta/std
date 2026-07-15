@@ -14,5 +14,5 @@
   ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.w3.org/TR/xmlschema-2/#anyURI" ],
-  "$ref": "../../../ietf/uri/uri-reference.json"
+  "$ref": "../../../ietf/uri/iri-reference.json"
 }

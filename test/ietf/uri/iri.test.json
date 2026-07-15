@@ -1,0 +1,121 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/2020-12/ietf/uri/iri.json",
+  "tests": [
+    {
+      "description": "Plain ASCII absolute URI",
+      "data": "https://example.com/path?query=value#fragment",
+      "valid": true
+    },
+    {
+      "description": "URN as an IRI",
+      "data": "urn:example:foo",
+      "valid": true
+    },
+    {
+      "description": "Mailto URI",
+      "data": "mailto:user@example.com",
+      "valid": true
+    },
+    {
+      "description": "Latin accented character in path",
+      "data": "http://www.example.com/édition.html",
+      "valid": true
+    },
+    {
+      "description": "Japanese host, path, query, and fragment",
+      "data": "https://例え.jp/パス?クエリ=値#フラグメント",
+      "valid": true
+    },
+    {
+      "description": "Cyrillic host and path",
+      "data": "https://пример.рф/путь",
+      "valid": true
+    },
+    {
+      "description": "Non-ASCII characters in a URN namespace specific string",
+      "data": "urn:example:héllo",
+      "valid": true
+    },
+    {
+      "description": "Non-ASCII characters in a mailto local part",
+      "data": "mailto:usér@example.com",
+      "valid": true
+    },
+    {
+      "description": "Supplementary plane character (emoji) in path",
+      "data": "https://example.com/emoji/😀",
+      "valid": true
+    },
+    {
+      "description": "Private-use character in query (iprivate)",
+      "data": "http://example.com/?x=",
+      "valid": true
+    },
+    {
+      "description": "Private-use character in path (iprivate is query-only)",
+      "data": "http://example.com/",
+      "valid": false
+    },
+    {
+      "description": "Relative reference (scheme is required)",
+      "data": "../relative/path",
+      "valid": false
+    },
+    {
+      "description": "Absolute path without scheme",
+      "data": "/absolute/path",
+      "valid": false
+    },
+    {
+      "description": "Bare word without scheme",
+      "data": "foo",
+      "valid": false
+    },
+    {
+      "description": "Empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Space in path",
+      "data": "http://example.com/with space",
+      "valid": false
+    },
+    {
+      "description": "Malformed percent-encoding",
+      "data": "http://example.com/%ZZ",
+      "valid": false
+    },
+    {
+      "description": "Scheme starting with a digit",
+      "data": "1http://example.com",
+      "valid": false
+    },
+    {
+      "description": "Number is not an IRI",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Boolean is not an IRI",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Null is not an IRI",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Object is not an IRI",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Array is not an IRI",
+      "data": [],
+      "valid": false
+    }
+  ]
+}

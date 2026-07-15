@@ -1,0 +1,101 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../schemas/2020-12/ietf/uri/iri-reference.json",
+  "tests": [
+    {
+      "description": "Plain ASCII absolute URI",
+      "data": "https://example.com/path?query=value#fragment",
+      "valid": true
+    },
+    {
+      "description": "Absolute IRI with non-ASCII host and path",
+      "data": "https://例え.jp/パス",
+      "valid": true
+    },
+    {
+      "description": "Relative path with non-ASCII characters",
+      "data": "../parent/fichier-é.html",
+      "valid": true
+    },
+    {
+      "description": "Network-path reference with non-ASCII host",
+      "data": "//пример.рф/путь",
+      "valid": true
+    },
+    {
+      "description": "Relative path without dot segments",
+      "data": "относительный/путь",
+      "valid": true
+    },
+    {
+      "description": "Query and fragment only",
+      "data": "?query=é#fragment",
+      "valid": true
+    },
+    {
+      "description": "Empty string (same-document reference)",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Absolute path reference",
+      "data": "/absolute/path/to/resource",
+      "valid": true
+    },
+    {
+      "description": "Colon allowed after the first segment",
+      "data": "./foo:bar",
+      "valid": true
+    },
+    {
+      "description": "Space in path",
+      "data": "with space",
+      "valid": false
+    },
+    {
+      "description": "Malformed percent-encoding",
+      "data": "%ZZ",
+      "valid": false
+    },
+    {
+      "description": "Path starting with colon (first segment must not contain a colon)",
+      "data": ":path",
+      "valid": false
+    },
+    {
+      "description": "Path with brackets (gen-delims must be percent-encoded)",
+      "data": "path[with]brackets",
+      "valid": false
+    },
+    {
+      "description": "Fragment with hash in value (hash not allowed within a fragment)",
+      "data": "#fragment#with#hashes",
+      "valid": false
+    },
+    {
+      "description": "Number is not an IRI reference",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Boolean is not an IRI reference",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Null is not an IRI reference",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Object is not an IRI reference",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Array is not an IRI reference",
+      "data": [],
+      "valid": false
+    }
+  ]
+}

@@ -16,6 +16,7 @@
     "urn:example:foo:bar:baz",
     "urn:example:foo/bar/"
   ],
+  "x-format-assertion": true,
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc8141#section-2" ],
   "type": "string",

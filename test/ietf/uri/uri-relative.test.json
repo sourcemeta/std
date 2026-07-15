@@ -128,14 +128,14 @@
       "valid": false
     },
     {
-      "description": "Path with colon (valid in relative path)",
+      "description": "Path with colon in first segment (parses as an absolute URI)",
       "data": "path:with:colons",
-      "valid": true
+      "valid": false
     },
     {
-      "description": "Path starting with colon",
+      "description": "Path starting with colon (first segment must not contain a colon)",
       "data": ":path",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Absolute URI with scheme (not relative)",
@@ -233,14 +233,14 @@
       "valid": true
     },
     {
-      "description": "Path segment with colon not at start",
+      "description": "Colon in first path segment (parses as an absolute URI, see RFC 3986 section 4.2)",
       "data": "g:x",
-      "valid": true
+      "valid": false
     },
     {
-      "description": "Path with brackets",
+      "description": "Path with brackets (gen-delims must be percent-encoded)",
       "data": "path[with]brackets",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Network path with reg-name containing dash",
@@ -273,8 +273,23 @@
       "valid": true
     },
     {
-      "description": "Fragment with hash in value",
+      "description": "Fragment with hash in value (hash not allowed within a fragment)",
       "data": "#fragment#with#hashes",
+      "valid": false
+    },
+    {
+      "description": "Colon in first path segment (parses as an absolute URI)",
+      "data": "foo:bar/baz",
+      "valid": false
+    },
+    {
+      "description": "Colon in first path segment with non-scheme characters",
+      "data": "1foo:bar",
+      "valid": false
+    },
+    {
+      "description": "Colon allowed after the first segment",
+      "data": "./foo:bar",
       "valid": true
     }
   ]

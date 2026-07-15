@@ -406,6 +406,16 @@
       "description": "Scheme with 63 characters (valid)",
       "data": "abcdefghijklmnopqrstuvwxyz0123456789.plus-minus.dots.hyphens01:data",
       "valid": true
+    },
+    {
+      "description": "Space in a non-URL absolute URI",
+      "data": "mailto:hello world",
+      "valid": false
+    },
+    {
+      "description": "Malformed percent-encoding in a non-URL absolute URI",
+      "data": "tel:%ZZ",
+      "valid": false
     }
   ]
 }

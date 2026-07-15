@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RFC 3987 Internationalized Resource Identifier (IRI) reference",
+  "description": "An Internationalized Resource Identifier (IRI) reference",
+  "examples": [
+    "https://example.com/path/to/resource?query=value#section",
+    "https://пример.рф/путь",
+    "../parent/fichier-é.html",
+    "//cdn.example.com/assets/style.css",
+    "?query=é#fragment"
+  ],
+  "x-format-assertion": true,
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [ "https://www.rfc-editor.org/rfc/rfc3987#section-2.2" ],
+  "type": "string",
+  "format": "iri-reference"
+}

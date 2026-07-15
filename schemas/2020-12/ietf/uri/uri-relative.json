@@ -9,6 +9,7 @@
     "relative/path/document.pdf",
     "?search=term#results"
   ],
+  "x-format-assertion": true,
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc3986#section-4.2" ],
   "type": "string",
@@ -28,19 +29,9 @@
           "pattern": "^/(?:[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
         },
         {
-          "$comment": "Relative-path reference (not starting with scheme)",
+          "$comment": "Relative-path reference (first segment must not contain a colon)",
           "not": {
-            "anyOf": [
-              {
-                "pattern": "^[A-Za-z][A-Za-z0-9+\\-.]*://"
-              },
-              {
-                "pattern": "^[A-Za-z][A-Za-z0-9+\\-.]*:[^/:?#]*@"
-              },
-              {
-                "pattern": "^urn:[A-Za-z0-9][A-Za-z0-9-]*:"
-              }
-            ]
+            "pattern": "^[^/?#]*:"
           },
           "pattern": "^[^/?#][^?#]*(?:\\?[^#]*)?(?:#.*)?$"
         },
@@ -77,17 +68,5 @@
       "pattern": "^//(?:[^@/]*@)?\\[[0-9A-Fa-f:.]+\\](?::[0-9]+)?(?:[/?#].*)?$"
     }
   ],
-  "not": {
-    "anyOf": [
-      {
-        "$comment": "No spaces or control characters",
-        "pattern": "[\\x00-\\x20]"
-      },
-      {
-        "$comment": "Valid percent-encoding",
-        "pattern": "%(?![0-9A-Fa-f]{2})"
-      }
-    ]
-  },
   "format": "uri-reference"
 }
