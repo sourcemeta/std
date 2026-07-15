@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "std/license",
+  "description": "The license must point to the official license of the collection",
+  "properties": {
+    "x-license": {
+      "const": "https://github.com/sourcemeta/std/blob/main/LICENSE"
+    }
+  }
+}

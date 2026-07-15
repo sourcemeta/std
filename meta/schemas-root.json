@@ -7,54 +7,19 @@
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "title": "Example Schema",
       "description": "An example schema conforming to the root meta-schema",
-      "examples": [ "example value" ],
+      "examples": [ "foo", "bar", "baz" ],
       "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
       "x-links": [ "https://example.com" ],
       "type": "string"
     }
   ],
-  "x-lint-exclude": "simple_properties_identifiers",
+  "x-lint-exclude": "required_properties_in_properties",
   "type": "object",
-  "if": {
-    "properties": {
-      "const": true
-    }
-  },
-  "else": {
-    "required": [ "examples" ],
-    "properties": {
-      "examples": {
-        "type": "array",
-        "minItems": 3
-      }
-    }
-  },
-  "required": [ "x-license", "x-links", "$schema" ],
+  "required": [ "$schema", "examples", "x-license", "x-links" ],
   "properties": {
-    "$schema": {
-      "enum": [
-        "https://json-schema.org/draft/2020-12/schema",
-        "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion"
-      ]
-    },
-    "$comment": {
-      "not": {
-        "$ref": "../schemas/2020-12/ietf/uri/uri-reference.json"
-      }
-    },
-    "x-license": {
-      "const": "https://github.com/sourcemeta/std/blob/main/LICENSE"
-    },
-    "x-symbol": {
-      "type": "string"
-    },
-    "x-links": {
+    "examples": {
       "type": "array",
-      "minItems": 1,
-      "uniqueItems": true,
-      "items": {
-        "$ref": "../schemas/2020-12/ietf/http/https-url.json"
-      }
+      "minItems": 1
     }
   }
 }

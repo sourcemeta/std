@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "std/symbol",
+  "description": "Symbols must be strings",
+  "properties": {
+    "x-symbol": {
+      "type": "string"
+    }
+  }
+}

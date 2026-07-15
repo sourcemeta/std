@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "std/dialect",
+  "description": "Schemas must be written in the 2020-12 dialect or in one of the dialect variants of this collection",
+  "properties": {
+    "$schema": {
+      "enum": [
+        "https://json-schema.org/draft/2020-12/schema",
+        "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion"
+      ]
+    }
+  }
+}

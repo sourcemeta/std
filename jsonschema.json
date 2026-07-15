@@ -6,5 +6,16 @@
   "path": "./schemas",
   "resolve": {
     "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion": "./schemas/2020-12/ietf/jsonschema/2020-12/dialect/format-assertion.json"
+  },
+  "lint": {
+    "rules": [
+      "./rules/comment.json",
+      "./rules/dialect.json",
+      "./rules/identifiers.json",
+      "./rules/license.json",
+      "./rules/links.json",
+      "./rules/single-line-text.json",
+      "./rules/symbol.json"
+    ]
   }
 }
