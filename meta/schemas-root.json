@@ -13,6 +13,7 @@
       "type": "string"
     }
   ],
+  "x-lint-exclude": "simple_properties_identifiers",
   "type": "object",
   "if": {
     "properties": {

@@ -5,7 +5,7 @@
   "examples": [ 0, 1, 100, 1000 ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
-  "x-prefix-factor": 0.0001,
+  "x-prefix-factor": 1e-4,
   "x-symbol": "dg",
   "$ref": "../unit/kilogram.json"
 }
