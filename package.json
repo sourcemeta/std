@@ -3,6 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "devDependencies": {
-    "@sourcemeta/jsonschema": "^16.1.0"
+    "@sourcemeta/jsonschema": "^16.2.0"
   }
 }
