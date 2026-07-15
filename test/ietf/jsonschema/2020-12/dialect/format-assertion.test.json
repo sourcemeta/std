@@ -1,0 +1,78 @@
+{
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "target": "../../../../../schemas/2020-12/ietf/jsonschema/2020-12/dialect/format-assertion.json",
+  "tests": [
+    {
+      "description": "Schema with an asserted format",
+      "data": {
+        "type": "string",
+        "format": "email"
+      },
+      "valid": true
+    },
+    {
+      "description": "Schema with a format inside properties",
+      "data": {
+        "type": "object",
+        "properties": {
+          "website": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "valid": true
+    },
+    {
+      "description": "Empty schema",
+      "data": {},
+      "valid": true
+    },
+    {
+      "description": "Boolean true schema",
+      "data": true,
+      "valid": true
+    },
+    {
+      "description": "Boolean false schema",
+      "data": false,
+      "valid": true
+    },
+    {
+      "description": "Format must be a string",
+      "data": {
+        "format": 123
+      },
+      "valid": false
+    },
+    {
+      "description": "Type must be a string or an array of strings",
+      "data": {
+        "type": 123
+      },
+      "valid": false
+    },
+    {
+      "description": "Properties must be an object",
+      "data": {
+        "properties": 123
+      },
+      "valid": false
+    },
+    {
+      "description": "String is not a schema",
+      "data": "not-a-schema",
+      "valid": false
+    },
+    {
+      "description": "Number is not a schema",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Null is not a schema",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

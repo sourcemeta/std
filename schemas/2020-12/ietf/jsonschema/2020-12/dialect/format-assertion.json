@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$vocabulary": {
+    "https://json-schema.org/draft/2020-12/vocab/core": true,
+    "https://json-schema.org/draft/2020-12/vocab/applicator": true,
+    "https://json-schema.org/draft/2020-12/vocab/unevaluated": true,
+    "https://json-schema.org/draft/2020-12/vocab/validation": true,
+    "https://json-schema.org/draft/2020-12/vocab/meta-data": true,
+    "https://json-schema.org/draft/2020-12/vocab/format-assertion": true,
+    "https://json-schema.org/draft/2020-12/vocab/content": true
+  },
+  "$dynamicAnchor": "meta",
+  "title": "JSON Schema 2020-12 Format Assertion Dialect",
+  "description": "A JSON Schema 2020-12 dialect that evaluates the format keyword as an assertion rather than as an annotation",
+  "examples": [
+    {
+      "type": "string",
+      "format": "email"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "website": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    }
+  ],
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [
+    "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-00",
+    "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-00"
+  ],
+  "$ref": "https://json-schema.org/draft/2020-12/schema"
+}

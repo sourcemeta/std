@@ -32,7 +32,10 @@
   "required": [ "x-license", "x-links", "$schema" ],
   "properties": {
     "$schema": {
-      "const": "https://json-schema.org/draft/2020-12/schema"
+      "enum": [
+        "https://json-schema.org/draft/2020-12/schema",
+        "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion"
+      ]
     },
     "$comment": {
       "not": {

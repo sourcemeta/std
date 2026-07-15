@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion",
   "title": "RFC 3987 Internationalized Resource Identifier (IRI)",
   "description": "A unique sequence of characters from the Universal Character Set that identifies an abstract or physical resource",
   "examples": [
@@ -8,7 +8,6 @@
     "http://www.example.com/édition.html",
     "mailto:usér@example.com"
   ],
-  "x-format-assertion": true,
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc3987#section-2" ],
   "type": "string",
