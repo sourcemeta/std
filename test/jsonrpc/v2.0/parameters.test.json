@@ -1,5 +1,4 @@
 {
-  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "target": "../../../schemas/2020-12/jsonrpc/v2.0/parameters.json",
   "tests": [
     {

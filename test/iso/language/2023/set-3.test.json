@@ -1,5 +1,4 @@
 {
-  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "target": "../../../../schemas/2020-12/iso/language/2023/set-3.json",
   "tests": [
     {
