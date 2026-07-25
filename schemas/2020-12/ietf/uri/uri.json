@@ -8,6 +8,7 @@
     "mailto:user@example.com",
     "tel:+1-555-555-5555"
   ],
+  "x-jsonld-self": "{+this}",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc3986#section-3" ],
   "type": "string",

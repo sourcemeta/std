@@ -3,6 +3,7 @@
   "title": "W3C XML Schema gDay",
   "description": "The gDay datatype represents a day that recurs every month (§3.2.13)",
   "examples": [ "---15", "---15Z", "---15+01:00", "---01", "---31" ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#gDay",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.w3.org/TR/xmlschema-2/#gDay" ],
   "type": "string",

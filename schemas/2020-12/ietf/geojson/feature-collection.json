@@ -28,6 +28,7 @@
       ]
     }
   ],
+  "x-jsonld-type": "https://purl.org/geojson/vocab#FeatureCollection",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc7946#section-3.3" ],
   "type": "object",
@@ -37,12 +38,15 @@
       "const": "FeatureCollection"
     },
     "features": {
+      "x-jsonld-container": "@set",
+      "x-jsonld-id": "https://purl.org/geojson/vocab#features",
       "type": "array",
       "items": {
         "$ref": "feature.json"
       }
     },
     "bbox": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#bbox",
       "$ref": "bounding-box.json"
     },
     "coordinates": false,

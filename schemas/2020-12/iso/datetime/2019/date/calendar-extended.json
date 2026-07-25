@@ -10,6 +10,7 @@
     "0000-01-01",
     "9999-12-31"
   ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#date",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/standard/70907.html" ],
   "type": "string",

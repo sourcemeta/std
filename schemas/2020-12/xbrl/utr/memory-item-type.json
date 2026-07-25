@@ -12,6 +12,7 @@
     {
       "title": "Byte",
       "description": "8 adjacent bits of Memory per IEEE 1541-2002",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/BYTE",
       "x-status": "REC",
       "x-symbol": "B",
       "const": "B"
@@ -19,6 +20,7 @@
     {
       "title": "Gigabyte",
       "description": "Gigabytes of Memory per IEEE 1541-2002",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/GigaBYTE",
       "x-status": "REC",
       "x-symbol": "GB",
       "const": "GB"
@@ -26,6 +28,7 @@
     {
       "title": "Kilobyte",
       "description": "Kilobytes of Memory per IEEE 1541-2002",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/KiloBYTE",
       "x-status": "REC",
       "x-symbol": "kB",
       "const": "kB"
@@ -33,6 +36,7 @@
     {
       "title": "Megabyte",
       "description": "Megabytes of Memory per IEEE 1541-2002",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/MegaBYTE",
       "x-status": "REC",
       "x-symbol": "MB",
       "const": "MB"
@@ -40,6 +44,7 @@
     {
       "title": "Terabyte",
       "description": "Terabytes of Memory per IEEE 1541-2002",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/TeraBYTE",
       "x-status": "REC",
       "x-symbol": "TB",
       "const": "TB"
@@ -47,6 +52,7 @@
     {
       "title": "Petabyte",
       "description": "Petabytes of Memory per IEEE 1541-2002",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/PetaBYTE",
       "x-status": "REC",
       "x-symbol": "PB",
       "const": "PB"

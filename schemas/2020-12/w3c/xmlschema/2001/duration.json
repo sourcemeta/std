@@ -10,6 +10,7 @@
     "P1Y2MT2H",
     "-P1347M"
   ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#duration",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.w3.org/TR/xmlschema-2/#duration" ],
   "type": "string",

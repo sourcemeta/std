@@ -3,6 +3,7 @@
   "title": "W3C XML Schema gMonth",
   "description": "The gMonth datatype represents a month that recurs every year (§3.2.14)",
   "examples": [ "--11", "--11Z", "--11+01:00", "--01", "--12" ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#gMonth",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.w3.org/TR/xmlschema-2/#gMonth" ],
   "type": "string",

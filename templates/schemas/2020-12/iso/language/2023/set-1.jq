@@ -22,6 +22,7 @@ def expand_language_type:
   "$comment": "Set 1 contains the most common languages (2-letter codes). All Set 1 codes have corresponding codes in Set 2 and Set 3",
   "examples": (.set_1 | sort_by(.code) | .[0:4] | map(.code)),
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-1/{this}",
   "x-links": ["https://www.iso.org/standard/74575.html"],
   "anyOf": (
     .set_1

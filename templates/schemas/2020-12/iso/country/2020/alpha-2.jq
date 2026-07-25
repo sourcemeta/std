@@ -14,6 +14,7 @@
     map(select(.["alpha-2"] != null and .["alpha-2"] != ""))
     | sort_by(.["alpha-2"])
     | map({
+        "x-jsonld-self": ("http://publications.europa.eu/resource/authority/country/" + .["alpha-3"]),
         "title": .name,
         "x-alpha-3": .["alpha-3"],
         "x-numeric": (.["country-code"] | tonumber)

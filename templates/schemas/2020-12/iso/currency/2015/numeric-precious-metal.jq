@@ -16,6 +16,7 @@
     | group_by(.CcyNbr)
     | sort_by(.[0].CcyNbr | tonumber)
     | map({
+        "x-jsonld-self": ("http://publications.europa.eu/resource/authority/currency/" + .[0].Ccy),
         "title": .[0].CcyNm,
         "const": (.[0].CcyNbr | tonumber)
       })

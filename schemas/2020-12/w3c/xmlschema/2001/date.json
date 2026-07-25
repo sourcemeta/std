@@ -4,6 +4,7 @@
   "description": "The date datatype represents a calendar date (§3.2.9)",
   "$comment": "Year 0000 is not allowed in XML Schema 1.0. Leap year validation is consumer responsibility",
   "examples": [ "2002-10-10", "2002-10-10+13:00", "2002-10-10Z", "-2002-10-10" ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#date",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.w3.org/TR/xmlschema-2/#date" ],
   "type": "string",

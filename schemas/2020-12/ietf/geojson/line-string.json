@@ -19,6 +19,7 @@
       ]
     }
   ],
+  "x-jsonld-type": "https://purl.org/geojson/vocab#LineString",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc7946#section-3.1.4" ],
   "type": "object",
@@ -28,9 +29,11 @@
       "const": "LineString"
     },
     "coordinates": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates",
       "$ref": "line-string-coordinates.json"
     },
     "bbox": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#bbox",
       "$ref": "bounding-box.json"
     },
     "geometry": false,

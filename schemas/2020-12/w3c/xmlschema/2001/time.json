@@ -10,6 +10,7 @@
     "00:00:00",
     "24:00:00"
   ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#time",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.w3.org/TR/xmlschema-2/#time" ],
   "type": "string",

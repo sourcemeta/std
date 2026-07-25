@@ -12,6 +12,7 @@
     {
       "title": "Pascal",
       "description": "The pascal is the SI derived unit of pressure used to quantify internal pressure, stress, Young's modulus and ultimate tensile strength. It is defined as one newton per square meter",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/pascal",
       "x-status": "REC",
       "x-symbol": "Pa",
       "const": "Pa"
@@ -19,6 +20,7 @@
     {
       "title": "Bar",
       "description": "The bar is a metric unit of pressure, but is not approved as part of the International System of Units (SI). It is defined as exactly equal to 100000 Pa, which is slightly less than the current average atmospheric pressure on Earth at sea level",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/BAR",
       "x-status": "REC",
       "x-symbol": "bar",
       "const": "Bar"
@@ -26,6 +28,7 @@
     {
       "title": "Pounds Per Square Inch",
       "description": "The pound per square inch is a unit of pressure or of stress based on avoirdupois units. It is the pressure resulting from a force of one pound-force applied to an area of one square inch",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/PSI",
       "x-status": "REC",
       "x-symbol": "psi",
       "const": "psi"
@@ -33,6 +36,7 @@
     {
       "title": "Standard Atmosphere",
       "description": "The standard atmosphere is a unit of pressure defined as 101325 Pa (1.01325 bar). It is sometimes used as a reference or standard pressure",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/ATM",
       "x-status": "REC",
       "x-symbol": "atm",
       "const": "atm"

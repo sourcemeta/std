@@ -3,6 +3,7 @@
   "title": "W3C XML Schema language",
   "description": "Represents natural language identifiers as defined by RFC 3066 (§3.3.3)",
   "examples": [ "en", "en-US", "fr-FR", "de-DE", "ja", "zh-CN" ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#language",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [
     "https://www.w3.org/TR/xmlschema-2/#language",

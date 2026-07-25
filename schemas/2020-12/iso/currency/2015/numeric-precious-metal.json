@@ -8,18 +8,22 @@
   "anyOf": [
     {
       "title": "Gold",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XAU",
       "const": 959
     },
     {
       "title": "Silver",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XAG",
       "const": 961
     },
     {
       "title": "Platinum",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XPT",
       "const": 962
     },
     {
       "title": "Palladium",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XPD",
       "const": 964
     }
   ]

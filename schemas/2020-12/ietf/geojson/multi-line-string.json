@@ -26,6 +26,7 @@
       ]
     }
   ],
+  "x-jsonld-type": "https://purl.org/geojson/vocab#MultiLineString",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc7946#section-3.1.5" ],
   "type": "object",
@@ -35,12 +36,15 @@
       "const": "MultiLineString"
     },
     "coordinates": {
+      "x-jsonld-container": "@list",
+      "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates",
       "type": "array",
       "items": {
         "$ref": "line-string-coordinates.json"
       }
     },
     "bbox": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#bbox",
       "$ref": "bounding-box.json"
     },
     "geometry": false,

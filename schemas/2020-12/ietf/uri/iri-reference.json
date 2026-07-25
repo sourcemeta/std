@@ -9,6 +9,7 @@
     "//cdn.example.com/assets/style.css",
     "?query=é#fragment"
   ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc3987#section-2.2" ],
   "type": "string",

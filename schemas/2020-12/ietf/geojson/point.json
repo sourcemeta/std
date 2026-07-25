@@ -12,6 +12,7 @@
       "coordinates": [ 0, 0, 10 ]
     }
   ],
+  "x-jsonld-type": "https://purl.org/geojson/vocab#Point",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc7946#section-3.1.2" ],
   "type": "object",
@@ -21,9 +22,11 @@
       "const": "Point"
     },
     "coordinates": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates",
       "$ref": "point-coordinates.json"
     },
     "bbox": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#bbox",
       "$ref": "bounding-box.json"
     },
     "geometry": false,

@@ -9,6 +9,7 @@
     {
       "title": "Andorra",
       "x-alpha-3": "AND",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/AND",
       "x-numeric": 20,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -17,6 +18,7 @@
     {
       "title": "United Arab Emirates",
       "x-alpha-3": "ARE",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ARE",
       "x-numeric": 784,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -25,6 +27,7 @@
     {
       "title": "Afghanistan",
       "x-alpha-3": "AFG",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/AFG",
       "x-numeric": 4,
       "x-region": "Asia",
       "x-sub-region": "Southern Asia",
@@ -33,6 +36,7 @@
     {
       "title": "Antigua and Barbuda",
       "x-alpha-3": "ATG",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ATG",
       "x-numeric": 28,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -41,6 +45,7 @@
     {
       "title": "Anguilla",
       "x-alpha-3": "AIA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/AIA",
       "x-numeric": 660,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -49,6 +54,7 @@
     {
       "title": "Albania",
       "x-alpha-3": "ALB",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ALB",
       "x-numeric": 8,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -57,6 +63,7 @@
     {
       "title": "Armenia",
       "x-alpha-3": "ARM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ARM",
       "x-numeric": 51,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -65,6 +72,7 @@
     {
       "title": "Angola",
       "x-alpha-3": "AGO",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/AGO",
       "x-numeric": 24,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -73,12 +81,14 @@
     {
       "title": "Antarctica",
       "x-alpha-3": "ATA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ATA",
       "x-numeric": 10,
       "const": "AQ"
     },
     {
       "title": "Argentina",
       "x-alpha-3": "ARG",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ARG",
       "x-numeric": 32,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -87,6 +97,7 @@
     {
       "title": "American Samoa",
       "x-alpha-3": "ASM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ASM",
       "x-numeric": 16,
       "x-region": "Oceania",
       "x-sub-region": "Polynesia",
@@ -95,6 +106,7 @@
     {
       "title": "Austria",
       "x-alpha-3": "AUT",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/AUT",
       "x-numeric": 40,
       "x-region": "Europe",
       "x-sub-region": "Western Europe",
@@ -103,6 +115,7 @@
     {
       "title": "Australia",
       "x-alpha-3": "AUS",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/AUS",
       "x-numeric": 36,
       "x-region": "Oceania",
       "x-sub-region": "Australia and New Zealand",
@@ -111,6 +124,7 @@
     {
       "title": "Aruba",
       "x-alpha-3": "ABW",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ABW",
       "x-numeric": 533,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -119,6 +133,7 @@
     {
       "title": "Åland Islands",
       "x-alpha-3": "ALA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ALA",
       "x-numeric": 248,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -127,6 +142,7 @@
     {
       "title": "Azerbaijan",
       "x-alpha-3": "AZE",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/AZE",
       "x-numeric": 31,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -135,6 +151,7 @@
     {
       "title": "Bosnia and Herzegovina",
       "x-alpha-3": "BIH",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BIH",
       "x-numeric": 70,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -143,6 +160,7 @@
     {
       "title": "Barbados",
       "x-alpha-3": "BRB",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BRB",
       "x-numeric": 52,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -151,6 +169,7 @@
     {
       "title": "Bangladesh",
       "x-alpha-3": "BGD",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BGD",
       "x-numeric": 50,
       "x-region": "Asia",
       "x-sub-region": "Southern Asia",
@@ -159,6 +178,7 @@
     {
       "title": "Belgium",
       "x-alpha-3": "BEL",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BEL",
       "x-numeric": 56,
       "x-region": "Europe",
       "x-sub-region": "Western Europe",
@@ -167,6 +187,7 @@
     {
       "title": "Burkina Faso",
       "x-alpha-3": "BFA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BFA",
       "x-numeric": 854,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -175,6 +196,7 @@
     {
       "title": "Bulgaria",
       "x-alpha-3": "BGR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BGR",
       "x-numeric": 100,
       "x-region": "Europe",
       "x-sub-region": "Eastern Europe",
@@ -183,6 +205,7 @@
     {
       "title": "Bahrain",
       "x-alpha-3": "BHR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BHR",
       "x-numeric": 48,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -191,6 +214,7 @@
     {
       "title": "Burundi",
       "x-alpha-3": "BDI",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BDI",
       "x-numeric": 108,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -199,6 +223,7 @@
     {
       "title": "Benin",
       "x-alpha-3": "BEN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BEN",
       "x-numeric": 204,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -207,6 +232,7 @@
     {
       "title": "Saint Barthélemy",
       "x-alpha-3": "BLM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BLM",
       "x-numeric": 652,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -215,6 +241,7 @@
     {
       "title": "Bermuda",
       "x-alpha-3": "BMU",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BMU",
       "x-numeric": 60,
       "x-region": "Americas",
       "x-sub-region": "Northern America",
@@ -223,6 +250,7 @@
     {
       "title": "Brunei Darussalam",
       "x-alpha-3": "BRN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BRN",
       "x-numeric": 96,
       "x-region": "Asia",
       "x-sub-region": "South-eastern Asia",
@@ -231,6 +259,7 @@
     {
       "title": "Bolivia, Plurinational State of",
       "x-alpha-3": "BOL",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BOL",
       "x-numeric": 68,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -239,6 +268,7 @@
     {
       "title": "Bonaire, Sint Eustatius and Saba",
       "x-alpha-3": "BES",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BES",
       "x-numeric": 535,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -247,6 +277,7 @@
     {
       "title": "Brazil",
       "x-alpha-3": "BRA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BRA",
       "x-numeric": 76,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -255,6 +286,7 @@
     {
       "title": "Bahamas",
       "x-alpha-3": "BHS",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BHS",
       "x-numeric": 44,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -263,6 +295,7 @@
     {
       "title": "Bhutan",
       "x-alpha-3": "BTN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BTN",
       "x-numeric": 64,
       "x-region": "Asia",
       "x-sub-region": "Southern Asia",
@@ -271,6 +304,7 @@
     {
       "title": "Bouvet Island",
       "x-alpha-3": "BVT",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BVT",
       "x-numeric": 74,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -279,6 +313,7 @@
     {
       "title": "Botswana",
       "x-alpha-3": "BWA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BWA",
       "x-numeric": 72,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -287,6 +322,7 @@
     {
       "title": "Belarus",
       "x-alpha-3": "BLR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BLR",
       "x-numeric": 112,
       "x-region": "Europe",
       "x-sub-region": "Eastern Europe",
@@ -295,6 +331,7 @@
     {
       "title": "Belize",
       "x-alpha-3": "BLZ",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BLZ",
       "x-numeric": 84,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -303,6 +340,7 @@
     {
       "title": "Canada",
       "x-alpha-3": "CAN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CAN",
       "x-numeric": 124,
       "x-region": "Americas",
       "x-sub-region": "Northern America",
@@ -311,6 +349,7 @@
     {
       "title": "Cocos (Keeling) Islands",
       "x-alpha-3": "CCK",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CCK",
       "x-numeric": 166,
       "x-region": "Oceania",
       "x-sub-region": "Australia and New Zealand",
@@ -319,6 +358,7 @@
     {
       "title": "Congo, Democratic Republic of the",
       "x-alpha-3": "COD",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/COD",
       "x-numeric": 180,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -327,6 +367,7 @@
     {
       "title": "Central African Republic",
       "x-alpha-3": "CAF",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CAF",
       "x-numeric": 140,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -335,6 +376,7 @@
     {
       "title": "Congo",
       "x-alpha-3": "COG",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/COG",
       "x-numeric": 178,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -343,6 +385,7 @@
     {
       "title": "Switzerland",
       "x-alpha-3": "CHE",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CHE",
       "x-numeric": 756,
       "x-region": "Europe",
       "x-sub-region": "Western Europe",
@@ -351,6 +394,7 @@
     {
       "title": "Côte d'Ivoire",
       "x-alpha-3": "CIV",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CIV",
       "x-numeric": 384,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -359,6 +403,7 @@
     {
       "title": "Cook Islands",
       "x-alpha-3": "COK",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/COK",
       "x-numeric": 184,
       "x-region": "Oceania",
       "x-sub-region": "Polynesia",
@@ -367,6 +412,7 @@
     {
       "title": "Chile",
       "x-alpha-3": "CHL",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CHL",
       "x-numeric": 152,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -375,6 +421,7 @@
     {
       "title": "Cameroon",
       "x-alpha-3": "CMR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CMR",
       "x-numeric": 120,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -383,6 +430,7 @@
     {
       "title": "China",
       "x-alpha-3": "CHN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CHN",
       "x-numeric": 156,
       "x-region": "Asia",
       "x-sub-region": "Eastern Asia",
@@ -391,6 +439,7 @@
     {
       "title": "Colombia",
       "x-alpha-3": "COL",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/COL",
       "x-numeric": 170,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -399,6 +448,7 @@
     {
       "title": "Costa Rica",
       "x-alpha-3": "CRI",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CRI",
       "x-numeric": 188,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -407,6 +457,7 @@
     {
       "title": "Cuba",
       "x-alpha-3": "CUB",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CUB",
       "x-numeric": 192,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -415,6 +466,7 @@
     {
       "title": "Cabo Verde",
       "x-alpha-3": "CPV",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CPV",
       "x-numeric": 132,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -423,6 +475,7 @@
     {
       "title": "Curaçao",
       "x-alpha-3": "CUW",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CUW",
       "x-numeric": 531,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -431,6 +484,7 @@
     {
       "title": "Christmas Island",
       "x-alpha-3": "CXR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CXR",
       "x-numeric": 162,
       "x-region": "Oceania",
       "x-sub-region": "Australia and New Zealand",
@@ -439,6 +493,7 @@
     {
       "title": "Cyprus",
       "x-alpha-3": "CYP",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CYP",
       "x-numeric": 196,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -447,6 +502,7 @@
     {
       "title": "Czechia",
       "x-alpha-3": "CZE",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CZE",
       "x-numeric": 203,
       "x-region": "Europe",
       "x-sub-region": "Eastern Europe",
@@ -455,6 +511,7 @@
     {
       "title": "Germany",
       "x-alpha-3": "DEU",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/DEU",
       "x-numeric": 276,
       "x-region": "Europe",
       "x-sub-region": "Western Europe",
@@ -463,6 +520,7 @@
     {
       "title": "Djibouti",
       "x-alpha-3": "DJI",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/DJI",
       "x-numeric": 262,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -471,6 +529,7 @@
     {
       "title": "Denmark",
       "x-alpha-3": "DNK",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/DNK",
       "x-numeric": 208,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -479,6 +538,7 @@
     {
       "title": "Dominica",
       "x-alpha-3": "DMA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/DMA",
       "x-numeric": 212,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -487,6 +547,7 @@
     {
       "title": "Dominican Republic",
       "x-alpha-3": "DOM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/DOM",
       "x-numeric": 214,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -495,6 +556,7 @@
     {
       "title": "Algeria",
       "x-alpha-3": "DZA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/DZA",
       "x-numeric": 12,
       "x-region": "Africa",
       "x-sub-region": "Northern Africa",
@@ -503,6 +565,7 @@
     {
       "title": "Ecuador",
       "x-alpha-3": "ECU",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ECU",
       "x-numeric": 218,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -511,6 +574,7 @@
     {
       "title": "Estonia",
       "x-alpha-3": "EST",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/EST",
       "x-numeric": 233,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -519,6 +583,7 @@
     {
       "title": "Egypt",
       "x-alpha-3": "EGY",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/EGY",
       "x-numeric": 818,
       "x-region": "Africa",
       "x-sub-region": "Northern Africa",
@@ -527,6 +592,7 @@
     {
       "title": "Western Sahara",
       "x-alpha-3": "ESH",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ESH",
       "x-numeric": 732,
       "x-region": "Africa",
       "x-sub-region": "Northern Africa",
@@ -535,6 +601,7 @@
     {
       "title": "Eritrea",
       "x-alpha-3": "ERI",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ERI",
       "x-numeric": 232,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -543,6 +610,7 @@
     {
       "title": "Spain",
       "x-alpha-3": "ESP",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ESP",
       "x-numeric": 724,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -551,6 +619,7 @@
     {
       "title": "Ethiopia",
       "x-alpha-3": "ETH",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ETH",
       "x-numeric": 231,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -559,6 +628,7 @@
     {
       "title": "Finland",
       "x-alpha-3": "FIN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/FIN",
       "x-numeric": 246,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -567,6 +637,7 @@
     {
       "title": "Fiji",
       "x-alpha-3": "FJI",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/FJI",
       "x-numeric": 242,
       "x-region": "Oceania",
       "x-sub-region": "Melanesia",
@@ -575,6 +646,7 @@
     {
       "title": "Falkland Islands (Malvinas)",
       "x-alpha-3": "FLK",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/FLK",
       "x-numeric": 238,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -583,6 +655,7 @@
     {
       "title": "Micronesia, Federated States of",
       "x-alpha-3": "FSM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/FSM",
       "x-numeric": 583,
       "x-region": "Oceania",
       "x-sub-region": "Micronesia",
@@ -591,6 +664,7 @@
     {
       "title": "Faroe Islands",
       "x-alpha-3": "FRO",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/FRO",
       "x-numeric": 234,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -599,6 +673,7 @@
     {
       "title": "France",
       "x-alpha-3": "FRA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/FRA",
       "x-numeric": 250,
       "x-region": "Europe",
       "x-sub-region": "Western Europe",
@@ -607,6 +682,7 @@
     {
       "title": "Gabon",
       "x-alpha-3": "GAB",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GAB",
       "x-numeric": 266,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -615,6 +691,7 @@
     {
       "title": "United Kingdom of Great Britain and Northern Ireland",
       "x-alpha-3": "GBR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GBR",
       "x-numeric": 826,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -623,6 +700,7 @@
     {
       "title": "Grenada",
       "x-alpha-3": "GRD",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GRD",
       "x-numeric": 308,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -631,6 +709,7 @@
     {
       "title": "Georgia",
       "x-alpha-3": "GEO",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GEO",
       "x-numeric": 268,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -639,6 +718,7 @@
     {
       "title": "French Guiana",
       "x-alpha-3": "GUF",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GUF",
       "x-numeric": 254,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -647,6 +727,7 @@
     {
       "title": "Guernsey",
       "x-alpha-3": "GGY",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GGY",
       "x-numeric": 831,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -655,6 +736,7 @@
     {
       "title": "Ghana",
       "x-alpha-3": "GHA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GHA",
       "x-numeric": 288,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -663,6 +745,7 @@
     {
       "title": "Gibraltar",
       "x-alpha-3": "GIB",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GIB",
       "x-numeric": 292,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -671,6 +754,7 @@
     {
       "title": "Greenland",
       "x-alpha-3": "GRL",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GRL",
       "x-numeric": 304,
       "x-region": "Americas",
       "x-sub-region": "Northern America",
@@ -679,6 +763,7 @@
     {
       "title": "Gambia",
       "x-alpha-3": "GMB",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GMB",
       "x-numeric": 270,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -687,6 +772,7 @@
     {
       "title": "Guinea",
       "x-alpha-3": "GIN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GIN",
       "x-numeric": 324,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -695,6 +781,7 @@
     {
       "title": "Guadeloupe",
       "x-alpha-3": "GLP",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GLP",
       "x-numeric": 312,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -703,6 +790,7 @@
     {
       "title": "Equatorial Guinea",
       "x-alpha-3": "GNQ",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GNQ",
       "x-numeric": 226,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -711,6 +799,7 @@
     {
       "title": "Greece",
       "x-alpha-3": "GRC",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GRC",
       "x-numeric": 300,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -719,6 +808,7 @@
     {
       "title": "South Georgia and the South Sandwich Islands",
       "x-alpha-3": "SGS",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SGS",
       "x-numeric": 239,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -727,6 +817,7 @@
     {
       "title": "Guatemala",
       "x-alpha-3": "GTM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GTM",
       "x-numeric": 320,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -735,6 +826,7 @@
     {
       "title": "Guam",
       "x-alpha-3": "GUM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GUM",
       "x-numeric": 316,
       "x-region": "Oceania",
       "x-sub-region": "Micronesia",
@@ -743,6 +835,7 @@
     {
       "title": "Guinea-Bissau",
       "x-alpha-3": "GNB",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GNB",
       "x-numeric": 624,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -751,6 +844,7 @@
     {
       "title": "Guyana",
       "x-alpha-3": "GUY",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GUY",
       "x-numeric": 328,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -759,6 +853,7 @@
     {
       "title": "Hong Kong",
       "x-alpha-3": "HKG",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/HKG",
       "x-numeric": 344,
       "x-region": "Asia",
       "x-sub-region": "Eastern Asia",
@@ -767,6 +862,7 @@
     {
       "title": "Heard Island and McDonald Islands",
       "x-alpha-3": "HMD",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/HMD",
       "x-numeric": 334,
       "x-region": "Oceania",
       "x-sub-region": "Australia and New Zealand",
@@ -775,6 +871,7 @@
     {
       "title": "Honduras",
       "x-alpha-3": "HND",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/HND",
       "x-numeric": 340,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -783,6 +880,7 @@
     {
       "title": "Croatia",
       "x-alpha-3": "HRV",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/HRV",
       "x-numeric": 191,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -791,6 +889,7 @@
     {
       "title": "Haiti",
       "x-alpha-3": "HTI",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/HTI",
       "x-numeric": 332,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -799,6 +898,7 @@
     {
       "title": "Hungary",
       "x-alpha-3": "HUN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/HUN",
       "x-numeric": 348,
       "x-region": "Europe",
       "x-sub-region": "Eastern Europe",
@@ -807,6 +907,7 @@
     {
       "title": "Indonesia",
       "x-alpha-3": "IDN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/IDN",
       "x-numeric": 360,
       "x-region": "Asia",
       "x-sub-region": "South-eastern Asia",
@@ -815,6 +916,7 @@
     {
       "title": "Ireland",
       "x-alpha-3": "IRL",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/IRL",
       "x-numeric": 372,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -823,6 +925,7 @@
     {
       "title": "Israel",
       "x-alpha-3": "ISR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ISR",
       "x-numeric": 376,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -831,6 +934,7 @@
     {
       "title": "Isle of Man",
       "x-alpha-3": "IMN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/IMN",
       "x-numeric": 833,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -839,6 +943,7 @@
     {
       "title": "India",
       "x-alpha-3": "IND",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/IND",
       "x-numeric": 356,
       "x-region": "Asia",
       "x-sub-region": "Southern Asia",
@@ -847,6 +952,7 @@
     {
       "title": "British Indian Ocean Territory",
       "x-alpha-3": "IOT",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/IOT",
       "x-numeric": 86,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -855,6 +961,7 @@
     {
       "title": "Iraq",
       "x-alpha-3": "IRQ",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/IRQ",
       "x-numeric": 368,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -863,6 +970,7 @@
     {
       "title": "Iran, Islamic Republic of",
       "x-alpha-3": "IRN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/IRN",
       "x-numeric": 364,
       "x-region": "Asia",
       "x-sub-region": "Southern Asia",
@@ -871,6 +979,7 @@
     {
       "title": "Iceland",
       "x-alpha-3": "ISL",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ISL",
       "x-numeric": 352,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -879,6 +988,7 @@
     {
       "title": "Italy",
       "x-alpha-3": "ITA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ITA",
       "x-numeric": 380,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -887,6 +997,7 @@
     {
       "title": "Jersey",
       "x-alpha-3": "JEY",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/JEY",
       "x-numeric": 832,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -895,6 +1006,7 @@
     {
       "title": "Jamaica",
       "x-alpha-3": "JAM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/JAM",
       "x-numeric": 388,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -903,6 +1015,7 @@
     {
       "title": "Jordan",
       "x-alpha-3": "JOR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/JOR",
       "x-numeric": 400,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -911,6 +1024,7 @@
     {
       "title": "Japan",
       "x-alpha-3": "JPN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/JPN",
       "x-numeric": 392,
       "x-region": "Asia",
       "x-sub-region": "Eastern Asia",
@@ -919,6 +1033,7 @@
     {
       "title": "Kenya",
       "x-alpha-3": "KEN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KEN",
       "x-numeric": 404,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -927,6 +1042,7 @@
     {
       "title": "Kyrgyzstan",
       "x-alpha-3": "KGZ",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KGZ",
       "x-numeric": 417,
       "x-region": "Asia",
       "x-sub-region": "Central Asia",
@@ -935,6 +1051,7 @@
     {
       "title": "Cambodia",
       "x-alpha-3": "KHM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KHM",
       "x-numeric": 116,
       "x-region": "Asia",
       "x-sub-region": "South-eastern Asia",
@@ -943,6 +1060,7 @@
     {
       "title": "Kiribati",
       "x-alpha-3": "KIR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KIR",
       "x-numeric": 296,
       "x-region": "Oceania",
       "x-sub-region": "Micronesia",
@@ -951,6 +1069,7 @@
     {
       "title": "Comoros",
       "x-alpha-3": "COM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/COM",
       "x-numeric": 174,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -959,6 +1078,7 @@
     {
       "title": "Saint Kitts and Nevis",
       "x-alpha-3": "KNA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KNA",
       "x-numeric": 659,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -967,6 +1087,7 @@
     {
       "title": "Korea, Democratic People's Republic of",
       "x-alpha-3": "PRK",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PRK",
       "x-numeric": 408,
       "x-region": "Asia",
       "x-sub-region": "Eastern Asia",
@@ -975,6 +1096,7 @@
     {
       "title": "Korea, Republic of",
       "x-alpha-3": "KOR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KOR",
       "x-numeric": 410,
       "x-region": "Asia",
       "x-sub-region": "Eastern Asia",
@@ -983,6 +1105,7 @@
     {
       "title": "Kuwait",
       "x-alpha-3": "KWT",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KWT",
       "x-numeric": 414,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -991,6 +1114,7 @@
     {
       "title": "Cayman Islands",
       "x-alpha-3": "CYM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CYM",
       "x-numeric": 136,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -999,6 +1123,7 @@
     {
       "title": "Kazakhstan",
       "x-alpha-3": "KAZ",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KAZ",
       "x-numeric": 398,
       "x-region": "Asia",
       "x-sub-region": "Central Asia",
@@ -1007,6 +1132,7 @@
     {
       "title": "Lao People's Democratic Republic",
       "x-alpha-3": "LAO",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LAO",
       "x-numeric": 418,
       "x-region": "Asia",
       "x-sub-region": "South-eastern Asia",
@@ -1015,6 +1141,7 @@
     {
       "title": "Lebanon",
       "x-alpha-3": "LBN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LBN",
       "x-numeric": 422,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -1023,6 +1150,7 @@
     {
       "title": "Saint Lucia",
       "x-alpha-3": "LCA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LCA",
       "x-numeric": 662,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1031,6 +1159,7 @@
     {
       "title": "Liechtenstein",
       "x-alpha-3": "LIE",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LIE",
       "x-numeric": 438,
       "x-region": "Europe",
       "x-sub-region": "Western Europe",
@@ -1039,6 +1168,7 @@
     {
       "title": "Sri Lanka",
       "x-alpha-3": "LKA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LKA",
       "x-numeric": 144,
       "x-region": "Asia",
       "x-sub-region": "Southern Asia",
@@ -1047,6 +1177,7 @@
     {
       "title": "Liberia",
       "x-alpha-3": "LBR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LBR",
       "x-numeric": 430,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1055,6 +1186,7 @@
     {
       "title": "Lesotho",
       "x-alpha-3": "LSO",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LSO",
       "x-numeric": 426,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1063,6 +1195,7 @@
     {
       "title": "Lithuania",
       "x-alpha-3": "LTU",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LTU",
       "x-numeric": 440,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -1071,6 +1204,7 @@
     {
       "title": "Luxembourg",
       "x-alpha-3": "LUX",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LUX",
       "x-numeric": 442,
       "x-region": "Europe",
       "x-sub-region": "Western Europe",
@@ -1079,6 +1213,7 @@
     {
       "title": "Latvia",
       "x-alpha-3": "LVA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LVA",
       "x-numeric": 428,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -1087,6 +1222,7 @@
     {
       "title": "Libya",
       "x-alpha-3": "LBY",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LBY",
       "x-numeric": 434,
       "x-region": "Africa",
       "x-sub-region": "Northern Africa",
@@ -1095,6 +1231,7 @@
     {
       "title": "Morocco",
       "x-alpha-3": "MAR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MAR",
       "x-numeric": 504,
       "x-region": "Africa",
       "x-sub-region": "Northern Africa",
@@ -1103,6 +1240,7 @@
     {
       "title": "Monaco",
       "x-alpha-3": "MCO",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MCO",
       "x-numeric": 492,
       "x-region": "Europe",
       "x-sub-region": "Western Europe",
@@ -1111,6 +1249,7 @@
     {
       "title": "Moldova, Republic of",
       "x-alpha-3": "MDA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MDA",
       "x-numeric": 498,
       "x-region": "Europe",
       "x-sub-region": "Eastern Europe",
@@ -1119,6 +1258,7 @@
     {
       "title": "Montenegro",
       "x-alpha-3": "MNE",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MNE",
       "x-numeric": 499,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -1127,6 +1267,7 @@
     {
       "title": "Saint Martin (French part)",
       "x-alpha-3": "MAF",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MAF",
       "x-numeric": 663,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1135,6 +1276,7 @@
     {
       "title": "Madagascar",
       "x-alpha-3": "MDG",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MDG",
       "x-numeric": 450,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1143,6 +1285,7 @@
     {
       "title": "Marshall Islands",
       "x-alpha-3": "MHL",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MHL",
       "x-numeric": 584,
       "x-region": "Oceania",
       "x-sub-region": "Micronesia",
@@ -1151,6 +1294,7 @@
     {
       "title": "North Macedonia",
       "x-alpha-3": "MKD",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MKD",
       "x-numeric": 807,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -1159,6 +1303,7 @@
     {
       "title": "Mali",
       "x-alpha-3": "MLI",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MLI",
       "x-numeric": 466,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1167,6 +1312,7 @@
     {
       "title": "Myanmar",
       "x-alpha-3": "MMR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MMR",
       "x-numeric": 104,
       "x-region": "Asia",
       "x-sub-region": "South-eastern Asia",
@@ -1175,6 +1321,7 @@
     {
       "title": "Mongolia",
       "x-alpha-3": "MNG",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MNG",
       "x-numeric": 496,
       "x-region": "Asia",
       "x-sub-region": "Eastern Asia",
@@ -1183,6 +1330,7 @@
     {
       "title": "Macao",
       "x-alpha-3": "MAC",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MAC",
       "x-numeric": 446,
       "x-region": "Asia",
       "x-sub-region": "Eastern Asia",
@@ -1191,6 +1339,7 @@
     {
       "title": "Northern Mariana Islands",
       "x-alpha-3": "MNP",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MNP",
       "x-numeric": 580,
       "x-region": "Oceania",
       "x-sub-region": "Micronesia",
@@ -1199,6 +1348,7 @@
     {
       "title": "Martinique",
       "x-alpha-3": "MTQ",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MTQ",
       "x-numeric": 474,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1207,6 +1357,7 @@
     {
       "title": "Mauritania",
       "x-alpha-3": "MRT",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MRT",
       "x-numeric": 478,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1215,6 +1366,7 @@
     {
       "title": "Montserrat",
       "x-alpha-3": "MSR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MSR",
       "x-numeric": 500,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1223,6 +1375,7 @@
     {
       "title": "Malta",
       "x-alpha-3": "MLT",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MLT",
       "x-numeric": 470,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -1231,6 +1384,7 @@
     {
       "title": "Mauritius",
       "x-alpha-3": "MUS",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MUS",
       "x-numeric": 480,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1239,6 +1393,7 @@
     {
       "title": "Maldives",
       "x-alpha-3": "MDV",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MDV",
       "x-numeric": 462,
       "x-region": "Asia",
       "x-sub-region": "Southern Asia",
@@ -1247,6 +1402,7 @@
     {
       "title": "Malawi",
       "x-alpha-3": "MWI",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MWI",
       "x-numeric": 454,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1255,6 +1411,7 @@
     {
       "title": "Mexico",
       "x-alpha-3": "MEX",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MEX",
       "x-numeric": 484,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1263,6 +1420,7 @@
     {
       "title": "Malaysia",
       "x-alpha-3": "MYS",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MYS",
       "x-numeric": 458,
       "x-region": "Asia",
       "x-sub-region": "South-eastern Asia",
@@ -1271,6 +1429,7 @@
     {
       "title": "Mozambique",
       "x-alpha-3": "MOZ",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MOZ",
       "x-numeric": 508,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1279,6 +1438,7 @@
     {
       "title": "Namibia",
       "x-alpha-3": "NAM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NAM",
       "x-numeric": 516,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1287,6 +1447,7 @@
     {
       "title": "New Caledonia",
       "x-alpha-3": "NCL",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NCL",
       "x-numeric": 540,
       "x-region": "Oceania",
       "x-sub-region": "Melanesia",
@@ -1295,6 +1456,7 @@
     {
       "title": "Niger",
       "x-alpha-3": "NER",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NER",
       "x-numeric": 562,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1303,6 +1465,7 @@
     {
       "title": "Norfolk Island",
       "x-alpha-3": "NFK",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NFK",
       "x-numeric": 574,
       "x-region": "Oceania",
       "x-sub-region": "Australia and New Zealand",
@@ -1311,6 +1474,7 @@
     {
       "title": "Nigeria",
       "x-alpha-3": "NGA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NGA",
       "x-numeric": 566,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1319,6 +1483,7 @@
     {
       "title": "Nicaragua",
       "x-alpha-3": "NIC",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NIC",
       "x-numeric": 558,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1327,6 +1492,7 @@
     {
       "title": "Netherlands, Kingdom of the",
       "x-alpha-3": "NLD",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NLD",
       "x-numeric": 528,
       "x-region": "Europe",
       "x-sub-region": "Western Europe",
@@ -1335,6 +1501,7 @@
     {
       "title": "Norway",
       "x-alpha-3": "NOR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NOR",
       "x-numeric": 578,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -1343,6 +1510,7 @@
     {
       "title": "Nepal",
       "x-alpha-3": "NPL",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NPL",
       "x-numeric": 524,
       "x-region": "Asia",
       "x-sub-region": "Southern Asia",
@@ -1351,6 +1519,7 @@
     {
       "title": "Nauru",
       "x-alpha-3": "NRU",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NRU",
       "x-numeric": 520,
       "x-region": "Oceania",
       "x-sub-region": "Micronesia",
@@ -1359,6 +1528,7 @@
     {
       "title": "Niue",
       "x-alpha-3": "NIU",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NIU",
       "x-numeric": 570,
       "x-region": "Oceania",
       "x-sub-region": "Polynesia",
@@ -1367,6 +1537,7 @@
     {
       "title": "New Zealand",
       "x-alpha-3": "NZL",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NZL",
       "x-numeric": 554,
       "x-region": "Oceania",
       "x-sub-region": "Australia and New Zealand",
@@ -1375,6 +1546,7 @@
     {
       "title": "Oman",
       "x-alpha-3": "OMN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/OMN",
       "x-numeric": 512,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -1383,6 +1555,7 @@
     {
       "title": "Panama",
       "x-alpha-3": "PAN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PAN",
       "x-numeric": 591,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1391,6 +1564,7 @@
     {
       "title": "Peru",
       "x-alpha-3": "PER",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PER",
       "x-numeric": 604,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1399,6 +1573,7 @@
     {
       "title": "French Polynesia",
       "x-alpha-3": "PYF",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PYF",
       "x-numeric": 258,
       "x-region": "Oceania",
       "x-sub-region": "Polynesia",
@@ -1407,6 +1582,7 @@
     {
       "title": "Papua New Guinea",
       "x-alpha-3": "PNG",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PNG",
       "x-numeric": 598,
       "x-region": "Oceania",
       "x-sub-region": "Melanesia",
@@ -1415,6 +1591,7 @@
     {
       "title": "Philippines",
       "x-alpha-3": "PHL",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PHL",
       "x-numeric": 608,
       "x-region": "Asia",
       "x-sub-region": "South-eastern Asia",
@@ -1423,6 +1600,7 @@
     {
       "title": "Pakistan",
       "x-alpha-3": "PAK",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PAK",
       "x-numeric": 586,
       "x-region": "Asia",
       "x-sub-region": "Southern Asia",
@@ -1431,6 +1609,7 @@
     {
       "title": "Poland",
       "x-alpha-3": "POL",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/POL",
       "x-numeric": 616,
       "x-region": "Europe",
       "x-sub-region": "Eastern Europe",
@@ -1439,6 +1618,7 @@
     {
       "title": "Saint Pierre and Miquelon",
       "x-alpha-3": "SPM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SPM",
       "x-numeric": 666,
       "x-region": "Americas",
       "x-sub-region": "Northern America",
@@ -1447,6 +1627,7 @@
     {
       "title": "Pitcairn",
       "x-alpha-3": "PCN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PCN",
       "x-numeric": 612,
       "x-region": "Oceania",
       "x-sub-region": "Polynesia",
@@ -1455,6 +1636,7 @@
     {
       "title": "Puerto Rico",
       "x-alpha-3": "PRI",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PRI",
       "x-numeric": 630,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1463,6 +1645,7 @@
     {
       "title": "Palestine, State of",
       "x-alpha-3": "PSE",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PSE",
       "x-numeric": 275,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -1471,6 +1654,7 @@
     {
       "title": "Portugal",
       "x-alpha-3": "PRT",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PRT",
       "x-numeric": 620,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -1479,6 +1663,7 @@
     {
       "title": "Palau",
       "x-alpha-3": "PLW",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PLW",
       "x-numeric": 585,
       "x-region": "Oceania",
       "x-sub-region": "Micronesia",
@@ -1487,6 +1672,7 @@
     {
       "title": "Paraguay",
       "x-alpha-3": "PRY",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PRY",
       "x-numeric": 600,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1495,6 +1681,7 @@
     {
       "title": "Qatar",
       "x-alpha-3": "QAT",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/QAT",
       "x-numeric": 634,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -1503,6 +1690,7 @@
     {
       "title": "Réunion",
       "x-alpha-3": "REU",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/REU",
       "x-numeric": 638,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1511,6 +1699,7 @@
     {
       "title": "Romania",
       "x-alpha-3": "ROU",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ROU",
       "x-numeric": 642,
       "x-region": "Europe",
       "x-sub-region": "Eastern Europe",
@@ -1519,6 +1708,7 @@
     {
       "title": "Serbia",
       "x-alpha-3": "SRB",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SRB",
       "x-numeric": 688,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -1527,6 +1717,7 @@
     {
       "title": "Russian Federation",
       "x-alpha-3": "RUS",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/RUS",
       "x-numeric": 643,
       "x-region": "Europe",
       "x-sub-region": "Eastern Europe",
@@ -1535,6 +1726,7 @@
     {
       "title": "Rwanda",
       "x-alpha-3": "RWA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/RWA",
       "x-numeric": 646,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1543,6 +1735,7 @@
     {
       "title": "Saudi Arabia",
       "x-alpha-3": "SAU",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SAU",
       "x-numeric": 682,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -1551,6 +1744,7 @@
     {
       "title": "Solomon Islands",
       "x-alpha-3": "SLB",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SLB",
       "x-numeric": 90,
       "x-region": "Oceania",
       "x-sub-region": "Melanesia",
@@ -1559,6 +1753,7 @@
     {
       "title": "Seychelles",
       "x-alpha-3": "SYC",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SYC",
       "x-numeric": 690,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1567,6 +1762,7 @@
     {
       "title": "Sudan",
       "x-alpha-3": "SDN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SDN",
       "x-numeric": 729,
       "x-region": "Africa",
       "x-sub-region": "Northern Africa",
@@ -1575,6 +1771,7 @@
     {
       "title": "Sweden",
       "x-alpha-3": "SWE",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SWE",
       "x-numeric": 752,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -1583,6 +1780,7 @@
     {
       "title": "Singapore",
       "x-alpha-3": "SGP",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SGP",
       "x-numeric": 702,
       "x-region": "Asia",
       "x-sub-region": "South-eastern Asia",
@@ -1591,6 +1789,7 @@
     {
       "title": "Saint Helena, Ascension and Tristan da Cunha",
       "x-alpha-3": "SHN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SHN",
       "x-numeric": 654,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1599,6 +1798,7 @@
     {
       "title": "Slovenia",
       "x-alpha-3": "SVN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SVN",
       "x-numeric": 705,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -1607,6 +1807,7 @@
     {
       "title": "Svalbard and Jan Mayen",
       "x-alpha-3": "SJM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SJM",
       "x-numeric": 744,
       "x-region": "Europe",
       "x-sub-region": "Northern Europe",
@@ -1615,6 +1816,7 @@
     {
       "title": "Slovakia",
       "x-alpha-3": "SVK",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SVK",
       "x-numeric": 703,
       "x-region": "Europe",
       "x-sub-region": "Eastern Europe",
@@ -1623,6 +1825,7 @@
     {
       "title": "Sierra Leone",
       "x-alpha-3": "SLE",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SLE",
       "x-numeric": 694,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1631,6 +1834,7 @@
     {
       "title": "San Marino",
       "x-alpha-3": "SMR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SMR",
       "x-numeric": 674,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -1639,6 +1843,7 @@
     {
       "title": "Senegal",
       "x-alpha-3": "SEN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SEN",
       "x-numeric": 686,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1647,6 +1852,7 @@
     {
       "title": "Somalia",
       "x-alpha-3": "SOM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SOM",
       "x-numeric": 706,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1655,6 +1861,7 @@
     {
       "title": "Suriname",
       "x-alpha-3": "SUR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SUR",
       "x-numeric": 740,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1663,6 +1870,7 @@
     {
       "title": "South Sudan",
       "x-alpha-3": "SSD",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SSD",
       "x-numeric": 728,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1671,6 +1879,7 @@
     {
       "title": "Sao Tome and Principe",
       "x-alpha-3": "STP",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/STP",
       "x-numeric": 678,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1679,6 +1888,7 @@
     {
       "title": "El Salvador",
       "x-alpha-3": "SLV",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SLV",
       "x-numeric": 222,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1687,6 +1897,7 @@
     {
       "title": "Sint Maarten (Dutch part)",
       "x-alpha-3": "SXM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SXM",
       "x-numeric": 534,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1695,6 +1906,7 @@
     {
       "title": "Syrian Arab Republic",
       "x-alpha-3": "SYR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SYR",
       "x-numeric": 760,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -1703,6 +1915,7 @@
     {
       "title": "Eswatini",
       "x-alpha-3": "SWZ",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SWZ",
       "x-numeric": 748,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1711,6 +1924,7 @@
     {
       "title": "Turks and Caicos Islands",
       "x-alpha-3": "TCA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TCA",
       "x-numeric": 796,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1719,6 +1933,7 @@
     {
       "title": "Chad",
       "x-alpha-3": "TCD",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TCD",
       "x-numeric": 148,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1727,6 +1942,7 @@
     {
       "title": "French Southern Territories",
       "x-alpha-3": "ATF",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ATF",
       "x-numeric": 260,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1735,6 +1951,7 @@
     {
       "title": "Togo",
       "x-alpha-3": "TGO",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TGO",
       "x-numeric": 768,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1743,6 +1960,7 @@
     {
       "title": "Thailand",
       "x-alpha-3": "THA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/THA",
       "x-numeric": 764,
       "x-region": "Asia",
       "x-sub-region": "South-eastern Asia",
@@ -1751,6 +1969,7 @@
     {
       "title": "Tajikistan",
       "x-alpha-3": "TJK",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TJK",
       "x-numeric": 762,
       "x-region": "Asia",
       "x-sub-region": "Central Asia",
@@ -1759,6 +1978,7 @@
     {
       "title": "Tokelau",
       "x-alpha-3": "TKL",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TKL",
       "x-numeric": 772,
       "x-region": "Oceania",
       "x-sub-region": "Polynesia",
@@ -1767,6 +1987,7 @@
     {
       "title": "Timor-Leste",
       "x-alpha-3": "TLS",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TLS",
       "x-numeric": 626,
       "x-region": "Asia",
       "x-sub-region": "South-eastern Asia",
@@ -1775,6 +1996,7 @@
     {
       "title": "Turkmenistan",
       "x-alpha-3": "TKM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TKM",
       "x-numeric": 795,
       "x-region": "Asia",
       "x-sub-region": "Central Asia",
@@ -1783,6 +2005,7 @@
     {
       "title": "Tunisia",
       "x-alpha-3": "TUN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TUN",
       "x-numeric": 788,
       "x-region": "Africa",
       "x-sub-region": "Northern Africa",
@@ -1791,6 +2014,7 @@
     {
       "title": "Tonga",
       "x-alpha-3": "TON",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TON",
       "x-numeric": 776,
       "x-region": "Oceania",
       "x-sub-region": "Polynesia",
@@ -1799,6 +2023,7 @@
     {
       "title": "Türkiye",
       "x-alpha-3": "TUR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TUR",
       "x-numeric": 792,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -1807,6 +2032,7 @@
     {
       "title": "Trinidad and Tobago",
       "x-alpha-3": "TTO",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TTO",
       "x-numeric": 780,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1815,6 +2041,7 @@
     {
       "title": "Tuvalu",
       "x-alpha-3": "TUV",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TUV",
       "x-numeric": 798,
       "x-region": "Oceania",
       "x-sub-region": "Polynesia",
@@ -1823,12 +2050,14 @@
     {
       "title": "Taiwan, Province of China",
       "x-alpha-3": "TWN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TWN",
       "x-numeric": 158,
       "const": "TW"
     },
     {
       "title": "Tanzania, United Republic of",
       "x-alpha-3": "TZA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TZA",
       "x-numeric": 834,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1837,6 +2066,7 @@
     {
       "title": "Ukraine",
       "x-alpha-3": "UKR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/UKR",
       "x-numeric": 804,
       "x-region": "Europe",
       "x-sub-region": "Eastern Europe",
@@ -1845,6 +2075,7 @@
     {
       "title": "Uganda",
       "x-alpha-3": "UGA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/UGA",
       "x-numeric": 800,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1853,6 +2084,7 @@
     {
       "title": "United States Minor Outlying Islands",
       "x-alpha-3": "UMI",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/UMI",
       "x-numeric": 581,
       "x-region": "Oceania",
       "x-sub-region": "Micronesia",
@@ -1861,6 +2093,7 @@
     {
       "title": "United States of America",
       "x-alpha-3": "USA",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/USA",
       "x-numeric": 840,
       "x-region": "Americas",
       "x-sub-region": "Northern America",
@@ -1869,6 +2102,7 @@
     {
       "title": "Uruguay",
       "x-alpha-3": "URY",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/URY",
       "x-numeric": 858,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1877,6 +2111,7 @@
     {
       "title": "Uzbekistan",
       "x-alpha-3": "UZB",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/UZB",
       "x-numeric": 860,
       "x-region": "Asia",
       "x-sub-region": "Central Asia",
@@ -1885,6 +2120,7 @@
     {
       "title": "Holy See",
       "x-alpha-3": "VAT",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/VAT",
       "x-numeric": 336,
       "x-region": "Europe",
       "x-sub-region": "Southern Europe",
@@ -1893,6 +2129,7 @@
     {
       "title": "Saint Vincent and the Grenadines",
       "x-alpha-3": "VCT",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/VCT",
       "x-numeric": 670,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1901,6 +2138,7 @@
     {
       "title": "Venezuela, Bolivarian Republic of",
       "x-alpha-3": "VEN",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/VEN",
       "x-numeric": 862,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1909,6 +2147,7 @@
     {
       "title": "Virgin Islands (British)",
       "x-alpha-3": "VGB",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/VGB",
       "x-numeric": 92,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1917,6 +2156,7 @@
     {
       "title": "Virgin Islands (U.S.)",
       "x-alpha-3": "VIR",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/VIR",
       "x-numeric": 850,
       "x-region": "Americas",
       "x-sub-region": "Latin America and the Caribbean",
@@ -1925,6 +2165,7 @@
     {
       "title": "Viet Nam",
       "x-alpha-3": "VNM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/VNM",
       "x-numeric": 704,
       "x-region": "Asia",
       "x-sub-region": "South-eastern Asia",
@@ -1933,6 +2174,7 @@
     {
       "title": "Vanuatu",
       "x-alpha-3": "VUT",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/VUT",
       "x-numeric": 548,
       "x-region": "Oceania",
       "x-sub-region": "Melanesia",
@@ -1941,6 +2183,7 @@
     {
       "title": "Wallis and Futuna",
       "x-alpha-3": "WLF",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/WLF",
       "x-numeric": 876,
       "x-region": "Oceania",
       "x-sub-region": "Polynesia",
@@ -1949,6 +2192,7 @@
     {
       "title": "Samoa",
       "x-alpha-3": "WSM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/WSM",
       "x-numeric": 882,
       "x-region": "Oceania",
       "x-sub-region": "Polynesia",
@@ -1957,6 +2201,7 @@
     {
       "title": "Yemen",
       "x-alpha-3": "YEM",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/YEM",
       "x-numeric": 887,
       "x-region": "Asia",
       "x-sub-region": "Western Asia",
@@ -1965,6 +2210,7 @@
     {
       "title": "Mayotte",
       "x-alpha-3": "MYT",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MYT",
       "x-numeric": 175,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1973,6 +2219,7 @@
     {
       "title": "South Africa",
       "x-alpha-3": "ZAF",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ZAF",
       "x-numeric": 710,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1981,6 +2228,7 @@
     {
       "title": "Zambia",
       "x-alpha-3": "ZMB",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ZMB",
       "x-numeric": 894,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",
@@ -1989,6 +2237,7 @@
     {
       "title": "Zimbabwe",
       "x-alpha-3": "ZWE",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ZWE",
       "x-numeric": 716,
       "x-region": "Africa",
       "x-sub-region": "Sub-Saharan Africa",

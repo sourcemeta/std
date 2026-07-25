@@ -3,6 +3,7 @@
   "title": "ISO 3166-1:2020 Alpha-3 Country Code",
   "description": "A three-letter country code from ISO 3166-1",
   "examples": [ "ABW", "AFG", "AGO", "AIA" ],
+  "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/{this}",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/iso-3166-country-codes.html" ],
   "anyOf": [

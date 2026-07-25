@@ -10,18 +10,21 @@
     {
       "title": "Afghani",
       "x-country-names": [ "AFGHANISTAN" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/AFA",
       "x-withdrawal-dates": [ "2003-01" ],
       "const": 4
     },
     {
       "title": "Old Lek",
       "x-country-names": [ "ALBANIA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ALK",
       "x-withdrawal-dates": [ "1989-12" ],
       "const": 8
     },
     {
       "title": "Andorran Peseta",
       "x-country-names": [ "ANDORRA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ADP",
       "x-withdrawal-dates": [ "2003-07" ],
       "const": 20
     },
@@ -34,6 +37,7 @@
     {
       "title": "Azerbaijanian Manat",
       "x-country-names": [ "AZERBAIJAN" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/AZM",
       "x-withdrawal-dates": [ "2005-12" ],
       "const": 31
     },
@@ -46,18 +50,21 @@
     {
       "title": "Schilling",
       "x-country-names": [ "AUSTRIA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ATS",
       "x-withdrawal-dates": [ "2002-03" ],
       "const": 40
     },
     {
       "title": "Belgian Franc",
       "x-country-names": [ "BELGIUM" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BEF",
       "x-withdrawal-dates": [ "2002-03" ],
       "const": 56
     },
     {
       "title": "Peso boliviano",
       "x-country-names": [ "BOLIVIA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BOP",
       "x-withdrawal-dates": [ "1987-02" ],
       "const": 68
     },
@@ -106,42 +113,49 @@
     {
       "title": "Cyprus Pound",
       "x-country-names": [ "CYPRUS" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CYP",
       "x-withdrawal-dates": [ "2008-01" ],
       "const": 196
     },
     {
       "title": "Koruna",
       "x-country-names": [ "CZECHOSLOVAKIA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CSK",
       "x-withdrawal-dates": [ "1993-03" ],
       "const": 200
     },
     {
       "title": "Krona A/53",
       "x-country-names": [ "CZECHOSLOVAKIA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CSJ",
       "x-withdrawal-dates": [ "1989 to 1990" ],
       "const": 203
     },
     {
       "title": "Sucre",
       "x-country-names": [ "ECUADOR" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ECS",
       "x-withdrawal-dates": [ "2000-09" ],
       "const": 218
     },
     {
       "title": "Ekwele",
       "x-country-names": [ "EQUATORIAL GUINEA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/GQE",
       "x-withdrawal-dates": [ "1986-06" ],
       "const": 226
     },
     {
       "title": "Kroon",
       "x-country-names": [ "ESTONIA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/EEK",
       "x-withdrawal-dates": [ "2011-01" ],
       "const": 233
     },
     {
       "title": "Markka",
       "x-country-names": [ "FINLAND", "ÅLAND ISLANDS" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/FIM",
       "x-withdrawal-dates": [ "2002-03" ],
       "const": 246
     },
@@ -161,6 +175,7 @@
         "SAINT PIERRE AND MIQUELON",
         "SAINT-BARTHÉLEMY"
       ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/FRF",
       "x-withdrawal-dates": [ "1999-01", "2002-03" ],
       "const": 250
     },
@@ -173,24 +188,28 @@
     {
       "title": "Deutsche Mark",
       "x-country-names": [ "GERMANY" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/DEM",
       "x-withdrawal-dates": [ "2002-03" ],
       "const": 276
     },
     {
       "title": "Mark der DDR",
       "x-country-names": [ "GERMAN DEMOCRATIC REPUBLIC" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/DDM",
       "x-withdrawal-dates": [ "1990-07 to 1990-09" ],
       "const": 278
     },
     {
       "title": "Cedi",
       "x-country-names": [ "GHANA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/GHC",
       "x-withdrawal-dates": [ "2008-01" ],
       "const": 288
     },
     {
       "title": "Drachma",
       "x-country-names": [ "GREECE" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/GRD",
       "x-withdrawal-dates": [ "2002-03" ],
       "const": 300
     },
@@ -203,18 +222,21 @@
     {
       "title": "Old Krona",
       "x-country-names": [ "ICELAND" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ISJ",
       "x-withdrawal-dates": [ "1989 to 1990" ],
       "const": 352
     },
     {
       "title": "Rupiah",
       "x-country-names": [ "TIMOR-LESTE" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/IDR",
       "x-withdrawal-dates": [ "2002-07" ],
       "const": 360
     },
     {
       "title": "Irish Pound",
       "x-country-names": [ "IRELAND" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/IEP",
       "x-withdrawal-dates": [ "2002-03" ],
       "const": 372
     },
@@ -231,12 +253,14 @@
         "ITALY",
         "SAN MARINO"
       ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ITL",
       "x-withdrawal-dates": [ "2002-03" ],
       "const": 380
     },
     {
       "title": "Pathet Lao Kip",
       "x-country-names": [ "LAO" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/LAJ",
       "x-withdrawal-dates": [ "1979-12" ],
       "const": 418
     },
@@ -261,30 +285,35 @@
     {
       "title": "Luxembourg Franc",
       "x-country-names": [ "LUXEMBOURG" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/LUF",
       "x-withdrawal-dates": [ "2002-03" ],
       "const": 442
     },
     {
       "title": "Malagasy Franc",
       "x-country-names": [ "MADAGASCAR" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MGF",
       "x-withdrawal-dates": [ "2004-12" ],
       "const": 450
     },
     {
       "title": "Kwacha",
       "x-country-names": [ "MALAWI" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MWK",
       "x-withdrawal-dates": [ "2016-02" ],
       "const": 454
     },
     {
       "title": "Maldive Rupee",
       "x-country-names": [ "MALDIVES" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MVQ",
       "x-withdrawal-dates": [ "1989-12" ],
       "const": 462
     },
     {
       "title": "Mali Franc",
       "x-country-names": [ "MALI" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MLF",
       "x-withdrawal-dates": [ "1984-11" ],
       "const": 466
     },
@@ -297,12 +326,14 @@
     {
       "title": "Ouguiya",
       "x-country-names": [ "MAURITANIA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MRO",
       "x-withdrawal-dates": [ "2017-12" ],
       "const": 478
     },
     {
       "title": "Mexican Peso",
       "x-country-names": [ "MEXICO" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MXP",
       "x-withdrawal-dates": [ "1993-01" ],
       "const": 484
     },
@@ -315,6 +346,7 @@
     {
       "title": "Netherlands Guilder",
       "x-country-names": [ "NETHERLANDS" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/NLG",
       "x-withdrawal-dates": [ "2002-03" ],
       "const": 528
     },
@@ -325,6 +357,7 @@
         "NETHERLANDS ANTILLES",
         "SINT MAARTEN (DUTCH PART)"
       ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ANG",
       "x-withdrawal-dates": [ "2010-10", "2025-03" ],
       "const": 532
     },
@@ -343,12 +376,14 @@
     {
       "title": "Zloty",
       "x-country-names": [ "POLAND" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/PLZ",
       "x-withdrawal-dates": [ "1997-01" ],
       "const": 616
     },
     {
       "title": "Portuguese Escudo",
       "x-country-names": [ "PORTUGAL" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/PTE",
       "x-withdrawal-dates": [ "2002-03" ],
       "const": 620
     },
@@ -361,6 +396,7 @@
     {
       "title": "Timor Escudo",
       "x-country-names": [ "TIMOR-LESTE" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/TPE",
       "x-withdrawal-dates": [ "2002-11" ],
       "const": 626
     },
@@ -373,30 +409,35 @@
     {
       "title": "Dobra",
       "x-country-names": [ "SAO TOME AND PRINCIPE" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/STD",
       "x-withdrawal-dates": [ "2017-12" ],
       "const": 678
     },
     {
       "title": "Leone",
       "x-country-names": [ "SIERRA LEONE" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SLL",
       "x-withdrawal-dates": [ "2023-12" ],
       "const": 694
     },
     {
       "title": "Slovak Koruna",
       "x-country-names": [ "SLOVAKIA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SKK",
       "x-withdrawal-dates": [ "2009-01" ],
       "const": 703
     },
     {
       "title": "Old Dong",
       "x-country-names": [ "VIETNAM" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/VNC",
       "x-withdrawal-dates": [ "1989-1990" ],
       "const": 704
     },
     {
       "title": "Tolar",
       "x-country-names": [ "SLOVENIA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SIT",
       "x-withdrawal-dates": [ "2007-01" ],
       "const": 705
     },
@@ -409,12 +450,14 @@
     {
       "title": "Yemeni Dinar",
       "x-country-names": [ "YEMEN, DEMOCRATIC" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/YDD",
       "x-withdrawal-dates": [ "1991-09" ],
       "const": 720
     },
     {
       "title": "Spanish Peseta",
       "x-country-names": [ "ANDORRA", "SPAIN" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ESP",
       "x-withdrawal-dates": [ "2002-03" ],
       "const": 724
     },
@@ -427,30 +470,35 @@
     {
       "title": "Surinam Guilder",
       "x-country-names": [ "SURINAME" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SRG",
       "x-withdrawal-dates": [ "2003-12" ],
       "const": 740
     },
     {
       "title": "Lilangeni",
       "x-country-names": [ "SWAZILAND" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SZL",
       "x-withdrawal-dates": [ "2018-08" ],
       "const": 748
     },
     {
       "title": "Tajik Ruble",
       "x-country-names": [ "TAJIKISTAN" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/TJR",
       "x-withdrawal-dates": [ "2001-04" ],
       "const": 762
     },
     {
       "title": "Old Turkish Lira",
       "x-country-names": [ "TURKEY" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/TRL",
       "x-withdrawal-dates": [ "2005-12" ],
       "const": 792
     },
     {
       "title": "Turkmenistan Manat",
       "x-country-names": [ "TURKMENISTAN" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/TMM",
       "x-withdrawal-dates": [ "2009-01" ],
       "const": 795
     },
@@ -463,6 +511,7 @@
     {
       "title": "Karbovanet",
       "x-country-names": [ "UKRAINE" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/UAK",
       "x-withdrawal-dates": [ "1996-09" ],
       "const": 804
     },
@@ -506,6 +555,7 @@
     {
       "title": "Bolivar",
       "x-country-names": [ "VENEZUELA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/VEB",
       "x-withdrawal-dates": [ "2008-01" ],
       "const": 862
     },
@@ -524,36 +574,42 @@
     {
       "title": "Zambian Kwacha",
       "x-country-names": [ "ZAMBIA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ZMK",
       "x-withdrawal-dates": [ "2012-12" ],
       "const": 894
     },
     {
       "title": "Peso Convertible",
       "x-country-names": [ "CUBA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CUC",
       "x-withdrawal-dates": [ "2021-06" ],
       "const": 931
     },
     {
       "title": "Zimbabwe Dollar",
       "x-country-names": [ "ZIMBABWE" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ZWL",
       "x-withdrawal-dates": [ "2024-09" ],
       "const": 932
     },
     {
       "title": "Zimbabwe Dollar",
       "x-country-names": [ "ZIMBABWE" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ZWR",
       "x-withdrawal-dates": [ "2009-06" ],
       "const": 935
     },
     {
       "title": "Bolivar / Bolivar Fuerte / Bolívar",
       "x-country-names": [ "VENEZUELA", "VENEZUELA (BOLIVARIAN REPUBLIC OF)" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/VEF",
       "x-withdrawal-dates": [ "2011-12", "2016-02", "2018-08" ],
       "const": 937
     },
     {
       "title": "Sudanese Pound",
       "x-country-names": [ "SOUTH SUDAN" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SDG",
       "x-withdrawal-dates": [ "2012-09" ],
       "const": 938
     },
@@ -566,6 +622,7 @@
     {
       "title": "Zimbabwe Dollar (new)",
       "x-country-names": [ "ZIMBABWE" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ZWN",
       "x-withdrawal-dates": [ "2006-09" ],
       "const": 942
     },
@@ -578,6 +635,7 @@
     {
       "title": "New Romanian Leu",
       "x-country-names": [ "ROMANIA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/RON",
       "x-withdrawal-dates": [ "2015-06" ],
       "const": 946
     },
@@ -590,30 +648,35 @@
     {
       "title": "New Turkish Lira",
       "x-country-names": [ "TURKEY" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/TRY",
       "x-withdrawal-dates": [ "2009-01" ],
       "const": 949
     },
     {
       "title": "European Currency Unit (E.C.U)",
       "x-country-names": [ "EUROPEAN MONETARY CO-OPERATION FUND (EMCF)" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XEU",
       "x-withdrawal-dates": [ "1999-01" ],
       "const": 954
     },
     {
       "title": "Belarusian Ruble",
       "x-country-names": [ "BELARUS" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BYR",
       "x-withdrawal-dates": [ "2017-01" ],
       "const": 974
     },
     {
       "title": "Euro",
       "x-country-names": [ "SERBIA AND MONTENEGRO" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/EUR",
       "x-withdrawal-dates": [ "2006-10" ],
       "const": 978
     },
     {
       "title": "Kwanza Reajustado",
       "x-country-names": [ "ANGOLA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/AOR",
       "x-withdrawal-dates": [ "2000-02" ],
       "const": 982
     },
@@ -626,6 +689,7 @@
     {
       "title": "Cruzeiro Real",
       "x-country-names": [ "BRAZIL" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BRR",
       "x-withdrawal-dates": [ "1994-07" ],
       "const": 987
     },
@@ -674,6 +738,7 @@
     {
       "title": "US Dollar (Same day)",
       "x-country-names": [ "UNITED STATES" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/USS",
       "x-withdrawal-dates": [ "2014-03" ],
       "const": 998
     }

@@ -9,6 +9,7 @@
     "relative/path/document.pdf",
     "?search=term#results"
   ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc3986#section-4.2" ],
   "type": "string",

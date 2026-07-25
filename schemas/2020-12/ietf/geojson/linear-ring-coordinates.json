@@ -17,6 +17,7 @@
       [ 0, 0 ]
     ]
   ],
+  "x-jsonld-container": "@list",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6" ],
   "type": "array",

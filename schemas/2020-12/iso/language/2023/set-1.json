@@ -4,6 +4,7 @@
   "description": "A two-letter language code from ISO 639-1",
   "$comment": "Set 1 contains the most common languages (2-letter codes). All Set 1 codes have corresponding codes in Set 2 and Set 3",
   "examples": [ "aa", "ab", "ae", "af" ],
+  "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-1/{this}",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/standard/74575.html" ],
   "anyOf": [

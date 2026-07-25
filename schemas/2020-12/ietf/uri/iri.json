@@ -8,6 +8,7 @@
     "http://www.example.com/édition.html",
     "mailto:usér@example.com"
   ],
+  "x-jsonld-self": "{+this}",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc3987#section-2" ],
   "type": "string",

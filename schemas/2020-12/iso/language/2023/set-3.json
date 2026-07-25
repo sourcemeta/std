@@ -4,6 +4,7 @@
   "description": "A three-letter language code from ISO 639-3",
   "$comment": "Set 3 is a superset of Set 1 and Set 2. It provides comprehensive coverage of individual languages, macrolanguages, and special codes",
   "examples": [ "aaa", "aab", "aac", "aad" ],
+  "x-jsonld-self": "http://lexvo.org/id/iso639-3/{this}",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/standard/74575.html" ],
   "anyOf": [

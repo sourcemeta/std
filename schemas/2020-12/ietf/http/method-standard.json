@@ -11,6 +11,7 @@
   ],
   "anyOf": [
     {
+      "x-jsonld-self": "http://www.w3.org/2011/http-methods#{this}",
       "enum": [
         "GET",
         "HEAD",
@@ -23,6 +24,7 @@
       ]
     },
     {
+      "x-jsonld-self": "http://www.w3.org/2011/http-methods#{this}",
       "const": "PATCH"
     },
     {
