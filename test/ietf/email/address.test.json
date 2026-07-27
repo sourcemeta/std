@@ -129,7 +129,7 @@
     {
       "description": "Comments around local, domain, and address",
       "data": "(comment)john.smith@(comment)example.com(comment)",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Quoted local-part with space and letters",
@@ -139,7 +139,7 @@
     {
       "description": "Domain literal with letters and dot",
       "data": "user@[abc.def]",
-      "valid": true
+      "valid": false
     },
     {
       "description": "All uppercase local and domain",
@@ -169,12 +169,12 @@
     {
       "description": "Email with comment in domain",
       "data": "john.smith@(comment)example.com",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Email with comment in local part",
       "data": "jo(comment)hn@example.com",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Complex quoted local-part with many allowed symbols",
@@ -249,7 +249,7 @@
     {
       "description": "Numeric TLD in domain",
       "data": "user@example.123",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Multiple @ symbols",
@@ -327,14 +327,14 @@
       "valid": false
     },
     {
-      "description": "Uppercase numeric TLD (invalid as TLD numeric only)",
+      "description": "Uppercase numeric TLD",
       "data": "user@EXAMPLE.123",
-      "valid": false
+      "valid": true
     },
     {
       "description": "IP address without brackets in domain",
       "data": "user@123.123.123.123",
-      "valid": false
+      "valid": true
     },
     {
       "description": "IPv6 address without brackets",
@@ -342,9 +342,9 @@
       "valid": false
     },
     {
-      "description": "Single quote used as delimiter (invalid)",
+      "description": "Single quote in local part",
       "data": "'test'@example.com",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Double quotes misplacement",
