@@ -22,6 +22,7 @@ def expand_language_type:
   "$comment": "Set 2 bibliographic is a superset of Set 1 and a subset of Set 3. Bibliographic codes are based on English language names",
   "examples": (.set_2_bibliographic | sort_by(.code) | .[0:4] | map(.code)),
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/{this}",
   "x-links": ["https://www.iso.org/standard/74575.html"],
   "anyOf": (
     .set_2_bibliographic

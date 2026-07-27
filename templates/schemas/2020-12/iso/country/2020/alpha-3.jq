@@ -9,6 +9,7 @@
     | map(.["alpha-3"])
   ),
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/{this}",
   "x-links": ["https://www.iso.org/iso-3166-country-codes.html"],
   "anyOf": (
     map(select(.["alpha-3"] != null and .["alpha-3"] != ""))

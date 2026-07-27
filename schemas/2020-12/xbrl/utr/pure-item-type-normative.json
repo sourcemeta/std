@@ -18,6 +18,7 @@
     {
       "title": "pure",
       "description": "Dimensionless (Pure) Number",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/UNITLESS",
       "x-status": "REC",
       "const": "pure"
     },

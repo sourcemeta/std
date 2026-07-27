@@ -10,6 +10,7 @@
     "2002-05-30T09:00:00",
     "-2002-10-10T12:00:00"
   ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.w3.org/TR/xmlschema-2/#dateTime" ],
   "type": "string",

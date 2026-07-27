@@ -11,6 +11,8 @@
     "Unicode: 你好世界",
     "Special chars: @#$%^&*()"
   ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#normalizedString",
+  "x-jsonld-override": true,
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.w3.org/TR/xmlschema-2/#normalizedString" ],
   "$ref": "string.json",

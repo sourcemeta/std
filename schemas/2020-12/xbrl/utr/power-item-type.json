@@ -12,6 +12,7 @@
     {
       "title": "Horsepower",
       "description": "Horsepower (Foot-pound per Second)",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/HP",
       "x-status": "REC",
       "x-symbol": "hp",
       "const": "hp"
@@ -19,6 +20,7 @@
     {
       "title": "Gigawatt",
       "description": "Thousand Million Watts",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/gigawatt",
       "x-status": "REC",
       "x-symbol": "GW",
       "const": "GW"
@@ -26,6 +28,7 @@
     {
       "title": "Kilowatt",
       "description": "Thousand Watts",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/kilowatt",
       "x-status": "REC",
       "x-symbol": "kW",
       "const": "kW"
@@ -33,6 +36,7 @@
     {
       "title": "Megawatt",
       "description": "Million Watts",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/megawatt",
       "x-status": "REC",
       "x-symbol": "MW",
       "const": "MW"
@@ -40,12 +44,14 @@
     {
       "title": "Terawatt",
       "description": "Million Million Watts",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/terawatt",
       "x-status": "REC",
       "x-symbol": "TW",
       "const": "TW"
     },
     {
       "description": "Watt",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/watt",
       "x-status": "REC",
       "x-symbol": "W",
       "const": "W"
@@ -53,6 +59,7 @@
     {
       "title": "Volt-ampere reactive",
       "description": "In electric power transmission and distribution, volt-ampere reactive (var) is a unit by which reactive power is expressed in an AC electric power system. Reactive power is the power that is wasted and not used to do work on the load",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/V-A_Reactive",
       "x-status": "REC",
       "x-symbol": "var",
       "const": "var"
@@ -60,6 +67,7 @@
     {
       "title": "Volt-ampere",
       "description": "A volt-ampere (VA) is the unit used for the apparent power in an electrical circuit, equal to the product of root-mean-square (RMS) voltage and RMS current. In direct current (DC) circuits, this product is equal to the real power (active power) in watts. Volt-amperes are useful only in the context of alternating current (AC) circuits",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/V-A",
       "x-status": "REC",
       "x-symbol": "VA",
       "const": "VA"
@@ -67,6 +75,7 @@
     {
       "title": "Million Volt-ampere reactive",
       "description": "In electric power transmission and distribution, Million volt-ampere reactive (Mvar) is a unit by which reactive power is expressed in an AC electric power system. Reactive power is the power that is wasted and not used to do work on the load",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/MegaV-A_Reactive",
       "x-status": "REC",
       "x-symbol": "Mvar",
       "const": "Mvar"
@@ -74,6 +83,7 @@
     {
       "title": "MegaVolt-ampere",
       "description": "A megavolt-ampere (MVA) is the unit used for the apparent power in an electrical circuit, equal to the product of root-mean-square (RMS) voltage and RMS current. In direct current (DC) circuits, this product is equal to the real power (active power) in watts. Volt-amperes are useful only in the context of alternating current (AC) circuits",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/MegaV-A",
       "x-status": "REC",
       "x-symbol": "MVA",
       "const": "MVA"

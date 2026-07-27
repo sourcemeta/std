@@ -1,3 +1,4 @@
+# XAD is absent from the EU currency authority table, so its branch mints no identifier
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 4217:2015 Alphabetic Currency Code",
@@ -30,6 +31,7 @@
         "x-country-names": map(.CtryNm),
         "x-minor-unit": (if .[0].CcyMnrUnts == "N.A." then null else (.[0].CcyMnrUnts | tonumber) end),
         "const": .[0].Ccy
-      })
+      } +
+      (if .[0].Ccy != "XAD" then {"x-jsonld-self": ("http://publications.europa.eu/resource/authority/currency/" + .[0].Ccy)} else {} end))
   )
 }

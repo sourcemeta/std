@@ -3,6 +3,7 @@
   "title": "W3C XML Schema gMonthDay",
   "description": "The gMonthDay datatype represents a specific day in a month (§3.2.12)",
   "examples": [ "--09-14", "--09-14Z", "--09-14+01:00", "--02-29" ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#gMonthDay",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.w3.org/TR/xmlschema-2/#gMonthDay" ],
   "type": "string",

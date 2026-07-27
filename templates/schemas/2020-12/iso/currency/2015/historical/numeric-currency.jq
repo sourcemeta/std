@@ -26,7 +26,12 @@
       ))
     | group_by(.CcyNbr)
     | sort_by(.[0].CcyNbr | tonumber)
-    | map({
+    | map(
+      ((map(.Ccy) | unique) as $alpha |
+       if ($alpha | length) == 1 and ($alpha[0] | IN("AOK", "AYM", "BAD", "BEC", "BEL", "BUK", "BYB", "CHC", "CSD", "ECV", "ESA", "ESB", "GEK", "GHP", "GNS", "GWE", "HRD", "LSM", "LTT", "LUC", "LUL", "LVR", "MZE", "NIC", "PES", "RHD", "ROK", "SDP", "UGW", "UYP", "XFO", "ZAL") | not)
+       then {"x-jsonld-self": ("http://publications.europa.eu/resource/authority/currency/" + $alpha[0])}
+       else {} end) +
+      {
         "title": (map(.CcyNm) | unique | join(" / ")),
         "x-country-names": (map(.CtryNm) | unique),
         "x-withdrawal-dates": (map(.WthdrwlDt) | unique),

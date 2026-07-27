@@ -4,6 +4,7 @@
   "description": "The gYearMonth datatype represents a specific gregorian month in a specific gregorian year (§3.2.10)",
   "$comment": "Year 0000 is not allowed in XML Schema 1.0",
   "examples": [ "1999-05", "1999-05Z", "1999-05+01:00", "-1999-05" ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#gYearMonth",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.w3.org/TR/xmlschema-2/#gYearMonth" ],
   "type": "string",

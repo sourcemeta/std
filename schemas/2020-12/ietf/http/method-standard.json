@@ -11,6 +11,7 @@
   ],
   "anyOf": [
     {
+      "x-jsonld-self": "http://www.w3.org/2011/http-methods#{this}",
       "enum": [
         "GET",
         "HEAD",
@@ -23,9 +24,11 @@
       ]
     },
     {
+      "x-jsonld-self": "http://www.w3.org/2011/http-methods#{this}",
       "const": "PATCH"
     },
     {
+      "$comment": "WebDAV methods are not defined in the frozen 2011 W3C http-methods vocabulary, so they mint no identifier",
       "enum": [
         "PROPFIND",
         "PROPPATCH",

@@ -3,6 +3,7 @@
   "title": "W3C XML Schema string",
   "description": "The string datatype represents character strings in XML (§3.2.1)",
   "examples": [ "Hello World", "", "Line 1\nLine 2", "Multiple   spaces" ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#string",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.w3.org/TR/xmlschema-2/#string" ],
   "type": "string"

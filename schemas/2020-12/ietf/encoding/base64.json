@@ -10,6 +10,7 @@
     "YWJj",
     ""
   ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#base64Binary",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc4648.html#section-4" ],
   "type": "string",

@@ -12,12 +12,14 @@
     {
       "title": "Barrel",
       "description": "Barrel (of Oil)",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/BBL",
       "x-status": "REC",
       "x-symbol": "bbl",
       "const": "bbl"
     },
     {
       "description": "Cubic Foot",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/FT3",
       "x-status": "REC",
       "x-symbol": "ft³",
       "const": "ft3"
@@ -25,6 +27,7 @@
     {
       "title": "Gallon",
       "description": "US Gallon",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/GAL_US",
       "x-status": "REC",
       "x-symbol": "gal",
       "const": "gal"
@@ -59,12 +62,14 @@
     },
     {
       "description": "Litre",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/litre",
       "x-status": "REC",
       "x-symbol": "l",
       "const": "l"
     },
     {
       "description": "Cubic Metre",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/M3",
       "x-status": "REC",
       "x-symbol": "m³",
       "const": "m3"
@@ -72,6 +77,7 @@
     {
       "title": "Bushel",
       "description": "US Bushel",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/BU_US",
       "x-status": "REC",
       "x-symbol": "bu",
       "const": "bu"
@@ -79,6 +85,7 @@
     {
       "title": "Acre-Foot",
       "description": "Volume of one acre of surface area to a depth of one foot using a US survey foot",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/AC-FT",
       "x-status": "REC",
       "x-symbol": "acre ft",
       "const": "aft"

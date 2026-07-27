@@ -28,6 +28,7 @@
       "properties": null
     }
   ],
+  "x-jsonld-type": "https://purl.org/geojson/vocab#Feature",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc7946#section-3.2" ],
   "type": "object",
@@ -40,6 +41,7 @@
       "type": [ "number", "string" ]
     },
     "geometry": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#geometry",
       "anyOf": [
         {
           "const": null
@@ -53,6 +55,8 @@
       ]
     },
     "properties": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#properties",
+      "x-jsonld-json": true,
       "anyOf": [
         {
           "const": null
@@ -63,6 +67,7 @@
       ]
     },
     "bbox": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#bbox",
       "$ref": "bounding-box.json"
     },
     "coordinates": false,

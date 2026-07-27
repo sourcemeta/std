@@ -15,6 +15,7 @@
     | map(.[0].Ccy)
   ),
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/{this}",
   "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
   "anyOf": (
     .ISO_4217.CcyTbl.CcyNtry

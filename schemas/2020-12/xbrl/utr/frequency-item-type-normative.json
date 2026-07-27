@@ -12,6 +12,7 @@
     {
       "title": "Hertz",
       "description": "Frequency or Number of Cycles per Second",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/hertz",
       "x-status": "REC",
       "x-symbol": "Hz",
       "const": "Hz"

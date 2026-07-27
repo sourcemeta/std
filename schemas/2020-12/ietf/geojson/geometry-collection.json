@@ -24,6 +24,7 @@
       ]
     }
   ],
+  "x-jsonld-type": "https://purl.org/geojson/vocab#GeometryCollection",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc7946#section-3.1.8" ],
   "type": "object",
@@ -33,12 +34,15 @@
       "const": "GeometryCollection"
     },
     "geometries": {
+      "x-jsonld-container": "@set",
+      "x-jsonld-id": "https://purl.org/geojson/vocab#geometry",
       "type": "array",
       "items": {
         "$ref": "geometry.json"
       }
     },
     "bbox": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#bbox",
       "$ref": "bounding-box.json"
     },
     "geometry": false,

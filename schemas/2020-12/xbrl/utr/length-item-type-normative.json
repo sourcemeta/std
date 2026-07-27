@@ -12,12 +12,14 @@
     {
       "title": "Foot",
       "description": "Twelve Inches",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/FT",
       "x-status": "REC",
       "x-symbol": "ft",
       "const": "ft"
     },
     {
       "description": "Inch",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/IN",
       "x-status": "REC",
       "x-symbol": "in",
       "const": "in"
@@ -25,6 +27,7 @@
     {
       "title": "Mile",
       "description": "5280 Feet",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/MI",
       "x-status": "REC",
       "x-symbol": "mi",
       "const": "mi"
@@ -32,6 +35,7 @@
     {
       "title": "Nautical Mile",
       "description": "1.15078 Miles (One Minute of Arc Latitude)",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/MI_N",
       "x-status": "REC",
       "x-symbol": "nmi",
       "const": "nmi"
@@ -39,6 +43,7 @@
     {
       "title": "Yard",
       "description": "Three Feet",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/YD",
       "x-status": "REC",
       "x-symbol": "yd",
       "const": "yd"
@@ -46,12 +51,14 @@
     {
       "title": "Centimetre",
       "description": "One-hundreth of Metre",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/centimetre",
       "x-status": "REC",
       "x-symbol": "cm",
       "const": "cm"
     },
     {
       "description": "Decimetre",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/decimetre",
       "x-status": "REC",
       "x-symbol": "dm",
       "const": "dm"
@@ -59,12 +66,14 @@
     {
       "title": "Kilometre",
       "description": "Thousand Metres",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/kilometre",
       "x-status": "REC",
       "x-symbol": "km",
       "const": "km"
     },
     {
       "description": "Metre",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/metre",
       "x-status": "REC",
       "x-symbol": "m",
       "const": "m"
@@ -72,6 +81,7 @@
     {
       "title": "Millimetre",
       "description": "One-thousandth of Metre",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/millimetre",
       "x-status": "REC",
       "x-symbol": "mm",
       "const": "mm"

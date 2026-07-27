@@ -11,6 +11,7 @@
     1000000000,
     -1000000000
   ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#long",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/standard/82075.html" ],
   "type": "integer",

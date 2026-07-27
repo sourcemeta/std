@@ -12,6 +12,7 @@
     {
       "title": "Volt",
       "description": "Electromotive Force",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/volt",
       "x-status": "REC",
       "x-symbol": "V",
       "const": "V"
@@ -19,6 +20,7 @@
     {
       "title": "Kilovolt",
       "description": "Thousand Volts of Electromotive Force",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/kilovolt",
       "x-status": "REC",
       "x-symbol": "kV",
       "const": "kV"
@@ -26,6 +28,7 @@
     {
       "title": "Megavolt",
       "description": "One million volts",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/megavolt",
       "x-status": "REC",
       "x-symbol": "MV",
       "const": "MV"
@@ -33,6 +36,7 @@
     {
       "title": "Gigavolt",
       "description": "One thousand million volts",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/gigavolt",
       "x-status": "REC",
       "x-symbol": "GV",
       "const": "GV"

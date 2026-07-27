@@ -3,6 +3,7 @@
   "title": "ISO/IEC 9899:2024 Signed 32-bit Integer (int32_t)",
   "description": "A signed integer type with width of exactly 32 bits",
   "examples": [ 0, 1, -1, 2147483647, -2147483648, 42, -999 ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#int",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/standard/82075.html" ],
   "type": "integer",

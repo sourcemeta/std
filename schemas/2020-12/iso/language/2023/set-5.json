@@ -9,111 +9,133 @@
   "anyOf": [
     {
       "title": "Afro-Asiatic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/afa",
       "x-name-french": "afro-asiatiques, langues",
       "const": "afa"
     },
     {
       "title": "Algonquian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/alg",
       "x-name-french": "algonquines, langues",
       "const": "alg"
     },
     {
       "title": "Apache languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/apa",
       "x-name-french": "apaches, langues",
       "const": "apa"
     },
     {
       "title": "Artificial languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/art",
       "x-name-french": "artificielles, langues",
       "const": "art"
     },
     {
       "title": "Athapascan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/ath",
       "x-name-french": "athapascanes, langues",
       "const": "ath"
     },
     {
       "title": "Australian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/aus",
       "x-name-french": "australiennes, langues",
       "const": "aus"
     },
     {
       "title": "Banda languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/bad",
       "x-name-french": "banda, langues",
       "const": "bad"
     },
     {
       "title": "Bamileke languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/bai",
       "x-name-french": "bamiléké, langues",
       "const": "bai"
     },
     {
       "title": "Baltic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/bat",
       "x-name-french": "baltes, langues",
       "const": "bat"
     },
     {
       "title": "Berber languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/ber",
       "x-name-french": "berbères, langues",
       "const": "ber"
     },
     {
       "title": "Bihari languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/bih",
       "x-name-french": "langues biharis",
       "const": "bih"
     },
     {
       "title": "Bantu languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/bnt",
       "x-name-french": "bantou, langues",
       "const": "bnt"
     },
     {
       "title": "Batak languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/btk",
       "x-name-french": "batak, langues",
       "const": "btk"
     },
     {
       "title": "Central American Indian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/cai",
       "x-name-french": "amérindiennes de L'Amérique centrale, langues",
       "const": "cai"
     },
     {
       "title": "Caucasian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/cau",
       "x-name-french": "caucasiennes, langues",
       "const": "cau"
     },
     {
       "title": "Celtic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/cel",
       "x-name-french": "celtiques, langues; celtes, langues",
       "const": "cel"
     },
     {
       "title": "Chamic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/cmc",
       "x-name-french": "chames, langues",
       "const": "cmc"
     },
     {
       "title": "Cushitic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/cus",
       "x-name-french": "couchitiques, langues",
       "const": "cus"
     },
     {
       "title": "Land Dayak languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/day",
       "x-name-french": "dayak, langues",
       "const": "day"
     },
     {
       "title": "Dravidian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/dra",
       "x-name-french": "dravidiennes, langues",
       "const": "dra"
     },
     {
       "title": "Finno-Ugrian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/fiu",
       "x-name-french": "finno-ougriennes, langues",
       "const": "fiu"
     },
     {
       "title": "Germanic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/gem",
       "x-name-french": "germaniques, langues",
       "const": "gem"
     },
@@ -124,46 +146,55 @@
     },
     {
       "title": "Ijo languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/ijo",
       "x-name-french": "ijo, langues",
       "const": "ijo"
     },
     {
       "title": "Indic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/inc",
       "x-name-french": "indo-aryennes, langues",
       "const": "inc"
     },
     {
       "title": "Indo-European languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/ine",
       "x-name-french": "indo-européennes, langues",
       "const": "ine"
     },
     {
       "title": "Iranian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/ira",
       "x-name-french": "iraniennes, langues",
       "const": "ira"
     },
     {
       "title": "Iroquoian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/iro",
       "x-name-french": "iroquoises, langues",
       "const": "iro"
     },
     {
       "title": "Karen languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/kar",
       "x-name-french": "karen, langues",
       "const": "kar"
     },
     {
       "title": "Khoisan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/khi",
       "x-name-french": "khoïsan, langues",
       "const": "khi"
     },
     {
       "title": "Kru languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/kro",
       "x-name-french": "krou, langues",
       "const": "kro"
     },
     {
       "title": "Austronesian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/map",
       "x-name-french": "austronésiennes, langues",
       "const": "map"
     },
@@ -174,11 +205,13 @@
     },
     {
       "title": "Mon-Khmer languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/mkh",
       "x-name-french": "môn-khmer, langues",
       "const": "mkh"
     },
     {
       "title": "Manobo languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/mno",
       "x-name-french": "manobo, langues",
       "const": "mno"
     },
@@ -189,141 +222,169 @@
     },
     {
       "title": "Munda languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/mun",
       "x-name-french": "mounda, langues",
       "const": "mun"
     },
     {
       "title": "Mayan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/myn",
       "x-name-french": "maya, langues",
       "const": "myn"
     },
     {
       "title": "Nahuatl languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/nah",
       "x-name-french": "nahuatl, langues",
       "const": "nah"
     },
     {
       "title": "North American Indian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/nai",
       "x-name-french": "nord-amérindiennes, langues",
       "const": "nai"
     },
     {
       "title": "Niger-Kordofanian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/nic",
       "x-name-french": "nigéro-kordofaniennes, langues",
       "const": "nic"
     },
     {
       "title": "Nubian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/nub",
       "x-name-french": "nubiennes, langues",
       "const": "nub"
     },
     {
       "title": "Otomian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/oto",
       "x-name-french": "otomi, langues",
       "const": "oto"
     },
     {
       "title": "Papuan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/paa",
       "x-name-french": "papoues, langues",
       "const": "paa"
     },
     {
       "title": "Philippine languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/phi",
       "x-name-french": "philippines, langues",
       "const": "phi"
     },
     {
       "title": "Prakrit languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/pra",
       "x-name-french": "prâkrit, langues",
       "const": "pra"
     },
     {
       "title": "Romance languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/roa",
       "x-name-french": "romanes, langues",
       "const": "roa"
     },
     {
       "title": "South American Indian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/sai",
       "x-name-french": "sud-amérindiennes, langues",
       "const": "sai"
     },
     {
       "title": "Salishan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/sal",
       "x-name-french": "salishennes, langues",
       "const": "sal"
     },
     {
       "title": "Semitic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/sem",
       "x-name-french": "sémitiques, langues",
       "const": "sem"
     },
     {
       "title": "Sign Languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/sgn",
       "x-name-french": "langues des signes",
       "const": "sgn"
     },
     {
       "title": "Siouan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/sio",
       "x-name-french": "sioux, langues",
       "const": "sio"
     },
     {
       "title": "Sino-Tibetan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/sit",
       "x-name-french": "sino-tibétaines, langues",
       "const": "sit"
     },
     {
       "title": "Slavic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/sla",
       "x-name-french": "slaves, langues",
       "const": "sla"
     },
     {
       "title": "Sami languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/smi",
       "x-name-french": "sames, langues",
       "const": "smi"
     },
     {
       "title": "Songhai languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/son",
       "x-name-french": "songhai, langues",
       "const": "son"
     },
     {
       "title": "Nilo-Saharan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/ssa",
       "x-name-french": "nilo-sahariennes, langues",
       "const": "ssa"
     },
     {
       "title": "Tai languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/tai",
       "x-name-french": "tai, langues",
       "const": "tai"
     },
     {
       "title": "Tupi languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/tup",
       "x-name-french": "tupi, langues",
       "const": "tup"
     },
     {
       "title": "Altaic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/tut",
       "x-name-french": "altaïques, langues",
       "const": "tut"
     },
     {
       "title": "Wakashan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/wak",
       "x-name-french": "wakashanes, langues",
       "const": "wak"
     },
     {
       "title": "Sorbian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/wen",
       "x-name-french": "sorabes, langues",
       "const": "wen"
     },
     {
       "title": "Yupik languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/ypk",
       "x-name-french": "yupik, langues",
       "const": "ypk"
     },
     {
       "title": "Zande languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/znd",
       "x-name-french": "zandé, langues",
       "const": "znd"
     }

@@ -12,11 +12,16 @@
       "./rules/comment.json",
       "./rules/dialect.json",
       "./rules/identifiers.json",
+      "./rules/jsonld-bare-override.json",
+      "./rules/jsonld-unmarked-null.json",
       "./rules/license.json",
       "./rules/links.json",
       "./rules/single-line-text.json",
       "./rules/symbol.json",
-      { "path": "./rules/root.json", "topLevel": true }
+      {
+        "path": "./rules/root.json",
+        "topLevel": true
+      }
     ]
   }
 }

@@ -1,0 +1,42 @@
+{
+  "$schema": "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion",
+  "title": "std/jsonld_bare_override",
+  "description": "x-jsonld-override only affects sibling x-jsonld keywords declared in the same schema object, so a bare flag is dead code",
+  "if": {
+    "required": [ "x-jsonld-override" ]
+  },
+  "then": {
+    "anyOf": [
+      {
+        "required": [ "x-jsonld-id" ]
+      },
+      {
+        "required": [ "x-jsonld-reverse" ]
+      },
+      {
+        "required": [ "x-jsonld-type" ]
+      },
+      {
+        "required": [ "x-jsonld-datatype" ]
+      },
+      {
+        "required": [ "x-jsonld-language" ]
+      },
+      {
+        "required": [ "x-jsonld-direction" ]
+      },
+      {
+        "required": [ "x-jsonld-json" ]
+      },
+      {
+        "required": [ "x-jsonld-graph" ]
+      },
+      {
+        "required": [ "x-jsonld-container" ]
+      },
+      {
+        "required": [ "x-jsonld-self" ]
+      }
+    ]
+  }
+}

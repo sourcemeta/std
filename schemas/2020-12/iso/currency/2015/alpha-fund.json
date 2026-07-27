@@ -3,6 +3,7 @@
   "title": "ISO 4217:2015 Alphabetic Fund Code",
   "description": "A three-letter alphabetic fund code (2025-05-12)",
   "examples": [ "BOV", "CHE", "CHW", "CLF" ],
+  "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/{this}",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/iso-4217-currency-codes.html" ],
   "anyOf": [

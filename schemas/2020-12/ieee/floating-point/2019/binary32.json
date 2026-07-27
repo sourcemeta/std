@@ -10,6 +10,7 @@
     -3.402823466385288598117041834845169254400e+38,
     1.4013e-45
   ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#float",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://ieeexplore.ieee.org/document/8766229" ],
   "type": "number",

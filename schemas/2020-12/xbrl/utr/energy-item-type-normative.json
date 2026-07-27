@@ -24,6 +24,7 @@
     {
       "title": "Foot-Pound",
       "description": "Foot-Pound Force",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/FT-LB_F",
       "x-status": "REC",
       "x-symbol": "ft-lb",
       "const": "ft_lb"
@@ -60,6 +61,7 @@
     },
     {
       "description": "Joule",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/joule",
       "x-status": "REC",
       "x-symbol": "J",
       "const": "J"
@@ -67,6 +69,7 @@
     {
       "title": "Kilojoule",
       "description": "Thousand Joules",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/kilojoule",
       "x-status": "REC",
       "x-symbol": "kJ",
       "const": "kJ"
@@ -74,6 +77,7 @@
     {
       "title": "Kilowatt-Hours",
       "description": "Kilowatt-Hours of Energy",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/KiloW-HR",
       "x-status": "REC",
       "x-symbol": "kWh",
       "const": "kWh"
@@ -81,24 +85,28 @@
     {
       "title": "mJ",
       "description": "Millijoules",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/millijoule",
       "x-status": "REC",
       "x-symbol": "mJ",
       "const": "mJ"
     },
     {
       "description": "Megawatt-Hour",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/MegaW-HR",
       "x-status": "REC",
       "x-symbol": "MWh",
       "const": "MWh"
     },
     {
       "description": "Gigawatt-Hour",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/GigaW-HR",
       "x-status": "REC",
       "x-symbol": "GWh",
       "const": "GWh"
     },
     {
       "description": "Terawatt-Hour",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/TeraW-HR",
       "x-status": "REC",
       "x-symbol": "TWh",
       "const": "TWh"
@@ -141,6 +149,7 @@
     {
       "title": "Watt-Hours",
       "description": "Watt-Hours of Energy",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/W-HR",
       "x-status": "REC",
       "x-symbol": "Wh",
       "const": "Wh"
@@ -148,6 +157,7 @@
     {
       "title": "Volt-ampere-hours",
       "description": "Volt-ampere (VA) hours of energy",
+      "x-jsonld-self": "http://qudt.org/vocab/unit/V-A-HR",
       "x-status": "REC",
       "x-symbol": "VAh",
       "const": "VAh"
@@ -169,6 +179,7 @@
     {
       "title": "Gigajoule",
       "description": "Billion Joules",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/gigajoule",
       "x-status": "REC",
       "x-symbol": "GJ",
       "const": "GJ"
@@ -176,6 +187,7 @@
     {
       "title": "Megajoule",
       "description": "Million Joules",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/megajoule",
       "x-status": "REC",
       "x-symbol": "MJ",
       "const": "MJ"
@@ -183,6 +195,7 @@
     {
       "title": "Terajoule",
       "description": "Trillion Joules",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/terajoule",
       "x-status": "REC",
       "x-symbol": "TJ",
       "const": "TJ"

@@ -1,0 +1,97 @@
+{
+  "$schema": "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion",
+  "title": "std/jsonld_unmarked_null",
+  "description": "A null x-jsonld value declares nothing unless x-jsonld-override marks it as a tombstone, so an unmarked null is dead code",
+  "if": {
+    "anyOf": [
+      {
+        "required": [ "x-jsonld-id" ],
+        "properties": {
+          "x-jsonld-id": {
+            "type": "null"
+          }
+        }
+      },
+      {
+        "required": [ "x-jsonld-reverse" ],
+        "properties": {
+          "x-jsonld-reverse": {
+            "type": "null"
+          }
+        }
+      },
+      {
+        "required": [ "x-jsonld-type" ],
+        "properties": {
+          "x-jsonld-type": {
+            "type": "null"
+          }
+        }
+      },
+      {
+        "required": [ "x-jsonld-datatype" ],
+        "properties": {
+          "x-jsonld-datatype": {
+            "type": "null"
+          }
+        }
+      },
+      {
+        "required": [ "x-jsonld-language" ],
+        "properties": {
+          "x-jsonld-language": {
+            "type": "null"
+          }
+        }
+      },
+      {
+        "required": [ "x-jsonld-direction" ],
+        "properties": {
+          "x-jsonld-direction": {
+            "type": "null"
+          }
+        }
+      },
+      {
+        "required": [ "x-jsonld-json" ],
+        "properties": {
+          "x-jsonld-json": {
+            "type": "null"
+          }
+        }
+      },
+      {
+        "required": [ "x-jsonld-graph" ],
+        "properties": {
+          "x-jsonld-graph": {
+            "type": "null"
+          }
+        }
+      },
+      {
+        "required": [ "x-jsonld-container" ],
+        "properties": {
+          "x-jsonld-container": {
+            "type": "null"
+          }
+        }
+      },
+      {
+        "required": [ "x-jsonld-self" ],
+        "properties": {
+          "x-jsonld-self": {
+            "type": "null"
+          }
+        }
+      }
+    ]
+  },
+  "then": {
+    "required": [ "x-jsonld-override" ],
+    "properties": {
+      "x-jsonld-override": {
+        "const": true
+      }
+    }
+  }
+}
