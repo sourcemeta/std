@@ -23,7 +23,7 @@ def expand_language_type:
   "examples": (.set_2_terminologic | sort_by(.code) | .[0:4] | map(.code)),
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": ["https://www.iso.org/standard/74575.html"],
-  "anyOf": (
+  "anyOf": ((
     .set_2_terminologic
     | sort_by(.code)
     | map({
@@ -41,5 +41,5 @@ def expand_language_type:
     "title": "Reserved for local use",
     "type": "string",
     "pattern": "^q[a-t][a-z]$"
-  }]
+  }])
 }
