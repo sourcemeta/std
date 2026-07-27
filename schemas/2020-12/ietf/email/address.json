@@ -11,6 +11,5 @@
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc5321#section-4.1.2" ],
   "type": "string",
-  "format": "email",
-  "minLength": 1
+  "format": "email"
 }
