@@ -120,6 +120,11 @@
       "description": "Invalid - number type",
       "data": 1684162200,
       "valid": false
+    },
+    {
+      "description": "Valid - years may have more than four digits",
+      "valid": true,
+      "data": "12000-10-10T12:00:00Z"
     }
   ]
 }

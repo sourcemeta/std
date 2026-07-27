@@ -115,6 +115,11 @@
       "description": "Invalid - number type",
       "data": 20230515,
       "valid": false
+    },
+    {
+      "description": "Invalid - timezone offset beyond the fourteen hour cap",
+      "valid": false,
+      "data": "2002-10-10+15:00"
     }
   ]
 }

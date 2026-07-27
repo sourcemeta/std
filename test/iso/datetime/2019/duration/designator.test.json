@@ -195,6 +195,31 @@
       "description": "Valid - zero seconds",
       "data": "PT0S",
       "valid": true
+    },
+    {
+      "description": "Valid - years and days with months omitted",
+      "valid": true,
+      "data": "P1Y1D"
+    },
+    {
+      "description": "Valid - hours and seconds with minutes omitted",
+      "valid": true,
+      "data": "PT1H1S"
+    },
+    {
+      "description": "Valid - comma as the decimal sign",
+      "valid": true,
+      "data": "P0,5Y"
+    },
+    {
+      "description": "Invalid - components out of order",
+      "valid": false,
+      "data": "P1D1Y"
+    },
+    {
+      "description": "Invalid - fraction on a component that is not the lowest order",
+      "valid": false,
+      "data": "P0.5Y1D"
     }
   ]
 }

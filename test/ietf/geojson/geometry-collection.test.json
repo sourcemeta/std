@@ -234,6 +234,24 @@
         "features": []
       },
       "valid": false
+    },
+    {
+      "description": "Valid - nested geometry collection",
+      "valid": true,
+      "data": {
+        "type": "GeometryCollection",
+        "geometries": [
+          {
+            "type": "GeometryCollection",
+            "geometries": [
+              {
+                "type": "Point",
+                "coordinates": [ 0, 0 ]
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

@@ -150,6 +150,11 @@
       "description": "Invalid - HTTPS URL with space",
       "data": "https://example.com/path with space",
       "valid": false
+    },
+    {
+      "description": "Invalid - empty host",
+      "valid": false,
+      "data": "https:///path"
     }
   ]
 }

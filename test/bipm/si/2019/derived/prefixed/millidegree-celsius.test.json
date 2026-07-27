@@ -50,6 +50,11 @@
       "description": "Invalid type - object",
       "data": {},
       "valid": false
+    },
+    {
+      "description": "Invalid - below the scaled absolute zero floor",
+      "valid": false,
+      "data": -273151
     }
   ]
 }

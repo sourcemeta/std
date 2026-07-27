@@ -240,6 +240,26 @@
       "description": "Valid - 31 December 2023",
       "data": "2023-12-31",
       "valid": true
+    },
+    {
+      "description": "Valid - leap day in a leap year",
+      "valid": true,
+      "data": "2020-02-29"
+    },
+    {
+      "description": "Valid - leap day in a century leap year",
+      "valid": true,
+      "data": "2000-02-29"
+    },
+    {
+      "description": "Invalid - leap day in a common year",
+      "valid": false,
+      "data": "2021-02-29"
+    },
+    {
+      "description": "Invalid - leap day in a century common year",
+      "valid": false,
+      "data": "2100-02-29"
     }
   ]
 }
