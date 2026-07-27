@@ -34,6 +34,7 @@
       "const": "GeometryCollection"
     },
     "geometries": {
+      "x-jsonld-container": "@set",
       "x-jsonld-id": "https://purl.org/geojson/vocab#geometry",
       "type": "array",
       "items": {
