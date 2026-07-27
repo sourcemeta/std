@@ -50,6 +50,21 @@
       "description": "Invalid - array type",
       "data": [],
       "valid": false
+    },
+    {
+      "description": "Invalid - control character outside the XML Char production",
+      "valid": false,
+      "data": "a\u0007b"
+    },
+    {
+      "description": "Invalid - the noncharacter U+FFFE",
+      "valid": false,
+      "data": "a￾b"
+    },
+    {
+      "description": "Valid - tab, newline, and carriage return are XML Chars",
+      "valid": true,
+      "data": "a\t\n\rb"
     }
   ]
 }

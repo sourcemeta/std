@@ -17,7 +17,10 @@
     "urn:example:foo/bar/"
   ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "x-links": [ "https://www.rfc-editor.org/rfc/rfc8141#section-2" ],
+  "x-links": [
+    "https://www.rfc-editor.org/rfc/rfc8141#section-2",
+    "https://www.rfc-editor.org/rfc/rfc2141#section-2.1"
+  ],
   "$ref": "./uri.json",
   "not": {
     "$comment": "Disallow reserved NID value 'urn'",

@@ -70,6 +70,11 @@
       "description": "Invalid - empty string",
       "data": "",
       "valid": false
+    },
+    {
+      "description": "Invalid - timezone offset beyond the fourteen hour cap",
+      "valid": false,
+      "data": "---15+23:59"
     }
   ]
 }

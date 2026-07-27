@@ -180,6 +180,36 @@
       "description": "URN with empty fragment",
       "data": "urn:example:foo#",
       "valid": true
+    },
+    {
+      "description": "Invalid - NSS cannot start with a slash",
+      "valid": false,
+      "data": "urn:example:/foo"
+    },
+    {
+      "description": "Valid - question mark inside an r-component",
+      "valid": true,
+      "data": "urn:example:foo?+a?b"
+    },
+    {
+      "description": "Invalid - empty r-component",
+      "valid": false,
+      "data": "urn:example:foo?+"
+    },
+    {
+      "description": "Invalid - empty q-component",
+      "valid": false,
+      "data": "urn:example:foo?="
+    },
+    {
+      "description": "Valid - two character NID",
+      "valid": true,
+      "data": "urn:ab:x"
+    },
+    {
+      "description": "Invalid - thirty-three character NID",
+      "valid": false,
+      "data": "urn:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:x"
     }
   ]
 }

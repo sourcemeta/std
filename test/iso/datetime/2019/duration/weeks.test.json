@@ -110,6 +110,11 @@
       "description": "Invalid - weeks mixed with time",
       "data": "P1WT1H",
       "valid": false
+    },
+    {
+      "description": "Valid - comma as the decimal sign",
+      "valid": true,
+      "data": "P1,5W"
     }
   ]
 }

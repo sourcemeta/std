@@ -300,6 +300,16 @@
       "description": "Valid - 13 months",
       "data": "2023-01-01T00:00:00/P13M",
       "valid": true
+    },
+    {
+      "description": "Valid - duration with months omitted",
+      "valid": true,
+      "data": "1985-04-12T23:20:50/P1Y1D"
+    },
+    {
+      "description": "Valid - duration with a comma decimal sign",
+      "valid": true,
+      "data": "1985-04-12T23:20:50/PT0,5S"
     }
   ]
 }

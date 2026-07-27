@@ -13,9 +13,6 @@
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc4648.html#section-8" ],
   "type": "string",
-  "not": {
-    "pattern": "[\\x00-\\x1F]"
-  },
   "pattern": "^([0-9A-Fa-f]{2})*$",
   "contentEncoding": "base16"
 }

@@ -637,6 +637,11 @@
       "description": "Valid - 4-byte with underscore",
       "data": "𐐀_id",
       "valid": true
+    },
+    {
+      "description": "Invalid - extender character cannot start a name",
+      "valid": false,
+      "data": "ːname"
     }
   ]
 }

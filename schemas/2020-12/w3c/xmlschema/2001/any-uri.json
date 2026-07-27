@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "W3C XML Schema anyURI",
-  "description": "The anyURI datatype represents an Internationalized Resource Identifier (IRI) reference as defined in RFC 3987, either absolute or relative (§3.2.17)",
+  "description": "The anyURI datatype represents a Uniform Resource Identifier reference (§3.2.17)",
   "$comment": "The anyURI lexical space is laxer than RFC 3986, as any XML character sequence can be escaped into a URI",
   "examples": [
     "http://www.example.com",

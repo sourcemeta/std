@@ -90,6 +90,11 @@
       "description": "Invalid - number type",
       "data": 515,
       "valid": false
+    },
+    {
+      "description": "Invalid - timezone offset beyond the fourteen hour cap",
+      "valid": false,
+      "data": "--09-14+23:00"
     }
   ]
 }

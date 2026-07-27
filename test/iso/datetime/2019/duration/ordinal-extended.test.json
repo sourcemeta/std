@@ -47,9 +47,9 @@
       "valid": true
     },
     {
-      "description": "Valid - 5 years day 366 (leap year), 6 hours 15 minutes 30 seconds",
+      "description": "Invalid - 366 days exceeds the carry-over point",
       "data": "P0005-366T06:15:30",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Invalid - missing P prefix",
@@ -112,9 +112,9 @@
       "valid": false
     },
     {
-      "description": "Invalid - ordinal day 000 (ordinal days should be 001-366)",
+      "description": "Valid - zero days is a legal duration quantity",
       "data": "P0001-000T00:00:00",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Invalid - ordinal day 367 (ordinal days should be 001-366)",
@@ -162,9 +162,9 @@
       "valid": true
     },
     {
-      "description": "Valid - ordinal day 366 (maximum valid ordinal day)",
+      "description": "Invalid - 366 days exceeds the carry-over point",
       "data": "P0000-366T00:00:00",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Valid - ordinal day 365",
@@ -202,24 +202,24 @@
       "valid": true
     },
     {
-      "description": "Valid - expanded year with plus sign (5 digits)",
+      "description": "Invalid - durations take no sign and no expanded year form",
       "data": "P+10000-001T00:00:00",
-      "valid": true
+      "valid": false
     },
     {
-      "description": "Valid - expanded year with minus sign (5 digits)",
+      "description": "Invalid - durations take no sign and no expanded year form",
       "data": "P-10000-001T00:00:00",
-      "valid": true
+      "valid": false
     },
     {
-      "description": "Valid - expanded year with plus sign (6 digits)",
+      "description": "Invalid - durations take no sign and no expanded year form",
       "data": "P+100000-001T00:00:00",
-      "valid": true
+      "valid": false
     },
     {
-      "description": "Valid - expanded year with minus sign (10 digits)",
+      "description": "Invalid - durations take no sign and no expanded year form",
       "data": "P-1000000000-001T00:00:00",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Invalid - expanded year without sign (5 digits)",
@@ -262,11 +262,6 @@
       "valid": false
     },
     {
-      "description": "Invalid - day 000",
-      "data": "P0001-000T00:00:00",
-      "valid": false
-    },
-    {
       "description": "Invalid - day 367",
       "data": "P0001-367T00:00:00",
       "valid": false
@@ -287,9 +282,9 @@
       "valid": false
     },
     {
-      "description": "Valid - day 366 (leap year validation is consumer responsibility)",
+      "description": "Invalid - 366 days exceeds the carry-over point",
       "data": "P0001-366T00:00:00",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Valid - day 001",

@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "RFC 3986 Uniform Resource Locator (URL)",
   "description": "A locatable absolute Uniform Resource Identifier (URI)",
+  "$comment": "Given the referenced URI schema, a locator is exactly a URI whose character after the scheme colon is a slash, question mark, hash, or the end of the string",
   "examples": [
     "https://example.com/path/to/resource?query=value#section",
     "http://user:pass@192.168.1.1:8080/api/v1",
@@ -12,17 +13,5 @@
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc3986#section-3" ],
   "$ref": "./uri.json",
-  "anyOf": [
-    {
-      "$comment": "With authority",
-      "pattern": "^[A-Za-z][A-Za-z0-9+\\-.]*://"
-    },
-    {
-      "$comment": "Rootless-path URIs such as mailto and urn are not syntactically distinguishable as locators, so only path-absolute and empty paths qualify",
-      "not": {
-        "pattern": "^[^:]+://"
-      },
-      "pattern": "^[A-Za-z][A-Za-z0-9+\\-.]*:(?:/[^?#]*)?(?:\\?[^#]*)?(?:#.*)?$"
-    }
-  ]
+  "pattern": "^[A-Za-z][A-Za-z0-9+\\-.]*:(?:[/?#]|$)"
 }

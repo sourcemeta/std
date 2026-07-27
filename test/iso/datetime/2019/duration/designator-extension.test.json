@@ -335,6 +335,16 @@
       "description": "Invalid type - object",
       "data": {},
       "valid": false
+    },
+    {
+      "description": "Valid - negative week duration",
+      "valid": true,
+      "data": "-P1W"
+    },
+    {
+      "description": "Valid - negative duration with months omitted",
+      "valid": true,
+      "data": "-P1Y1D"
     }
   ]
 }

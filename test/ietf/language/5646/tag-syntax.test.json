@@ -415,6 +415,16 @@
       "description": "Valid - extension with 8-char subtag",
       "data": "en-u-abcdefgh",
       "valid": true
+    },
+    {
+      "description": "Valid - grandfathered tag in uppercase",
+      "valid": true,
+      "data": "I-KLINGON"
+    },
+    {
+      "description": "Valid - grandfathered tag in mixed case",
+      "valid": true,
+      "data": "En-GB-Oed"
     }
   ]
 }

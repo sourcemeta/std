@@ -6,8 +6,5 @@
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc9110#section-9" ],
   "type": "string",
-  "not": {
-    "pattern": "[\\x00-\\x1F\\x7F]"
-  },
   "pattern": "^[!#$%&'*+\\-.0-9A-Z^_`a-z|~]+$"
 }
