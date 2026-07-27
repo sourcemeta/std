@@ -7,5 +7,6 @@
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-prefix-factor": 1000000.0,
   "x-symbol": "Gg",
-  "$ref": "../unit/kilogram.json"
+  "type": "number",
+  "minimum": 0
 }

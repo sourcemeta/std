@@ -7,5 +7,6 @@
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-prefix-factor": 1e-27,
   "x-symbol": "rm",
-  "$ref": "../unit/metre.json"
+  "type": "number",
+  "minimum": 0
 }

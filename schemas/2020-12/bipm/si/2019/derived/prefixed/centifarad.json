@@ -7,5 +7,6 @@
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-prefix-factor": 0.01,
   "x-symbol": "cF",
-  "$ref": "../unit/farad.json"
+  "type": "number",
+  "exclusiveMinimum": 0
 }

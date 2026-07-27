@@ -5,5 +5,5 @@
   "examples": [ 0, 1, 5, 10, 0.001, 2.5, -1.5 ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
-  "$ref": "../unit/ampere.json"
+  "type": "number"
 }

@@ -7,5 +7,5 @@
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-prefix-factor": 1e+18,
   "x-symbol": "EA",
-  "$ref": "../unit/ampere.json"
+  "type": "number"
 }
