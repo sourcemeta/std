@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "W3C XML Schema base64Binary",
   "description": "The base64Binary datatype represents Base64-encoded arbitrary binary data (§3.2.16)",
-  "$comment": "The XSD 1.0 base64Binary grammar constrains the character before padding to B16/B04 classes and permits a single space after each character, unlike plain RFC 4648",
+  "$comment": "The XSD grammar requires canonical padding characters and permits a single space after each character",
   "examples": [
     "R0lGODlhAQABAAAAACw=",
     "SGVsbG8gV29ybGQh",

@@ -14,7 +14,7 @@
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc3986#section-4.2" ],
   "type": "string",
   "not": {
-    "$comment": "A relative reference is a URI reference that is not itself a URI (RFC 3986 section 4.1), so the two format assertions define it exactly",
+    "$comment": "A relative reference is a URI reference that is not itself a URI",
     "format": "uri"
   },
   "format": "uri-reference"

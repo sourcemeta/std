@@ -132,9 +132,19 @@
       "valid": false
     },
     {
-      "description": "Invalid - only 2D and 3D boxes exist, matching the library's three-dimensional position cap",
+      "description": "Valid - four dimensional box with even length",
       "data": [ 0, 0, 0, 0, 1, 1, 1, 1 ],
-      "valid": false
+      "valid": true
+    },
+    {
+      "description": "Invalid - odd number of elements can never be 2*n",
+      "valid": false,
+      "data": [ 1, 2, 3, 4, 5, 6, 7 ]
+    },
+    {
+      "description": "Invalid - latitude beyond range in a four dimensional box",
+      "valid": false,
+      "data": [ 0, 95, 0, 0, 10, 96, 10, 10 ]
     }
   ]
 }

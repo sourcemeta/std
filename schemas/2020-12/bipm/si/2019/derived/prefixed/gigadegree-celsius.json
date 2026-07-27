@@ -8,5 +8,5 @@
   "x-prefix-factor": 1000000000.0,
   "x-symbol": "G°C",
   "type": "number",
-  "minimum": -2.7315e-07
+  "minimum": -2.7315e-7
 }

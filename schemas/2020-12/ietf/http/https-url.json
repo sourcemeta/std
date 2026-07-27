@@ -11,7 +11,7 @@
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc9110#section-4.2.2" ],
   "$ref": "../uri/url.json",
   "not": {
-    "$comment": "RFC 9110 requires recipients to reject the scheme's URIs when the host is empty",
+    "$comment": "RFC 9110 requires rejecting an empty host",
     "pattern": "^[Hh][Tt][Tt][Pp][Ss]://(?:[^/?#]*@)?(?::[0-9]*)?(?:[/?#]|$)"
   },
   "pattern": "^[Hh][Tt][Tt][Pp][Ss]://"

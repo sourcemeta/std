@@ -14,11 +14,11 @@
   "$ref": "./uri.json",
   "anyOf": [
     {
-      "$comment": "With authority: the referenced URI schema already validates the whole syntax, so only the authority marker matters here",
+      "$comment": "With authority",
       "pattern": "^[A-Za-z][A-Za-z0-9+\\-.]*://"
     },
     {
-      "$comment": "Without authority: only path-absolute or empty paths qualify, as rootless-path URIs (mailto, news, urn) are not syntactically distinguishable as locators",
+      "$comment": "Rootless-path URIs such as mailto and urn are not syntactically distinguishable as locators, so only path-absolute and empty paths qualify",
       "not": {
         "pattern": "^[^:]+://"
       },
