@@ -3,29 +3,21 @@
 ($iso3[0] | map(select(.Part2b != null and .Part2b != "")) | INDEX(.Part2b)) as $lookup_by_part2b |
 ($iso3[0] | map(select(.Part2t != null and .Part2t != "")) | INDEX(.Part2t)) as $lookup_by_part2t |
 
-# Process ISO-639-2 data to extract Sets 1, 2, and 5
-($iso2[0] | map(
-  . as $entry |
-  ($entry.name | ascii_downcase | (contains("languages") or contains("language family"))) as $is_language_family |
+# Process the registration authority's ISO-639-2 file. The qaa-qtz row is a
+# range marker for the reserved local-use codes, not a code element itself,
+# so it is excluded here and modeled as a pattern branch in the templates
+($iso2[0] | map(select(.part2b != "qaa-qtz") |
   {
-    is_family: $is_language_family,
-    part1: ($entry.part1 // "" | if . == "" then null else . end),
-    part2b: ($entry.part2b // "" | if . == "" then null else . end),
-    part2t: ($entry.part2t // "" | if . == "" then null else . end),
-    name: $entry.name,
-    name_french: ($entry.name_french // "" | if . == "" then null else . end)
+    part1: (.part1 // "" | if . == "" then null else . end),
+    part2b: (.part2b // "" | if . == "" then null else . end),
+    part2t: (.part2t // "" | if . == "" then null else . end),
+    name: .name,
+    name_french: (.name_french // "" | if . == "" then null else . end)
   }
 )) as $processed_iso2 |
 
-# Set 5: Language families (identified by name patterns)
-($processed_iso2 | map(select(.is_family and .part2b != null) | {
-  code: .part2b,
-  name: .name,
-  name_french: .name_french
-})) as $set_5 |
-
 # Set 1: 2-letter codes (part1)
-($processed_iso2 | map(select(.is_family | not) | select(.part1 != null) |
+($processed_iso2 | map(select(.part1 != null) |
   ($lookup_by_part1[.part1] // {}) as $set_3_data |
   {
     code: .part1,
@@ -38,8 +30,9 @@
   }
 )) as $set_1 |
 
-# Set 2 bibliographic: 3-letter bibliographic codes (part2b)
-($processed_iso2 | map(select(.is_family | not) | select(.part2b != null) |
+# Set 2 bibliographic: every registered code element, including individual
+# languages, special codes, and collective codes
+($processed_iso2 | map(select(.part2b != null) |
   ($lookup_by_part2b[.part2b] // {}) as $set_3_data |
   {
     code: .part2b,
@@ -51,11 +44,13 @@
   }
 )) as $set_2_bibliographic |
 
-# Set 2 terminologic: 3-letter terminologic codes (part2t)
-($processed_iso2 | map(select(.is_family | not) | select(.part2t != null) |
-  ($lookup_by_part2t[.part2t] // {}) as $set_3_data |
+# Set 2 terminologic: the terminologic code equals the bibliographic code
+# except for the twenty divergent pairs
+($processed_iso2 | map(select(.part2b != null) |
+  (.part2t // .part2b) as $code |
+  ($lookup_by_part2t[$code] // $lookup_by_part2b[$code] // {}) as $set_3_data |
   {
-    code: .part2t,
+    code: $code,
     name: .name,
     name_french: .name_french,
     part1: .part1,
@@ -75,6 +70,13 @@
   part1: (.Part1 // "" | if . == "" then null else . end),
   comment: (.Comment // "" | if . == "" then null else . end)
 })) as $set_3 |
+
+# Set 5: the registration authority's own ISO 639-5 list
+($iso5[0] | map({
+  code: .code,
+  name: .["Label (English)"],
+  name_french: (.["Label (French)"] // "" | if . == "" then null else . end)
+})) as $set_5 |
 
 # Output combined structure
 {

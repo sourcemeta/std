@@ -1,4 +1,3 @@
-# The special codes him, mis, and mul are absent from the LOC iso639-5 vocabulary, so their branches mint no identifier
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 639-5:2023 Language Family Code",
@@ -17,6 +16,6 @@
       {
         "const": .code
       } +
-      (if (.code | IN("him", "mis", "mul") | not) then {"x-jsonld-self": ("http://id.loc.gov/vocabulary/iso639-5/" + .code)} else {} end))
+      {"x-jsonld-self": ("http://id.loc.gov/vocabulary/iso639-5/" + .code)})
   )
 }

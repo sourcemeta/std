@@ -125,6 +125,36 @@
       "description": "Invalid - individual language code (not language family)",
       "data": "eng",
       "valid": false
+    },
+    {
+      "description": "Valid - Austro-Asiatic languages",
+      "valid": true,
+      "data": "aav"
+    },
+    {
+      "description": "Valid - Creoles and pidgins",
+      "valid": true,
+      "data": "crp"
+    },
+    {
+      "description": "Valid - West Germanic languages",
+      "valid": true,
+      "data": "gmw"
+    },
+    {
+      "description": "Invalid - Himachali is a collective code but not a language family",
+      "valid": false,
+      "data": "him"
+    },
+    {
+      "description": "Invalid - uncoded languages is a special code, not a family",
+      "valid": false,
+      "data": "mis"
+    },
+    {
+      "description": "Invalid - multiple languages is a special code, not a family",
+      "valid": false,
+      "data": "mul"
     }
   ]
 }

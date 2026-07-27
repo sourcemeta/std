@@ -3,10 +3,16 @@
   "title": "ISO 639-5:2023 Language Family Code",
   "description": "A three-letter code for language families and groups from ISO 639-5",
   "$comment": "Set 5 codes language families and groups, not individual languages. It is independent from Sets 1-3",
-  "examples": [ "afa", "alg", "apa", "art" ],
+  "examples": [ "aav", "afa", "alg", "alv" ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/standard/74575.html" ],
   "anyOf": [
+    {
+      "title": "Austro-Asiatic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/aav",
+      "x-name-french": "austro-asiatiques, langues",
+      "const": "aav"
+    },
     {
       "title": "Afro-Asiatic languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/afa",
@@ -20,10 +26,28 @@
       "const": "alg"
     },
     {
+      "title": "Atlantic-Congo languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/alv",
+      "x-name-french": "atlantique-congo, langues",
+      "const": "alv"
+    },
+    {
       "title": "Apache languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/apa",
       "x-name-french": "apaches, langues",
       "const": "apa"
+    },
+    {
+      "title": "Alacalufan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/aqa",
+      "x-name-french": "alacalufanes, langues",
+      "const": "aqa"
+    },
+    {
+      "title": "Algic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/aql",
+      "x-name-french": "algiques, langues",
+      "const": "aql"
     },
     {
       "title": "Artificial languages",
@@ -38,10 +62,28 @@
       "const": "ath"
     },
     {
+      "title": "Arauan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/auf",
+      "x-name-french": "arauanes, langues",
+      "const": "auf"
+    },
+    {
       "title": "Australian languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/aus",
       "x-name-french": "australiennes, langues",
       "const": "aus"
+    },
+    {
+      "title": "Arawakan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/awd",
+      "x-name-french": "arawak, langues",
+      "const": "awd"
+    },
+    {
+      "title": "Uto-Aztecan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/azc",
+      "x-name-french": "uto-aztèques, langues",
+      "const": "azc"
     },
     {
       "title": "Banda languages",
@@ -88,7 +130,7 @@
     {
       "title": "Central American Indian languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/cai",
-      "x-name-french": "amérindiennes de L'Amérique centrale, langues",
+      "x-name-french": "amérindiennes de l'Amérique centrale, langues",
       "const": "cai"
     },
     {
@@ -96,6 +138,36 @@
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/cau",
       "x-name-french": "caucasiennes, langues",
       "const": "cau"
+    },
+    {
+      "title": "Chibchan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/cba",
+      "x-name-french": "chibcha, langues",
+      "const": "cba"
+    },
+    {
+      "title": "North Caucasian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/ccn",
+      "x-name-french": "caucasiennes du Nord, langues",
+      "const": "ccn"
+    },
+    {
+      "title": "South Caucasian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/ccs",
+      "x-name-french": "caucasiennes du Sud, langues",
+      "const": "ccs"
+    },
+    {
+      "title": "Chadic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/cdc",
+      "x-name-french": "tchadiques, langues",
+      "const": "cdc"
+    },
+    {
+      "title": "Caddoan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/cdd",
+      "x-name-french": "caddoanes, langues",
+      "const": "cdd"
     },
     {
       "title": "Celtic languages",
@@ -110,6 +182,36 @@
       "const": "cmc"
     },
     {
+      "title": "Creoles and pidgins, English‑based",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/cpe",
+      "x-name-french": "créoles et pidgins basés sur l'anglais",
+      "const": "cpe"
+    },
+    {
+      "title": "Creoles and pidgins, French‑based",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/cpf",
+      "x-name-french": "créoles et pidgins basés sur le français",
+      "const": "cpf"
+    },
+    {
+      "title": "Creoles and pidgins, Portuguese-based",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/cpp",
+      "x-name-french": "créoles et pidgins basés sur le portugais",
+      "const": "cpp"
+    },
+    {
+      "title": "Creoles and pidgins",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/crp",
+      "x-name-french": "créoles et pidgins",
+      "const": "crp"
+    },
+    {
+      "title": "Central Sudanic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/csu",
+      "x-name-french": "soudaniques centrales, langues",
+      "const": "csu"
+    },
+    {
       "title": "Cushitic languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/cus",
       "x-name-french": "couchitiques, langues",
@@ -122,10 +224,34 @@
       "const": "day"
     },
     {
+      "title": "Mande languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/dmn",
+      "x-name-french": "mandé, langues",
+      "const": "dmn"
+    },
+    {
       "title": "Dravidian languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/dra",
       "x-name-french": "dravidiennes, langues",
       "const": "dra"
+    },
+    {
+      "title": "Egyptian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/egx",
+      "x-name-french": "égyptiennes, langues",
+      "const": "egx"
+    },
+    {
+      "title": "Eskimo-Aleut languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/esx",
+      "x-name-french": "esquimaudes-aléoutiennes, langues",
+      "const": "esx"
+    },
+    {
+      "title": "Basque (family)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/euq",
+      "x-name-french": "basque (famille)",
+      "const": "euq"
     },
     {
       "title": "Finno-Ugrian languages",
@@ -134,15 +260,64 @@
       "const": "fiu"
     },
     {
+      "title": "Formosan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/fox",
+      "x-name-french": "formosanes, langues",
+      "const": "fox"
+    },
+    {
       "title": "Germanic languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/gem",
       "x-name-french": "germaniques, langues",
       "const": "gem"
     },
     {
-      "title": "Himachali languages; Western Pahari languages",
-      "x-name-french": "langues himachalis; langues paharis occidentales",
-      "const": "him"
+      "title": "East Germanic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/gme",
+      "x-name-french": "germaniques orientales, langues",
+      "const": "gme"
+    },
+    {
+      "title": "North Germanic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/gmq",
+      "x-name-french": "germaniques septentrionales, langues",
+      "const": "gmq"
+    },
+    {
+      "title": "West Germanic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/gmw",
+      "x-name-french": "germaniques occidentales, langues",
+      "const": "gmw"
+    },
+    {
+      "title": "Greek languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/grk",
+      "x-name-french": "grecques, langues",
+      "const": "grk"
+    },
+    {
+      "title": "Hmong-Mien languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/hmx",
+      "x-name-french": "hmong-mien, langues",
+      "const": "hmx"
+    },
+    {
+      "title": "Hokan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/hok",
+      "x-name-french": "hoka, langues",
+      "const": "hok"
+    },
+    {
+      "title": "Armenian (family)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/hyx",
+      "x-name-french": "arménien (famille)",
+      "const": "hyx"
+    },
+    {
+      "title": "Indo-Iranian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/iir",
+      "x-name-french": "indo-iraniennes, langues",
+      "const": "iir"
     },
     {
       "title": "Ijo languages",
@@ -175,10 +350,28 @@
       "const": "iro"
     },
     {
+      "title": "Italic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/itc",
+      "x-name-french": "italiques, langues",
+      "const": "itc"
+    },
+    {
+      "title": "Japanese (family)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/jpx",
+      "x-name-french": "japonais (famille)",
+      "const": "jpx"
+    },
+    {
       "title": "Karen languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/kar",
       "x-name-french": "karen, langues",
       "const": "kar"
+    },
+    {
+      "title": "Kordofanian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/kdo",
+      "x-name-french": "kordofaniennes, langues",
+      "const": "kdo"
     },
     {
       "title": "Khoisan languages",
@@ -199,11 +392,6 @@
       "const": "map"
     },
     {
-      "title": "Uncoded languages",
-      "x-name-french": "langues non codées",
-      "const": "mis"
-    },
-    {
       "title": "Mon-Khmer languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/mkh",
       "x-name-french": "môn-khmer, langues",
@@ -214,11 +402,6 @@
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/mno",
       "x-name-french": "manobo, langues",
       "const": "mno"
-    },
-    {
-      "title": "Multiple languages",
-      "x-name-french": "multilingue",
-      "const": "mul"
     },
     {
       "title": "Munda languages",
@@ -245,6 +428,12 @@
       "const": "nai"
     },
     {
+      "title": "Trans-New Guinea languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/ngf",
+      "x-name-french": "trans-nouvelle-guinée, langues",
+      "const": "ngf"
+    },
+    {
       "title": "Niger-Kordofanian languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/nic",
       "x-name-french": "nigéro-kordofaniennes, langues",
@@ -255,6 +444,18 @@
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/nub",
       "x-name-french": "nubiennes, langues",
       "const": "nub"
+    },
+    {
+      "title": "Oto-Manguean languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/omq",
+      "x-name-french": "otomangue, langues",
+      "const": "omq"
+    },
+    {
+      "title": "Omotic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/omv",
+      "x-name-french": "omotiques, langues",
+      "const": "omv"
     },
     {
       "title": "Otomian languages",
@@ -275,10 +476,40 @@
       "const": "phi"
     },
     {
+      "title": "Central Malayo-Polynesian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/plf",
+      "x-name-french": "malayo-polynésiennes centrales, langues",
+      "const": "plf"
+    },
+    {
+      "title": "Malayo-Polynesian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/poz",
+      "x-name-french": "malayo-polynésiennes, langues",
+      "const": "poz"
+    },
+    {
+      "title": "Eastern Malayo-Polynesian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/pqe",
+      "x-name-french": "malayo-polynésiennes orientales, langues",
+      "const": "pqe"
+    },
+    {
+      "title": "Western Malayo-Polynesian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/pqw",
+      "x-name-french": "malayo-polynésiennes occidentales, langues",
+      "const": "pqw"
+    },
+    {
       "title": "Prakrit languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/pra",
       "x-name-french": "prâkrit, langues",
       "const": "pra"
+    },
+    {
+      "title": "Quechuan (family)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/qwe",
+      "x-name-french": "quechua (famille)",
+      "const": "qwe"
     },
     {
       "title": "Romance languages",
@@ -299,13 +530,19 @@
       "const": "sal"
     },
     {
+      "title": "Eastern Sudanic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/sdv",
+      "x-name-french": "soudaniques orientales, langues",
+      "const": "sdv"
+    },
+    {
       "title": "Semitic languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/sem",
       "x-name-french": "sémitiques, langues",
       "const": "sem"
     },
     {
-      "title": "Sign Languages",
+      "title": "sign languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/sgn",
       "x-name-french": "langues des signes",
       "const": "sgn"
@@ -341,16 +578,40 @@
       "const": "son"
     },
     {
+      "title": "Albanian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/sqj",
+      "x-name-french": "albanaises, langues",
+      "const": "sqj"
+    },
+    {
       "title": "Nilo-Saharan languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/ssa",
       "x-name-french": "nilo-sahariennes, langues",
       "const": "ssa"
     },
     {
+      "title": "Samoyedic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/syd",
+      "x-name-french": "samoyèdes, langues",
+      "const": "syd"
+    },
+    {
       "title": "Tai languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/tai",
       "x-name-french": "tai, langues",
       "const": "tai"
+    },
+    {
+      "title": "Tibeto-Burman languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/tbq",
+      "x-name-french": "tibéto-birmanes, langues",
+      "const": "tbq"
+    },
+    {
+      "title": "Turkic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/trk",
+      "x-name-french": "turques, langues",
+      "const": "trk"
     },
     {
       "title": "Tupi languages",
@@ -365,6 +626,18 @@
       "const": "tut"
     },
     {
+      "title": "Tungus languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/tuw",
+      "x-name-french": "toungouses, langues",
+      "const": "tuw"
+    },
+    {
+      "title": "Uralic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/urj",
+      "x-name-french": "ouraliennes, langues",
+      "const": "urj"
+    },
+    {
       "title": "Wakashan languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/wak",
       "x-name-french": "wakashanes, langues",
@@ -377,10 +650,46 @@
       "const": "wen"
     },
     {
+      "title": "Mongolian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/xgn",
+      "x-name-french": "mongoles, langues",
+      "const": "xgn"
+    },
+    {
+      "title": "Na-Dene languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/xnd",
+      "x-name-french": "na-déné, langues",
+      "const": "xnd"
+    },
+    {
       "title": "Yupik languages",
       "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/ypk",
       "x-name-french": "yupik, langues",
       "const": "ypk"
+    },
+    {
+      "title": "Chinese (family)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/zhx",
+      "x-name-french": "chinois (famille)",
+      "const": "zhx"
+    },
+    {
+      "title": "East Slavic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/zle",
+      "x-name-french": "slaves orientales, langues",
+      "const": "zle"
+    },
+    {
+      "title": "South Slavic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/zls",
+      "x-name-french": "slaves méridionales, langues",
+      "const": "zls"
+    },
+    {
+      "title": "West Slavic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/zlw",
+      "x-name-french": "slaves occidentales, langues",
+      "const": "zlw"
     },
     {
       "title": "Zande languages",

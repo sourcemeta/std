@@ -110,6 +110,31 @@
       "description": "Invalid - bibliographic code (should use terminologic)",
       "data": "alb",
       "valid": false
+    },
+    {
+      "description": "Valid - terminologic code equals bibliographic for most languages",
+      "valid": true,
+      "data": "eng"
+    },
+    {
+      "description": "Valid - divergent terminologic code",
+      "valid": true,
+      "data": "deu"
+    },
+    {
+      "description": "Invalid - divergent bibliographic code is not terminologic",
+      "valid": false,
+      "data": "ger"
+    },
+    {
+      "description": "Valid - special code for uncoded languages",
+      "valid": true,
+      "data": "mis"
+    },
+    {
+      "description": "Valid - reserved local-use code",
+      "valid": true,
+      "data": "qaa"
     }
   ]
 }
