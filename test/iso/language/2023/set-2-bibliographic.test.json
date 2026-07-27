@@ -120,6 +120,46 @@
       "description": "Invalid - terminologic code (should use bibliographic)",
       "data": "sqi",
       "valid": false
+    },
+    {
+      "description": "Valid - special code for uncoded languages",
+      "valid": true,
+      "data": "mis"
+    },
+    {
+      "description": "Valid - special code for multiple languages",
+      "valid": true,
+      "data": "mul"
+    },
+    {
+      "description": "Valid - collective code",
+      "valid": true,
+      "data": "ber"
+    },
+    {
+      "description": "Valid - collective code for Himachali languages",
+      "valid": true,
+      "data": "him"
+    },
+    {
+      "description": "Valid - reserved local-use code",
+      "valid": true,
+      "data": "qaa"
+    },
+    {
+      "description": "Valid - reserved local-use code at the range end",
+      "valid": true,
+      "data": "qtz"
+    },
+    {
+      "description": "Invalid - the reserved range marker is not a code",
+      "valid": false,
+      "data": "qaa-qtz"
+    },
+    {
+      "description": "Invalid - outside the reserved range",
+      "valid": false,
+      "data": "qua"
     }
   ]
 }

@@ -110,11 +110,17 @@ build/iso/language/iso-639-3.json: \
 	vendor/data/iso/language/iso-639-3_Code_Tables/iso-639-3_Code_Tables_20251015/iso-639-3.tab \
 	scripts/csv2json.py
 	$(PYTHON) $(word 2,$^) --tab $< $@
+build/iso/language/iso-639-5.json: \
+	vendor/data/iso/language/iso639-5.tsv \
+	scripts/csv2json.py
+	$(PYTHON) $(word 2,$^) --tab $< $@
+
 build/iso/language/%.json: \
 	build/iso/language/iso-639-2.json \
 	build/iso/language/iso-639-3.json \
+	build/iso/language/iso-639-5.json \
 	templates/build/iso/language/%.jq
-	$(JQ) --slurpfile iso2 $< --slurpfile iso3 $(word 2,$^) -n -f $(word 3,$^) > $@
+	$(JQ) --slurpfile iso2 $< --slurpfile iso3 $(word 2,$^) --slurpfile iso5 $(word 3,$^) -n -f $(word 4,$^) > $@
 
 $(eval $(call MAKE_SCHEMA,2020-12/iso/language/2023/set-1,build/iso/language/enriched))
 $(eval $(call MAKE_SCHEMA,2020-12/iso/language/2023/set-2-bibliographic,build/iso/language/enriched))

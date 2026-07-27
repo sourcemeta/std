@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 639-2:2023 Bibliographic Language Code",
   "description": "A three-letter bibliographic language code from ISO 639-2",
-  "$comment": "Set 2 bibliographic is a superset of Set 1 and a subset of Set 3. Bibliographic codes are based on English language names",
+  "$comment": "Set 2 bibliographic is a superset of Set 1 and covers every registered code element, including special and collective codes that are not part of Set 3. Bibliographic codes are based on English language names",
   "examples": [ "aar", "abk", "ace", "ach" ],
-  "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/{this}",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/standard/74575.html" ],
   "anyOf": [
     {
       "title": "Afar",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/aar",
       "x-language-type": "living",
       "x-name-french": "afar",
       "x-scope": "individual",
@@ -18,6 +18,7 @@
     },
     {
       "title": "Abkhazian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/abk",
       "x-language-type": "living",
       "x-name-french": "abkhaze",
       "x-scope": "individual",
@@ -26,6 +27,7 @@
     },
     {
       "title": "Achinese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ace",
       "x-language-type": "living",
       "x-name-french": "aceh",
       "x-scope": "individual",
@@ -33,6 +35,7 @@
     },
     {
       "title": "Acoli",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ach",
       "x-language-type": "living",
       "x-name-french": "acoli",
       "x-scope": "individual",
@@ -40,6 +43,7 @@
     },
     {
       "title": "Adangme",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ada",
       "x-language-type": "living",
       "x-name-french": "adangme",
       "x-scope": "individual",
@@ -47,13 +51,21 @@
     },
     {
       "title": "Adyghe; Adygei",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ady",
       "x-language-type": "living",
       "x-name-french": "adyghé",
       "x-scope": "individual",
       "const": "ady"
     },
     {
+      "title": "Afro-Asiatic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/afa",
+      "x-name-french": "afro-asiatiques, langues",
+      "const": "afa"
+    },
+    {
       "title": "Afrihili",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/afh",
       "x-language-type": "constructed",
       "x-name-french": "afrihili",
       "x-scope": "individual",
@@ -61,6 +73,7 @@
     },
     {
       "title": "Afrikaans",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/afr",
       "x-language-type": "living",
       "x-name-french": "afrikaans",
       "x-scope": "individual",
@@ -69,6 +82,7 @@
     },
     {
       "title": "Ainu",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ain",
       "x-language-type": "living",
       "x-name-french": "aïnou",
       "x-scope": "individual",
@@ -76,6 +90,7 @@
     },
     {
       "title": "Akan",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/aka",
       "x-language-type": "living",
       "x-name-french": "akan",
       "x-scope": "macrolanguage",
@@ -84,6 +99,7 @@
     },
     {
       "title": "Akkadian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/akk",
       "x-language-type": "historic",
       "x-name-french": "akkadien",
       "x-scope": "individual",
@@ -91,6 +107,7 @@
     },
     {
       "title": "Albanian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/alb",
       "x-language-type": "living",
       "x-name-french": "albanais",
       "x-scope": "macrolanguage",
@@ -99,13 +116,21 @@
     },
     {
       "title": "Aleut",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ale",
       "x-language-type": "living",
       "x-name-french": "aléoute",
       "x-scope": "individual",
       "const": "ale"
     },
     {
+      "title": "Algonquian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/alg",
+      "x-name-french": "algonquines, langues",
+      "const": "alg"
+    },
+    {
       "title": "Southern Altai",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/alt",
       "x-language-type": "living",
       "x-name-french": "altai du Sud",
       "x-scope": "individual",
@@ -113,6 +138,7 @@
     },
     {
       "title": "Amharic",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/amh",
       "x-language-type": "living",
       "x-name-french": "amharique",
       "x-scope": "individual",
@@ -121,6 +147,7 @@
     },
     {
       "title": "English, Old (ca.450-1100)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ang",
       "x-language-type": "historic",
       "x-name-french": "anglo-saxon (ca.450-1100)",
       "x-scope": "individual",
@@ -128,13 +155,21 @@
     },
     {
       "title": "Angika",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/anp",
       "x-language-type": "living",
       "x-name-french": "angika",
       "x-scope": "individual",
       "const": "anp"
     },
     {
+      "title": "Apache languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/apa",
+      "x-name-french": "apaches, langues",
+      "const": "apa"
+    },
+    {
       "title": "Arabic",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ara",
       "x-language-type": "living",
       "x-name-french": "arabe",
       "x-scope": "macrolanguage",
@@ -143,6 +178,7 @@
     },
     {
       "title": "Official Aramaic (700-300 BCE); Imperial Aramaic (700-300 BCE)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/arc",
       "x-language-type": "historic",
       "x-name-french": "araméen d'empire (700-300 BCE)",
       "x-scope": "individual",
@@ -150,6 +186,7 @@
     },
     {
       "title": "Aragonese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/arg",
       "x-language-type": "living",
       "x-name-french": "aragonais",
       "x-scope": "individual",
@@ -158,6 +195,7 @@
     },
     {
       "title": "Armenian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/arm",
       "x-language-type": "living",
       "x-name-french": "arménien",
       "x-scope": "individual",
@@ -166,6 +204,7 @@
     },
     {
       "title": "Mapudungun; Mapuche",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/arn",
       "x-language-type": "living",
       "x-name-french": "mapudungun; mapuche; mapuce",
       "x-scope": "individual",
@@ -173,13 +212,21 @@
     },
     {
       "title": "Arapaho",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/arp",
       "x-language-type": "living",
       "x-name-french": "arapaho",
       "x-scope": "individual",
       "const": "arp"
     },
     {
+      "title": "Artificial languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/art",
+      "x-name-french": "artificielles, langues",
+      "const": "art"
+    },
+    {
       "title": "Arawak",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/arw",
       "x-language-type": "living",
       "x-name-french": "arawak",
       "x-scope": "individual",
@@ -187,6 +234,7 @@
     },
     {
       "title": "Assamese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/asm",
       "x-language-type": "living",
       "x-name-french": "assamais",
       "x-scope": "individual",
@@ -195,13 +243,27 @@
     },
     {
       "title": "Asturian; Bable; Leonese; Asturleonese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ast",
       "x-language-type": "living",
       "x-name-french": "asturien; bable; léonais; asturoléonais",
       "x-scope": "individual",
       "const": "ast"
     },
     {
+      "title": "Athapascan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ath",
+      "x-name-french": "athapascanes, langues",
+      "const": "ath"
+    },
+    {
+      "title": "Australian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/aus",
+      "x-name-french": "australiennes, langues",
+      "const": "aus"
+    },
+    {
       "title": "Avaric",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ava",
       "x-language-type": "living",
       "x-name-french": "avar",
       "x-scope": "individual",
@@ -210,6 +272,7 @@
     },
     {
       "title": "Avestan",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ave",
       "x-language-type": "historic",
       "x-name-french": "avestique",
       "x-scope": "individual",
@@ -218,6 +281,7 @@
     },
     {
       "title": "Awadhi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/awa",
       "x-language-type": "living",
       "x-name-french": "awadhi",
       "x-scope": "individual",
@@ -225,6 +289,7 @@
     },
     {
       "title": "Aymara",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/aym",
       "x-language-type": "living",
       "x-name-french": "aymara",
       "x-scope": "macrolanguage",
@@ -233,6 +298,7 @@
     },
     {
       "title": "Azerbaijani",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/aze",
       "x-language-type": "living",
       "x-name-french": "azéri",
       "x-scope": "macrolanguage",
@@ -240,7 +306,20 @@
       "const": "aze"
     },
     {
+      "title": "Banda languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bad",
+      "x-name-french": "banda, langues",
+      "const": "bad"
+    },
+    {
+      "title": "Bamileke languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bai",
+      "x-name-french": "bamiléké, langues",
+      "const": "bai"
+    },
+    {
       "title": "Bashkir",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bak",
       "x-language-type": "living",
       "x-name-french": "bachkir",
       "x-scope": "individual",
@@ -249,6 +328,7 @@
     },
     {
       "title": "Baluchi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bal",
       "x-language-type": "living",
       "x-name-french": "baloutchi",
       "x-scope": "macrolanguage",
@@ -256,6 +336,7 @@
     },
     {
       "title": "Bambara",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bam",
       "x-language-type": "living",
       "x-name-french": "bambara",
       "x-scope": "individual",
@@ -264,6 +345,7 @@
     },
     {
       "title": "Balinese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ban",
       "x-language-type": "living",
       "x-name-french": "balinais",
       "x-scope": "individual",
@@ -271,6 +353,7 @@
     },
     {
       "title": "Basque",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/baq",
       "x-language-type": "living",
       "x-name-french": "basque",
       "x-scope": "individual",
@@ -279,13 +362,21 @@
     },
     {
       "title": "Basa",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bas",
       "x-language-type": "living",
       "x-name-french": "basa",
       "x-scope": "individual",
       "const": "bas"
     },
     {
+      "title": "Baltic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bat",
+      "x-name-french": "baltes, langues",
+      "const": "bat"
+    },
+    {
       "title": "Beja; Bedawiyet",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bej",
       "x-language-type": "living",
       "x-name-french": "bedja",
       "x-scope": "individual",
@@ -293,6 +384,7 @@
     },
     {
       "title": "Belarusian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bel",
       "x-language-type": "living",
       "x-name-french": "biélorusse",
       "x-scope": "individual",
@@ -301,6 +393,7 @@
     },
     {
       "title": "Bemba",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bem",
       "x-language-type": "living",
       "x-name-french": "bemba",
       "x-scope": "individual",
@@ -308,6 +401,7 @@
     },
     {
       "title": "Bengali",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ben",
       "x-language-type": "living",
       "x-name-french": "bengali",
       "x-scope": "individual",
@@ -315,14 +409,28 @@
       "const": "ben"
     },
     {
+      "title": "Berber languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ber",
+      "x-name-french": "berbères, langues",
+      "const": "ber"
+    },
+    {
       "title": "Bhojpuri",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bho",
       "x-language-type": "living",
       "x-name-french": "bhojpuri",
       "x-scope": "individual",
       "const": "bho"
     },
     {
+      "title": "Bihari languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bih",
+      "x-name-french": "langues biharis",
+      "const": "bih"
+    },
+    {
       "title": "Bikol",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bik",
       "x-language-type": "living",
       "x-name-french": "bikol",
       "x-scope": "macrolanguage",
@@ -330,6 +438,7 @@
     },
     {
       "title": "Bini; Edo",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bin",
       "x-language-type": "living",
       "x-name-french": "bini; edo",
       "x-scope": "individual",
@@ -337,6 +446,7 @@
     },
     {
       "title": "Bislama",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bis",
       "x-language-type": "living",
       "x-name-french": "bichlamar",
       "x-scope": "individual",
@@ -345,13 +455,21 @@
     },
     {
       "title": "Siksika",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bla",
       "x-language-type": "living",
       "x-name-french": "blackfoot",
       "x-scope": "individual",
       "const": "bla"
     },
     {
+      "title": "Bantu languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bnt",
+      "x-name-french": "bantou, langues",
+      "const": "bnt"
+    },
+    {
       "title": "Bosnian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bos",
       "x-language-type": "living",
       "x-name-french": "bosniaque",
       "x-scope": "individual",
@@ -360,6 +478,7 @@
     },
     {
       "title": "Braj",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bra",
       "x-language-type": "living",
       "x-name-french": "braj",
       "x-scope": "individual",
@@ -367,6 +486,7 @@
     },
     {
       "title": "Breton",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bre",
       "x-language-type": "living",
       "x-name-french": "breton",
       "x-scope": "individual",
@@ -374,7 +494,14 @@
       "const": "bre"
     },
     {
+      "title": "Batak languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/btk",
+      "x-name-french": "batak, langues",
+      "const": "btk"
+    },
+    {
       "title": "Buriat",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bua",
       "x-language-type": "living",
       "x-name-french": "bouriate",
       "x-scope": "macrolanguage",
@@ -382,6 +509,7 @@
     },
     {
       "title": "Buginese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bug",
       "x-language-type": "living",
       "x-name-french": "bugi",
       "x-scope": "individual",
@@ -389,6 +517,7 @@
     },
     {
       "title": "Bulgarian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bul",
       "x-language-type": "living",
       "x-name-french": "bulgare",
       "x-scope": "individual",
@@ -397,6 +526,7 @@
     },
     {
       "title": "Burmese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/bur",
       "x-language-type": "living",
       "x-name-french": "birman",
       "x-scope": "individual",
@@ -405,6 +535,7 @@
     },
     {
       "title": "Blin; Bilin",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/byn",
       "x-language-type": "living",
       "x-name-french": "blin; bilen",
       "x-scope": "individual",
@@ -412,13 +543,21 @@
     },
     {
       "title": "Caddo",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cad",
       "x-language-type": "living",
       "x-name-french": "caddo",
       "x-scope": "individual",
       "const": "cad"
     },
     {
+      "title": "Central American Indian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cai",
+      "x-name-french": "amérindiennes de L'Amérique centrale, langues",
+      "const": "cai"
+    },
+    {
       "title": "Galibi Carib",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/car",
       "x-language-type": "living",
       "x-name-french": "karib; galibi; carib",
       "x-scope": "individual",
@@ -426,6 +565,7 @@
     },
     {
       "title": "Catalan; Valencian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cat",
       "x-language-type": "living",
       "x-name-french": "catalan; valencien",
       "x-scope": "individual",
@@ -433,14 +573,28 @@
       "const": "cat"
     },
     {
+      "title": "Caucasian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cau",
+      "x-name-french": "caucasiennes, langues",
+      "const": "cau"
+    },
+    {
       "title": "Cebuano",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ceb",
       "x-language-type": "living",
       "x-name-french": "cebuano",
       "x-scope": "individual",
       "const": "ceb"
     },
     {
+      "title": "Celtic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cel",
+      "x-name-french": "celtiques, langues; celtes, langues",
+      "const": "cel"
+    },
+    {
       "title": "Chamorro",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cha",
       "x-language-type": "living",
       "x-name-french": "chamorro",
       "x-scope": "individual",
@@ -449,6 +603,7 @@
     },
     {
       "title": "Chibcha",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/chb",
       "x-language-type": "extinct",
       "x-name-french": "chibcha",
       "x-scope": "individual",
@@ -456,6 +611,7 @@
     },
     {
       "title": "Chechen",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/che",
       "x-language-type": "living",
       "x-name-french": "tchétchène",
       "x-scope": "individual",
@@ -464,6 +620,7 @@
     },
     {
       "title": "Chagatai",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/chg",
       "x-language-type": "extinct",
       "x-name-french": "djaghataï",
       "x-scope": "individual",
@@ -471,6 +628,7 @@
     },
     {
       "title": "Chinese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/chi",
       "x-language-type": "living",
       "x-name-french": "chinois",
       "x-scope": "macrolanguage",
@@ -479,6 +637,7 @@
     },
     {
       "title": "Chuukese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/chk",
       "x-language-type": "living",
       "x-name-french": "chuuk",
       "x-scope": "individual",
@@ -486,6 +645,7 @@
     },
     {
       "title": "Mari",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/chm",
       "x-language-type": "living",
       "x-name-french": "mari",
       "x-scope": "macrolanguage",
@@ -493,6 +653,7 @@
     },
     {
       "title": "Chinook jargon",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/chn",
       "x-language-type": "living",
       "x-name-french": "chinook, jargon",
       "x-scope": "individual",
@@ -500,6 +661,7 @@
     },
     {
       "title": "Choctaw",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cho",
       "x-language-type": "living",
       "x-name-french": "choctaw",
       "x-scope": "individual",
@@ -507,6 +669,7 @@
     },
     {
       "title": "Chipewyan; Dene Suline",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/chp",
       "x-language-type": "living",
       "x-name-french": "chipewyan",
       "x-scope": "individual",
@@ -514,6 +677,7 @@
     },
     {
       "title": "Cherokee",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/chr",
       "x-language-type": "living",
       "x-name-french": "cherokee",
       "x-scope": "individual",
@@ -521,6 +685,7 @@
     },
     {
       "title": "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/chu",
       "x-language-type": "historic",
       "x-name-french": "slavon d'église; vieux slave; slavon liturgique; vieux bulgare",
       "x-scope": "individual",
@@ -529,6 +694,7 @@
     },
     {
       "title": "Chuvash",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/chv",
       "x-language-type": "living",
       "x-name-french": "tchouvache",
       "x-scope": "individual",
@@ -537,13 +703,21 @@
     },
     {
       "title": "Cheyenne",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/chy",
       "x-language-type": "living",
       "x-name-french": "cheyenne",
       "x-scope": "individual",
       "const": "chy"
     },
     {
+      "title": "Chamic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cmc",
+      "x-name-french": "chames, langues",
+      "const": "cmc"
+    },
+    {
       "title": "Montenegrin",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cnr",
       "x-language-type": "living",
       "x-name-french": "monténégrin",
       "x-scope": "individual",
@@ -551,6 +725,7 @@
     },
     {
       "title": "Coptic",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cop",
       "x-language-type": "extinct",
       "x-name-french": "copte",
       "x-scope": "individual",
@@ -558,6 +733,7 @@
     },
     {
       "title": "Cornish",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cor",
       "x-language-type": "living",
       "x-name-french": "cornique",
       "x-scope": "individual",
@@ -566,6 +742,7 @@
     },
     {
       "title": "Corsican",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cos",
       "x-language-type": "living",
       "x-name-french": "corse",
       "x-scope": "individual",
@@ -574,21 +751,25 @@
     },
     {
       "title": "Creoles and pidgins, English based",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cpe",
       "x-name-french": "créoles et pidgins basés sur l'anglais",
       "const": "cpe"
     },
     {
       "title": "Creoles and pidgins, French-based",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cpf",
       "x-name-french": "créoles et pidgins basés sur le français",
       "const": "cpf"
     },
     {
       "title": "Creoles and pidgins, Portuguese-based",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cpp",
       "x-name-french": "créoles et pidgins basés sur le portugais",
       "const": "cpp"
     },
     {
       "title": "Cree",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cre",
       "x-language-type": "living",
       "x-name-french": "cree",
       "x-scope": "macrolanguage",
@@ -597,6 +778,7 @@
     },
     {
       "title": "Crimean Tatar; Crimean Turkish",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/crh",
       "x-language-type": "living",
       "x-name-french": "tatar de Crimé",
       "x-scope": "individual",
@@ -604,18 +786,27 @@
     },
     {
       "title": "Creoles and pidgins",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/crp",
       "x-name-french": "créoles et pidgins",
       "const": "crp"
     },
     {
       "title": "Kashubian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/csb",
       "x-language-type": "living",
       "x-name-french": "kachoube",
       "x-scope": "individual",
       "const": "csb"
     },
     {
+      "title": "Cushitic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cus",
+      "x-name-french": "couchitiques, langues",
+      "const": "cus"
+    },
+    {
       "title": "Czech",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/cze",
       "x-language-type": "living",
       "x-name-french": "tchèque",
       "x-scope": "individual",
@@ -624,6 +815,7 @@
     },
     {
       "title": "Dakota",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/dak",
       "x-language-type": "living",
       "x-name-french": "dakota",
       "x-scope": "individual",
@@ -631,6 +823,7 @@
     },
     {
       "title": "Danish",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/dan",
       "x-language-type": "living",
       "x-name-french": "danois",
       "x-scope": "individual",
@@ -639,13 +832,21 @@
     },
     {
       "title": "Dargwa",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/dar",
       "x-language-type": "living",
       "x-name-french": "dargwa",
       "x-scope": "individual",
       "const": "dar"
     },
     {
+      "title": "Land Dayak languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/day",
+      "x-name-french": "dayak, langues",
+      "const": "day"
+    },
+    {
       "title": "Delaware",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/del",
       "x-language-type": "living",
       "x-name-french": "delaware",
       "x-scope": "macrolanguage",
@@ -653,6 +854,7 @@
     },
     {
       "title": "Slave (Athapascan)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/den",
       "x-language-type": "living",
       "x-name-french": "esclave (athapascan)",
       "x-scope": "macrolanguage",
@@ -660,6 +862,7 @@
     },
     {
       "title": "Tlicho; Dogrib",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/dgr",
       "x-language-type": "living",
       "x-name-french": "tlicho; dogrib",
       "x-scope": "individual",
@@ -667,6 +870,7 @@
     },
     {
       "title": "Dinka",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/din",
       "x-language-type": "living",
       "x-name-french": "dinka",
       "x-scope": "macrolanguage",
@@ -674,6 +878,7 @@
     },
     {
       "title": "Divehi; Dhivehi; Maldivian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/div",
       "x-language-type": "living",
       "x-name-french": "maldivien",
       "x-scope": "individual",
@@ -682,13 +887,21 @@
     },
     {
       "title": "Dogri",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/doi",
       "x-language-type": "living",
       "x-name-french": "dogri",
       "x-scope": "macrolanguage",
       "const": "doi"
     },
     {
+      "title": "Dravidian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/dra",
+      "x-name-french": "dravidiennes, langues",
+      "const": "dra"
+    },
+    {
       "title": "Lower Sorbian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/dsb",
       "x-language-type": "living",
       "x-name-french": "bas-sorabe",
       "x-scope": "individual",
@@ -696,6 +909,7 @@
     },
     {
       "title": "Duala",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/dua",
       "x-language-type": "living",
       "x-name-french": "douala",
       "x-scope": "individual",
@@ -703,6 +917,7 @@
     },
     {
       "title": "Dutch, Middle (ca.1050-1350)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/dum",
       "x-language-type": "historic",
       "x-name-french": "néerlandais moyen (ca. 1050-1350)",
       "x-scope": "individual",
@@ -710,6 +925,7 @@
     },
     {
       "title": "Dutch; Flemish",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/dut",
       "x-language-type": "living",
       "x-name-french": "néerlandais; flamand",
       "x-scope": "individual",
@@ -718,6 +934,7 @@
     },
     {
       "title": "Dyula",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/dyu",
       "x-language-type": "living",
       "x-name-french": "dioula",
       "x-scope": "individual",
@@ -725,6 +942,7 @@
     },
     {
       "title": "Dzongkha",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/dzo",
       "x-language-type": "living",
       "x-name-french": "dzongkha",
       "x-scope": "individual",
@@ -733,6 +951,7 @@
     },
     {
       "title": "Efik",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/efi",
       "x-language-type": "living",
       "x-name-french": "efik",
       "x-scope": "individual",
@@ -740,6 +959,7 @@
     },
     {
       "title": "Egyptian (Ancient)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/egy",
       "x-language-type": "historic",
       "x-name-french": "égyptien",
       "x-scope": "individual",
@@ -747,6 +967,7 @@
     },
     {
       "title": "Ekajuk",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/eka",
       "x-language-type": "living",
       "x-name-french": "ekajuk",
       "x-scope": "individual",
@@ -754,6 +975,7 @@
     },
     {
       "title": "Elamite",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/elx",
       "x-language-type": "historic",
       "x-name-french": "élamite",
       "x-scope": "individual",
@@ -761,6 +983,7 @@
     },
     {
       "title": "English",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/eng",
       "x-language-type": "living",
       "x-name-french": "anglais",
       "x-scope": "individual",
@@ -769,6 +992,7 @@
     },
     {
       "title": "English, Middle (1100-1500)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/enm",
       "x-language-type": "historic",
       "x-name-french": "anglais moyen (1100-1500)",
       "x-scope": "individual",
@@ -776,6 +1000,7 @@
     },
     {
       "title": "Esperanto",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/epo",
       "x-language-type": "constructed",
       "x-name-french": "espéranto",
       "x-scope": "individual",
@@ -784,6 +1009,7 @@
     },
     {
       "title": "Estonian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/est",
       "x-language-type": "living",
       "x-name-french": "estonien",
       "x-scope": "macrolanguage",
@@ -792,6 +1018,7 @@
     },
     {
       "title": "Ewe",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ewe",
       "x-language-type": "living",
       "x-name-french": "éwé",
       "x-scope": "individual",
@@ -800,6 +1027,7 @@
     },
     {
       "title": "Ewondo",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ewo",
       "x-language-type": "living",
       "x-name-french": "éwondo",
       "x-scope": "individual",
@@ -807,6 +1035,7 @@
     },
     {
       "title": "Fang",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/fan",
       "x-language-type": "living",
       "x-name-french": "fang",
       "x-scope": "individual",
@@ -814,6 +1043,7 @@
     },
     {
       "title": "Faroese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/fao",
       "x-language-type": "living",
       "x-name-french": "féroïen",
       "x-scope": "individual",
@@ -822,6 +1052,7 @@
     },
     {
       "title": "Fanti",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/fat",
       "x-language-type": "living",
       "x-name-french": "fanti",
       "x-scope": "individual",
@@ -829,6 +1060,7 @@
     },
     {
       "title": "Fijian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/fij",
       "x-language-type": "living",
       "x-name-french": "fidjien",
       "x-scope": "individual",
@@ -837,6 +1069,7 @@
     },
     {
       "title": "Filipino; Pilipino",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/fil",
       "x-language-type": "living",
       "x-name-french": "filipino; pilipino",
       "x-scope": "individual",
@@ -844,6 +1077,7 @@
     },
     {
       "title": "Finnish",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/fin",
       "x-language-type": "living",
       "x-name-french": "finnois",
       "x-scope": "individual",
@@ -851,7 +1085,14 @@
       "const": "fin"
     },
     {
+      "title": "Finno-Ugrian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/fiu",
+      "x-name-french": "finno-ougriennes, langues",
+      "const": "fiu"
+    },
+    {
       "title": "Fon",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/fon",
       "x-language-type": "living",
       "x-name-french": "fon",
       "x-scope": "individual",
@@ -859,6 +1100,7 @@
     },
     {
       "title": "French",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/fre",
       "x-language-type": "living",
       "x-name-french": "français",
       "x-scope": "individual",
@@ -867,6 +1109,7 @@
     },
     {
       "title": "French, Middle (ca.1400-1600)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/frm",
       "x-language-type": "historic",
       "x-name-french": "français moyen (1400-1600)",
       "x-scope": "individual",
@@ -874,6 +1117,7 @@
     },
     {
       "title": "French, Old (842-ca.1400)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/fro",
       "x-language-type": "historic",
       "x-name-french": "français ancien (842-ca.1400)",
       "x-scope": "individual",
@@ -881,6 +1125,7 @@
     },
     {
       "title": "Northern Frisian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/frr",
       "x-language-type": "living",
       "x-name-french": "frison septentrional",
       "x-scope": "individual",
@@ -888,6 +1133,7 @@
     },
     {
       "title": "Eastern Frisian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/frs",
       "x-language-type": "living",
       "x-name-french": "frison oriental",
       "x-scope": "individual",
@@ -895,6 +1141,7 @@
     },
     {
       "title": "Western Frisian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/fry",
       "x-language-type": "living",
       "x-name-french": "frison occidental",
       "x-scope": "individual",
@@ -903,6 +1150,7 @@
     },
     {
       "title": "Fulah",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ful",
       "x-language-type": "living",
       "x-name-french": "peul",
       "x-scope": "macrolanguage",
@@ -911,6 +1159,7 @@
     },
     {
       "title": "Friulian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/fur",
       "x-language-type": "living",
       "x-name-french": "frioulan",
       "x-scope": "individual",
@@ -918,6 +1167,7 @@
     },
     {
       "title": "Ga",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/gaa",
       "x-language-type": "living",
       "x-name-french": "ga",
       "x-scope": "individual",
@@ -925,6 +1175,7 @@
     },
     {
       "title": "Gayo",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/gay",
       "x-language-type": "living",
       "x-name-french": "gayo",
       "x-scope": "individual",
@@ -932,13 +1183,21 @@
     },
     {
       "title": "Gbaya",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/gba",
       "x-language-type": "living",
       "x-name-french": "gbaya",
       "x-scope": "macrolanguage",
       "const": "gba"
     },
     {
+      "title": "Germanic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/gem",
+      "x-name-french": "germaniques, langues",
+      "const": "gem"
+    },
+    {
       "title": "Georgian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/geo",
       "x-language-type": "living",
       "x-name-french": "géorgien",
       "x-scope": "individual",
@@ -947,6 +1206,7 @@
     },
     {
       "title": "German",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ger",
       "x-language-type": "living",
       "x-name-french": "allemand",
       "x-scope": "individual",
@@ -955,6 +1215,7 @@
     },
     {
       "title": "Geez",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/gez",
       "x-language-type": "historic",
       "x-name-french": "guèze",
       "x-scope": "individual",
@@ -962,6 +1223,7 @@
     },
     {
       "title": "Gilbertese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/gil",
       "x-language-type": "living",
       "x-name-french": "kiribati",
       "x-scope": "individual",
@@ -969,6 +1231,7 @@
     },
     {
       "title": "Gaelic; Scottish Gaelic",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/gla",
       "x-language-type": "living",
       "x-name-french": "gaélique; gaélique écossais",
       "x-scope": "individual",
@@ -977,6 +1240,7 @@
     },
     {
       "title": "Irish",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/gle",
       "x-language-type": "living",
       "x-name-french": "irlandais",
       "x-scope": "individual",
@@ -985,6 +1249,7 @@
     },
     {
       "title": "Galician",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/glg",
       "x-language-type": "living",
       "x-name-french": "galicien",
       "x-scope": "individual",
@@ -993,6 +1258,7 @@
     },
     {
       "title": "Manx",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/glv",
       "x-language-type": "living",
       "x-name-french": "manx; mannois",
       "x-scope": "individual",
@@ -1001,6 +1267,7 @@
     },
     {
       "title": "German, Middle High (ca.1050-1500)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/gmh",
       "x-language-type": "historic",
       "x-name-french": "allemand, moyen haut (ca. 1050-1500)",
       "x-scope": "individual",
@@ -1008,6 +1275,7 @@
     },
     {
       "title": "German, Old High (ca.750-1050)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/goh",
       "x-language-type": "historic",
       "x-name-french": "allemand, vieux haut (ca. 750-1050)",
       "x-scope": "individual",
@@ -1015,6 +1283,7 @@
     },
     {
       "title": "Gondi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/gon",
       "x-language-type": "living",
       "x-name-french": "gond",
       "x-scope": "macrolanguage",
@@ -1022,6 +1291,7 @@
     },
     {
       "title": "Gorontalo",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/gor",
       "x-language-type": "living",
       "x-name-french": "gorontalo",
       "x-scope": "individual",
@@ -1029,6 +1299,7 @@
     },
     {
       "title": "Gothic",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/got",
       "x-language-type": "historic",
       "x-name-french": "gothique",
       "x-scope": "individual",
@@ -1036,6 +1307,7 @@
     },
     {
       "title": "Grebo",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/grb",
       "x-language-type": "living",
       "x-name-french": "grebo",
       "x-scope": "macrolanguage",
@@ -1043,6 +1315,7 @@
     },
     {
       "title": "Greek, Ancient (to 1453)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/grc",
       "x-language-type": "historic",
       "x-name-french": "grec ancien (jusqu'à 1453)",
       "x-scope": "individual",
@@ -1050,6 +1323,7 @@
     },
     {
       "title": "Modern Greek (1453-)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/gre",
       "x-language-type": "living",
       "x-name-french": "grec moderne (1453-)",
       "x-scope": "individual",
@@ -1058,6 +1332,7 @@
     },
     {
       "title": "Guarani",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/grn",
       "x-language-type": "living",
       "x-name-french": "guarani",
       "x-scope": "macrolanguage",
@@ -1066,6 +1341,7 @@
     },
     {
       "title": "Swiss German; Alemannic; Alsatian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/gsw",
       "x-language-type": "living",
       "x-name-french": "suisse alémanique; alémanique; alsacien",
       "x-scope": "individual",
@@ -1073,6 +1349,7 @@
     },
     {
       "title": "Gujarati",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/guj",
       "x-language-type": "living",
       "x-name-french": "goudjrati",
       "x-scope": "individual",
@@ -1081,6 +1358,7 @@
     },
     {
       "title": "Gwich'in",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/gwi",
       "x-language-type": "living",
       "x-name-french": "gwich'in",
       "x-scope": "individual",
@@ -1088,6 +1366,7 @@
     },
     {
       "title": "Haida",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/hai",
       "x-language-type": "living",
       "x-name-french": "haida",
       "x-scope": "macrolanguage",
@@ -1095,6 +1374,7 @@
     },
     {
       "title": "Haitian; Haitian Creole",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/hat",
       "x-language-type": "living",
       "x-name-french": "haïtien; créole haïtien",
       "x-scope": "individual",
@@ -1103,6 +1383,7 @@
     },
     {
       "title": "Hausa",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/hau",
       "x-language-type": "living",
       "x-name-french": "haoussa",
       "x-scope": "individual",
@@ -1111,6 +1392,7 @@
     },
     {
       "title": "Hawaiian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/haw",
       "x-language-type": "living",
       "x-name-french": "hawaïen",
       "x-scope": "individual",
@@ -1118,6 +1400,7 @@
     },
     {
       "title": "Hebrew",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/heb",
       "x-language-type": "living",
       "x-name-french": "hébreu",
       "x-scope": "individual",
@@ -1126,6 +1409,7 @@
     },
     {
       "title": "Herero",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/her",
       "x-language-type": "living",
       "x-name-french": "herero",
       "x-scope": "individual",
@@ -1134,13 +1418,21 @@
     },
     {
       "title": "Hiligaynon",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/hil",
       "x-language-type": "living",
       "x-name-french": "hiligaynon",
       "x-scope": "individual",
       "const": "hil"
     },
     {
+      "title": "Himachali languages; Western Pahari languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/him",
+      "x-name-french": "langues himachalis; langues paharis occidentales",
+      "const": "him"
+    },
+    {
       "title": "Hindi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/hin",
       "x-language-type": "living",
       "x-name-french": "hindi",
       "x-scope": "individual",
@@ -1149,6 +1441,7 @@
     },
     {
       "title": "Hittite",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/hit",
       "x-language-type": "historic",
       "x-name-french": "hittite",
       "x-scope": "individual",
@@ -1156,6 +1449,7 @@
     },
     {
       "title": "Hmong; Mong",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/hmn",
       "x-language-type": "living",
       "x-name-french": "hmong",
       "x-scope": "macrolanguage",
@@ -1163,6 +1457,7 @@
     },
     {
       "title": "Hiri Motu",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/hmo",
       "x-language-type": "living",
       "x-name-french": "hiri motu",
       "x-scope": "individual",
@@ -1171,6 +1466,7 @@
     },
     {
       "title": "Croatian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/hrv",
       "x-language-type": "living",
       "x-name-french": "croate",
       "x-scope": "individual",
@@ -1179,6 +1475,7 @@
     },
     {
       "title": "Upper Sorbian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/hsb",
       "x-language-type": "living",
       "x-name-french": "haut-sorabe",
       "x-scope": "individual",
@@ -1186,6 +1483,7 @@
     },
     {
       "title": "Hungarian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/hun",
       "x-language-type": "living",
       "x-name-french": "hongrois",
       "x-scope": "individual",
@@ -1194,6 +1492,7 @@
     },
     {
       "title": "Hupa",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/hup",
       "x-language-type": "living",
       "x-name-french": "hupa",
       "x-scope": "individual",
@@ -1201,6 +1500,7 @@
     },
     {
       "title": "Iban",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/iba",
       "x-language-type": "living",
       "x-name-french": "iban",
       "x-scope": "individual",
@@ -1208,6 +1508,7 @@
     },
     {
       "title": "Igbo",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ibo",
       "x-language-type": "living",
       "x-name-french": "igbo",
       "x-scope": "individual",
@@ -1216,6 +1517,7 @@
     },
     {
       "title": "Icelandic",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ice",
       "x-language-type": "living",
       "x-name-french": "islandais",
       "x-scope": "individual",
@@ -1224,6 +1526,7 @@
     },
     {
       "title": "Ido",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ido",
       "x-language-type": "constructed",
       "x-name-french": "ido",
       "x-scope": "individual",
@@ -1232,6 +1535,7 @@
     },
     {
       "title": "Sichuan Yi; Nuosu",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/iii",
       "x-language-type": "living",
       "x-name-french": "yi de Sichuan",
       "x-scope": "individual",
@@ -1239,7 +1543,14 @@
       "const": "iii"
     },
     {
+      "title": "Ijo languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ijo",
+      "x-name-french": "ijo, langues",
+      "const": "ijo"
+    },
+    {
       "title": "Inuktitut",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/iku",
       "x-language-type": "living",
       "x-name-french": "inuktitut",
       "x-scope": "macrolanguage",
@@ -1248,6 +1559,7 @@
     },
     {
       "title": "Interlingue; Occidental",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ile",
       "x-language-type": "constructed",
       "x-name-french": "interlingue",
       "x-scope": "individual",
@@ -1256,6 +1568,7 @@
     },
     {
       "title": "Iloko",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ilo",
       "x-language-type": "living",
       "x-name-french": "ilocano",
       "x-scope": "individual",
@@ -1263,6 +1576,7 @@
     },
     {
       "title": "Interlingua (International Auxiliary Language Association)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ina",
       "x-language-type": "constructed",
       "x-name-french": "interlingua (langue auxiliaire internationale)",
       "x-scope": "individual",
@@ -1270,7 +1584,14 @@
       "const": "ina"
     },
     {
+      "title": "Indic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/inc",
+      "x-name-french": "indo-aryennes, langues",
+      "const": "inc"
+    },
+    {
       "title": "Indonesian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ind",
       "x-language-type": "living",
       "x-name-french": "indonésien",
       "x-scope": "individual",
@@ -1278,7 +1599,14 @@
       "const": "ind"
     },
     {
+      "title": "Indo-European languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ine",
+      "x-name-french": "indo-européennes, langues",
+      "const": "ine"
+    },
+    {
       "title": "Ingush",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/inh",
       "x-language-type": "living",
       "x-name-french": "ingouche",
       "x-scope": "individual",
@@ -1286,6 +1614,7 @@
     },
     {
       "title": "Inupiaq",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ipk",
       "x-language-type": "living",
       "x-name-french": "inupiaq",
       "x-scope": "macrolanguage",
@@ -1293,7 +1622,20 @@
       "const": "ipk"
     },
     {
+      "title": "Iranian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ira",
+      "x-name-french": "iraniennes, langues",
+      "const": "ira"
+    },
+    {
+      "title": "Iroquoian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/iro",
+      "x-name-french": "iroquoises, langues",
+      "const": "iro"
+    },
+    {
       "title": "Italian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ita",
       "x-language-type": "living",
       "x-name-french": "italien",
       "x-scope": "individual",
@@ -1302,6 +1644,7 @@
     },
     {
       "title": "Javanese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/jav",
       "x-language-type": "living",
       "x-name-french": "javanais",
       "x-scope": "individual",
@@ -1310,6 +1653,7 @@
     },
     {
       "title": "Lojban",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/jbo",
       "x-language-type": "constructed",
       "x-name-french": "lojban",
       "x-scope": "individual",
@@ -1317,6 +1661,7 @@
     },
     {
       "title": "Japanese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/jpn",
       "x-language-type": "living",
       "x-name-french": "japonais",
       "x-scope": "individual",
@@ -1325,6 +1670,7 @@
     },
     {
       "title": "Judeo-Persian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/jpr",
       "x-language-type": "living",
       "x-name-french": "judéo-persan",
       "x-scope": "individual",
@@ -1332,6 +1678,7 @@
     },
     {
       "title": "Judeo-Arabic",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/jrb",
       "x-language-type": "living",
       "x-name-french": "judéo-arabe",
       "x-scope": "macrolanguage",
@@ -1339,6 +1686,7 @@
     },
     {
       "title": "Kara-Kalpak",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kaa",
       "x-language-type": "living",
       "x-name-french": "karakalpak",
       "x-scope": "individual",
@@ -1346,6 +1694,7 @@
     },
     {
       "title": "Kabyle",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kab",
       "x-language-type": "living",
       "x-name-french": "kabyle",
       "x-scope": "individual",
@@ -1353,6 +1702,7 @@
     },
     {
       "title": "Kachin; Jingpho",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kac",
       "x-language-type": "living",
       "x-name-french": "kachin; jingpho",
       "x-scope": "individual",
@@ -1360,6 +1710,7 @@
     },
     {
       "title": "Kalaallisut; Greenlandic",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kal",
       "x-language-type": "living",
       "x-name-french": "groenlandais",
       "x-scope": "individual",
@@ -1368,6 +1719,7 @@
     },
     {
       "title": "Kamba",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kam",
       "x-language-type": "living",
       "x-name-french": "kamba",
       "x-scope": "individual",
@@ -1375,6 +1727,7 @@
     },
     {
       "title": "Kannada",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kan",
       "x-language-type": "living",
       "x-name-french": "kannada",
       "x-scope": "individual",
@@ -1382,7 +1735,14 @@
       "const": "kan"
     },
     {
+      "title": "Karen languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kar",
+      "x-name-french": "karen, langues",
+      "const": "kar"
+    },
+    {
       "title": "Kashmiri",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kas",
       "x-language-type": "living",
       "x-name-french": "kashmiri",
       "x-scope": "individual",
@@ -1391,6 +1751,7 @@
     },
     {
       "title": "Kanuri",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kau",
       "x-language-type": "living",
       "x-name-french": "kanouri",
       "x-scope": "macrolanguage",
@@ -1399,6 +1760,7 @@
     },
     {
       "title": "Kawi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kaw",
       "x-language-type": "historic",
       "x-name-french": "kawi",
       "x-scope": "individual",
@@ -1406,6 +1768,7 @@
     },
     {
       "title": "Kazakh",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kaz",
       "x-language-type": "living",
       "x-name-french": "kazakh",
       "x-scope": "individual",
@@ -1414,6 +1777,7 @@
     },
     {
       "title": "Kabardian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kbd",
       "x-language-type": "living",
       "x-name-french": "kabardien",
       "x-scope": "individual",
@@ -1421,13 +1785,21 @@
     },
     {
       "title": "Khasi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kha",
       "x-language-type": "living",
       "x-name-french": "khasi",
       "x-scope": "individual",
       "const": "kha"
     },
     {
+      "title": "Khoisan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/khi",
+      "x-name-french": "khoïsan, langues",
+      "const": "khi"
+    },
+    {
       "title": "Central Khmer",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/khm",
       "x-language-type": "living",
       "x-name-french": "khmer central",
       "x-scope": "individual",
@@ -1436,6 +1808,7 @@
     },
     {
       "title": "Khotanese; Sakan",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kho",
       "x-language-type": "historic",
       "x-name-french": "khotanais; sakan",
       "x-scope": "individual",
@@ -1443,6 +1816,7 @@
     },
     {
       "title": "Kikuyu; Gikuyu",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kik",
       "x-language-type": "living",
       "x-name-french": "kikuyu",
       "x-scope": "individual",
@@ -1451,6 +1825,7 @@
     },
     {
       "title": "Kinyarwanda",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kin",
       "x-language-type": "living",
       "x-name-french": "rwanda",
       "x-scope": "individual",
@@ -1459,6 +1834,7 @@
     },
     {
       "title": "Kirghiz; Kyrgyz",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kir",
       "x-language-type": "living",
       "x-name-french": "kirghiz",
       "x-scope": "individual",
@@ -1467,6 +1843,7 @@
     },
     {
       "title": "Kimbundu",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kmb",
       "x-language-type": "living",
       "x-name-french": "kimbundu",
       "x-scope": "individual",
@@ -1474,6 +1851,7 @@
     },
     {
       "title": "Konkani",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kok",
       "x-language-type": "living",
       "x-name-french": "konkani",
       "x-scope": "macrolanguage",
@@ -1481,6 +1859,7 @@
     },
     {
       "title": "Komi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kom",
       "x-language-type": "living",
       "x-name-french": "kom",
       "x-scope": "macrolanguage",
@@ -1489,6 +1868,7 @@
     },
     {
       "title": "Kongo",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kon",
       "x-language-type": "living",
       "x-name-french": "kongo",
       "x-scope": "macrolanguage",
@@ -1497,6 +1877,7 @@
     },
     {
       "title": "Korean",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kor",
       "x-language-type": "living",
       "x-name-french": "coréen",
       "x-scope": "individual",
@@ -1505,6 +1886,7 @@
     },
     {
       "title": "Kosraean",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kos",
       "x-language-type": "living",
       "x-name-french": "kosrae",
       "x-scope": "individual",
@@ -1512,6 +1894,7 @@
     },
     {
       "title": "Kpelle",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kpe",
       "x-language-type": "living",
       "x-name-french": "kpellé",
       "x-scope": "macrolanguage",
@@ -1519,6 +1902,7 @@
     },
     {
       "title": "Karachay-Balkar",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/krc",
       "x-language-type": "living",
       "x-name-french": "karatchai balkar",
       "x-scope": "individual",
@@ -1526,13 +1910,21 @@
     },
     {
       "title": "Karelian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/krl",
       "x-language-type": "living",
       "x-name-french": "carélien",
       "x-scope": "individual",
       "const": "krl"
     },
     {
+      "title": "Kru languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kro",
+      "x-name-french": "krou, langues",
+      "const": "kro"
+    },
+    {
       "title": "Kurukh",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kru",
       "x-language-type": "living",
       "x-name-french": "kurukh",
       "x-scope": "individual",
@@ -1540,6 +1932,7 @@
     },
     {
       "title": "Kuanyama; Kwanyama",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kua",
       "x-language-type": "living",
       "x-name-french": "kuanyama; kwanyama",
       "x-scope": "individual",
@@ -1548,6 +1941,7 @@
     },
     {
       "title": "Kumyk",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kum",
       "x-language-type": "living",
       "x-name-french": "koumyk",
       "x-scope": "individual",
@@ -1555,6 +1949,7 @@
     },
     {
       "title": "Kurdish",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kur",
       "x-language-type": "living",
       "x-name-french": "kurde",
       "x-scope": "macrolanguage",
@@ -1563,6 +1958,7 @@
     },
     {
       "title": "Kutenai",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/kut",
       "x-language-type": "living",
       "x-name-french": "kutenai",
       "x-scope": "individual",
@@ -1570,6 +1966,7 @@
     },
     {
       "title": "Ladino",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lad",
       "x-language-type": "living",
       "x-name-french": "judéo-espagnol",
       "x-scope": "individual",
@@ -1577,6 +1974,7 @@
     },
     {
       "title": "Lahnda",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lah",
       "x-language-type": "living",
       "x-name-french": "lahnda",
       "x-scope": "macrolanguage",
@@ -1584,6 +1982,7 @@
     },
     {
       "title": "Lamba",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lam",
       "x-language-type": "living",
       "x-name-french": "lamba",
       "x-scope": "individual",
@@ -1591,6 +1990,7 @@
     },
     {
       "title": "Lao",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lao",
       "x-language-type": "living",
       "x-name-french": "lao",
       "x-scope": "individual",
@@ -1599,6 +1999,7 @@
     },
     {
       "title": "Latin",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lat",
       "x-language-type": "historic",
       "x-name-french": "latin",
       "x-scope": "individual",
@@ -1607,6 +2008,7 @@
     },
     {
       "title": "Latvian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lav",
       "x-language-type": "living",
       "x-name-french": "letton",
       "x-scope": "macrolanguage",
@@ -1615,6 +2017,7 @@
     },
     {
       "title": "Lezghian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lez",
       "x-language-type": "living",
       "x-name-french": "lezghien",
       "x-scope": "individual",
@@ -1622,6 +2025,7 @@
     },
     {
       "title": "Limburgan; Limburger; Limburgish",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lim",
       "x-language-type": "living",
       "x-name-french": "limbourgeois",
       "x-scope": "individual",
@@ -1630,6 +2034,7 @@
     },
     {
       "title": "Lingala",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lin",
       "x-language-type": "living",
       "x-name-french": "lingala",
       "x-scope": "individual",
@@ -1638,6 +2043,7 @@
     },
     {
       "title": "Lithuanian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lit",
       "x-language-type": "living",
       "x-name-french": "lituanien",
       "x-scope": "individual",
@@ -1646,6 +2052,7 @@
     },
     {
       "title": "Mongo",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lol",
       "x-language-type": "living",
       "x-name-french": "mongo",
       "x-scope": "individual",
@@ -1653,6 +2060,7 @@
     },
     {
       "title": "Lozi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/loz",
       "x-language-type": "living",
       "x-name-french": "lozi",
       "x-scope": "individual",
@@ -1660,6 +2068,7 @@
     },
     {
       "title": "Luxembourgish; Letzeburgesch",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ltz",
       "x-language-type": "living",
       "x-name-french": "luxembourgeois",
       "x-scope": "individual",
@@ -1668,6 +2077,7 @@
     },
     {
       "title": "Luba-Lulua",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lua",
       "x-language-type": "living",
       "x-name-french": "luba-lulua",
       "x-scope": "individual",
@@ -1675,6 +2085,7 @@
     },
     {
       "title": "Luba-Katanga",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lub",
       "x-language-type": "living",
       "x-name-french": "luba-katanga",
       "x-scope": "individual",
@@ -1683,6 +2094,7 @@
     },
     {
       "title": "Ganda",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lug",
       "x-language-type": "living",
       "x-name-french": "ganda",
       "x-scope": "individual",
@@ -1691,6 +2103,7 @@
     },
     {
       "title": "Luiseno",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lui",
       "x-language-type": "extinct",
       "x-name-french": "luiseno",
       "x-scope": "individual",
@@ -1698,6 +2111,7 @@
     },
     {
       "title": "Lunda",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lun",
       "x-language-type": "living",
       "x-name-french": "lunda",
       "x-scope": "individual",
@@ -1705,6 +2119,7 @@
     },
     {
       "title": "Luo (Kenya and Tanzania)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/luo",
       "x-language-type": "living",
       "x-name-french": "luo (Kenya et Tanzanie)",
       "x-scope": "individual",
@@ -1712,6 +2127,7 @@
     },
     {
       "title": "Lushai",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/lus",
       "x-language-type": "living",
       "x-name-french": "lushai",
       "x-scope": "individual",
@@ -1719,6 +2135,7 @@
     },
     {
       "title": "Macedonian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mac",
       "x-language-type": "living",
       "x-name-french": "macédonien",
       "x-scope": "individual",
@@ -1727,6 +2144,7 @@
     },
     {
       "title": "Madurese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mad",
       "x-language-type": "living",
       "x-name-french": "madourais",
       "x-scope": "individual",
@@ -1734,6 +2152,7 @@
     },
     {
       "title": "Magahi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mag",
       "x-language-type": "living",
       "x-name-french": "magahi",
       "x-scope": "individual",
@@ -1741,6 +2160,7 @@
     },
     {
       "title": "Marshallese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mah",
       "x-language-type": "living",
       "x-name-french": "marshall",
       "x-scope": "individual",
@@ -1749,6 +2169,7 @@
     },
     {
       "title": "Maithili",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mai",
       "x-language-type": "living",
       "x-name-french": "maithili",
       "x-scope": "individual",
@@ -1756,6 +2177,7 @@
     },
     {
       "title": "Makasar",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mak",
       "x-language-type": "living",
       "x-name-french": "makassar",
       "x-scope": "individual",
@@ -1763,6 +2185,7 @@
     },
     {
       "title": "Malayalam",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mal",
       "x-language-type": "living",
       "x-name-french": "malayalam",
       "x-scope": "individual",
@@ -1771,6 +2194,7 @@
     },
     {
       "title": "Mandingo",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/man",
       "x-language-type": "living",
       "x-name-french": "mandingue",
       "x-scope": "macrolanguage",
@@ -1778,6 +2202,7 @@
     },
     {
       "title": "Maori",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mao",
       "x-language-type": "living",
       "x-name-french": "maori",
       "x-scope": "individual",
@@ -1785,7 +2210,14 @@
       "const": "mao"
     },
     {
+      "title": "Austronesian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/map",
+      "x-name-french": "austronésiennes, langues",
+      "const": "map"
+    },
+    {
       "title": "Marathi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mar",
       "x-language-type": "living",
       "x-name-french": "marathe",
       "x-scope": "individual",
@@ -1794,6 +2226,7 @@
     },
     {
       "title": "Masai",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mas",
       "x-language-type": "living",
       "x-name-french": "massaï",
       "x-scope": "individual",
@@ -1801,6 +2234,7 @@
     },
     {
       "title": "Malay",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/may",
       "x-language-type": "living",
       "x-name-french": "malais",
       "x-scope": "macrolanguage",
@@ -1809,6 +2243,7 @@
     },
     {
       "title": "Moksha",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mdf",
       "x-language-type": "living",
       "x-name-french": "moksa",
       "x-scope": "individual",
@@ -1816,6 +2251,7 @@
     },
     {
       "title": "Mandar",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mdr",
       "x-language-type": "living",
       "x-name-french": "mandar",
       "x-scope": "individual",
@@ -1823,6 +2259,7 @@
     },
     {
       "title": "Mende",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/men",
       "x-language-type": "living",
       "x-name-french": "mendé",
       "x-scope": "individual",
@@ -1830,6 +2267,7 @@
     },
     {
       "title": "Irish, Middle (900-1200)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mga",
       "x-language-type": "historic",
       "x-name-french": "irlandais moyen (900-1200)",
       "x-scope": "individual",
@@ -1837,6 +2275,7 @@
     },
     {
       "title": "Mi'kmaq; Micmac",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mic",
       "x-language-type": "living",
       "x-name-french": "mi'kmaq; micmac",
       "x-scope": "individual",
@@ -1844,13 +2283,29 @@
     },
     {
       "title": "Minangkabau",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/min",
       "x-language-type": "living",
       "x-name-french": "minangkabau",
       "x-scope": "individual",
       "const": "min"
     },
     {
+      "title": "Uncoded languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mis",
+      "x-language-type": "special",
+      "x-name-french": "langues non codées",
+      "x-scope": "special",
+      "const": "mis"
+    },
+    {
+      "title": "Mon-Khmer languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mkh",
+      "x-name-french": "môn-khmer, langues",
+      "const": "mkh"
+    },
+    {
       "title": "Malagasy",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mlg",
       "x-language-type": "living",
       "x-name-french": "malgache",
       "x-scope": "macrolanguage",
@@ -1859,6 +2314,7 @@
     },
     {
       "title": "Maltese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mlt",
       "x-language-type": "living",
       "x-name-french": "maltais",
       "x-scope": "individual",
@@ -1867,6 +2323,7 @@
     },
     {
       "title": "Manchu",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mnc",
       "x-language-type": "living",
       "x-name-french": "mandchou",
       "x-scope": "individual",
@@ -1874,13 +2331,21 @@
     },
     {
       "title": "Manipuri",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mni",
       "x-language-type": "living",
       "x-name-french": "manipuri",
       "x-scope": "individual",
       "const": "mni"
     },
     {
+      "title": "Manobo languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mno",
+      "x-name-french": "manobo, langues",
+      "const": "mno"
+    },
+    {
       "title": "Mohawk",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/moh",
       "x-language-type": "living",
       "x-name-french": "mohawk",
       "x-scope": "individual",
@@ -1888,6 +2353,7 @@
     },
     {
       "title": "Mongolian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mon",
       "x-language-type": "living",
       "x-name-french": "mongol",
       "x-scope": "macrolanguage",
@@ -1896,13 +2362,29 @@
     },
     {
       "title": "Mossi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mos",
       "x-language-type": "living",
       "x-name-french": "moré",
       "x-scope": "individual",
       "const": "mos"
     },
     {
+      "title": "Multiple languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mul",
+      "x-language-type": "special",
+      "x-name-french": "multilingue",
+      "x-scope": "special",
+      "const": "mul"
+    },
+    {
+      "title": "Munda languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mun",
+      "x-name-french": "mounda, langues",
+      "const": "mun"
+    },
+    {
       "title": "Creek",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mus",
       "x-language-type": "living",
       "x-name-french": "muskogee",
       "x-scope": "individual",
@@ -1910,6 +2392,7 @@
     },
     {
       "title": "Mirandese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mwl",
       "x-language-type": "living",
       "x-name-french": "mirandais",
       "x-scope": "individual",
@@ -1917,20 +2400,41 @@
     },
     {
       "title": "Marwari",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/mwr",
       "x-language-type": "living",
       "x-name-french": "marvari",
       "x-scope": "macrolanguage",
       "const": "mwr"
     },
     {
+      "title": "Mayan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/myn",
+      "x-name-french": "maya, langues",
+      "const": "myn"
+    },
+    {
       "title": "Erzya",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/myv",
       "x-language-type": "living",
       "x-name-french": "erza",
       "x-scope": "individual",
       "const": "myv"
     },
     {
+      "title": "Nahuatl languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nah",
+      "x-name-french": "nahuatl, langues",
+      "const": "nah"
+    },
+    {
+      "title": "North American Indian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nai",
+      "x-name-french": "nord-amérindiennes, langues",
+      "const": "nai"
+    },
+    {
       "title": "Neapolitan",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nap",
       "x-language-type": "living",
       "x-name-french": "napolitain",
       "x-scope": "individual",
@@ -1938,6 +2442,7 @@
     },
     {
       "title": "Nauru",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nau",
       "x-language-type": "living",
       "x-name-french": "nauruan",
       "x-scope": "individual",
@@ -1946,6 +2451,7 @@
     },
     {
       "title": "Navajo; Navaho",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nav",
       "x-language-type": "living",
       "x-name-french": "navaho",
       "x-scope": "individual",
@@ -1954,6 +2460,7 @@
     },
     {
       "title": "South Ndebele",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nbl",
       "x-language-type": "living",
       "x-name-french": "ndébélé du Sud",
       "x-scope": "individual",
@@ -1962,6 +2469,7 @@
     },
     {
       "title": "North Ndebele",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nde",
       "x-language-type": "living",
       "x-name-french": "ndébélé du Nord",
       "x-scope": "individual",
@@ -1970,6 +2478,7 @@
     },
     {
       "title": "Ndonga",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ndo",
       "x-language-type": "living",
       "x-name-french": "ndonga",
       "x-scope": "individual",
@@ -1978,6 +2487,7 @@
     },
     {
       "title": "Low German; Low Saxon; German, Low; Saxon, Low",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nds",
       "x-language-type": "living",
       "x-name-french": "bas allemand; bas saxon; allemand, bas; saxon, bas",
       "x-scope": "individual",
@@ -1985,6 +2495,7 @@
     },
     {
       "title": "Nepali",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nep",
       "x-language-type": "living",
       "x-name-french": "népalais",
       "x-scope": "macrolanguage",
@@ -1993,6 +2504,7 @@
     },
     {
       "title": "Nepal Bhasa; Newar; Newari",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/new",
       "x-language-type": "living",
       "x-name-french": "nepal bhasa; néwar; newari",
       "x-scope": "individual",
@@ -2000,13 +2512,21 @@
     },
     {
       "title": "Nias",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nia",
       "x-language-type": "living",
       "x-name-french": "nias",
       "x-scope": "individual",
       "const": "nia"
     },
     {
+      "title": "Niger-Kordofanian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nic",
+      "x-name-french": "nigéro-kordofaniennes, langues",
+      "const": "nic"
+    },
+    {
       "title": "Niuean",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/niu",
       "x-language-type": "living",
       "x-name-french": "niué",
       "x-scope": "individual",
@@ -2014,6 +2534,7 @@
     },
     {
       "title": "Norwegian Nynorsk",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nno",
       "x-language-type": "living",
       "x-name-french": "norvégien nynorsk",
       "x-scope": "individual",
@@ -2022,6 +2543,7 @@
     },
     {
       "title": "Norwegian Bokmål",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nob",
       "x-language-type": "living",
       "x-name-french": "norvégien bokmål",
       "x-scope": "individual",
@@ -2030,6 +2552,7 @@
     },
     {
       "title": "Nogai",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nog",
       "x-language-type": "living",
       "x-name-french": "nogaï; nogay",
       "x-scope": "individual",
@@ -2037,6 +2560,7 @@
     },
     {
       "title": "Norse, Old",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/non",
       "x-language-type": "historic",
       "x-name-french": "norrois, vieux",
       "x-scope": "individual",
@@ -2044,6 +2568,7 @@
     },
     {
       "title": "Norwegian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nor",
       "x-language-type": "living",
       "x-name-french": "norvégien",
       "x-scope": "macrolanguage",
@@ -2052,6 +2577,7 @@
     },
     {
       "title": "N'Ko",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nqo",
       "x-language-type": "living",
       "x-name-french": "n'ko",
       "x-scope": "individual",
@@ -2059,13 +2585,21 @@
     },
     {
       "title": "Pedi; Sepedi; Northern Sotho",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nso",
       "x-language-type": "living",
       "x-name-french": "pedi; sepedi; sotho du Nord",
       "x-scope": "individual",
       "const": "nso"
     },
     {
+      "title": "Nubian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nub",
+      "x-name-french": "nubiennes, langues",
+      "const": "nub"
+    },
+    {
       "title": "Classical Newari; Old Newari; Classical Nepal Bhasa",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nwc",
       "x-language-type": "historic",
       "x-name-french": "newari classique",
       "x-scope": "individual",
@@ -2073,6 +2607,7 @@
     },
     {
       "title": "Chichewa; Chewa; Nyanja",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nya",
       "x-language-type": "living",
       "x-name-french": "chichewa; chewa; nyanja",
       "x-scope": "individual",
@@ -2081,6 +2616,7 @@
     },
     {
       "title": "Nyamwezi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nym",
       "x-language-type": "living",
       "x-name-french": "nyamwezi",
       "x-scope": "individual",
@@ -2088,6 +2624,7 @@
     },
     {
       "title": "Nyankole",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nyn",
       "x-language-type": "living",
       "x-name-french": "nyankolé",
       "x-scope": "individual",
@@ -2095,6 +2632,7 @@
     },
     {
       "title": "Nyoro",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nyo",
       "x-language-type": "living",
       "x-name-french": "nyoro",
       "x-scope": "individual",
@@ -2102,6 +2640,7 @@
     },
     {
       "title": "Nzima",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/nzi",
       "x-language-type": "living",
       "x-name-french": "nzema",
       "x-scope": "individual",
@@ -2109,6 +2648,7 @@
     },
     {
       "title": "Occitan (post 1500)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/oci",
       "x-language-type": "living",
       "x-name-french": "occitan (après 1500)",
       "x-scope": "individual",
@@ -2117,6 +2657,7 @@
     },
     {
       "title": "Ojibwa",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/oji",
       "x-language-type": "living",
       "x-name-french": "ojibwa",
       "x-scope": "macrolanguage",
@@ -2125,6 +2666,7 @@
     },
     {
       "title": "Oriya",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ori",
       "x-language-type": "living",
       "x-name-french": "oriya",
       "x-scope": "macrolanguage",
@@ -2133,6 +2675,7 @@
     },
     {
       "title": "Oromo",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/orm",
       "x-language-type": "living",
       "x-name-french": "galla",
       "x-scope": "macrolanguage",
@@ -2141,6 +2684,7 @@
     },
     {
       "title": "Osage",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/osa",
       "x-language-type": "living",
       "x-name-french": "osage",
       "x-scope": "individual",
@@ -2148,6 +2692,7 @@
     },
     {
       "title": "Ossetian; Ossetic",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/oss",
       "x-language-type": "living",
       "x-name-french": "ossète",
       "x-scope": "individual",
@@ -2156,13 +2701,27 @@
     },
     {
       "title": "Turkish, Ottoman (1500-1928)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ota",
       "x-language-type": "historic",
       "x-name-french": "turc ottoman (1500-1928)",
       "x-scope": "individual",
       "const": "ota"
     },
     {
+      "title": "Otomian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/oto",
+      "x-name-french": "otomi, langues",
+      "const": "oto"
+    },
+    {
+      "title": "Papuan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/paa",
+      "x-name-french": "papoues, langues",
+      "const": "paa"
+    },
+    {
       "title": "Pangasinan",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/pag",
       "x-language-type": "living",
       "x-name-french": "pangasinan",
       "x-scope": "individual",
@@ -2170,6 +2729,7 @@
     },
     {
       "title": "Pahlavi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/pal",
       "x-language-type": "historic",
       "x-name-french": "pahlavi",
       "x-scope": "individual",
@@ -2177,6 +2737,7 @@
     },
     {
       "title": "Pampanga; Kapampangan",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/pam",
       "x-language-type": "living",
       "x-name-french": "pampangan",
       "x-scope": "individual",
@@ -2184,6 +2745,7 @@
     },
     {
       "title": "Panjabi; Punjabi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/pan",
       "x-language-type": "living",
       "x-name-french": "pendjabi",
       "x-scope": "individual",
@@ -2192,6 +2754,7 @@
     },
     {
       "title": "Papiamento",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/pap",
       "x-language-type": "living",
       "x-name-french": "papiamento",
       "x-scope": "individual",
@@ -2199,6 +2762,7 @@
     },
     {
       "title": "Palauan",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/pau",
       "x-language-type": "living",
       "x-name-french": "palau",
       "x-scope": "individual",
@@ -2206,6 +2770,7 @@
     },
     {
       "title": "Persian, Old (ca.600-400 B.C.)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/peo",
       "x-language-type": "historic",
       "x-name-french": "perse, vieux (ca. 600-400 av. J.-C.)",
       "x-scope": "individual",
@@ -2213,6 +2778,7 @@
     },
     {
       "title": "Persian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/per",
       "x-language-type": "living",
       "x-name-french": "persan",
       "x-scope": "macrolanguage",
@@ -2220,7 +2786,14 @@
       "const": "per"
     },
     {
+      "title": "Philippine languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/phi",
+      "x-name-french": "philippines, langues",
+      "const": "phi"
+    },
+    {
       "title": "Phoenician",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/phn",
       "x-language-type": "historic",
       "x-name-french": "phénicien",
       "x-scope": "individual",
@@ -2228,6 +2801,7 @@
     },
     {
       "title": "Pali",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/pli",
       "x-language-type": "historic",
       "x-name-french": "pali",
       "x-scope": "individual",
@@ -2236,6 +2810,7 @@
     },
     {
       "title": "Polish",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/pol",
       "x-language-type": "living",
       "x-name-french": "polonais",
       "x-scope": "individual",
@@ -2244,6 +2819,7 @@
     },
     {
       "title": "Pohnpeian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/pon",
       "x-language-type": "living",
       "x-name-french": "pohnpei",
       "x-scope": "individual",
@@ -2251,6 +2827,7 @@
     },
     {
       "title": "Portuguese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/por",
       "x-language-type": "living",
       "x-name-french": "portugais",
       "x-scope": "individual",
@@ -2258,7 +2835,14 @@
       "const": "por"
     },
     {
+      "title": "Prakrit languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/pra",
+      "x-name-french": "prâkrit, langues",
+      "const": "pra"
+    },
+    {
       "title": "Provençal, Old (to 1500); Occitan, Old (to 1500)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/pro",
       "x-language-type": "historic",
       "x-name-french": "provençal ancien (jusqu'à 1500); occitan ancien (jusqu'à 1500)",
       "x-scope": "individual",
@@ -2266,6 +2850,7 @@
     },
     {
       "title": "Pushto; Pashto",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/pus",
       "x-language-type": "living",
       "x-name-french": "pachto",
       "x-scope": "macrolanguage",
@@ -2273,12 +2858,8 @@
       "const": "pus"
     },
     {
-      "title": "Reserved for local use",
-      "x-name-french": "réservée à l'usage local",
-      "const": "qaa-qtz"
-    },
-    {
       "title": "Quechua",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/que",
       "x-language-type": "living",
       "x-name-french": "quechua",
       "x-scope": "macrolanguage",
@@ -2287,6 +2868,7 @@
     },
     {
       "title": "Rajasthani",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/raj",
       "x-language-type": "living",
       "x-name-french": "rajasthani",
       "x-scope": "macrolanguage",
@@ -2294,6 +2876,7 @@
     },
     {
       "title": "Rapanui",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/rap",
       "x-language-type": "living",
       "x-name-french": "rapanui",
       "x-scope": "individual",
@@ -2301,13 +2884,21 @@
     },
     {
       "title": "Rarotongan; Cook Islands Maori",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/rar",
       "x-language-type": "living",
       "x-name-french": "rarotonga; maori des îles Cook",
       "x-scope": "individual",
       "const": "rar"
     },
     {
+      "title": "Romance languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/roa",
+      "x-name-french": "romanes, langues",
+      "const": "roa"
+    },
+    {
       "title": "Romansh",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/roh",
       "x-language-type": "living",
       "x-name-french": "romanche",
       "x-scope": "individual",
@@ -2316,6 +2907,7 @@
     },
     {
       "title": "Romany",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/rom",
       "x-language-type": "living",
       "x-name-french": "tsigane",
       "x-scope": "macrolanguage",
@@ -2323,6 +2915,7 @@
     },
     {
       "title": "Romanian; Moldavian; Moldovan",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/rum",
       "x-language-type": "living",
       "x-name-french": "roumain; moldave",
       "x-scope": "individual",
@@ -2331,6 +2924,7 @@
     },
     {
       "title": "Rundi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/run",
       "x-language-type": "living",
       "x-name-french": "rundi",
       "x-scope": "individual",
@@ -2339,6 +2933,7 @@
     },
     {
       "title": "Aromanian; Arumanian; Macedo-Romanian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/rup",
       "x-language-type": "living",
       "x-name-french": "aroumain; macédo-roumain",
       "x-scope": "individual",
@@ -2346,6 +2941,7 @@
     },
     {
       "title": "Russian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/rus",
       "x-language-type": "living",
       "x-name-french": "russe",
       "x-scope": "individual",
@@ -2354,6 +2950,7 @@
     },
     {
       "title": "Sandawe",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sad",
       "x-language-type": "living",
       "x-name-french": "sandawe",
       "x-scope": "individual",
@@ -2361,6 +2958,7 @@
     },
     {
       "title": "Sango",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sag",
       "x-language-type": "living",
       "x-name-french": "sango",
       "x-scope": "individual",
@@ -2369,13 +2967,27 @@
     },
     {
       "title": "Yakut",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sah",
       "x-language-type": "living",
       "x-name-french": "iakoute",
       "x-scope": "individual",
       "const": "sah"
     },
     {
+      "title": "South American Indian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sai",
+      "x-name-french": "sud-amérindiennes, langues",
+      "const": "sai"
+    },
+    {
+      "title": "Salishan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sal",
+      "x-name-french": "salishennes, langues",
+      "const": "sal"
+    },
+    {
       "title": "Samaritan Aramaic",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sam",
       "x-language-type": "extinct",
       "x-name-french": "samaritain",
       "x-scope": "individual",
@@ -2383,6 +2995,7 @@
     },
     {
       "title": "Sanskrit",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/san",
       "x-language-type": "historic",
       "x-name-french": "sanskrit",
       "x-scope": "macrolanguage",
@@ -2391,6 +3004,7 @@
     },
     {
       "title": "Sasak",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sas",
       "x-language-type": "living",
       "x-name-french": "sasak",
       "x-scope": "individual",
@@ -2398,6 +3012,7 @@
     },
     {
       "title": "Santali",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sat",
       "x-language-type": "living",
       "x-name-french": "santal",
       "x-scope": "individual",
@@ -2405,6 +3020,7 @@
     },
     {
       "title": "Sicilian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/scn",
       "x-language-type": "living",
       "x-name-french": "sicilien",
       "x-scope": "individual",
@@ -2412,6 +3028,7 @@
     },
     {
       "title": "Scots",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sco",
       "x-language-type": "living",
       "x-name-french": "écossais",
       "x-scope": "individual",
@@ -2419,20 +3036,35 @@
     },
     {
       "title": "Selkup",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sel",
       "x-language-type": "living",
       "x-name-french": "selkoupe",
       "x-scope": "individual",
       "const": "sel"
     },
     {
+      "title": "Semitic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sem",
+      "x-name-french": "sémitiques, langues",
+      "const": "sem"
+    },
+    {
       "title": "Irish, Old (to 900)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sga",
       "x-language-type": "historic",
       "x-name-french": "irlandais ancien (jusqu'à 900)",
       "x-scope": "individual",
       "const": "sga"
     },
     {
+      "title": "Sign Languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sgn",
+      "x-name-french": "langues des signes",
+      "const": "sgn"
+    },
+    {
       "title": "Shan",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/shn",
       "x-language-type": "living",
       "x-name-french": "chan",
       "x-scope": "individual",
@@ -2440,6 +3072,7 @@
     },
     {
       "title": "Sidamo",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sid",
       "x-language-type": "living",
       "x-name-french": "sidamo",
       "x-scope": "individual",
@@ -2447,6 +3080,7 @@
     },
     {
       "title": "Sinhala; Sinhalese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sin",
       "x-language-type": "living",
       "x-name-french": "singhalais",
       "x-scope": "individual",
@@ -2454,7 +3088,26 @@
       "const": "sin"
     },
     {
+      "title": "Siouan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sio",
+      "x-name-french": "sioux, langues",
+      "const": "sio"
+    },
+    {
+      "title": "Sino-Tibetan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sit",
+      "x-name-french": "sino-tibétaines, langues",
+      "const": "sit"
+    },
+    {
+      "title": "Slavic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sla",
+      "x-name-french": "slaves, langues",
+      "const": "sla"
+    },
+    {
       "title": "Slovak",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/slo",
       "x-language-type": "living",
       "x-name-french": "slovaque",
       "x-scope": "individual",
@@ -2463,6 +3116,7 @@
     },
     {
       "title": "Slovenian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/slv",
       "x-language-type": "living",
       "x-name-french": "slovène",
       "x-scope": "individual",
@@ -2471,6 +3125,7 @@
     },
     {
       "title": "Southern Sami",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sma",
       "x-language-type": "living",
       "x-name-french": "sami du Sud",
       "x-scope": "individual",
@@ -2478,6 +3133,7 @@
     },
     {
       "title": "Northern Sami",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sme",
       "x-language-type": "living",
       "x-name-french": "sami du Nord",
       "x-scope": "individual",
@@ -2485,7 +3141,14 @@
       "const": "sme"
     },
     {
+      "title": "Sami languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/smi",
+      "x-name-french": "sames, langues",
+      "const": "smi"
+    },
+    {
       "title": "Lule Sami",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/smj",
       "x-language-type": "living",
       "x-name-french": "sami de Lule",
       "x-scope": "individual",
@@ -2493,6 +3156,7 @@
     },
     {
       "title": "Inari Sami",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/smn",
       "x-language-type": "living",
       "x-name-french": "sami d'Inari",
       "x-scope": "individual",
@@ -2500,6 +3164,7 @@
     },
     {
       "title": "Samoan",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/smo",
       "x-language-type": "living",
       "x-name-french": "samoan",
       "x-scope": "individual",
@@ -2508,6 +3173,7 @@
     },
     {
       "title": "Skolt Sami",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sms",
       "x-language-type": "living",
       "x-name-french": "sami skolt",
       "x-scope": "individual",
@@ -2515,6 +3181,7 @@
     },
     {
       "title": "Shona",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sna",
       "x-language-type": "living",
       "x-name-french": "shona",
       "x-scope": "individual",
@@ -2523,6 +3190,7 @@
     },
     {
       "title": "Sindhi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/snd",
       "x-language-type": "living",
       "x-name-french": "sindhi",
       "x-scope": "individual",
@@ -2531,6 +3199,7 @@
     },
     {
       "title": "Soninke",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/snk",
       "x-language-type": "living",
       "x-name-french": "soninké",
       "x-scope": "individual",
@@ -2538,6 +3207,7 @@
     },
     {
       "title": "Sogdian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sog",
       "x-language-type": "historic",
       "x-name-french": "sogdien",
       "x-scope": "individual",
@@ -2545,6 +3215,7 @@
     },
     {
       "title": "Somali",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/som",
       "x-language-type": "living",
       "x-name-french": "somali",
       "x-scope": "individual",
@@ -2552,7 +3223,14 @@
       "const": "som"
     },
     {
+      "title": "Songhai languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/son",
+      "x-name-french": "songhai, langues",
+      "const": "son"
+    },
+    {
       "title": "Sotho, Southern",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sot",
       "x-language-type": "living",
       "x-name-french": "sotho du Sud",
       "x-scope": "individual",
@@ -2561,6 +3239,7 @@
     },
     {
       "title": "Spanish; Castilian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/spa",
       "x-language-type": "living",
       "x-name-french": "espagnol; castillan",
       "x-scope": "individual",
@@ -2569,6 +3248,7 @@
     },
     {
       "title": "Sardinian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/srd",
       "x-language-type": "living",
       "x-name-french": "sarde",
       "x-scope": "macrolanguage",
@@ -2577,6 +3257,7 @@
     },
     {
       "title": "Sranan Tongo",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/srn",
       "x-language-type": "living",
       "x-name-french": "sranan tongo",
       "x-scope": "individual",
@@ -2584,6 +3265,7 @@
     },
     {
       "title": "Serbian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/srp",
       "x-language-type": "living",
       "x-name-french": "serbe",
       "x-scope": "individual",
@@ -2592,13 +3274,21 @@
     },
     {
       "title": "Serer",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/srr",
       "x-language-type": "living",
       "x-name-french": "sérère",
       "x-scope": "individual",
       "const": "srr"
     },
     {
+      "title": "Nilo-Saharan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ssa",
+      "x-name-french": "nilo-sahariennes, langues",
+      "const": "ssa"
+    },
+    {
       "title": "Swati",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ssw",
       "x-language-type": "living",
       "x-name-french": "swati",
       "x-scope": "individual",
@@ -2607,6 +3297,7 @@
     },
     {
       "title": "Sukuma",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/suk",
       "x-language-type": "living",
       "x-name-french": "sukuma",
       "x-scope": "individual",
@@ -2614,6 +3305,7 @@
     },
     {
       "title": "Sundanese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sun",
       "x-language-type": "living",
       "x-name-french": "soundanais",
       "x-scope": "individual",
@@ -2622,6 +3314,7 @@
     },
     {
       "title": "Susu",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sus",
       "x-language-type": "living",
       "x-name-french": "soussou",
       "x-scope": "individual",
@@ -2629,6 +3322,7 @@
     },
     {
       "title": "Sumerian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/sux",
       "x-language-type": "historic",
       "x-name-french": "sumérien",
       "x-scope": "individual",
@@ -2636,6 +3330,7 @@
     },
     {
       "title": "Swahili",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/swa",
       "x-language-type": "living",
       "x-name-french": "swahili",
       "x-scope": "macrolanguage",
@@ -2644,6 +3339,7 @@
     },
     {
       "title": "Swedish",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/swe",
       "x-language-type": "living",
       "x-name-french": "suédois",
       "x-scope": "individual",
@@ -2652,6 +3348,7 @@
     },
     {
       "title": "Classical Syriac",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/syc",
       "x-language-type": "historic",
       "x-name-french": "syriaque classique",
       "x-scope": "individual",
@@ -2659,6 +3356,7 @@
     },
     {
       "title": "Syriac",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/syr",
       "x-language-type": "living",
       "x-name-french": "syriaque",
       "x-scope": "macrolanguage",
@@ -2666,6 +3364,7 @@
     },
     {
       "title": "Tahitian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tah",
       "x-language-type": "living",
       "x-name-french": "tahitien",
       "x-scope": "individual",
@@ -2673,7 +3372,14 @@
       "const": "tah"
     },
     {
+      "title": "Tai languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tai",
+      "x-name-french": "tai, langues",
+      "const": "tai"
+    },
+    {
       "title": "Tamil",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tam",
       "x-language-type": "living",
       "x-name-french": "tamoul",
       "x-scope": "individual",
@@ -2682,6 +3388,7 @@
     },
     {
       "title": "Tatar",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tat",
       "x-language-type": "living",
       "x-name-french": "tatar",
       "x-scope": "individual",
@@ -2690,6 +3397,7 @@
     },
     {
       "title": "Telugu",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tel",
       "x-language-type": "living",
       "x-name-french": "télougou",
       "x-scope": "individual",
@@ -2698,6 +3406,7 @@
     },
     {
       "title": "Timne",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tem",
       "x-language-type": "living",
       "x-name-french": "temne",
       "x-scope": "individual",
@@ -2705,6 +3414,7 @@
     },
     {
       "title": "Tereno",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ter",
       "x-language-type": "living",
       "x-name-french": "tereno",
       "x-scope": "individual",
@@ -2712,6 +3422,7 @@
     },
     {
       "title": "Tetum",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tet",
       "x-language-type": "living",
       "x-name-french": "tetum",
       "x-scope": "individual",
@@ -2719,6 +3430,7 @@
     },
     {
       "title": "Tajik",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tgk",
       "x-language-type": "living",
       "x-name-french": "tadjik",
       "x-scope": "individual",
@@ -2727,6 +3439,7 @@
     },
     {
       "title": "Tagalog",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tgl",
       "x-language-type": "living",
       "x-name-french": "tagalog",
       "x-scope": "individual",
@@ -2735,6 +3448,7 @@
     },
     {
       "title": "Thai",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tha",
       "x-language-type": "living",
       "x-name-french": "thaï",
       "x-scope": "individual",
@@ -2743,6 +3457,7 @@
     },
     {
       "title": "Tibetan",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tib",
       "x-language-type": "living",
       "x-name-french": "tibétain",
       "x-scope": "individual",
@@ -2751,6 +3466,7 @@
     },
     {
       "title": "Tigre",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tig",
       "x-language-type": "living",
       "x-name-french": "tigré",
       "x-scope": "individual",
@@ -2758,6 +3474,7 @@
     },
     {
       "title": "Tigrinya",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tir",
       "x-language-type": "living",
       "x-name-french": "tigrigna",
       "x-scope": "individual",
@@ -2766,6 +3483,7 @@
     },
     {
       "title": "Tiv",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tiv",
       "x-language-type": "living",
       "x-name-french": "tiv",
       "x-scope": "individual",
@@ -2773,6 +3491,7 @@
     },
     {
       "title": "Tokelau",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tkl",
       "x-language-type": "living",
       "x-name-french": "tokelau",
       "x-scope": "individual",
@@ -2780,6 +3499,7 @@
     },
     {
       "title": "Klingon; tlhIngan-Hol",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tlh",
       "x-language-type": "constructed",
       "x-name-french": "klingon",
       "x-scope": "individual",
@@ -2787,6 +3507,7 @@
     },
     {
       "title": "Tlingit",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tli",
       "x-language-type": "living",
       "x-name-french": "tlingit",
       "x-scope": "individual",
@@ -2794,6 +3515,7 @@
     },
     {
       "title": "Tamashek",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tmh",
       "x-language-type": "living",
       "x-name-french": "tamacheq",
       "x-scope": "macrolanguage",
@@ -2801,6 +3523,7 @@
     },
     {
       "title": "Tonga (Nyasa)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tog",
       "x-language-type": "living",
       "x-name-french": "tonga (Nyasa)",
       "x-scope": "individual",
@@ -2808,6 +3531,7 @@
     },
     {
       "title": "Tonga (Tonga Islands)",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ton",
       "x-language-type": "living",
       "x-name-french": "tongan (Îles Tonga)",
       "x-scope": "individual",
@@ -2816,6 +3540,7 @@
     },
     {
       "title": "Tok Pisin",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tpi",
       "x-language-type": "living",
       "x-name-french": "tok pisin",
       "x-scope": "individual",
@@ -2823,6 +3548,7 @@
     },
     {
       "title": "Tsimshian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tsi",
       "x-language-type": "living",
       "x-name-french": "tsimshian",
       "x-scope": "individual",
@@ -2830,6 +3556,7 @@
     },
     {
       "title": "Tswana",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tsn",
       "x-language-type": "living",
       "x-name-french": "tswana",
       "x-scope": "individual",
@@ -2838,6 +3565,7 @@
     },
     {
       "title": "Tsonga",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tso",
       "x-language-type": "living",
       "x-name-french": "tsonga",
       "x-scope": "individual",
@@ -2846,6 +3574,7 @@
     },
     {
       "title": "Turkmen",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tuk",
       "x-language-type": "living",
       "x-name-french": "turkmène",
       "x-scope": "individual",
@@ -2854,13 +3583,21 @@
     },
     {
       "title": "Tumbuka",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tum",
       "x-language-type": "living",
       "x-name-french": "tumbuka",
       "x-scope": "individual",
       "const": "tum"
     },
     {
+      "title": "Tupi languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tup",
+      "x-name-french": "tupi, langues",
+      "const": "tup"
+    },
+    {
       "title": "Turkish",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tur",
       "x-language-type": "living",
       "x-name-french": "turc",
       "x-scope": "individual",
@@ -2868,7 +3605,14 @@
       "const": "tur"
     },
     {
+      "title": "Altaic languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tut",
+      "x-name-french": "altaïques, langues",
+      "const": "tut"
+    },
+    {
       "title": "Tuvalu",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tvl",
       "x-language-type": "living",
       "x-name-french": "tuvalu",
       "x-scope": "individual",
@@ -2876,6 +3620,7 @@
     },
     {
       "title": "Twi",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/twi",
       "x-language-type": "living",
       "x-name-french": "twi",
       "x-scope": "individual",
@@ -2884,6 +3629,7 @@
     },
     {
       "title": "Tuvinian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/tyv",
       "x-language-type": "living",
       "x-name-french": "touva",
       "x-scope": "individual",
@@ -2891,6 +3637,7 @@
     },
     {
       "title": "Udmurt",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/udm",
       "x-language-type": "living",
       "x-name-french": "oudmourte",
       "x-scope": "individual",
@@ -2898,6 +3645,7 @@
     },
     {
       "title": "Ugaritic",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/uga",
       "x-language-type": "historic",
       "x-name-french": "ougaritique",
       "x-scope": "individual",
@@ -2905,6 +3653,7 @@
     },
     {
       "title": "Uighur; Uyghur",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/uig",
       "x-language-type": "living",
       "x-name-french": "ouïgour",
       "x-scope": "individual",
@@ -2913,6 +3662,7 @@
     },
     {
       "title": "Ukrainian",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ukr",
       "x-language-type": "living",
       "x-name-french": "ukrainien",
       "x-scope": "individual",
@@ -2921,6 +3671,7 @@
     },
     {
       "title": "Umbundu",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/umb",
       "x-language-type": "living",
       "x-name-french": "umbundu",
       "x-scope": "individual",
@@ -2928,6 +3679,7 @@
     },
     {
       "title": "Undetermined",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/und",
       "x-language-type": "special",
       "x-name-french": "indéterminée",
       "x-scope": "special",
@@ -2935,6 +3687,7 @@
     },
     {
       "title": "Urdu",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/urd",
       "x-language-type": "living",
       "x-name-french": "ourdou",
       "x-scope": "individual",
@@ -2943,6 +3696,7 @@
     },
     {
       "title": "Uzbek",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/uzb",
       "x-language-type": "living",
       "x-name-french": "ouszbek",
       "x-scope": "macrolanguage",
@@ -2951,6 +3705,7 @@
     },
     {
       "title": "Vai",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/vai",
       "x-language-type": "living",
       "x-name-french": "vaï",
       "x-scope": "individual",
@@ -2958,6 +3713,7 @@
     },
     {
       "title": "Venda",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ven",
       "x-language-type": "living",
       "x-name-french": "venda",
       "x-scope": "individual",
@@ -2966,6 +3722,7 @@
     },
     {
       "title": "Vietnamese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/vie",
       "x-language-type": "living",
       "x-name-french": "vietnamien",
       "x-scope": "individual",
@@ -2974,6 +3731,7 @@
     },
     {
       "title": "Volapük",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/vol",
       "x-language-type": "constructed",
       "x-name-french": "volapük",
       "x-scope": "individual",
@@ -2982,13 +3740,21 @@
     },
     {
       "title": "Votic",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/vot",
       "x-language-type": "living",
       "x-name-french": "vote",
       "x-scope": "individual",
       "const": "vot"
     },
     {
+      "title": "Wakashan languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/wak",
+      "x-name-french": "wakashanes, langues",
+      "const": "wak"
+    },
+    {
       "title": "Wolaitta; Wolaytta",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/wal",
       "x-language-type": "living",
       "x-name-french": "wolaitta; wolaytta",
       "x-scope": "individual",
@@ -2996,6 +3762,7 @@
     },
     {
       "title": "Waray",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/war",
       "x-language-type": "living",
       "x-name-french": "waray",
       "x-scope": "individual",
@@ -3003,6 +3770,7 @@
     },
     {
       "title": "Washo",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/was",
       "x-language-type": "living",
       "x-name-french": "washo",
       "x-scope": "individual",
@@ -3010,6 +3778,7 @@
     },
     {
       "title": "Welsh",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/wel",
       "x-language-type": "living",
       "x-name-french": "gallois",
       "x-scope": "individual",
@@ -3017,7 +3786,14 @@
       "const": "wel"
     },
     {
+      "title": "Sorbian languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/wen",
+      "x-name-french": "sorabes, langues",
+      "const": "wen"
+    },
+    {
       "title": "Walloon",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/wln",
       "x-language-type": "living",
       "x-name-french": "wallon",
       "x-scope": "individual",
@@ -3026,6 +3802,7 @@
     },
     {
       "title": "Wolof",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/wol",
       "x-language-type": "living",
       "x-name-french": "wolof",
       "x-scope": "individual",
@@ -3034,6 +3811,7 @@
     },
     {
       "title": "Kalmyk; Oirat",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/xal",
       "x-language-type": "living",
       "x-name-french": "kalmouk; oïrat",
       "x-scope": "individual",
@@ -3041,6 +3819,7 @@
     },
     {
       "title": "Xhosa",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/xho",
       "x-language-type": "living",
       "x-name-french": "xhosa",
       "x-scope": "individual",
@@ -3049,6 +3828,7 @@
     },
     {
       "title": "Yao",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/yao",
       "x-language-type": "living",
       "x-name-french": "yao",
       "x-scope": "individual",
@@ -3056,6 +3836,7 @@
     },
     {
       "title": "Yapese",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/yap",
       "x-language-type": "living",
       "x-name-french": "yapois",
       "x-scope": "individual",
@@ -3063,6 +3844,7 @@
     },
     {
       "title": "Yiddish",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/yid",
       "x-language-type": "living",
       "x-name-french": "yiddish",
       "x-scope": "macrolanguage",
@@ -3071,6 +3853,7 @@
     },
     {
       "title": "Yoruba",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/yor",
       "x-language-type": "living",
       "x-name-french": "yoruba",
       "x-scope": "individual",
@@ -3078,7 +3861,14 @@
       "const": "yor"
     },
     {
+      "title": "Yupik languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/ypk",
+      "x-name-french": "yupik, langues",
+      "const": "ypk"
+    },
+    {
       "title": "Zapotec",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/zap",
       "x-language-type": "living",
       "x-name-french": "zapotèque",
       "x-scope": "macrolanguage",
@@ -3086,6 +3876,7 @@
     },
     {
       "title": "Blissymbols; Blissymbolics; Bliss",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/zbl",
       "x-language-type": "constructed",
       "x-name-french": "symboles Bliss; Bliss",
       "x-scope": "individual",
@@ -3093,6 +3884,7 @@
     },
     {
       "title": "Zenaga",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/zen",
       "x-language-type": "living",
       "x-name-french": "zenaga",
       "x-scope": "individual",
@@ -3100,6 +3892,7 @@
     },
     {
       "title": "Standard Moroccan Tamazight",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/zgh",
       "x-language-type": "living",
       "x-name-french": "amazighe standard marocain",
       "x-scope": "individual",
@@ -3107,6 +3900,7 @@
     },
     {
       "title": "Zhuang; Chuang",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/zha",
       "x-language-type": "living",
       "x-name-french": "zhuang; chuang",
       "x-scope": "macrolanguage",
@@ -3114,7 +3908,14 @@
       "const": "zha"
     },
     {
+      "title": "Zande languages",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/znd",
+      "x-name-french": "zandé, langues",
+      "const": "znd"
+    },
+    {
       "title": "Zulu",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/zul",
       "x-language-type": "living",
       "x-name-french": "zoulou",
       "x-scope": "individual",
@@ -3123,6 +3924,7 @@
     },
     {
       "title": "Zuni",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/zun",
       "x-language-type": "living",
       "x-name-french": "zuni",
       "x-scope": "individual",
@@ -3130,6 +3932,7 @@
     },
     {
       "title": "No linguistic content; Not applicable",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/zxx",
       "x-language-type": "special",
       "x-name-french": "pas de contenu linguistique; non applicable",
       "x-scope": "special",
@@ -3137,10 +3940,16 @@
     },
     {
       "title": "Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki",
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/zza",
       "x-language-type": "living",
       "x-name-french": "zaza; dimili; dimli; kirdki; kirmanjki; zazaki",
       "x-scope": "macrolanguage",
       "const": "zza"
+    },
+    {
+      "title": "Reserved for local use",
+      "type": "string",
+      "pattern": "^q[a-t][a-z]$"
     }
   ]
 }
