@@ -8,5 +8,5 @@
   "x-prefix-factor": 10.0,
   "x-symbol": "da°C",
   "type": "number",
-  "minimum": -273.15
+  "minimum": -27.315
 }

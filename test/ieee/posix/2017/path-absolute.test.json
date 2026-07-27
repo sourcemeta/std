@@ -52,9 +52,9 @@
       "valid": true
     },
     {
-      "description": "Exactly two leading slashes (implementation-defined)",
+      "description": "Invalid - exactly two leading slashes are excluded from absolute pathnames",
       "data": "//server/share",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Three or more leading slashes (treated as single slash)",
@@ -412,9 +412,9 @@
       "valid": true
     },
     {
-      "description": "Two slashes only",
+      "description": "Invalid - exactly two slashes are excluded from absolute pathnames",
       "data": "//",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Many slashes only",

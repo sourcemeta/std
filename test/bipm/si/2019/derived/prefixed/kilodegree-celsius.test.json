@@ -17,8 +17,8 @@
       "valid": true
     },
     {
-      "description": "Valid - negative",
-      "data": -50,
+      "description": "Valid - negative within the scaled range",
+      "data": -0.136575,
       "valid": true
     },
     {

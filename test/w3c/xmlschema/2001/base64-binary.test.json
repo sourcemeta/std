@@ -42,9 +42,9 @@
       "valid": true
     },
     {
-      "description": "Valid - with slash",
+      "description": "Invalid - final quad has non-zero discarded bits (f not in B16)",
       "data": "abc/def=",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Valid - all uppercase",
@@ -112,9 +112,9 @@
       "valid": false
     },
     {
-      "description": "Invalid - contains space",
+      "description": "Valid - single space between characters per the XSD grammar",
       "data": "YWJj ZA==",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Invalid - contains dash",
@@ -242,14 +242,14 @@
       "valid": false
     },
     {
-      "description": "Valid - padding with two equals at end of 4-char group",
+      "description": "Invalid - character before double padding must be A, Q, g, or w",
       "data": "AB==",
-      "valid": true
+      "valid": false
     },
     {
-      "description": "Valid - padding with one equal at end of 4-char group",
+      "description": "Invalid - character before single padding must be from the B16 class",
       "data": "ABC=",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Valid - 8 chars then padding",

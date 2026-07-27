@@ -182,9 +182,9 @@
       "valid": false
     },
     {
-      "description": "Network path with invalid IPv4",
+      "description": "Network path with IPv4-like reg-name (first-match-wins makes it a valid reg-name)",
       "data": "//256.256.256.256/path",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Network path with IPv6 without brackets",
@@ -192,14 +192,14 @@
       "valid": false
     },
     {
-      "description": "Network path with empty port",
+      "description": "Network path with empty port (port is *DIGIT)",
       "data": "//example.com:/path",
-      "valid": false
+      "valid": true
     },
     {
-      "description": "Network path without host",
+      "description": "Network path with empty host (reg-name may be empty)",
       "data": "//:8080/path",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Path with unreserved characters",

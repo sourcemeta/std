@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "RFC 7807 Problem Details for HTTP APIs",
+  "title": "RFC 9457 Problem Details for HTTP APIs",
   "description": "A machine-readable format for specifying errors in HTTP API responses",
   "examples": [
     {
@@ -34,7 +34,7 @@
   ],
   "x-jsonld-type": "http://www.w3.org/ns/hydra/core#Error",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "x-links": [ "https://www.rfc-editor.org/rfc/rfc7807" ],
+  "x-links": [ "https://www.rfc-editor.org/rfc/rfc9457" ],
   "type": "object",
   "properties": {
     "title": {

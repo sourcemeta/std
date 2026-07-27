@@ -38,7 +38,15 @@
       "x-jsonld-id": "https://purl.org/geojson/vocab#geometry",
       "type": "array",
       "items": {
-        "$ref": "geometry.json"
+        "$comment": "RFC 7946 says nested GeometryCollections SHOULD be avoided but does not forbid them",
+        "anyOf": [
+          {
+            "$ref": "geometry.json"
+          },
+          {
+            "$ref": "geometry-collection.json"
+          }
+        ]
       }
     },
     "bbox": {

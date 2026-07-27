@@ -132,9 +132,9 @@
       "valid": false
     },
     {
-      "description": "Valid higher dimension bounding box (loose validation)",
+      "description": "Invalid - only 2D and 3D boxes exist, matching the library's three-dimensional position cap",
       "data": [ 0, 0, 0, 0, 1, 1, 1, 1 ],
-      "valid": true
+      "valid": false
     }
   ]
 }

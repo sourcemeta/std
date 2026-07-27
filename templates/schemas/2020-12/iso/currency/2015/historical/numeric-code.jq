@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "ISO 4217:2015 Numeric Currency, Fund, and Precious Metal Code (Historical)",
-  "description": ("A three-digit numeric code including withdrawn currencies, funds, and precious metals (" + .ISO_4217."@attributes".Pblshd + ")"),
+  "title": "ISO 4217:2015 Numeric Currency and Precious Metal Code (Historical)",
+  "description": ("A three-digit numeric code including withdrawn currencies and precious metals (" + .ISO_4217."@attributes".Pblshd + ")"),
   "examples": (
     .ISO_4217.HstrcCcyTbl.HstrcCcyNtry
     | map(select(.Ccy != null and .CcyNbr != null))

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "W3C XML Schema NMTOKENS",
-  "description": "Represents a list of XML name tokens (§3.3.4)",
+  "description": "Represents a list of XML name tokens (§3.3.5)",
   "$comment": "NMTOKENS is a space-separated list of NMTOKEN values. In JSON Schema, this is represented as an array with at least one item",
   "examples": [
     [ "token1", "token2" ],

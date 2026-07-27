@@ -14,6 +14,12 @@
     },
     {
       "$ref": "alpha-precious-metal.json"
+    },
+    {
+      "$ref": "alpha-test.json"
+    },
+    {
+      "$ref": "alpha-unknown.json"
     }
   ]
 }

@@ -52,9 +52,9 @@
       "valid": true
     },
     {
-      "description": "Authority with invalid IPv4",
+      "description": "Authority with IPv4-like reg-name (first-match-wins makes it a valid reg-name)",
       "data": "http://256.256.256.256/",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Authority with IPv6",
@@ -97,9 +97,9 @@
       "valid": true
     },
     {
-      "description": "Authority without host",
+      "description": "Authority with empty host (allowed by RFC 3986 for generic URIs)",
       "data": "http://:80/",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Path with multiple segments",

@@ -4,7 +4,7 @@
   "description": "An HTTP 3xx redirection status code indicating further action needs to be taken to complete the request",
   "examples": [ 301, 302, 304 ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "x-links": [ "https://www.rfc-editor.org/rfc/rfc9110#section-15.3" ],
+  "x-links": [ "https://www.rfc-editor.org/rfc/rfc9110#section-15.4" ],
   "type": "integer",
   "maximum": 399,
   "minimum": 300

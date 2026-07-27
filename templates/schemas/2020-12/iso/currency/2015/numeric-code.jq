@@ -14,6 +14,8 @@
   "anyOf": [
     {"$ref": "numeric-currency.json"},
     {"$ref": "numeric-fund.json"},
-    {"$ref": "numeric-precious-metal.json"}
+    {"$ref": "numeric-precious-metal.json"},
+    {"$ref": "numeric-test.json"},
+    {"$ref": "numeric-unknown.json"}
   ]
 }

@@ -3,48 +3,53 @@
   "tests": [
     {
       "description": "Valid - single year",
-      "data": [ "2023" ],
-      "valid": true
+      "valid": true,
+      "data": "2020"
     },
     {
       "description": "Valid - multiple years",
-      "data": [ "2020", "2021", "2022" ],
-      "valid": true
+      "valid": true,
+      "data": "2020 2021 2022"
     },
     {
-      "description": "Valid - years with timezone",
-      "data": [ "2023Z", "2024+01:00" ],
-      "valid": true
+      "description": "Valid - negative and long years",
+      "valid": true,
+      "data": "-1999 1000 12026"
     },
     {
-      "description": "Valid - negative year",
-      "data": [ "-1999" ],
-      "valid": true
+      "description": "Valid - empty list",
+      "valid": true,
+      "data": ""
     },
     {
-      "description": "Valid - empty array",
-      "data": [],
-      "valid": true
+      "description": "Valid - surrounding whitespace",
+      "valid": true,
+      "data": "  2020 2021  "
     },
     {
-      "description": "Invalid - year 0000",
-      "data": [ "0000" ],
-      "valid": false
+      "description": "Invalid - timezone designator",
+      "valid": false,
+      "data": "2024Z"
     },
     {
-      "description": "Invalid - non-string year",
-      "data": [ 2023 ],
-      "valid": false
+      "description": "Invalid - three digit year",
+      "valid": false,
+      "data": "202"
     },
     {
-      "description": "Invalid - not an array",
-      "data": "2023",
-      "valid": false
+      "description": "Invalid - comma separated",
+      "valid": false,
+      "data": "2020,2021"
     },
     {
-      "description": "Invalid - null",
-      "data": null,
-      "valid": false
+      "description": "Invalid - JSON array of years",
+      "valid": false,
+      "data": [ "2020", "2021" ]
+    },
+    {
+      "description": "Invalid - number",
+      "valid": false,
+      "data": 2020
     }
   ]
 }

@@ -91,19 +91,23 @@
     },
     {
       "data": 1.5,
-      "valid": false
+      "valid": true,
+      "description": "Valid - fractional numbers are allowed (SHOULD NOT, not MUST NOT)"
     },
     {
       "data": 3.14,
-      "valid": false
+      "valid": true,
+      "description": "Valid - fractional numbers are allowed (SHOULD NOT, not MUST NOT)"
     },
     {
       "data": 0.1,
-      "valid": false
+      "valid": true,
+      "description": "Valid - fractional numbers are allowed (SHOULD NOT, not MUST NOT)"
     },
     {
       "data": -0.5,
-      "valid": false
+      "valid": true,
+      "description": "Valid - fractional numbers are allowed (SHOULD NOT, not MUST NOT)"
     },
     {
       "data": true,

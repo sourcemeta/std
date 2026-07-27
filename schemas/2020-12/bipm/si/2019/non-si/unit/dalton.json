@@ -5,7 +5,7 @@
   "examples": [ 1, 12, 16, 18, 28, 44, 180.16 ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
-  "x-si-equivalent": "1.660539066605e-27 kg",
+  "x-si-equivalent": "1.66053906660e-27 kg",
   "x-symbol": "Da",
   "type": "number",
   "minimum": 0

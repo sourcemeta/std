@@ -72,9 +72,9 @@
       "valid": false
     },
     {
-      "description": "Invalid - five digit year",
+      "description": "Valid - years may have more than four digits",
       "data": "10000-05",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Invalid - with day component",

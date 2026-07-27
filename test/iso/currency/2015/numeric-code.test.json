@@ -72,9 +72,9 @@
       "valid": true
     },
     {
-      "description": "Invalid - unknown code (999)",
+      "description": "Valid - 999 is a List One member (the no-currency code)",
       "data": 999,
-      "valid": false
+      "valid": true
     },
     {
       "description": "Invalid - non-existent code",

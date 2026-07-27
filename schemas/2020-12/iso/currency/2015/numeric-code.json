@@ -14,6 +14,12 @@
     },
     {
       "$ref": "numeric-precious-metal.json"
+    },
+    {
+      "$ref": "numeric-test.json"
+    },
+    {
+      "$ref": "numeric-unknown.json"
     }
   ]
 }
