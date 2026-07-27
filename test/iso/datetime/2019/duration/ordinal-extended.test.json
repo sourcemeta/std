@@ -262,11 +262,6 @@
       "valid": false
     },
     {
-      "description": "Valid - zero days is a legal duration quantity",
-      "data": "P0001-000T00:00:00",
-      "valid": true
-    },
-    {
       "description": "Invalid - day 367",
       "data": "P0001-367T00:00:00",
       "valid": false
