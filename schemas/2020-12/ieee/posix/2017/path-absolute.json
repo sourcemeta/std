@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "IEEE Std 1003.1-2017 POSIX File Path (Absolute)",
   "description": "IEEE Std 1003.1-2017 POSIX absolute pathname",
+  "$comment": "POSIX excludes pathnames beginning with exactly two slashes from the absolute pathname definition",
   "examples": [
     "/",
     "/home/user/document.txt",
@@ -16,5 +17,5 @@
     "$comment": "Cannot contain null bytes",
     "pattern": "\u0000"
   },
-  "pattern": "^/"
+  "pattern": "^(/([^/].*)?|///.*)$"
 }

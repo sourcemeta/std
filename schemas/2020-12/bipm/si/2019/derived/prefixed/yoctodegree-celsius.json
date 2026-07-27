@@ -8,5 +8,5 @@
   "x-prefix-factor": 1e-24,
   "x-symbol": "y°C",
   "type": "number",
-  "minimum": -273.15
+  "minimum": -2.73150000000000000000000000e+26
 }

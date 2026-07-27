@@ -18,6 +18,11 @@
     },
     {
       "$ref": "./path-relative.json"
+    },
+    {
+      "$comment": "A pathname beginning with exactly two slashes is a valid pathname with implementation-defined interpretation, though not an Absolute Pathname",
+      "type": "string",
+      "pattern": "^//([^/].*)?$"
     }
   ]
 }

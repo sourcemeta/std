@@ -4,7 +4,7 @@
   "description": "An HTTP 1xx informational status code indicating an interim response",
   "examples": [ 100, 101, 102 ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "x-links": [ "https://www.rfc-editor.org/rfc/rfc9110#section-15.1" ],
+  "x-links": [ "https://www.rfc-editor.org/rfc/rfc9110#section-15.2" ],
   "type": "integer",
   "maximum": 199,
   "minimum": 100

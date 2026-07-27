@@ -1,19 +1,14 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "XBRL DTR 2024-01-31 gYearListItemType",
-  "description": "A list of W3C XML Schema gYear values",
-  "examples": [
-    [ "2020", "2021", "2022" ],
-    [ "1999" ],
-    [ "-1999", "1000", "2024Z" ]
-  ],
+  "description": "A whitespace-separated list of year values as defined by the XBRL Data Types Registry",
+  "$comment": "The registry type is a whitespace-separated token list, not gYear values, so no timezone designator is allowed",
+  "examples": [ "2020 2021 2022", "1999", "-1999 1000 2024" ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [
     "https://www.xbrl.org/dtr/dtr.html",
     "https://www.xbrl.org/dtr/type/2024-01-31/types.xsd"
   ],
-  "type": "array",
-  "items": {
-    "$ref": "../../../../w3c/xmlschema/2001/g-year.json"
-  }
+  "type": "string",
+  "pattern": "^\\s*(-?[0-9]{4,}(\\s+-?[0-9]{4,})*)?\\s*$"
 }

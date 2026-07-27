@@ -22,9 +22,9 @@
       "valid": true
     },
     {
-      "description": "Invalid - URI with spaces",
+      "description": "Valid - spaces are within the XSD anyURI lexical space",
       "data": "http://example.com/path with spaces",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Invalid - number instead of string",

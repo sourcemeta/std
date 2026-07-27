@@ -8,5 +8,5 @@
   "x-prefix-factor": 1000000.0,
   "x-symbol": "M°C",
   "type": "number",
-  "minimum": -273.15
+  "minimum": -0.00027315
 }

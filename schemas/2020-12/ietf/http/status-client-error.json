@@ -4,7 +4,7 @@
   "description": "An HTTP 4xx client error status code indicating the request contains bad syntax or cannot be fulfilled",
   "examples": [ 400, 404, 403 ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
-  "x-links": [ "https://www.rfc-editor.org/rfc/rfc9110#section-15.4" ],
+  "x-links": [ "https://www.rfc-editor.org/rfc/rfc9110#section-15.5" ],
   "type": "integer",
   "maximum": 499,
   "minimum": 400

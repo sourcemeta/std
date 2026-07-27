@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "RFC 7946 GeoJSON Bounding Box",
   "description": "An array of numbers representing a bounding box that encloses a GeoJSON object, with coordinates in the order: westernmost, southernmost, easternmost, northernmost",
+  "$comment": "Boxes beyond three dimensions get one branch per dimension count, since the 2*n length rule and the latitude positions cannot be expressed for unbounded n",
   "examples": [
     [ -180, -90, 180, 90 ],
     [ -122.5, 37.5, -122.0, 38.0 ],
@@ -71,11 +72,139 @@
       ]
     },
     {
-      "description": "Higher dimension bounding box",
-      "minItems": 7,
-      "items": {
-        "type": "number"
-      }
+      "description": "4D bounding box",
+      "maxItems": 8,
+      "minItems": 8,
+      "prefixItems": [
+        {
+          "description": "Southwesterly longitude",
+          "type": "number"
+        },
+        {
+          "$ref": "../../iso/coordinate/2022/latitude.json"
+        },
+        {
+          "description": "Southwesterly value on axis 3",
+          "type": "number"
+        },
+        {
+          "description": "Southwesterly value on axis 4",
+          "type": "number"
+        },
+        {
+          "description": "Northeasterly longitude",
+          "type": "number"
+        },
+        {
+          "$ref": "../../iso/coordinate/2022/latitude.json"
+        },
+        {
+          "description": "Northeasterly value on axis 3",
+          "type": "number"
+        },
+        {
+          "description": "Northeasterly value on axis 4",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "description": "5D bounding box",
+      "maxItems": 10,
+      "minItems": 10,
+      "prefixItems": [
+        {
+          "description": "Southwesterly longitude",
+          "type": "number"
+        },
+        {
+          "$ref": "../../iso/coordinate/2022/latitude.json"
+        },
+        {
+          "description": "Southwesterly value on axis 3",
+          "type": "number"
+        },
+        {
+          "description": "Southwesterly value on axis 4",
+          "type": "number"
+        },
+        {
+          "description": "Southwesterly value on axis 5",
+          "type": "number"
+        },
+        {
+          "description": "Northeasterly longitude",
+          "type": "number"
+        },
+        {
+          "$ref": "../../iso/coordinate/2022/latitude.json"
+        },
+        {
+          "description": "Northeasterly value on axis 3",
+          "type": "number"
+        },
+        {
+          "description": "Northeasterly value on axis 4",
+          "type": "number"
+        },
+        {
+          "description": "Northeasterly value on axis 5",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "description": "6D bounding box",
+      "maxItems": 12,
+      "minItems": 12,
+      "prefixItems": [
+        {
+          "description": "Southwesterly longitude",
+          "type": "number"
+        },
+        {
+          "$ref": "../../iso/coordinate/2022/latitude.json"
+        },
+        {
+          "description": "Southwesterly value on axis 3",
+          "type": "number"
+        },
+        {
+          "description": "Southwesterly value on axis 4",
+          "type": "number"
+        },
+        {
+          "description": "Southwesterly value on axis 5",
+          "type": "number"
+        },
+        {
+          "description": "Southwesterly value on axis 6",
+          "type": "number"
+        },
+        {
+          "description": "Northeasterly longitude",
+          "type": "number"
+        },
+        {
+          "$ref": "../../iso/coordinate/2022/latitude.json"
+        },
+        {
+          "description": "Northeasterly value on axis 3",
+          "type": "number"
+        },
+        {
+          "description": "Northeasterly value on axis 4",
+          "type": "number"
+        },
+        {
+          "description": "Northeasterly value on axis 5",
+          "type": "number"
+        },
+        {
+          "description": "Northeasterly value on axis 6",
+          "type": "number"
+        }
+      ]
     }
   ]
 }

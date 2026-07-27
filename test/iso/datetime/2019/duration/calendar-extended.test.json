@@ -37,9 +37,9 @@
       "valid": true
     },
     {
-      "description": "Valid - 0 years 12 months 31 days, 23 hours 59 minutes 59 seconds",
+      "description": "Invalid - 31 days exceeds the 30-day carry-over point",
       "data": "P0000-12-31T23:59:59",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Valid - 10 years 6 months 15 days, 12 hours 30 minutes 45 seconds",
@@ -107,14 +107,14 @@
       "valid": false
     },
     {
-      "description": "Invalid - month 00 (months should be 01-12)",
+      "description": "Valid - zero months is a legal duration quantity",
       "data": "P0000-00-01T00:00:00",
-      "valid": false
+      "valid": true
     },
     {
-      "description": "Invalid - month 00 with valid day (months should be 01-12)",
+      "description": "Valid - zero months with days is a legal duration quantity",
       "data": "P0001-00-01T00:00:00",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Invalid - month 13 (months should be 01-12)",
@@ -127,9 +127,9 @@
       "valid": false
     },
     {
-      "description": "Invalid - day 00 (days should be 01-31)",
+      "description": "Valid - zero days is a legal duration quantity",
       "data": "P0001-01-00T00:00:00",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Invalid - day 32 (days should be 01-31)",
@@ -187,9 +187,9 @@
       "valid": true
     },
     {
-      "description": "Valid - day 31 (maximum valid day)",
+      "description": "Invalid - 31 days exceeds the 30-day carry-over point",
       "data": "P0000-01-31T00:00:00",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Valid - hour 00 (minimum valid hour)",
@@ -222,24 +222,24 @@
       "valid": true
     },
     {
-      "description": "Valid - expanded year with plus sign (5 digits)",
+      "description": "Invalid - durations take no sign and no expanded year form",
       "data": "P+10000-01-01T00:00:00",
-      "valid": true
+      "valid": false
     },
     {
-      "description": "Valid - expanded year with minus sign (5 digits)",
+      "description": "Invalid - durations take no sign and no expanded year form",
       "data": "P-10000-01-01T00:00:00",
-      "valid": true
+      "valid": false
     },
     {
-      "description": "Valid - expanded year with plus sign (6 digits)",
+      "description": "Invalid - durations take no sign and no expanded year form",
       "data": "P+100000-01-01T00:00:00",
-      "valid": true
+      "valid": false
     },
     {
-      "description": "Valid - expanded year with minus sign (10 digits)",
+      "description": "Invalid - durations take no sign and no expanded year form",
       "data": "P-1000000000-01-01T00:00:00",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Invalid - expanded year without sign (5 digits)",
@@ -282,9 +282,9 @@
       "valid": false
     },
     {
-      "description": "Invalid - month 00",
+      "description": "Valid - zero months is a legal duration quantity",
       "data": "P0001-00-01T00:00:00",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Invalid - month 13",
@@ -292,9 +292,9 @@
       "valid": false
     },
     {
-      "description": "Invalid - day 00",
+      "description": "Valid - zero days is a legal duration quantity",
       "data": "P0001-01-00T00:00:00",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Invalid - day 32",
@@ -302,9 +302,9 @@
       "valid": false
     },
     {
-      "description": "Invalid - February 30",
+      "description": "Valid - month and day fields are quantities, not a calendar date",
       "data": "P0001-02-30T00:00:00",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Invalid - February 31",
@@ -342,9 +342,9 @@
       "valid": true
     },
     {
-      "description": "Valid - January 31",
+      "description": "Invalid - 31 days exceeds the 30-day carry-over point",
       "data": "P0001-01-31T00:00:00",
-      "valid": true
+      "valid": false
     }
   ]
 }

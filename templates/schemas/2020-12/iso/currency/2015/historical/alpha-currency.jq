@@ -28,7 +28,7 @@
     | map({
         "title": .[0].CcyNm,
         "x-country-names": map(.CtryNm),
-        "x-withdrawal-date": .[0].WthdrwlDt,
+        "x-withdrawal-dates": (map(.WthdrwlDt) | unique),
         "const": .[0].Ccy
       } +
       (if (.[0].Ccy | IN("AOK", "AYM", "BAD", "BEC", "BEL", "BUK", "BYB", "CHC", "CSD", "ECV", "ESA", "ESB", "GEK", "GHP", "GNS", "GWE", "HRD", "LSM", "LTT", "LUC", "LUL", "LVR", "MZE", "NIC", "PES", "RHD", "ROK", "SDP", "UGW", "UYP", "XFO", "ZAL") | not) then {"x-jsonld-self": ("http://publications.europa.eu/resource/authority/currency/" + .[0].Ccy)} else {} end))

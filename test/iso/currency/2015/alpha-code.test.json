@@ -72,9 +72,9 @@
       "valid": true
     },
     {
-      "description": "Invalid - unknown code (XXX)",
+      "description": "Valid - XXX is a List One member (the no-currency code)",
       "data": "XXX",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Invalid - lowercase",

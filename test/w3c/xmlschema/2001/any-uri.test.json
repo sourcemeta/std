@@ -97,9 +97,9 @@
       "valid": true
     },
     {
-      "description": "Invalid - with unencoded space",
+      "description": "Valid - spaces are within the XSD anyURI lexical space",
       "data": "http://www.example.com/file with spaces.txt",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Valid - IPv6 host",

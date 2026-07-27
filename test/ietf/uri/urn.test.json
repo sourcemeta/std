@@ -27,9 +27,9 @@
       "valid": true
     },
     {
-      "description": "Single-character NID and NSS",
+      "description": "Single-character NID (RFC 8141 requires at least two characters)",
       "data": "urn:a:b",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Numeric NID (all digits)",
@@ -172,9 +172,9 @@
       "valid": true
     },
     {
-      "description": "URN with empty r-component",
+      "description": "Empty r-component (RFC 8141 requires at least one pchar)",
       "data": "urn:example:foo?",
-      "valid": true
+      "valid": false
     },
     {
       "description": "URN with empty fragment",

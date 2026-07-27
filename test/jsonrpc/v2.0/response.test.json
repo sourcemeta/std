@@ -274,7 +274,8 @@
         "jsonrpc": "2.0",
         "result": 19
       },
-      "valid": false
+      "valid": true,
+      "description": "Valid - fractional id is allowed (SHOULD NOT, not MUST NOT)"
     },
     {
       "data": {

@@ -2,9 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "W3C XML Schema string",
   "description": "The string datatype represents character strings in XML (§3.2.1)",
+  "$comment": "The pattern encodes the XML Char production",
   "examples": [ "Hello World", "", "Line 1\nLine 2", "Multiple   spaces" ],
   "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#string",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.w3.org/TR/xmlschema-2/#string" ],
-  "type": "string"
+  "type": "string",
+  "pattern": "^[^\\u0000-\\u0008\\u000B\\u000C\\u000E-\\u001F\\uFFFE\\uFFFF]*$"
 }
