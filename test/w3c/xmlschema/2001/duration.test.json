@@ -52,9 +52,9 @@
       "valid": true
     },
     {
-      "description": "Valid - negative duration with decimal",
+      "description": "Invalid - decimal fraction only allowed on seconds",
       "data": "-PT30.5M",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Invalid - empty P",

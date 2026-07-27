@@ -47,9 +47,9 @@
       "valid": true
     },
     {
-      "description": "Valid - leap second",
+      "description": "Invalid - leap second is not an XSD time",
       "data": "23:59:60",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Invalid - hour 25",

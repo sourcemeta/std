@@ -42,9 +42,9 @@
       "valid": true
     },
     {
-      "description": "Valid - leap second",
+      "description": "Invalid - leap second is not an XSD dateTime",
       "data": "2023-12-31T23:59:60Z",
-      "valid": true
+      "valid": false
     },
     {
       "description": "Valid - negative year",
@@ -87,9 +87,9 @@
       "valid": false
     },
     {
-      "description": "Invalid - hour 24",
+      "description": "Valid - hour 24 as midnight",
       "data": "2023-05-15T24:00:00",
-      "valid": false
+      "valid": true
     },
     {
       "description": "Invalid - minute 60",
