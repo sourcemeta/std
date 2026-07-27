@@ -7,5 +7,6 @@
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-prefix-factor": 0.1,
   "x-symbol": "dkat",
-  "$ref": "../unit/katal.json"
+  "type": "number",
+  "exclusiveMinimum": 0
 }

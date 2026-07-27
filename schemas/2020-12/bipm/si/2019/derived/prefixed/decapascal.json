@@ -7,5 +7,6 @@
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-prefix-factor": 10.0,
   "x-symbol": "daPa",
-  "$ref": "../unit/pascal.json"
+  "type": "number",
+  "minimum": 0
 }

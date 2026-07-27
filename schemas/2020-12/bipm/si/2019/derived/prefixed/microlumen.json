@@ -7,5 +7,6 @@
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-prefix-factor": 1e-6,
   "x-symbol": "µlm",
-  "$ref": "../unit/lumen.json"
+  "type": "number",
+  "minimum": 0
 }

@@ -7,5 +7,6 @@
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-prefix-factor": 1000.0,
   "x-symbol": "kBq",
-  "$ref": "../unit/becquerel.json"
+  "type": "number",
+  "exclusiveMinimum": 0
 }

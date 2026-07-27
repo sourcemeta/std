@@ -5,5 +5,6 @@
   "examples": [ 1, 50, 60, 1000, 1000000, 2400000000.0 ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
-  "$ref": "../unit/hertz.json"
+  "type": "number",
+  "exclusiveMinimum": 0
 }

@@ -7,5 +7,6 @@
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-prefix-factor": 1e-6,
   "x-symbol": "µHz",
-  "$ref": "../unit/hertz.json"
+  "type": "number",
+  "exclusiveMinimum": 0
 }

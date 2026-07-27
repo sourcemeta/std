@@ -6,6 +6,5 @@
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-symbol": "Nₐ",
-  "$ref": "../base/unit/mole.json",
   "const": 6.02214076000000000000000e+23
 }

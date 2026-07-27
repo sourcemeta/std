@@ -7,5 +7,5 @@
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-prefix-factor": 0.01,
   "x-symbol": "cA",
-  "$ref": "../unit/ampere.json"
+  "type": "number"
 }

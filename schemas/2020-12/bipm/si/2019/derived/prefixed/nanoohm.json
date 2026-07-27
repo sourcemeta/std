@@ -7,5 +7,6 @@
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-prefix-factor": 1e-9,
   "x-symbol": "nΩ",
-  "$ref": "../unit/ohm.json"
+  "type": "number",
+  "exclusiveMinimum": 0
 }
