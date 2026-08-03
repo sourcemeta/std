@@ -17,7 +17,7 @@
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/{this}",
   "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
-  "anyOf": (
+  "enum": (
     .ISO_4217.CcyTbl.CcyNtry
     | map(select(
         .Ccy != null and
@@ -26,11 +26,6 @@
       ))
     | group_by(.Ccy)
     | sort_by(.[0].Ccy)
-    | map({
-        "title": .[0].CcyNm."@text",
-        "x-country-names": map(.CtryNm),
-        "x-minor-unit": (if .[0].CcyMnrUnts == "N.A." then null else (.[0].CcyMnrUnts | tonumber) end),
-        "const": .[0].Ccy
-      })
+    | map(.[0].Ccy)
   )
 }

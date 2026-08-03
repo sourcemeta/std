@@ -12,7 +12,6 @@
     {
       "title": "Emissions/Monetary",
       "description": "CO2 equivalent emissions per monetary unit (\"Emissions intensity\")",
-      "x-status": "REC",
       "const": "Emissions_per_Monetary"
     }
   ]

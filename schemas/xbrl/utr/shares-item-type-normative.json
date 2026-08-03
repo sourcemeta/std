@@ -12,7 +12,6 @@
     {
       "title": "Share",
       "description": "Unit of Ownership (Stock)",
-      "x-status": "REC",
       "const": "shares"
     }
   ]

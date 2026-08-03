@@ -17,7 +17,15 @@
   "deprecated": true,
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
-  "anyOf": (
+  "if": {
+    "not": {
+      "enum": ["AOK", "AYM", "BAD", "BEC", "BEL", "BUK", "BYB", "CHC", "CSD", "ECV", "ESA", "ESB", "GEK", "GHP", "GNS", "GWE", "HRD", "LSM", "LTT", "LUC", "LUL", "LVR", "MZE", "NIC", "PES", "RHD", "ROK", "SDP", "UGW", "UYP", "XFO", "ZAL"]
+    }
+  },
+  "then": {
+    "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/{this}"
+  },
+  "enum": (
     .ISO_4217.HstrcCcyTbl.HstrcCcyNtry
     | map(select(
         .Ccy != null and
@@ -25,12 +33,6 @@
       ))
     | group_by(.Ccy)
     | sort_by(.[0].Ccy)
-    | map({
-        "title": .[0].CcyNm,
-        "x-country-names": map(.CtryNm),
-        "x-withdrawal-dates": (map(.WthdrwlDt) | unique),
-        "const": .[0].Ccy
-      } +
-      (if (.[0].Ccy | IN("AOK", "AYM", "BAD", "BEC", "BEL", "BUK", "BYB", "CHC", "CSD", "ECV", "ESA", "ESB", "GEK", "GHP", "GNS", "GWE", "HRD", "LSM", "LTT", "LUC", "LUL", "LVR", "MZE", "NIC", "PES", "RHD", "ROK", "SDP", "UGW", "UYP", "XFO", "ZAL") | not) then {"x-jsonld-self": ("http://publications.europa.eu/resource/authority/currency/" + .[0].Ccy)} else {} end))
+    | map(.[0].Ccy)
   )
 }

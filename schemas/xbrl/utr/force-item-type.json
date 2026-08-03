@@ -13,8 +13,6 @@
       "title": "Newton",
       "description": "The newton is the International System of Units (SI) derived unit of force. One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in direction of the applied force",
       "x-jsonld-self": "https://si-digital-framework.org/SI/units/newton",
-      "x-status": "REC",
-      "x-symbol": "N",
       "const": "N"
     }
   ]

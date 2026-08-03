@@ -5,8 +5,6 @@
   "examples": [ 0, 1, 100, 1000 ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
-  "x-prefix-factor": 1e-30,
-  "x-symbol": "q°C",
   "type": "number",
   "minimum": -2.73150000000000000000000000000000e+32
 }

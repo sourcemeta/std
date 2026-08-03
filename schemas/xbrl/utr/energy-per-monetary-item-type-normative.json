@@ -12,7 +12,6 @@
     {
       "title": "Energy/Monetary",
       "description": "Energy consumed per monetary unit (\"Energy intensity\")",
-      "x-status": "REC",
       "const": "Energy_per_Monetary"
     }
   ]

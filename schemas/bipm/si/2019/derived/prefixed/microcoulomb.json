@@ -12,7 +12,5 @@
   "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
-  "x-prefix-factor": 1e-6,
-  "x-symbol": "µC",
   "type": "number"
 }

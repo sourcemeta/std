@@ -12,7 +12,6 @@
     {
       "title": "Monetary/share",
       "description": "Monetary Unit / Share",
-      "x-status": "REC",
       "const": "Monetary_per_Share"
     }
   ]

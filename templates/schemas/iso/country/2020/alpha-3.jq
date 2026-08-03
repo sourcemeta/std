@@ -11,18 +11,9 @@
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/{this}",
   "x-links": ["https://www.iso.org/iso-3166-country-codes.html"],
-  "anyOf": (
+  "enum": (
     map(select(.["alpha-3"] != null and .["alpha-3"] != ""))
     | sort_by(.["alpha-3"])
-    | map({
-        "title": .name,
-        "x-alpha-2": .["alpha-2"],
-        "x-numeric": (.["country-code"] | tonumber)
-      } +
-      (if .region != null and .region != "" then {"x-region": .region} else {} end) +
-      (if .["sub-region"] != null and .["sub-region"] != "" then {"x-sub-region": .["sub-region"]} else {} end) +
-      {
-        "const": .["alpha-3"]
-      })
+    | map(.["alpha-3"])
   )
 }

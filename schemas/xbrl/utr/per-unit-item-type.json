@@ -12,7 +12,6 @@
     {
       "title": "Monetary/Decimal",
       "description": "Monetary Unit / Anything",
-      "x-status": "REC",
       "const": "Monetary_per_Decimal"
     }
   ]

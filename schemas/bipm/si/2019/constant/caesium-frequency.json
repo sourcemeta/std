@@ -5,6 +5,5 @@
   "examples": [ 9192631770 ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
-  "x-symbol": "ΔνCₛ",
   "const": 9192631770
 }

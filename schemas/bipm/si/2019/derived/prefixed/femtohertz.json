@@ -5,8 +5,6 @@
   "examples": [ 1, 100, 1000 ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
-  "x-prefix-factor": 1e-15,
-  "x-symbol": "fHz",
   "type": "number",
   "exclusiveMinimum": 0
 }

@@ -5,6 +5,5 @@
   "examples": [ 1.380649e-23 ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
-  "x-symbol": "k",
   "const": 1.380649e-23
 }

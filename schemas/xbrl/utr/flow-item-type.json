@@ -12,13 +12,11 @@
     {
       "title": "Volume/Duration",
       "description": "Flow rate, as Volume per Duration",
-      "x-status": "REC",
       "const": "Volume_per_Duration"
     },
     {
       "title": "Energy/Duration",
       "description": "Flow rate, as Energy per Duration",
-      "x-status": "CR",
       "const": "Energy_per_Duration"
     }
   ]

@@ -22,7 +22,6 @@
       "./rules/license.json",
       "./rules/links.json",
       "./rules/single-line-text.json",
-      "./rules/symbol.json",
       {
         "path": "./rules/root.json",
         "topLevel": true

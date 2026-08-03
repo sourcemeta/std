@@ -30,8 +30,6 @@
     | map({
         "x-jsonld-self": ("http://publications.europa.eu/resource/authority/currency/" + .[0].Ccy),
         "title": .[0].CcyNm."@text",
-        "x-country-names": (map(.CtryNm) | unique),
-        "x-minor-unit": (if .[0].CcyMnrUnts == "N.A." then null else (.[0].CcyMnrUnts | tonumber) end),
         "const": (.[0].CcyNbr | tonumber)
       })
   )
