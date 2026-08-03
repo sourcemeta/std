@@ -1,96 +1,108 @@
 {
-  "target": "../../../schemas/2020-12/jsonrpc/v2.0/method-internal.json",
+  "target": "../../../../schemas/2020-12/other/jsonrpc/v2.0/code-predefined.json",
   "tests": [
     {
-      "data": "rpc.",
+      "data": -32700,
       "valid": true
     },
     {
-      "data": "rpc.discover",
+      "data": -32600,
       "valid": true
     },
     {
-      "data": "rpc.introspect",
+      "data": -32601,
       "valid": true
     },
     {
-      "data": "rpc.system",
+      "data": -32602,
       "valid": true
     },
     {
-      "data": "rpc.system.info",
+      "data": -32603,
       "valid": true
     },
     {
-      "data": "rpc.system.listMethods",
+      "data": -32000,
       "valid": true
     },
     {
-      "data": "rpc.server.version",
+      "data": -32001,
       "valid": true
     },
     {
-      "data": "rpc.a",
+      "data": -32050,
       "valid": true
     },
     {
-      "data": "rpc.with-dash",
+      "data": -32098,
       "valid": true
     },
     {
-      "data": "rpc.with_underscore",
+      "data": -32099,
       "valid": true
     },
     {
-      "data": "rpc.123",
-      "valid": true
-    },
-    {
-      "data": "rpc.deeply.nested.method.name",
-      "valid": true
-    },
-    {
-      "data": "rpc",
+      "data": -32701,
       "valid": false
     },
     {
-      "data": "Rpc.",
+      "data": -32699,
       "valid": false
     },
     {
-      "data": "RPC.",
+      "data": -32604,
       "valid": false
     },
     {
-      "data": "rPc.",
+      "data": -32599,
       "valid": false
     },
     {
-      "data": "method",
+      "data": -31999,
       "valid": false
     },
     {
-      "data": "subtract",
+      "data": -32100,
       "valid": false
     },
     {
-      "data": "update",
+      "data": 0,
       "valid": false
     },
     {
-      "data": ".rpc",
+      "data": 1,
       "valid": false
     },
     {
-      "data": "prefix.rpc.",
+      "data": 100,
       "valid": false
     },
     {
-      "data": "",
+      "data": -1,
       "valid": false
     },
     {
-      "data": 42,
+      "data": -100,
+      "valid": false
+    },
+    {
+      "data": 32000,
+      "valid": false
+    },
+    {
+      "data": 32700,
+      "valid": false
+    },
+    {
+      "data": -32700.5,
+      "valid": false
+    },
+    {
+      "data": "error",
+      "valid": false
+    },
+    {
+      "data": "-32600",
       "valid": false
     },
     {
