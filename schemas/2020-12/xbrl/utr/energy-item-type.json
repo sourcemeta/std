@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "XBRL UTR energy Item Type units (2024-10-22)",
+  "title": "XBRL UTR Energy Item Type Units",
   "description": "Valid units for energyItemType as defined in the XBRL Units Type Registry",
   "examples": [ "Boe", "Btu", "ft_lb" ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -8,6 +8,7 @@
     "https://www.xbrl.org/specification/utr/rec-2013-11-18/utr-rec-2013-11-18-clean.html",
     "https://www.xbrl.org/utr/utr.xml"
   ],
+  "x-registry-date": "2024-10-22",
   "anyOf": [
     {
       "description": "Barrel of Oil Equivalent",

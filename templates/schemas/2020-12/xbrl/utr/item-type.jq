@@ -1,11 +1,25 @@
+.["{http://www.xbrl.org/2009/utr}utr"]["@attributes"].lastUpdated as $date |
+(
+  .["{http://www.xbrl.org/2009/utr}utr"]["{http://www.xbrl.org/2009/utr}units"]["{http://www.xbrl.org/2009/utr}unit"]
+  | map(select(.["{http://www.xbrl.org/2009/utr}itemType"] == $item_type
+      and ($normative != "true" or .["{http://www.xbrl.org/2009/utr}status"] == "REC")))
+) as $units |
+($item_type
+  | [splits("(?=[A-Z])")]
+  | map(select(. != ""))
+  | map((.[0:1] | ascii_upcase) + .[1:])
+  | join(" ")
+) as $title_name |
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": ("XBRL UTR energy Item Type units (" + .["{http://www.xbrl.org/2009/utr}utr"]["@attributes"].lastUpdated + ")"),
-  "description": "Valid units for energyItemType as defined in the XBRL Units Type Registry",
+  "title": ("XBRL UTR " + $title_name + " Units"
+    + (if $normative == "true" then " (Normative)" else "" end)),
+  "description": (if $normative == "true"
+    then ("Valid units with the recommended status for " + $item_type + " as defined in the XBRL Units Type Registry")
+    else ("Valid units for " + $item_type + " as defined in the XBRL Units Type Registry")
+    end),
   "examples": (
-    .["{http://www.xbrl.org/2009/utr}utr"]["{http://www.xbrl.org/2009/utr}units"]["{http://www.xbrl.org/2009/utr}unit"]
-    | map(select(.["{http://www.xbrl.org/2009/utr}itemType"] == "energyItemType"))
-    
+    $units
     | .[0:3]
     | map(.["{http://www.xbrl.org/2009/utr}unitId"])
   ),
@@ -14,10 +28,9 @@
     "https://www.xbrl.org/specification/utr/rec-2013-11-18/utr-rec-2013-11-18-clean.html",
     "https://www.xbrl.org/utr/utr.xml"
   ],
+  "x-registry-date": $date,
   "anyOf": (
-    .["{http://www.xbrl.org/2009/utr}utr"]["{http://www.xbrl.org/2009/utr}units"]["{http://www.xbrl.org/2009/utr}unit"]
-    | map(select(.["{http://www.xbrl.org/2009/utr}itemType"] == "energyItemType"))
-    
+    $units
     | map(
         (.["{http://www.xbrl.org/2009/utr}definition"] | gsub("\\s{2,}"; " ") | if endswith(".") then .[:-1] else . end) as $desc |
         {

@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 
 UTR_DATA="$(pwd)/build/xbrl/utr/utr.json"
-TEMPLATES_DIR="$(pwd)/templates/schemas/2020-12/xbrl/utr"
+GENERATED_MK="$(pwd)/generated.mk"
 EXIT_CODE=0
 
 # Create temporary directory
@@ -26,52 +26,35 @@ then
   exit 1
 fi
 
-# Extract all unique itemTypes from the data and convert to kebab-case
-# Store them in the temp file first, then validate
+# Extract all unique itemTypes from the data
 "${JQ:-jq}" -r '.["{http://www.xbrl.org/2009/utr}utr"]["{http://www.xbrl.org/2009/utr}units"]["{http://www.xbrl.org/2009/utr}unit"][] | .["{http://www.xbrl.org/2009/utr}itemType"]' "$UTR_DATA" | sort -u > "$TMP/item_types.txt"
 
-while IFS= read -r item_type
+# Every itemType in the registry data must have its pair of generation
+# rules, and every generation rule must correspond to a registry itemType
+while read -r item_type
 do
-  kebab_name=$(camel_to_kebab "$item_type")
-  echo "$kebab_name" >> "$TMP/expected_templates.txt"
-
-  # Check for regular template
-  expected_template="$TEMPLATES_DIR/${kebab_name}.jq"
-  if [ ! -f "$expected_template" ]
+  kebab_name="$(camel_to_kebab "$item_type")"
+  if ! grep -q "call MAKE_SCHEMA_UTR,$kebab_name,$item_type,false" "$GENERATED_MK"
   then
-    echo "ERROR: itemType '$item_type' is missing template '$expected_template'" >&2
+    echo "ERROR: Missing generation rule for item type '$item_type'" >&2
     EXIT_CODE=1
   fi
-
-  expected_normative="$TEMPLATES_DIR/${kebab_name}-normative.jq"
-  if [ ! -f "$expected_normative" ]
+  if ! grep -q "call MAKE_SCHEMA_UTR,$kebab_name-normative,$item_type,true" "$GENERATED_MK"
   then
-    echo "ERROR: itemType '$item_type' is missing normative template '$expected_normative'" >&2
+    echo "ERROR: Missing normative generation rule for item type '$item_type'" >&2
     EXIT_CODE=1
   fi
 done < "$TMP/item_types.txt"
 
-# Check the reverse: for each template, verify it corresponds to a known itemType
-find "$TEMPLATES_DIR" -type f -name "*.jq" ! -name "*-normative.jq" > "$TMP/templates.txt"
+sed -n 's/.*call MAKE_SCHEMA_UTR,[a-z0-9-]*,\([a-zA-Z0-9]*\),.*/\1/p' "$GENERATED_MK" | sort -u > "$TMP/rule_item_types.txt"
 
-while IFS= read -r template_file
+while read -r item_type
 do
-  base_name=$(basename "$template_file" .jq)
-
-  # Check if this base name is in our expected list
-  if ! grep -q "^${base_name}$" "$TMP/expected_templates.txt"
+  if ! grep -qx "$item_type" "$TMP/item_types.txt"
   then
-    echo "ERROR: Template '$template_file' does not correspond to any itemType in the data" >&2
+    echo "ERROR: Generation rule for item type '$item_type' has no registry entry" >&2
     EXIT_CODE=1
   fi
+done < "$TMP/rule_item_types.txt"
 
-  # Also check that corresponding normative template exists
-  normative_template="${template_file%.jq}-normative.jq"
-  if [ ! -f "$normative_template" ]
-  then
-    echo "ERROR: Template '$template_file' is missing corresponding normative template '$normative_template'" >&2
-    EXIT_CODE=1
-  fi
-done < "$TMP/templates.txt"
-
-exit $EXIT_CODE
+exit "$EXIT_CODE"
