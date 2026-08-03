@@ -41,10 +41,7 @@ def main():
     output_file = sys.argv[2]
 
     try:
-        with open(input_file, 'r') as file:
-            xml_data = file.read()
-
-        root = ET.fromstring(xml_data)
+        root = ET.parse(input_file).getroot()
 
         result = {
             root.tag: xml_to_dict(root)
@@ -53,7 +50,7 @@ def main():
         output_path = pathlib.Path(output_file)
         output_path.parent.mkdir(parents=True, exist_ok=True)
 
-        with open(output_path, 'w') as file:
+        with open(output_path, 'w', encoding='utf-8') as file:
             json.dump(result, file, indent=2)
             file.write('\n')
 
