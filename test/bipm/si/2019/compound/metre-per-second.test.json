@@ -1,5 +1,5 @@
 {
-  "target": "../../../../../schemas/2020-12/bipm/si/2019/compound/metre-per-second.json",
+  "target": "../../../../../schemas/bipm/si/2019/compound/metre-per-second.json",
   "tests": [
     {
       "description": "Valid - positive number",

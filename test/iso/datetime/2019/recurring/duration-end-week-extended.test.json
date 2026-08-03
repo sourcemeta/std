@@ -1,5 +1,5 @@
 {
-  "target": "../../../../../schemas/2020-12/iso/datetime/2019/recurring/duration-end-week-extended.json",
+  "target": "../../../../../schemas/iso/datetime/2019/recurring/duration-end-week-extended.json",
   "tests": [
     {
       "description": "Invalid type - integer",

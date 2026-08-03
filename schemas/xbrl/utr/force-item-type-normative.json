@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "XBRL UTR Force Item Type Units (Normative)",
+  "description": "Valid units with the recommended status for forceItemType as defined in the XBRL Units Type Registry",
+  "examples": [ "N" ],
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [
+    "https://www.xbrl.org/specification/utr/rec-2013-11-18/utr-rec-2013-11-18-clean.html",
+    "https://www.xbrl.org/utr/utr.xml"
+  ],
+  "anyOf": [
+    {
+      "title": "Newton",
+      "description": "The newton is the International System of Units (SI) derived unit of force. One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in direction of the applied force",
+      "x-jsonld-self": "https://si-digital-framework.org/SI/units/newton",
+      "x-status": "REC",
+      "x-symbol": "N",
+      "const": "N"
+    }
+  ]
+}

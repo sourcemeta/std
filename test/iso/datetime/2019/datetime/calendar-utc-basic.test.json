@@ -1,5 +1,5 @@
 {
-  "target": "../../../../../schemas/2020-12/iso/datetime/2019/datetime/calendar-utc-basic.json",
+  "target": "../../../../../schemas/iso/datetime/2019/datetime/calendar-utc-basic.json",
   "tests": [
     {
       "description": "Invalid type - integer",

@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/iso/it/2015/byte.json",
+  "target": "../../../../schemas/iso/it/2015/byte.json",
   "tests": [
     {
       "description": "Invalid type - string",

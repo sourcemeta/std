@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/other/jsonrpc/v2.0/code-predefined.json",
+  "target": "../../../../schemas/other/jsonrpc/v2.0/code-predefined.json",
   "tests": [
     {
       "data": -32700,

@@ -1,5 +1,5 @@
 {
-  "target": "../../../../../../schemas/2020-12/bipm/si/2019/derived/prefixed/kilosteradian.json",
+  "target": "../../../../../../schemas/bipm/si/2019/derived/prefixed/kilosteradian.json",
   "tests": [
     {
       "description": "Valid - zero",

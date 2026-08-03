@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/xbrl/instance/2003/hex-binary-item-type.json",
+  "target": "../../../../schemas/xbrl/instance/2003/hex-binary-item-type.json",
   "tests": [
     {
       "description": "Valid - hex binary",

@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/iso/country/2020/numeric.json",
+  "target": "../../../../schemas/iso/country/2020/numeric.json",
   "tests": [
     {
       "description": "Invalid type - string",

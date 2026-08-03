@@ -1,5 +1,5 @@
 {
-  "target": "../../../../../../schemas/2020-12/bipm/si/2019/base/prefixed/attoampere.json",
+  "target": "../../../../../../schemas/bipm/si/2019/base/prefixed/attoampere.json",
   "tests": [
     {
       "description": "Valid - zero",

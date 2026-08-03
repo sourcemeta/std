@@ -1,5 +1,5 @@
 {
-  "target": "../../../../../../schemas/2020-12/bipm/si/2019/base/quantity/mass.json",
+  "target": "../../../../../../schemas/bipm/si/2019/base/quantity/mass.json",
   "tests": [
     {
       "description": "Valid - positive number",

@@ -1,5 +1,5 @@
 {
-  "target": "../../../../../schemas/2020-12/ietf/jsonschema/2020-12/dialect/format-assertion.json",
+  "target": "../../../../../schemas/ietf/jsonschema/2020-12/dialect/format-assertion.json",
   "tests": [
     {
       "description": "Schema with an asserted format",

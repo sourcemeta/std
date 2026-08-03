@@ -1,0 +1,1318 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "XBRL UTR Monetary Item Type Units (Normative)",
+  "description": "Valid units with the recommended status for monetaryItemType as defined in the XBRL Units Type Registry",
+  "examples": [ "AED", "AFN", "ALL" ],
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [
+    "https://www.xbrl.org/specification/utr/rec-2013-11-18/utr-rec-2013-11-18-clean.html",
+    "https://www.xbrl.org/utr/utr.xml"
+  ],
+  "anyOf": [
+    {
+      "title": "U.A.E. dirham",
+      "description": "United Arab Emirates dirham",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/AED",
+      "x-status": "REC",
+      "x-symbol": "د.إ",
+      "const": "AED"
+    },
+    {
+      "description": "Afghan afghani",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/AFN",
+      "x-status": "REC",
+      "x-symbol": "؋",
+      "const": "AFN"
+    },
+    {
+      "description": "Albanian lek",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ALL",
+      "x-status": "REC",
+      "x-symbol": "L",
+      "const": "ALL"
+    },
+    {
+      "description": "Armenian dram",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/AMD",
+      "x-status": "REC",
+      "x-symbol": "֏",
+      "const": "AMD"
+    },
+    {
+      "description": "Netherlands Antillean guilder",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ANG",
+      "x-status": "REC",
+      "x-symbol": "NAƒ",
+      "const": "ANG"
+    },
+    {
+      "description": "Angolan kwanza",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/AOA",
+      "x-status": "REC",
+      "x-symbol": "Kz",
+      "const": "AOA"
+    },
+    {
+      "description": "Argentine peso",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ARS",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "ARS"
+    },
+    {
+      "description": "Australian dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/AUD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "AUD"
+    },
+    {
+      "description": "Aruban florin",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/AWG",
+      "x-status": "REC",
+      "x-symbol": "ƒ",
+      "const": "AWG"
+    },
+    {
+      "description": "Azerbaijani manat",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/AZN",
+      "x-status": "REC",
+      "x-symbol": "₼",
+      "const": "AZN"
+    },
+    {
+      "description": "Bosnia and Herzegovina convertible mark",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BAM",
+      "x-status": "REC",
+      "x-symbol": "KM",
+      "const": "BAM"
+    },
+    {
+      "description": "Barbados dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BBD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "BBD"
+    },
+    {
+      "description": "Bangladeshi taka",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BDT",
+      "x-status": "REC",
+      "x-symbol": "৳",
+      "const": "BDT"
+    },
+    {
+      "description": "Bulgarian lev",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BGN",
+      "x-status": "REC",
+      "x-symbol": "лв",
+      "const": "BGN"
+    },
+    {
+      "description": "Bahraini dinar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BHD",
+      "x-status": "REC",
+      "x-symbol": ".د.ب",
+      "const": "BHD"
+    },
+    {
+      "description": "Burundian franc",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BIF",
+      "x-status": "REC",
+      "x-symbol": "FBu",
+      "const": "BIF"
+    },
+    {
+      "title": "Bermuda Dollar",
+      "description": "Bermudian dollar (customarily known as Bermuda dollar)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BMD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "BMD"
+    },
+    {
+      "description": "Brunei dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BND",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "BND"
+    },
+    {
+      "description": "Boliviano",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BOB",
+      "x-status": "REC",
+      "x-symbol": "Bs.",
+      "const": "BOB"
+    },
+    {
+      "title": "Bolivian Mvdol",
+      "description": "Bolivian Mvdol (funds code)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BOV",
+      "x-status": "REC",
+      "const": "BOV"
+    },
+    {
+      "description": "Brazilian real",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BRL",
+      "x-status": "REC",
+      "x-symbol": "R$",
+      "const": "BRL"
+    },
+    {
+      "description": "Bahamian dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BSD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "BSD"
+    },
+    {
+      "description": "Bhutanese ngultrum",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BTN",
+      "x-status": "REC",
+      "x-symbol": "Ch.",
+      "const": "BTN"
+    },
+    {
+      "description": "Botswana pula",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BWP",
+      "x-status": "REC",
+      "x-symbol": "P",
+      "const": "BWP"
+    },
+    {
+      "description": "Belarusian ruble",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BYN",
+      "x-status": "REC",
+      "x-symbol": "Br",
+      "const": "BYN"
+    },
+    {
+      "description": "Belarusian ruble",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BYR",
+      "x-status": "REC",
+      "x-symbol": "Br",
+      "const": "BYR"
+    },
+    {
+      "description": "Belize dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BZD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "BZD"
+    },
+    {
+      "description": "Canadian dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CAD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "CAD"
+    },
+    {
+      "description": "Congolese franc",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CDF",
+      "x-status": "REC",
+      "x-symbol": "CF",
+      "const": "CDF"
+    },
+    {
+      "title": "WIR Bank",
+      "description": "WIR Bank (complementary currency)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CHE",
+      "x-status": "REC",
+      "const": "CHE"
+    },
+    {
+      "description": "Swiss franc",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CHF",
+      "x-status": "REC",
+      "x-symbol": "SFr",
+      "const": "CHF"
+    },
+    {
+      "title": "WIR Bank",
+      "description": "WIR Bank (complementary currency)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CHW",
+      "x-status": "REC",
+      "const": "CHW"
+    },
+    {
+      "title": "Unidad de Fomento",
+      "description": "Unidad de Fomento (funds code)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CLF",
+      "x-status": "REC",
+      "const": "CLF"
+    },
+    {
+      "description": "Chilean peso",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CLP",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "CLP"
+    },
+    {
+      "title": "Chinese yuan",
+      "description": "Chinese yuan (renmibi)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CNY",
+      "x-status": "REC",
+      "x-symbol": "¥",
+      "const": "CNY"
+    },
+    {
+      "description": "Colombian peso",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/COP",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "COP"
+    },
+    {
+      "description": "Unidad de Valor Real",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/COU",
+      "x-status": "REC",
+      "const": "COU"
+    },
+    {
+      "description": "Costa Rican colon",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CRC",
+      "x-status": "REC",
+      "x-symbol": "₡",
+      "const": "CRC"
+    },
+    {
+      "description": "Cuban convertible peso",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CUC",
+      "x-status": "REC",
+      "x-symbol": "CUC$",
+      "const": "CUC"
+    },
+    {
+      "description": "Cuban peso",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CUP",
+      "x-status": "REC",
+      "x-symbol": "$MN",
+      "const": "CUP"
+    },
+    {
+      "description": "Cape Verde escudo",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CVE",
+      "x-status": "REC",
+      "x-symbol": "Esc",
+      "const": "CVE"
+    },
+    {
+      "description": "Czech koruna",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/CZK",
+      "x-status": "REC",
+      "x-symbol": "Kč",
+      "const": "CZK"
+    },
+    {
+      "description": "Djiboutian franc",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/DJF",
+      "x-status": "REC",
+      "x-symbol": "Fdj",
+      "const": "DJF"
+    },
+    {
+      "description": "Danish krone",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/DKK",
+      "x-status": "REC",
+      "x-symbol": "kr",
+      "const": "DKK"
+    },
+    {
+      "description": "Dominican peso",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/DOP",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "DOP"
+    },
+    {
+      "description": "Algerian dinar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/DZD",
+      "x-status": "REC",
+      "x-symbol": "دج",
+      "const": "DZD"
+    },
+    {
+      "description": "Estonian kroon",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/EEK",
+      "x-status": "REC",
+      "const": "EEK"
+    },
+    {
+      "description": "Egyptian pound",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/EGP",
+      "x-status": "REC",
+      "x-symbol": "ج.م.",
+      "const": "EGP"
+    },
+    {
+      "description": "Eritrean nakfa",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ERN",
+      "x-status": "REC",
+      "x-symbol": "Nfk",
+      "const": "ERN"
+    },
+    {
+      "description": "Ethiopian birr",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ETB",
+      "x-status": "REC",
+      "x-symbol": "Br",
+      "const": "ETB"
+    },
+    {
+      "description": "Euro",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/EUR",
+      "x-status": "REC",
+      "x-symbol": "€",
+      "const": "EUR"
+    },
+    {
+      "description": "Fiji dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/FJD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "FJD"
+    },
+    {
+      "description": "Falkland Islands pound",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/FKP",
+      "x-status": "REC",
+      "x-symbol": "£",
+      "const": "FKP"
+    },
+    {
+      "title": "Pound sterling",
+      "description": "Great Britain Pound sterling",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/GBP",
+      "x-status": "REC",
+      "x-symbol": "£",
+      "const": "GBP"
+    },
+    {
+      "description": "Georgian lari",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/GEL",
+      "x-status": "REC",
+      "x-symbol": "ლ",
+      "const": "GEL"
+    },
+    {
+      "description": "Ghanaian cedi",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/GHS",
+      "x-status": "REC",
+      "x-symbol": "GH₵",
+      "const": "GHS"
+    },
+    {
+      "description": "Gibraltar pound",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/GIP",
+      "x-status": "REC",
+      "x-symbol": "£",
+      "const": "GIP"
+    },
+    {
+      "description": "Gambian dalasi",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/GMD",
+      "x-status": "REC",
+      "x-symbol": "D",
+      "const": "GMD"
+    },
+    {
+      "description": "Guinean franc",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/GNF",
+      "x-status": "REC",
+      "x-symbol": "FG",
+      "const": "GNF"
+    },
+    {
+      "description": "Guatemalan quetzal",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/GTQ",
+      "x-status": "REC",
+      "x-symbol": "Q",
+      "const": "GTQ"
+    },
+    {
+      "description": "Guyanese dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/GYD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "GYD"
+    },
+    {
+      "description": "Hong Kong dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/HKD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "HKD"
+    },
+    {
+      "description": "Honduran lempira",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/HNL",
+      "x-status": "REC",
+      "x-symbol": "L",
+      "const": "HNL"
+    },
+    {
+      "description": "Croatian kuna",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/HRK",
+      "x-status": "REC",
+      "x-symbol": "kn",
+      "const": "HRK"
+    },
+    {
+      "description": "Haitian gourde",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/HTG",
+      "x-status": "REC",
+      "x-symbol": "G",
+      "const": "HTG"
+    },
+    {
+      "description": "Hungarian forint",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/HUF",
+      "x-status": "REC",
+      "x-symbol": "Ft",
+      "const": "HUF"
+    },
+    {
+      "description": "Indonesian rupiah",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/IDR",
+      "x-status": "REC",
+      "x-symbol": "Rp",
+      "const": "IDR"
+    },
+    {
+      "description": "Israeli new sheqel",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ILS",
+      "x-status": "REC",
+      "x-symbol": "₪",
+      "const": "ILS"
+    },
+    {
+      "description": "Indian rupee",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/INR",
+      "x-status": "REC",
+      "x-symbol": "₨",
+      "const": "INR"
+    },
+    {
+      "description": "Iraqi dinar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/IQD",
+      "x-status": "REC",
+      "x-symbol": "د.ع",
+      "const": "IQD"
+    },
+    {
+      "description": "Iranian rial",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/IRR",
+      "x-status": "REC",
+      "x-symbol": "﷼",
+      "const": "IRR"
+    },
+    {
+      "description": "Icelandic króna",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ISK",
+      "x-status": "REC",
+      "x-symbol": "kr",
+      "const": "ISK"
+    },
+    {
+      "description": "Jamaican dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/JMD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "JMD"
+    },
+    {
+      "description": "Jordanian dinar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/JOD",
+      "x-status": "REC",
+      "x-symbol": "JD",
+      "const": "JOD"
+    },
+    {
+      "description": "Japanese yen",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/JPY",
+      "x-status": "REC",
+      "x-symbol": "¥",
+      "const": "JPY"
+    },
+    {
+      "description": "Kenyan shilling",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/KES",
+      "x-status": "REC",
+      "x-symbol": "Ksh",
+      "const": "KES"
+    },
+    {
+      "description": "Kyrgyzstani som",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/KGS",
+      "x-status": "REC",
+      "x-symbol": "сом",
+      "const": "KGS"
+    },
+    {
+      "description": "Cambodian riel",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/KHR",
+      "x-status": "REC",
+      "x-symbol": "៛",
+      "const": "KHR"
+    },
+    {
+      "description": "Comoro franc",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/KMF",
+      "x-status": "REC",
+      "x-symbol": "₣",
+      "const": "KMF"
+    },
+    {
+      "description": "North Korean won",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/KPW",
+      "x-status": "REC",
+      "x-symbol": "₩",
+      "const": "KPW"
+    },
+    {
+      "description": "South Korean won",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/KRW",
+      "x-status": "REC",
+      "x-symbol": "₩",
+      "const": "KRW"
+    },
+    {
+      "description": "Kuwaiti dinar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/KWD",
+      "x-status": "REC",
+      "x-symbol": "د.ك",
+      "const": "KWD"
+    },
+    {
+      "description": "Cayman Islands dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/KYD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "KYD"
+    },
+    {
+      "description": "Kazakhstani tenge",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/KZT",
+      "x-status": "REC",
+      "x-symbol": "₸",
+      "const": "KZT"
+    },
+    {
+      "description": "Lao kip",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/LAK",
+      "x-status": "REC",
+      "x-symbol": "₭",
+      "const": "LAK"
+    },
+    {
+      "description": "Lebanese pound",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/LBP",
+      "x-status": "REC",
+      "x-symbol": "LL",
+      "const": "LBP"
+    },
+    {
+      "description": "Sri Lanka rupee",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/LKR",
+      "x-status": "REC",
+      "x-symbol": "රු",
+      "const": "LKR"
+    },
+    {
+      "description": "Liberian dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/LRD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "LRD"
+    },
+    {
+      "description": "Lesotho loti",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/LSL",
+      "x-status": "REC",
+      "x-symbol": "M",
+      "const": "LSL"
+    },
+    {
+      "description": "Lithuanian litas",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/LTL",
+      "x-status": "REC",
+      "x-symbol": "Lt",
+      "const": "LTL"
+    },
+    {
+      "description": "Latvian lats",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/LVL",
+      "x-status": "REC",
+      "x-symbol": "Ls",
+      "const": "LVL"
+    },
+    {
+      "description": "Libyan dinar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/LYD",
+      "x-status": "REC",
+      "x-symbol": "ل.د",
+      "const": "LYD"
+    },
+    {
+      "description": "Moroccan dirham",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MAD",
+      "x-status": "REC",
+      "x-symbol": "د.م.",
+      "const": "MAD"
+    },
+    {
+      "description": "Moldovan leu",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MDL",
+      "x-status": "REC",
+      "const": "MDL"
+    },
+    {
+      "description": "Malagasy ariary",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MGA",
+      "x-status": "REC",
+      "x-symbol": "Ar",
+      "const": "MGA"
+    },
+    {
+      "description": "Macedonian denar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MKD",
+      "x-status": "REC",
+      "x-symbol": "ден",
+      "const": "MKD"
+    },
+    {
+      "description": "Myanma kyat",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MMK",
+      "x-status": "REC",
+      "x-symbol": "K",
+      "const": "MMK"
+    },
+    {
+      "description": "Mongolian tugrik",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MNT",
+      "x-status": "REC",
+      "x-symbol": "₮",
+      "const": "MNT"
+    },
+    {
+      "description": "Macanese pataca",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MOP",
+      "x-status": "REC",
+      "x-symbol": "MOP$",
+      "const": "MOP"
+    },
+    {
+      "title": "Mauritanian ouguiya",
+      "description": "Ouguiya (Mauritania)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MRO",
+      "x-status": "REC",
+      "x-symbol": "UM",
+      "const": "MRO"
+    },
+    {
+      "description": "Mauritian rupee",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MUR",
+      "x-status": "REC",
+      "x-symbol": "₨",
+      "const": "MUR"
+    },
+    {
+      "description": "Maldivian rufiyaa",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MVR",
+      "x-status": "REC",
+      "x-symbol": "Rf.",
+      "const": "MVR"
+    },
+    {
+      "description": "Malawian kwacha",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MWK",
+      "x-status": "REC",
+      "x-symbol": "MK",
+      "const": "MWK"
+    },
+    {
+      "description": "Mexican peso",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MXN",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "MXN"
+    },
+    {
+      "title": "Mexican UDI",
+      "description": "Mexican Unidad de Inversion (UDI) (funds code)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MXV",
+      "x-status": "REC",
+      "const": "MXV"
+    },
+    {
+      "description": "Malaysian ringgit",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MYR",
+      "x-status": "REC",
+      "x-symbol": "RM",
+      "const": "MYR"
+    },
+    {
+      "description": "Mozambican metical",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/MZN",
+      "x-status": "REC",
+      "x-symbol": "MT",
+      "const": "MZN"
+    },
+    {
+      "description": "Namibian dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/NAD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "NAD"
+    },
+    {
+      "description": "Nigerian naira",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/NGN",
+      "x-status": "REC",
+      "x-symbol": "₦",
+      "const": "NGN"
+    },
+    {
+      "description": "Cordoba oro",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/NIO",
+      "x-status": "REC",
+      "x-symbol": "C$",
+      "const": "NIO"
+    },
+    {
+      "description": "Norwegian krone",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/NOK",
+      "x-status": "REC",
+      "x-symbol": "kr",
+      "const": "NOK"
+    },
+    {
+      "description": "Nepalese rupee",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/NPR",
+      "x-status": "REC",
+      "x-symbol": "₨",
+      "const": "NPR"
+    },
+    {
+      "description": "New Zealand dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/NZD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "NZD"
+    },
+    {
+      "description": "Omani rial",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/OMR",
+      "x-status": "REC",
+      "x-symbol": "ر.ع.",
+      "const": "OMR"
+    },
+    {
+      "description": "Panamanian balboa",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/PAB",
+      "x-status": "REC",
+      "x-symbol": "B/.",
+      "const": "PAB"
+    },
+    {
+      "description": "Peruvian nuevo sol",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/PEN",
+      "x-status": "REC",
+      "x-symbol": "S/",
+      "const": "PEN"
+    },
+    {
+      "description": "Papua New Guinean kina",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/PGK",
+      "x-status": "REC",
+      "x-symbol": "K",
+      "const": "PGK"
+    },
+    {
+      "description": "Philippine peso",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/PHP",
+      "x-status": "REC",
+      "x-symbol": "₱",
+      "const": "PHP"
+    },
+    {
+      "description": "Pakistani rupee",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/PKR",
+      "x-status": "REC",
+      "x-symbol": "₨",
+      "const": "PKR"
+    },
+    {
+      "description": "Polish złoty",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/PLN",
+      "x-status": "REC",
+      "x-symbol": "zł",
+      "const": "PLN"
+    },
+    {
+      "description": "Paraguayan guaraní",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/PYG",
+      "x-status": "REC",
+      "x-symbol": "₲",
+      "const": "PYG"
+    },
+    {
+      "description": "Qatari rial",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/QAR",
+      "x-status": "REC",
+      "x-symbol": "ر.ق",
+      "const": "QAR"
+    },
+    {
+      "description": "Romanian new leu",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/RON",
+      "x-status": "REC",
+      "const": "RON"
+    },
+    {
+      "description": "Serbian dinar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/RSD",
+      "x-status": "REC",
+      "x-symbol": "дин",
+      "const": "RSD"
+    },
+    {
+      "title": "Rouble",
+      "description": "Russian rouble",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/RUB",
+      "x-status": "REC",
+      "x-symbol": "₽",
+      "const": "RUB"
+    },
+    {
+      "description": "Rwandan franc",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/RWF",
+      "x-status": "REC",
+      "x-symbol": "FRw",
+      "const": "RWF"
+    },
+    {
+      "title": "Riyal",
+      "description": "Saudi riyal",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SAR",
+      "x-status": "REC",
+      "x-symbol": "ر.س",
+      "const": "SAR"
+    },
+    {
+      "description": "Solomon Islands dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SBD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "SBD"
+    },
+    {
+      "description": "Seychelles rupee",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SCR",
+      "x-status": "REC",
+      "x-symbol": "SRe",
+      "const": "SCR"
+    },
+    {
+      "description": "Sudanese pound",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SDG",
+      "x-status": "REC",
+      "const": "SDG"
+    },
+    {
+      "title": "Swedish krona",
+      "description": "Swedish krona/kronor",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SEK",
+      "x-status": "REC",
+      "x-symbol": "kr",
+      "const": "SEK"
+    },
+    {
+      "description": "Singapore dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SGD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "SGD"
+    },
+    {
+      "description": "Saint Helena pound",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SHP",
+      "x-status": "REC",
+      "x-symbol": "£",
+      "const": "SHP"
+    },
+    {
+      "title": "Leone",
+      "description": "Sierra Leonean leone",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SLL",
+      "x-status": "REC",
+      "x-symbol": "Le",
+      "const": "SLL"
+    },
+    {
+      "description": "Somali shilling",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SOS",
+      "x-status": "REC",
+      "x-symbol": "Sh.So",
+      "const": "SOS"
+    },
+    {
+      "description": "Surinamese dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SRD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "SRD"
+    },
+    {
+      "description": "South Sudanese pound",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SSP",
+      "x-status": "REC",
+      "const": "SSP"
+    },
+    {
+      "description": "São Tomé and Príncipe dobra",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/STD",
+      "x-status": "REC",
+      "x-symbol": "Db",
+      "const": "STD"
+    },
+    {
+      "description": "Salvadoran colón",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SVC",
+      "x-status": "REC",
+      "x-symbol": "₡",
+      "const": "SVC"
+    },
+    {
+      "description": "Syrian pound",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SYP",
+      "x-status": "REC",
+      "x-symbol": "LS",
+      "const": "SYP"
+    },
+    {
+      "title": "Lilangeni",
+      "description": "Swaziland Lilangeni",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/SZL",
+      "x-status": "REC",
+      "x-symbol": "E",
+      "const": "SZL"
+    },
+    {
+      "title": "Baht",
+      "description": "Thai baht",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/THB",
+      "x-status": "REC",
+      "x-symbol": "฿",
+      "const": "THB"
+    },
+    {
+      "description": "Tajikistani somoni",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/TJS",
+      "x-status": "REC",
+      "const": "TJS"
+    },
+    {
+      "description": "Turkmenistani manat",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/TMT",
+      "x-status": "REC",
+      "const": "TMT"
+    },
+    {
+      "description": "Tunisian dinar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/TND",
+      "x-status": "REC",
+      "x-symbol": "د.ت",
+      "const": "TND"
+    },
+    {
+      "title": "Pa'anga",
+      "description": "Tongan pa'anga",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/TOP",
+      "x-status": "REC",
+      "x-symbol": "T$",
+      "const": "TOP"
+    },
+    {
+      "description": "Turkish lira",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/TRY",
+      "x-status": "REC",
+      "x-symbol": "₺",
+      "const": "TRY"
+    },
+    {
+      "description": "Trinidad and Tobago dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/TTD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "TTD"
+    },
+    {
+      "description": "New Taiwan dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/TWD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "TWD"
+    },
+    {
+      "description": "Tanzanian shilling",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/TZS",
+      "x-status": "REC",
+      "x-symbol": "Tsh",
+      "const": "TZS"
+    },
+    {
+      "title": "Hryvnia",
+      "description": "Ukrainian hryvnia",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/UAH",
+      "x-status": "REC",
+      "x-symbol": "₴",
+      "const": "UAH"
+    },
+    {
+      "description": "Ugandan shilling",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/UGX",
+      "x-status": "REC",
+      "x-symbol": "USh",
+      "const": "UGX"
+    },
+    {
+      "title": "US Dollar",
+      "description": "United States dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/USD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "USD"
+    },
+    {
+      "title": "Next Day US Dollar",
+      "description": "United States dollar (next day) (funds code)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/USN",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "USN"
+    },
+    {
+      "title": "Same Day US Dollar",
+      "description": "United States dollar (same day) (funds code)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/USS",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "USS"
+    },
+    {
+      "title": "Uruguay Peso en Unidades Indexadas",
+      "description": "Uruguay Peso en Unidades Indexadas (URUIURUI) (funds code)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/UYI",
+      "x-status": "REC",
+      "const": "UYI"
+    },
+    {
+      "description": "Uruguayan peso",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/UYU",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "UYU"
+    },
+    {
+      "title": "Som",
+      "description": "Uzbekistan som",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/UZS",
+      "x-status": "REC",
+      "const": "UZS"
+    },
+    {
+      "title": "Venezualan Bolivar",
+      "description": "Bolívar (Bolivarian Republic Of Venezuela)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/VEB",
+      "x-status": "REC",
+      "x-symbol": "Bs.",
+      "const": "VEB"
+    },
+    {
+      "title": "Venezuelan Bolivar Fuerte",
+      "description": "Bolívar fuerte (Bolivarian Republic Of Venezuela)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/VEF",
+      "x-status": "REC",
+      "x-symbol": "Bs.F",
+      "const": "VEF"
+    },
+    {
+      "title": "đồng",
+      "description": "Vietnamese đồng",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/VND",
+      "x-status": "REC",
+      "x-symbol": "₫",
+      "const": "VND"
+    },
+    {
+      "description": "Vanuatu vatu",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/VUV",
+      "x-status": "REC",
+      "x-symbol": "VT",
+      "const": "VUV"
+    },
+    {
+      "description": "Samoan tala",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/WST",
+      "x-status": "REC",
+      "x-symbol": "WS$",
+      "const": "WST"
+    },
+    {
+      "title": "CFA Franc BEAC",
+      "description": "CFA franc BEAC",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XAF",
+      "x-status": "REC",
+      "const": "XAF"
+    },
+    {
+      "title": "Silver",
+      "description": "Silver (one troy ounce)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XAG",
+      "x-status": "REC",
+      "const": "XAG"
+    },
+    {
+      "title": "Gold",
+      "description": "Gold (one troy ounce)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XAU",
+      "x-status": "REC",
+      "const": "XAU"
+    },
+    {
+      "title": "EURCO",
+      "description": "European Composite Unit (EURCO) (bond market unit)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XBA",
+      "x-status": "REC",
+      "const": "XBA"
+    },
+    {
+      "title": "E.M.U.-6",
+      "description": "European Monetary Unit (E.M.U.-6) (bond market unit)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XBB",
+      "x-status": "REC",
+      "const": "XBB"
+    },
+    {
+      "title": "E.U.A.-9",
+      "description": "European Unit of Account 9 (E.U.A.-9) (bond market unit)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XBC",
+      "x-status": "REC",
+      "const": "XBC"
+    },
+    {
+      "title": "E.U.A.-17",
+      "description": "European Unit of Account 17 (E.U.A.-17) (bond market unit)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XBD",
+      "x-status": "REC",
+      "const": "XBD"
+    },
+    {
+      "description": "East Caribbean dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XCD",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "XCD"
+    },
+    {
+      "description": "Special Drawing Rights",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XDR",
+      "x-status": "REC",
+      "const": "XDR"
+    },
+    {
+      "title": "UIC Franc",
+      "description": "UIC franc (special settlement currency)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XFU",
+      "x-status": "REC",
+      "const": "XFU"
+    },
+    {
+      "description": "CFA Franc BCEAO",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XOF",
+      "x-status": "REC",
+      "const": "XOF"
+    },
+    {
+      "title": "Palladium",
+      "description": "Palladium (one troy ounce)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XPD",
+      "x-status": "REC",
+      "const": "XPD"
+    },
+    {
+      "title": "CFP Franc",
+      "description": "CFP franc",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XPF",
+      "x-status": "REC",
+      "const": "XPF"
+    },
+    {
+      "title": "Platinum",
+      "description": "Platinum (one troy ounce)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XPT",
+      "x-status": "REC",
+      "const": "XPT"
+    },
+    {
+      "title": "SUCRE",
+      "description": "Unified System for Regional Compensation (SUCRE)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XSU",
+      "x-status": "REC",
+      "x-symbol": "Sucre",
+      "const": "XSU"
+    },
+    {
+      "title": "ADB Unit of Account",
+      "description": "African Development Bank",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/XUA",
+      "x-status": "REC",
+      "const": "XUA"
+    },
+    {
+      "description": "Yemeni rial",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/YER",
+      "x-status": "REC",
+      "const": "YER"
+    },
+    {
+      "description": "South African rand",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ZAR",
+      "x-status": "REC",
+      "x-symbol": "R",
+      "const": "ZAR"
+    },
+    {
+      "description": "Zambian kwacha",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ZMK",
+      "x-status": "REC",
+      "x-symbol": "ZK",
+      "const": "ZMK"
+    },
+    {
+      "description": "Zambian kwacha",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ZMW",
+      "x-status": "REC",
+      "x-symbol": "ZK",
+      "const": "ZMW"
+    },
+    {
+      "title": "Zimbabwe Gold",
+      "description": "Zimbabwe Gold (ZIMBABWE)",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ZWG",
+      "x-status": "REC",
+      "x-symbol": "ZiG",
+      "const": "ZWG"
+    },
+    {
+      "description": "Zimbabwe dollar",
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/ZWL",
+      "x-status": "REC",
+      "x-symbol": "$",
+      "const": "ZWL"
+    }
+  ]
+}

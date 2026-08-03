@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/iso/coordinate/2022/latitude.json",
+  "target": "../../../../schemas/iso/coordinate/2022/latitude.json",
   "tests": [
     {
       "description": "Valid - equator",

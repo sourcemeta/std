@@ -1,5 +1,5 @@
 {
-  "target": "../../../../../../schemas/2020-12/bipm/si/2019/non-si/unit/litre.json",
+  "target": "../../../../../../schemas/bipm/si/2019/non-si/unit/litre.json",
   "tests": [
     {
       "description": "Valid - zero",

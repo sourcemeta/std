@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/ietf/urn/8141/urn.json",
+  "target": "../../../../schemas/ietf/urn/8141/urn.json",
   "tests": [
     {
       "description": "Invalid type (non-string)",

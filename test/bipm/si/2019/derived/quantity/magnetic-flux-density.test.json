@@ -1,5 +1,5 @@
 {
-  "target": "../../../../../../schemas/2020-12/bipm/si/2019/derived/quantity/magnetic-flux-density.json",
+  "target": "../../../../../../schemas/bipm/si/2019/derived/quantity/magnetic-flux-density.json",
   "tests": [
     {
       "description": "Valid - positive number",

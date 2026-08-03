@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/iso/currency/2015/numeric-unknown.json",
+  "target": "../../../../schemas/iso/currency/2015/numeric-unknown.json",
   "tests": [
     {
       "description": "Invalid type - string",

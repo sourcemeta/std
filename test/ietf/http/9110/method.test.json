@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/ietf/http/9110/method.json",
+  "target": "../../../../schemas/ietf/http/9110/method.json",
   "tests": [
     {
       "description": "Invalid type - number",
