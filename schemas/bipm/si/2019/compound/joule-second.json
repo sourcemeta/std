@@ -12,7 +12,6 @@
   "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
-  "x-units": [ "../derived/unit/joule.json", "../base/unit/second.json" ],
   "type": "number",
   "exclusiveMinimum": 0
 }

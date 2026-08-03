@@ -15,12 +15,8 @@
     | sort_by(.["country-code"])
     | map({
         "x-jsonld-self": ("http://publications.europa.eu/resource/authority/country/" + .["alpha-3"]),
-        "title": .name,
-        "x-alpha-2": .["alpha-2"],
-        "x-alpha-3": .["alpha-3"]
+        "title": .name
       } +
-      (if .region != null and .region != "" then {"x-region": .region} else {} end) +
-      (if .["sub-region"] != null and .["sub-region"] != "" then {"x-sub-region": .["sub-region"]} else {} end) +
       {
         "const": (.["country-code"] | tonumber)
       })

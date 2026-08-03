@@ -33,8 +33,6 @@
        else {} end) +
       {
         "title": (map(.CcyNm) | unique | join(" / ")),
-        "x-country-names": (map(.CtryNm) | unique),
-        "x-withdrawal-dates": (map(.WthdrwlDt) | unique),
         "const": (.[0].CcyNbr | tonumber)
       })
   )

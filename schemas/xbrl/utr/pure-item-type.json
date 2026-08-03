@@ -12,19 +12,16 @@
     {
       "title": "Monetary/Monetary",
       "description": "Exchange Rate Expressed as: Monetary Unit / Monetary Unit",
-      "x-status": "REC",
       "const": "Monetary_per_Monetary"
     },
     {
       "title": "pure",
       "description": "Dimensionless (Pure) Number",
       "x-jsonld-self": "http://qudt.org/vocab/unit/UNITLESS",
-      "x-status": "REC",
       "const": "pure"
     },
     {
       "description": "Rate",
-      "x-status": "REC",
       "const": "Rate"
     }
   ]

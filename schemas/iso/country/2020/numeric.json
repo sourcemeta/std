@@ -8,2239 +8,1247 @@
   "anyOf": [
     {
       "title": "Afghanistan",
-      "x-alpha-2": "AF",
-      "x-alpha-3": "AFG",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/AFG",
-      "x-region": "Asia",
-      "x-sub-region": "Southern Asia",
       "const": 4
     },
     {
       "title": "Albania",
-      "x-alpha-2": "AL",
-      "x-alpha-3": "ALB",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ALB",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 8
     },
     {
       "title": "Antarctica",
-      "x-alpha-2": "AQ",
-      "x-alpha-3": "ATA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ATA",
       "const": 10
     },
     {
       "title": "Algeria",
-      "x-alpha-2": "DZ",
-      "x-alpha-3": "DZA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/DZA",
-      "x-region": "Africa",
-      "x-sub-region": "Northern Africa",
       "const": 12
     },
     {
       "title": "American Samoa",
-      "x-alpha-2": "AS",
-      "x-alpha-3": "ASM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ASM",
-      "x-region": "Oceania",
-      "x-sub-region": "Polynesia",
       "const": 16
     },
     {
       "title": "Andorra",
-      "x-alpha-2": "AD",
-      "x-alpha-3": "AND",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/AND",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 20
     },
     {
       "title": "Angola",
-      "x-alpha-2": "AO",
-      "x-alpha-3": "AGO",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/AGO",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 24
     },
     {
       "title": "Antigua and Barbuda",
-      "x-alpha-2": "AG",
-      "x-alpha-3": "ATG",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ATG",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 28
     },
     {
       "title": "Azerbaijan",
-      "x-alpha-2": "AZ",
-      "x-alpha-3": "AZE",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/AZE",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 31
     },
     {
       "title": "Argentina",
-      "x-alpha-2": "AR",
-      "x-alpha-3": "ARG",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ARG",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 32
     },
     {
       "title": "Australia",
-      "x-alpha-2": "AU",
-      "x-alpha-3": "AUS",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/AUS",
-      "x-region": "Oceania",
-      "x-sub-region": "Australia and New Zealand",
       "const": 36
     },
     {
       "title": "Austria",
-      "x-alpha-2": "AT",
-      "x-alpha-3": "AUT",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/AUT",
-      "x-region": "Europe",
-      "x-sub-region": "Western Europe",
       "const": 40
     },
     {
       "title": "Bahamas",
-      "x-alpha-2": "BS",
-      "x-alpha-3": "BHS",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BHS",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 44
     },
     {
       "title": "Bahrain",
-      "x-alpha-2": "BH",
-      "x-alpha-3": "BHR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BHR",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 48
     },
     {
       "title": "Bangladesh",
-      "x-alpha-2": "BD",
-      "x-alpha-3": "BGD",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BGD",
-      "x-region": "Asia",
-      "x-sub-region": "Southern Asia",
       "const": 50
     },
     {
       "title": "Armenia",
-      "x-alpha-2": "AM",
-      "x-alpha-3": "ARM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ARM",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 51
     },
     {
       "title": "Barbados",
-      "x-alpha-2": "BB",
-      "x-alpha-3": "BRB",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BRB",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 52
     },
     {
       "title": "Belgium",
-      "x-alpha-2": "BE",
-      "x-alpha-3": "BEL",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BEL",
-      "x-region": "Europe",
-      "x-sub-region": "Western Europe",
       "const": 56
     },
     {
       "title": "Bermuda",
-      "x-alpha-2": "BM",
-      "x-alpha-3": "BMU",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BMU",
-      "x-region": "Americas",
-      "x-sub-region": "Northern America",
       "const": 60
     },
     {
       "title": "Bhutan",
-      "x-alpha-2": "BT",
-      "x-alpha-3": "BTN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BTN",
-      "x-region": "Asia",
-      "x-sub-region": "Southern Asia",
       "const": 64
     },
     {
       "title": "Bolivia, Plurinational State of",
-      "x-alpha-2": "BO",
-      "x-alpha-3": "BOL",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BOL",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 68
     },
     {
       "title": "Bosnia and Herzegovina",
-      "x-alpha-2": "BA",
-      "x-alpha-3": "BIH",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BIH",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 70
     },
     {
       "title": "Botswana",
-      "x-alpha-2": "BW",
-      "x-alpha-3": "BWA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BWA",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 72
     },
     {
       "title": "Bouvet Island",
-      "x-alpha-2": "BV",
-      "x-alpha-3": "BVT",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BVT",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 74
     },
     {
       "title": "Brazil",
-      "x-alpha-2": "BR",
-      "x-alpha-3": "BRA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BRA",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 76
     },
     {
       "title": "Belize",
-      "x-alpha-2": "BZ",
-      "x-alpha-3": "BLZ",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BLZ",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 84
     },
     {
       "title": "British Indian Ocean Territory",
-      "x-alpha-2": "IO",
-      "x-alpha-3": "IOT",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/IOT",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 86
     },
     {
       "title": "Solomon Islands",
-      "x-alpha-2": "SB",
-      "x-alpha-3": "SLB",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SLB",
-      "x-region": "Oceania",
-      "x-sub-region": "Melanesia",
       "const": 90
     },
     {
       "title": "Virgin Islands (British)",
-      "x-alpha-2": "VG",
-      "x-alpha-3": "VGB",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/VGB",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 92
     },
     {
       "title": "Brunei Darussalam",
-      "x-alpha-2": "BN",
-      "x-alpha-3": "BRN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BRN",
-      "x-region": "Asia",
-      "x-sub-region": "South-eastern Asia",
       "const": 96
     },
     {
       "title": "Bulgaria",
-      "x-alpha-2": "BG",
-      "x-alpha-3": "BGR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BGR",
-      "x-region": "Europe",
-      "x-sub-region": "Eastern Europe",
       "const": 100
     },
     {
       "title": "Myanmar",
-      "x-alpha-2": "MM",
-      "x-alpha-3": "MMR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MMR",
-      "x-region": "Asia",
-      "x-sub-region": "South-eastern Asia",
       "const": 104
     },
     {
       "title": "Burundi",
-      "x-alpha-2": "BI",
-      "x-alpha-3": "BDI",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BDI",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 108
     },
     {
       "title": "Belarus",
-      "x-alpha-2": "BY",
-      "x-alpha-3": "BLR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BLR",
-      "x-region": "Europe",
-      "x-sub-region": "Eastern Europe",
       "const": 112
     },
     {
       "title": "Cambodia",
-      "x-alpha-2": "KH",
-      "x-alpha-3": "KHM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KHM",
-      "x-region": "Asia",
-      "x-sub-region": "South-eastern Asia",
       "const": 116
     },
     {
       "title": "Cameroon",
-      "x-alpha-2": "CM",
-      "x-alpha-3": "CMR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CMR",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 120
     },
     {
       "title": "Canada",
-      "x-alpha-2": "CA",
-      "x-alpha-3": "CAN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CAN",
-      "x-region": "Americas",
-      "x-sub-region": "Northern America",
       "const": 124
     },
     {
       "title": "Cabo Verde",
-      "x-alpha-2": "CV",
-      "x-alpha-3": "CPV",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CPV",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 132
     },
     {
       "title": "Cayman Islands",
-      "x-alpha-2": "KY",
-      "x-alpha-3": "CYM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CYM",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 136
     },
     {
       "title": "Central African Republic",
-      "x-alpha-2": "CF",
-      "x-alpha-3": "CAF",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CAF",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 140
     },
     {
       "title": "Sri Lanka",
-      "x-alpha-2": "LK",
-      "x-alpha-3": "LKA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LKA",
-      "x-region": "Asia",
-      "x-sub-region": "Southern Asia",
       "const": 144
     },
     {
       "title": "Chad",
-      "x-alpha-2": "TD",
-      "x-alpha-3": "TCD",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TCD",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 148
     },
     {
       "title": "Chile",
-      "x-alpha-2": "CL",
-      "x-alpha-3": "CHL",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CHL",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 152
     },
     {
       "title": "China",
-      "x-alpha-2": "CN",
-      "x-alpha-3": "CHN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CHN",
-      "x-region": "Asia",
-      "x-sub-region": "Eastern Asia",
       "const": 156
     },
     {
       "title": "Taiwan, Province of China",
-      "x-alpha-2": "TW",
-      "x-alpha-3": "TWN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TWN",
       "const": 158
     },
     {
       "title": "Christmas Island",
-      "x-alpha-2": "CX",
-      "x-alpha-3": "CXR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CXR",
-      "x-region": "Oceania",
-      "x-sub-region": "Australia and New Zealand",
       "const": 162
     },
     {
       "title": "Cocos (Keeling) Islands",
-      "x-alpha-2": "CC",
-      "x-alpha-3": "CCK",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CCK",
-      "x-region": "Oceania",
-      "x-sub-region": "Australia and New Zealand",
       "const": 166
     },
     {
       "title": "Colombia",
-      "x-alpha-2": "CO",
-      "x-alpha-3": "COL",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/COL",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 170
     },
     {
       "title": "Comoros",
-      "x-alpha-2": "KM",
-      "x-alpha-3": "COM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/COM",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 174
     },
     {
       "title": "Mayotte",
-      "x-alpha-2": "YT",
-      "x-alpha-3": "MYT",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MYT",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 175
     },
     {
       "title": "Congo",
-      "x-alpha-2": "CG",
-      "x-alpha-3": "COG",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/COG",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 178
     },
     {
       "title": "Congo, Democratic Republic of the",
-      "x-alpha-2": "CD",
-      "x-alpha-3": "COD",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/COD",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 180
     },
     {
       "title": "Cook Islands",
-      "x-alpha-2": "CK",
-      "x-alpha-3": "COK",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/COK",
-      "x-region": "Oceania",
-      "x-sub-region": "Polynesia",
       "const": 184
     },
     {
       "title": "Costa Rica",
-      "x-alpha-2": "CR",
-      "x-alpha-3": "CRI",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CRI",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 188
     },
     {
       "title": "Croatia",
-      "x-alpha-2": "HR",
-      "x-alpha-3": "HRV",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/HRV",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 191
     },
     {
       "title": "Cuba",
-      "x-alpha-2": "CU",
-      "x-alpha-3": "CUB",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CUB",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 192
     },
     {
       "title": "Cyprus",
-      "x-alpha-2": "CY",
-      "x-alpha-3": "CYP",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CYP",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 196
     },
     {
       "title": "Czechia",
-      "x-alpha-2": "CZ",
-      "x-alpha-3": "CZE",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CZE",
-      "x-region": "Europe",
-      "x-sub-region": "Eastern Europe",
       "const": 203
     },
     {
       "title": "Benin",
-      "x-alpha-2": "BJ",
-      "x-alpha-3": "BEN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BEN",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 204
     },
     {
       "title": "Denmark",
-      "x-alpha-2": "DK",
-      "x-alpha-3": "DNK",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/DNK",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 208
     },
     {
       "title": "Dominica",
-      "x-alpha-2": "DM",
-      "x-alpha-3": "DMA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/DMA",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 212
     },
     {
       "title": "Dominican Republic",
-      "x-alpha-2": "DO",
-      "x-alpha-3": "DOM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/DOM",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 214
     },
     {
       "title": "Ecuador",
-      "x-alpha-2": "EC",
-      "x-alpha-3": "ECU",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ECU",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 218
     },
     {
       "title": "El Salvador",
-      "x-alpha-2": "SV",
-      "x-alpha-3": "SLV",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SLV",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 222
     },
     {
       "title": "Equatorial Guinea",
-      "x-alpha-2": "GQ",
-      "x-alpha-3": "GNQ",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GNQ",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 226
     },
     {
       "title": "Ethiopia",
-      "x-alpha-2": "ET",
-      "x-alpha-3": "ETH",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ETH",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 231
     },
     {
       "title": "Eritrea",
-      "x-alpha-2": "ER",
-      "x-alpha-3": "ERI",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ERI",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 232
     },
     {
       "title": "Estonia",
-      "x-alpha-2": "EE",
-      "x-alpha-3": "EST",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/EST",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 233
     },
     {
       "title": "Faroe Islands",
-      "x-alpha-2": "FO",
-      "x-alpha-3": "FRO",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/FRO",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 234
     },
     {
       "title": "Falkland Islands (Malvinas)",
-      "x-alpha-2": "FK",
-      "x-alpha-3": "FLK",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/FLK",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 238
     },
     {
       "title": "South Georgia and the South Sandwich Islands",
-      "x-alpha-2": "GS",
-      "x-alpha-3": "SGS",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SGS",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 239
     },
     {
       "title": "Fiji",
-      "x-alpha-2": "FJ",
-      "x-alpha-3": "FJI",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/FJI",
-      "x-region": "Oceania",
-      "x-sub-region": "Melanesia",
       "const": 242
     },
     {
       "title": "Finland",
-      "x-alpha-2": "FI",
-      "x-alpha-3": "FIN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/FIN",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 246
     },
     {
       "title": "Åland Islands",
-      "x-alpha-2": "AX",
-      "x-alpha-3": "ALA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ALA",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 248
     },
     {
       "title": "France",
-      "x-alpha-2": "FR",
-      "x-alpha-3": "FRA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/FRA",
-      "x-region": "Europe",
-      "x-sub-region": "Western Europe",
       "const": 250
     },
     {
       "title": "French Guiana",
-      "x-alpha-2": "GF",
-      "x-alpha-3": "GUF",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GUF",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 254
     },
     {
       "title": "French Polynesia",
-      "x-alpha-2": "PF",
-      "x-alpha-3": "PYF",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PYF",
-      "x-region": "Oceania",
-      "x-sub-region": "Polynesia",
       "const": 258
     },
     {
       "title": "French Southern Territories",
-      "x-alpha-2": "TF",
-      "x-alpha-3": "ATF",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ATF",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 260
     },
     {
       "title": "Djibouti",
-      "x-alpha-2": "DJ",
-      "x-alpha-3": "DJI",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/DJI",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 262
     },
     {
       "title": "Gabon",
-      "x-alpha-2": "GA",
-      "x-alpha-3": "GAB",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GAB",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 266
     },
     {
       "title": "Georgia",
-      "x-alpha-2": "GE",
-      "x-alpha-3": "GEO",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GEO",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 268
     },
     {
       "title": "Gambia",
-      "x-alpha-2": "GM",
-      "x-alpha-3": "GMB",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GMB",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 270
     },
     {
       "title": "Palestine, State of",
-      "x-alpha-2": "PS",
-      "x-alpha-3": "PSE",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PSE",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 275
     },
     {
       "title": "Germany",
-      "x-alpha-2": "DE",
-      "x-alpha-3": "DEU",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/DEU",
-      "x-region": "Europe",
-      "x-sub-region": "Western Europe",
       "const": 276
     },
     {
       "title": "Ghana",
-      "x-alpha-2": "GH",
-      "x-alpha-3": "GHA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GHA",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 288
     },
     {
       "title": "Gibraltar",
-      "x-alpha-2": "GI",
-      "x-alpha-3": "GIB",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GIB",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 292
     },
     {
       "title": "Kiribati",
-      "x-alpha-2": "KI",
-      "x-alpha-3": "KIR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KIR",
-      "x-region": "Oceania",
-      "x-sub-region": "Micronesia",
       "const": 296
     },
     {
       "title": "Greece",
-      "x-alpha-2": "GR",
-      "x-alpha-3": "GRC",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GRC",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 300
     },
     {
       "title": "Greenland",
-      "x-alpha-2": "GL",
-      "x-alpha-3": "GRL",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GRL",
-      "x-region": "Americas",
-      "x-sub-region": "Northern America",
       "const": 304
     },
     {
       "title": "Grenada",
-      "x-alpha-2": "GD",
-      "x-alpha-3": "GRD",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GRD",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 308
     },
     {
       "title": "Guadeloupe",
-      "x-alpha-2": "GP",
-      "x-alpha-3": "GLP",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GLP",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 312
     },
     {
       "title": "Guam",
-      "x-alpha-2": "GU",
-      "x-alpha-3": "GUM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GUM",
-      "x-region": "Oceania",
-      "x-sub-region": "Micronesia",
       "const": 316
     },
     {
       "title": "Guatemala",
-      "x-alpha-2": "GT",
-      "x-alpha-3": "GTM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GTM",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 320
     },
     {
       "title": "Guinea",
-      "x-alpha-2": "GN",
-      "x-alpha-3": "GIN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GIN",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 324
     },
     {
       "title": "Guyana",
-      "x-alpha-2": "GY",
-      "x-alpha-3": "GUY",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GUY",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 328
     },
     {
       "title": "Haiti",
-      "x-alpha-2": "HT",
-      "x-alpha-3": "HTI",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/HTI",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 332
     },
     {
       "title": "Heard Island and McDonald Islands",
-      "x-alpha-2": "HM",
-      "x-alpha-3": "HMD",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/HMD",
-      "x-region": "Oceania",
-      "x-sub-region": "Australia and New Zealand",
       "const": 334
     },
     {
       "title": "Holy See",
-      "x-alpha-2": "VA",
-      "x-alpha-3": "VAT",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/VAT",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 336
     },
     {
       "title": "Honduras",
-      "x-alpha-2": "HN",
-      "x-alpha-3": "HND",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/HND",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 340
     },
     {
       "title": "Hong Kong",
-      "x-alpha-2": "HK",
-      "x-alpha-3": "HKG",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/HKG",
-      "x-region": "Asia",
-      "x-sub-region": "Eastern Asia",
       "const": 344
     },
     {
       "title": "Hungary",
-      "x-alpha-2": "HU",
-      "x-alpha-3": "HUN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/HUN",
-      "x-region": "Europe",
-      "x-sub-region": "Eastern Europe",
       "const": 348
     },
     {
       "title": "Iceland",
-      "x-alpha-2": "IS",
-      "x-alpha-3": "ISL",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ISL",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 352
     },
     {
       "title": "India",
-      "x-alpha-2": "IN",
-      "x-alpha-3": "IND",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/IND",
-      "x-region": "Asia",
-      "x-sub-region": "Southern Asia",
       "const": 356
     },
     {
       "title": "Indonesia",
-      "x-alpha-2": "ID",
-      "x-alpha-3": "IDN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/IDN",
-      "x-region": "Asia",
-      "x-sub-region": "South-eastern Asia",
       "const": 360
     },
     {
       "title": "Iran, Islamic Republic of",
-      "x-alpha-2": "IR",
-      "x-alpha-3": "IRN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/IRN",
-      "x-region": "Asia",
-      "x-sub-region": "Southern Asia",
       "const": 364
     },
     {
       "title": "Iraq",
-      "x-alpha-2": "IQ",
-      "x-alpha-3": "IRQ",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/IRQ",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 368
     },
     {
       "title": "Ireland",
-      "x-alpha-2": "IE",
-      "x-alpha-3": "IRL",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/IRL",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 372
     },
     {
       "title": "Israel",
-      "x-alpha-2": "IL",
-      "x-alpha-3": "ISR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ISR",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 376
     },
     {
       "title": "Italy",
-      "x-alpha-2": "IT",
-      "x-alpha-3": "ITA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ITA",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 380
     },
     {
       "title": "Côte d'Ivoire",
-      "x-alpha-2": "CI",
-      "x-alpha-3": "CIV",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CIV",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 384
     },
     {
       "title": "Jamaica",
-      "x-alpha-2": "JM",
-      "x-alpha-3": "JAM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/JAM",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 388
     },
     {
       "title": "Japan",
-      "x-alpha-2": "JP",
-      "x-alpha-3": "JPN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/JPN",
-      "x-region": "Asia",
-      "x-sub-region": "Eastern Asia",
       "const": 392
     },
     {
       "title": "Kazakhstan",
-      "x-alpha-2": "KZ",
-      "x-alpha-3": "KAZ",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KAZ",
-      "x-region": "Asia",
-      "x-sub-region": "Central Asia",
       "const": 398
     },
     {
       "title": "Jordan",
-      "x-alpha-2": "JO",
-      "x-alpha-3": "JOR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/JOR",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 400
     },
     {
       "title": "Kenya",
-      "x-alpha-2": "KE",
-      "x-alpha-3": "KEN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KEN",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 404
     },
     {
       "title": "Korea, Democratic People's Republic of",
-      "x-alpha-2": "KP",
-      "x-alpha-3": "PRK",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PRK",
-      "x-region": "Asia",
-      "x-sub-region": "Eastern Asia",
       "const": 408
     },
     {
       "title": "Korea, Republic of",
-      "x-alpha-2": "KR",
-      "x-alpha-3": "KOR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KOR",
-      "x-region": "Asia",
-      "x-sub-region": "Eastern Asia",
       "const": 410
     },
     {
       "title": "Kuwait",
-      "x-alpha-2": "KW",
-      "x-alpha-3": "KWT",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KWT",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 414
     },
     {
       "title": "Kyrgyzstan",
-      "x-alpha-2": "KG",
-      "x-alpha-3": "KGZ",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KGZ",
-      "x-region": "Asia",
-      "x-sub-region": "Central Asia",
       "const": 417
     },
     {
       "title": "Lao People's Democratic Republic",
-      "x-alpha-2": "LA",
-      "x-alpha-3": "LAO",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LAO",
-      "x-region": "Asia",
-      "x-sub-region": "South-eastern Asia",
       "const": 418
     },
     {
       "title": "Lebanon",
-      "x-alpha-2": "LB",
-      "x-alpha-3": "LBN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LBN",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 422
     },
     {
       "title": "Lesotho",
-      "x-alpha-2": "LS",
-      "x-alpha-3": "LSO",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LSO",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 426
     },
     {
       "title": "Latvia",
-      "x-alpha-2": "LV",
-      "x-alpha-3": "LVA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LVA",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 428
     },
     {
       "title": "Liberia",
-      "x-alpha-2": "LR",
-      "x-alpha-3": "LBR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LBR",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 430
     },
     {
       "title": "Libya",
-      "x-alpha-2": "LY",
-      "x-alpha-3": "LBY",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LBY",
-      "x-region": "Africa",
-      "x-sub-region": "Northern Africa",
       "const": 434
     },
     {
       "title": "Liechtenstein",
-      "x-alpha-2": "LI",
-      "x-alpha-3": "LIE",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LIE",
-      "x-region": "Europe",
-      "x-sub-region": "Western Europe",
       "const": 438
     },
     {
       "title": "Lithuania",
-      "x-alpha-2": "LT",
-      "x-alpha-3": "LTU",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LTU",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 440
     },
     {
       "title": "Luxembourg",
-      "x-alpha-2": "LU",
-      "x-alpha-3": "LUX",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LUX",
-      "x-region": "Europe",
-      "x-sub-region": "Western Europe",
       "const": 442
     },
     {
       "title": "Macao",
-      "x-alpha-2": "MO",
-      "x-alpha-3": "MAC",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MAC",
-      "x-region": "Asia",
-      "x-sub-region": "Eastern Asia",
       "const": 446
     },
     {
       "title": "Madagascar",
-      "x-alpha-2": "MG",
-      "x-alpha-3": "MDG",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MDG",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 450
     },
     {
       "title": "Malawi",
-      "x-alpha-2": "MW",
-      "x-alpha-3": "MWI",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MWI",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 454
     },
     {
       "title": "Malaysia",
-      "x-alpha-2": "MY",
-      "x-alpha-3": "MYS",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MYS",
-      "x-region": "Asia",
-      "x-sub-region": "South-eastern Asia",
       "const": 458
     },
     {
       "title": "Maldives",
-      "x-alpha-2": "MV",
-      "x-alpha-3": "MDV",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MDV",
-      "x-region": "Asia",
-      "x-sub-region": "Southern Asia",
       "const": 462
     },
     {
       "title": "Mali",
-      "x-alpha-2": "ML",
-      "x-alpha-3": "MLI",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MLI",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 466
     },
     {
       "title": "Malta",
-      "x-alpha-2": "MT",
-      "x-alpha-3": "MLT",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MLT",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 470
     },
     {
       "title": "Martinique",
-      "x-alpha-2": "MQ",
-      "x-alpha-3": "MTQ",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MTQ",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 474
     },
     {
       "title": "Mauritania",
-      "x-alpha-2": "MR",
-      "x-alpha-3": "MRT",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MRT",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 478
     },
     {
       "title": "Mauritius",
-      "x-alpha-2": "MU",
-      "x-alpha-3": "MUS",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MUS",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 480
     },
     {
       "title": "Mexico",
-      "x-alpha-2": "MX",
-      "x-alpha-3": "MEX",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MEX",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 484
     },
     {
       "title": "Monaco",
-      "x-alpha-2": "MC",
-      "x-alpha-3": "MCO",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MCO",
-      "x-region": "Europe",
-      "x-sub-region": "Western Europe",
       "const": 492
     },
     {
       "title": "Mongolia",
-      "x-alpha-2": "MN",
-      "x-alpha-3": "MNG",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MNG",
-      "x-region": "Asia",
-      "x-sub-region": "Eastern Asia",
       "const": 496
     },
     {
       "title": "Moldova, Republic of",
-      "x-alpha-2": "MD",
-      "x-alpha-3": "MDA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MDA",
-      "x-region": "Europe",
-      "x-sub-region": "Eastern Europe",
       "const": 498
     },
     {
       "title": "Montenegro",
-      "x-alpha-2": "ME",
-      "x-alpha-3": "MNE",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MNE",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 499
     },
     {
       "title": "Montserrat",
-      "x-alpha-2": "MS",
-      "x-alpha-3": "MSR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MSR",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 500
     },
     {
       "title": "Morocco",
-      "x-alpha-2": "MA",
-      "x-alpha-3": "MAR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MAR",
-      "x-region": "Africa",
-      "x-sub-region": "Northern Africa",
       "const": 504
     },
     {
       "title": "Mozambique",
-      "x-alpha-2": "MZ",
-      "x-alpha-3": "MOZ",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MOZ",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 508
     },
     {
       "title": "Oman",
-      "x-alpha-2": "OM",
-      "x-alpha-3": "OMN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/OMN",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 512
     },
     {
       "title": "Namibia",
-      "x-alpha-2": "NA",
-      "x-alpha-3": "NAM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NAM",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 516
     },
     {
       "title": "Nauru",
-      "x-alpha-2": "NR",
-      "x-alpha-3": "NRU",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NRU",
-      "x-region": "Oceania",
-      "x-sub-region": "Micronesia",
       "const": 520
     },
     {
       "title": "Nepal",
-      "x-alpha-2": "NP",
-      "x-alpha-3": "NPL",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NPL",
-      "x-region": "Asia",
-      "x-sub-region": "Southern Asia",
       "const": 524
     },
     {
       "title": "Netherlands, Kingdom of the",
-      "x-alpha-2": "NL",
-      "x-alpha-3": "NLD",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NLD",
-      "x-region": "Europe",
-      "x-sub-region": "Western Europe",
       "const": 528
     },
     {
       "title": "Curaçao",
-      "x-alpha-2": "CW",
-      "x-alpha-3": "CUW",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CUW",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 531
     },
     {
       "title": "Aruba",
-      "x-alpha-2": "AW",
-      "x-alpha-3": "ABW",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ABW",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 533
     },
     {
       "title": "Sint Maarten (Dutch part)",
-      "x-alpha-2": "SX",
-      "x-alpha-3": "SXM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SXM",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 534
     },
     {
       "title": "Bonaire, Sint Eustatius and Saba",
-      "x-alpha-2": "BQ",
-      "x-alpha-3": "BES",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BES",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 535
     },
     {
       "title": "New Caledonia",
-      "x-alpha-2": "NC",
-      "x-alpha-3": "NCL",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NCL",
-      "x-region": "Oceania",
-      "x-sub-region": "Melanesia",
       "const": 540
     },
     {
       "title": "Vanuatu",
-      "x-alpha-2": "VU",
-      "x-alpha-3": "VUT",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/VUT",
-      "x-region": "Oceania",
-      "x-sub-region": "Melanesia",
       "const": 548
     },
     {
       "title": "New Zealand",
-      "x-alpha-2": "NZ",
-      "x-alpha-3": "NZL",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NZL",
-      "x-region": "Oceania",
-      "x-sub-region": "Australia and New Zealand",
       "const": 554
     },
     {
       "title": "Nicaragua",
-      "x-alpha-2": "NI",
-      "x-alpha-3": "NIC",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NIC",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 558
     },
     {
       "title": "Niger",
-      "x-alpha-2": "NE",
-      "x-alpha-3": "NER",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NER",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 562
     },
     {
       "title": "Nigeria",
-      "x-alpha-2": "NG",
-      "x-alpha-3": "NGA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NGA",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 566
     },
     {
       "title": "Niue",
-      "x-alpha-2": "NU",
-      "x-alpha-3": "NIU",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NIU",
-      "x-region": "Oceania",
-      "x-sub-region": "Polynesia",
       "const": 570
     },
     {
       "title": "Norfolk Island",
-      "x-alpha-2": "NF",
-      "x-alpha-3": "NFK",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NFK",
-      "x-region": "Oceania",
-      "x-sub-region": "Australia and New Zealand",
       "const": 574
     },
     {
       "title": "Norway",
-      "x-alpha-2": "NO",
-      "x-alpha-3": "NOR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/NOR",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 578
     },
     {
       "title": "Northern Mariana Islands",
-      "x-alpha-2": "MP",
-      "x-alpha-3": "MNP",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MNP",
-      "x-region": "Oceania",
-      "x-sub-region": "Micronesia",
       "const": 580
     },
     {
       "title": "United States Minor Outlying Islands",
-      "x-alpha-2": "UM",
-      "x-alpha-3": "UMI",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/UMI",
-      "x-region": "Oceania",
-      "x-sub-region": "Micronesia",
       "const": 581
     },
     {
       "title": "Micronesia, Federated States of",
-      "x-alpha-2": "FM",
-      "x-alpha-3": "FSM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/FSM",
-      "x-region": "Oceania",
-      "x-sub-region": "Micronesia",
       "const": 583
     },
     {
       "title": "Marshall Islands",
-      "x-alpha-2": "MH",
-      "x-alpha-3": "MHL",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MHL",
-      "x-region": "Oceania",
-      "x-sub-region": "Micronesia",
       "const": 584
     },
     {
       "title": "Palau",
-      "x-alpha-2": "PW",
-      "x-alpha-3": "PLW",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PLW",
-      "x-region": "Oceania",
-      "x-sub-region": "Micronesia",
       "const": 585
     },
     {
       "title": "Pakistan",
-      "x-alpha-2": "PK",
-      "x-alpha-3": "PAK",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PAK",
-      "x-region": "Asia",
-      "x-sub-region": "Southern Asia",
       "const": 586
     },
     {
       "title": "Panama",
-      "x-alpha-2": "PA",
-      "x-alpha-3": "PAN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PAN",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 591
     },
     {
       "title": "Papua New Guinea",
-      "x-alpha-2": "PG",
-      "x-alpha-3": "PNG",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PNG",
-      "x-region": "Oceania",
-      "x-sub-region": "Melanesia",
       "const": 598
     },
     {
       "title": "Paraguay",
-      "x-alpha-2": "PY",
-      "x-alpha-3": "PRY",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PRY",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 600
     },
     {
       "title": "Peru",
-      "x-alpha-2": "PE",
-      "x-alpha-3": "PER",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PER",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 604
     },
     {
       "title": "Philippines",
-      "x-alpha-2": "PH",
-      "x-alpha-3": "PHL",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PHL",
-      "x-region": "Asia",
-      "x-sub-region": "South-eastern Asia",
       "const": 608
     },
     {
       "title": "Pitcairn",
-      "x-alpha-2": "PN",
-      "x-alpha-3": "PCN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PCN",
-      "x-region": "Oceania",
-      "x-sub-region": "Polynesia",
       "const": 612
     },
     {
       "title": "Poland",
-      "x-alpha-2": "PL",
-      "x-alpha-3": "POL",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/POL",
-      "x-region": "Europe",
-      "x-sub-region": "Eastern Europe",
       "const": 616
     },
     {
       "title": "Portugal",
-      "x-alpha-2": "PT",
-      "x-alpha-3": "PRT",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PRT",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 620
     },
     {
       "title": "Guinea-Bissau",
-      "x-alpha-2": "GW",
-      "x-alpha-3": "GNB",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GNB",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 624
     },
     {
       "title": "Timor-Leste",
-      "x-alpha-2": "TL",
-      "x-alpha-3": "TLS",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TLS",
-      "x-region": "Asia",
-      "x-sub-region": "South-eastern Asia",
       "const": 626
     },
     {
       "title": "Puerto Rico",
-      "x-alpha-2": "PR",
-      "x-alpha-3": "PRI",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/PRI",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 630
     },
     {
       "title": "Qatar",
-      "x-alpha-2": "QA",
-      "x-alpha-3": "QAT",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/QAT",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 634
     },
     {
       "title": "Réunion",
-      "x-alpha-2": "RE",
-      "x-alpha-3": "REU",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/REU",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 638
     },
     {
       "title": "Romania",
-      "x-alpha-2": "RO",
-      "x-alpha-3": "ROU",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ROU",
-      "x-region": "Europe",
-      "x-sub-region": "Eastern Europe",
       "const": 642
     },
     {
       "title": "Russian Federation",
-      "x-alpha-2": "RU",
-      "x-alpha-3": "RUS",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/RUS",
-      "x-region": "Europe",
-      "x-sub-region": "Eastern Europe",
       "const": 643
     },
     {
       "title": "Rwanda",
-      "x-alpha-2": "RW",
-      "x-alpha-3": "RWA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/RWA",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 646
     },
     {
       "title": "Saint Barthélemy",
-      "x-alpha-2": "BL",
-      "x-alpha-3": "BLM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BLM",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 652
     },
     {
       "title": "Saint Helena, Ascension and Tristan da Cunha",
-      "x-alpha-2": "SH",
-      "x-alpha-3": "SHN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SHN",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 654
     },
     {
       "title": "Saint Kitts and Nevis",
-      "x-alpha-2": "KN",
-      "x-alpha-3": "KNA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/KNA",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 659
     },
     {
       "title": "Anguilla",
-      "x-alpha-2": "AI",
-      "x-alpha-3": "AIA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/AIA",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 660
     },
     {
       "title": "Saint Lucia",
-      "x-alpha-2": "LC",
-      "x-alpha-3": "LCA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/LCA",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 662
     },
     {
       "title": "Saint Martin (French part)",
-      "x-alpha-2": "MF",
-      "x-alpha-3": "MAF",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MAF",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 663
     },
     {
       "title": "Saint Pierre and Miquelon",
-      "x-alpha-2": "PM",
-      "x-alpha-3": "SPM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SPM",
-      "x-region": "Americas",
-      "x-sub-region": "Northern America",
       "const": 666
     },
     {
       "title": "Saint Vincent and the Grenadines",
-      "x-alpha-2": "VC",
-      "x-alpha-3": "VCT",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/VCT",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 670
     },
     {
       "title": "San Marino",
-      "x-alpha-2": "SM",
-      "x-alpha-3": "SMR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SMR",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 674
     },
     {
       "title": "Sao Tome and Principe",
-      "x-alpha-2": "ST",
-      "x-alpha-3": "STP",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/STP",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 678
     },
     {
       "title": "Saudi Arabia",
-      "x-alpha-2": "SA",
-      "x-alpha-3": "SAU",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SAU",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 682
     },
     {
       "title": "Senegal",
-      "x-alpha-2": "SN",
-      "x-alpha-3": "SEN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SEN",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 686
     },
     {
       "title": "Serbia",
-      "x-alpha-2": "RS",
-      "x-alpha-3": "SRB",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SRB",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 688
     },
     {
       "title": "Seychelles",
-      "x-alpha-2": "SC",
-      "x-alpha-3": "SYC",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SYC",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 690
     },
     {
       "title": "Sierra Leone",
-      "x-alpha-2": "SL",
-      "x-alpha-3": "SLE",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SLE",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 694
     },
     {
       "title": "Singapore",
-      "x-alpha-2": "SG",
-      "x-alpha-3": "SGP",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SGP",
-      "x-region": "Asia",
-      "x-sub-region": "South-eastern Asia",
       "const": 702
     },
     {
       "title": "Slovakia",
-      "x-alpha-2": "SK",
-      "x-alpha-3": "SVK",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SVK",
-      "x-region": "Europe",
-      "x-sub-region": "Eastern Europe",
       "const": 703
     },
     {
       "title": "Viet Nam",
-      "x-alpha-2": "VN",
-      "x-alpha-3": "VNM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/VNM",
-      "x-region": "Asia",
-      "x-sub-region": "South-eastern Asia",
       "const": 704
     },
     {
       "title": "Slovenia",
-      "x-alpha-2": "SI",
-      "x-alpha-3": "SVN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SVN",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 705
     },
     {
       "title": "Somalia",
-      "x-alpha-2": "SO",
-      "x-alpha-3": "SOM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SOM",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 706
     },
     {
       "title": "South Africa",
-      "x-alpha-2": "ZA",
-      "x-alpha-3": "ZAF",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ZAF",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 710
     },
     {
       "title": "Zimbabwe",
-      "x-alpha-2": "ZW",
-      "x-alpha-3": "ZWE",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ZWE",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 716
     },
     {
       "title": "Spain",
-      "x-alpha-2": "ES",
-      "x-alpha-3": "ESP",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ESP",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 724
     },
     {
       "title": "South Sudan",
-      "x-alpha-2": "SS",
-      "x-alpha-3": "SSD",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SSD",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 728
     },
     {
       "title": "Sudan",
-      "x-alpha-2": "SD",
-      "x-alpha-3": "SDN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SDN",
-      "x-region": "Africa",
-      "x-sub-region": "Northern Africa",
       "const": 729
     },
     {
       "title": "Western Sahara",
-      "x-alpha-2": "EH",
-      "x-alpha-3": "ESH",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ESH",
-      "x-region": "Africa",
-      "x-sub-region": "Northern Africa",
       "const": 732
     },
     {
       "title": "Suriname",
-      "x-alpha-2": "SR",
-      "x-alpha-3": "SUR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SUR",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 740
     },
     {
       "title": "Svalbard and Jan Mayen",
-      "x-alpha-2": "SJ",
-      "x-alpha-3": "SJM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SJM",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 744
     },
     {
       "title": "Eswatini",
-      "x-alpha-2": "SZ",
-      "x-alpha-3": "SWZ",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SWZ",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 748
     },
     {
       "title": "Sweden",
-      "x-alpha-2": "SE",
-      "x-alpha-3": "SWE",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SWE",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 752
     },
     {
       "title": "Switzerland",
-      "x-alpha-2": "CH",
-      "x-alpha-3": "CHE",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/CHE",
-      "x-region": "Europe",
-      "x-sub-region": "Western Europe",
       "const": 756
     },
     {
       "title": "Syrian Arab Republic",
-      "x-alpha-2": "SY",
-      "x-alpha-3": "SYR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/SYR",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 760
     },
     {
       "title": "Tajikistan",
-      "x-alpha-2": "TJ",
-      "x-alpha-3": "TJK",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TJK",
-      "x-region": "Asia",
-      "x-sub-region": "Central Asia",
       "const": 762
     },
     {
       "title": "Thailand",
-      "x-alpha-2": "TH",
-      "x-alpha-3": "THA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/THA",
-      "x-region": "Asia",
-      "x-sub-region": "South-eastern Asia",
       "const": 764
     },
     {
       "title": "Togo",
-      "x-alpha-2": "TG",
-      "x-alpha-3": "TGO",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TGO",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 768
     },
     {
       "title": "Tokelau",
-      "x-alpha-2": "TK",
-      "x-alpha-3": "TKL",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TKL",
-      "x-region": "Oceania",
-      "x-sub-region": "Polynesia",
       "const": 772
     },
     {
       "title": "Tonga",
-      "x-alpha-2": "TO",
-      "x-alpha-3": "TON",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TON",
-      "x-region": "Oceania",
-      "x-sub-region": "Polynesia",
       "const": 776
     },
     {
       "title": "Trinidad and Tobago",
-      "x-alpha-2": "TT",
-      "x-alpha-3": "TTO",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TTO",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 780
     },
     {
       "title": "United Arab Emirates",
-      "x-alpha-2": "AE",
-      "x-alpha-3": "ARE",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ARE",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 784
     },
     {
       "title": "Tunisia",
-      "x-alpha-2": "TN",
-      "x-alpha-3": "TUN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TUN",
-      "x-region": "Africa",
-      "x-sub-region": "Northern Africa",
       "const": 788
     },
     {
       "title": "Türkiye",
-      "x-alpha-2": "TR",
-      "x-alpha-3": "TUR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TUR",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 792
     },
     {
       "title": "Turkmenistan",
-      "x-alpha-2": "TM",
-      "x-alpha-3": "TKM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TKM",
-      "x-region": "Asia",
-      "x-sub-region": "Central Asia",
       "const": 795
     },
     {
       "title": "Turks and Caicos Islands",
-      "x-alpha-2": "TC",
-      "x-alpha-3": "TCA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TCA",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 796
     },
     {
       "title": "Tuvalu",
-      "x-alpha-2": "TV",
-      "x-alpha-3": "TUV",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TUV",
-      "x-region": "Oceania",
-      "x-sub-region": "Polynesia",
       "const": 798
     },
     {
       "title": "Uganda",
-      "x-alpha-2": "UG",
-      "x-alpha-3": "UGA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/UGA",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 800
     },
     {
       "title": "Ukraine",
-      "x-alpha-2": "UA",
-      "x-alpha-3": "UKR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/UKR",
-      "x-region": "Europe",
-      "x-sub-region": "Eastern Europe",
       "const": 804
     },
     {
       "title": "North Macedonia",
-      "x-alpha-2": "MK",
-      "x-alpha-3": "MKD",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/MKD",
-      "x-region": "Europe",
-      "x-sub-region": "Southern Europe",
       "const": 807
     },
     {
       "title": "Egypt",
-      "x-alpha-2": "EG",
-      "x-alpha-3": "EGY",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/EGY",
-      "x-region": "Africa",
-      "x-sub-region": "Northern Africa",
       "const": 818
     },
     {
       "title": "United Kingdom of Great Britain and Northern Ireland",
-      "x-alpha-2": "GB",
-      "x-alpha-3": "GBR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GBR",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 826
     },
     {
       "title": "Guernsey",
-      "x-alpha-2": "GG",
-      "x-alpha-3": "GGY",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/GGY",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 831
     },
     {
       "title": "Jersey",
-      "x-alpha-2": "JE",
-      "x-alpha-3": "JEY",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/JEY",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 832
     },
     {
       "title": "Isle of Man",
-      "x-alpha-2": "IM",
-      "x-alpha-3": "IMN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/IMN",
-      "x-region": "Europe",
-      "x-sub-region": "Northern Europe",
       "const": 833
     },
     {
       "title": "Tanzania, United Republic of",
-      "x-alpha-2": "TZ",
-      "x-alpha-3": "TZA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/TZA",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 834
     },
     {
       "title": "United States of America",
-      "x-alpha-2": "US",
-      "x-alpha-3": "USA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/USA",
-      "x-region": "Americas",
-      "x-sub-region": "Northern America",
       "const": 840
     },
     {
       "title": "Virgin Islands (U.S.)",
-      "x-alpha-2": "VI",
-      "x-alpha-3": "VIR",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/VIR",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 850
     },
     {
       "title": "Burkina Faso",
-      "x-alpha-2": "BF",
-      "x-alpha-3": "BFA",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/BFA",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 854
     },
     {
       "title": "Uruguay",
-      "x-alpha-2": "UY",
-      "x-alpha-3": "URY",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/URY",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 858
     },
     {
       "title": "Uzbekistan",
-      "x-alpha-2": "UZ",
-      "x-alpha-3": "UZB",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/UZB",
-      "x-region": "Asia",
-      "x-sub-region": "Central Asia",
       "const": 860
     },
     {
       "title": "Venezuela, Bolivarian Republic of",
-      "x-alpha-2": "VE",
-      "x-alpha-3": "VEN",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/VEN",
-      "x-region": "Americas",
-      "x-sub-region": "Latin America and the Caribbean",
       "const": 862
     },
     {
       "title": "Wallis and Futuna",
-      "x-alpha-2": "WF",
-      "x-alpha-3": "WLF",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/WLF",
-      "x-region": "Oceania",
-      "x-sub-region": "Polynesia",
       "const": 876
     },
     {
       "title": "Samoa",
-      "x-alpha-2": "WS",
-      "x-alpha-3": "WSM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/WSM",
-      "x-region": "Oceania",
-      "x-sub-region": "Polynesia",
       "const": 882
     },
     {
       "title": "Yemen",
-      "x-alpha-2": "YE",
-      "x-alpha-3": "YEM",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/YEM",
-      "x-region": "Asia",
-      "x-sub-region": "Western Asia",
       "const": 887
     },
     {
       "title": "Zambia",
-      "x-alpha-2": "ZM",
-      "x-alpha-3": "ZMB",
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/country/ZMB",
-      "x-region": "Africa",
-      "x-sub-region": "Sub-Saharan Africa",
       "const": 894
     }
   ]

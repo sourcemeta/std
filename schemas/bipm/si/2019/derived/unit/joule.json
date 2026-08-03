@@ -12,12 +12,6 @@
   "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
-  "x-symbol": "J",
-  "x-units": [
-    "../../base/unit/kilogram.json",
-    "../../base/unit/metre.json",
-    "../../base/unit/second.json"
-  ],
   "type": "number",
   "minimum": 0
 }

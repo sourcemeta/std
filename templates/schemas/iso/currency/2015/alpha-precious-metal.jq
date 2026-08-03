@@ -6,7 +6,7 @@
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/{this}",
   "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
-  "anyOf": (
+  "enum": (
     .ISO_4217.CcyTbl.CcyNtry
     | map(select(
         .Ccy != null and
@@ -15,9 +15,6 @@
       ))
     | group_by(.Ccy)
     | sort_by(.[0].Ccy)
-    | map({
-        "title": .[0].CcyNm,
-        "const": .[0].Ccy
-      })
+    | map(.[0].Ccy)
   )
 }

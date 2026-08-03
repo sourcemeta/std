@@ -5,17 +5,7 @@
   "$comment": "Set 5 codes language families and groups, not individual languages. It is independent from Sets 1-3",
   "examples": (.set_5 | sort_by(.code) | .[0:4] | map(.code)),
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-5/{this}",
   "x-links": ["https://www.iso.org/standard/74575.html"],
-  "anyOf": (
-    .set_5
-    | sort_by(.code)
-    | map({
-        "title": .name
-      } +
-      (if .name_french then {"x-name-french": .name_french} else {} end) +
-      {
-        "const": .code
-      } +
-      {"x-jsonld-self": ("http://id.loc.gov/vocabulary/iso639-5/" + .code)})
-  )
+  "enum": (.set_5 | sort_by(.code) | map(.code))
 }

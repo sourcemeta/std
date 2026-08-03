@@ -12,7 +12,6 @@
     {
       "title": "Volume/Duration",
       "description": "Flow rate, as Volume per Duration",
-      "x-status": "REC",
       "const": "Volume_per_Duration"
     }
   ]

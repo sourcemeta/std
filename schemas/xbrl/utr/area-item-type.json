@@ -12,53 +12,39 @@
     {
       "description": "Acre",
       "x-jsonld-self": "http://qudt.org/vocab/unit/AC",
-      "x-status": "REC",
-      "x-symbol": "a",
       "const": "acre"
     },
     {
       "description": "Square Foot",
       "x-jsonld-self": "http://qudt.org/vocab/unit/FT2",
-      "x-status": "REC",
-      "x-symbol": "ft²",
       "const": "sqft"
     },
     {
       "title": "Square Mile",
       "description": "Square Miles",
       "x-jsonld-self": "http://qudt.org/vocab/unit/MI2",
-      "x-status": "REC",
-      "x-symbol": "mi²",
       "const": "sqmi"
     },
     {
       "description": "Square Yard",
       "x-jsonld-self": "http://qudt.org/vocab/unit/YD2",
-      "x-status": "REC",
-      "x-symbol": "yd²",
       "const": "sqyd"
     },
     {
       "description": "Hectare",
       "x-jsonld-self": "https://si-digital-framework.org/SI/units/hectare",
-      "x-status": "REC",
-      "x-symbol": "ha",
       "const": "ha"
     },
     {
       "title": "Square km",
       "description": "Square Kilometer",
       "x-jsonld-self": "http://qudt.org/vocab/unit/KiloM2",
-      "x-status": "REC",
-      "x-symbol": "km²",
       "const": "sqkm"
     },
     {
       "title": "Square metre",
       "description": "Square Metre",
       "x-jsonld-self": "http://qudt.org/vocab/unit/M2",
-      "x-status": "REC",
-      "x-symbol": "m²",
       "const": "sqm"
     }
   ]

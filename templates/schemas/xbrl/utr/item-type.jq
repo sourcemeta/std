@@ -36,8 +36,6 @@
           "description": $desc
         } +
         (if .["{http://www.xbrl.org/2009/utr}unitName"] != $desc then {"title": .["{http://www.xbrl.org/2009/utr}unitName"]} else {} end) +
-        (if .["{http://www.xbrl.org/2009/utr}symbol"] then {"x-symbol": .["{http://www.xbrl.org/2009/utr}symbol"]} else {} end) +
-        (if .["{http://www.xbrl.org/2009/utr}status"] then {"x-status": .["{http://www.xbrl.org/2009/utr}status"]} else {} end) +
         (if (.["{http://www.xbrl.org/2009/utr}nsUnit"] | IN("http://www.xbrl.org/2009/utr", "http://www.xbrl.org/2003/instance")) and $unit_iris[0][.["{http://www.xbrl.org/2009/utr}unitId"]] != null
          then {"x-jsonld-self": $unit_iris[0][.["{http://www.xbrl.org/2009/utr}unitId"]]}
          elif .["{http://www.xbrl.org/2009/utr}nsUnit"] == "http://www.xbrl.org/2003/iso4217"

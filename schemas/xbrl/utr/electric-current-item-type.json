@@ -12,8 +12,6 @@
     {
       "description": "Ampere",
       "x-jsonld-self": "https://si-digital-framework.org/SI/units/ampere",
-      "x-status": "REC",
-      "x-symbol": "A",
       "const": "A"
     }
   ]
