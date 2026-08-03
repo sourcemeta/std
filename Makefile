@@ -18,6 +18,7 @@ common: $(GENERATED) node_modules
 	$(SHELLCHECK) scripts/*.sh
 	./scripts/quality-schemas-tests-mirror.sh
 	JQ="$(JQ)" ./scripts/quality-templates-xbrl-utr-mirror.sh
+	JQ="$(JQ)" ./scripts/quality-data-xbrl-utr-iris.sh
 
 .PHONY: lint
 lint: common node_modules

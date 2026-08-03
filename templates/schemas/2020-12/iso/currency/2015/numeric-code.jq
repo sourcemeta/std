@@ -4,7 +4,7 @@
   "description": ("A three-digit numeric code including currencies, funds, and precious metals (" + .ISO_4217."@attributes".Pblshd + ")"),
   "examples": (
     [
-      (.ISO_4217.CcyTbl.CcyNtry | map(select(.Ccy != null and .CcyNbr != null and (.CcyNm | type == "string") and (.Ccy | IN("XAU", "XPD", "XPT", "XAG", "XTS", "XXX") | not))) | group_by(.CcyNbr) | sort_by(.[0].CcyNbr | tonumber) | .[0:4] | map(.[0].CcyNbr | tonumber)),
+      (.ISO_4217.CcyTbl.CcyNtry | map(select(.Ccy != null and .CcyNbr != null and (.CcyNm | type == "string") and (.Ccy | IN(($special[0]["precious-metals"] + [$special[0].test, $special[0].unknown])[]) | not))) | group_by(.CcyNbr) | sort_by(.[0].CcyNbr | tonumber) | .[0:4] | map(.[0].CcyNbr | tonumber)),
       (.ISO_4217.CcyTbl.CcyNtry | map(select(.Ccy != null and .CcyNbr != null and (.CcyNm | type == "object") and (.CcyNm."@attributes".IsFund == "true"))) | group_by(.CcyNbr) | sort_by(.[0].CcyNbr | tonumber) | .[0:1] | map(.[0].CcyNbr | tonumber)),
       [959]
     ] | flatten

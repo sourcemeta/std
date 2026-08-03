@@ -8,7 +8,7 @@
     | map(select(
         .Ccy != null and
         (.CcyNm | type == "string") and
-        (.Ccy | IN("XAU", "XPD", "XPT", "XAG", "XTS", "XXX") | not)
+        (.Ccy | IN(($special[0]["precious-metals"] + [$special[0].test, $special[0].unknown])[]) | not)
       ))
     | group_by(.Ccy)
     | sort_by(.[0].Ccy)
@@ -22,7 +22,7 @@
     | map(select(
         .Ccy != null and
         (.CcyNm | type == "string") and
-        (.Ccy | IN("XAU", "XPD", "XPT", "XAG", "XTS", "XXX") | not)
+        (.Ccy | IN(($special[0]["precious-metals"] + [$special[0].test, $special[0].unknown])[]) | not)
       ))
     | group_by(.Ccy)
     | sort_by(.[0].Ccy)

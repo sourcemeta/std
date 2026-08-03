@@ -10,6 +10,14 @@ schemas/$1.json: templates/schemas/$1.jq $2.json | node_modules
 GENERATED += schemas/$1.json
 endef
 
+define MAKE_SCHEMA_CURRENCY
+schemas/$1.json: templates/schemas/$1.jq $2.json templates/data/iso/currency/special-codes.json | node_modules
+	$(MKDIRP) $$(dir $$@)
+	$(JQ) --from-file $$< --slurpfile special $$(word 3,$$^) $$(word 2,$$^) > $$@
+	$(NODE) $(JSONSCHEMA) fmt $$@
+GENERATED += schemas/$1.json
+endef
+
 define MAKE_SCHEMA_UTR
 schemas/2020-12/xbrl/utr/$1.json: templates/schemas/2020-12/xbrl/utr/item-type.jq build/xbrl/utr/utr.json templates/data/xbrl/utr-unit-iris.json | node_modules
 	$(MKDIRP) $$(dir $$@)
@@ -27,19 +35,19 @@ $(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/historical/alpha-code,build/
 $(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/historical/alpha-currency,build/iso/currency/list-three))
 $(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/historical/numeric-code,build/iso/currency/list-three))
 $(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/historical/numeric-currency,build/iso/currency/list-three))
-$(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/alpha-code,build/iso/currency/list-one))
-$(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/alpha-currency,build/iso/currency/list-one))
+$(eval $(call MAKE_SCHEMA_CURRENCY,2020-12/iso/currency/2015/alpha-code,build/iso/currency/list-one))
+$(eval $(call MAKE_SCHEMA_CURRENCY,2020-12/iso/currency/2015/alpha-currency,build/iso/currency/list-one))
 $(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/alpha-fund,build/iso/currency/list-one))
-$(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/alpha-precious-metal,build/iso/currency/list-one))
-$(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/alpha-test,build/iso/currency/list-one))
-$(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/alpha-unknown,build/iso/currency/list-one))
+$(eval $(call MAKE_SCHEMA_CURRENCY,2020-12/iso/currency/2015/alpha-precious-metal,build/iso/currency/list-one))
+$(eval $(call MAKE_SCHEMA_CURRENCY,2020-12/iso/currency/2015/alpha-test,build/iso/currency/list-one))
+$(eval $(call MAKE_SCHEMA_CURRENCY,2020-12/iso/currency/2015/alpha-unknown,build/iso/currency/list-one))
 $(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/numeric-code-additional,build/iso/currency/list-one))
-$(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/numeric-code,build/iso/currency/list-one))
-$(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/numeric-currency,build/iso/currency/list-one))
+$(eval $(call MAKE_SCHEMA_CURRENCY,2020-12/iso/currency/2015/numeric-code,build/iso/currency/list-one))
+$(eval $(call MAKE_SCHEMA_CURRENCY,2020-12/iso/currency/2015/numeric-currency,build/iso/currency/list-one))
 $(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/numeric-fund,build/iso/currency/list-one))
-$(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/numeric-precious-metal,build/iso/currency/list-one))
-$(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/numeric-test,build/iso/currency/list-one))
-$(eval $(call MAKE_SCHEMA,2020-12/iso/currency/2015/numeric-unknown,build/iso/currency/list-one))
+$(eval $(call MAKE_SCHEMA_CURRENCY,2020-12/iso/currency/2015/numeric-precious-metal,build/iso/currency/list-one))
+$(eval $(call MAKE_SCHEMA_CURRENCY,2020-12/iso/currency/2015/numeric-test,build/iso/currency/list-one))
+$(eval $(call MAKE_SCHEMA_CURRENCY,2020-12/iso/currency/2015/numeric-unknown,build/iso/currency/list-one))
 
 build/xbrl/utr/%.json: scripts/xml2json.py vendor/data/xbrl/utr/%.xml
 	$(PYTHON) $< $(word 2,$^) $@
