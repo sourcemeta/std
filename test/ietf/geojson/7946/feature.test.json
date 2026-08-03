@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/ietf/geojson/feature.json",
+  "target": "../../../../schemas/2020-12/ietf/geojson/7946/feature.json",
   "tests": [
     {
       "description": "Invalid type - string",

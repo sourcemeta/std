@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/ietf/geojson/polygon.json",
+  "target": "../../../../schemas/2020-12/ietf/geojson/7946/multi-line-string.json",
   "tests": [
     {
       "description": "Invalid type - string",
@@ -34,7 +34,7 @@
     {
       "description": "Missing coordinates property",
       "data": {
-        "type": "Polygon"
+        "type": "MultiLineString"
       },
       "valid": false
     },
@@ -44,9 +44,7 @@
         "coordinates": [
           [
             [ 0, 0 ],
-            [ 1, 0 ],
-            [ 1, 1 ],
-            [ 0, 0 ]
+            [ 1, 1 ]
           ]
         ]
       },
@@ -55,120 +53,109 @@
     {
       "description": "Wrong type value",
       "data": {
-        "type": "Point",
+        "type": "LineString",
         "coordinates": [
           [
             [ 0, 0 ],
-            [ 1, 0 ],
-            [ 1, 1 ],
-            [ 0, 0 ]
+            [ 1, 1 ]
           ]
         ]
       },
       "valid": false
     },
     {
-      "description": "Valid Polygon with exterior ring",
+      "description": "Valid MultiLineString with empty coordinates",
       "data": {
-        "type": "Polygon",
+        "type": "MultiLineString",
+        "coordinates": []
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid MultiLineString with one line",
+      "data": {
+        "type": "MultiLineString",
         "coordinates": [
           [
             [ 0, 0 ],
-            [ 1, 0 ],
-            [ 1, 1 ],
-            [ 0, 0 ]
+            [ 1, 1 ]
           ]
         ]
       },
       "valid": true
     },
     {
-      "description": "RFC 7946 Appendix A.3 - Polygon without holes",
+      "description": "Valid MultiLineString with multiple lines",
       "data": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [ 100.0, 0.0 ],
-            [ 101.0, 0.0 ],
-            [ 101.0, 1.0 ],
-            [ 100.0, 1.0 ],
-            [ 100.0, 0.0 ]
-          ]
-        ]
-      },
-      "valid": true
-    },
-    {
-      "description": "RFC 7946 Appendix A.3 - Polygon with holes",
-      "data": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [ 100.0, 0.0 ],
-            [ 101.0, 0.0 ],
-            [ 101.0, 1.0 ],
-            [ 100.0, 1.0 ],
-            [ 100.0, 0.0 ]
-          ],
-          [
-            [ 100.8, 0.8 ],
-            [ 100.8, 0.2 ],
-            [ 100.2, 0.2 ],
-            [ 100.2, 0.8 ],
-            [ 100.8, 0.8 ]
-          ]
-        ]
-      },
-      "valid": true
-    },
-    {
-      "description": "Valid Polygon with exterior and interior ring",
-      "data": {
-        "type": "Polygon",
+        "type": "MultiLineString",
         "coordinates": [
           [
             [ 0, 0 ],
-            [ 10, 0 ],
-            [ 10, 10 ],
-            [ 0, 10 ],
-            [ 0, 0 ]
+            [ 1, 1 ]
           ],
           [
             [ 2, 2 ],
-            [ 8, 2 ],
-            [ 8, 8 ],
-            [ 2, 8 ],
-            [ 2, 2 ]
+            [ 3, 3 ]
           ]
         ]
       },
       "valid": true
     },
     {
-      "description": "Valid Polygon with 3D coordinates",
+      "description": "RFC 7946 Appendix A.5 - MultiLineString",
       "data": {
-        "type": "Polygon",
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [ 100.0, 0.0 ],
+            [ 101.0, 1.0 ]
+          ],
+          [
+            [ 102.0, 2.0 ],
+            [ 103.0, 3.0 ]
+          ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "RFC 7946 Section 3.1.9 - Antimeridian cutting",
+      "data": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [ 170.0, 45.0 ],
+            [ 180.0, 45.0 ]
+          ],
+          [
+            [ -180.0, 45.0 ],
+            [ -170.0, 45.0 ]
+          ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid MultiLineString with 3D coordinates",
+      "data": {
+        "type": "MultiLineString",
         "coordinates": [
           [
             [ 0, 0, 0 ],
-            [ 1, 0, 0 ],
-            [ 1, 1, 0 ],
-            [ 0, 0, 0 ]
+            [ 1, 1, 10 ]
           ]
         ]
       },
       "valid": true
     },
     {
-      "description": "Valid Polygon with bbox",
+      "description": "Valid MultiLineString with bbox",
       "data": {
-        "type": "Polygon",
+        "type": "MultiLineString",
         "coordinates": [
           [
             [ 0, 0 ],
-            [ 1, 0 ],
-            [ 1, 1 ],
-            [ 0, 0 ]
+            [ 1, 1 ]
           ]
         ],
         "bbox": [ 0, 0, 1, 1 ]
@@ -176,21 +163,11 @@
       "valid": true
     },
     {
-      "description": "Valid Polygon with empty coordinates",
+      "description": "Invalid - LineString with only one position",
       "data": {
-        "type": "Polygon",
-        "coordinates": []
-      },
-      "valid": true
-    },
-    {
-      "description": "Invalid - linear ring with too few positions",
-      "data": {
-        "type": "Polygon",
+        "type": "MultiLineString",
         "coordinates": [
           [
-            [ 0, 0 ],
-            [ 1, 0 ],
             [ 0, 0 ]
           ]
         ]
@@ -200,7 +177,7 @@
     {
       "description": "Invalid - coordinates is not an array",
       "data": {
-        "type": "Polygon",
+        "type": "MultiLineString",
         "coordinates": {}
       },
       "valid": false
@@ -208,13 +185,11 @@
     {
       "description": "Invalid - forbidden member geometry",
       "data": {
-        "type": "Polygon",
+        "type": "MultiLineString",
         "coordinates": [
           [
             [ 0, 0 ],
-            [ 1, 0 ],
-            [ 1, 1 ],
-            [ 0, 0 ]
+            [ 1, 1 ]
           ]
         ],
         "geometry": null
@@ -224,13 +199,11 @@
     {
       "description": "Invalid - forbidden member properties",
       "data": {
-        "type": "Polygon",
+        "type": "MultiLineString",
         "coordinates": [
           [
             [ 0, 0 ],
-            [ 1, 0 ],
-            [ 1, 1 ],
-            [ 0, 0 ]
+            [ 1, 1 ]
           ]
         ],
         "properties": null
@@ -240,13 +213,11 @@
     {
       "description": "Invalid - forbidden member features",
       "data": {
-        "type": "Polygon",
+        "type": "MultiLineString",
         "coordinates": [
           [
             [ 0, 0 ],
-            [ 1, 0 ],
-            [ 1, 1 ],
-            [ 0, 0 ]
+            [ 1, 1 ]
           ]
         ],
         "features": []

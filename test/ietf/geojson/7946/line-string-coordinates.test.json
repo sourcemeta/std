@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/ietf/geojson/line-string-coordinates.json",
+  "target": "../../../../schemas/2020-12/ietf/geojson/7946/line-string-coordinates.json",
   "tests": [
     {
       "description": "Invalid type - string",

@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/ietf/geojson/schema.json",
+  "target": "../../../../schemas/2020-12/ietf/geojson/7946/geometry.json",
   "tests": [
     {
       "description": "Invalid type - string",
@@ -32,7 +32,7 @@
       "valid": false
     },
     {
-      "description": "Valid Point",
+      "description": "Valid Point geometry",
       "data": {
         "type": "Point",
         "coordinates": [ 0, 0 ]
@@ -40,7 +40,7 @@
       "valid": true
     },
     {
-      "description": "Valid LineString",
+      "description": "Valid LineString geometry",
       "data": {
         "type": "LineString",
         "coordinates": [
@@ -51,7 +51,7 @@
       "valid": true
     },
     {
-      "description": "Valid Polygon",
+      "description": "Valid Polygon geometry",
       "data": {
         "type": "Polygon",
         "coordinates": [
@@ -66,7 +66,7 @@
       "valid": true
     },
     {
-      "description": "Valid MultiPoint",
+      "description": "Valid MultiPoint geometry",
       "data": {
         "type": "MultiPoint",
         "coordinates": [
@@ -77,7 +77,7 @@
       "valid": true
     },
     {
-      "description": "Valid MultiLineString",
+      "description": "Valid MultiLineString geometry",
       "data": {
         "type": "MultiLineString",
         "coordinates": [
@@ -90,7 +90,7 @@
       "valid": true
     },
     {
-      "description": "Valid MultiPolygon",
+      "description": "Valid MultiPolygon geometry",
       "data": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -107,65 +107,7 @@
       "valid": true
     },
     {
-      "description": "Valid GeometryCollection",
-      "data": {
-        "type": "GeometryCollection",
-        "geometries": [
-          {
-            "type": "Point",
-            "coordinates": [ 0, 0 ]
-          }
-        ]
-      },
-      "valid": true
-    },
-    {
-      "description": "Valid Feature with null geometry",
-      "data": {
-        "type": "Feature",
-        "geometry": null,
-        "properties": null
-      },
-      "valid": true
-    },
-    {
-      "description": "Valid Feature with Point geometry",
-      "data": {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [ 0, 0 ]
-        },
-        "properties": {
-          "name": "Test"
-        }
-      },
-      "valid": true
-    },
-    {
-      "description": "Valid FeatureCollection",
-      "data": {
-        "type": "FeatureCollection",
-        "features": [
-          {
-            "type": "Feature",
-            "geometry": null,
-            "properties": null
-          }
-        ]
-      },
-      "valid": true
-    },
-    {
-      "description": "Valid empty FeatureCollection",
-      "data": {
-        "type": "FeatureCollection",
-        "features": []
-      },
-      "valid": true
-    },
-    {
-      "description": "Invalid - unknown type",
+      "description": "Invalid - unknown geometry type",
       "data": {
         "type": "Unknown",
         "coordinates": [ 0, 0 ]
@@ -173,9 +115,19 @@
       "valid": false
     },
     {
-      "description": "Invalid - missing type property",
+      "description": "Invalid - Feature is not a geometry",
       "data": {
-        "coordinates": [ 0, 0 ]
+        "type": "Feature",
+        "properties": null,
+        "geometry": null
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - GeometryCollection is not included",
+      "data": {
+        "type": "GeometryCollection",
+        "geometries": []
       },
       "valid": false
     }
