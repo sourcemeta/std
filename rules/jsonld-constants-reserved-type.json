@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "std/jsonld_constants_reserved_type",
+  "description": "A langString literal requires a language tag that only the language member can provide, and a JSON literal cannot be a constant, so neither IRI is a usable value object type",
+  "properties": {
+    "x-jsonld-constants": {
+      "additionalProperties": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/term"
+          },
+          {
+            "if": {
+              "type": "array"
+            },
+            "then": {
+              "items": {
+                "$ref": "#/$defs/term"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "term": {
+      "not": {
+        "type": "object",
+        "required": [ "@type" ],
+        "properties": {
+          "@type": {
+            "enum": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

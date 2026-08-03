@@ -83,6 +83,22 @@
             "type": "null"
           }
         }
+      },
+      {
+        "required": [ "x-jsonld-value" ],
+        "properties": {
+          "x-jsonld-value": {
+            "type": "null"
+          }
+        }
+      },
+      {
+        "required": [ "x-jsonld-constants" ],
+        "properties": {
+          "x-jsonld-constants": {
+            "type": "null"
+          }
+        }
       }
     ]
   },

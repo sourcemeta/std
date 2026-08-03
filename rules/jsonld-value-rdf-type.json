@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "std/jsonld_value_rdf_type",
+  "description": "The rdf:type predicate as a value predicate would mint type edges to literals, and node types are declared with x-jsonld-type",
+  "properties": {
+    "x-jsonld-value": {
+      "not": {
+        "const": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+      }
+    }
+  }
+}
