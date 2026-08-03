@@ -3,7 +3,7 @@ MKDIRP ?= mkdir -p
 JQ ?= jq
 
 define MAKE_SCHEMA
-schemas/$1.json: templates/schemas/$1.jq $2.json node_modules
+schemas/$1.json: templates/schemas/$1.jq $2.json | node_modules
 	$(MKDIRP) $$(dir $$@)
 	$(JQ) --from-file $$< $$(word 2,$$^) > $$@
 	$(NODE) $(JSONSCHEMA) fmt $$@
@@ -11,7 +11,7 @@ GENERATED += schemas/$1.json
 endef
 
 define MAKE_SCHEMA_UTR
-schemas/$1.json: templates/schemas/$1.jq $2.json templates/data/xbrl/utr-unit-iris.json node_modules
+schemas/$1.json: templates/schemas/$1.jq $2.json templates/data/xbrl/utr-unit-iris.json | node_modules
 	$(MKDIRP) $$(dir $$@)
 	$(JQ) --from-file $$< --slurpfile unit_iris $$(word 3,$$^) $$(word 2,$$^) > $$@
 	$(NODE) $(JSONSCHEMA) fmt $$@
