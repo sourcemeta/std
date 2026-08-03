@@ -3,6 +3,13 @@
   "title": "Joule",
   "description": "The SI unit of energy, work, and amount of heat. It is equal to N m, which is equal to kg m^2 s^-2",
   "examples": [ 0, 1, 100, 1000, 4184, 1000000.0 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/J"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-symbol": "J",

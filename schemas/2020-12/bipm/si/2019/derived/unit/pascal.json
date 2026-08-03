@@ -3,6 +3,13 @@
   "title": "Pascal",
   "description": "The SI unit of pressure and stress. It is equal to N/m^2, which is equal to kg m^-1 s^-2",
   "examples": [ 0, 101325, 1000, 100000, 1000000.0 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/PA"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-symbol": "Pa",

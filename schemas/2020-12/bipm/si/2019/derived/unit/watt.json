@@ -3,6 +3,13 @@
   "title": "Watt",
   "description": "The SI unit of power and radiant flux. It is equal to J/s, which is equal to kg m^2 s^-3",
   "examples": [ 0, 1, 100, 1000, 1500, 1000000.0 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/W"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-symbol": "W",

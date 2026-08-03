@@ -3,6 +3,13 @@
   "title": "Minute",
   "description": "A non-SI unit of time accepted for use with the SI. One minute is equal to 60 seconds",
   "examples": [ 0, 1, 5, 30, 60, 90, 1.5 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/MIN"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-si-equivalent": "60 s",

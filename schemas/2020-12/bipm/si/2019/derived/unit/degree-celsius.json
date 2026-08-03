@@ -3,6 +3,13 @@
   "title": "Degree Celsius",
   "description": "The SI unit of Celsius temperature. It is equal in magnitude to the kelvin. The quantity Celsius temperature t is related to thermodynamic temperature T by the equation t/°C = T/K - 273.15",
   "examples": [ -273.15, 0, 20, 37, 100, -40 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/DEG_C"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-symbol": "°C",

@@ -3,6 +3,13 @@
   "title": "Gray",
   "description": "The SI unit of absorbed dose and kerma. It is equal to J/kg, which is equal to m^2 s^-2",
   "examples": [ 0, 0.001, 0.01, 1, 10, 100 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/GRAY"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-symbol": "Gy",

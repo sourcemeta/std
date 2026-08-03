@@ -3,6 +3,13 @@
   "title": "Tesla",
   "description": "The SI unit of magnetic flux density. It is equal to Wb/m^2, which is equal to kg s^-2 A^-1",
   "examples": [ 0, 5e-5, 0.001, 1, 10, -0.5 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/T"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-symbol": "T",

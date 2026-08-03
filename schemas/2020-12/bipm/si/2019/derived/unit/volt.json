@@ -3,6 +3,13 @@
   "title": "Volt",
   "description": "The SI unit of electric potential difference. It is equal to W/A, which is equal to kg m^2 s^-3 A^-1",
   "examples": [ 0, 1.5, 9, 12, 120, 240, -12 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/V"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-symbol": "V",
