@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/ietf/uri/uri-relative.json",
+  "target": "../../../../schemas/2020-12/ietf/uri/3986/uri-relative.json",
   "tests": [
     {
       "description": "Invalid type - number",

@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/ietf/http/status-successful.json",
+  "target": "../../../../schemas/2020-12/ietf/http/9110/status-successful.json",
   "tests": [
     {
       "description": "Invalid type - string",

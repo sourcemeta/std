@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/ietf/uri/iri-reference.json",
+  "target": "../../../../schemas/2020-12/ietf/iri/3987/iri-reference.json",
   "tests": [
     {
       "description": "Plain ASCII absolute URI",

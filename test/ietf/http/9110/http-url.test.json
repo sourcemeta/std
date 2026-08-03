@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/ietf/http/https-url.json",
+  "target": "../../../../schemas/2020-12/ietf/http/9110/http-url.json",
   "tests": [
     {
       "description": "Invalid type - number",
@@ -27,83 +27,83 @@
       "valid": false
     },
     {
-      "description": "Valid - simple HTTPS URL",
-      "data": "https://example.com",
-      "valid": true
-    },
-    {
-      "description": "Valid - HTTPS URL with path",
-      "data": "https://example.com/path/to/resource",
-      "valid": true
-    },
-    {
-      "description": "Valid - HTTPS URL with query",
-      "data": "https://example.com/path?query=value",
-      "valid": true
-    },
-    {
-      "description": "Valid - HTTPS URL with fragment",
-      "data": "https://example.com/path#section",
-      "valid": true
-    },
-    {
-      "description": "Valid - HTTPS URL with port",
-      "data": "https://example.com:8443/api",
-      "valid": true
-    },
-    {
-      "description": "Valid - HTTPS URL with userinfo",
-      "data": "https://user:pass@example.com/resource",
-      "valid": true
-    },
-    {
-      "description": "Valid - HTTPS URL with IPv4",
-      "data": "https://192.168.1.1/path",
-      "valid": true
-    },
-    {
-      "description": "Valid - HTTPS URL with IPv6",
-      "data": "https://[2001:db8::8a2e:370:7334]/path",
-      "valid": true
-    },
-    {
-      "description": "Valid - HTTPS scheme uppercase",
-      "data": "HTTPS://example.com",
-      "valid": true
-    },
-    {
-      "description": "Valid - HTTPS scheme mixed case Https",
-      "data": "Https://example.com",
-      "valid": true
-    },
-    {
-      "description": "Valid - HTTPS scheme mixed case HtTpS",
-      "data": "HtTpS://example.com",
-      "valid": true
-    },
-    {
-      "description": "Valid - HTTPS scheme mixed case hTTPS",
-      "data": "hTTPS://example.com",
-      "valid": true
-    },
-    {
-      "description": "Valid - HTTPS URL with all components",
-      "data": "https://user:pass@example.com:8443/path/to/resource?query=value&foo=bar#section",
-      "valid": true
-    },
-    {
-      "description": "Valid - HTTPS URL with empty path",
-      "data": "https://example.com",
-      "valid": true
-    },
-    {
-      "description": "Valid - HTTPS URL with port 443",
-      "data": "https://example.com:443/",
-      "valid": true
-    },
-    {
-      "description": "Invalid - HTTP URL",
+      "description": "Valid - simple HTTP URL",
       "data": "http://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP URL with path",
+      "data": "http://example.com/path/to/resource",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP URL with query",
+      "data": "http://example.com/path?query=value",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP URL with fragment",
+      "data": "http://example.com/path#section",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP URL with port",
+      "data": "http://example.com:8080/api",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP URL with userinfo",
+      "data": "http://user:pass@example.com/resource",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP URL with IPv4",
+      "data": "http://192.168.1.1/path",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP URL with IPv6",
+      "data": "http://[2001:db8::8a2e:370:7334]/path",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP scheme uppercase",
+      "data": "HTTP://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP scheme mixed case Http",
+      "data": "Http://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP scheme mixed case HtTp",
+      "data": "HtTp://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP scheme mixed case hTTP",
+      "data": "hTTP://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP URL with all components",
+      "data": "http://user:pass@example.com:8080/path/to/resource?query=value&foo=bar#section",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP URL with empty path",
+      "data": "http://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - HTTP URL with port 80",
+      "data": "http://example.com:80/",
+      "valid": true
+    },
+    {
+      "description": "Invalid - HTTPS URL",
+      "data": "https://example.com",
       "valid": false
     },
     {
@@ -138,23 +138,28 @@
     },
     {
       "description": "Invalid - scheme only",
-      "data": "https:",
+      "data": "http:",
       "valid": false
     },
     {
       "description": "Invalid - scheme with single slash",
-      "data": "https:/example.com",
+      "data": "http:/example.com",
       "valid": false
     },
     {
-      "description": "Invalid - HTTPS URL with space",
-      "data": "https://example.com/path with space",
+      "description": "Invalid - HTTP URL with space",
+      "data": "http://example.com/path with space",
       "valid": false
     },
     {
       "description": "Invalid - empty host",
       "valid": false,
-      "data": "https:///path"
+      "data": "http:///path"
+    },
+    {
+      "description": "Invalid - userinfo with empty host",
+      "valid": false,
+      "data": "http://user@/path"
     }
   ]
 }
