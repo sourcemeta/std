@@ -9,6 +9,7 @@
   "type": "string",
   "anyOf": [
     {
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/{this}",
       "enum": [
         "aar",
         "abk",
@@ -501,13 +502,5 @@
     {
       "pattern": "^q[a-t][a-z]$"
     }
-  ],
-  "if": {
-    "not": {
-      "pattern": "^q[a-t][a-z]$"
-    }
-  },
-  "then": {
-    "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/{this}"
-  }
+  ]
 }

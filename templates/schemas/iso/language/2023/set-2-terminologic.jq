@@ -6,17 +6,10 @@
   "examples": (.set_2_terminologic | sort_by(.code) | .[0:4] | map(.code)),
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": ["https://www.iso.org/standard/74575.html"],
-  "if": {
-    "not": {
-      "pattern": "^q[a-t][a-z]$"
-    }
-  },
-  "then": {
-    "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/{this}"
-  },
   "type": "string",
   "anyOf": [
     {
+      "x-jsonld-self": "http://id.loc.gov/vocabulary/iso639-2/{this}",
       "enum": (.set_2_terminologic | sort_by(.code) | map(.code))
     },
     {
