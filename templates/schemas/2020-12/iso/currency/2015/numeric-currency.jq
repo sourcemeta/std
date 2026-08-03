@@ -8,7 +8,7 @@
         .Ccy != null and
         .CcyNbr != null and
         (.CcyNm | type == "string") and
-        (.Ccy | IN("XAU", "XPD", "XPT", "XAG", "XTS", "XXX") | not)
+        (.Ccy | IN(($special[0]["precious-metals"] + [$special[0].test, $special[0].unknown])[]) | not)
       ))
     | group_by(.CcyNbr)
     | sort_by(.[0].CcyNbr | tonumber)
@@ -23,7 +23,7 @@
         .Ccy != null and
         .CcyNbr != null and
         (.CcyNm | type == "string") and
-        (.Ccy | IN("XAU", "XPD", "XPT", "XAG", "XTS", "XXX") | not)
+        (.Ccy | IN(($special[0]["precious-metals"] + [$special[0].test, $special[0].unknown])[]) | not)
       ))
     | group_by(.CcyNbr)
     | sort_by(.[0].CcyNbr | tonumber)

@@ -1,10 +1,10 @@
-(.ISO_4217.CcyTbl.CcyNtry[] | select(.Ccy == "XXX")) as $entry |
+(.ISO_4217.CcyTbl.CcyNtry[] | select(.Ccy == $special[0].unknown)) as $entry |
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 4217:2015 Numeric Unknown Currency Code",
   "description": $entry.CcyNm,
-  "examples": [999],
+  "examples": [($entry.CcyNbr | tonumber)],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
-  "const": 999
+  "const": ($entry.CcyNbr | tonumber)
 }

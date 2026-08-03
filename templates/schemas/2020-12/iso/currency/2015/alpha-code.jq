@@ -4,7 +4,7 @@
   "description": ("A three-letter alphabetic code including currencies, funds, and precious metals (" + .ISO_4217."@attributes".Pblshd + ")"),
   "examples": (
     [
-      (.ISO_4217.CcyTbl.CcyNtry | map(select(.Ccy != null and (.CcyNm | type == "string") and (.Ccy | IN("XAU", "XPD", "XPT", "XAG", "XTS", "XXX") | not))) | group_by(.Ccy) | sort_by(.[0].Ccy) | .[0:4] | map(.[0].Ccy)),
+      (.ISO_4217.CcyTbl.CcyNtry | map(select(.Ccy != null and (.CcyNm | type == "string") and (.Ccy | IN(($special[0]["precious-metals"] + [$special[0].test, $special[0].unknown])[]) | not))) | group_by(.Ccy) | sort_by(.[0].Ccy) | .[0:4] | map(.[0].Ccy)),
       (.ISO_4217.CcyTbl.CcyNtry | map(select(.Ccy != null and (.CcyNm | type == "object") and (.CcyNm."@attributes".IsFund == "true"))) | group_by(.Ccy) | sort_by(.[0].Ccy) | .[0:2] | map(.[0].Ccy)),
       ["XAG"]
     ] | flatten
