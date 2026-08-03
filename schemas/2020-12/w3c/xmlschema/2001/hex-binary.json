@@ -6,5 +6,5 @@
   "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#hexBinary",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.w3.org/TR/xmlschema-2/#hexBinary" ],
-  "$ref": "../../../ietf/encoding/base16.json"
+  "$ref": "../../../ietf/encoding/4648/base16.json"
 }

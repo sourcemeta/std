@@ -19,10 +19,10 @@
       "type": "number"
     },
     {
-      "$ref": "../../iso/coordinate/2022/latitude.json"
+      "$ref": "../../../iso/coordinate/2022/latitude.json"
     },
     {
-      "$ref": "../../iso/coordinate/2022/altitude.json"
+      "$ref": "../../../iso/coordinate/2022/altitude.json"
     }
   ],
   "items": {

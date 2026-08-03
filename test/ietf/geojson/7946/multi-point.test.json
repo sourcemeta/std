@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/ietf/geojson/line-string.json",
+  "target": "../../../../schemas/2020-12/ietf/geojson/7946/multi-point.json",
   "tests": [
     {
       "description": "Invalid type - string",
@@ -34,7 +34,7 @@
     {
       "description": "Missing coordinates property",
       "data": {
-        "type": "LineString"
+        "type": "MultiPoint"
       },
       "valid": false
     },
@@ -60,20 +60,39 @@
       "valid": false
     },
     {
-      "description": "Valid LineString with two positions",
+      "description": "Valid MultiPoint with empty coordinates",
       "data": {
-        "type": "LineString",
+        "type": "MultiPoint",
+        "coordinates": []
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid MultiPoint with one point",
+      "data": {
+        "type": "MultiPoint",
         "coordinates": [
-          [ 0, 0 ],
-          [ 1, 1 ]
+          [ 0, 0 ]
         ]
       },
       "valid": true
     },
     {
-      "description": "RFC 7946 Appendix A.2 - LineString",
+      "description": "Valid MultiPoint with multiple points",
       "data": {
-        "type": "LineString",
+        "type": "MultiPoint",
+        "coordinates": [
+          [ 0, 0 ],
+          [ 1, 1 ],
+          [ 2, 2 ]
+        ]
+      },
+      "valid": true
+    },
+    {
+      "description": "RFC 7946 Appendix A.4 - MultiPoint",
+      "data": {
+        "type": "MultiPoint",
         "coordinates": [
           [ 100.0, 0.0 ],
           [ 101.0, 1.0 ]
@@ -82,21 +101,9 @@
       "valid": true
     },
     {
-      "description": "Valid LineString with three positions",
+      "description": "Valid MultiPoint with 3D coordinates",
       "data": {
-        "type": "LineString",
-        "coordinates": [
-          [ 0, 0 ],
-          [ 1, 1 ],
-          [ 2, 0 ]
-        ]
-      },
-      "valid": true
-    },
-    {
-      "description": "Valid LineString with 3D coordinates",
-      "data": {
-        "type": "LineString",
+        "type": "MultiPoint",
         "coordinates": [
           [ 0, 0, 0 ],
           [ 1, 1, 10 ]
@@ -105,9 +112,9 @@
       "valid": true
     },
     {
-      "description": "Valid LineString with bbox",
+      "description": "Valid MultiPoint with bbox",
       "data": {
-        "type": "LineString",
+        "type": "MultiPoint",
         "coordinates": [
           [ 0, 0 ],
           [ 1, 1 ]
@@ -117,19 +124,9 @@
       "valid": true
     },
     {
-      "description": "Invalid - only one position",
-      "data": {
-        "type": "LineString",
-        "coordinates": [
-          [ 0, 0 ]
-        ]
-      },
-      "valid": false
-    },
-    {
       "description": "Invalid - position has only one coordinate",
       "data": {
-        "type": "LineString",
+        "type": "MultiPoint",
         "coordinates": [
           [ 0 ],
           [ 1, 1 ]
@@ -140,7 +137,7 @@
     {
       "description": "Invalid - coordinates is not an array",
       "data": {
-        "type": "LineString",
+        "type": "MultiPoint",
         "coordinates": {}
       },
       "valid": false
@@ -148,10 +145,9 @@
     {
       "description": "Invalid - forbidden member geometry",
       "data": {
-        "type": "LineString",
+        "type": "MultiPoint",
         "coordinates": [
-          [ 0, 0 ],
-          [ 1, 1 ]
+          [ 0, 0 ]
         ],
         "geometry": null
       },
@@ -160,10 +156,9 @@
     {
       "description": "Invalid - forbidden member properties",
       "data": {
-        "type": "LineString",
+        "type": "MultiPoint",
         "coordinates": [
-          [ 0, 0 ],
-          [ 1, 1 ]
+          [ 0, 0 ]
         ],
         "properties": null
       },
@@ -172,10 +167,9 @@
     {
       "description": "Invalid - forbidden member features",
       "data": {
-        "type": "LineString",
+        "type": "MultiPoint",
         "coordinates": [
-          [ 0, 0 ],
-          [ 1, 1 ]
+          [ 0, 0 ]
         ],
         "features": []
       },

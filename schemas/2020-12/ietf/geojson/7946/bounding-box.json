@@ -25,7 +25,7 @@
         },
         {
           "description": "Southernmost latitude",
-          "$ref": "../../iso/coordinate/2022/latitude.json"
+          "$ref": "../../../iso/coordinate/2022/latitude.json"
         },
         {
           "description": "Easternmost longitude",
@@ -34,7 +34,7 @@
         },
         {
           "description": "Northernmost latitude",
-          "$ref": "../../iso/coordinate/2022/latitude.json"
+          "$ref": "../../../iso/coordinate/2022/latitude.json"
         }
       ]
     },
@@ -50,11 +50,11 @@
         },
         {
           "description": "Southernmost latitude",
-          "$ref": "../../iso/coordinate/2022/latitude.json"
+          "$ref": "../../../iso/coordinate/2022/latitude.json"
         },
         {
           "description": "Minimum altitude",
-          "$ref": "../../iso/coordinate/2022/altitude.json"
+          "$ref": "../../../iso/coordinate/2022/altitude.json"
         },
         {
           "description": "Easternmost longitude",
@@ -63,11 +63,11 @@
         },
         {
           "description": "Northernmost latitude",
-          "$ref": "../../iso/coordinate/2022/latitude.json"
+          "$ref": "../../../iso/coordinate/2022/latitude.json"
         },
         {
           "description": "Maximum altitude",
-          "$ref": "../../iso/coordinate/2022/altitude.json"
+          "$ref": "../../../iso/coordinate/2022/altitude.json"
         }
       ]
     },
@@ -81,7 +81,7 @@
           "type": "number"
         },
         {
-          "$ref": "../../iso/coordinate/2022/latitude.json"
+          "$ref": "../../../iso/coordinate/2022/latitude.json"
         },
         {
           "description": "Southwesterly value on axis 3",
@@ -96,7 +96,7 @@
           "type": "number"
         },
         {
-          "$ref": "../../iso/coordinate/2022/latitude.json"
+          "$ref": "../../../iso/coordinate/2022/latitude.json"
         },
         {
           "description": "Northeasterly value on axis 3",
@@ -118,7 +118,7 @@
           "type": "number"
         },
         {
-          "$ref": "../../iso/coordinate/2022/latitude.json"
+          "$ref": "../../../iso/coordinate/2022/latitude.json"
         },
         {
           "description": "Southwesterly value on axis 3",
@@ -137,7 +137,7 @@
           "type": "number"
         },
         {
-          "$ref": "../../iso/coordinate/2022/latitude.json"
+          "$ref": "../../../iso/coordinate/2022/latitude.json"
         },
         {
           "description": "Northeasterly value on axis 3",
@@ -163,7 +163,7 @@
           "type": "number"
         },
         {
-          "$ref": "../../iso/coordinate/2022/latitude.json"
+          "$ref": "../../../iso/coordinate/2022/latitude.json"
         },
         {
           "description": "Southwesterly value on axis 3",
@@ -186,7 +186,7 @@
           "type": "number"
         },
         {
-          "$ref": "../../iso/coordinate/2022/latitude.json"
+          "$ref": "../../../iso/coordinate/2022/latitude.json"
         },
         {
           "description": "Northeasterly value on axis 3",

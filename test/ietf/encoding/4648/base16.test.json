@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/ietf/encoding/base16.json",
+  "target": "../../../../schemas/2020-12/ietf/encoding/4648/base16.json",
   "tests": [
     {
       "description": "Valid - empty string",

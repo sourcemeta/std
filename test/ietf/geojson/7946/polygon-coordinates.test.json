@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/ietf/geojson/polygon-coordinates.json",
+  "target": "../../../../schemas/2020-12/ietf/geojson/7946/polygon-coordinates.json",
   "tests": [
     {
       "description": "Invalid type - string",
