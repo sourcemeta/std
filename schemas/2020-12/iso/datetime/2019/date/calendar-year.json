@@ -3,6 +3,7 @@
   "title": "ISO 8601-1:2019 Calendar Year",
   "description": "A calendar date with reduced precision representing a specific calendar year [YYYY] (§5.2.2.2 b)",
   "examples": [ "1985", "2000", "2023", "0000", "9999" ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#gYear",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/standard/70907.html" ],
   "type": "string",
