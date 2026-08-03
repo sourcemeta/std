@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RFC 7946 GeoJSON Point",
+  "description": "A geometry object representing a single position in coordinate space",
+  "examples": [
+    {
+      "type": "Point",
+      "coordinates": [ -122.419, 37.7749 ]
+    },
+    {
+      "type": "Point",
+      "coordinates": [ 0, 0, 10 ]
+    }
+  ],
+  "x-jsonld-type": "https://purl.org/geojson/vocab#Point",
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [ "https://www.rfc-editor.org/rfc/rfc7946#section-3.1.2" ],
+  "type": "object",
+  "required": [ "type", "coordinates" ],
+  "properties": {
+    "type": {
+      "const": "Point"
+    },
+    "coordinates": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates",
+      "$ref": "../point-coordinates/v1.json"
+    },
+    "bbox": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#bbox",
+      "$ref": "../bounding-box/v1.json"
+    },
+    "geometry": false,
+    "properties": false,
+    "features": false
+  }
+}

@@ -14,6 +14,6 @@
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
   "anyOf": [
-    {"$ref": "alpha-currency.json"}
+    {"$ref": "../alpha-currency/v1.json"}
   ]
 }

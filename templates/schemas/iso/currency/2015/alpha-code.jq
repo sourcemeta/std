@@ -12,10 +12,10 @@
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
   "anyOf": [
-    {"$ref": "alpha-currency.json"},
-    {"$ref": "alpha-fund.json"},
-    {"$ref": "alpha-precious-metal.json"},
-    {"$ref": "alpha-test.json"},
-    {"$ref": "alpha-unknown.json"}
+    {"$ref": "../alpha-currency/v1.json"},
+    {"$ref": "../alpha-fund/v1.json"},
+    {"$ref": "../alpha-precious-metal/v1.json"},
+    {"$ref": "../alpha-test/v1.json"},
+    {"$ref": "../alpha-unknown/v1.json"}
   ]
 }

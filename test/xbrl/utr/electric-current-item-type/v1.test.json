@@ -1,0 +1,25 @@
+{
+  "target": "../../../../schemas/xbrl/utr/electric-current-item-type/v1.json",
+  "tests": [
+    {
+      "description": "Valid - A",
+      "data": "A",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unknown unit",
+      "data": "invalid-unit",
+      "valid": false
+    },
+    {
+      "description": "Invalid - number",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}
