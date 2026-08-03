@@ -1,5 +1,5 @@
 {
-  "target": "../../../../../schemas/2020-12/iso/datetime/2019/interval/start-duration-calendar-extended.json",
+  "target": "../../../../../schemas/iso/datetime/2019/interval/start-duration-calendar-extended.json",
   "tests": [
     {
       "description": "Invalid type - integer",

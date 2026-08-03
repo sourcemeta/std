@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/ietf/jsonpointer/6901/pointer.json",
+  "target": "../../../../schemas/ietf/jsonpointer/6901/pointer.json",
   "tests": [
     {
       "description": "Invalid type - number",

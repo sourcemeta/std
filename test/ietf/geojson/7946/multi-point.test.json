@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/ietf/geojson/7946/multi-point.json",
+  "target": "../../../../schemas/ietf/geojson/7946/multi-point.json",
   "tests": [
     {
       "description": "Invalid type - string",

@@ -5,7 +5,7 @@
   "github": "sourcemeta/std",
   "path": "./schemas",
   "resolve": {
-    "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion": "./schemas/2020-12/ietf/jsonschema/2020-12/dialect/format-assertion.json"
+    "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion": "./schemas/ietf/jsonschema/2020-12/dialect/format-assertion.json"
   },
   "lint": {
     "rules": [

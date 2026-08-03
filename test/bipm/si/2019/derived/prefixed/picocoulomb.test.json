@@ -1,5 +1,5 @@
 {
-  "target": "../../../../../../schemas/2020-12/bipm/si/2019/derived/prefixed/picocoulomb.json",
+  "target": "../../../../../../schemas/bipm/si/2019/derived/prefixed/picocoulomb.json",
   "tests": [
     {
       "description": "Valid - zero",

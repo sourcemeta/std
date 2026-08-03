@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/xbrl/utr/energy-item-type-normative.json",
+  "target": "../../../schemas/xbrl/utr/energy-item-type-normative.json",
   "tests": [
     {
       "description": "Valid - Boe (REC)",

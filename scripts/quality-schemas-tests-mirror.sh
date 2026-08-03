@@ -3,7 +3,7 @@
 set -o errexit
 set -o nounset
 
-SCHEMAS_DIR="$(pwd)/schemas/2020-12"
+SCHEMAS_DIR="$(pwd)/schemas"
 TESTS_DIR="$(pwd)/test"
 EXIT_CODE=0
 

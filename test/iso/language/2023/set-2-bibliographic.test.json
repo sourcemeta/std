@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/iso/language/2023/set-2-bibliographic.json",
+  "target": "../../../../schemas/iso/language/2023/set-2-bibliographic.json",
   "tests": [
     {
       "description": "Invalid type - integer",

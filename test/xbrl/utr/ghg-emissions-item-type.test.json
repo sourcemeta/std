@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/xbrl/utr/ghg-emissions-item-type.json",
+  "target": "../../../schemas/xbrl/utr/ghg-emissions-item-type.json",
   "tests": [
     {
       "description": "Valid - tCO2e",

@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/ietf/encoding/4648/base64.json",
+  "target": "../../../../schemas/ietf/encoding/4648/base64.json",
   "tests": [
     {
       "description": "Valid - empty string",

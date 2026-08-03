@@ -1,5 +1,5 @@
 {
-  "target": "../../../../../schemas/2020-12/iso/datetime/2019/time/shift-basic.json",
+  "target": "../../../../../schemas/iso/datetime/2019/time/shift-basic.json",
   "tests": [
     {
       "description": "Invalid type - integer",

@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/xbrl/utr/flow-item-type.json",
+  "target": "../../../schemas/xbrl/utr/flow-item-type.json",
   "tests": [
     {
       "description": "Valid - Volume_per_Duration (REC)",

@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/xbrl/utr/voltage-item-type.json",
+  "target": "../../../schemas/xbrl/utr/voltage-item-type.json",
   "tests": [
     {
       "description": "Valid - V",

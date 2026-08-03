@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/other/jsonrpc/v2.0/identifier.json",
+  "target": "../../../../schemas/other/jsonrpc/v2.0/identifier.json",
   "tests": [
     {
       "data": "abc123",

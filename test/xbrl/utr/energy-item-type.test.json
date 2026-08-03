@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/xbrl/utr/energy-item-type.json",
+  "target": "../../../schemas/xbrl/utr/energy-item-type.json",
   "tests": [
     {
       "description": "Valid - Boe",

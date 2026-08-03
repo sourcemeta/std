@@ -1,5 +1,5 @@
 {
-  "target": "../../../schemas/2020-12/xbrl/utr/temperature-item-type.json",
+  "target": "../../../schemas/xbrl/utr/temperature-item-type.json",
   "tests": [
     {
       "description": "Valid - Celsius",

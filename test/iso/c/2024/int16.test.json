@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/iso/c/2024/int16.json",
+  "target": "../../../../schemas/iso/c/2024/int16.json",
   "tests": [
     {
       "description": "Valid - zero",

@@ -1,5 +1,5 @@
 {
-  "target": "../../../../schemas/2020-12/iso/units/2022/percentage.json",
+  "target": "../../../../schemas/iso/units/2022/percentage.json",
   "tests": [
     {
       "description": "Invalid type - string",
