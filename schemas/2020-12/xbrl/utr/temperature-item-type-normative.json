@@ -1,13 +1,14 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "XBRL UTR temperature Item Type units (2024-10-22)",
-  "description": "Valid units for temperatureItemType as defined in the XBRL Units Type Registry",
+  "title": "XBRL UTR Temperature Item Type Units (Normative)",
+  "description": "Valid units with the recommended status for temperatureItemType as defined in the XBRL Units Type Registry",
   "examples": [ "Celsius", "K", "F" ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [
     "https://www.xbrl.org/specification/utr/rec-2013-11-18/utr-rec-2013-11-18-clean.html",
     "https://www.xbrl.org/utr/utr.xml"
   ],
+  "x-registry-date": "2024-10-22",
   "anyOf": [
     {
       "title": "Celsius",
