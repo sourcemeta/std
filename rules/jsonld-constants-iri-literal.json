@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "std/jsonld_constants_iri_literal",
+  "description": "A bare string in a constants fragment is always a string literal, so a string that looks like an IRI is almost certainly a node reference missing its id member",
+  "properties": {
+    "x-jsonld-constants": {
+      "additionalProperties": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/term"
+          },
+          {
+            "if": {
+              "type": "array"
+            },
+            "then": {
+              "items": {
+                "$ref": "#/$defs/term"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "term": {
+      "allOf": [
+        {
+          "not": {
+            "type": "string",
+            "pattern": "^([A-Za-z][A-Za-z0-9+.-]*://|urn:|mailto:|did:|tag:)"
+          }
+        },
+        {
+          "not": {
+            "type": "object",
+            "not": {
+              "anyOf": [
+                {
+                  "required": [ "@type" ]
+                },
+                {
+                  "required": [ "@language" ]
+                }
+              ]
+            },
+            "required": [ "@value" ],
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "^([A-Za-z][A-Za-z0-9+.-]*://|urn:|mailto:|did:|tag:)"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

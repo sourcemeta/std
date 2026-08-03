@@ -36,6 +36,12 @@
       },
       {
         "required": [ "x-jsonld-self" ]
+      },
+      {
+        "required": [ "x-jsonld-value" ]
+      },
+      {
+        "required": [ "x-jsonld-constants" ]
       }
     ]
   }

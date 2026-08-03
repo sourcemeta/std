@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "std/jsonld_constants_lexical",
+  "description": "A constant typed literal whose value sits outside the lexical space of its datatype converts to an ill-typed literal that RDF implementations must accept, so this is the only place to catch it",
+  "properties": {
+    "x-jsonld-constants": {
+      "additionalProperties": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/term"
+          },
+          {
+            "if": {
+              "type": "array"
+            },
+            "then": {
+              "items": {
+                "$ref": "#/$defs/term"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "term": {
+      "allOf": [
+        {
+          "if": {
+            "type": "object",
+            "required": [ "@value", "@type" ],
+            "properties": {
+              "@value": {
+                "type": "number"
+              },
+              "@type": {
+                "$ref": "#/$defs/integer-datatypes"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "@value": {
+                "multipleOf": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "required": [ "@value", "@type" ],
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@type": {
+                "$ref": "#/$defs/integer-datatypes"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "@value": {
+                "pattern": "^[+-]?[0-9]+$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "required": [ "@value", "@type" ],
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@type": {
+                "const": "http://www.w3.org/2001/XMLSchema#decimal"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "@value": {
+                "pattern": "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "required": [ "@value", "@type" ],
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@type": {
+                "const": "http://www.w3.org/2001/XMLSchema#boolean"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "@value": {
+                "enum": [ "true", "false", "1", "0" ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "integer-datatypes": {
+      "enum": [
+        "http://www.w3.org/2001/XMLSchema#integer",
+        "http://www.w3.org/2001/XMLSchema#long",
+        "http://www.w3.org/2001/XMLSchema#int",
+        "http://www.w3.org/2001/XMLSchema#short",
+        "http://www.w3.org/2001/XMLSchema#byte",
+        "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "http://www.w3.org/2001/XMLSchema#nonPositiveInteger",
+        "http://www.w3.org/2001/XMLSchema#negativeInteger",
+        "http://www.w3.org/2001/XMLSchema#positiveInteger",
+        "http://www.w3.org/2001/XMLSchema#unsignedLong",
+        "http://www.w3.org/2001/XMLSchema#unsignedInt",
+        "http://www.w3.org/2001/XMLSchema#unsignedShort",
+        "http://www.w3.org/2001/XMLSchema#unsignedByte"
+      ]
+    }
+  }
+}

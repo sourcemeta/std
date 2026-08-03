@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "std/jsonld_datatype_reserved",
+  "description": "A langString literal requires a language tag that only x-jsonld-language can provide, and a JSON literal is declared with x-jsonld-json, so neither IRI is a usable datatype",
+  "properties": {
+    "x-jsonld-datatype": {
+      "not": {
+        "enum": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON"
+        ]
+      }
+    }
+  }
+}
