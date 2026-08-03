@@ -3,6 +3,13 @@
   "title": "Hour",
   "description": "A non-SI unit of time accepted for use with the SI. One hour is equal to 60 minutes or 3600 seconds",
   "examples": [ 0, 1, 6, 12, 24, 1.5, 0.5 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/HR"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-si-equivalent": "3600 s",

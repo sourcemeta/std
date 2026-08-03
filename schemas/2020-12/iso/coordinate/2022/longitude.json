@@ -5,7 +5,7 @@
   "examples": [ 0, -122.419, 151.209, 180, -180 ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/standard/75147.html" ],
-  "$ref": "../../../bipm/si/2019/non-si/unit/degree.json",
+  "type": "number",
   "maximum": 180,
   "minimum": -180
 }

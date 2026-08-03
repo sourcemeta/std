@@ -3,6 +3,13 @@
   "title": "Siemens",
   "description": "The SI unit of electric conductance. It is equal to A/V, which is equal to kg^-1 m^-2 s^3 A^2",
   "examples": [ 0.001, 0.01, 0.1, 1, 10, 100 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/S"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-symbol": "S",

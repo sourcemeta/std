@@ -3,6 +3,13 @@
   "title": "Second",
   "description": "The SI unit of time. It is defined by taking the fixed numerical value of the caesium frequency, Delta_nu_Cs, the unperturbed ground-state hyperfine transition frequency of the caesium 133 atom, to be 9 192 631 770 when expressed in the unit Hz, which is equal to s^-1",
   "examples": [ 0, 1, 60, 3600, 86400, 0.001, 1.5 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/SEC"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-symbol": "s",

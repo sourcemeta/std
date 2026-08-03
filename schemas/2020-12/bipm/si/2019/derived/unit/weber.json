@@ -3,6 +3,13 @@
   "title": "Weber",
   "description": "The SI unit of magnetic flux. It is equal to V s, which is equal to kg m^2 s^-2 A^-1",
   "examples": [ 0, 0.001, 0.1, 1, 10, -1 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/WB"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-symbol": "Wb",

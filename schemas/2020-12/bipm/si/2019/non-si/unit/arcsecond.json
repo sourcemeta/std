@@ -3,6 +3,13 @@
   "title": "Arcsecond",
   "description": "A non-SI unit of plane angle accepted for use with the SI. One arcsecond is equal to (1/60) arcminute or (pi/648000) radians",
   "examples": [ 0, 1, 30, 60, -30, 15.5 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/ARCSEC"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-si-equivalent": "(pi/648000) rad",

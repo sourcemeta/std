@@ -3,6 +3,13 @@
   "title": "Henry",
   "description": "The SI unit of inductance. It is equal to Wb/A, which is equal to kg m^2 s^-2 A^-2",
   "examples": [ 1e-9, 1e-6, 0.001, 1, 10, 100 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/H"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "x-symbol": "H",
