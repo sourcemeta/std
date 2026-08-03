@@ -12,5 +12,5 @@
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/standard/70907.html" ],
   "type": "string",
-  "pattern": "^[+-][0-9]{6}-(0[1-9]|1[0-2])$"
+  "pattern": "^[+-][0-9]{6}-(?:0[1-9]|1[0-2])$"
 }
