@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RFC 7946 GeoJSON GeometryCollection",
+  "description": "A geometry object that represents a collection of geometry objects",
+  "examples": [
+    {
+      "type": "GeometryCollection",
+      "geometries": []
+    },
+    {
+      "type": "GeometryCollection",
+      "geometries": [
+        {
+          "type": "Point",
+          "coordinates": [ 0, 0 ]
+        },
+        {
+          "type": "LineString",
+          "coordinates": [
+            [ 0, 0 ],
+            [ 1, 1 ]
+          ]
+        }
+      ]
+    }
+  ],
+  "x-jsonld-type": "https://purl.org/geojson/vocab#GeometryCollection",
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [ "https://www.rfc-editor.org/rfc/rfc7946#section-3.1.8" ],
+  "type": "object",
+  "required": [ "type", "geometries" ],
+  "properties": {
+    "type": {
+      "const": "GeometryCollection"
+    },
+    "geometries": {
+      "x-jsonld-container": "@set",
+      "x-jsonld-id": "https://purl.org/geojson/vocab#geometry",
+      "type": "array",
+      "items": {
+        "$comment": "RFC 7946 says nested GeometryCollections SHOULD be avoided but does not forbid them",
+        "anyOf": [
+          {
+            "$ref": "../geometry/v1.json"
+          },
+          {
+            "$ref": "../geometry-collection/v1.json"
+          }
+        ]
+      }
+    },
+    "bbox": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#bbox",
+      "$ref": "../bounding-box/v1.json"
+    },
+    "geometry": false,
+    "properties": false,
+    "features": false
+  }
+}

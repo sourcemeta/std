@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RFC 7946 GeoJSON FeatureCollection",
+  "description": "A collection of Feature objects",
+  "examples": [
+    {
+      "type": "FeatureCollection",
+      "features": []
+    },
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": null
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [ 0, 0 ]
+          },
+          "properties": {
+            "name": "Example"
+          }
+        }
+      ]
+    }
+  ],
+  "x-jsonld-type": "https://purl.org/geojson/vocab#FeatureCollection",
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [ "https://www.rfc-editor.org/rfc/rfc7946#section-3.3" ],
+  "type": "object",
+  "required": [ "type", "features" ],
+  "properties": {
+    "type": {
+      "const": "FeatureCollection"
+    },
+    "features": {
+      "x-jsonld-container": "@set",
+      "x-jsonld-id": "https://purl.org/geojson/vocab#features",
+      "type": "array",
+      "items": {
+        "$ref": "../feature/v1.json"
+      }
+    },
+    "bbox": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#bbox",
+      "$ref": "../bounding-box/v1.json"
+    },
+    "coordinates": false,
+    "geometries": false,
+    "geometry": false,
+    "properties": false
+  }
+}

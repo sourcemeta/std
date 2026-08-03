@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RFC 7946 GeoJSON MultiPoint",
+  "description": "A geometry object representing multiple positions",
+  "examples": [
+    {
+      "type": "MultiPoint",
+      "coordinates": [
+        [ 0, 0 ],
+        [ 1, 1 ]
+      ]
+    },
+    {
+      "type": "MultiPoint",
+      "coordinates": [
+        [ 0, 0 ]
+      ]
+    }
+  ],
+  "x-jsonld-type": "https://purl.org/geojson/vocab#MultiPoint",
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [ "https://www.rfc-editor.org/rfc/rfc7946#section-3.1.3" ],
+  "type": "object",
+  "required": [ "type", "coordinates" ],
+  "properties": {
+    "type": {
+      "const": "MultiPoint"
+    },
+    "coordinates": {
+      "x-jsonld-container": "@list",
+      "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates",
+      "type": "array",
+      "items": {
+        "$ref": "../point-coordinates/v1.json"
+      }
+    },
+    "bbox": {
+      "x-jsonld-id": "https://purl.org/geojson/vocab#bbox",
+      "$ref": "../bounding-box/v1.json"
+    },
+    "geometry": false,
+    "properties": false,
+    "features": false
+  }
+}

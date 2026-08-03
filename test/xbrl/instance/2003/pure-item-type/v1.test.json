@@ -1,0 +1,60 @@
+{
+  "target": "../../../../../schemas/xbrl/instance/2003/pure-item-type/v1.json",
+  "tests": [
+    {
+      "description": "Valid - pure number as decimal",
+      "data": 0.5,
+      "valid": true
+    },
+    {
+      "description": "Valid - whole number",
+      "data": 1,
+      "valid": true
+    },
+    {
+      "description": "Valid - negative pure number",
+      "data": -0.25,
+      "valid": true
+    },
+    {
+      "description": "Valid - high precision",
+      "data": 0.123457,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision 20 digit integer",
+      "data": 1.2345678901234567890e+19,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision with decimals",
+      "data": 1.234567890123456800e+17,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision negative",
+      "data": -1.2345678901234567890e+19,
+      "valid": true
+    },
+    {
+      "description": "Invalid - string type",
+      "data": "0.5",
+      "valid": false
+    },
+    {
+      "description": "Invalid - text",
+      "data": "not-a-number",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

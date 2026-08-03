@@ -12,10 +12,10 @@
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": ["https://www.iso.org/iso-4217-currency-codes.html"],
   "anyOf": [
-    {"$ref": "numeric-currency.json"},
-    {"$ref": "numeric-fund.json"},
-    {"$ref": "numeric-precious-metal.json"},
-    {"$ref": "numeric-test.json"},
-    {"$ref": "numeric-unknown.json"}
+    {"$ref": "../numeric-currency/v1.json"},
+    {"$ref": "../numeric-fund/v1.json"},
+    {"$ref": "../numeric-precious-metal/v1.json"},
+    {"$ref": "../numeric-test/v1.json"},
+    {"$ref": "../numeric-unknown/v1.json"}
   ]
 }

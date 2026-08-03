@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "W3C XML Schema int",
+  "description": "Represents 32-bit signed integers (§3.3.17)",
+  "examples": [ 0, 1, -1, 2147483647, -2147483648, 42, -999 ],
+  "x-jsonld-datatype": "http://www.w3.org/2001/XMLSchema#int",
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [ "https://www.w3.org/TR/xmlschema-2/#int" ],
+  "$ref": "../../../../iso/c/2024/int32/v1.json"
+}

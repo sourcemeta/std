@@ -1,0 +1,154 @@
+{
+  "target": "../../../../../schemas/xbrl/instance/2003/monetary-item-type/v1.json",
+  "tests": [
+    {
+      "description": "Valid - positive monetary value in USD",
+      "data": {
+        "value": 1234.56,
+        "currency": "USD"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - negative monetary value in EUR",
+      "data": {
+        "value": -789.12,
+        "currency": "EUR"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - zero in GBP",
+      "data": {
+        "value": 0,
+        "currency": "GBP"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - high precision in JPY",
+      "data": {
+        "value": 12345.1,
+        "currency": "JPY"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - large value in CHF",
+      "data": {
+        "value": 1000000000.0,
+        "currency": "CHF"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - small fractional value in CAD",
+      "data": {
+        "value": 0.01,
+        "currency": "CAD"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision 20 digits in USD",
+      "data": {
+        "value": 1.2345678901234567890e+19,
+        "currency": "USD"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision 25 digits in EUR",
+      "data": {
+        "value": 1.234567890123456789012345e+24,
+        "currency": "EUR"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision with decimals in GBP",
+      "data": {
+        "value": 1.234567890123456800e+17,
+        "currency": "GBP"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision negative in JPY",
+      "data": {
+        "value": -1.2345678901234567890e+19,
+        "currency": "JPY"
+      },
+      "valid": true
+    },
+    {
+      "description": "Invalid - string type for value instead of number",
+      "data": {
+        "value": "123.45",
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - text in value",
+      "data": {
+        "value": "abc",
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string value",
+      "data": {
+        "value": "",
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing value field",
+      "data": {
+        "currency": "USD"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - missing currency field",
+      "data": {
+        "value": 100.5
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - invalid currency code",
+      "data": {
+        "value": 100.5,
+        "currency": "INVALID"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase currency code",
+      "data": {
+        "value": 100.5,
+        "currency": "usd"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - not an object",
+      "data": "1234.56",
+      "valid": false
+    },
+    {
+      "description": "Invalid - null value",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid - array instead of object",
+      "data": [ 100.5, "USD" ],
+      "valid": false
+    }
+  ]
+}

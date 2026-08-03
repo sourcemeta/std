@@ -3,27 +3,27 @@ MKDIRP ?= mkdir -p
 JQ ?= jq
 
 define MAKE_SCHEMA
-schemas/$1.json: templates/schemas/$1.jq $2.json | node_modules
+schemas/$1/v1.json: templates/schemas/$1.jq $2.json | node_modules
 	$(MKDIRP) $$(dir $$@)
 	$(JQ) --from-file $$< $$(word 2,$$^) > $$@
 	$(NODE) $(JSONSCHEMA) fmt $$@
-GENERATED += schemas/$1.json
+GENERATED += schemas/$1/v1.json
 endef
 
 define MAKE_SCHEMA_CURRENCY
-schemas/$1.json: templates/schemas/$1.jq $2.json templates/data/iso/currency/special-codes.json | node_modules
+schemas/$1/v1.json: templates/schemas/$1.jq $2.json templates/data/iso/currency/special-codes.json | node_modules
 	$(MKDIRP) $$(dir $$@)
 	$(JQ) --from-file $$< --slurpfile special $$(word 3,$$^) $$(word 2,$$^) > $$@
 	$(NODE) $(JSONSCHEMA) fmt $$@
-GENERATED += schemas/$1.json
+GENERATED += schemas/$1/v1.json
 endef
 
 define MAKE_SCHEMA_UTR
-schemas/xbrl/utr/$1.json: templates/schemas/xbrl/utr/item-type.jq build/xbrl/utr/utr.json templates/data/xbrl/utr-unit-iris.json | node_modules
+schemas/xbrl/utr/$1/v1.json: templates/schemas/xbrl/utr/item-type.jq build/xbrl/utr/utr.json templates/data/xbrl/utr-unit-iris.json | node_modules
 	$(MKDIRP) $$(dir $$@)
 	$(JQ) --from-file $$< --slurpfile unit_iris $$(word 3,$$^) --arg item_type $2 --arg normative $3 $$(word 2,$$^) > $$@
 	$(NODE) $(JSONSCHEMA) fmt $$@
-GENERATED += schemas/xbrl/utr/$1.json
+GENERATED += schemas/xbrl/utr/$1/v1.json
 endef
 
 build/iso/currency/list-%.json: \
