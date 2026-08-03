@@ -28,7 +28,7 @@ fi
 
 # Extract all unique itemTypes from the data and convert to kebab-case
 # Store them in the temp file first, then validate
-jq -r '.["{http://www.xbrl.org/2009/utr}utr"]["{http://www.xbrl.org/2009/utr}units"]["{http://www.xbrl.org/2009/utr}unit"][] | .["{http://www.xbrl.org/2009/utr}itemType"]' "$UTR_DATA" | sort -u > "$TMP/item_types.txt"
+"${JQ:-jq}" -r '.["{http://www.xbrl.org/2009/utr}utr"]["{http://www.xbrl.org/2009/utr}units"]["{http://www.xbrl.org/2009/utr}unit"][] | .["{http://www.xbrl.org/2009/utr}itemType"]' "$UTR_DATA" | sort -u > "$TMP/item_types.txt"
 
 while IFS= read -r item_type
 do

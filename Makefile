@@ -17,15 +17,19 @@ common: $(GENERATED) node_modules
 	$(TIME) $(NODE) $(JSONSCHEMA) lint schemas
 	$(SHELLCHECK) scripts/*.sh
 	./scripts/quality-schemas-tests-mirror.sh
-	./scripts/quality-templates-xbrl-utr-mirror.sh
+	JQ="$(JQ)" ./scripts/quality-templates-xbrl-utr-mirror.sh
 
 .PHONY: lint
 lint: common node_modules
 	$(TIME) $(NODE) $(JSONSCHEMA) fmt schemas rules test --check
 
 .PHONY: test
-test: node_modules
+test: common node_modules
 	$(TIME) $(NODE) $(JSONSCHEMA) test ./test
+
+.PHONY: clean
+clean:
+	rm -rf build
 
 node_modules: package.json package-lock.json
 	$(NPM) ci
