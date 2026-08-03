@@ -5221,7 +5221,7 @@
       "const": "bod"
     },
     {
-      "title": "Mundabli",
+      "title": "Mundabli-Mufu",
       "x-language-type": "living",
       "x-scope": "individual",
       "const": "boe"
@@ -7440,7 +7440,7 @@
       "const": "cet"
     },
     {
-      "title": "Ekai Chin",
+      "title": "Laoktu Chin",
       "x-language-type": "living",
       "x-scope": "individual",
       "const": "cey"
@@ -9401,7 +9401,7 @@
       "const": "dem"
     },
     {
-      "title": "Slave (Athapascan)",
+      "title": "Slavey",
       "x-language-type": "living",
       "x-scope": "macrolanguage",
       "x-set-2-bibliographic": "den",
@@ -10733,6 +10733,12 @@
       "x-language-type": "living",
       "x-scope": "individual",
       "const": "dyi"
+    },
+    {
+      "title": "Bhutanese Sign Language",
+      "x-language-type": "living",
+      "x-scope": "individual",
+      "const": "dyl"
     },
     {
       "title": "Yanda Dom Dogon",
@@ -16107,7 +16113,7 @@
       "const": "imy"
     },
     {
-      "title": "Interlingua (International Auxiliary Language Association)",
+      "title": "Interlingua (IALA)",
       "x-language-type": "constructed",
       "x-scope": "individual",
       "x-set-1": "ia",
@@ -16391,7 +16397,7 @@
       "const": "ist"
     },
     {
-      "title": "Isu (Menchum Division)",
+      "title": "Isu",
       "x-language-type": "living",
       "x-scope": "individual",
       "const": "isu"
@@ -18900,7 +18906,7 @@
       "const": "kjn"
     },
     {
-      "title": "Harijan Kinnauri",
+      "title": "Kinnauri Pahari",
       "x-language-type": "living",
       "x-scope": "individual",
       "const": "kjo"
@@ -20605,7 +20611,7 @@
       "const": "kus"
     },
     {
-      "title": "Kutenai",
+      "title": "Ktunaxa",
       "x-language-type": "living",
       "x-scope": "individual",
       "x-set-2-bibliographic": "kut",
@@ -21974,6 +21980,12 @@
       "const": "lfa"
     },
     {
+      "title": "Buu (Cameroon)",
+      "x-language-type": "living",
+      "x-scope": "individual",
+      "const": "lfb"
+    },
+    {
       "title": "Lingua Franca Nova",
       "x-language-type": "constructed",
       "x-scope": "individual",
@@ -23264,7 +23276,7 @@
       "const": "luh"
     },
     {
-      "title": "Luiseno",
+      "title": "Luiseño",
       "x-language-type": "extinct",
       "x-scope": "individual",
       "x-set-2-bibliographic": "lui",
@@ -23995,7 +24007,7 @@
       "const": "mdb"
     },
     {
-      "title": "Male (Papua New Guinea)",
+      "title": "Soq",
       "x-language-type": "living",
       "x-scope": "individual",
       "const": "mdc"
@@ -24125,7 +24137,7 @@
       "const": "mdx"
     },
     {
-      "title": "Male (Ethiopia)",
+      "title": "Male",
       "x-language-type": "living",
       "x-scope": "individual",
       "const": "mdy"
@@ -24531,7 +24543,7 @@
       "const": "mgo"
     },
     {
-      "title": "Eastern Magar",
+      "title": "Magar",
       "x-language-type": "living",
       "x-scope": "individual",
       "const": "mgp"
@@ -26099,12 +26111,6 @@
       "const": "mrc"
     },
     {
-      "title": "Western Magar",
-      "x-language-type": "living",
-      "x-scope": "individual",
-      "const": "mrd"
-    },
-    {
       "title": "Martha's Vineyard Sign Language",
       "x-language-type": "extinct",
       "x-scope": "individual",
@@ -26123,7 +26129,7 @@
       "const": "mrg"
     },
     {
-      "title": "Mara Chin",
+      "title": "Mara",
       "x-language-type": "living",
       "x-scope": "individual",
       "const": "mrh"
@@ -35850,12 +35856,6 @@
       "const": "shk"
     },
     {
-      "title": "Shendu",
-      "x-language-type": "living",
-      "x-scope": "individual",
-      "const": "shl"
-    },
-    {
       "title": "Shahrudi",
       "x-language-type": "living",
       "x-scope": "individual",
@@ -37247,7 +37247,7 @@
       "const": "srr"
     },
     {
-      "title": "Sarsi",
+      "title": "Tsuut'ina",
       "x-language-type": "living",
       "x-scope": "individual",
       "const": "srs"
@@ -38127,7 +38127,7 @@
       "const": "szs"
     },
     {
-      "title": "Isu (Fako Division)",
+      "title": "Isubu",
       "x-language-type": "living",
       "x-scope": "individual",
       "const": "szv"
@@ -40886,6 +40886,12 @@
       "const": "tve"
     },
     {
+      "title": "Tugunese",
+      "x-language-type": "extinct",
+      "x-scope": "individual",
+      "const": "tvg"
+    },
+    {
       "title": "Tulai",
       "x-language-type": "living",
       "x-scope": "individual",
@@ -42756,7 +42762,7 @@
       "const": "waa"
     },
     {
-      "title": "Wab",
+      "title": "Yote",
       "x-language-type": "living",
       "x-scope": "individual",
       "const": "wab"
@@ -46638,7 +46644,7 @@
       "const": "ykn"
     },
     {
-      "title": "Yasa",
+      "title": "Iyasa",
       "x-language-type": "living",
       "x-scope": "individual",
       "const": "yko"
@@ -47772,6 +47778,12 @@
       "x-language-type": "living",
       "x-scope": "individual",
       "const": "zhi"
+    },
+    {
+      "title": "Kurdish Sign Language",
+      "x-language-type": "living",
+      "x-scope": "individual",
+      "const": "zhk"
     },
     {
       "title": "Nong Zhuang",

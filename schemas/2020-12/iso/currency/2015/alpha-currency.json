@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 4217:2015 Alphabetic Currency Code",
-  "description": "A three-letter alphabetic currency code, excluding funds and precious metals (2025-05-12)",
+  "description": "A three-letter alphabetic currency code, excluding funds and precious metals (2026-01-01)",
   "examples": [ "AED", "AFN", "ALL", "AMD" ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/iso-4217-currency-codes.html" ],
@@ -98,13 +98,6 @@
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BDT",
       "x-minor-unit": 2,
       "const": "BDT"
-    },
-    {
-      "title": "Bulgarian Lev",
-      "x-country-names": [ "BULGARIA" ],
-      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BGN",
-      "x-minor-unit": 2,
-      "const": "BGN"
     },
     {
       "title": "Bahraini Dinar",
@@ -309,6 +302,7 @@
         "ANDORRA",
         "AUSTRIA",
         "BELGIUM",
+        "BULGARIA",
         "CROATIA",
         "CYPRUS",
         "ESTONIA",

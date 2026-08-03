@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 4217:2015 Numeric Currency Code (Historical)",
-  "description": "A three-digit numeric withdrawn currency code, excluding funds and precious metals (2025-03-31)",
+  "description": "A three-digit numeric withdrawn currency code, excluding funds and precious metals (2026-01-01)",
   "examples": [ 4, 8, 20, 24 ],
   "deprecated": true,
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -665,6 +665,13 @@
       "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BYR",
       "x-withdrawal-dates": [ "2017-01" ],
       "const": 974
+    },
+    {
+      "title": "Bulgarian Lev",
+      "x-country-names": [ "BULGARIA" ],
+      "x-jsonld-self": "http://publications.europa.eu/resource/authority/currency/BGN",
+      "x-withdrawal-dates": [ "2026-01" ],
+      "const": 975
     },
     {
       "title": "Euro",

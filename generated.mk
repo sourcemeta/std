@@ -107,7 +107,7 @@ build/iso/language/iso-639-2.json: \
 	$(PYTHON) $(word 2,$^) --delimiter '|' --encoding utf-8-sig --no-header \
 		--field-names "part2b,part2t,part1,name,name_french" $< $@
 build/iso/language/iso-639-3.json: \
-	vendor/data/iso/language/iso-639-3_Code_Tables/iso-639-3_Code_Tables_20251015/iso-639-3.tab \
+	vendor/data/iso/language/iso-639-3.tab \
 	scripts/csv2json.py
 	$(PYTHON) $(word 2,$^) --tab $< $@
 build/iso/language/iso-639-5.json: \

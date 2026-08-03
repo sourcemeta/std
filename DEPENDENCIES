@@ -1,2 +1,8 @@
 vendorpull https://github.com/sourcemeta/vendorpull 89f348a97842e05aeab45d338d41fb02031fad62
 iso3166 https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes 145f1ad3caff212ed25f42b0ee2c8b92a75af895
+data/iso/currency/list-one.xml https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml 838dfb991648cf36df939edd5fe3811737962b75a32252847d239cedd1e291c9
+data/iso/currency/list-three.xml https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-three.xml 98fde2423cdb916dd59dcf5fe96222edad8fa198d865c1c83dbc464b9cc52387
+data/iso/language/ISO-639-2_utf-8.txt https://www.loc.gov/standards/iso639-2/ISO-639-2_utf-8 42b71885e4dc885559fda5ad059fd81838cf4782cedb5fd08cc3431f7d067371
+data/iso/language/iso-639-3.tab https://iso639-3.sil.org/sites/iso639-3/files/downloads/iso-639-3.tab 7a5ac370703ea0897356a8c383f2147865caf479e41c1c7bd96cc4c5f65e6907
+data/iso/language/iso639-5.tsv http://id.loc.gov/vocabulary/iso639-5.tsv b048896af19441dab96d74285b1a4c6a32c752e960009b93bea5dcf8332be0bf
+data/xbrl/utr/utr.xml https://www.xbrl.org/utr/utr.xml 0236426fa29a1c1bca4b6088f65dc75d01df7c3fa716e5c5ae3f0702d0ba9002
