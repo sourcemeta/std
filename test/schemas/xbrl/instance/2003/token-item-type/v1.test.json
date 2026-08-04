@@ -1,0 +1,35 @@
+{
+  "target": "../../../../../../schemas/xbrl/instance/2003/token-item-type/v1.json",
+  "tests": [
+    {
+      "description": "Valid - simple token",
+      "data": "token",
+      "valid": true
+    },
+    {
+      "description": "Valid - token with single spaces",
+      "data": "hello world",
+      "valid": true
+    },
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Invalid - leading space",
+      "data": " token",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing space",
+      "data": "token ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - multiple consecutive spaces",
+      "data": "hello  world",
+      "valid": false
+    }
+  ]
+}

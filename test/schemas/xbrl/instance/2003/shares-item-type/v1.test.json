@@ -1,0 +1,60 @@
+{
+  "target": "../../../../../../schemas/xbrl/instance/2003/shares-item-type/v1.json",
+  "tests": [
+    {
+      "description": "Valid - whole shares",
+      "data": 1000,
+      "valid": true
+    },
+    {
+      "description": "Valid - fractional shares",
+      "data": 123.456,
+      "valid": true
+    },
+    {
+      "description": "Valid - zero shares",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - high precision fractional shares",
+      "data": 9876.12,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision 20 digit shares",
+      "data": 1.2345678901234567890e+19,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision with decimals",
+      "data": 1.234567890123456800e+17,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary precision 25 digits",
+      "data": 1.234567890123456789012345e+24,
+      "valid": true
+    },
+    {
+      "description": "Invalid - string type",
+      "data": "1000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - text",
+      "data": "xyz",
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    }
+  ]
+}

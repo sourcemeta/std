@@ -1,0 +1,70 @@
+{
+  "target": "../../../../../../schemas/w3c/xmlschema/2001/string/v1.json",
+  "tests": [
+    {
+      "description": "Valid - simple string",
+      "data": "hello world",
+      "valid": true
+    },
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Valid - string with special characters",
+      "data": "Hello, 世界! @#$%^&*()",
+      "valid": true
+    },
+    {
+      "description": "Valid - string with whitespace",
+      "data": "  spaces  and\ttabs\nand newlines  ",
+      "valid": true
+    },
+    {
+      "description": "Valid - numeric string",
+      "data": "12345",
+      "valid": true
+    },
+    {
+      "description": "Invalid - number type",
+      "data": 123,
+      "valid": false
+    },
+    {
+      "description": "Invalid - boolean type",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null type",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid - object type",
+      "data": {},
+      "valid": false
+    },
+    {
+      "description": "Invalid - array type",
+      "data": [],
+      "valid": false
+    },
+    {
+      "description": "Invalid - control character outside the XML Char production",
+      "valid": false,
+      "data": "a\u0007b"
+    },
+    {
+      "description": "Invalid - the noncharacter U+FFFE",
+      "valid": false,
+      "data": "a￾b"
+    },
+    {
+      "description": "Valid - tab, newline, and carriage return are XML Chars",
+      "valid": true,
+      "data": "a\t\n\rb"
+    }
+  ]
+}

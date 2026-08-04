@@ -1,0 +1,105 @@
+{
+  "target": "../../../../../../schemas/w3c/xmlschema/2001/unsigned-long/v1.json",
+  "tests": [
+    {
+      "description": "Valid - zero",
+      "data": 0,
+      "valid": true
+    },
+    {
+      "description": "Valid - one",
+      "data": 1,
+      "valid": true
+    },
+    {
+      "description": "Valid - int64 max",
+      "data": 9223372036854775807,
+      "valid": true
+    },
+    {
+      "description": "Valid - uint32 max",
+      "data": 4294967296,
+      "valid": true
+    },
+    {
+      "description": "Valid - arbitrary",
+      "data": 42,
+      "valid": true
+    },
+    {
+      "description": "Valid - large value",
+      "data": 123456789012345,
+      "valid": true
+    },
+    {
+      "description": "Valid - uint64 maximum",
+      "data": 1.8446744073709551615e+19,
+      "valid": true
+    },
+    {
+      "description": "Valid - just above int64 max",
+      "data": 9.223372036854775808e+18,
+      "valid": true
+    },
+    {
+      "description": "Valid - near uint64 maximum",
+      "data": 1.8446744073709551614e+19,
+      "valid": true
+    },
+    {
+      "description": "Valid - large mid-range value",
+      "data": 1.0000000000000000000e+19,
+      "valid": true
+    },
+    {
+      "description": "Invalid - above uint64 maximum",
+      "data": 1.8446744073709551616e+19,
+      "valid": false
+    },
+    {
+      "description": "Invalid - large above maximum",
+      "data": 2.0000000000000000000e+19,
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative one",
+      "data": -1,
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative value",
+      "data": -1000,
+      "valid": false
+    },
+    {
+      "description": "Invalid - decimal point",
+      "data": 1.5,
+      "valid": false
+    },
+    {
+      "description": "Invalid - string type",
+      "data": "42",
+      "valid": false
+    },
+    {
+      "description": "Invalid - string with leading zeros",
+      "data": "01",
+      "valid": false
+    },
+    {
+      "description": "Invalid - boolean",
+      "data": true,
+      "valid": false
+    },
+    {
+      "description": "Invalid - null",
+      "data": null,
+      "valid": false
+    },
+    {
+      "description": "Invalid - empty string",
+      "data": "",
+      "valid": false
+    }
+  ]
+}

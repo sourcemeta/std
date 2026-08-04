@@ -1,0 +1,35 @@
+{
+  "target": "../../../../../../schemas/xbrl/instance/2003/any-uri-item-type/v1.json",
+  "tests": [
+    {
+      "description": "Valid - http URL",
+      "data": "http://example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - https URL",
+      "data": "https://example.com/path?query=value",
+      "valid": true
+    },
+    {
+      "description": "Valid - relative URI",
+      "data": "../path/to/resource",
+      "valid": true
+    },
+    {
+      "description": "Valid - empty string",
+      "data": "",
+      "valid": true
+    },
+    {
+      "description": "Valid - spaces are within the XSD anyURI lexical space",
+      "data": "http://example.com/path with spaces",
+      "valid": true
+    },
+    {
+      "description": "Invalid - number instead of string",
+      "data": 123,
+      "valid": false
+    }
+  ]
+}
