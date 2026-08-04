@@ -1,0 +1,140 @@
+{
+  "target": "../../examples/sensor-reading.json",
+  "tests": [
+    {
+      "description": "Valid - complete observation",
+      "data": {
+        "observedProperty": "http://qudt.org/vocab/quantitykind/Voltage",
+        "result": 743.2,
+        "resultTime": "2026-08-03T14:30:00Z",
+        "location": {
+          "type": "Point",
+          "coordinates": [ -58.3816, -34.6037 ]
+        }
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "http://www.w3.org/ns/sosa/Observation" ],
+          "https://schema.org/location": [
+            {
+              "@type": [ "https://purl.org/geojson/vocab#Point" ],
+              "https://purl.org/geojson/vocab#coordinates": [
+                {
+                  "@list": [
+                    {
+                      "@value": -58.3816
+                    },
+                    {
+                      "@value": -34.6037
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "http://www.w3.org/ns/sosa/observedProperty": [
+            {
+              "@id": "http://qudt.org/vocab/quantitykind/Voltage"
+            }
+          ],
+          "http://www.w3.org/ns/sosa/hasResult": [
+            {
+              "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+              "http://qudt.org/schema/qudt/value": [
+                {
+                  "@value": 743.2
+                }
+              ],
+              "http://qudt.org/schema/qudt/hasUnit": [
+                {
+                  "@id": "http://qudt.org/vocab/unit/MilliV"
+                }
+              ]
+            }
+          ],
+          "http://www.w3.org/ns/sosa/resultTime": [
+            {
+              "@value": "2026-08-03T14:30:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Valid - observation without a location",
+      "data": {
+        "observedProperty": "http://qudt.org/vocab/quantitykind/Voltage",
+        "result": 12,
+        "resultTime": "2026-08-03T14:31:00Z"
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "http://www.w3.org/ns/sosa/Observation" ],
+          "http://www.w3.org/ns/sosa/observedProperty": [
+            {
+              "@id": "http://qudt.org/vocab/quantitykind/Voltage"
+            }
+          ],
+          "http://www.w3.org/ns/sosa/hasResult": [
+            {
+              "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+              "http://qudt.org/schema/qudt/value": [
+                {
+                  "@value": 12
+                }
+              ],
+              "http://qudt.org/schema/qudt/hasUnit": [
+                {
+                  "@id": "http://qudt.org/vocab/unit/MilliV"
+                }
+              ]
+            }
+          ],
+          "http://www.w3.org/ns/sosa/resultTime": [
+            {
+              "@value": "2026-08-03T14:31:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Invalid - missing result time",
+      "data": {
+        "observedProperty": "http://qudt.org/vocab/quantitykind/Voltage",
+        "result": 743.2
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - space separated timestamp",
+      "data": {
+        "observedProperty": "http://qudt.org/vocab/quantitykind/Voltage",
+        "result": 743.2,
+        "resultTime": "2026-08-03 14:30:00Z"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - result as a string",
+      "data": {
+        "observedProperty": "http://qudt.org/vocab/quantitykind/Voltage",
+        "result": "743.2",
+        "resultTime": "2026-08-03T14:30:00Z"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - location as a bare coordinate pair",
+      "data": {
+        "observedProperty": "http://qudt.org/vocab/quantitykind/Voltage",
+        "result": 743.2,
+        "resultTime": "2026-08-03T14:30:00Z",
+        "location": [ -58.3816, -34.6037 ]
+      },
+      "valid": false
+    }
+  ]
+}

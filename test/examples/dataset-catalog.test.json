@@ -1,0 +1,111 @@
+{
+  "target": "../../examples/dataset-catalog.json",
+  "tests": [
+    {
+      "description": "Valid - complete entry",
+      "data": {
+        "title": "Buenos Aires Air Quality Measurements",
+        "landingPage": "https://data.example.com/air-quality",
+        "catalog": {
+          "title": "City of Buenos Aires Open Data"
+        },
+        "provenance": {
+          "creator": "Environmental Protection Agency",
+          "created": "2024-11-02"
+        }
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "http://www.w3.org/ns/dcat#Dataset" ],
+          "@reverse": {
+            "http://www.w3.org/ns/dcat#dataset": [
+              {
+                "@type": [ "http://www.w3.org/ns/dcat#Catalog" ],
+                "http://purl.org/dc/terms/title": [
+                  {
+                    "@value": "City of Buenos Aires Open Data"
+                  }
+                ]
+              }
+            ]
+          },
+          "http://www.w3.org/ns/dcat#landingPage": [
+            {
+              "@id": "https://data.example.com/air-quality"
+            }
+          ],
+          "http://purl.org/dc/terms/provenance": [
+            {
+              "@graph": [
+                {
+                  "http://purl.org/dc/terms/created": [
+                    {
+                      "@value": "2024-11-02",
+                      "@type": "http://www.w3.org/2001/XMLSchema#date"
+                    }
+                  ],
+                  "http://purl.org/dc/terms/creator": [
+                    {
+                      "@value": "Environmental Protection Agency"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "http://purl.org/dc/terms/title": [
+            {
+              "@value": "Buenos Aires Air Quality Measurements"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Valid - title only",
+      "data": {
+        "title": "Buenos Aires Air Quality Measurements"
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "http://www.w3.org/ns/dcat#Dataset" ],
+          "http://purl.org/dc/terms/title": [
+            {
+              "@value": "Buenos Aires Air Quality Measurements"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Invalid - missing title",
+      "data": {
+        "landingPage": "https://data.example.com/air-quality"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - unknown catalog property",
+      "data": {
+        "title": "Buenos Aires Air Quality Measurements",
+        "catalog": {
+          "title": "City of Buenos Aires Open Data",
+          "homepage": "https://data.example.com"
+        }
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format provenance date",
+      "data": {
+        "title": "Buenos Aires Air Quality Measurements",
+        "provenance": {
+          "created": "20241102"
+        }
+      },
+      "valid": false
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "target": "../../examples/publication-record.json",
+  "tests": [
+    {
+      "description": "Valid - complete record",
+      "data": {
+        "title": "ألف ليلة وليلة",
+        "abstract": "مجموعة من القصص الشعبية من العصر الذهبي الإسلامي",
+        "language": "ara",
+        "issued": "2019-03-14",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "http://purl.org/dc/terms/BibliographicResource" ],
+          "http://purl.org/dc/terms/abstract": [
+            {
+              "@value": "مجموعة من القصص الشعبية من العصر الذهبي الإسلامي",
+              "@language": "ar",
+              "@direction": "rtl"
+            }
+          ],
+          "http://purl.org/dc/terms/issued": [
+            {
+              "@value": "2019-03-14",
+              "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+          ],
+          "http://purl.org/dc/terms/language": [
+            {
+              "@id": "http://id.loc.gov/vocabulary/iso639-2/ara"
+            }
+          ],
+          "http://purl.org/dc/terms/license": [
+            {
+              "@id": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "http://purl.org/dc/terms/title": [
+            {
+              "@value": "ألف ليلة وليلة",
+              "@language": "ar",
+              "@direction": "rtl"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Valid - reserved local-use language of the work",
+      "data": {
+        "title": "مخطوطة بلهجة محلية",
+        "language": "qaa"
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "http://purl.org/dc/terms/BibliographicResource" ],
+          "http://purl.org/dc/terms/language": [
+            {
+              "@value": "qaa"
+            }
+          ],
+          "http://purl.org/dc/terms/title": [
+            {
+              "@value": "مخطوطة بلهجة محلية",
+              "@language": "ar",
+              "@direction": "rtl"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Invalid - missing language",
+      "data": {
+        "title": "ألف ليلة وليلة"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - set-1 language code",
+      "data": {
+        "title": "ألف ليلة وليلة",
+        "language": "ar"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format date",
+      "data": {
+        "title": "ألف ليلة وليلة",
+        "language": "ara",
+        "issued": "20190314"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - relative license reference",
+      "data": {
+        "title": "ألف ليلة وليلة",
+        "language": "ara",
+        "license": "licenses/by/4.0"
+      },
+      "valid": false
+    }
+  ]
+}

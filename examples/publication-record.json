@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Publication Record",
+  "description": "A bibliographic catalog entry for an Arabic language publisher, with right to left titles, the language of the work, the publication date, and the license as linked data through the standard library",
+  "examples": [
+    {
+      "title": "ألف ليلة وليلة",
+      "abstract": "مجموعة من القصص الشعبية من العصر الذهبي الإسلامي",
+      "language": "ara",
+      "issued": "2019-03-14",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "x-jsonld-type": "http://purl.org/dc/terms/BibliographicResource",
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [
+    "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"
+  ],
+  "type": "object",
+  "required": [ "title", "language" ],
+  "properties": {
+    "title": {
+      "x-jsonld-direction": "rtl",
+      "x-jsonld-id": "http://purl.org/dc/terms/title",
+      "x-jsonld-language": "ar",
+      "type": "string"
+    },
+    "abstract": {
+      "x-jsonld-direction": "rtl",
+      "x-jsonld-id": "http://purl.org/dc/terms/abstract",
+      "x-jsonld-language": "ar",
+      "type": "string"
+    },
+    "language": {
+      "x-jsonld-id": "http://purl.org/dc/terms/language",
+      "$ref": "../schemas/iso/language/2023/set-2-bibliographic/v1.json"
+    },
+    "issued": {
+      "x-jsonld-id": "http://purl.org/dc/terms/issued",
+      "$ref": "../schemas/iso/datetime/2019/date/calendar-extended/v1.json"
+    },
+    "license": {
+      "x-jsonld-id": "http://purl.org/dc/terms/license",
+      "$ref": "../schemas/ietf/uri/3986/uri/v1.json"
+    }
+  },
+  "additionalProperties": false
+}

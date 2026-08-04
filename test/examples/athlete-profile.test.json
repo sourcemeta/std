@@ -1,0 +1,141 @@
+{
+  "target": "../../examples/athlete-profile.json",
+  "tests": [
+    {
+      "description": "Valid - complete profile",
+      "data": {
+        "name": "Lionel Messi",
+        "birthDate": "1987-06-24",
+        "nationality": "AR",
+        "height": 1.7,
+        "weight": 72,
+        "languages": [ "es", "en" ]
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://schema.org/Person" ],
+          "https://schema.org/birthDate": [
+            {
+              "@value": "1987-06-24",
+              "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+          ],
+          "https://schema.org/height": [
+            {
+              "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+              "http://qudt.org/schema/qudt/value": [
+                {
+                  "@value": 1.7
+                }
+              ],
+              "http://qudt.org/schema/qudt/hasUnit": [
+                {
+                  "@id": "http://qudt.org/vocab/unit/M"
+                }
+              ]
+            }
+          ],
+          "https://schema.org/knowsLanguage": [
+            {
+              "@id": "http://id.loc.gov/vocabulary/iso639-1/es"
+            },
+            {
+              "@id": "http://id.loc.gov/vocabulary/iso639-1/en"
+            }
+          ],
+          "https://schema.org/name": [
+            {
+              "@value": "Lionel Messi"
+            }
+          ],
+          "https://schema.org/nationality": [
+            {
+              "@id": "http://publications.europa.eu/resource/authority/country/ARG"
+            }
+          ],
+          "https://schema.org/weight": [
+            {
+              "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+              "http://qudt.org/schema/qudt/value": [
+                {
+                  "@value": 72
+                }
+              ],
+              "http://qudt.org/schema/qudt/hasUnit": [
+                {
+                  "@id": "http://qudt.org/vocab/unit/KiloGM"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Valid - minimal profile",
+      "data": {
+        "name": "Simone Biles",
+        "nationality": "US"
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://schema.org/Person" ],
+          "https://schema.org/name": [
+            {
+              "@value": "Simone Biles"
+            }
+          ],
+          "https://schema.org/nationality": [
+            {
+              "@id": "http://publications.europa.eu/resource/authority/country/USA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Invalid - missing nationality",
+      "data": {
+        "name": "Lionel Messi"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - alpha-3 country code",
+      "data": {
+        "name": "Lionel Messi",
+        "nationality": "ARG"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative height",
+      "data": {
+        "name": "Lionel Messi",
+        "nationality": "AR",
+        "height": -1.7
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - set-2 language code in the list",
+      "data": {
+        "name": "Lionel Messi",
+        "nationality": "AR",
+        "languages": [ "spa" ]
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - unknown property",
+      "data": {
+        "name": "Lionel Messi",
+        "nationality": "AR",
+        "club": "Inter Miami"
+      },
+      "valid": false
+    }
+  ]
+}

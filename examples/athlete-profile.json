@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Athlete Profile",
+  "description": "A sports roster entry that describes an athlete as a Schema.org person, combining identity, physical measurements, and spoken languages from the standard library",
+  "examples": [
+    {
+      "name": "Lionel Messi",
+      "birthDate": "1987-06-24",
+      "nationality": "AR",
+      "height": 1.7,
+      "weight": 72,
+      "languages": [ "es" ]
+    }
+  ],
+  "x-jsonld-type": "https://schema.org/Person",
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [ "https://schema.org/Person" ],
+  "type": "object",
+  "required": [ "name", "nationality" ],
+  "properties": {
+    "name": {
+      "x-jsonld-id": "https://schema.org/name",
+      "type": "string"
+    },
+    "birthDate": {
+      "x-jsonld-id": "https://schema.org/birthDate",
+      "$ref": "../schemas/iso/datetime/2019/date/calendar-extended/v1.json"
+    },
+    "nationality": {
+      "x-jsonld-id": "https://schema.org/nationality",
+      "$ref": "../schemas/iso/country/2020/alpha-2/v1.json"
+    },
+    "height": {
+      "x-jsonld-id": "https://schema.org/height",
+      "$ref": "../schemas/bipm/si/2019/base/unit/metre/v1.json"
+    },
+    "weight": {
+      "x-jsonld-id": "https://schema.org/weight",
+      "$ref": "../schemas/bipm/si/2019/base/unit/kilogram/v1.json"
+    },
+    "languages": {
+      "x-jsonld-container": "@set",
+      "x-jsonld-id": "https://schema.org/knowsLanguage",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "../schemas/iso/language/2023/set-1/v1.json"
+      }
+    }
+  },
+  "additionalProperties": false
+}

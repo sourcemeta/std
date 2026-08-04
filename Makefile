@@ -9,12 +9,12 @@ TIME ?= time
 include generated.mk
 
 all: common test node_modules
-	$(NODE) $(JSONSCHEMA) fmt schemas rules test
+	$(NODE) $(JSONSCHEMA) fmt schemas examples rules test
 
 .PHONY: common
 common: $(GENERATED) node_modules
-	$(TIME) $(NODE) $(JSONSCHEMA) metaschema schemas rules
-	$(TIME) $(NODE) $(JSONSCHEMA) lint schemas
+	$(TIME) $(NODE) $(JSONSCHEMA) metaschema schemas examples rules
+	$(TIME) $(NODE) $(JSONSCHEMA) lint schemas examples
 	$(SHELLCHECK) scripts/*.sh
 	./scripts/quality-schemas-tests-mirror.sh
 	JQ="$(JQ)" ./scripts/quality-templates-xbrl-utr-mirror.sh
@@ -22,7 +22,7 @@ common: $(GENERATED) node_modules
 
 .PHONY: lint
 lint: common node_modules
-	$(TIME) $(NODE) $(JSONSCHEMA) fmt schemas rules test --check
+	$(TIME) $(NODE) $(JSONSCHEMA) fmt schemas examples rules test --check
 
 .PHONY: test
 test: common node_modules
