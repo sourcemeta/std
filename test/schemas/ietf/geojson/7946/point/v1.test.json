@@ -59,7 +59,24 @@
         "type": "Point",
         "coordinates": [ -122.419, 37.7749 ]
       },
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://purl.org/geojson/vocab#Point" ],
+          "https://purl.org/geojson/vocab#coordinates": [
+            {
+              "@list": [
+                {
+                  "@value": -122.419
+                },
+                {
+                  "@value": 37.7749
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "RFC 7946 Appendix A.1 - Point",

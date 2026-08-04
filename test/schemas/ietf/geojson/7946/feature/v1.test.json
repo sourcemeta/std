@@ -78,7 +78,18 @@
         "geometry": null,
         "properties": null
       },
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://purl.org/geojson/vocab#Feature" ],
+          "https://purl.org/geojson/vocab#properties": [
+            {
+              "@value": null,
+              "@type": "@json"
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "Valid Feature with Point geometry",

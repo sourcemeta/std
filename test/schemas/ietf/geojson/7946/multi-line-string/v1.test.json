@@ -69,7 +69,17 @@
         "type": "MultiLineString",
         "coordinates": []
       },
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://purl.org/geojson/vocab#MultiLineString" ],
+          "https://purl.org/geojson/vocab#coordinates": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "Valid MultiLineString with one line",

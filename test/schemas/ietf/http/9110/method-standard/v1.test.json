@@ -29,7 +29,12 @@
     {
       "description": "Valid - GET",
       "data": "GET",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://www.w3.org/2011/http-methods#GET"
+        }
+      ]
     },
     {
       "description": "Valid - HEAD",
@@ -134,7 +139,8 @@
     {
       "description": "Valid - PROPFIND (RFC 4918)",
       "data": "PROPFIND",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - PROPPATCH (RFC 4918)",

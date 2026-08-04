@@ -4,7 +4,12 @@
     {
       "description": "Valid - A (REC)",
       "data": "A",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "https://si-digital-framework.org/SI/units/ampere"
+        }
+      ]
     },
     {
       "description": "Invalid - unknown unit",

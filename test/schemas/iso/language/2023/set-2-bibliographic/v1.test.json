@@ -29,7 +29,12 @@
     {
       "description": "Valid - English (bibliographic)",
       "data": "eng",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://id.loc.gov/vocabulary/iso639-2/eng"
+        }
+      ]
     },
     {
       "description": "Valid - Spanish",
@@ -144,7 +149,8 @@
     {
       "description": "Valid - reserved local-use code",
       "valid": true,
-      "data": "qaa"
+      "data": "qaa",
+      "rdf": []
     },
     {
       "description": "Valid - reserved local-use code at the range end",

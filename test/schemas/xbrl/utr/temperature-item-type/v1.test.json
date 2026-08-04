@@ -4,7 +4,12 @@
     {
       "description": "Valid - Celsius",
       "data": "Celsius",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "https://si-digital-framework.org/SI/units/degreeCelsius"
+        }
+      ]
     },
     {
       "description": "Valid - K",

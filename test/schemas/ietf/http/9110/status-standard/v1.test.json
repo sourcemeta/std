@@ -34,7 +34,12 @@
     {
       "description": "Valid - 100 Continue",
       "data": 100,
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://www.w3.org/2011/http-statusCodes#Continue"
+        }
+      ]
     },
     {
       "description": "Valid - 101 Switching Protocols",
@@ -139,7 +144,8 @@
     {
       "description": "Valid - 308 Permanent Redirect",
       "data": 308,
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Invalid - 309 (not in RFC 9110)",

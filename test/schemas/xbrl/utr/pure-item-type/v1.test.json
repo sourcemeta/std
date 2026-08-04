@@ -4,12 +4,18 @@
     {
       "description": "Valid - Monetary_per_Monetary",
       "data": "Monetary_per_Monetary",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - pure",
       "data": "pure",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://qudt.org/vocab/unit/UNITLESS"
+        }
+      ]
     },
     {
       "description": "Valid - Rate",

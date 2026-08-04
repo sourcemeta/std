@@ -29,7 +29,12 @@
     {
       "description": "Valid - Afro-Asiatic languages",
       "data": "afa",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://id.loc.gov/vocabulary/iso639-5/afa"
+        }
+      ]
     },
     {
       "description": "Valid - Algonquian languages",

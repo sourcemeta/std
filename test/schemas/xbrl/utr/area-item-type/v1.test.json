@@ -4,7 +4,12 @@
     {
       "description": "Valid - acre",
       "data": "acre",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://qudt.org/vocab/unit/AC"
+        }
+      ]
     },
     {
       "description": "Valid - square foot",

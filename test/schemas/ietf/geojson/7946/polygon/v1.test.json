@@ -80,7 +80,62 @@
           ]
         ]
       },
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://purl.org/geojson/vocab#Polygon" ],
+          "https://purl.org/geojson/vocab#coordinates": [
+            {
+              "@list": [
+                {
+                  "@list": [
+                    {
+                      "@list": [
+                        {
+                          "@value": 0
+                        },
+                        {
+                          "@value": 0
+                        }
+                      ]
+                    },
+                    {
+                      "@list": [
+                        {
+                          "@value": 1
+                        },
+                        {
+                          "@value": 0
+                        }
+                      ]
+                    },
+                    {
+                      "@list": [
+                        {
+                          "@value": 1
+                        },
+                        {
+                          "@value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "@list": [
+                        {
+                          "@value": 0
+                        },
+                        {
+                          "@value": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "RFC 7946 Appendix A.3 - Polygon without holes",

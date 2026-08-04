@@ -4,7 +4,12 @@
     {
       "description": "Valid - USD",
       "data": "USD",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/currency/USD"
+        }
+      ]
     },
     {
       "description": "Valid - EUR",

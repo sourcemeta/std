@@ -4,7 +4,8 @@
     {
       "description": "Valid - Boe",
       "data": "Boe",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - Btu",
@@ -14,7 +15,12 @@
     {
       "description": "Valid - ft_lb",
       "data": "ft_lb",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://qudt.org/vocab/unit/FT-LB_F"
+        }
+      ]
     },
     {
       "description": "Invalid - unknown unit",

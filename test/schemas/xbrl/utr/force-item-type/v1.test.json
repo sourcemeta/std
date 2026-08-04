@@ -4,7 +4,12 @@
     {
       "description": "Valid - N",
       "data": "N",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "https://si-digital-framework.org/SI/units/newton"
+        }
+      ]
     },
     {
       "description": "Invalid - unknown unit",

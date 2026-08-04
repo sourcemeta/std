@@ -59,7 +59,12 @@
         "type": "GeometryCollection",
         "geometries": []
       },
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://purl.org/geojson/vocab#GeometryCollection" ]
+        }
+      ]
     },
     {
       "description": "Valid GeometryCollection with Point",

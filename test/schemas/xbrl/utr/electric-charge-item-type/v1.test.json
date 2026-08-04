@@ -4,7 +4,12 @@
     {
       "description": "Valid - Ah",
       "data": "Ah",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://qudt.org/vocab/unit/A-HR"
+        }
+      ]
     },
     {
       "description": "Valid - C",
