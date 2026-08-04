@@ -29,7 +29,12 @@
     {
       "description": "Empty object is valid",
       "data": {},
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "http://www.w3.org/ns/hydra/core#Error" ]
+        }
+      ]
     },
     {
       "description": "Valid minimal problem with type only",

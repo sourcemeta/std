@@ -65,7 +65,17 @@
         "type": "MultiPoint",
         "coordinates": []
       },
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://purl.org/geojson/vocab#MultiPoint" ],
+          "https://purl.org/geojson/vocab#coordinates": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "Valid MultiPoint with one point",

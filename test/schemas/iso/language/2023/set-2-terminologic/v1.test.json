@@ -29,7 +29,12 @@
     {
       "description": "Valid - Albanian (terminologic - native name)",
       "data": "sqi",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://id.loc.gov/vocabulary/iso639-2/sqi"
+        }
+      ]
     },
     {
       "description": "Valid - Basque (terminologic - native name)",
@@ -134,7 +139,8 @@
     {
       "description": "Valid - reserved local-use code",
       "valid": true,
-      "data": "qaa"
+      "data": "qaa",
+      "rdf": []
     }
   ]
 }

@@ -4,7 +4,12 @@
     {
       "description": "Valid - Hz (REC)",
       "data": "Hz",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "https://si-digital-framework.org/SI/units/hertz"
+        }
+      ]
     },
     {
       "description": "Invalid - unknown unit",

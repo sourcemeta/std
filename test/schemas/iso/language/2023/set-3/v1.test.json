@@ -29,7 +29,12 @@
     {
       "description": "Valid - English",
       "data": "eng",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://lexvo.org/id/iso639-3/eng"
+        }
+      ]
     },
     {
       "description": "Valid - Spanish",

@@ -4,7 +4,12 @@
     {
       "description": "Valid - Pa",
       "data": "Pa",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "https://si-digital-framework.org/SI/units/pascal"
+        }
+      ]
     },
     {
       "description": "Valid - Bar",

@@ -29,7 +29,12 @@
     {
       "description": "Valid - Gold",
       "data": "XAU",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/currency/XAU"
+        }
+      ]
     },
     {
       "description": "Valid - Silver",

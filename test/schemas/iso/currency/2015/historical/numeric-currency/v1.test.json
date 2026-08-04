@@ -29,7 +29,12 @@
     {
       "description": "Valid - Afghani (4)",
       "data": 4,
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/currency/AFA"
+        }
+      ]
     },
     {
       "description": "Valid - Lek (8)",

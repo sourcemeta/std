@@ -19,7 +19,12 @@
     {
       "description": "Valid - Mvdol (984 - Bolivia)",
       "data": 984,
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/currency/BOV"
+        }
+      ]
     },
     {
       "description": "Valid - Unidad de Fomento (990 - Chile)",

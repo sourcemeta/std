@@ -24,7 +24,12 @@
     {
       "description": "URL: HTTP with authority",
       "data": "http://example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "http://example.com"
+        }
+      ]
     },
     {
       "description": "URL: HTTPS with path and query",

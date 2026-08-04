@@ -59,7 +59,12 @@
         "type": "FeatureCollection",
         "features": []
       },
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://purl.org/geojson/vocab#FeatureCollection" ]
+        }
+      ]
     },
     {
       "description": "Valid FeatureCollection with one feature",

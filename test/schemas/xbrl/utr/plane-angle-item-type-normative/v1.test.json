@@ -4,7 +4,12 @@
     {
       "description": "Valid - Degree (REC)",
       "data": "Degree",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "https://si-digital-framework.org/SI/units/degree"
+        }
+      ]
     },
     {
       "description": "Valid - rad (REC)",
