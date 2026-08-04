@@ -1,4 +1,5 @@
 build
+examples
 external
 generate
 meta
