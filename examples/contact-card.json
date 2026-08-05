@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Contact Card",
+  "description": "A personal contact entry that identifies the person by their mailbox as a mailto IRI, their federated account as an acct IRI, and their website, all minted from the standard library",
+  "examples": [
+    {
+      "name": "Grace Hopper",
+      "email": "grace.hopper@Example.COM",
+      "account": "grace@social.example.net",
+      "website": "https://example.com/~grace"
+    }
+  ],
+  "x-jsonld-type": "https://schema.org/Person",
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [ "https://schema.org/Person" ],
+  "type": "object",
+  "required": [ "name", "email" ],
+  "properties": {
+    "name": {
+      "x-jsonld-id": "https://schema.org/name",
+      "type": "string"
+    },
+    "email": {
+      "x-jsonld-id": "http://xmlns.com/foaf/0.1/mbox",
+      "$ref": "../schemas/ietf/email/5321/address/v1.json"
+    },
+    "account": {
+      "x-jsonld-id": "https://schema.org/identifier",
+      "x-jsonld-self": "acct",
+      "type": "string"
+    },
+    "website": {
+      "x-jsonld-id": "http://xmlns.com/foaf/0.1/homepage",
+      "$ref": "../schemas/ietf/uri/3986/uri/v1.json"
+    }
+  },
+  "additionalProperties": false
+}

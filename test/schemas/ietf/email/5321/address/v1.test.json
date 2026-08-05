@@ -9,122 +9,242 @@
     {
       "description": "Basic email format",
       "data": "simple@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:simple@example.com"
+        }
+      ]
     },
     {
       "description": "Local-part with dot",
       "data": "very.common@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:very.common@example.com"
+        }
+      ]
     },
     {
       "description": "Mixed case local and domain",
       "data": "FirstName.LastName@EasierReading.org",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:FirstName.LastName@easierreading.org"
+        }
+      ]
     },
     {
       "description": "Single character local part",
       "data": "x@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:x@example.com"
+        }
+      ]
     },
     {
       "description": "Local-part with hyphens and subdomains",
       "data": "long.email-address-with-hyphens@and.subdomains.example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:long.email-address-with-hyphens@and.subdomains.example.com"
+        }
+      ]
     },
     {
       "description": "Local-part with plus sign and tags",
       "data": "user.name+tag+sorting@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:user.name+tag+sorting@example.com"
+        }
+      ]
     },
     {
       "description": "Local-part with slash",
       "data": "name/surname@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:name%2Fsurname@example.com"
+        }
+      ]
     },
     {
       "description": "Local-part with underscore",
       "data": "user_name@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:user_name@example.com"
+        }
+      ]
     },
     {
       "description": "Local-part and domain with hyphen",
       "data": "user-name@sub-domain.example.co.uk",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:user-name@sub-domain.example.co.uk"
+        }
+      ]
     },
     {
       "description": "Quoted local-part with double dot inside",
       "data": "\"john..doe\"@example.org",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:%22john..doe%22@example.org"
+        }
+      ]
     },
     {
       "description": "Quoted local-part with space",
       "data": "\" \"@example.org",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:%22%20%22@example.org"
+        }
+      ]
     },
     {
       "description": "Quoted local-part ending with dot",
       "data": "\"john.doe.\"@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:%22john.doe.%22@example.com"
+        }
+      ]
     },
     {
       "description": "Quoted local-part containing @ symbol",
       "data": "\"john@doe\"@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:%22john%40doe%22@example.com"
+        }
+      ]
     },
     {
       "description": "Example with all allowed special characters in local-part",
       "data": "test!#$%&'*+/=?^_`{|}~@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:test!%23$%25%26'*+%2F%3D%3F%5E_%60%7B%7C%7D~@example.com"
+        }
+      ]
     },
     {
       "description": "Bang path style local-part",
       "data": "mailhost!username@example.org",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:mailhost!username@example.org"
+        }
+      ]
     },
     {
       "description": "Percent hack routing",
       "data": "user%example.com@example.org",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:user%25example.com@example.org"
+        }
+      ]
     },
     {
       "description": "Local-part ending with dash",
       "data": "user-@example.org",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:user-@example.org"
+        }
+      ]
     },
     {
       "description": "IPv4 address literal domain",
       "data": "postmaster@[123.123.123.123]",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:postmaster@%5B123.123.123.123%5D"
+        }
+      ]
     },
     {
       "description": "IPv6 address literal domain",
       "data": "postmaster@[IPv6:2001:db8::85a3:0:0:8a2e:370:7334]",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:postmaster@%5BIPv6:2001:db8::85a3:0:0:8a2e:370:7334%5D"
+        }
+      ]
     },
     {
       "description": "Local-part starts with underscore",
       "data": "_test123@example.org",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:_test123@example.org"
+        }
+      ]
     },
     {
       "description": "Plus in local-part with uppercase domain",
       "data": "test+filter@Example.COM",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:test+filter@example.com"
+        }
+      ]
     },
     {
       "description": "Dot in local-part",
       "data": "test.filter@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:test.filter@example.com"
+        }
+      ]
     },
     {
       "description": "Underscore in local-part",
       "data": "test_filter@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:test_filter@example.com"
+        }
+      ]
     },
     {
       "description": "Domain with no TLD (dotless domain)",
       "data": "admin@example",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:admin@example"
+        }
+      ]
     },
     {
       "description": "Comments around local, domain, and address",
@@ -134,7 +254,12 @@
     {
       "description": "Quoted local-part with space and letters",
       "data": "\"Fred Bloggs\"@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:%22Fred%20Bloggs%22@example.com"
+        }
+      ]
     },
     {
       "description": "Domain literal with letters and dot",
@@ -144,27 +269,52 @@
     {
       "description": "All uppercase local and domain",
       "data": "USER@EXAMPLE.COM",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:USER@example.com"
+        }
+      ]
     },
     {
       "description": "Local-part with tilde and domain with hyphen",
       "data": "a~b@c-domain.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:a~b@c-domain.com"
+        }
+      ]
     },
     {
       "description": "Local-part with slash and plus",
       "data": "first.last+category/department@domain.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:first.last+category%2Fdepartment@domain.com"
+        }
+      ]
     },
     {
       "description": "Local-part with apostrophe",
       "data": "o'reilly@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:o'reilly@example.com"
+        }
+      ]
     },
     {
       "description": "Local-part with multiple route characters",
       "data": "dizzy%example.com+tag@example.org",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:dizzy%25example.com+tag@example.org"
+        }
+      ]
     },
     {
       "description": "Email with comment in domain",
@@ -179,7 +329,12 @@
     {
       "description": "Complex quoted local-part with many allowed symbols",
       "data": "\"very.(),:;<>[]\\\".VERY.\\\"very@\\\\ \\\"very\\\".unusual\"@strange.example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:%22very.()%2C:%3B%3C%3E%5B%5D%5C%22.VERY.%5C%22very%40%5C%5C%20%5C%22very%5C%22.unusual%22@strange.example.com"
+        }
+      ]
     },
     {
       "description": "Missing @ symbol",
@@ -249,7 +404,12 @@
     {
       "description": "Numeric TLD in domain",
       "data": "user@example.123",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:user@example.123"
+        }
+      ]
     },
     {
       "description": "Multiple @ symbols",
@@ -329,12 +489,22 @@
     {
       "description": "Uppercase numeric TLD",
       "data": "user@EXAMPLE.123",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:user@example.123"
+        }
+      ]
     },
     {
       "description": "IP address without brackets in domain",
       "data": "user@123.123.123.123",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:user@123.123.123.123"
+        }
+      ]
     },
     {
       "description": "IPv6 address without brackets",
@@ -344,7 +514,12 @@
     {
       "description": "Single quote in local part",
       "data": "'test'@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:'test'@example.com"
+        }
+      ]
     },
     {
       "description": "Double quotes misplacement",
