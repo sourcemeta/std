@@ -3,6 +3,16 @@
   "title": "Frequency",
   "description": "A derived quantity measured in hertz",
   "examples": [ 1, 50, 60, 1000, 1000000, 2400000000.0 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasQuantityKind": {
+      "@id": "http://qudt.org/vocab/quantitykind/Frequency"
+    },
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/HZ"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "type": "number",

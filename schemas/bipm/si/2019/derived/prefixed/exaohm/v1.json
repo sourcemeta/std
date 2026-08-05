@@ -3,6 +3,13 @@
   "title": "Exaohm",
   "description": "A multiple of ohm equal to 1e18 ohm",
   "examples": [ 1, 100, 1000 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "https://si-digital-framework.org/SI/units/exaohm"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "type": "number",

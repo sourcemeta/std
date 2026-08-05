@@ -4,7 +4,8 @@
     {
       "description": "Valid - zero",
       "data": 0,
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - positive",

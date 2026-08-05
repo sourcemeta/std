@@ -4,7 +4,8 @@
     {
       "description": "Valid - positive number",
       "data": 10,
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - decimal",

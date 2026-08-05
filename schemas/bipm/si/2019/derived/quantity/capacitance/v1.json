@@ -3,6 +3,16 @@
   "title": "Capacitance",
   "description": "A derived quantity measured in farads",
   "examples": [ 1e-12, 1e-9, 1e-6, 0.001, 1, 100 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasQuantityKind": {
+      "@id": "http://qudt.org/vocab/quantitykind/Capacitance"
+    },
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/FARAD"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "type": "number",

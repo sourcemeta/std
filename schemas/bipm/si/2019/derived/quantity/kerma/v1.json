@@ -3,6 +3,16 @@
   "title": "Kerma",
   "description": "A derived quantity measured in grays",
   "examples": [ 0, 0.001, 0.01, 1, 10, 100 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasQuantityKind": {
+      "@id": "http://qudt.org/vocab/quantitykind/Kerma"
+    },
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/GRAY"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "type": "number",
