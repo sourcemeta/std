@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dataset Catalog Entry",
+  "description": "A DCAT dataset description whose containing catalog is declared through a reverse membership relation and whose provenance is grouped in a named graph, built on the standard library",
+  "examples": [
+    {
+      "title": "Buenos Aires Air Quality Measurements",
+      "landingPage": "https://data.example.com/air-quality",
+      "catalog": {
+        "title": "City of Buenos Aires Open Data"
+      },
+      "provenance": {
+        "creator": "Environmental Protection Agency",
+        "created": "2024-11-02"
+      }
+    }
+  ],
+  "x-jsonld-type": "http://www.w3.org/ns/dcat#Dataset",
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [ "https://www.w3.org/TR/vocab-dcat-3/" ],
+  "type": "object",
+  "required": [ "title" ],
+  "properties": {
+    "title": {
+      "x-jsonld-id": "http://purl.org/dc/terms/title",
+      "type": "string"
+    },
+    "landingPage": {
+      "x-jsonld-id": "http://www.w3.org/ns/dcat#landingPage",
+      "$ref": "../schemas/ietf/uri/3986/uri/v1.json"
+    },
+    "catalog": {
+      "x-jsonld-reverse": "http://www.w3.org/ns/dcat#dataset",
+      "x-jsonld-type": "http://www.w3.org/ns/dcat#Catalog",
+      "type": "object",
+      "properties": {
+        "title": {
+          "x-jsonld-id": "http://purl.org/dc/terms/title",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "x-jsonld-graph": true,
+      "x-jsonld-id": "http://purl.org/dc/terms/provenance",
+      "type": "object",
+      "properties": {
+        "creator": {
+          "x-jsonld-id": "http://purl.org/dc/terms/creator",
+          "type": "string"
+        },
+        "created": {
+          "x-jsonld-id": "http://purl.org/dc/terms/created",
+          "$ref": "../schemas/iso/datetime/2019/date/calendar-extended/v1.json"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

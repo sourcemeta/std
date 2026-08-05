@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Product Listing",
+  "description": "An e-commerce catalog entry that describes a physical product as a Schema.org product, with multilingual names, a price in a standard currency, and shipping measurements from the standard library",
+  "examples": [
+    {
+      "name": {
+        "en": "Wireless Mouse",
+        "fr": "Souris sans fil"
+      },
+      "price": 29.99,
+      "priceCurrency": "EUR",
+      "weight": 0.085,
+      "countryOfOrigin": "DE"
+    }
+  ],
+  "x-jsonld-type": "https://schema.org/Product",
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [ "https://schema.org/Product" ],
+  "type": "object",
+  "required": [ "name", "price", "priceCurrency" ],
+  "properties": {
+    "name": {
+      "x-jsonld-container": "@language",
+      "x-jsonld-id": "https://schema.org/name",
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "$ref": "../schemas/ietf/language/5646/tag-syntax/v1.json"
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "price": {
+      "x-jsonld-id": "https://schema.org/price",
+      "type": "number",
+      "minimum": 0
+    },
+    "priceCurrency": {
+      "x-jsonld-id": "https://schema.org/priceCurrency",
+      "$ref": "../schemas/iso/currency/2015/alpha-currency/v1.json"
+    },
+    "weight": {
+      "x-jsonld-id": "https://schema.org/weight",
+      "$ref": "../schemas/bipm/si/2019/base/unit/kilogram/v1.json"
+    },
+    "countryOfOrigin": {
+      "x-jsonld-id": "https://schema.org/countryOfOrigin",
+      "$ref": "../schemas/iso/country/2020/alpha-2/v1.json"
+    }
+  },
+  "additionalProperties": false
+}

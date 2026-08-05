@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 8601-1:2019 Ordinal Date and Local Time of Day with Hourly Time Shift (Basic Format)",
   "description": "A representation of ordinal date combined with complete local time of day and time shift from UTC in basic format [YYYY][DDD][\"T\"][hh][mm][ss][±][hh] where the time shift includes only hours (§5.4.2.2 a)",
+  "$comment": "No linked data datatype is declared because ISO 8601 details such as the leap second put this representation outside the lexical space of the XML Schema date and time datatypes",
   "examples": [
     "1985102T232050+04",
     "2000001T000000-05",

@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 8601-1:2019 Beginning of the Day (Basic Format)",
   "description": "A representation of the beginning of a calendar day in basic format [\"T\"]000000 where the time designator \"T\" may be omitted by mutual agreement (§5.3.2)",
+  "$comment": "No linked data datatype is declared because ISO 8601 details such as the leap second put this representation outside the lexical space of the XML Schema date and time datatypes",
   "examples": [ "T000000", "000000" ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.iso.org/standard/70907.html" ],

@@ -1,0 +1,138 @@
+{
+  "target": "../../examples/product-listing.json",
+  "tests": [
+    {
+      "description": "Valid - complete listing",
+      "data": {
+        "name": {
+          "en": "Wireless Mouse",
+          "fr": "Souris sans fil"
+        },
+        "price": 29.99,
+        "priceCurrency": "EUR",
+        "weight": 0.085,
+        "countryOfOrigin": "DE"
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://schema.org/Product" ],
+          "https://schema.org/countryOfOrigin": [
+            {
+              "@id": "http://publications.europa.eu/resource/authority/country/DEU"
+            }
+          ],
+          "https://schema.org/name": [
+            {
+              "@value": "Wireless Mouse",
+              "@language": "en"
+            },
+            {
+              "@value": "Souris sans fil",
+              "@language": "fr"
+            }
+          ],
+          "https://schema.org/price": [
+            {
+              "@value": 29.99
+            }
+          ],
+          "https://schema.org/priceCurrency": [
+            {
+              "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+            }
+          ],
+          "https://schema.org/weight": [
+            {
+              "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+              "http://qudt.org/schema/qudt/value": [
+                {
+                  "@value": 0.085
+                }
+              ],
+              "http://qudt.org/schema/qudt/hasUnit": [
+                {
+                  "@id": "http://qudt.org/vocab/unit/KiloGM"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Valid - minimal listing",
+      "data": {
+        "name": {
+          "en": "USB Cable"
+        },
+        "price": 5,
+        "priceCurrency": "USD"
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://schema.org/Product" ],
+          "https://schema.org/name": [
+            {
+              "@value": "USB Cable",
+              "@language": "en"
+            }
+          ],
+          "https://schema.org/price": [
+            {
+              "@value": 5
+            }
+          ],
+          "https://schema.org/priceCurrency": [
+            {
+              "@id": "http://publications.europa.eu/resource/authority/currency/USD"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Invalid - empty name map",
+      "data": {
+        "name": {},
+        "price": 29.99,
+        "priceCurrency": "EUR"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - underscore in the language tag key",
+      "data": {
+        "name": {
+          "en_US": "Wireless Mouse"
+        },
+        "price": 29.99,
+        "priceCurrency": "EUR"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative price",
+      "data": {
+        "name": {
+          "en": "Wireless Mouse"
+        },
+        "price": -1,
+        "priceCurrency": "EUR"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - unknown currency code",
+      "data": {
+        "name": {
+          "en": "Wireless Mouse"
+        },
+        "price": 29.99,
+        "priceCurrency": "EU"
+      },
+      "valid": false
+    }
+  ]
+}

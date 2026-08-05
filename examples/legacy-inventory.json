@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Legacy Inventory Item",
+  "description": "A warehouse inventory record for a system with a pre-existing internal ontology, which adopts standard library atoms for validation while overriding their linked data mappings to keep its own identifiers",
+  "examples": [
+    {
+      "sku": "WH-4821-B",
+      "currency": "USD",
+      "unitPrice": 12.5,
+      "originCountry": "CN",
+      "attributes": {
+        "shelf": "B4",
+        "fragile": false,
+        "batch": null
+      }
+    }
+  ],
+  "x-jsonld-type": "https://inventory.example.com/vocab#Item",
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [ "https://www.w3.org/TR/json-ld11/" ],
+  "type": "object",
+  "required": [ "sku", "currency", "unitPrice" ],
+  "properties": {
+    "sku": {
+      "x-jsonld-id": "https://inventory.example.com/vocab#sku",
+      "type": "string"
+    },
+    "currency": {
+      "x-jsonld-id": "https://inventory.example.com/vocab#currency",
+      "x-jsonld-override": true,
+      "x-jsonld-self": null,
+      "$ref": "../schemas/iso/currency/2015/alpha-currency/v1.json"
+    },
+    "unitPrice": {
+      "x-jsonld-id": "https://inventory.example.com/vocab#unitPrice",
+      "type": "number",
+      "minimum": 0
+    },
+    "originCountry": {
+      "x-jsonld-id": "https://inventory.example.com/vocab#originCountry",
+      "$ref": "../schemas/iso/country/2020/alpha-2/v1.json"
+    },
+    "attributes": {
+      "x-jsonld-id": "https://inventory.example.com/vocab#attributes",
+      "x-jsonld-json": true,
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

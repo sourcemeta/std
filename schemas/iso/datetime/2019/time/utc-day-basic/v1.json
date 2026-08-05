@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 8601-1:2019 UTC of Day (Basic Format)",
   "description": "A representation of UTC of day in basic format [\"T\"][hh][mm][ss]Z or [\"T\"][hh][mm]Z or [\"T\"][hh]Z where the time designator \"T\" may be omitted by mutual agreement and Z is the UTC designator (§5.3.3 a)",
+  "$comment": "No linked data datatype is declared because ISO 8601 details such as the leap second put this representation outside the lexical space of the XML Schema date and time datatypes",
   "examples": [
     "T232030Z",
     "T2320Z",

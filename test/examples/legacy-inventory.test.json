@@ -1,0 +1,112 @@
+{
+  "target": "../../examples/legacy-inventory.json",
+  "tests": [
+    {
+      "description": "Valid - complete item",
+      "data": {
+        "sku": "WH-4821-B",
+        "currency": "USD",
+        "unitPrice": 12.5,
+        "originCountry": "CN",
+        "attributes": {
+          "shelf": "B4",
+          "fragile": false,
+          "batch": null
+        }
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://inventory.example.com/vocab#Item" ],
+          "https://inventory.example.com/vocab#attributes": [
+            {
+              "@value": {
+                "shelf": "B4",
+                "fragile": false,
+                "batch": null
+              },
+              "@type": "@json"
+            }
+          ],
+          "https://inventory.example.com/vocab#currency": [
+            {
+              "@value": "USD"
+            }
+          ],
+          "https://inventory.example.com/vocab#originCountry": [
+            {
+              "@id": "http://publications.europa.eu/resource/authority/country/CHN"
+            }
+          ],
+          "https://inventory.example.com/vocab#sku": [
+            {
+              "@value": "WH-4821-B"
+            }
+          ],
+          "https://inventory.example.com/vocab#unitPrice": [
+            {
+              "@value": 12.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Valid - minimal item",
+      "data": {
+        "sku": "WH-0001-A",
+        "currency": "ARS",
+        "unitPrice": 0
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://inventory.example.com/vocab#Item" ],
+          "https://inventory.example.com/vocab#currency": [
+            {
+              "@value": "ARS"
+            }
+          ],
+          "https://inventory.example.com/vocab#sku": [
+            {
+              "@value": "WH-0001-A"
+            }
+          ],
+          "https://inventory.example.com/vocab#unitPrice": [
+            {
+              "@value": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Invalid - alpha-2 currency code",
+      "data": {
+        "sku": "WH-4821-B",
+        "currency": "US",
+        "unitPrice": 12.5
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative unit price",
+      "data": {
+        "sku": "WH-4821-B",
+        "currency": "USD",
+        "unitPrice": -1
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - attributes as an array",
+      "data": {
+        "sku": "WH-4821-B",
+        "currency": "USD",
+        "unitPrice": 12.5,
+        "attributes": [ "fragile" ]
+      },
+      "valid": false
+    }
+  ]
+}

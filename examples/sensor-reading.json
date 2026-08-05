@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sensor Reading",
+  "description": "An IoT telemetry observation modelled after the W3C SOSA ontology, with the measured quantity in a prefixed SI unit, the observed property as a dereferenceable IRI, and the sensor location as GeoJSON from the standard library",
+  "examples": [
+    {
+      "observedProperty": "http://qudt.org/vocab/quantitykind/Voltage",
+      "result": 743.2,
+      "resultTime": "2026-08-03T14:30:00Z",
+      "location": {
+        "type": "Point",
+        "coordinates": [ -58.3816, -34.6037 ]
+      }
+    }
+  ],
+  "x-jsonld-type": "http://www.w3.org/ns/sosa/Observation",
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [ "https://www.w3.org/TR/vocab-ssn/" ],
+  "type": "object",
+  "required": [ "observedProperty", "result", "resultTime" ],
+  "properties": {
+    "observedProperty": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/observedProperty",
+      "$ref": "../schemas/ietf/uri/3986/uri/v1.json"
+    },
+    "result": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasResult",
+      "$ref": "../schemas/bipm/si/2019/derived/prefixed/millivolt/v1.json"
+    },
+    "resultTime": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/resultTime",
+      "$ref": "../schemas/iso/datetime/2019/datetime/calendar-utc-extended/v1.json"
+    },
+    "location": {
+      "x-jsonld-id": "https://schema.org/location",
+      "$ref": "../schemas/ietf/geojson/7946/point/v1.json"
+    }
+  },
+  "additionalProperties": false
+}

@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 8601-1:2019 Local Time of Day with Time Shift (Basic Format)",
   "description": "A representation of local time of day with time shift from UTC in basic format [\"T\"][hh][mm][ss][±][hh][mm] or [\"T\"][hh][mm][ss][±][hh] or [\"T\"][hh][mm][ss]Z where the time designator \"T\" may be omitted by mutual agreement and the time shift may include hours only or be Z for UTC (§5.3.4.2 a)",
+  "$comment": "No linked data datatype is declared because ISO 8601 details such as the leap second put this representation outside the lexical space of the XML Schema date and time datatypes",
   "examples": [
     "T152746+0100",
     "T152746-0530",
