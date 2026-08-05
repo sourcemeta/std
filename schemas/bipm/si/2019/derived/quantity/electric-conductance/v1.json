@@ -3,6 +3,16 @@
   "title": "Electric conductance",
   "description": "A derived quantity measured in siemens",
   "examples": [ 0.001, 0.01, 0.1, 1, 10, 100 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasQuantityKind": {
+      "@id": "http://qudt.org/vocab/quantitykind/Conductance"
+    },
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/S"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "type": "number",

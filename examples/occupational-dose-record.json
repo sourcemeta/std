@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Occupational Dose Record",
+  "description": "A radiation protection compliance record for a monitored worker, expressing the effective and absorbed doses as SI quantities that carry both their quantity kind and coherent unit as linked data from the standard library",
+  "examples": [
+    {
+      "badge": "DOS-2210",
+      "monitoringStart": "2026-01-01",
+      "monitoringEnd": "2026-06-30",
+      "effectiveDose": 0.0016,
+      "absorbedDose": 0.0014
+    }
+  ],
+  "x-jsonld-type": "https://schema.org/Report",
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [
+    "https://www.icrp.org/publication.asp?id=ICRP%20Publication%20103"
+  ],
+  "type": "object",
+  "required": [ "badge", "monitoringStart", "monitoringEnd", "effectiveDose" ],
+  "properties": {
+    "badge": {
+      "x-jsonld-id": "https://schema.org/identifier",
+      "type": "string"
+    },
+    "monitoringStart": {
+      "x-jsonld-id": "https://schema.org/startDate",
+      "$ref": "../schemas/iso/datetime/2019/date/calendar-extended/v1.json"
+    },
+    "monitoringEnd": {
+      "x-jsonld-id": "https://schema.org/endDate",
+      "$ref": "../schemas/iso/datetime/2019/date/calendar-extended/v1.json"
+    },
+    "effectiveDose": {
+      "x-jsonld-id": "https://dosimetry.example.com/vocab#effectiveDose",
+      "$ref": "../schemas/bipm/si/2019/derived/quantity/dose-equivalent/v1.json"
+    },
+    "absorbedDose": {
+      "x-jsonld-id": "https://dosimetry.example.com/vocab#absorbedDose",
+      "$ref": "../schemas/bipm/si/2019/derived/quantity/absorbed-dose/v1.json"
+    }
+  },
+  "additionalProperties": false
+}

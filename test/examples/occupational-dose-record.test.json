@@ -1,0 +1,169 @@
+{
+  "target": "../../examples/occupational-dose-record.json",
+  "tests": [
+    {
+      "description": "Valid - complete record",
+      "data": {
+        "badge": "DOS-2210",
+        "monitoringStart": "2026-01-01",
+        "monitoringEnd": "2026-06-30",
+        "effectiveDose": 0.0016,
+        "absorbedDose": 0.0014
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://schema.org/Report" ],
+          "https://dosimetry.example.com/vocab#absorbedDose": [
+            {
+              "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+              "http://qudt.org/schema/qudt/value": [
+                {
+                  "@value": 0.0014
+                }
+              ],
+              "http://qudt.org/schema/qudt/hasQuantityKind": [
+                {
+                  "@id": "http://qudt.org/vocab/quantitykind/AbsorbedDose"
+                }
+              ],
+              "http://qudt.org/schema/qudt/hasUnit": [
+                {
+                  "@id": "http://qudt.org/vocab/unit/GRAY"
+                }
+              ]
+            }
+          ],
+          "https://schema.org/identifier": [
+            {
+              "@value": "DOS-2210"
+            }
+          ],
+          "https://dosimetry.example.com/vocab#effectiveDose": [
+            {
+              "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+              "http://qudt.org/schema/qudt/value": [
+                {
+                  "@value": 0.0016
+                }
+              ],
+              "http://qudt.org/schema/qudt/hasQuantityKind": [
+                {
+                  "@id": "http://qudt.org/vocab/quantitykind/DoseEquivalent"
+                }
+              ],
+              "http://qudt.org/schema/qudt/hasUnit": [
+                {
+                  "@id": "http://qudt.org/vocab/unit/SV"
+                }
+              ]
+            }
+          ],
+          "https://schema.org/endDate": [
+            {
+              "@value": "2026-06-30",
+              "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+          ],
+          "https://schema.org/startDate": [
+            {
+              "@value": "2026-01-01",
+              "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Valid - effective dose only",
+      "data": {
+        "badge": "DOS-0417",
+        "monitoringStart": "2026-01-01",
+        "monitoringEnd": "2026-03-31",
+        "effectiveDose": 0
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://schema.org/Report" ],
+          "https://schema.org/identifier": [
+            {
+              "@value": "DOS-0417"
+            }
+          ],
+          "https://dosimetry.example.com/vocab#effectiveDose": [
+            {
+              "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+              "http://qudt.org/schema/qudt/value": [
+                {
+                  "@value": 0
+                }
+              ],
+              "http://qudt.org/schema/qudt/hasQuantityKind": [
+                {
+                  "@id": "http://qudt.org/vocab/quantitykind/DoseEquivalent"
+                }
+              ],
+              "http://qudt.org/schema/qudt/hasUnit": [
+                {
+                  "@id": "http://qudt.org/vocab/unit/SV"
+                }
+              ]
+            }
+          ],
+          "https://schema.org/endDate": [
+            {
+              "@value": "2026-03-31",
+              "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+          ],
+          "https://schema.org/startDate": [
+            {
+              "@value": "2026-01-01",
+              "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Invalid - missing effective dose",
+      "data": {
+        "badge": "DOS-2210",
+        "monitoringStart": "2026-01-01",
+        "monitoringEnd": "2026-06-30"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative effective dose",
+      "data": {
+        "badge": "DOS-2210",
+        "monitoringStart": "2026-01-01",
+        "monitoringEnd": "2026-06-30",
+        "effectiveDose": -0.001
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format monitoring date",
+      "data": {
+        "badge": "DOS-2210",
+        "monitoringStart": "20260101",
+        "monitoringEnd": "2026-06-30",
+        "effectiveDose": 0.0016
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - dose as a string",
+      "data": {
+        "badge": "DOS-2210",
+        "monitoringStart": "2026-01-01",
+        "monitoringEnd": "2026-06-30",
+        "effectiveDose": "0.0016"
+      },
+      "valid": false
+    }
+  ]
+}
