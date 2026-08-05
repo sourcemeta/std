@@ -29,7 +29,8 @@
     {
       "description": "Valid - 12 April 1985",
       "data": "1985-04-12",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - 1 January 2000",

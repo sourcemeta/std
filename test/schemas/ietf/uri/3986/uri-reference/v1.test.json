@@ -29,7 +29,8 @@
     {
       "description": "Empty string is valid URI reference",
       "data": "",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Basic HTTP URI",

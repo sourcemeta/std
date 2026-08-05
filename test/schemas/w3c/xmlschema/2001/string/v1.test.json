@@ -4,7 +4,8 @@
     {
       "description": "Valid - simple string",
       "data": "hello world",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - empty string",

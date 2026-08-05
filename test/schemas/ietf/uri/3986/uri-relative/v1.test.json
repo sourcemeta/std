@@ -19,7 +19,8 @@
     {
       "description": "Empty string is valid relative reference",
       "data": "",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Single slash path",

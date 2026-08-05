@@ -44,7 +44,8 @@
         [ 0, 0 ],
         [ 1, 1 ]
       ],
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid LineString with three positions",

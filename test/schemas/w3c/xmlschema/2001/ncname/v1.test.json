@@ -4,7 +4,8 @@
     {
       "description": "Valid - simple ASCII element name",
       "data": "myElement",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - starts with underscore",

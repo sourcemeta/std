@@ -4,7 +4,8 @@
     {
       "description": "Plain ASCII absolute URI",
       "data": "https://example.com/path?query=value#fragment",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Absolute IRI with non-ASCII host and path",

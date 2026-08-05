@@ -19,7 +19,8 @@
     {
       "description": "Valid - year 1985",
       "data": "1985",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - year 2000",

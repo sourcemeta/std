@@ -29,7 +29,8 @@
     {
       "description": "Valid - 2-letter language",
       "data": "en",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - 3-letter language",

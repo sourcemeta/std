@@ -4,7 +4,8 @@
     {
       "description": "Valid - basic day",
       "data": "---15",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - day with Z timezone",

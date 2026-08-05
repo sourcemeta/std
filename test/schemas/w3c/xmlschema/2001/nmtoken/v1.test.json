@@ -4,7 +4,8 @@
     {
       "description": "Valid - simple ASCII letters",
       "data": "abc",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - mixed case ASCII",
