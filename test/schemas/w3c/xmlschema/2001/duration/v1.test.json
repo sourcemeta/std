@@ -96,6 +96,21 @@
       "description": "Invalid - empty string",
       "data": "",
       "valid": false
+    },
+    {
+      "description": "Invalid - trailing time designator",
+      "data": "P1YT",
+      "valid": false
+    },
+    {
+      "description": "Invalid - fraction outside seconds",
+      "data": "P1.5Y",
+      "valid": false
+    },
+    {
+      "description": "Valid - fractional seconds",
+      "data": "PT0.5S",
+      "valid": true
     }
   ]
 }

@@ -100,6 +100,26 @@
       "description": "Invalid - zero",
       "data": 0,
       "valid": false
+    },
+    {
+      "description": "Invalid - retired Soviet Union numeric",
+      "data": 810,
+      "valid": false
+    },
+    {
+      "description": "Invalid - unassigned numeric",
+      "data": 900,
+      "valid": false
+    },
+    {
+      "description": "Valid - zero fraction number equals the integer code",
+      "data": 840.0,
+      "valid": true
+    },
+    {
+      "description": "Invalid - leading zero string form",
+      "data": "004",
+      "valid": false
     }
   ]
 }

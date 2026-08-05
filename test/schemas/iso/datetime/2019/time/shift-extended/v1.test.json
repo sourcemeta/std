@@ -125,6 +125,11 @@
       "description": "Invalid - sign only",
       "data": "+",
       "valid": false
+    },
+    {
+      "description": "Valid - negative shift with zero hours and nonzero minutes",
+      "data": "-00:30",
+      "valid": true
     }
   ]
 }

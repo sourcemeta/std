@@ -210,6 +210,11 @@
       "description": "Invalid - thirty-three character NID",
       "valid": false,
       "data": "urn:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:x"
+    },
+    {
+      "description": "Valid - r-component q-component and f-component together",
+      "data": "urn:example:foo?+bar?=baz#frag",
+      "valid": true
     }
   ]
 }

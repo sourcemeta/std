@@ -56,6 +56,11 @@
       "description": "Invalid type - object",
       "data": {},
       "valid": false
+    },
+    {
+      "description": "Invalid - below absolute zero",
+      "data": -273.16,
+      "valid": false
     }
   ]
 }

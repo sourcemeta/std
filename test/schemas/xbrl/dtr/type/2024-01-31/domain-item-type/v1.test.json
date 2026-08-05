@@ -20,6 +20,11 @@
       "description": "Invalid - number type",
       "data": 0,
       "valid": false
+    },
+    {
+      "description": "Invalid - whitespace only",
+      "data": " ",
+      "valid": false
     }
   ]
 }

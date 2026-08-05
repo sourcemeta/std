@@ -126,6 +126,11 @@
       "description": "Invalid - negative decimal",
       "data": -0.5,
       "valid": false
+    },
+    {
+      "description": "Valid - beyond the safe integer range",
+      "data": 9007199254740993,
+      "valid": true
     }
   ]
 }

@@ -110,6 +110,11 @@
       "description": "Valid - small negative value within range",
       "data": -1.00000000000000001590289110975991804683608085639452813897813275577478387721703810608134699858568151040e+100,
       "valid": true
+    },
+    {
+      "description": "Valid - exponent notation within range",
+      "data": 1e+308,
+      "valid": true
     }
   ]
 }

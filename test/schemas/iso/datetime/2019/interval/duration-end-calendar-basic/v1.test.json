@@ -400,6 +400,11 @@
       "description": "Invalid - spaces around separator",
       "data": "P1Y / 19850412T232050",
       "valid": false
+    },
+    {
+      "description": "Valid - comma fraction on the lowest order duration component",
+      "data": "P1Y0,5M/19850412T232050",
+      "valid": true
     }
   ]
 }

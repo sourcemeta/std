@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 4217:2015 Alphabetic Currency Code (Historical)",
-  "description": "A three-letter alphabetic withdrawn currency code, excluding funds and precious metals (2026-01-01)",
+  "description": "A three-letter alphabetic withdrawn currency code, including withdrawn funds (2026-01-01)",
   "examples": [ "ADP", "AFA", "ALK", "ANG" ],
   "deprecated": true,
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
@@ -148,6 +148,8 @@
         "UGW",
         "UYP",
         "XFO",
+        "XFU",
+        "XRE",
         "ZAL"
       ]
     }

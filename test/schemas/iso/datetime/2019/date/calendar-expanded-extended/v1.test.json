@@ -145,6 +145,11 @@
       "description": "Invalid - 31 April with negative year",
       "data": "-002023-04-31",
       "valid": false
+    },
+    {
+      "description": "Invalid - negative year zero",
+      "data": "-000000-01-01",
+      "valid": false
     }
   ]
 }

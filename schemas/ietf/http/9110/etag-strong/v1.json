@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "RFC 9110 HTTP Strong ETag",
   "description": "A strong HTTP entity tag used for cache validation",
+  "$comment": "The RFC obs-text production is a byte range and this schema reads it as the code points U+0080 through U+00FF, so characters above U+00FF are rejected regardless of their UTF-8 bytes",
   "examples": [ "\"abc123\"", "\"686897696a7c876b7e\"", "\"\"" ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc9110#section-8.8.3" ],

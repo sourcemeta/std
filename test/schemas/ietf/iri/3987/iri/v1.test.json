@@ -120,6 +120,16 @@
       "description": "Array is not an IRI",
       "data": [],
       "valid": false
+    },
+    {
+      "description": "Invalid - noncharacter code point in path",
+      "data": "https://example.com/﷐",
+      "valid": false
+    },
+    {
+      "description": "Invalid - non-ASCII scheme",
+      "data": "éxample://foo",
+      "valid": false
     }
   ]
 }

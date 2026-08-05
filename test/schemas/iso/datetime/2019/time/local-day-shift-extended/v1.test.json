@@ -175,6 +175,21 @@
       "description": "Invalid - decimal seconds",
       "data": "15:27:46.5+01:00",
       "valid": false
+    },
+    {
+      "description": "Invalid - negative zero shift",
+      "data": "15:27:46-00:00",
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative zero hour shift",
+      "data": "15:27:46-00",
+      "valid": false
+    },
+    {
+      "description": "Valid - negative shift with zero hours and nonzero minutes",
+      "data": "15:27:46-00:30",
+      "valid": true
     }
   ]
 }

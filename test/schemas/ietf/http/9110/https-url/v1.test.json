@@ -155,6 +155,11 @@
       "description": "Invalid - empty host",
       "valid": false,
       "data": "https:///path"
+    },
+    {
+      "description": "Invalid - userinfo with empty host",
+      "data": "https://user@/path",
+      "valid": false
     }
   ]
 }

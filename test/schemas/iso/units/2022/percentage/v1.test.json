@@ -166,6 +166,11 @@
       "description": "Invalid - negative decimal",
       "data": -0.01,
       "valid": false
+    },
+    {
+      "description": "Invalid - just above the maximum",
+      "data": 100.0001,
+      "valid": false
     }
   ]
 }

@@ -185,6 +185,11 @@
       "description": "Invalid - plus sign (requires expanded format)",
       "data": "+0001001",
       "valid": false
+    },
+    {
+      "description": "Valid - day 366 in a non leap year as leap validation is consumer responsibility",
+      "data": "2023366",
+      "valid": true
     }
   ]
 }

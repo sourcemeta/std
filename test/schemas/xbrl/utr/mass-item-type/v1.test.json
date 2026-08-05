@@ -35,6 +35,16 @@
       "description": "Invalid - null",
       "data": null,
       "valid": false
+    },
+    {
+      "description": "Invalid - wrong case unit code",
+      "data": "gt",
+      "valid": false
+    },
+    {
+      "description": "Invalid - unit code from another item type",
+      "data": "acre",
+      "valid": false
     }
   ]
 }

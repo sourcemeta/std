@@ -67,6 +67,21 @@
       "description": "Invalid - null",
       "data": null,
       "valid": false
+    },
+    {
+      "description": "Invalid - wrong case unit code",
+      "data": "aed",
+      "valid": false
+    },
+    {
+      "description": "Invalid - unit code from another item type",
+      "data": "lb",
+      "valid": false
+    },
+    {
+      "description": "Valid - registry entry outside the normative subset",
+      "data": "SLE",
+      "valid": true
     }
   ]
 }

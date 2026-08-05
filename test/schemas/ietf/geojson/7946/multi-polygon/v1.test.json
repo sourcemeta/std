@@ -304,6 +304,16 @@
         "features": []
       },
       "valid": false
+    },
+    {
+      "description": "Valid - polygon with zero rings",
+      "data": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          []
+        ]
+      },
+      "valid": true
     }
   ]
 }

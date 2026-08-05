@@ -60,6 +60,16 @@
       "description": "Invalid - empty string",
       "data": "",
       "valid": false
+    },
+    {
+      "description": "Valid - withdrawn UIC franc fund",
+      "data": "XFU",
+      "valid": true
+    },
+    {
+      "description": "Valid - withdrawn RINET funds code",
+      "data": "XRE",
+      "valid": true
     }
   ]
 }

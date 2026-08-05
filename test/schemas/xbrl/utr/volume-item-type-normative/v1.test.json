@@ -35,6 +35,21 @@
       "description": "Invalid - null",
       "data": null,
       "valid": false
+    },
+    {
+      "description": "Invalid - wrong case unit code",
+      "data": "BCF",
+      "valid": false
+    },
+    {
+      "description": "Invalid - unit code from another item type",
+      "data": "lb",
+      "valid": false
+    },
+    {
+      "description": "Invalid - registry entry outside the normative subset",
+      "data": "hl",
+      "valid": false
     }
   ]
 }

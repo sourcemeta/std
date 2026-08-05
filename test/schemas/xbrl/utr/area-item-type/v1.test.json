@@ -72,6 +72,16 @@
       "description": "Invalid - boolean",
       "data": true,
       "valid": false
+    },
+    {
+      "description": "Invalid - wrong case unit code",
+      "data": "ACRE",
+      "valid": false
+    },
+    {
+      "description": "Invalid - unit code from another item type",
+      "data": "lb",
+      "valid": false
     }
   ]
 }

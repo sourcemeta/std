@@ -116,6 +116,16 @@
         [ 0, 0 ]
       ],
       "valid": false
+    },
+    {
+      "description": "Valid - unclosed ring as closure is semantic",
+      "data": [
+        [ 0, 0 ],
+        [ 1, 0 ],
+        [ 1, 1 ],
+        [ 2, 2 ]
+      ],
+      "valid": true
     }
   ]
 }

@@ -36,6 +36,16 @@
       "description": "Invalid type - object",
       "data": {},
       "valid": false
+    },
+    {
+      "description": "Invalid - zero on an exclusive minimum",
+      "data": 0,
+      "valid": false
+    },
+    {
+      "description": "Invalid - negative",
+      "data": -1,
+      "valid": false
     }
   ]
 }

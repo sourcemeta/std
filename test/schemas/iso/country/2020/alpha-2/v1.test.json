@@ -120,6 +120,46 @@
       "description": "Invalid - spaces",
       "data": "U S",
       "valid": false
+    },
+    {
+      "description": "Invalid - retired Soviet Union code",
+      "data": "SU",
+      "valid": false
+    },
+    {
+      "description": "Invalid - retired Yugoslavia code",
+      "data": "YU",
+      "valid": false
+    },
+    {
+      "description": "Invalid - exceptionally reserved UK",
+      "data": "UK",
+      "valid": false
+    },
+    {
+      "description": "Invalid - user assigned Kosovo code",
+      "data": "XK",
+      "valid": false
+    },
+    {
+      "description": "Invalid - user assigned range start",
+      "data": "AA",
+      "valid": false
+    },
+    {
+      "description": "Invalid - user assigned range end",
+      "data": "ZZ",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading whitespace",
+      "data": " US",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing whitespace",
+      "data": "US ",
+      "valid": false
     }
   ]
 }

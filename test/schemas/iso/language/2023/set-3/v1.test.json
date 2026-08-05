@@ -125,6 +125,31 @@
       "description": "Invalid - spaces",
       "data": "e n",
       "valid": false
+    },
+    {
+      "description": "Invalid - local use range absent from the ISO 639-3 tables",
+      "data": "qaa",
+      "valid": false
+    },
+    {
+      "description": "Invalid - local use range end absent from the ISO 639-3 tables",
+      "data": "qtz",
+      "valid": false
+    },
+    {
+      "description": "Invalid - bibliographic French",
+      "data": "fre",
+      "valid": false
+    },
+    {
+      "description": "Invalid - collective sign languages code",
+      "data": "sgn",
+      "valid": false
+    },
+    {
+      "description": "Valid - ancient language code",
+      "data": "sga",
+      "valid": true
     }
   ]
 }

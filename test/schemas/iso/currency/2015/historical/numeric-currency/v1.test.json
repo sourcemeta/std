@@ -70,6 +70,21 @@
       "description": "Invalid - decimal",
       "data": 4.5,
       "valid": false
+    },
+    {
+      "description": "Valid - withdrawn Russian Ruble numeric",
+      "data": 810,
+      "valid": true
+    },
+    {
+      "description": "Valid - European currency unit numeric",
+      "data": 954,
+      "valid": true
+    },
+    {
+      "description": "Valid - withdrawn Deutsche Mark numeric",
+      "data": 276,
+      "valid": true
     }
   ]
 }

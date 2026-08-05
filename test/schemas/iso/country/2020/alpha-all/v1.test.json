@@ -130,6 +130,16 @@
       "description": "Invalid - empty string",
       "data": "",
       "valid": false
+    },
+    {
+      "description": "Invalid - retired alpha-2 code",
+      "data": "SU",
+      "valid": false
+    },
+    {
+      "description": "Invalid - retired alpha-3 code",
+      "data": "SUN",
+      "valid": false
     }
   ]
 }

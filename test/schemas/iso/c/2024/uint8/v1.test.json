@@ -76,6 +76,11 @@
       "description": "Invalid type - float",
       "data": 1.5,
       "valid": false
+    },
+    {
+      "description": "Valid - zero fraction number at the maximum",
+      "data": 255.0,
+      "valid": true
     }
   ]
 }

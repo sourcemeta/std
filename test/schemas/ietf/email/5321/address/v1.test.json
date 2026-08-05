@@ -535,6 +535,46 @@
       "description": "Empty string",
       "data": "",
       "valid": false
+    },
+    {
+      "description": "Valid - local part at the 64 octet limit",
+      "data": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com",
+      "valid": true
+    },
+    {
+      "description": "Invalid - local part over the 64 octet limit",
+      "data": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com",
+      "valid": false
+    },
+    {
+      "description": "Valid - mailbox at the 254 octet limit",
+      "data": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "valid": true
+    },
+    {
+      "description": "Invalid - mailbox over the 254 octet limit",
+      "data": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "valid": false
+    },
+    {
+      "description": "Valid - empty quoted local part",
+      "data": "\"\"@example.com",
+      "valid": true
+    },
+    {
+      "description": "Valid - general address literal",
+      "data": "user@[foo-tag:abc]",
+      "valid": true
+    },
+    {
+      "description": "Invalid - general literal tag ending in hyphen",
+      "data": "user@[foo-:abc]",
+      "valid": false
+    },
+    {
+      "description": "Invalid - bracket inside general literal content",
+      "data": "user@[tag:a[b]",
+      "valid": false
     }
   ]
 }

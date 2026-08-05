@@ -185,6 +185,11 @@
       "description": "Invalid - W/ with space in quotes",
       "data": "W/\" \"",
       "valid": false
+    },
+    {
+      "description": "Invalid - code point beyond the obs-text range",
+      "data": "W/\"Ā\"",
+      "valid": false
     }
   ]
 }

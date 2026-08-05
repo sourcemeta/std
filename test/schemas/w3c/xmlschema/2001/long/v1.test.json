@@ -66,6 +66,16 @@
       "description": "Invalid: null",
       "data": null,
       "valid": false
+    },
+    {
+      "description": "Invalid - one above the maximum",
+      "data": 9.223372036854775808e+18,
+      "valid": false
+    },
+    {
+      "description": "Invalid - one below the minimum",
+      "data": -9.223372036854775809e+18,
+      "valid": false
     }
   ]
 }

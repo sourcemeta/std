@@ -90,6 +90,21 @@
       "description": "Invalid - non-existent code",
       "data": "XXY",
       "valid": false
+    },
+    {
+      "description": "Valid - precious metal code",
+      "data": "XAU",
+      "valid": true
+    },
+    {
+      "description": "Valid - next day fund code",
+      "data": "USN",
+      "valid": true
+    },
+    {
+      "description": "Invalid - withdrawn Deutsche Mark",
+      "data": "DEM",
+      "valid": false
     }
   ]
 }

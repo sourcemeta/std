@@ -420,6 +420,21 @@
       "description": "Malformed percent-encoding in a non-URL absolute URI",
       "data": "tel:%ZZ",
       "valid": false
+    },
+    {
+      "description": "Valid - percent encoded host",
+      "data": "http://exa%20mple.com/",
+      "valid": true
+    },
+    {
+      "description": "Invalid - IPv6 zone identifier",
+      "data": "http://[fe80::1%25eth0]/",
+      "valid": false
+    },
+    {
+      "description": "Invalid - lone percent sign",
+      "data": "http://example.com/%",
+      "valid": false
     }
   ]
 }

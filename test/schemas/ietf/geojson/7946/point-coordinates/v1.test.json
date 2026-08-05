@@ -122,6 +122,21 @@
       "description": "Invalid - latitude way out of range (negative)",
       "data": [ 0, -100 ],
       "valid": false
+    },
+    {
+      "description": "Valid - additional position elements beyond altitude",
+      "data": [ 0, 0, 0, 0 ],
+      "valid": true
+    },
+    {
+      "description": "Invalid - altitude as a string",
+      "data": [ 0, 0, "high" ],
+      "valid": false
+    },
+    {
+      "description": "Valid - longitude beyond 180 as the comment documents",
+      "data": [ 181, 0 ],
+      "valid": true
     }
   ]
 }

@@ -75,6 +75,16 @@
       "description": "Invalid type - object",
       "data": {},
       "valid": false
+    },
+    {
+      "description": "Invalid - padded NAN",
+      "data": " NAN",
+      "valid": false
+    },
+    {
+      "description": "Invalid - plus signed INFINITY",
+      "data": "+INFINITY",
+      "valid": false
     }
   ]
 }

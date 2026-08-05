@@ -160,6 +160,11 @@
       "description": "Invalid - userinfo with empty host",
       "valid": false,
       "data": "http://user@/path"
+    },
+    {
+      "description": "Invalid - empty host with port",
+      "data": "http://:8080/",
+      "valid": false
     }
   ]
 }

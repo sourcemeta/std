@@ -310,6 +310,16 @@
       "description": "Valid - duration with a comma decimal sign",
       "valid": true,
       "data": "1985-04-12T23:20:50/PT0,5S"
+    },
+    {
+      "description": "Invalid - fraction on a non lowest order duration component",
+      "data": "2023-01-15T12:00:00/PT1.5H30M",
+      "valid": false
+    },
+    {
+      "description": "Valid - fraction on the lowest order duration component",
+      "data": "2023-01-15T12:00:00/P1Y0.5M",
+      "valid": true
     }
   ]
 }

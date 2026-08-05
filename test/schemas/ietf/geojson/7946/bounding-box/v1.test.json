@@ -146,6 +146,11 @@
       "description": "Invalid - latitude beyond range in a four dimensional box",
       "valid": false,
       "data": [ 0, 95, 0, 0, 10, 96, 10, 10 ]
+    },
+    {
+      "description": "Invalid - fourteen elements beyond the 3D cap",
+      "data": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+      "valid": false
     }
   ]
 }

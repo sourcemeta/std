@@ -263,6 +263,16 @@
         "features": []
       },
       "valid": false
+    },
+    {
+      "description": "Invalid - null id",
+      "data": {
+        "type": "Feature",
+        "id": null,
+        "geometry": null,
+        "properties": null
+      },
+      "valid": false
     }
   ]
 }
