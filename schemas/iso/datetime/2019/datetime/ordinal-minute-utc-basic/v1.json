@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 8601-1:2019 Ordinal Date and UTC of Day with Reduced Precision (Basic Format)",
   "description": "A representation of ordinal date combined with reduced precision UTC of day (hour and minute only) in basic format [YYYY][DDD][\"T\"][hh][mm][\"Z\"] where seconds are omitted (§5.4.3 b)",
+  "$comment": "No linked data datatype is declared because ISO 8601 details such as the leap second put this representation outside the lexical space of the XML Schema date and time datatypes",
   "examples": [
     "1985102T1015Z",
     "2000001T0000Z",
