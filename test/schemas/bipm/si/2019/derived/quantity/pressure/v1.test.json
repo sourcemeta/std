@@ -43,9 +43,9 @@
       "valid": true
     },
     {
-      "description": "Invalid - negative",
+      "description": "Valid - negative as gauge pressure is signed",
       "data": -1,
-      "valid": false
+      "valid": true
     }
   ]
 }
