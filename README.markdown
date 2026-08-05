@@ -68,6 +68,39 @@ designing great APIs.*
 | <a href="https://www.xbrl.org/dtr/dtr.html"><img src="./assets/xbrl.svg" alt="XBRL" height="18"></a> | [XBRL DTR](https://www.xbrl.org/dtr/dtr.html) | [XBRL Data Types Registry](https://www.xbrl.org/dtr/dtr.html) |
 | <a href="https://www.xbrl.org/specification/utr/rec-2013-11-18/utr-rec-2013-11-18-clean.html"><img src="./assets/xbrl.svg" alt="XBRL" height="18"></a> | [XBRL UTR](https://www.xbrl.org/specification/utr/rec-2013-11-18/utr-rec-2013-11-18-clean.html) | [XBRL Units Type Registry](https://www.xbrl.org/specification/utr/rec-2013-11-18/utr-rec-2013-11-18-clean.html) |
 
+## :seedling: Evolution
+
+The library is designed to evolve without ever breaking its consumers. The
+key principles are:
+
+- **Paths mirror the authority**. Each collection is versioned the way its
+  governing body publishes: edition years for ISO, IEEE, BIPM, and W3C
+  standards, RFC numbers for the IETF, dated releases for dated registries,
+  and in-place evolution for living registries. Self-published specifications
+  live under `other/`.
+- **Every schema is individually versioned**. Each concept lives at
+  `<concept>/v1.json` and there are no unversioned aliases.
+- **Versions never change their validation behavior**. A published version
+  may gain annotations, linked data mappings, or clearer wording, but it
+  accepts and rejects exactly the same instances forever. Any change that is
+  visible to validation mints a sibling version instead.
+- **Living registries drift in place by contract**. Collections backed by an
+  evolving registry, such as currency codes or the XBRL UTR, track their
+  upstream within the same version, since their value space is defined by
+  the registry rather than by a frozen document.
+- **Supersession is explicit**. Replaced versions are marked with
+  `deprecated: true` and are never deleted.
+- **References pin exact versions**, so the blast radius of any new version
+  is always visible.
+- **Linked data carries identity, not metadata**. Schemas mint
+  dereferenceable IRIs from the governing authorities, and consumers obtain
+  names, symbols, and classifications by following them. Every IRI is
+  verified against its authority before it ships, and none are ever
+  fabricated.
+- **Generation follows upstream data**. Schemas are either generated from
+  vendored authority data or written by hand, never generated from
+  hand-maintained intermediates.
+
 ## :mortar_board: Citing
 
 If you use this library in your research or project, please cite it using the
