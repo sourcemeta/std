@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ISO 8601-1:2019 Local Time of Day with Decimal Minute (Basic Format)",
-  "description": "A representation of local time of day with decimal fraction of minute in basic format [\"T\"][hh][mm][,][n] or [\"T\"][hh][mm][.][n] where the time designator \"T\" may be omitted by mutual agreement and the decimal sign may be a comma or period (§5.3.1.4 c)",
+  "description": "A representation of local time of day with decimal fraction of minute in basic format [\"T\"][hh][mm][,][n] or [\"T\"][hh][mm][.][n] where the time designator \"T\" is always required since omitting it needs a mutual agreement that a standalone schema cannot assume and the decimal sign may be a comma or period (§5.3.1.4 c)",
   "$comment": "The decimal fraction must have at least one digit. The standard allows both comma and period as decimal signs. No linked data datatype is declared because ISO 8601 details such as the leap second put this representation outside the lexical space of the XML Schema date and time datatypes",
   "examples": [ "T2320,8", "T2320.8", "T0000,0", "T2359,999", "T1200.5" ],
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",

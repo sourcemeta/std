@@ -810,6 +810,21 @@
       "description": "Invalid - leading slash",
       "data": "/R12/19850412T232050/19850625T103000",
       "valid": false
+    },
+    {
+      "description": "Valid - leading zero recurrence count",
+      "data": "R01/19850412T232050/19850625T103000",
+      "valid": true
+    },
+    {
+      "description": "Invalid - decimal recurrence count",
+      "data": "R1.5/19850412T232050/19850625T103000",
+      "valid": false
+    },
+    {
+      "description": "Invalid - plus signed recurrence count",
+      "data": "R+5/19850412T232050/19850625T103000",
+      "valid": false
     }
   ]
 }

@@ -141,6 +141,26 @@
       "valid": true,
       "data": "qaa",
       "rdf": []
+    },
+    {
+      "description": "Invalid - bibliographic French",
+      "data": "fre",
+      "valid": false
+    },
+    {
+      "description": "Invalid - bibliographic Tibetan",
+      "data": "tib",
+      "valid": false
+    },
+    {
+      "description": "Valid - reserved local-use range end",
+      "data": "qtz",
+      "valid": true
+    },
+    {
+      "description": "Invalid - set-3 only code",
+      "data": "quz",
+      "valid": false
     }
   ]
 }

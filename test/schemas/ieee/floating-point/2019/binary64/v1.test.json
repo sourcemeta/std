@@ -76,6 +76,16 @@
       "description": "Invalid type - object",
       "data": {},
       "valid": false
+    },
+    {
+      "description": "Invalid - above the maximum",
+      "data": 1.8e+308,
+      "valid": false
+    },
+    {
+      "description": "Invalid - below the negative maximum",
+      "data": -1.8e+308,
+      "valid": false
     }
   ]
 }

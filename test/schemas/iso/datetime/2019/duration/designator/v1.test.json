@@ -220,6 +220,36 @@
       "description": "Invalid - fraction on a component that is not the lowest order",
       "valid": false,
       "data": "P0.5Y1D"
+    },
+    {
+      "description": "Invalid - fraction on a non lowest order time component",
+      "data": "PT1.5H30M",
+      "valid": false
+    },
+    {
+      "description": "Invalid - comma fraction on a non lowest order time component",
+      "data": "PT1,5H30M",
+      "valid": false
+    },
+    {
+      "description": "Valid - fraction on the lowest order expressed component",
+      "data": "P1Y0.5M",
+      "valid": true
+    },
+    {
+      "description": "Invalid - trailing time designator",
+      "data": "P1Y2M3DT",
+      "valid": false
+    },
+    {
+      "description": "Invalid - fraction without integer part",
+      "data": "PT.5S",
+      "valid": false
+    },
+    {
+      "description": "Invalid - weeks form belongs to the extension",
+      "data": "P1W",
+      "valid": false
     }
   ]
 }

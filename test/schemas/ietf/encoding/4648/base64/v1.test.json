@@ -521,6 +521,11 @@
       "description": "Valid - very long valid base64",
       "data": "VGhpcyBpcyBhIHZlcnkgbG9uZyBiYXNlNjQgZW5jb2RlZCBzdHJpbmcgdGhhdCB3ZSBhcmUgdXNpbmcgdG8gdGVzdCB0aGUgdmFsaWRhdGlvbiBvZiBsb25nZXIgaW5wdXRzIHRvIG1ha2Ugc3VyZSBvdXIgcGF0dGVybiB3b3JrcyBjb3JyZWN0bHk=",
       "valid": true
+    },
+    {
+      "description": "Valid - non-canonical final quantum as rejection is optional",
+      "data": "YR==",
+      "valid": true
     }
   ]
 }

@@ -36,6 +36,16 @@
       "description": "Invalid type - object",
       "data": {},
       "valid": false
+    },
+    {
+      "description": "Valid - absolute zero boundary",
+      "data": -273.15,
+      "valid": true
+    },
+    {
+      "description": "Invalid - below absolute zero",
+      "data": -273.16,
+      "valid": false
     }
   ]
 }

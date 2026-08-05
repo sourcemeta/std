@@ -41,6 +41,16 @@
       "description": "Invalid - empty string",
       "data": "",
       "valid": false
+    },
+    {
+      "description": "Invalid - numeric string one from the XSD lexical space",
+      "data": "1",
+      "valid": false
+    },
+    {
+      "description": "Invalid - numeric string zero from the XSD lexical space",
+      "data": "0",
+      "valid": false
     }
   ]
 }

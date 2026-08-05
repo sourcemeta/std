@@ -120,6 +120,26 @@
       "description": "Invalid - spaces",
       "data": "U S A",
       "valid": false
+    },
+    {
+      "description": "Invalid - retired Soviet Union code",
+      "data": "SUN",
+      "valid": false
+    },
+    {
+      "description": "Invalid - retired Yugoslavia code",
+      "data": "YUG",
+      "valid": false
+    },
+    {
+      "description": "Invalid - user assigned Kosovo code",
+      "data": "XKX",
+      "valid": false
+    },
+    {
+      "description": "Invalid - trailing whitespace",
+      "data": "USA ",
+      "valid": false
     }
   ]
 }

@@ -100,6 +100,36 @@
       "description": "Invalid - fund code (947 - WIR Euro)",
       "data": 947,
       "valid": false
+    },
+    {
+      "description": "Invalid - fund numeric",
+      "data": 940,
+      "valid": false
+    },
+    {
+      "description": "Invalid - precious metal numeric",
+      "data": 959,
+      "valid": false
+    },
+    {
+      "description": "Invalid - testing numeric",
+      "data": 963,
+      "valid": false
+    },
+    {
+      "description": "Invalid - unknown currency numeric",
+      "data": 999,
+      "valid": false
+    },
+    {
+      "description": "Invalid - withdrawn Deutsche Mark numeric",
+      "data": 276,
+      "valid": false
+    },
+    {
+      "description": "Valid - zero fraction number equals the integer code",
+      "data": 840.0,
+      "valid": true
     }
   ]
 }

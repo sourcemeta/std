@@ -160,6 +160,21 @@
       "description": "Invalid - multiple languages is a special code, not a family",
       "valid": false,
       "data": "mul"
+    },
+    {
+      "description": "Valid - sign languages family",
+      "data": "sgn",
+      "valid": true
+    },
+    {
+      "description": "Invalid - undetermined special code",
+      "data": "und",
+      "valid": false
+    },
+    {
+      "description": "Invalid - local use code",
+      "data": "qaa",
+      "valid": false
     }
   ]
 }

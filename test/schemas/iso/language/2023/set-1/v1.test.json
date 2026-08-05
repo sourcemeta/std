@@ -125,6 +125,36 @@
       "description": "Invalid - spaces",
       "data": "e n",
       "valid": false
+    },
+    {
+      "description": "Invalid - legacy Hebrew code",
+      "data": "iw",
+      "valid": false
+    },
+    {
+      "description": "Invalid - legacy Indonesian code",
+      "data": "in",
+      "valid": false
+    },
+    {
+      "description": "Invalid - legacy Serbo-Croatian code",
+      "data": "sh",
+      "valid": false
+    },
+    {
+      "description": "Valid - replacement Hebrew code",
+      "data": "he",
+      "valid": true
+    },
+    {
+      "description": "Valid - replacement Indonesian code",
+      "data": "id",
+      "valid": true
+    },
+    {
+      "description": "Invalid - leading whitespace",
+      "data": " en",
+      "valid": false
     }
   ]
 }

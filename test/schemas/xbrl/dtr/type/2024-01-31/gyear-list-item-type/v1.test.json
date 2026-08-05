@@ -50,6 +50,21 @@
       "description": "Invalid - number",
       "valid": false,
       "data": 2020
+    },
+    {
+      "description": "Valid - tab separated years",
+      "data": "2023\t2024",
+      "valid": true
+    },
+    {
+      "description": "Valid - year zero as the list is token based",
+      "data": "0000",
+      "valid": true
+    },
+    {
+      "description": "Invalid - plus signed year",
+      "data": "+2023",
+      "valid": false
     }
   ]
 }

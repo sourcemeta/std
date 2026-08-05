@@ -85,6 +85,46 @@
       "description": "Invalid - empty string",
       "data": "",
       "valid": false
+    },
+    {
+      "description": "Valid - euro through withdrawn Serbia and Montenegro entry",
+      "data": "EUR",
+      "valid": true
+    },
+    {
+      "description": "Valid - same day funds code",
+      "data": "USS",
+      "valid": true
+    },
+    {
+      "description": "Valid - gold franc",
+      "data": "XFO",
+      "valid": true
+    },
+    {
+      "description": "Valid - European currency unit",
+      "data": "XEU",
+      "valid": true
+    },
+    {
+      "description": "Invalid - precious metal code",
+      "data": "XAU",
+      "valid": false
+    },
+    {
+      "description": "Invalid - current only code",
+      "data": "SLE",
+      "valid": false
+    },
+    {
+      "description": "Valid - withdrawn UIC franc fund",
+      "data": "XFU",
+      "valid": true
+    },
+    {
+      "description": "Valid - withdrawn RINET funds code",
+      "data": "XRE",
+      "valid": true
     }
   ]
 }

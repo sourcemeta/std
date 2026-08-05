@@ -255,6 +255,16 @@
       "description": "Invalid - just quotes with space",
       "data": "\" \"",
       "valid": false
+    },
+    {
+      "description": "Valid - obs-text code point",
+      "data": "\"é\"",
+      "valid": true
+    },
+    {
+      "description": "Invalid - code point beyond the obs-text range",
+      "data": "\"€\"",
+      "valid": false
     }
   ]
 }

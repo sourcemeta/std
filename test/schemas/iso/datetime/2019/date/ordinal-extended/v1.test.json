@@ -125,6 +125,11 @@
       "description": "Invalid - Missing leading zeros (day 10)",
       "data": "2023-10",
       "valid": false
+    },
+    {
+      "description": "Valid - day 366 in a non leap year as leap validation is consumer responsibility",
+      "data": "2023-366",
+      "valid": true
     }
   ]
 }

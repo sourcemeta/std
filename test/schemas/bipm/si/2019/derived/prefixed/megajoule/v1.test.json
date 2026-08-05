@@ -28,9 +28,9 @@
       "valid": true
     },
     {
-      "description": "Invalid - negative",
+      "description": "Valid - negative as the quantity is signed",
       "data": -50,
-      "valid": false
+      "valid": true
     },
     {
       "description": "Invalid type - string",

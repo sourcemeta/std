@@ -61,6 +61,11 @@
       "description": "Invalid type - object",
       "data": {},
       "valid": false
+    },
+    {
+      "description": "Valid - negative",
+      "data": -50,
+      "valid": true
     }
   ]
 }

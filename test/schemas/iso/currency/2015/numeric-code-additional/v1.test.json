@@ -60,6 +60,16 @@
       "description": "Invalid - precious metal Gold (959)",
       "data": 959,
       "valid": true
+    },
+    {
+      "description": "Invalid - fraction inside the range",
+      "data": 997.5,
+      "valid": false
+    },
+    {
+      "description": "Valid - zero fraction number inside the range",
+      "data": 900.0,
+      "valid": true
     }
   ]
 }

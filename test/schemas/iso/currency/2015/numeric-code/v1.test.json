@@ -80,6 +80,11 @@
       "description": "Invalid - non-existent code",
       "data": 123,
       "valid": false
+    },
+    {
+      "description": "Invalid - unassigned numeric",
+      "data": 900,
+      "valid": false
     }
   ]
 }

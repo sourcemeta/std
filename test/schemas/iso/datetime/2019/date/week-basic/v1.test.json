@@ -180,6 +180,11 @@
       "description": "Invalid - plus sign (requires expanded format)",
       "data": "+001W011",
       "valid": false
+    },
+    {
+      "description": "Valid - week 53 in a 52 week year as week count validation is consumer responsibility",
+      "data": "2023W537",
+      "valid": true
     }
   ]
 }

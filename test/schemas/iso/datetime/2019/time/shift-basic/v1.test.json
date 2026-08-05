@@ -150,6 +150,11 @@
       "description": "Valid - positive hour only",
       "data": "+01",
       "valid": true
+    },
+    {
+      "description": "Valid - negative shift with zero hours and nonzero minutes",
+      "data": "-0030",
+      "valid": true
     }
   ]
 }

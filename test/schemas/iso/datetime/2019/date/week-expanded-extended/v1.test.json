@@ -95,6 +95,11 @@
       "description": "Invalid - empty string",
       "data": "",
       "valid": false
+    },
+    {
+      "description": "Invalid - negative year zero",
+      "data": "-000000-W01-1",
+      "valid": false
     }
   ]
 }

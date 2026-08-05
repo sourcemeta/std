@@ -30,6 +30,16 @@
       "description": "Invalid - null",
       "data": null,
       "valid": false
+    },
+    {
+      "description": "Valid - above one hundred as the registry defines no bounds",
+      "data": 150,
+      "valid": true
+    },
+    {
+      "description": "Valid - negative as the registry defines no bounds",
+      "data": -5,
+      "valid": true
     }
   ]
 }

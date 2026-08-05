@@ -36,6 +36,11 @@
       "description": "Invalid type - object",
       "data": {},
       "valid": false
+    },
+    {
+      "description": "Valid - negative as the quantity is signed",
+      "data": -50,
+      "valid": true
     }
   ]
 }

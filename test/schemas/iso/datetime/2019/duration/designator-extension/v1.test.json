@@ -345,6 +345,16 @@
       "description": "Valid - negative duration with months omitted",
       "valid": true,
       "data": "-P1Y1D"
+    },
+    {
+      "description": "Valid - unsigned weeks",
+      "data": "P1W",
+      "valid": true
+    },
+    {
+      "description": "Valid - fractional unsigned weeks",
+      "data": "P1.5W",
+      "valid": true
     }
   ]
 }

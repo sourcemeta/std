@@ -166,6 +166,26 @@
       "description": "Invalid - outside the reserved range",
       "valid": false,
       "data": "qua"
+    },
+    {
+      "description": "Invalid - terminologic French",
+      "data": "fra",
+      "valid": false
+    },
+    {
+      "description": "Invalid - terminologic German",
+      "data": "deu",
+      "valid": false
+    },
+    {
+      "description": "Invalid - set-3 only code",
+      "data": "quz",
+      "valid": false
+    },
+    {
+      "description": "Invalid - uppercase local use code",
+      "data": "QAA",
+      "valid": false
     }
   ]
 }

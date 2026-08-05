@@ -255,6 +255,11 @@
       "description": "Valid - 28 February",
       "data": "21000228",
       "valid": true
+    },
+    {
+      "description": "Valid - century non leap day as leap validation is consumer responsibility",
+      "data": "19000229",
+      "valid": true
     }
   ]
 }

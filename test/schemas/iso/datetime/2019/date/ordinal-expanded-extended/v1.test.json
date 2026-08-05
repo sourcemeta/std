@@ -110,6 +110,11 @@
       "description": "Invalid - Day 999",
       "data": "+002023-999",
       "valid": false
+    },
+    {
+      "description": "Invalid - negative year zero",
+      "data": "-000000-001",
+      "valid": false
     }
   ]
 }

@@ -83,6 +83,47 @@
       "description": "Invalid - null",
       "data": null,
       "valid": false
+    },
+    {
+      "description": "Invalid - precious metal currency",
+      "data": {
+        "value": 0,
+        "currency": "XAU"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - lowercase currency",
+      "data": {
+        "value": 1,
+        "currency": "usd"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - withdrawn currency",
+      "data": {
+        "value": 1,
+        "currency": "DEM"
+      },
+      "valid": false
+    },
+    {
+      "description": "Valid - negative zero",
+      "data": {
+        "value": -0.0,
+        "currency": "USD"
+      },
+      "valid": true
+    },
+    {
+      "description": "Valid - additional members are tolerated",
+      "data": {
+        "value": 1,
+        "currency": "USD",
+        "extra": true
+      },
+      "valid": true
     }
   ]
 }

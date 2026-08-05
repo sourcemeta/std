@@ -80,6 +80,11 @@
       "description": "Invalid - empty string",
       "data": "",
       "valid": false
+    },
+    {
+      "description": "Invalid - negative year zero",
+      "data": "-000000W01",
+      "valid": false
     }
   ]
 }

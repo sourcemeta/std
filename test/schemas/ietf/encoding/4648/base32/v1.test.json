@@ -485,6 +485,11 @@
       "description": "Invalid - 6 chars with 3 padding (no valid padding for 6 chars)",
       "data": "MZXW6Y===",
       "valid": false
+    },
+    {
+      "description": "Valid - non-canonical final quantum as rejection is optional",
+      "data": "MB======",
+      "valid": true
     }
   ]
 }

@@ -70,6 +70,16 @@
       "description": "Invalid type - object",
       "data": {},
       "valid": false
+    },
+    {
+      "description": "Invalid - just above the maximum",
+      "data": 90.0000001,
+      "valid": false
+    },
+    {
+      "description": "Valid - exponent notation at the maximum",
+      "data": 9e+1,
+      "valid": true
     }
   ]
 }

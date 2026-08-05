@@ -352,6 +352,16 @@
     {
       "data": null,
       "valid": false
+    },
+    {
+      "description": "Invalid - result with explicit null error",
+      "data": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": 19,
+        "error": null
+      },
+      "valid": false
     }
   ]
 }

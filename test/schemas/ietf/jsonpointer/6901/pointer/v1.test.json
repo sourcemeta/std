@@ -495,6 +495,11 @@
       "description": "Invalid - tilde followed by newline",
       "data": "/~\n",
       "valid": false
+    },
+    {
+      "description": "Valid - trailing empty reference token",
+      "data": "/foo/",
+      "valid": true
     }
   ]
 }

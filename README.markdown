@@ -84,6 +84,10 @@ key principles are:
   may gain annotations, linked data mappings, or clearer wording, but it
   accepts and rejects exactly the same instances forever. Any change that is
   visible to validation mints a sibling version instead.
+- **Compliance bugs are fixed in place**. When a schema demonstrably
+  disagrees with its governing document, the fix lands on the same version
+  file, so consumers get important corrections right away. The
+  never-changing rule protects design decisions, not defects.
 - **Living registries drift in place by contract**. Collections backed by an
   evolving registry, such as currency codes or the XBRL UTR, track their
   upstream within the same version, since their value space is defined by

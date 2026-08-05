@@ -86,6 +86,16 @@
       "description": "Invalid - timezone offset beyond the fourteen hour cap",
       "valid": false,
       "data": "1999+23:59"
+    },
+    {
+      "description": "Valid - five digit year",
+      "data": "12345",
+      "valid": true
+    },
+    {
+      "description": "Invalid - leading zero on a five digit year",
+      "data": "012345",
+      "valid": false
     }
   ]
 }

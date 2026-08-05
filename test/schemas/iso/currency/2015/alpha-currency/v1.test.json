@@ -140,6 +140,51 @@
       "description": "Invalid - fund code (WIR Euro)",
       "data": "CHE",
       "valid": false
+    },
+    {
+      "description": "Invalid - withdrawn Deutsche Mark",
+      "data": "DEM",
+      "valid": false
+    },
+    {
+      "description": "Invalid - withdrawn Croatian Kuna",
+      "data": "HRK",
+      "valid": false
+    },
+    {
+      "description": "Valid - Sierra Leonean redenomination",
+      "data": "SLE",
+      "valid": true
+    },
+    {
+      "description": "Valid - Zimbabwe Gold",
+      "data": "ZWG",
+      "valid": true
+    },
+    {
+      "description": "Valid - special drawing rights",
+      "data": "XDR",
+      "valid": true
+    },
+    {
+      "description": "Invalid - precious metal code",
+      "data": "XAU",
+      "valid": false
+    },
+    {
+      "description": "Invalid - testing code",
+      "data": "XTS",
+      "valid": false
+    },
+    {
+      "description": "Invalid - unknown currency code",
+      "data": "XXX",
+      "valid": false
+    },
+    {
+      "description": "Invalid - leading whitespace",
+      "data": " USD",
+      "valid": false
     }
   ]
 }

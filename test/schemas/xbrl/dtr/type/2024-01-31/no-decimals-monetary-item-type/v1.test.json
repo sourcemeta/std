@@ -83,6 +83,14 @@
         "currency": "USD"
       },
       "valid": false
+    },
+    {
+      "description": "Valid - zero fraction number as an integer value",
+      "data": {
+        "value": 100.0,
+        "currency": "USD"
+      },
+      "valid": true
     }
   ]
 }

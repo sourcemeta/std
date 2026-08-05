@@ -426,6 +426,26 @@
       "description": "Valid - grandfathered tag in mixed case",
       "valid": true,
       "data": "En-GB-Oed"
+    },
+    {
+      "description": "Valid - regular grandfathered tag",
+      "data": "art-lojban",
+      "valid": true
+    },
+    {
+      "description": "Invalid - unlisted irregular i tag",
+      "data": "i-whatever",
+      "valid": false
+    },
+    {
+      "description": "Valid - extension followed by private use",
+      "data": "en-a-ext1-x-priv",
+      "valid": true
+    },
+    {
+      "description": "Valid - duplicate singletons as uniqueness is a validity rule",
+      "data": "en-a-bbb-a-ccc",
+      "valid": true
     }
   ]
 }

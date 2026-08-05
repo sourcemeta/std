@@ -115,6 +115,11 @@
       "description": "Valid - comma as the decimal sign",
       "valid": true,
       "data": "P1,5W"
+    },
+    {
+      "description": "Invalid - signed weeks belong to the extension",
+      "data": "-P1W",
+      "valid": false
     }
   ]
 }
