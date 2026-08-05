@@ -1,0 +1,87 @@
+{
+  "target": "../../examples/contact-card.json",
+  "tests": [
+    {
+      "description": "Valid - complete card",
+      "data": {
+        "name": "Grace Hopper",
+        "email": "grace.hopper@Example.COM",
+        "account": "grace@social.example.net",
+        "website": "https://example.com/~grace"
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://schema.org/Person" ],
+          "https://schema.org/identifier": [
+            {
+              "@id": "acct:grace@social.example.net"
+            }
+          ],
+          "http://xmlns.com/foaf/0.1/mbox": [
+            {
+              "@id": "mailto:grace.hopper@example.com"
+            }
+          ],
+          "https://schema.org/name": [
+            {
+              "@value": "Grace Hopper"
+            }
+          ],
+          "http://xmlns.com/foaf/0.1/homepage": [
+            {
+              "@id": "https://example.com/~grace"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Valid - minimal card",
+      "data": {
+        "name": "Margaret Hamilton",
+        "email": "50%off@example.com"
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://schema.org/Person" ],
+          "http://xmlns.com/foaf/0.1/mbox": [
+            {
+              "@id": "mailto:50%25off@example.com"
+            }
+          ],
+          "https://schema.org/name": [
+            {
+              "@value": "Margaret Hamilton"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Invalid - missing email",
+      "data": {
+        "name": "Grace Hopper"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - email without a domain",
+      "data": {
+        "name": "Grace Hopper",
+        "email": "grace.hopper"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - unknown property",
+      "data": {
+        "name": "Grace Hopper",
+        "email": "grace.hopper@example.com",
+        "phone": "+15551234567"
+      },
+      "valid": false
+    }
+  ]
+}

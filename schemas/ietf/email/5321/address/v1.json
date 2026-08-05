@@ -8,6 +8,7 @@
     "\"very.unusual.@.unusual.com\"@example.com",
     "user@[IPv6:2001:db8::1]"
   ],
+  "x-jsonld-self": "mailto",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.rfc-editor.org/rfc/rfc5321#section-4.1.2" ],
   "type": "string",
