@@ -3,6 +3,14 @@
   "title": "Avogadro constant",
   "description": "It has the exact numerical value of 6.022 140 76 x 10^23 when expressed in the unit mol^-1",
   "examples": [ 6.02214076000000000000000e+23 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/PER-MOL"
+    }
+  },
+  "x-jsonld-self": "https://si-digital-framework.org/constants/AvogadroConstant",
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "const": 6.02214076000000000000000e+23

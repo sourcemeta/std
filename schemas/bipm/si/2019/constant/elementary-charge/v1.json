@@ -3,6 +3,14 @@
   "title": "Elementary charge",
   "description": "It has the exact numerical value of 1.602 176 634 x 10^-19 when expressed in the unit C, which is equal to A s",
   "examples": [ 1.602176634e-19 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/C"
+    }
+  },
+  "x-jsonld-self": "https://si-digital-framework.org/constants/ElementaryCharge",
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "const": 1.602176634e-19

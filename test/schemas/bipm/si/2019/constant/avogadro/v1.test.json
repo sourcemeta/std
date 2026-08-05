@@ -4,7 +4,23 @@
     {
       "description": "Valid - exact value",
       "data": 6.02214076000000000000000e+23,
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "https://si-digital-framework.org/constants/AvogadroConstant",
+          "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+          "http://qudt.org/schema/qudt/value": [
+            {
+              "@value": 6.02214076000000000000000e+23
+            }
+          ],
+          "http://qudt.org/schema/qudt/hasUnit": [
+            {
+              "@id": "http://qudt.org/vocab/unit/PER-MOL"
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "Invalid - different value",

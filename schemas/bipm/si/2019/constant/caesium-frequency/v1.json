@@ -3,6 +3,14 @@
   "title": "Caesium hyperfine transition frequency",
   "description": "Of the unperturbed ground state hyperfine transition of the caesium 133 atom. It has the exact numerical value of 9 192 631 770 when expressed in the unit Hz, which is equal to s^-1",
   "examples": [ 9192631770 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/HZ"
+    }
+  },
+  "x-jsonld-self": "https://si-digital-framework.org/constants/HyperfineTransitionFrequencyOfCs-133",
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "const": 9192631770

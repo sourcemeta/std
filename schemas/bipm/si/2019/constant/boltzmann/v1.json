@@ -3,6 +3,14 @@
   "title": "Boltzmann constant",
   "description": "It has the exact numerical value of 1.380 649 x 10^-23 when expressed in the unit J/K, which is equal to kg m^2 s^-2 K^-1",
   "examples": [ 1.380649e-23 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/J-PER-K"
+    }
+  },
+  "x-jsonld-self": "https://si-digital-framework.org/constants/BoltzmannConstant",
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "const": 1.380649e-23
