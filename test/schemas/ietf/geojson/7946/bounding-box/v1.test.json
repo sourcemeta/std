@@ -49,7 +49,8 @@
     {
       "description": "Valid 2D bounding box",
       "data": [ -180, -90, 180, 90 ],
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid 3D bounding box",

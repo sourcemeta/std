@@ -4,7 +4,8 @@
     {
       "description": "Valid - empty string",
       "data": "",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - single byte lowercase",

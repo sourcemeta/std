@@ -4,7 +4,8 @@
     {
       "description": "Valid - basic date",
       "data": "2023-05-15",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - date with Z timezone",

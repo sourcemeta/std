@@ -4,7 +4,8 @@
     {
       "description": "Valid - two letter primary tag",
       "data": "en",
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - three letter primary tag",

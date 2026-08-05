@@ -63,7 +63,8 @@
         [ 0, 1 ],
         [ 0, 0 ]
       ],
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid linear ring with five positions (closed rectangle)",

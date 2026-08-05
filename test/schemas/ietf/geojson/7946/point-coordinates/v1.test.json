@@ -39,7 +39,8 @@
     {
       "description": "Valid 2D position (longitude, latitude)",
       "data": [ -122.419, 37.7749 ],
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid 3D position with altitude",

@@ -4,7 +4,8 @@
     {
       "description": "Valid - positive integer",
       "data": 123,
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - negative integer",

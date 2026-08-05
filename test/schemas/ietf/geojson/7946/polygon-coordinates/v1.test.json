@@ -29,7 +29,8 @@
     {
       "description": "Empty array - valid (no rings)",
       "data": [],
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid polygon with exterior ring only",
