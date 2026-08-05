@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Calibration Certificate",
+  "description": "A metrology certificate for a frequency standard that declares traceability to the caesium defining constant of the SI as a named quantity node, with the measured frequency offset in a prefixed SI unit from the standard library",
+  "examples": [
+    {
+      "about": "Caesium beam frequency standard CS-1",
+      "issuedBy": {
+        "name": "National Institute of Standards and Technology"
+      },
+      "validFrom": "2026-05-12",
+      "definingConstant": 9192631770,
+      "measuredOffset": 0.4
+    }
+  ],
+  "x-jsonld-type": "https://schema.org/Certification",
+  "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
+  "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
+  "type": "object",
+  "required": [ "about", "definingConstant" ],
+  "properties": {
+    "about": {
+      "x-jsonld-id": "https://schema.org/about",
+      "type": "string"
+    },
+    "issuedBy": {
+      "x-jsonld-id": "https://schema.org/issuedBy",
+      "x-jsonld-type": "https://schema.org/Organization",
+      "type": "object",
+      "properties": {
+        "name": {
+          "x-jsonld-id": "https://schema.org/name",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "validFrom": {
+      "x-jsonld-id": "https://schema.org/validFrom",
+      "$ref": "../schemas/iso/datetime/2019/date/calendar-extended/v1.json"
+    },
+    "definingConstant": {
+      "x-jsonld-id": "http://purl.org/dc/terms/references",
+      "$ref": "../schemas/bipm/si/2019/constant/caesium-frequency/v1.json"
+    },
+    "measuredOffset": {
+      "x-jsonld-id": "https://schema.org/value",
+      "$ref": "../schemas/bipm/si/2019/derived/prefixed/millihertz/v1.json"
+    }
+  },
+  "additionalProperties": false
+}

@@ -4,7 +4,23 @@
     {
       "description": "Valid - exact value",
       "data": 683,
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "https://si-digital-framework.org/constants/LuminousEfficacy",
+          "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+          "http://qudt.org/schema/qudt/value": [
+            {
+              "@value": 683
+            }
+          ],
+          "http://qudt.org/schema/qudt/hasUnit": [
+            {
+              "@id": "http://qudt.org/vocab/unit/LM-PER-W"
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "Invalid - different value",

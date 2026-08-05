@@ -1,0 +1,141 @@
+{
+  "target": "../../examples/calibration-certificate.json",
+  "tests": [
+    {
+      "description": "Valid - complete certificate",
+      "data": {
+        "about": "Caesium beam frequency standard CS-1",
+        "issuedBy": {
+          "name": "National Institute of Standards and Technology"
+        },
+        "validFrom": "2026-05-12",
+        "definingConstant": 9192631770,
+        "measuredOffset": 0.4
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://schema.org/Certification" ],
+          "https://schema.org/about": [
+            {
+              "@value": "Caesium beam frequency standard CS-1"
+            }
+          ],
+          "http://purl.org/dc/terms/references": [
+            {
+              "@id": "https://si-digital-framework.org/constants/HyperfineTransitionFrequencyOfCs-133",
+              "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+              "http://qudt.org/schema/qudt/value": [
+                {
+                  "@value": 9192631770
+                }
+              ],
+              "http://qudt.org/schema/qudt/hasUnit": [
+                {
+                  "@id": "http://qudt.org/vocab/unit/HZ"
+                }
+              ]
+            }
+          ],
+          "https://schema.org/issuedBy": [
+            {
+              "@type": [ "https://schema.org/Organization" ],
+              "https://schema.org/name": [
+                {
+                  "@value": "National Institute of Standards and Technology"
+                }
+              ]
+            }
+          ],
+          "https://schema.org/value": [
+            {
+              "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+              "http://qudt.org/schema/qudt/value": [
+                {
+                  "@value": 0.4
+                }
+              ],
+              "http://qudt.org/schema/qudt/hasUnit": [
+                {
+                  "@id": "http://qudt.org/vocab/unit/MilliHZ"
+                }
+              ]
+            }
+          ],
+          "https://schema.org/validFrom": [
+            {
+              "@value": "2026-05-12",
+              "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Valid - minimal certificate",
+      "data": {
+        "about": "Rubidium frequency standard RB-7",
+        "definingConstant": 9192631770
+      },
+      "valid": true,
+      "rdf": [
+        {
+          "@type": [ "https://schema.org/Certification" ],
+          "https://schema.org/about": [
+            {
+              "@value": "Rubidium frequency standard RB-7"
+            }
+          ],
+          "http://purl.org/dc/terms/references": [
+            {
+              "@id": "https://si-digital-framework.org/constants/HyperfineTransitionFrequencyOfCs-133",
+              "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+              "http://qudt.org/schema/qudt/value": [
+                {
+                  "@value": 9192631770
+                }
+              ],
+              "http://qudt.org/schema/qudt/hasUnit": [
+                {
+                  "@id": "http://qudt.org/vocab/unit/HZ"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Invalid - missing defining constant",
+      "data": {
+        "about": "Caesium beam frequency standard CS-1"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - wrong constant value",
+      "data": {
+        "about": "Caesium beam frequency standard CS-1",
+        "definingConstant": 9192631771
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - constant as a string",
+      "data": {
+        "about": "Caesium beam frequency standard CS-1",
+        "definingConstant": "9192631770"
+      },
+      "valid": false
+    },
+    {
+      "description": "Invalid - basic format date",
+      "data": {
+        "about": "Caesium beam frequency standard CS-1",
+        "definingConstant": 9192631770,
+        "validFrom": "20260512"
+      },
+      "valid": false
+    }
+  ]
+}

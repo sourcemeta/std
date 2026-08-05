@@ -3,6 +3,14 @@
   "title": "Planck constant",
   "description": "It has the exact numerical value of 6.626 070 15 x 10^-34 when expressed in the unit J s, which is equal to kg m^2 s^-1",
   "examples": [ 6.62607015e-34 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/J-SEC"
+    }
+  },
+  "x-jsonld-self": "https://si-digital-framework.org/constants/PlanckConstant",
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "const": 6.62607015e-34

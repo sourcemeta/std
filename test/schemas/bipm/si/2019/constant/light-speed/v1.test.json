@@ -4,7 +4,23 @@
     {
       "description": "Valid - exact value",
       "data": 299792458,
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "https://si-digital-framework.org/constants/SpeedOfLight",
+          "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+          "http://qudt.org/schema/qudt/value": [
+            {
+              "@value": 299792458
+            }
+          ],
+          "http://qudt.org/schema/qudt/hasUnit": [
+            {
+              "@id": "http://qudt.org/vocab/unit/M-PER-SEC"
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "Invalid - different value",

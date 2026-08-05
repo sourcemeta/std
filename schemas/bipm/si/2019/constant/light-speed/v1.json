@@ -3,6 +3,14 @@
   "title": "Speed of light in vacuum",
   "description": "It has the exact numerical value of 299 792 458 when expressed in the unit m/s",
   "examples": [ 299792458 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "http://qudt.org/vocab/unit/M-PER-SEC"
+    }
+  },
+  "x-jsonld-self": "https://si-digital-framework.org/constants/SpeedOfLight",
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "const": 299792458

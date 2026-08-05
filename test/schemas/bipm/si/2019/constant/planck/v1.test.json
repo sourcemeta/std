@@ -4,7 +4,23 @@
     {
       "description": "Valid - exact value",
       "data": 6.62607015e-34,
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "https://si-digital-framework.org/constants/PlanckConstant",
+          "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+          "http://qudt.org/schema/qudt/value": [
+            {
+              "@value": 6.62607015e-34
+            }
+          ],
+          "http://qudt.org/schema/qudt/hasUnit": [
+            {
+              "@id": "http://qudt.org/vocab/unit/J-SEC"
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "Invalid - different value",

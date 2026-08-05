@@ -4,7 +4,23 @@
     {
       "description": "Valid - exact value",
       "data": 9192631770,
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "https://si-digital-framework.org/constants/HyperfineTransitionFrequencyOfCs-133",
+          "@type": [ "http://qudt.org/schema/qudt/Quantity" ],
+          "http://qudt.org/schema/qudt/value": [
+            {
+              "@value": 9192631770
+            }
+          ],
+          "http://qudt.org/schema/qudt/hasUnit": [
+            {
+              "@id": "http://qudt.org/vocab/unit/HZ"
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "Invalid - different value",
