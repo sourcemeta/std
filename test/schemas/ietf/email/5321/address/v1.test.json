@@ -539,7 +539,12 @@
     {
       "description": "Valid - local part at the 64 octet limit",
       "data": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com"
+        }
+      ]
     },
     {
       "description": "Invalid - local part over the 64 octet limit",
@@ -549,7 +554,12 @@
     {
       "description": "Valid - mailbox at the 254 octet limit",
       "data": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ]
     },
     {
       "description": "Invalid - mailbox over the 254 octet limit",
@@ -559,12 +569,22 @@
     {
       "description": "Valid - empty quoted local part",
       "data": "\"\"@example.com",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:%22%22@example.com"
+        }
+      ]
     },
     {
       "description": "Valid - general address literal",
       "data": "user@[foo-tag:abc]",
-      "valid": true
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:user@%5Bfoo-tag:abc%5D"
+        }
+      ]
     },
     {
       "description": "Invalid - general literal tag ending in hyphen",
@@ -575,6 +595,36 @@
       "description": "Invalid - bracket inside general literal content",
       "data": "user@[tag:a[b]",
       "valid": false
+    },
+    {
+      "description": "Valid - failed IPv6 payload falls through to a general literal",
+      "data": "user@[IPv6:not-an-address]",
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:user@%5BIPv6:not-an-address%5D"
+        }
+      ]
+    },
+    {
+      "description": "Valid - nine group IPv6 payload falls through to a general literal",
+      "data": "user@[IPv6:1:2:3:4:5:6:7:8:9]",
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:user@%5BIPv6:1:2:3:4:5:6:7:8:9%5D"
+        }
+      ]
+    },
+    {
+      "description": "Valid - untagged IPv6 text as a general literal",
+      "data": "user@[2001:db8::1]",
+      "valid": true,
+      "rdf": [
+        {
+          "@id": "mailto:user@%5B2001:db8::1%5D"
+        }
+      ]
     }
   ]
 }
