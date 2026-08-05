@@ -3,6 +3,13 @@
   "title": "Quettadegreecelsius",
   "description": "A multiple of degree-celsius equal to 1e30 degree-celsius",
   "examples": [ 0, 1, 100, 1000 ],
+  "x-jsonld-constants": {
+    "http://qudt.org/schema/qudt/hasUnit": {
+      "@id": "https://si-digital-framework.org/SI/units/quettadegreeCelsius"
+    }
+  },
+  "x-jsonld-type": "http://qudt.org/schema/qudt/Quantity",
+  "x-jsonld-value": "http://qudt.org/schema/qudt/value",
   "x-license": "https://github.com/sourcemeta/std/blob/main/LICENSE",
   "x-links": [ "https://www.bipm.org/en/publications/si-brochure" ],
   "type": "number",

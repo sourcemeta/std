@@ -4,7 +4,8 @@
     {
       "description": "Valid - small positive",
       "data": 0.001,
-      "valid": true
+      "valid": true,
+      "rdf": []
     },
     {
       "description": "Valid - unit value",
