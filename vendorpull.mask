@@ -7,7 +7,6 @@ scripts
 test
 vendor
 .editorconfig
-jsonschema.json
 Makefile
 README.markdown
 templates
