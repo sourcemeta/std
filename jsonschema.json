@@ -7,6 +7,8 @@
   "resolve": {
     "urn:sourcemeta:std:ietf:jsonschema:2020-12:dialect:format-assertion": "./schemas/ietf/jsonschema/2020-12/dialect/format-assertion/v1.json"
   },
+  "x-sourcemeta-one:alert": "By using this schema, you confirm you agree to its [license](https://github.com/sourcemeta/std/blob/main/LICENSE)",
+  "x-sourcemeta-one:priority": 100,
   "lint": {
     "rules": [
       "./rules/comment.json",
