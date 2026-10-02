@@ -13,6 +13,7 @@
     "rules": [
       "./rules/comment.json",
       "./rules/dialect.json",
+      "./rules/identifiers.json",
       "./rules/jsonld-bare-override.json",
       "./rules/jsonld-constants-iri-literal.json",
       "./rules/jsonld-constants-lexical.json",
