@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "std/identifiers",
+  "description": "Schemas must not declare identifiers, as the registry derives them from file paths",
+  "properties": {
+    "$id": false
+  }
+}

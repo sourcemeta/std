@@ -14,7 +14,9 @@ all: common test node_modules
 .PHONY: common
 common: $(GENERATED) node_modules
 	$(TIME) $(NODE) $(JSONSCHEMA) metaschema schemas examples rules
-	$(TIME) $(NODE) $(JSONSCHEMA) lint schemas examples
+	$(TIME) $(NODE) $(JSONSCHEMA) lint schemas examples \
+		--rule ./rules/identifiers.json \
+		--rule ./rules/dialect.json
 	$(SHELLCHECK) scripts/*.sh
 	./scripts/quality-schemas-tests-mirror.sh
 	JQ="$(JQ)" ./scripts/quality-templates-xbrl-utr-mirror.sh
